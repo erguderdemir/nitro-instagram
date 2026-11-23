@@ -80,3 +80,4 @@ Actions → *Instagram otomasyonu* → Run workflow → task: `plan`. Planı ve 
 | `scripts/render.py` | Post (1080×1350) ve story (1080×1920) şablonları, headless Chrome ile |
 | `scripts/content.py` | Kancalar, açıklamalar, hashtag'ler, sezon takvimi |
 | `scripts/publish.py` | Zamanı gelenleri Instagram Graph API ile yayınlar |
+| `scripts/onizleme.py` | Takvimi görselleriyle tek sayfada gösterir → `out/onizleme.html` (yerel inceleme) |
