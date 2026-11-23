@@ -1,17 +1,61 @@
 {
+  "live": false,
   "timezone_offset_hours": 3,
   "graph_api_version": "v23.0",
   "auto_publish": true,
   "plan_days_ahead": 14,
   "posts": [
-    {"weekday": 0, "time": "19:30", "groups": ["bisiklet_performans"]},
-    {"weekday": 2, "time": "19:30", "groups": ["sezon"]},
-    {"weekday": 4, "time": "19:30", "groups": ["bisiklet_gunluk", "bisiklet_performans"]},
-    {"weekday": 6, "time": "11:00", "groups": ["giyim", "aksesuar", "sezon"]}
+    {
+      "weekday": 0,
+      "time": "19:30",
+      "groups": [
+        "bisiklet_performans"
+      ]
+    },
+    {
+      "weekday": 2,
+      "time": "19:30",
+      "groups": [
+        "sezon"
+      ]
+    },
+    {
+      "weekday": 4,
+      "time": "19:30",
+      "groups": [
+        "bisiklet_gunluk",
+        "bisiklet_performans"
+      ]
+    },
+    {
+      "weekday": 6,
+      "time": "11:00",
+      "groups": [
+        "giyim",
+        "aksesuar",
+        "sezon"
+      ]
+    }
   ],
   "stories": [
-    {"time": "12:30", "groups": ["sezon", "aksesuar", "parca", "giyim"]},
-    {"time": "20:30", "groups": ["ayni_gun_post", "parca", "aksesuar", "bisiklet_gunluk"]}
+    {
+      "time": "12:30",
+      "groups": [
+        "sezon",
+        "aksesuar",
+        "parca",
+        "giyim"
+      ]
+    },
+    {
+      "time": "20:30",
+      "groups": [
+        "ayni_gun_post",
+        "parca",
+        "aksesuar",
+        "bisiklet_gunluk"
+      ]
+    }
   ],
   "repeat_after_days": 60
 }

@@ -111,6 +111,9 @@ def check() -> None:
 def main() -> None:
     if "--check" in sys.argv:
         return check()
+    if not CFG.get("live", True):
+        print("YAYIN KAPALI: config.json içinde live=false. Onay gelene kadar hiçbir şey yayınlanmaz.")
+        return
     dry = "--dry-run" in sys.argv or not os.environ.get("IG_ACCESS_TOKEN")
     if dry:
         print("DRY-RUN: IG_ACCESS_TOKEN yok ya da --dry-run verildi, hiçbir şey yayınlanmayacak.")
