@@ -36,7 +36,11 @@ Bu adımlar senin hesaplarınla yapılmalı. Şifre ve token'ları kimseyle payl
 
 ### 3. Meta erişim anahtarı (süresiz token)
 1. developers.facebook.com → My Apps → **Create App** → tür: *Business*.
-2. Uygulamaya **Instagram Graph API** ürününü ekle.
+   ✅ Oluşturuldu: **Nitro Bisiklet Paylasim** · App ID `2153370375296980`.
+   Kullanım alanları: *Manage messaging & content on Instagram* ve *Manage everything on your Page*.
+2. Uygulamayı Nitro Bisiklet işletme portföyüne bağla: App settings → Basic → Business portfolio.
+   Instagram kullanım alanında *API setup with Facebook login* seçmek için bu bağlantı zorunlu.
+   Sonra izinleri ekle (aşağıdaki 5 izin).
 3. business.facebook.com → Ayarlar → Kullanıcılar → **Sistem kullanıcıları** → *Ekle* (Admin).
 4. Sistem kullanıcısına varlık ata: Facebook Sayfan, Instagram hesabın ve uygulama (tam kontrol).
 5. *Token oluştur* → uygulamayı seç → süre: **Hiçbir zaman** → izinler:
