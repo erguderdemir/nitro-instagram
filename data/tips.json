@@ -1,0 +1,496 @@
+{
+  "carousels": [
+    {
+      "id": "kis-bakimi",
+      "kicker": "BAKIM REHBERİ",
+      "title": "KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK",
+      "intro": "Yağmur ve çamur bisikleti yıpratır. Sürüş sonrası birkaç dakika ayırman yeter.",
+      "steps": [
+        {
+          "h": "Sürüşten Sonra Kurula",
+          "t": "Islak sürüşten sonra kadroyu ve zinciri kuru bir bezle sil. Zincir bezini ayrı tut; yağlı bez diske ya da jant yüzeyine değmesin."
+        },
+        {
+          "h": "Zinciri Yağsız Bırakma",
+          "t": "Yağmur zincirdeki yağı yıkayıp götürür. Zinciri kuruladıktan sonra ıslak tip zincir yağından damlat, fazlasını bezle al."
+        },
+        {
+          "h": "Çamurluk Tak",
+          "t": "Çamurluk yalnızca kıyafetini korumaz; tekerlekten sıçrayan suyun ve çamurun zincire, orta göbeğe ulaşmasını da azaltır."
+        },
+        {
+          "h": "Lastik ve Freni Kontrol Et",
+          "t": "Islak ve çamurlu yolda balata daha hızlı aşınır. Haftada bir balata kalınlığına, lastik basıncına ve lastiğin dişlerine bak."
+        },
+        {
+          "h": "Kapalı Alanda Sakla",
+          "t": "Bisikleti yağmur almayan, kuru bir yerde tut. Balkonda ya da bahçede kalacaksa üzerini su geçirmeyen bir örtüyle kapat."
+        }
+      ],
+      "takeaway": "Kışın kural basit: sür, kurula, yağla ve kuru bir yerde sakla.",
+      "related_categories": ["Kimyasal", "Çamurluk ve Muhafaza", "Balatalar & Pabuçlar"],
+      "cta": "servis",
+      "caption": "Bisikleti yağmur değil, ıslak bırakmak yıpratır.\n\nYağmurda sürmek tek başına sorun değil. Asıl zararı sürüşten sonra üzerinde kalan su ve çamur verir: zincir paslanır, kir hareketli parçaları aşındırır.\n\nÇözüm zor değil. Eve gelince kadroyu ve zinciri kurula, zinciri yağla, bisikleti kuru bir yerde tut. Çamurluk da işini epey kolaylaştırır.\n\nFrenlerinden ses geliyorsa ya da vitesler eskisi gibi geçmiyorsa kış ilerlemeden bir bakım iyi olur. Köyceğiz'deki atölyemizde servis ve bakım yapıyoruz; randevunu sitemizden alabilirsin.\n\nSen kışın sürmeye devam ediyor musun, yoksa bisikleti bahara kadar kaldıranlardan mısın?",
+      "alt": "Kışın bisikleti koruyan beş alışkanlığı sırayla anlatan kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "cocuk-jant-boyu",
+      "kicker": "ÇOCUK BİSİKLETİ",
+      "title": "ÇOCUĞUNA HANGİ JANT BOYU UYAR?",
+      "intro": "Yaş yalnızca fikir verir. Doğru boyu çocuğun boyu ve iç bacak ölçüsü belirler.",
+      "steps": [
+        {
+          "h": "12 ve 14 Jant",
+          "t": "12 jant: yaklaşık 2-4 yaş, 85-100 cm boy. 14 jant: yaklaşık 3-5 yaş, 95-110 cm boy."
+        },
+        {
+          "h": "16 ve 20 Jant",
+          "t": "16 jant: yaklaşık 4-6 yaş, 105-120 cm boy. 20 jant: yaklaşık 6-9 yaş, 115-135 cm boy."
+        },
+        {
+          "h": "24 Jant, 26 ve Üstü",
+          "t": "24 jant: yaklaşık 8-12 yaş, 130-150 cm boy. 26 jant ve üstü: yaklaşık 11 yaş ve sonrası, 145 cm ve üzeri boy."
+        },
+        {
+          "h": "Yaşa Değil Ölçüye Bak",
+          "t": "Aynı yaştaki çocukların boyu farklı olabilir. Belirleyici olan boy ve iç bacak ölçüsü; aralıklar kesişiyorsa bisikleti deneyerek karar ver."
+        },
+        {
+          "h": "Büyük Boy Alma",
+          "t": "\"Büyüyünce olur\" diye büyük boy alma. Çocuk selede otururken ayak uçları yere, parmakları fren koluna rahatça yetişmeli."
+        }
+      ],
+      "takeaway": "Çocuğa bisikleti büyüyeceği boya göre değil, bugünkü boyuna göre seç.",
+      "related_categories": ["Çocuk Bisikleti", "Kask"],
+      "cta": "magaza",
+      "caption": "\"Büyüyünce olur\" diye alınan bisiklet, çocuğu bisikletten soğutabilir.\n\nÇocuk bisikletinde boy jant çapıyla anılır: 12, 14, 16, 20, 24 jant. Yaş aralıkları kabaca yol gösterir; asıl bakman gereken çocuğun boyu ve iç bacak ölçüsü.\n\nBisikleti denerken üç şeye bak: Selede otururken ayak uçları yere rahatça değiyor mu? Gidona uzanırken kolları gergin kalıyor mu? Parmakları fren koluna yetişiyor mu?\n\nBüyük gelen bisiklette çocuk dengesini zor kurar, frene geç ulaşır.\n\nTabloyu kaydet, bisiklet bakarken lazım olur. Emin olamıyorsan çocuğunla birlikte Köyceğiz'deki mağazamıza uğra; bisikletin üzerinde birlikte bakalım.\n\nSenin ilk bisikletin kaç janttı, hatırlıyor musun?",
+      "alt": "Çocuğun boyuna göre 12 jant ile 26 jant arasında bisiklet boyu seçimini gösteren kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "islak-zemin",
+      "kicker": "SÜRÜŞ TEKNİĞİ",
+      "title": "ISLAK ZEMİNDE GÜVENLİ SÜRÜŞÜN 5 KURALI",
+      "intro": "Yağmurda durma mesafesi uzar, tutunma azalır. Sürüşünü buna göre ayarla.",
+      "steps": [
+        {
+          "h": "Erken ve Yumuşak Frenle",
+          "t": "Islakta fren daha geç tutar. Freni her zamankinden erken sık, baskıyı yavaş yavaş artır. Ani ve sert fren tekerleği kilitleyebilir."
+        },
+        {
+          "h": "Viraja Girmeden Yavaşla",
+          "t": "Frenlemeyi viraja girmeden, bisiklet dik dururken bitir. Virajın içinde fren yapmak ya da fazla yatmak tekerleği kaydırabilir."
+        },
+        {
+          "h": "Kaygan Yüzeylere Dikkat",
+          "t": "Boyalı yol çizgileri, rögar kapakları ve ıslak yapraklar çok kaygandır. Üzerlerinden düz geç; o sırada fren yapma, gidonu çevirme."
+        },
+        {
+          "h": "Basıncı Biraz Düşür",
+          "t": "Lastiği üst sınıra kadar şişirme. Yanakta yazan aralığın içinde kalarak basıncı biraz düşürmek ıslak zeminde tutunmayı artırır."
+        },
+        {
+          "h": "Işığını Yak, Görünür Ol",
+          "t": "Yağmurda sürücüler seni daha geç fark eder. Gündüz bile ön ve arka ışığını yak; açık renkli ya da reflektörlü kıyafet giy."
+        }
+      ],
+      "takeaway": "Islakta her şeyi biraz erkene al: erken frenle, yumuşak dön, görünür ol.",
+      "related_categories": ["Aydınlatma ve Reflektör", "Dış Lastik", "Çamurluk ve Muhafaza"],
+      "cta": "magaza",
+      "caption": "Yağmurda sürmek değil, kuru zemindeymiş gibi sürmek risklidir.\n\nIslak asfaltta lastiğin tutunması azalır, durma mesafen uzar. Bu yüzden her hareketi biraz erkene al: erken frenle, viraja girmeden yavaşla, öndeki araçla arandaki mesafeyi artır.\n\nEn çok şaşırtan yerler yolun kendisi değil, üzerindekiler: boyalı çizgiler, rögar kapakları, ıslak yapraklar. Bunların üzerinde fren yapma, gidonu çevirme; düz ve sakin geç.\n\nBir de görünürlük var. Yağmurda sürücülerin görüşü daralır; ışıkların gündüz de yansın.\n\nBu kuralları kaydet, ilk yağmurlu günde aklında olsun.\n\nSen yağmurda sürer misin, yoksa hava açana kadar bekler misin?",
+      "alt": "Islak zeminde güvenli bisiklet sürüşü için beş kuralı anlatan kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "servis-isaretleri",
+      "kicker": "SERVİS ZAMANI",
+      "title": "BİSİKLETİN SERVİS İSTİYOR: 5 İŞARET",
+      "intro": "Bisiklet arızayı önceden haber verir. Bu sesleri ve belirtileri hafife alma.",
+      "steps": [
+        {
+          "h": "Frenler Zayıf ya da Sesli",
+          "t": "Fren kolu gidona kadar geliyorsa ya da frenden sürtme, gıcırtı sesi çıkıyorsa balata bitmiş ya da ayar kaçmış olabilir. Bekletme."
+        },
+        {
+          "h": "Vites Atlıyor, Geç Geçiyor",
+          "t": "Pedala yüklenince zincir atlıyor ya da vites geç oturuyorsa tel gevşemiş, aktarıcı ayarı kaçmış ya da zincir aşınmış olabilir."
+        },
+        {
+          "h": "Zincir Paslı ya da Uzamış",
+          "t": "Paslı ya da uzamış zincir dişlileri de aşındırır. Uzama gözle anlaşılmaz; atölyede ölçüm aletiyle kontrol edilir."
+        },
+        {
+          "h": "Jantta Yalpa Var",
+          "t": "Tekerleği havada döndür, balata ya da kadro hizasından bak. Sağa sola salınıyorsa jant akort ister; gevşek ya da kırık tel olabilir."
+        },
+        {
+          "h": "Pedal Çevirirken Tık Sesi",
+          "t": "Her pedal turunda gelen tık sesi çoğu zaman orta göbekten, pedaldan ya da aynakol bağlantısından kaynaklanır. Yerini atölyede buluruz."
+        }
+      ],
+      "takeaway": "Küçük bir ses bugün ayarla geçer; ertelersen parça değişimine dönebilir.",
+      "related_categories": ["Fren Grubu", "Balatalar & Pabuçlar", "Vites Grubu"],
+      "cta": "servis",
+      "caption": "Bisikletin sana bir şey söylemeye çalışıyor olabilir.\n\nArızaların çoğu bir anda ortaya çıkmaz. Önce küçük bir ses gelir, fren kolu biraz daha derine iner, vites bir kez atlar. Hepsi aynı şeyi söyler: bakım zamanı.\n\nEn çok dikkat etmen gereken yer frenler. Fren kolu gidona yaklaşıyorsa ya da frenden metal sesi geliyorsa sürmeye devam etme; önce kontrol ettir.\n\nVites atlaması, paslı zincir, jantta yalpa ve pedaldan gelen tık sesi de ertelendikçe büyür. Erken fark edilen sorun çoğu zaman bir ayarla çözülür.\n\nKöyceğiz'deki atölyemizde servis ve bakım yapıyoruz. Sloganımız \"aynı gün servis\"; randevunu sitemizden alabilirsin.\n\nSenin bisikletin en son ne zaman bakım gördü?",
+      "alt": "Bisikletin servise gitmesi gerektiğini gösteren beş belirtiyi anlatan kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "lastik-basinci",
+      "kicker": "LASTİK REHBERİ",
+      "title": "LASTİĞİNE KAÇ BAR HAVA BASMALISIN?",
+      "intro": "Doğru basınç bisiklet tipine göre değişir. Önce lastiğin yanağına bak.",
+      "steps": [
+        {
+          "h": "Önce Lastik Yanağını Oku",
+          "t": "Lastiğin yanağında önerilen basınç aralığı ya da üst sınır yazar. Buradaki değerler genel aralıktır; her zaman yanakta yazana uy."
+        },
+        {
+          "h": "Dağ Bisikleti",
+          "t": "Yaklaşık 1,8-2,8 bar. Geniş lastik düşük basınçta daha iyi tutunur ve darbeyi emer. Kilon arttıkça aralığın üst tarafına yaklaş."
+        },
+        {
+          "h": "Şehir ve Tur Bisikleti",
+          "t": "Yaklaşık 3-5 bar. Bagajda yük ya da çanta taşıyorsan arka lastiği aralığın üst tarafında tut."
+        },
+        {
+          "h": "Yol Bisikleti",
+          "t": "Yaklaşık 5,5-8 bar. İnce lastik yüksek basınç ister; yine de üst sınıra dayamak yerine kilona ve zemine göre ayarla."
+        },
+        {
+          "h": "Az da Fazla da Zarar",
+          "t": "Düşük basınçta jant, darbede iç lastiği sıkıştırıp kesebilir. Fazla basınç tutunmayı ve konforu azaltır. Basıncı haftada bir ölç."
+        }
+      ],
+      "takeaway": "Yanakta yazan aralığa uy ve basıncı haftada bir ölç.",
+      "related_categories": ["Pompa", "İç Lastik", "Dış Lastik"],
+      "cta": "magaza",
+      "caption": "Lastik basıncı parmakla sıkarak ölçülmez.\n\nElle sert gelen lastik, olması gerekenden düşük basınçta olabilir. Doğru değeri göstergeli bir pompa söyler.\n\nGenel aralıklar şöyle: dağ bisikletinde yaklaşık 1,8-2,8 bar, şehir ve tur bisikletinde yaklaşık 3-5 bar, yol bisikletinde yaklaşık 5,5-8 bar. Son sözü ise her zaman lastiğin yanağında yazan aralık söyler.\n\nDüşük basınçta bir çukura girersen jant iç lastiği sıkıştırıp kesebilir. Fazla basınçta lastik zemine daha az tutunur, bisiklet her tümsekte zıplar.\n\nLastikler sürmesen de zamanla hava kaybeder. Haftada bir kontrol yeterli. Değerleri kaydet, pompanın başında işine yarar.\n\nSen basıncı pompanın göstergesinden mi takip ediyorsun, yoksa hâlâ parmak testi mi?",
+      "alt": "Dağ, şehir ve yol bisikleti için genel lastik basıncı aralıklarını gösteren kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "zincir-bakimi",
+      "kicker": "ZİNCİR BAKIMI",
+      "title": "ZİNCİRİNİ YANLIŞ MI YAĞLIYORSUN?",
+      "intro": "Temiz ve doğru yağlanmış zincir sessiz çalışır, daha geç aşınır.",
+      "steps": [
+        {
+          "h": "Sil ve Temizle",
+          "t": "Kirli zincire yağ sürme. Zinciri bir bezle tutup pedalı geriye çevirerek sil; çok kirliyse zincir temizleyiciyle temizleyip kurula."
+        },
+        {
+          "h": "Doğru Yere Damlat",
+          "t": "Yağı zincirin iç yüzüne, baklaların makaralarına damlat; her baklaya bir damla yeter. Pedalı geriye çevirerek tüm zinciri dolaş."
+        },
+        {
+          "h": "Fazlasını Al",
+          "t": "Birkaç dakika bekle, sonra zincirin dışını temiz bir bezle sil. Yağ baklaların içinde işe yarar; dışarıda kalanı toz ve kir toplar."
+        },
+        {
+          "h": "Havaya Göre Yağ Seç",
+          "t": "Yağmurlu ve çamurlu günlerde ıslak tip, kuru ve tozlu havada kuru tip zincir yağı kullan. Çok amaçlı çözücü spreyler zincir yağı değildir."
+        },
+        {
+          "h": "Uzamayı Ölçtür",
+          "t": "Zincir kullandıkça uzar. Zamanında değişmezse rubleyi ve aynakol dişlilerini de yıpratır. Uzama, ölçüm aletiyle kontrol edilir."
+        }
+      ],
+      "takeaway": "Sil, temizle, yağla, fazlasını al; zincirin de dişlilerin de ömrü uzasın.",
+      "related_categories": ["Kimyasal", "Vites Grubu"],
+      "cta": "servis",
+      "caption": "Zinciri yağlamak, üzerine yağ dökmek demek değil.\n\nZincirin yağa ihtiyaç duyduğu yer baklaların içi ve makaralar. Dışarıda kalan yağ işe yaramaz; tozu ve kumu üzerine toplar, zinciri daha hızlı aşındırır.\n\nDoğru sıra şöyle: Önce sil ve temizle. Sonra her baklaya bir damla yağ ver. Birkaç dakika bekle, fazlasını bezle al.\n\nSık yapılan iki hata var. Biri kirli zincirin üstüne yağ eklemek. Diğeri çok amaçlı çözücü spreyleri zincir yağı sanmak; bu spreyler zincirdeki yağı da çözer, kalıcı yağlama sağlamaz.\n\nZincir kullandıkça uzar; zamanında değişmezse rubleyi ve aynakolu da yıpratır. Atölyemizde ölçüp durumunu söyleyebiliriz.\n\nAdımları kaydet, zincir bakımında yanında olsun.\n\nSen zincirini ne sıklıkla yağlıyorsun?",
+      "alt": "Bisiklet zincirini temizleme, yağlama ve uzamasını ölçtürme adımlarını anlatan kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "kask-ayari",
+      "kicker": "KASK REHBERİ",
+      "title": "KASKIN DOĞRU DURUYOR MU? 5 KONTROL",
+      "intro": "Yanlış takılan kask düşüşte yerinden oynar. Ayarı bir dakikada kontrol et.",
+      "steps": [
+        {
+          "h": "Kask Düz Dursun",
+          "t": "Kaskı başına yatay oturt. Arkaya yatık kask alnını açıkta bırakır, öne eğik kask görüşünü kapatır."
+        },
+        {
+          "h": "Kaş Üstü İki Parmak",
+          "t": "Kaskın ön kenarı ile kaşların arasında yaklaşık iki parmak boşluk kalsın. Daha fazlası alnını korumasız bırakır."
+        },
+        {
+          "h": "Kayışlar Kulak Altında V",
+          "t": "Yan kayışlar kulağının hemen altında birleşip V harfi oluşturmalı. Ayar tokalarını kaydırarak iki tarafı eşitle."
+        },
+        {
+          "h": "Çene Altında Az Boşluk",
+          "t": "Çene kayışını kapat; altına bir iki parmak girecek kadar boşluk bırak. Daha bol kayış, düşüşte kaskın yerinden çıkmasına yol açabilir."
+        },
+        {
+          "h": "Darbe Aldıysa Değiştir",
+          "t": "Kaskın köpüğü darbeyi bir kez emer. Düşüşte darbe aldıysa dışarıdan sağlam görünse bile yenisiyle değiştir."
+        }
+      ],
+      "takeaway": "Kask ancak düz durduğunda ve kayışları doğru ayarlandığında korur.",
+      "related_categories": ["Kask", "Eldiven", "Gözlük"],
+      "cta": "magaza",
+      "caption": "Kask takmak yetmez; doğru takmak gerekir.\n\nSık görülen bir hata, kaskın arkaya yatık durması. Alın açıkta kalınca kask en çok gerektiği anda işini yapamaz.\n\nKontrolü kolay: Kask başında düz dursun. Ön kenarıyla kaşların arasında yaklaşık iki parmak boşluk olsun. Yan kayışlar kulağının altında V çizsin. Çene kayışının altına bir iki parmak girsin.\n\nSonra başını sağa sola salla. Kask yerinden oynuyorsa arkasındaki ayar mekanizmasını biraz daha sık.\n\nBir kural daha var: Darbe almış kask değiştirilir. Dışı sağlam görünse de içindeki köpük ezilmiş olabilir.\n\nSen her sürüşte kask takıyor musun, yoksa kısa mesafede boş verenlerden misin?",
+      "alt": "Bisiklet kaskının başa doğru oturması için beş kontrolü anlatan kaydırmalı bilgi görseli."
+    },
+    {
+      "id": "ebike-batarya-kis",
+      "kicker": "E-BİSİKLET",
+      "title": "E-BİSİKLET BATARYASI KIŞIN NASIL KORUNUR?",
+      "intro": "Batarya soğuğu sevmez. Birkaç basit alışkanlıkla menzilini ve ömrünü korursun.",
+      "steps": [
+        {
+          "h": "Oda Sıcaklığında Şarj Et",
+          "t": "Bataryayı içeride, oda sıcaklığında şarj et. Soğukta kalmış ya da donmuş bataryayı hemen şarja takma; önce ılımasını bekle."
+        },
+        {
+          "h": "Soğukta Menzil Düşer",
+          "t": "Düşük sıcaklıkta menzilin kısalması normaldir, arıza değildir. Bataryayı sürüşe kadar içeride tutarsan fark azalır."
+        },
+        {
+          "h": "Uzun Arada Yarı Dolu Sakla",
+          "t": "Uzun süre kullanmayacaksan bataryayı yaklaşık %40-60 dolulukta, serin ve kuru bir yerde sakla. Tam dolu ya da tam boş bırakma."
+        },
+        {
+          "h": "Yalnızca Kendi Şarj Cihazı",
+          "t": "Bataryayı yalnızca üreticisinin verdiği orijinal şarj cihazıyla şarj et. Uyumsuz cihaz bataryaya zarar verebilir, yangın riski doğurabilir."
+        },
+        {
+          "h": "Temas Noktalarını Kuru Tut",
+          "t": "Yağmurlu sürüşten sonra batarya yuvasını ve temas noktalarını kuru bir bezle sil. Bataryayı ıslakken şarja takma."
+        }
+      ],
+      "takeaway": "İçeride şarj et, yarı dolu sakla, yalnızca orijinal şarj cihazını kullan.",
+      "related_categories": ["Elektrikli Bisiklet"],
+      "cta": "servis",
+      "caption": "Kışın menzilin düştüyse bataryan bozulmuş olmayabilir.\n\nLityum bataryalar soğukta daha az enerji verir. Hava ısınınca menzil geri gelir; bu normal bir durum.\n\nAsıl dikkat etmen gereken şarj. Bataryayı içeride, oda sıcaklığında şarj et. Dışarıda soğukta kalmış bataryayı hemen prize takma; önce oda sıcaklığına gelmesini bekle.\n\nBisikleti birkaç hafta sürmeyeceksen bataryayı yaklaşık %40-60 dolulukta, serin ve kuru bir yerde sakla. Tam dolu ya da tamamen boş beklemek bataryayı yorar.\n\nŞarj için yalnızca bisikletle gelen orijinal cihazı kullan, temas noktalarını da kuru tut.\n\nBataryanla ilgili aklına takılan bir şey varsa Köyceğiz'deki atölyemize uğrayabilirsin.\n\nSenin e-bisikletin kışın kaç kilometre menzil veriyor?",
+      "alt": "E-bisiklet bataryasını kışın şarj etme ve saklama kurallarını anlatan kaydırmalı bilgi görseli."
+    }
+  ],
+  "story_tips": [
+    {
+      "h": "YAĞLADIKTAN SONRA FAZLASINI AL",
+      "t": "Zinciri yağladıktan sonra dışını temiz bir bezle sil. Dışarıda kalan yağ toz toplar, zinciri daha çabuk kirletir.",
+      "category": "Kimyasal"
+    },
+    {
+      "h": "HAFTADA BİR BASINÇ ÖLÇ",
+      "t": "Lastikler sürmesen de hava kaybeder. Haftada bir göstergeli pompayla ölç, yanakta yazan aralıkta tut.",
+      "category": "Pompa"
+    },
+    {
+      "h": "TAZYİKLİ SUYLA YIKAMA",
+      "t": "Tazyikli su rulmanlardaki gresi söküp içeri su sokabilir. Bisikleti hafif akan su ve süngerle yıka.",
+      "category": "Kimyasal"
+    },
+    {
+      "h": "LASTİKTE ÇATLAK VAR MI?",
+      "t": "Lastiğin yanağında çatlak, sırtında derin kesik ya da silinmiş diş görüyorsan değişim zamanı gelmiştir.",
+      "category": "Dış Lastik"
+    },
+    {
+      "h": "KISA MESAFEDE DE KASK",
+      "t": "Düşmek için uzun yol gerekmez. Bakkala giderken de kaskını tak, çene kayışını kapat.",
+      "category": "Kask"
+    },
+    {
+      "h": "YOLA ÇIKMADAN FRENİ DENE",
+      "t": "Binmeden önce iki freni de sıkıp bisikleti it. Kol gidona değiyor ya da bisiklet yürüyorsa sürme, kontrol ettir.",
+      "category": "Fren Grubu"
+    },
+    {
+      "h": "GÜNDÜZ DE IŞIK YAK",
+      "t": "Yanıp sönen arka ışık gündüz de fark edilmeni kolaylaştırır. Gölgeli, ağaçlı yollarda mutlaka aç.",
+      "category": "Aydınlatma ve Reflektör"
+    },
+    {
+      "h": "GÖZLÜK YALNIZCA GÜNEŞ İÇİN DEĞİL",
+      "t": "Gözlük gözünü rüzgârdan, tozdan ve böcekten korur. Akşam sürüşleri için şeffaf camlı bir gözlük işini görür.",
+      "category": "Gözlük"
+    },
+    {
+      "h": "VİTESİ YOKUŞTAN ÖNCE KÜÇÜLT",
+      "t": "Yokuş başlamadan hafif vitese geç. Pedala yük binmişken vites değiştirmek zinciri ve dişlileri zorlar.",
+      "category": "Vites Grubu"
+    },
+    {
+      "h": "İKİ FRENİ BİRLİKTE KULLAN",
+      "t": "Durma gücünün çoğu ön frenden gelir ama onu tek başına sert sıkma. İki freni birlikte ve kademeli kullan.",
+      "category": "Fren Grubu"
+    },
+    {
+      "h": "ÇAPRAZ ZİNCİRDEN KAÇIN",
+      "t": "Önde büyük, arkada en büyük dişli ya da önde küçük, arkada en küçük dişli zinciri çapraz çalıştırır ve yıpratır.",
+      "category": "Vites Grubu"
+    },
+    {
+      "h": "SELE YÜKSEKLİĞİNİ AYARLA",
+      "t": "Pedal en alttayken dizin hafifçe bükük kalmalı. Fazla alçak sele dizlerini yorar, sürüşü zorlaştırır.",
+      "category": "Sele Grubu"
+    },
+    {
+      "h": "ISLAK SÜRÜŞTEN SONRA KURULA",
+      "t": "Eve gelince kadroyu ve zinciri kuru bir bezle sil. Bisikleti ıslak bırakmak pasa davetiye çıkarır.",
+      "category": null
+    },
+    {
+      "h": "KIŞIN ÇAMURLUK TAK",
+      "t": "Çamurluk sırtını kuru tutar, tekerlekten zincire ve orta göbeğe sıçrayan suyu da azaltır.",
+      "category": "Çamurluk ve Muhafaza"
+    },
+    {
+      "h": "KAT KAT GİYİN",
+      "t": "Soğukta tek kalın mont yerine ince katlar giy. Isındıkça bir katı çıkarırsın, terleyip üşümezsin.",
+      "category": null
+    },
+    {
+      "h": "ELLERİNİ SICAK TUT",
+      "t": "Üşüyen parmaklar fren kolunu geç ve zayıf sıkar. Soğukta rüzgâr geçirmeyen, uzun parmaklı eldiven tak.",
+      "category": "Eldiven"
+    },
+    {
+      "h": "BÜYÜYÜNCE OLUR DEME",
+      "t": "Çocuğa büyük gelen bisiklet alma. Yere ve frene rahat yetişemeyen çocuk bisikleti kontrol edemez.",
+      "category": "Çocuk Bisikleti"
+    },
+    {
+      "h": "ÖNCE DENGE, SONRA PEDAL",
+      "t": "Denge bisikletiyle başlayan çocuk, pedallı bisiklete çoğunlukla destek tekerleğine gerek kalmadan geçer.",
+      "category": "Çocuk Bisikleti"
+    },
+    {
+      "h": "PARMAKLAR FRENE YETİŞİYOR MU?",
+      "t": "Çocuğun parmakları fren koluna rahat yetişmeli. Yetişmiyorsa kolun mesafesi çoğu modelde ayarlanabilir.",
+      "category": "Çocuk Bisikleti"
+    },
+    {
+      "h": "ÇOCUK KASKINI SIK SIK KONTROL ET",
+      "t": "Çocuk büyüdükçe kask ayarı değişir. Kask başında düz durmalı, başını sallayınca yerinden oynamamalı.",
+      "category": "Kask"
+    },
+    {
+      "h": "BATARYAYI İÇERİDE ŞARJ ET",
+      "t": "E-bisiklet bataryasını oda sıcaklığında şarj et. Soğukta kaldıysa şarja takmadan önce ılımasını bekle.",
+      "category": "Elektrikli Bisiklet"
+    },
+    {
+      "h": "DESTEK SEVİYESİ MENZİLİ BELİRLER",
+      "t": "En yüksek destek modunda batarya daha çabuk biter. Düz yolda düşük, yokuşta yüksek destek kullan.",
+      "category": "Elektrikli Bisiklet"
+    },
+    {
+      "h": "E-BİSİKLETTE ZİNCİRE DİKKAT",
+      "t": "Özellikle orta motorlu e-bisikletlerde zincire daha fazla yük biner. Sık yağla, uzamasını düzenli ölçtür.",
+      "category": "Elektrikli Bisiklet"
+    },
+    {
+      "h": "BATARYAYI YARI DOLU SAKLA",
+      "t": "Bisikleti haftalarca sürmeyeceksen bataryayı yaklaşık %40-60 dolulukta, serin ve kuru bir yerde beklet.",
+      "category": "Elektrikli Bisiklet"
+    },
+    {
+      "h": "KAPI MESAFESİ BIRAK",
+      "t": "Park etmiş araçların yanından geçerken bir kapı genişliği kadar açıktan sür. Kapı aniden açılabilir.",
+      "category": null
+    },
+    {
+      "h": "DÖNMEDEN ÖNCE İŞARET VER",
+      "t": "Dönmeden önce arkana bak ve kolunla yönünü göster. Ne yapacağını bilen sürücü sana yer açar.",
+      "category": null
+    },
+    {
+      "h": "ZİL ÇAL, HABER VER",
+      "t": "Yayaların ve bisikletlilerin yanından geçmeden birkaç metre önce zil çal. Kimse irkilmez, herkes yerini bilir.",
+      "category": "Zil, Korna, Ayna"
+    },
+    {
+      "h": "KÖR NOKTADA BEKLEME",
+      "t": "Kavşakta otobüsün ya da kamyonun sağ yanında durma. Sürücü seni göremeyebilir; aracın arkasında bekle.",
+      "category": null
+    },
+    {
+      "h": "YEDEK İÇ LASTİK TAŞI",
+      "t": "Yolda yama yapmak yerine iç lastiği değiştirmek daha hızlıdır. Yanında yedek iç lastik, levye ve pompa olsun.",
+      "category": "İç Lastik"
+    },
+    {
+      "h": "ÇANTAYI DENGELİ YÜKLE",
+      "t": "Ağır eşyaları çantanın altına koy. İki yan çantanın ağırlığı birbirine yakın olsun; bisiklet bir yana çekmesin.",
+      "category": "Çanta ve Sepet"
+    },
+    {
+      "h": "KÜÇÜK BİR ALET SETİ YETER",
+      "t": "Alyanları ve zincir aparatı olan çok amaçlı bir alet, yolda çıkan küçük sorunların çoğunu çözer.",
+      "category": "Anahtar ve Alet"
+    },
+    {
+      "h": "ROTAYI ÇEVRİM DIŞI İNDİR",
+      "t": "Köy ve orman yollarında telefon çekmeyebilir. Haritayı yola çıkmadan çevrim dışı kullanıma indir.",
+      "category": "Telefon Tutucu"
+    },
+    {
+      "h": "KADROYU SABİT BİR YERE KİLİTLE",
+      "t": "Kilidi yalnızca tekerlekten geçirme. Kadroyu, yerinden sökülemeyen sağlam bir direğe ya da park demirine bağla.",
+      "category": "Kilit"
+    },
+    {
+      "h": "KİLİDİ YERDEN YÜKSEKTE TUT",
+      "t": "Kilidi yere değmeyecek şekilde, boşluk bırakmadan bağla. Yerde duran, bol bağlanmış kilidi zorlamak daha kolaydır.",
+      "category": "Kilit"
+    },
+    {
+      "h": "KADRO NUMARANI KAYDET",
+      "t": "Kadro numarası çoğunlukla orta göbeğin altında yazar. Fotoğrafını çek, faturanla birlikte sakla.",
+      "category": null
+    },
+    {
+      "h": "İKİ DAKİKA İÇİN DE KİLİTLE",
+      "t": "\"Hemen dönerim\" diye kilitsiz bırakma. Bisikleti alıp gitmek için birkaç saniye yeter.",
+      "category": "Kilit"
+    },
+    {
+      "h": "SUSAMAYI BEKLEME",
+      "t": "Susadığında geç kalmış olabilirsin. Sürüş boyunca düzenli aralıklarla birkaç yudum su iç.",
+      "category": "Matara ve Kafes"
+    },
+    {
+      "h": "UZUN SÜRÜŞTE ATIŞTIRMALIK AL",
+      "t": "Bir saati aşan sürüşte yanına muz, hurma ya da kuruyemiş al. Acıkmayı bekleme, az az ye.",
+      "category": null
+    },
+    {
+      "h": "SICAKTA TUZ DA KAYBEDERSİN",
+      "t": "Sıcak havada terle su ve mineral kaybedersin. Uzun sürüşte suyun yanında elektrolitli bir içecek de taşı.",
+      "category": "Matara ve Kafes"
+    },
+    {
+      "h": "KIŞIN DA SU İÇ",
+      "t": "Soğukta susuzluğu daha az hissedersin ama terlemeye devam edersin. Kış sürüşünde de mataranı yanına al.",
+      "category": "Matara ve Kafes"
+    }
+  ],
+  "questions": [
+    "Bu hafta kaç kilometre sürdün?",
+    "En sevdiğin sürüş rotası neresi?",
+    "Bisiklete binmeyi kaç yaşında öğrendin?",
+    "Sabah sürüşü mü, akşam sürüşü mü?",
+    "Tek başına sürmeyi mi seversin, grupla mı?",
+    "Bisikletine bir ad taktın mı?",
+    "Sence hangisi daha zor: yokuş mu, karşıdan esen rüzgâr mı?",
+    "Bugüne kadarki en uzun sürüşün kaç kilometreydi?",
+    "Köyceğiz çevresinde en sevdiğin rota hangisi?",
+    "Bisikletle işe ya da okula gidiyor musun?",
+    "Kışın da sürenlerden misin, baharı bekleyenlerden mi?",
+    "Sürüşe çıkarken yanından ayırmadığın şey ne?",
+    "Zincirini en son ne zaman yağladın?",
+    "Lastik basıncını pompayla mı ölçersin, parmakla mı?",
+    "Yolda lastiğin patladı mı hiç, o gün ne yaptın?",
+    "Kask seçerken ilk neye bakarsın?",
+    "Bisikletini dışarıda bırakırken nasıl kilitliyorsun?",
+    "Akşam sürüşünde ışıkların hep yanında mı?",
+    "Senin bisikletinde disk fren mi var, jant freni mi?",
+    "İlk bisikletin kaç janttı?",
+    "E-bisiklet denedin mi, ilk izlenimin neydi?",
+    "Turda yükü nerede taşırsın: bagaj çantası mı, sırt çantası mı?",
+    "Mataranda ne olur: sade su mu, başka bir şey mi?",
+    "Bisikletinde ilk değiştirdiğin parça neydi?"
+  ]
+}

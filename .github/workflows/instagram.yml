@@ -2,17 +2,15 @@ name: Instagram otomasyonu
 
 on:
   schedule:
-    # Saatler UTC'dir (Türkiye = UTC+3). config.json'daki saatlerle eşleşmeli.
-    - cron: "0 8 * * *"     # 11:00 TR  Pazar postu
-    - cron: "30 9 * * *"    # 12:30 TR  öğle story
-    - cron: "30 16 * * *"   # 19:30 TR  akşam postu
-    - cron: "30 17 * * *"   # 20:30 TR  akşam story
-    - cron: "0 18 * * 0"    # Pazar 21:00 TR  siteyi tara + önümüzdeki 2 haftayı planla
+    - cron: "2,32 6-18 * * *"   # 09:02–21:32 TR, yarım saatte bir: zamanı gelen paylaşımı yayınla
+    - cron: "10 1 * * *"        # 04:10 TR: siteyi tara, takvimi ve görselleri yenile
   workflow_dispatch:
     inputs:
       task:
-        description: "publish, plan veya check (token ve hesabı doğrula)"
-        default: publish
+        description: "Görev"
+        type: choice
+        default: check
+        options: [check, plan, publish, probe, report]
 
 permissions:
   contents: write
@@ -24,42 +22,36 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+      CHROME_BIN: google-chrome
+      GOREV: ${{ inputs.task }}
+      ZAMANLAMA: ${{ github.event.schedule }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install pillow
-
-      - name: Siteyi tara ve planla
-        if: github.event.schedule == '0 18 * * 0' || inputs.task == 'plan'
-        env:
-          CHROME_BIN: google-chrome
-        run: |
-          python scripts/scrape.py
-          python scripts/plan.py
-
-      - name: Token ve hesabı doğrula
-        if: inputs.task == 'check'
-        env:
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
-        run: python scripts/publish.py --check
-
-      - name: Zamanı gelenleri yayınla
-        if: github.event.schedule != '0 18 * * 0' && inputs.task != 'plan' && inputs.task != 'check'
-        env:
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
-        run: python scripts/publish.py
-
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: cache/img
+          key: img-${{ github.run_id }}
+          restore-keys: img-
+      - name: Görevi çalıştır
+        run: python scripts/gorev.py
       - name: Değişiklikleri kaydet
         if: always()
         run: |
           git config user.name "nitro-bot"
-          git config user.email "nitro-bot@users.noreply.github.com"
-          git add data docs TAKVIM.md
-          git diff --cached --quiet || (git commit -m "otomatik: takvim/yayın güncellemesi" && git push)
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data docs
+          [ -f RAPOR.md ] && git add RAPOR.md
+          if git diff --cached --quiet; then echo "Değişiklik yok"; exit 0; fi
+          git commit -m "Otomatik: ${GOREV:-zamanlanmış} çalışması"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && exit 0; sleep 5; done
+          exit 1

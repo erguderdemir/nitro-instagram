@@ -1,0 +1,844 @@
+{
+ "phone": "0554 939 92 69",
+ "whatsapp_url": "https://wa.me/905549399269?text=Merhaba%2C%20nitrobisiklet.com%20%C3%BCzerinden%20yaz%C4%B1yorum.",
+ "email": "info@nitrobisiklet.com",
+ "address": "Gülpınar, Fevzi Paşa Cd. No:73/B, 48800 Köyceğiz / Muğla",
+ "maps_url": "https://share.google/uPHGQ0YfSaLLjec5U",
+ "hours": "Pzt–Cmt 08:30–19:00, Pazar kapalı",
+ "taglines": [
+  "AYNI GÜN SERVİS",
+  "3.000 ₺ ÜZERİ ÜCRETSİZ KARGO",
+  "NITRO BIKE TEAM YARIŞLARDA",
+  "Köyceğiz · Ölemez Dağı Etekleri · 2021'den beri",
+  "Asfaltın bittiği yerde başlar",
+  "Dükkanı yarış pistinde öğrendik",
+  "Fişi baştan görürsün",
+  "Bisikletini dağa hazırlayalım",
+  "Atölye · Aynı gün teslim",
+  "Önce ben kırıyorum",
+  "Dükkana uğra",
+  "Satış ve servis — Köyceğiz'in bisiklet dükkanı."
+ ],
+ "story": {
+  "url": "https://nitrobisiklet.com/hikaye/",
+  "paragraphs": [
+   "Nitro, bir dükkan açma fikriyle değil, bir bisikleti sürekli tamir etme zorunluluğuyla başladı.",
+   "Barış Şen'in bisikletle tanışması çocukluğuna dayanıyor. 2010'lu yıllardan bu yana lisanslı sporcu olarak dağ bisikletinin enduro ve downhill kategorilerinde yarışıyor; her sezon en az üç yarışa katılıyor ve kategorisinde dereceler alıyor.",
+   "Nitro Bisiklet, bu yarış tecrübesinin dükkâna taşınmış hâli. Pistte öğrendiklerimizi satıştan servise her işimize aktarıyoruz; yarış camiasında ne kadar varsak dükkânda da o kadar varız.",
+   "Barış hâlâ bisiklet sürüyor. Misafirlerine ve müşterilerine doğru bisikleti seçmeleri, onu yıllarca sorunsuz kullanmaları için bildiği her şeyi anlatıyor."
+  ],
+  "facts": [
+   "Kurucu · Barış Şen",
+   "Önce ben kırıyorum — Sonra atölyede tamir etmeyi öğreniyoruz.",
+   "2011 — KTÜ Bisiklet Kulübü: Karadeniz Teknik Üniversitesi Bisiklet Kulübü'ne katıldı; dağ bisikletiyle asıl tanışma.",
+   "2012 — İlk yarış, ilk podyum: Katıldığı ilk yarışta kategorisinde üçüncü oldu.",
+   "2016 — Erciyes Downhill: Türkiye'de ilk kez düzenlenen Erciyes Downhill yarışında start aldı.",
+   "2021 — Nitro Bisiklet: Dükkânın kapısı açıldı: satış ve servis tek çatı altında.",
+   "2026 — Nitro Bike Team: Nitro Bike Team kuruldu; yarışlarda artık takım olarak varız.",
+   "Köyceğiz · Ölemez Dağı Etekleri · 2021'den beri",
+   "Satış ve servis. İkisini de yapan bir dükkan — ve yarışan bir kurucu. Bisikletini bize bırak, biz dağa hazırlayalım.",
+   "Kurucumuz Barış Şen hâlâ enduro yarışıyor. Sana sattığımız her bisiklet, önce onun bozduğu, sonra atölyede onardığımız şeylerin üzerine kurulu. Kataloğumuzda teorik ürün yok — hepsi sahada denendi.",
+   "Dağ, yol, gravel, elektrikli, şehir ve çocuk bisikletleri; yedek parça ve aksesuar. Sıfır ve kontrollü 2. el. Hepsi bizim elimizden geçip öyle çıkıyor.",
+   "Köyceğiz Bisiklet Turları — Topluluk: Sürüşler, rotalar ve buluşma saatleri grupta paylaşılıyor. Her seviyeye açık.",
+   "WhatsApp grubuna katıl: https://chat.whatsapp.com/DqAb4SrvnhU4sbZlWtuhMz"
+  ]
+ },
+ "service": {
+  "url": "https://nitrobisiklet.com/servis/",
+  "booking_url": "https://nitrobisiklet.com/servis/#randevu",
+  "headline": "Bisikletini dağa hazırlayalım",
+  "facts": [
+   "Atölye · Aynı gün teslim",
+   "Tezgâha alınan her bisiklet önce baştan aşağı kontrol edilir. Onayını almadan hiçbir parça değişmez, fişinin durumunu numarasıyla canlı takip edersin.",
+   "Paketin içindekiler sabittir; tezgâhta çıkan ek iş için önce sana sorulur.",
+   "Sürpriz kalem yok. Paket sabit, ekstra parça çıkarsa onayını almadan takmıyoruz.",
+   "Balata, rot, amortisör bakımı, jant ayarı. Online randevu, fiş numarasıyla canlı takip.",
+   "01 Randevu: Paketi, günü ve saati sen seçiyorsun. Tezgâh o saat senin.",
+   "02 Teşhis: Bisiklet tezgâha alınır, çıkan her şey fişe yazılır.",
+   "03 Onay: Ek iş çıkarsa fiyatıyla birlikte sana sorulur. Onayını almadan takmıyoruz.",
+   "04 Teslim: Yapılan işin dökümüyle birlikte teslim edilir.",
+   "5000+ Tamir edilen bisiklet",
+   "48s Ortalama servis süresi",
+   "CANLI TAKİP — Fiş numaranı gir: Fiş numaranı girince durumu burada görürsün.",
+   "Randevu al: Gün ve saati sen seç, tezgâh seni beklesin.",
+   "Fiş durumunu sorgula: Bisikletin ne aşamada, fiş numaranla gör.",
+   "Ara, WhatsApp'tan yaz ya da dükkana gel — hangisi kolayına geliyorsa. Servis randevusu için aramana gerek yok.",
+   "Mağazada dene — randevu al",
+   "Atölyede kurulup teslim edilir",
+   "Kademe seçimi boya değil, iç bacak ölçüsüne bakar. Emin değilsen mağazaya gel, tezgâhta ölçelim — 15 dakika sürer.",
+   "Satıcı, mağazasında ücretsiz kurulum kontrolü sunabilir."
+  ],
+  "items": [
+   {
+    "name": "Hızlı kontrol",
+    "price": "850 ₺",
+    "desc": "Süre: 45 dk · Fren ve vites ayarı · Lastik basıncı · Cıvata tork kontrolü · Zincir yağlama",
+    "duration": "45 dk",
+    "includes": [
+     "Fren ve vites ayarı",
+     "Lastik basıncı",
+     "Cıvata tork kontrolü",
+     "Zincir yağlama"
+    ],
+    "booking_url": "https://nitrobisiklet.com/servis/?paket=hizli-kontrol#randevu"
+   },
+   {
+    "name": "Genel bakım",
+    "price": "1.850 ₺",
+    "desc": "Süre: 1 gün · Hızlı kontroldeki her şey · Vites sistemi temizliği · Jant merkezleme · Göbek ve akort kontrolü · Fren hattı havası alma · Detaylı yıkama & yağlama",
+    "duration": "1 gün",
+    "includes": [
+     "Hızlı kontroldeki her şey",
+     "Vites sistemi temizliği",
+     "Jant merkezleme",
+     "Göbek ve akort kontrolü",
+     "Fren hattı havası alma",
+     "Detaylı yıkama & yağlama"
+    ],
+    "booking_url": "https://nitrobisiklet.com/servis/?paket=genel-bakim#randevu",
+    "badge": "En çok seçilen"
+   },
+   {
+    "name": "Sezon revizyonu",
+    "price": "4.500 ₺",
+    "desc": "Süre: 2–3 gün · Genel bakımdaki her şey · Amortisör servisi · \"Hidrolik\" için yağ, \"V-Fren\" veya \"Mekanik Disk\" için tel, kablo hattı ve parça değişimi · Rulman değişimi · Tubeless sıvı yenileme",
+    "duration": "2–3 gün",
+    "includes": [
+     "Genel bakımdaki her şey",
+     "Amortisör servisi",
+     "\"Hidrolik\" için yağ, \"V-Fren\" veya \"Mekanik Disk\" için tel, kablo hattı ve parça değişimi",
+     "Rulman değişimi",
+     "Tubeless sıvı yenileme"
+    ],
+    "booking_url": "https://nitrobisiklet.com/servis/?paket=sezon-revizyonu#randevu"
+   }
+  ]
+ },
+ "shipping": {
+  "url": "https://nitrobisiklet.com/yasal/kargo-ve-teslimat/",
+  "facts": [
+   "Stoktaki ürünler 1–3 iş günü içinde kargoya verilir; Köyceğiz içi teslimat ve mağazadan teslim alma ücretsizdir.",
+   "Köyceğiz içi — Ücret: Ücretsiz · Süre: Aynı gün",
+   "Türkiye geneli, Yurtiçi Kargo — Ücret: 250 ₺; 3.000 ₺ ve üzeri siparişlerde ücretsiz · Süre: Kargoya verilişten sonra 1–3 iş günü",
+   "Mağazadan teslim (\"Mağazadan al\") — Ücret: Ücretsiz · Süre: Hazır olduğunda e-posta ile bildirilir",
+   "Siparişler, onay tarihinden itibaren yasal üst sınır olan 30 günü aşmamak üzere teslim edilir. Ön siparişli veya tedarik süreli ürünlerde tahmini teslim tarihi ürün sayfasında belirtilir.",
+   "Hafta sonu ve resmi tatillerde kargo çıkışı yapılmaz.",
+   "Kargoya verilen siparişin takip numarası e-posta ile iletilir ve \"Siparişlerim\" ekranından izlenebilir.",
+   "Bisikletler; gidon, pedal ve gerekirse ön teker sökülmüş halde, koruyucu ambalajla kutulu gönderilir. Kurulum talimatı/videosu kutudadır. Kurulum desteği için mağazamızla iletişime geçebilirsin.",
+   "Bisiklet gibi hacimli gönderilerde kargo firmasının desi kuralları nedeniyle teslimat süresi uzayabilir.",
+   "Ürün teslim edilene kadar oluşan kayıp ve hasarlardan Satıcı sorumludur. Koli hasarlıysa teslim almadan önce görevliye tutanak tutturman önerilir.",
+   "Şu an yalnızca Türkiye içine gönderim yapılmaktadır.",
+   "Köyceğiz içi aynı gün, ücretsiz · Türkiye geneli 3.000 ₺ üzeri ücretsiz kargo",
+   "Alıcı dilerse ürünü Köyceğiz'deki mağazadan ücretsiz teslim alabilir (\"Mağazadan al\").",
+   "3.000 ₺ ÜZERİ ÜCRETSİZ KARGO"
+  ]
+ },
+ "returns": {
+  "url": "https://nitrobisiklet.com/yasal/iade-ve-degisim/",
+  "facts": [
+   "Nitro Bisiklet'ten aldığın ürünü, teslim aldığın günden itibaren 14 gün içinde sebep belirtmeden iade edebilirsin; iade kargosu bize aittir.",
+   "Siparişini kargoya verilmeden önce info@nitrobisiklet.com adresine yazarak veya 0554 939 92 69'u arayarak iptal edebilirsin. Bedel, iptalden itibaren en geç 14 gün içinde ödeme yaptığın yönteme iade edilir. Kargoya verilmiş siparişler için aşağıdaki iade süreci uygulanır.",
+   "Teslimden itibaren 14 gün içinde info@nitrobisiklet.com veya 0554 939 92 69 (telefon / WhatsApp) üzerinden bize bildir.",
+   "Sana bir iade kodu iletiriz. Ürünü, bildirimden itibaren 10 gün içinde Yurtiçi Kargo şubesine bu kodla teslim et; ücret ödemezsin.",
+   "Bulunduğun yerde Yurtiçi Kargo şubesi yoksa bize haber ver; ürünü adresinden ücretsiz aldırırız.",
+   "Köyceğiz'deki mağazamıza bizzat da getirebilirsin.",
+   "Ürün bize ulaşıp kontrol edildikten sonra, bildirim tarihinden itibaren en geç 14 gün içinde ödediğin tüm tutar (gönderim ücreti dahil) iade edilir.",
+   "Ürünü faturasıyla, tüm parça ve aksesuarlarıyla, mümkünse orijinal kutusunda gönder.",
+   "Bisikleti denemek için kurabilirsin. Bisiklet üzerinde kesme, delme gibi bir işlem yapılmamış; çizik, kırık, çatlak gibi bir hasar almamış ve sıfır görünümünü kaybetmemiş olmalıdır. Arazide sürülmüş, çamurlanmış veya düşme hasarı almış ürünlerdeki değer kaybı iade bedelinden düşülür.",
+   "Bisiklet gönderiminde kutu yoksa güvenli paketleme için bize ulaş; uygun kutu temin etmeye çalışırız.",
+   "İade edilemeyen ürünler: Senin için özel olarak hazırlanan ürünler (siparişe özel parçalarla toplanan bisiklet, baskılı forma vb.)",
+   "İade edilemeyen ürünler: Ambalajı açılmış hijyen ürünleri: iç astarlı şort ve tayt, kask iç pedi, bidon, jel ve beslenme ürünleri",
+   "İade edilemeyen ürünler: Açılmış yağ, temizlik ve bakım kimyasalları",
+   "İade edilemeyen ürünler: Kılavuzunda bizim veya yetkili servis tarafından monte edileceği belirtilen ve montajı yapılmış ürünler",
+   "Beden veya kadro ölçüsü değişimi için ürünü iade edip yeni sipariş verebilir ya da stok durumuna göre doğrudan değişim talep edebilirsin. İlk değişim gönderimi ücretsizdir.",
+   "Koli hasarlı geldiyse teslimat görevlisine tutanak tutturmanı öneririz. Ürün ayıplıysa, yasal garanti süresi olan 2 yıl içinde ücretsiz onarım, değişim, bedel indirimi veya iade haklarından birini seçebilirsin. Ayıplı ürünün tüm gönderim masrafları bize aittir.",
+   "Yasal garanti süresi teslimden itibaren 2 yıldır.",
+   "14 gün iade",
+   "İade ve değişim: 14 gün içinde iade koşulları ve adımları."
+  ]
+ },
+ "payment": {
+  "facts": [
+   "Ödeme, Alıcı'nın seçtiği yöntemle (kredi/banka kartı veya havale/EFT) yapılır.",
+   "Kart bilgileri Satıcı tarafından saklanmaz; kartlı ödeme PayTR Ödeme ve Elektronik Para Kuruluşu A.Ş. altyapısı üzerinden alınır.",
+   "Taksitli ödemelerde vade farkı ve taksit sayısı ödeme sayfasında ayrıca gösterilir.",
+   "KDV dahil",
+   "Taksitli ödemelerde iade: İade tutarı bankana tek seferde aktarılır; bankanın bu tutarı taksitlere yansıtma şekli ve süresi bankanın uygulamasına bağlıdır."
+  ]
+ },
+ "team": {
+  "facts": [
+   "NITRO BIKE TEAM YARIŞLARDA",
+   "2026 — Nitro Bike Team: Nitro Bike Team kuruldu; yarışlarda artık takım olarak varız.",
+   "Nitro Bike Team — Yarış takımı: 6 SÜRÜCÜ",
+   "6 Takım sürücüsü",
+   "ENDURO · DOWNHILL",
+   "Kurucu · #17",
+   "2026 Erzurum Downhill — 3.lük",
+   "Erciyes Downhill · 2016",
+   "Dükkanı yarış pistinde öğrendik"
+  ]
+ },
+ "blog": [],
+ "urls": {
+  "magaza": "https://nitrobisiklet.com/magaza/",
+  "servis": "https://nitrobisiklet.com/servis/",
+  "hikaye": "https://nitrobisiklet.com/hikaye/",
+  "iletisim": "https://nitrobisiklet.com/iletisim/",
+  "kargo": "https://nitrobisiklet.com/yasal/kargo-ve-teslimat/",
+  "iade": "https://nitrobisiklet.com/yasal/iade-ve-degisim/",
+  "categories": {
+   "Elektronik Yedek Parça": "https://nitrobisiklet.com/magaza/elektronik-yedek-parca/",
+   "Aksesuar": "https://nitrobisiklet.com/magaza/aksesuar/",
+   "2. El Bisiklet": "https://nitrobisiklet.com/magaza/2-el-bisiklet/",
+   "Dağ Bisikleti": "https://nitrobisiklet.com/magaza/dag-bisikleti/",
+   "Şehir Bisikleti": "https://nitrobisiklet.com/magaza/sehir-bisikleti/",
+   "Elektrikli Bisiklet": "https://nitrobisiklet.com/magaza/elektrikli-bisiklet/",
+   "Gravel": "https://nitrobisiklet.com/magaza/gravel/",
+   "BMX/Dirtjump": "https://nitrobisiklet.com/magaza/bmxdirtjump/",
+   "Çocuk Bisikleti": "https://nitrobisiklet.com/magaza/cocuk-bisikleti/",
+   "Kilit": "https://nitrobisiklet.com/magaza/kilit/",
+   "Telefon Tutucu": "https://nitrobisiklet.com/magaza/telefon-tutucu/",
+   "Zil, Korna, Ayna": "https://nitrobisiklet.com/magaza/zil-korna-ayna/",
+   "Park Ayağı ve Sehpa": "https://nitrobisiklet.com/magaza/park-ayagi-ve-sehpa/",
+   "Sele ve Kılıf": "https://nitrobisiklet.com/magaza/sele-ve-kilif/",
+   "Pompa": "https://nitrobisiklet.com/magaza/pompa/",
+   "Elcik Sargı Barend": "https://nitrobisiklet.com/magaza/elcik-sargi-barend/",
+   "Matara ve Kafes": "https://nitrobisiklet.com/magaza/matara-ve-kafes/",
+   "Aydınlatma ve Reflektör": "https://nitrobisiklet.com/magaza/aydinlatma-ve-reflektor/",
+   "Çanta ve Sepet": "https://nitrobisiklet.com/magaza/canta-ve-sepet/",
+   "Taşıyıcı ve Bagaj": "https://nitrobisiklet.com/magaza/tasiyici-ve-bagaj/",
+   "Çamurluk ve Muhafaza": "https://nitrobisiklet.com/magaza/camurluk-ve-muhafaza/",
+   "Km Saati": "https://nitrobisiklet.com/magaza/km-saati/",
+   "Vites Grubu": "https://nitrobisiklet.com/magaza/vites-grubu/",
+   "Amortisör": "https://nitrobisiklet.com/magaza/amortisor/",
+   "Fren Grubu": "https://nitrobisiklet.com/magaza/fren-grubu/",
+   "Pedal ve Kal": "https://nitrobisiklet.com/magaza/pedal-ve-kal/",
+   "Gidon Grubu": "https://nitrobisiklet.com/magaza/gidon-grubu/",
+   "Kadro ve Kulak": "https://nitrobisiklet.com/magaza/kadro-ve-kulak/",
+   "Jant Grubu": "https://nitrobisiklet.com/magaza/jant-grubu/",
+   "Sele Grubu": "https://nitrobisiklet.com/magaza/sele-grubu/",
+   "Lastik": "https://nitrobisiklet.com/magaza/lastik/",
+   "İç Lastik": "https://nitrobisiklet.com/magaza/ic-lastik/",
+   "Dış Lastik": "https://nitrobisiklet.com/magaza/dis-lastik/",
+   "Kask": "https://nitrobisiklet.com/magaza/kask/",
+   "Eldiven": "https://nitrobisiklet.com/magaza/eldiven/",
+   "Bandana": "https://nitrobisiklet.com/magaza/bandana/",
+   "Forma": "https://nitrobisiklet.com/magaza/forma/",
+   "Pantolon": "https://nitrobisiklet.com/magaza/pantolon/",
+   "Gözlük": "https://nitrobisiklet.com/magaza/gozluk/",
+   "Atölye ve Tamir": "https://nitrobisiklet.com/magaza/atolye-ve-tamir/",
+   "Kimyasal": "https://nitrobisiklet.com/magaza/kimyasal/",
+   "Anahtar ve Alet": "https://nitrobisiklet.com/magaza/anahtar-ve-alet/",
+   "Outlet": "https://nitrobisiklet.com/magaza/outlet/",
+   "Balatalar & Pabuçlar": "https://nitrobisiklet.com/magaza/balatalar-pabuclar/",
+   "Fren Kolları": "https://nitrobisiklet.com/magaza/fren-kollari/",
+   "Fren Setleri": "https://nitrobisiklet.com/magaza/fren-setleri/",
+   "Disk Fren Rotorları": "https://nitrobisiklet.com/magaza/disk-fren-rotorlari/"
+  }
+ },
+ "images": [
+  {
+   "url": "https://nitrobisiklet.com/media/site/nb-logo.png",
+   "alt": "Nitro Bisiklet",
+   "page": "https://nitrobisiklet.com/",
+   "w": 768,
+   "h": 753,
+   "kind": "logo",
+   "desc": "Nitro Bisiklet logosu: dağ silüeti önünde bisiklet çizimi, altında turuncu \"NITRO BISIKLET\" yazısı. PNG (alfa kanallı)."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/site/nitro-paylasim_Es6KlHs.jpg",
+   "alt": "",
+   "page": "https://nitrobisiklet.com/",
+   "w": 1200,
+   "h": 630,
+   "kind": "share_card",
+   "desc": "Paylaşım kartı (og:image). Logo + üzerindeki yazılar: \"BİSİKLET SATIŞ & SERVİS\", \"KÖYCEĞİZ / MUĞLA\", \"Türkiye geneli kargo\", \"Online servis randevusu\", \"NITROBISIKLET.COM\", \"ÇAMUR KURUR, ZAFER KALIR\"."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/odek.jpeg",
+   "alt": "Downhill sprung bellwald",
+   "page": "https://nitrobisiklet.com/",
+   "w": 5120,
+   "h": 3414,
+   "kind": "race_photo",
+   "desc": "Ana sayfa hero görseli. Kızıl kayalık kanyon parkurunda yarış numaralı, mavi formalı sürücü; koyu mavi gökyüzü. Not: sitedeki alt metni görselle uyuşmuyor (eski metin kalmış)."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/pist.jpeg",
+   "alt": "PIST",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 5120,
+   "h": 3413,
+   "kind": "race_photo",
+   "desc": "Hikaye sayfası \"Pistten kareler\". odek.jpeg ile aynı kare (kanyon parkuru, yarış numaralı sürücü)."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/start.jpeg",
+   "alt": "START",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 5120,
+   "h": 3414,
+   "kind": "race_photo",
+   "desc": "Hikaye sayfası \"Pistten kareler\". Çam ormanı içindeki taşlı patikada yarış numaralı sürücü."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/kursu.jpeg",
+   "alt": "KÜRSÜ",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 2268,
+   "h": 4032,
+   "kind": "podium_photo",
+   "desc": "Hikaye sayfası \"Pistten kareler\". Dikey selfie: takım formalı sürücü, boynunda madalya, elinde kupa. Kupa plakasında \"Dowinhill Türkiye Şampiyonası 2026 Palandöken/ERZURUM · MASTER ERKEK 3.\" yazıyor. Arka planda başka kişiler ve üçüncü taraf sponsor afişleri var."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/takim.jpeg",
+   "alt": "TAKIM",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 2880,
+   "h": 5120,
+   "kind": "team_photo",
+   "desc": "Hikaye sayfası \"Pistten kareler\". Dikey kare: takım formalı 5 sürücü, \"Bursa Urban Downhill Bisiklet Yarışı\" panosunun önünde. Panoda üçüncü taraf kurum/sponsor logoları var."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/baris-sen.jpeg",
+   "alt": "Barış Şen",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 1290,
+   "h": 1163,
+   "kind": "team_portrait",
+   "desc": "Takım üyesi portresi. Görsele gömülü yazı var: \"NİTRO BOSS / nitro team founder\" ve Nitro Team rozeti."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/yavuz-aksoy.jpeg",
+   "alt": "Yavuz Aksoy",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 1290,
+   "h": 1162,
+   "kind": "team_portrait",
+   "desc": "Takım üyesi portresi. Görsele gömülü isim yazısı var."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/ege-urer.jpeg",
+   "alt": "Ege Ürer",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 1290,
+   "h": 1169,
+   "kind": "team_portrait",
+   "desc": "Takım üyesi portresi. Görsele gömülü isim yazısı, rozet ve \"1/5\" arayüz kalıntısı var."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/ali-yahya-duman.jpeg",
+   "alt": "Ali Yahya Duman",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 1290,
+   "h": 1158,
+   "kind": "team_portrait",
+   "desc": "Takım üyesi portresi. Görsele gömülü isim yazısı ve \"Namı Diğer Uzaylı\" yazısı var."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/mehmet-efe-ozekin.jpeg",
+   "alt": "Mehmet Efe Özekin",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 1290,
+   "h": 1167,
+   "kind": "team_portrait",
+   "desc": "Takım üyesi portresi. Görsele gömülü isim yazısı var. Sitede 2009 doğumlu olarak geçiyor (18 yaşından küçük)."
+  },
+  {
+   "url": "https://nitrobisiklet.com/media/section/onur-sevgi.jpeg",
+   "alt": "Onur Sevgi",
+   "page": "https://nitrobisiklet.com/hikaye/",
+   "w": 1027,
+   "h": 1348,
+   "kind": "team_portrait",
+   "desc": "Takım üyesi portresi. Görsele gömülü isim yazısı var."
+  }
+ ],
+ "social": {
+  "instagram": null,
+  "facebook": null,
+  "youtube": null,
+  "tiktok": null,
+  "strava": null,
+  "whatsapp": "https://wa.me/905549399269?text=Merhaba%2C%20nitrobisiklet.com%20%C3%BCzerinden%20yaz%C4%B1yorum.",
+  "whatsapp_group": "https://chat.whatsapp.com/DqAb4SrvnhU4sbZlWtuhMz"
+ },
+ "quotes": [
+  {
+   "text": "Asfaltın bittiği yerde başlar",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Satış ve servis. İkisini de yapan bir dükkan — ve yarışan bir kurucu.",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Bisikletini bize bırak, biz dağa hazırlayalım.",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Hepsi bizim elimizden geçip öyle çıkıyor.",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Fişi baştan görürsün",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Sürpriz kalem yok. Paket sabit, ekstra parça çıkarsa onayını almadan takmıyoruz.",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Dükkanı yarış pistinde öğrendik",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Kataloğumuzda teorik ürün yok — hepsi sahada denendi.",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Yeni gelenleri ilk sen gör",
+   "source_url": "https://nitrobisiklet.com/"
+  },
+  {
+   "text": "Önce ben kırıyorum",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Sonra atölyede tamir etmeyi öğreniyoruz.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Nitro, bir dükkan açma fikriyle değil, bir bisikleti sürekli tamir etme zorunluluğuyla başladı.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Nitro Bisiklet, bu yarış tecrübesinin dükkâna taşınmış hâli.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Pistte öğrendiklerimizi satıştan servise her işimize aktarıyoruz; yarış camiasında ne kadar varsak dükkânda da o kadar varız.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Barış hâlâ bisiklet sürüyor.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Dükkânın kapısı açıldı: satış ve servis tek çatı altında.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Nitro Bike Team kuruldu; yarışlarda artık takım olarak varız.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Sürüşler, rotalar ve buluşma saatleri grupta paylaşılıyor. Her seviyeye açık.",
+   "source_url": "https://nitrobisiklet.com/hikaye/"
+  },
+  {
+   "text": "Bisikletini dağa hazırlayalım",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Onayını almadan hiçbir parça değişmez, fişinin durumunu numarasıyla canlı takip edersin.",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Ne kadar derin baksın?",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Paketin içindekiler sabittir; tezgâhta çıkan ek iş için önce sana sorulur.",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Bıraktığın andan teslim aldığına",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Tezgâh o saat senin.",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Onayını almadan takmıyoruz.",
+   "source_url": "https://nitrobisiklet.com/servis/"
+  },
+  {
+   "text": "Dükkana uğra",
+   "source_url": "https://nitrobisiklet.com/iletisim/"
+  },
+  {
+   "text": "Gün ve saati sen seç, tezgâh seni beklesin.",
+   "source_url": "https://nitrobisiklet.com/iletisim/"
+  },
+  {
+   "text": "Servis randevusu için aramana gerek yok.",
+   "source_url": "https://nitrobisiklet.com/iletisim/"
+  },
+  {
+   "text": "Emin değilsen mağazaya gel, tezgâhta ölçelim — 15 dakika sürer.",
+   "source_url": "https://nitrobisiklet.com/beden-rehberi/"
+  },
+  {
+   "text": "Satış ve servis — Köyceğiz'in bisiklet dükkanı.",
+   "source_url": "https://nitrobisiklet.com/manifest.json"
+  },
+  {
+   "text": "ÇAMUR KURUR, ZAFER KALIR",
+   "source_url": "https://nitrobisiklet.com/media/site/nitro-paylasim_Es6KlHs.jpg"
+  }
+ ],
+ "_extra": {
+  "fetched_at": "2026-11-24",
+  "source": "nitrobisiklet.com sayfaları curl ile indirildi; \"facts\", \"paragraphs\", \"taglines\" ve \"quotes\" içindeki metinler sitede yazdığı gibidir. Birden çok parçadan oluşan satırlarda (ör. \"2021 — Nitro Bisiklet: ...\", \"Süre: ... · ...\") yalnızca ayraçlar ( — : · ) eklenmiştir. \"desc\", \"reason\", \"notes\" ve \"absent_on_site\" alanları sitenin metni değil, derleyenin açıklamasıdır.",
+  "home": {
+   "title": "Nitro Bisiklet — Köyceğiz Bisiklet Satış ve Servis",
+   "meta_description": "Köyceğiz'de bisiklet satışı, yedek parça ve atölye servisi. Türkiye geneli kargo, 3.000 ₺ üzeri ücretsiz. Servis randevunu online al.",
+   "og_image": "https://nitrobisiklet.com/media/site/nitro-paylasim_Es6KlHs.jpg"
+  },
+  "home_stats": [
+   {
+    "value": "5000+",
+    "label": "Tamir edilen bisiklet"
+   },
+   {
+    "value": "48s",
+    "label": "Ortalama servis süresi"
+   },
+   {
+    "value": "6",
+    "label": "Takım sürücüsü"
+   }
+  ],
+  "legal": {
+   "name": "Barış Şen – Nitro Bisiklet",
+   "copyright": "© 2026 NITRO BISIKLET",
+   "address_legal_form": "Gülpınar Mah., Fevzi Paşa Cd. No:73/B, 48800 Köyceğiz / Muğla"
+  },
+  "phone_e164": "+905549399269",
+  "urls": {
+   "home": "https://nitrobisiklet.com/",
+   "blog": "https://nitrobisiklet.com/blog/",
+   "servis_randevu": "https://nitrobisiklet.com/servis/#randevu",
+   "fis_takibi": "https://nitrobisiklet.com/servis/#takip",
+   "siparis_takibi": "https://nitrobisiklet.com/hesap/siparisler/",
+   "uygulama": "https://nitrobisiklet.com/uygulama/",
+   "beden_rehberi": "https://nitrobisiklet.com/beden-rehberi/",
+   "mesafeli_satis_sozlesmesi": "https://nitrobisiklet.com/yasal/mesafeli-satis-sozlesmesi/",
+   "on_bilgilendirme_formu": "https://nitrobisiklet.com/yasal/on-bilgilendirme-formu/",
+   "nav": {
+    "Bisikletler": "https://nitrobisiklet.com/magaza/bisiklet/",
+    "Yedek Parça": "https://nitrobisiklet.com/magaza/yedek-parca/",
+    "Aksesuar": "https://nitrobisiklet.com/magaza/aksesuar/",
+    "Giyim": "https://nitrobisiklet.com/magaza/giyim/",
+    "2. El": "https://nitrobisiklet.com/magaza/2-el-bisiklet/"
+   }
+  },
+  "category_url_pattern": {
+   "pattern": "https://nitrobisiklet.com/magaza/<slug>/",
+   "alternative": "https://nitrobisiklet.com/magaza/?kategori=<slug>",
+   "pagination": "?sayfa=N (sayfa başına 9 ürün)",
+   "source": "Mağaza sayfasındaki <select id=\"category-jump\"> seçeneklerinin data-url değerleri"
+  },
+  "category_counts": {
+   "Elektronik Yedek Parça": 1,
+   "Aksesuar": 130,
+   "2. El Bisiklet": 10,
+   "Dağ Bisikleti": 21,
+   "Şehir Bisikleti": 22,
+   "Elektrikli Bisiklet": 7,
+   "Gravel": 3,
+   "BMX/Dirtjump": 2,
+   "Çocuk Bisikleti": 7,
+   "Kilit": 4,
+   "Telefon Tutucu": 4,
+   "Zil, Korna, Ayna": 16,
+   "Park Ayağı ve Sehpa": 9,
+   "Sele ve Kılıf": 8,
+   "Pompa": 4,
+   "Elcik Sargı Barend": 18,
+   "Matara ve Kafes": 16,
+   "Aydınlatma ve Reflektör": 4,
+   "Çanta ve Sepet": 23,
+   "Taşıyıcı ve Bagaj": 3,
+   "Çamurluk ve Muhafaza": 13,
+   "Km Saati": 4,
+   "Vites Grubu": 29,
+   "Amortisör": 4,
+   "Fren Grubu": 26,
+   "Pedal ve Kal": 20,
+   "Gidon Grubu": 16,
+   "Kadro ve Kulak": 15,
+   "Jant Grubu": 14,
+   "Sele Grubu": 15,
+   "Lastik": 34,
+   "İç Lastik": 21,
+   "Dış Lastik": 12,
+   "Kask": 2,
+   "Eldiven": 10,
+   "Bandana": 1,
+   "Forma": 1,
+   "Pantolon": 1,
+   "Gözlük": 2,
+   "Atölye ve Tamir": 12,
+   "Kimyasal": 5,
+   "Anahtar ve Alet": 2,
+   "Outlet": 1,
+   "Balatalar & Pabuçlar": 3,
+   "Fren Kolları": 1,
+   "Fren Setleri": 2,
+   "Disk Fren Rotorları": 8
+  },
+  "category_listing_differences": {
+   "Aksesuar": {
+    "site_count": 130,
+    "products_json_count": 4,
+    "also_lists_products_of": {
+     "Çanta ve Sepet": 23,
+     "Zil, Korna, Ayna": 16,
+     "Kilit": 4,
+     "Park Ayağı ve Sehpa": 9,
+     "Km Saati": 4,
+     "Çamurluk ve Muhafaza": 13,
+     "Elcik Sargı Barend": 18,
+     "Aydınlatma ve Reflektör": 4,
+     "Sele ve Kılıf": 8,
+     "Taşıyıcı ve Bagaj": 3,
+     "Matara ve Kafes": 16,
+     "Pompa": 4,
+     "Telefon Tutucu": 4
+    }
+   },
+   "Vites Grubu": {
+    "site_count": 29,
+    "products_json_count": 29,
+    "on_site_but_not_in_products_json": [
+     "shimano-deore-fc-m617-36t-aynakol-dislisi-yaprak-104-bcd-10-vites-siyah"
+    ],
+    "in_products_json_but_gone_from_site": [
+     "shimano-deore-fc-t521-36t-104-mm-bcd-orta-yaprak-aynakol-dislisi-siyah"
+    ]
+   },
+   "Jant Grubu": {
+    "site_count": 14,
+    "products_json_count": 10,
+    "on_site_but_not_in_products_json": [
+     "bisiklet-arka-gobek-32h-mor-markasiz",
+     "bisiklet-on-gobek-32h-mor-markasiz",
+     "hassns-pro-bisiklet-arka-gobek-32h-36h-rainbow-siyah",
+     "hassns-pro-bisiklet-on-gobek-28h-32h-36h-rainbow-mor-siyah-kirmizi"
+    ]
+   },
+   "Lastik": {
+    "site_count": 34,
+    "products_json_count": 1,
+    "also_lists_products_of": {
+     "İç Lastik": 21,
+     "Dış Lastik": 9
+    },
+    "on_site_but_not_in_products_json": [
+     "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah",
+     "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set",
+     "cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah"
+    ]
+   },
+   "Dış Lastik": {
+    "site_count": 12,
+    "products_json_count": 9,
+    "on_site_but_not_in_products_json": [
+     "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah",
+     "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set",
+     "cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah"
+    ]
+   },
+   "Atölye ve Tamir": {
+    "site_count": 12,
+    "products_json_count": 5,
+    "also_lists_products_of": {
+     "Kimyasal": 5,
+     "Anahtar ve Alet": 2
+    }
+   }
+  },
+  "other_category_urls": {
+   "Bisiklet": {
+    "url": "https://nitrobisiklet.com/magaza/bisiklet/",
+    "count": 62
+   },
+   "Yedek Parça": {
+    "url": "https://nitrobisiklet.com/magaza/yedek-parca/",
+    "count": 153
+   },
+   "Giyim": {
+    "url": "https://nitrobisiklet.com/magaza/giyim/",
+    "count": 17
+   },
+   "E-Bike Yedek Parça&Aksesuar": {
+    "url": "https://nitrobisiklet.com/magaza/e-bike-yedek-parcaaksesuar/",
+    "count": 1
+   }
+  },
+  "empty_categories_on_site": [
+   {
+    "name": "Yol Bisikleti",
+    "url": "https://nitrobisiklet.com/magaza/yol-bisikleti/"
+   },
+   {
+    "name": "Lastik Grubu",
+    "url": "https://nitrobisiklet.com/magaza/lastik-grubu/"
+   },
+   {
+    "name": "Mekanik Parçalar",
+    "url": "https://nitrobisiklet.com/magaza/mekanik-parcalar/"
+   }
+  ],
+  "shop_summary": "420 ürün · 47 kategori",
+  "milestones": [
+   {
+    "year": "2011",
+    "title": "KTÜ Bisiklet Kulübü",
+    "text": "Karadeniz Teknik Üniversitesi Bisiklet Kulübü'ne katıldı; dağ bisikletiyle asıl tanışma."
+   },
+   {
+    "year": "2012",
+    "title": "İlk yarış, ilk podyum",
+    "text": "Katıldığı ilk yarışta kategorisinde üçüncü oldu."
+   },
+   {
+    "year": "2016",
+    "title": "Erciyes Downhill",
+    "text": "Türkiye'de ilk kez düzenlenen Erciyes Downhill yarışında start aldı."
+   },
+   {
+    "year": "2021",
+    "title": "Nitro Bisiklet",
+    "text": "Dükkânın kapısı açıldı: satış ve servis tek çatı altında."
+   },
+   {
+    "year": "2026",
+    "title": "Nitro Bike Team",
+    "text": "Nitro Bike Team kuruldu; yarışlarda artık takım olarak varız."
+   }
+  ],
+  "community": {
+   "name": "Köyceğiz Bisiklet Turları",
+   "text": "Sürüşler, rotalar ve buluşma saatleri grupta paylaşılıyor. Her seviyeye açık.",
+   "whatsapp_group": "https://chat.whatsapp.com/DqAb4SrvnhU4sbZlWtuhMz"
+  },
+  "shipping_table": [
+   {
+    "teslimat_sekli": "Köyceğiz içi",
+    "ucret": "Ücretsiz",
+    "sure": "Aynı gün"
+   },
+   {
+    "teslimat_sekli": "Türkiye geneli, Yurtiçi Kargo",
+    "ucret": "250 ₺; 3.000 ₺ ve üzeri siparişlerde ücretsiz",
+    "sure": "Kargoya verilişten sonra 1–3 iş günü"
+   },
+   {
+    "teslimat_sekli": "Mağazadan teslim (\"Mağazadan al\")",
+    "ucret": "Ücretsiz",
+    "sure": "Hazır olduğunda e-posta ile bildirilir"
+   }
+  ],
+  "legal_page_versions": {
+   "kargo": "30 Ekim 2026 · v2026-10"
+  },
+  "service_booking_form": {
+   "bike_types": [
+    "Dağ / Enduro",
+    "Şehir",
+    "Yol / Gravel",
+    "Elektrikli",
+    "Çocuk"
+   ],
+   "issues": [
+    "Fren tutmuyor",
+    "Vites atlıyor",
+    "Ses geliyor",
+    "Patlak / lastik",
+    "Amortisör",
+    "Jant sekiyor",
+    "Elektrikli sistem",
+    "Bilmiyorum"
+   ]
+  },
+  "app": {
+   "url": "https://nitrobisiklet.com/uygulama/",
+   "facts": [
+    "Mağaza gibi açılır, çevrimdışında da çalışır. Servis fişinin durumu değiştiğinde haber verir.",
+    "Servis fişin hazır olduğunda ve rezervasyon gününde haber veririz. Kampanya bildirimi yollamıyoruz."
+   ]
+  },
+  "nitro_named_products": [
+   {
+    "name": "Nitro Bisiklet Zincir Gergisi",
+    "url": "https://nitrobisiklet.com/urun/nitro-bisiklet-zincir-gergisi/",
+    "price": "299 ₺",
+    "desc": "Mafsallı, ayarlanabilir açılı bisiklet zincir gergisi. Zincir atmasını ve şakırtıyı azaltır. Yerli üretim, 5 renk."
+   },
+   {
+    "name": "Nitro Bike Team Enduro Downhill Forması",
+    "url": "https://nitrobisiklet.com/urun/nitro-bike-team-enduro-downhill-formasi/",
+    "price": "1.199 ₺"
+   }
+  ],
+  "image_only_text": [
+   {
+    "text": "ÇAMUR KURUR, ZAFER KALIR",
+    "image_url": "https://nitrobisiklet.com/media/site/nitro-paylasim_Es6KlHs.jpg",
+    "note": "Yalnızca paylaşım görselinin (og:image) üzerinde yazıyor; sitenin HTML metninde geçmiyor."
+   }
+  ],
+  "excluded_images": [
+   {
+    "url": "https://nitrobisiklet.com/media/section/bicycle-mechanic-workshop-0_4nIjFpK.jpg",
+    "alt": "Zweiradmechanikerwerkstatt   Deutsches Museum Verkehrszentrum",
+    "page": "https://nitrobisiklet.com/",
+    "w": 1920,
+    "h": 1440,
+    "reason": "Stok görsel: sitedeki alt metni \"Zweiradmechanikerwerkstatt   Deutsches Museum Verkehrszentrum\" (müze sergisi). Nitro atölyesi değil."
+   },
+   {
+    "url": "https://nitrobisiklet.com/media/section/mountain-bike-downhill-action-0_tg4zFCt.jpg",
+    "alt": "Downhill sprung bellwald",
+    "page": "https://nitrobisiklet.com/hikaye/",
+    "w": 634,
+    "h": 395,
+    "reason": "Stok görsel: alt metni \"Downhill sprung bellwald\", 634×395, EXIF 2006. Nitro'ya ait değil."
+   },
+   {
+    "url": "https://nitrobisiklet.com/media/section/mountain-bike-downhill-action-0_keX9LBA.jpg",
+    "alt": "Downhill sprung bellwald",
+    "page": "https://nitrobisiklet.com/servis/",
+    "w": 634,
+    "h": 395,
+    "reason": "Stok görsel: yukarıdakiyle aynı dosya (servis sayfasında)."
+   }
+  ],
+  "absent_on_site": [
+   "Blog (\"Çamur günlüğü\") yazısı yok: sayfada \"0 yazı\" ve \"Burada henüz yazı yok.\" yazıyor.",
+   "Instagram, Facebook, YouTube, TikTok, Strava vb. sosyal medya bağlantısı yok. Yalnızca WhatsApp sohbet bağlantısı ve WhatsApp topluluk grubu bağlantısı var.",
+   "Kapıda ödeme hiçbir sayfada geçmiyor.",
+   "Taksit sayısı ve oranları sitede yazmıyor (ön bilgilendirme formuna göre ödeme sayfasında gösteriliyor).",
+   "Nitro'nun kendi atölyesine veya dükkânına ait fotoğraf yok; ana sayfadaki atölye görseli stok fotoğraf.",
+   "Paket dışı tekil servis kalemi fiyatı (ör. tek balata değişimi) yok; yalnızca 3 paket fiyatı var."
+  ],
+  "notes": [
+   "\"AYNI GÜN SERVİS\" ve \"Atölye · Aynı gün teslim\" ifadeleri sitede var; aynı sayfada paket süreleri 45 dk, 1 gün ve 2–3 gün, ana sayfada \"48s Ortalama servis süresi\" yazıyor. İçerikte her işin aynı gün bittiği genellemesi yapılmamalı.",
+   "\"48s\" ifadesinin birimi sitede açıklanmıyor; yorum katmadan kullanılmalı.",
+   "odek.jpeg (ana sayfa hero) görselinin sitedeki alt metni \"Downhill sprung bellwald\"; bu metin görselle uyuşmuyor, eski bir stok görselden kalmış.",
+   "Görsellerin fotoğrafçısı ve kullanım hakkı sitede belirtilmiyor; dosyalarda EXIF bilgisi yok.",
+   "Takım portrelerinin üzerinde gömülü yazılar var; kursu.jpeg ve takim.jpeg arka planında üçüncü taraf sponsor logoları görünüyor.",
+   "Takım üyelerinden biri sitede 2009 doğumlu olarak geçiyor (18 yaşından küçük).",
+   "Blog ve Uygulama sayfalarının H1 başlıklarında işlenmemiş köşeli parantez var (\"Sahadan ve [atölyeden]\", \"Nitro’yu ana [ekranına] al\"); alıntı olarak kullanılmadı.",
+   "products.json 413 ürün içeriyor; sitedeki mağaza sayfasında \"420 ürün · 47 kategori\" yazıyor. products.json'da olmayan yeni ürünlerin göründüğü kategoriler: Vites Grubu (+1), Jant Grubu (+4), Dış Lastik (+3). products.json'daki 1 ürünün adresi artık 404 dönüyor: https://nitrobisiklet.com/urun/shimano-deore-fc-t521-36t-104-mm-bcd-orta-yaprak-aynakol-dislisi-siyah/",
+   "Üst kategori sayfaları alt kategorilerin ürünlerini de listeliyor: Aksesuar, Lastik, Atölye ve Tamir. Ayrıntı: _extra.category_listing_differences.",
+   "Sipariş takibi (/hesap/siparisler/) giriş gerektiriyor."
+  ]
+ }
+}
