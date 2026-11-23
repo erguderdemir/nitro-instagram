@@ -1,0 +1,57 @@
+name: Instagram otomasyonu
+
+on:
+  schedule:
+    # Saatler UTC'dir (Türkiye = UTC+3). config.json'daki saatlerle eşleşmeli.
+    - cron: "0 8 * * *"     # 11:00 TR  Pazar postu
+    - cron: "30 9 * * *"    # 12:30 TR  öğle story
+    - cron: "30 16 * * *"   # 19:30 TR  akşam postu
+    - cron: "30 17 * * *"   # 20:30 TR  akşam story
+    - cron: "0 18 * * 0"    # Pazar 21:00 TR  siteyi tara + önümüzdeki 2 haftayı planla
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "plan veya publish"
+        default: publish
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+
+      - name: Siteyi tara ve planla
+        if: github.event.schedule == '0 18 * * 0' || inputs.task == 'plan'
+        env:
+          CHROME_BIN: google-chrome
+        run: |
+          python scripts/scrape.py
+          python scripts/plan.py
+
+      - name: Zamanı gelenleri yayınla
+        if: github.event.schedule != '0 18 * * 0' && inputs.task != 'plan'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+        run: python scripts/publish.py
+
+      - name: Değişiklikleri kaydet
+        if: always()
+        run: |
+          git config user.name "nitro-bot"
+          git config user.email "nitro-bot@users.noreply.github.com"
+          git add data docs TAKVIM.md
+          git diff --cached --quiet || (git commit -m "otomatik: takvim/yayın güncellemesi" && git push)
