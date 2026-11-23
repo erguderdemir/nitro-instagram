@@ -42,14 +42,14 @@ Bu adımlar senin hesaplarınla yapılmalı. Şifre ve token'ları kimseyle payl
    Temel ayarlar dolu: simge, kategori (*Business and pages*), alan adı,
    [gizlilik](https://erguderdemir.github.io/nitro-instagram/gizlilik.html) ve
    [veri silme](https://erguderdemir.github.io/nitro-instagram/veri-silme.html) linkleri.
-   Kalan: Barış'ın davetinden sonra uygulamayı işletme portföyüne bağla (App settings → Basic → Business portfolio).
-   İlk başarılı API çağrısından sonra Publish → *Publish app* ile canlıya al. Kendi hesabımız olduğu için App Review gerekmez.
-3. business.facebook.com → Ayarlar → Kullanıcılar → **Sistem kullanıcıları** → *Ekle* (Admin).
-4. Sistem kullanıcısına varlık ata: Facebook Sayfan, Instagram hesabın ve uygulama (tam kontrol).
-5. *Token oluştur* → uygulamayı seç → süre: **Hiçbir zaman** → izinler:
+   ✅ Uygulama **Ankara Bisiklet Bakım** işletme portföyüne bağlı ve **Published** (canlı). App Review gerekmedi.
+3. ✅ business.facebook.com → Ayarlar → Kullanıcılar → **Sistem kullanıcıları** → `nitro-instagram-bot` (Çalışan).
+4. ✅ Varlıklar atandı: Nitro Bisiklet Sayfası, @nitrobisiklet Instagram hesabı ve uygulama.
+5. ✅ *Token oluştur* → uygulamayı seç → süre: **Hiçbir zaman** → izinler:
    `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management`
-6. Token'ı GitHub Secret `IG_ACCESS_TOKEN` olarak kaydet.
-7. Doğrula: Actions → *Instagram otomasyonu* → Run workflow → task: `check`.
+6. ✅ Token GitHub Secret `IG_ACCESS_TOKEN` olarak kayıtlı. Token sızarsa: sistem kullanıcısında *Revoke tokens*, sonra yenisini oluşturup
+   `pbpaste | gh secret set IG_ACCESS_TOKEN -R erguderdemir/nitro-instagram`
+7. ✅ Doğrula: Actions → *Instagram otomasyonu* → Run workflow → task: `check`.
    Log'da hesap adı, `IG_USER_ID`, günlük yayın kotası ve "HAZIR" yazmalı.
    Yerelde aynı kontrol: `IG_ACCESS_TOKEN=token python3 scripts/publish.py --check`
 
