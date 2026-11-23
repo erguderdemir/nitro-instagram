@@ -32,7 +32,7 @@ Bu adımlar senin hesaplarınla yapılmalı. Şifre ve token'ları kimseyle payl
    Adres şöyle olur: `https://KULLANICIADIN.github.io/nitro-instagram`
 4. Depo → Settings → Secrets and variables → Actions:
    - **Variables** sekmesi: `PUBLIC_BASE_URL` = yukarıdaki adres
-   - **Secrets** sekmesi: `IG_ACCESS_TOKEN` ve `IG_USER_ID` (3. adımda alınacak)
+   - **Secrets** sekmesi: `IG_ACCESS_TOKEN` (3. adımda alınacak). `IG_USER_ID` isteğe bağlı: token'a tek Instagram hesabı bağlıysa otomatik bulunur.
 
 ### 3. Meta erişim anahtarı (süresiz token)
 1. developers.facebook.com → My Apps → **Create App** → tür: *Business*.
@@ -46,9 +46,9 @@ Bu adımlar senin hesaplarınla yapılmalı. Şifre ve token'ları kimseyle payl
 5. *Token oluştur* → uygulamayı seç → süre: **Hiçbir zaman** → izinler:
    `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management`
 6. Token'ı GitHub Secret `IG_ACCESS_TOKEN` olarak kaydet.
-7. `IG_USER_ID` değerini öğrenmek için bu klasörde şunu çalıştır:
-   `IG_ACCESS_TOKEN=token python3 scripts/publish.py --check`
-   Çıkan `IG_USER_ID=...` değerini Secret olarak ekle. Graph API Explorer'da `me/accounts?fields=instagram_business_account` sorgusu da aynı bilgiyi verir.
+7. Doğrula: Actions → *Instagram otomasyonu* → Run workflow → task: `check`.
+   Log'da hesap adı, `IG_USER_ID`, günlük yayın kotası ve "HAZIR" yazmalı.
+   Yerelde aynı kontrol: `IG_ACCESS_TOKEN=token python3 scripts/publish.py --check`
 
 ### 4. Instagram bio linki
 Profili düzenle → Bağlantılar → `https://KULLANICIADIN.github.io/nitro-instagram/`

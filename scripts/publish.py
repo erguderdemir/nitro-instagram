@@ -3,7 +3,7 @@
 
 Ortam değişkenleri (GitHub Secrets):
   IG_ACCESS_TOKEN   Meta System User token'ı (süresiz)
-  IG_USER_ID        Instagram işletme hesabı ID'si (bilmiyorsan: python3 scripts/publish.py --check)
+  IG_USER_ID        Instagram işletme hesabı ID'si. İsteğe bağlı: boşsa token'a bağlı tek hesap otomatik bulunur
   PUBLIC_BASE_URL   Görsellerin yayınlandığı GitHub Pages adresi, ör. https://kullanici.github.io/nitro-instagram
 
 Kullanım:
@@ -54,8 +54,23 @@ def url_ok(url: str) -> bool:
         return False
 
 
+def ig_accounts() -> list[tuple[str, dict | None]]:
+    pages = api("GET", "me/accounts", fields="name,instagram_business_account{id,username}").get("data", [])
+    return [(p["name"], p.get("instagram_business_account")) for p in pages]
+
+
+def ig_user_id() -> str:
+    if os.environ.get("IG_USER_ID"):
+        return os.environ["IG_USER_ID"]
+    found = [ig for _, ig in ig_accounts() if ig]
+    if len(found) != 1:
+        raise RuntimeError(f"Token'a bağlı {len(found)} Instagram hesabı var; IG_USER_ID secret'ını elle gir.")
+    os.environ["IG_USER_ID"] = found[0]["id"]
+    return found[0]["id"]
+
+
 def publish_one(c: dict, base: str) -> str:
-    ig = os.environ["IG_USER_ID"]
+    ig = ig_user_id()
     image_url = f"{base.rstrip('/')}/{c['image']}"
     if not url_ok(image_url):
         raise RuntimeError(f"Görsel herkese açık değil (Pages henüz güncellenmemiş olabilir): {image_url}")
@@ -78,12 +93,19 @@ def publish_one(c: dict, base: str) -> str:
 def check() -> None:
     me = api("GET", "me", fields="id,name")
     print(f"Token sahibi: {me.get('name')} ({me['id']})")
-    pages = api("GET", "me/accounts", fields="name,instagram_business_account{id,username}").get("data", [])
-    for p in pages:
-        ig = p.get("instagram_business_account")
-        print(f"Sayfa: {p['name']}  ->  Instagram: {ig['username'] + ' / IG_USER_ID=' + ig['id'] if ig else 'bağlı değil'}")
-    if not pages:
-        print("Token'a hiç Facebook Sayfası atanmamış. System User'a sayfayı varlık olarak ekle.")
+    accounts = ig_accounts()
+    for name, ig in accounts:
+        print(f"Sayfa: {name}  ->  Instagram: {ig['username'] + ' / IG_USER_ID=' + ig['id'] if ig else 'bağlı değil'}")
+    if not accounts:
+        sys.exit("Token'a hiç Facebook Sayfası atanmamış. System User'a sayfayı varlık olarak ekle.")
+    ig = ig_user_id()
+    lim = api("GET", f"{ig}/content_publishing_limit", fields="quota_usage,config").get("data", [{}])[0]
+    print(f"Kullanılan hesap: {ig} · son 24 saatte yayın: {lim.get('quota_usage', '?')}/"
+          f"{lim.get('config', {}).get('quota_total', '?')}")
+    base = os.environ.get("PUBLIC_BASE_URL", "")
+    if base:
+        print(f"Görsel sunucusu: {base} -> {'erişilebilir' if url_ok(base.rstrip('/') + '/logo.png') else 'ERİŞİLEMİYOR'}")
+    print("HAZIR: yayın yapılabilir.")
 
 
 def main() -> None:

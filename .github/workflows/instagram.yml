@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       task:
-        description: "plan veya publish"
+        description: "publish, plan veya check (token ve hesabı doğrula)"
         default: publish
 
 permissions:
@@ -40,8 +40,16 @@ jobs:
           python scripts/scrape.py
           python scripts/plan.py
 
+      - name: Token ve hesabı doğrula
+        if: inputs.task == 'check'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+        run: python scripts/publish.py --check
+
       - name: Zamanı gelenleri yayınla
-        if: github.event.schedule != '0 18 * * 0' && inputs.task != 'plan'
+        if: github.event.schedule != '0 18 * * 0' && inputs.task != 'plan' && inputs.task != 'check'
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}

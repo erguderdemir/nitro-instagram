@@ -70,7 +70,8 @@ def plan(start: date, days: int) -> list[dict]:
     last_used = {}
     for c in cal:
         d = date.fromisoformat(c["date"])
-        if c["slug"] in by_slug:
+        # Yayınlanmamış (kaçırılan/iptal/hatalı) kayıtlar ürünü 60 gün kilitlemesin
+        if c["slug"] in by_slug and c["status"] in ("planned", "draft", "published"):
             f = content.family(by_slug[c["slug"]])
             last_used[f] = max(last_used.get(f, date.min), d)
             k = "cat:" + c["category"]
@@ -134,7 +135,7 @@ def build_bio(cal: list[dict], now: datetime | None = None) -> None:
     now = now or datetime.now(TZ)
     seen, rows = set(), []
     for c in sorted(cal, key=item_dt, reverse=True):
-        if c["slug"] in seen or item_dt(c) > now or c["status"] in ("error", "skipped"):
+        if c["slug"] in seen or item_dt(c) > now or c["status"] != "published":
             continue
         seen.add(c["slug"])
         rows.append(c)
@@ -161,6 +162,7 @@ main{{max-width:520px;margin:0 auto;padding:16px}}
 .card img{{width:96px;height:120px;object-fit:cover;border-radius:12px}}
 .card b{{display:block;font-size:16px;line-height:1.25}} .card span{{display:block;color:#a8480a;font-weight:700;margin:6px 0}}
 .card i{{font-style:normal;font-weight:700;color:#f5821f}}
+.foot{{text-align:center;font-size:13px;margin-top:28px}} .foot a{{color:#6b6658}}
 h2{{font:800 15px Archivo,sans-serif;letter-spacing:.12em;color:#6b6658;margin:22px 4px 12px}}
 </style></head><body>
 <header><img src="logo.png" alt="Nitro Bisiklet"><p>Köyceğiz · Bisiklet satış ve servis</p></header>
@@ -169,6 +171,7 @@ h2{{font:800 15px Archivo,sans-serif;letter-spacing:.12em;color:#6b6658;margin:2
 <a class="btn alt" href="https://nitrobisiklet.com/servis/?utm_source=instagram&utm_medium=bio&utm_campaign=servis">Servis randevusu al</a>
 <h2>INSTAGRAM'DA GÖRDÜĞÜN ÜRÜNLER</h2>
 {cards or '<p>Yakında burada.</p>'}
+<p class="foot"><a href="gizlilik.html">Gizlilik</a> · <a href="veri-silme.html">Veri silme</a></p>
 </main></body></html>"""
     DOCS.mkdir(exist_ok=True)
     (DOCS / "index.html").write_text(page, encoding="utf-8")
