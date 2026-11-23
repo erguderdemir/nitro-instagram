@@ -38,9 +38,12 @@ Bu adımlar senin hesaplarınla yapılmalı. Şifre ve token'ları kimseyle payl
 1. developers.facebook.com → My Apps → **Create App** → tür: *Business*.
    ✅ Oluşturuldu: **Nitro Bisiklet Paylasim** · App ID `2153370375296980`.
    Kullanım alanları: *Manage messaging & content on Instagram* ve *Manage everything on your Page*.
-2. Uygulamayı Nitro Bisiklet işletme portföyüne bağla: App settings → Basic → Business portfolio.
-   Instagram kullanım alanında *API setup with Facebook login* seçmek için bu bağlantı zorunlu.
-   Sonra izinleri ekle (aşağıdaki 5 izin).
+2. ✅ Instagram kullanım alanı → *API setup with Facebook login* → 5 izin eklendi.
+   Temel ayarlar dolu: simge, kategori (*Business and pages*), alan adı,
+   [gizlilik](https://erguderdemir.github.io/nitro-instagram/gizlilik.html) ve
+   [veri silme](https://erguderdemir.github.io/nitro-instagram/veri-silme.html) linkleri.
+   Kalan: Barış'ın davetinden sonra uygulamayı işletme portföyüne bağla (App settings → Basic → Business portfolio).
+   İlk başarılı API çağrısından sonra Publish → *Publish app* ile canlıya al. Kendi hesabımız olduğu için App Review gerekmez.
 3. business.facebook.com → Ayarlar → Kullanıcılar → **Sistem kullanıcıları** → *Ekle* (Admin).
 4. Sistem kullanıcısına varlık ata: Facebook Sayfan, Instagram hesabın ve uygulama (tam kontrol).
 5. *Token oluştur* → uygulamayı seç → süre: **Hiçbir zaman** → izinler:
