@@ -5375,7 +5375,8 @@
   "rule": "ikinciel",
   "status": "planned",
   "fp": "6814f64feb70",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5480,7 +5481,8 @@
   "rule": "liste:cocuk",
   "status": "planned",
   "fp": "e5b8518098bd",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5620,7 +5622,8 @@
   "rule": "zil",
   "status": "planned",
   "fp": "2ae5a63e1d09",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5673,7 +5676,8 @@
   "rule": "yama",
   "status": "planned",
   "fp": "02bfa1f12825",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5766,7 +5770,8 @@
   "rule": "ayna",
   "status": "planned",
   "fp": "c9c14c08c312",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5879,7 +5884,8 @@
   "rule": "dag",
   "status": "planned",
   "fp": "7df3fe8d1049",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5965,7 +5971,8 @@
   "rule": "matara",
   "status": "planned",
   "fp": "bde047b1e81c",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -6072,7 +6079,8 @@
   "rule": "zincir",
   "status": "planned",
   "fp": "483e2ab3b332",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -6165,7 +6173,8 @@
   "rule": "canta",
   "status": "planned",
   "fp": "9cee320e7c37",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
