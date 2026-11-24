@@ -4139,7 +4139,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "2cff056b5adf",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4380,7 +4381,8 @@
   "rule": "balata_spreyi",
   "status": "planned",
   "fp": "59c71fd7f8f6",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4639,7 +4641,8 @@
   "rule": "sehir",
   "status": "planned",
   "fp": "8c0d7a390fa7",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
