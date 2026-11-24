@@ -11,11 +11,11 @@
   "repeat_after_days": 60,
   "rule_gap_days": 6,
   "posts": {
-    "0": {"time": "19:30", "kind": "reel", "pool": "performans", "kicker": "Haftanın bisikleti"},
+    "0": {"time": "19:30", "kind": "urun", "pool": "performans", "kicker": "Haftanın bisikleti"},
     "1": {"time": "19:30", "kind": "urun", "pool": "parca", "kicker": "Parça ve aksesuar"},
     "2": {"time": "19:30", "kind": "ipucu"},
     "3": {"time": "19:30", "kind": "urun", "pool": "mevsim", "kicker": "Mevsim seçkisi"},
-    "4": {"time": "19:30", "kind": "reel", "pool": "gunluk", "kicker": "Hafta sonu vitrini"},
+    "4": {"time": "19:30", "kind": "urun", "pool": "gunluk", "kicker": "Hafta sonu vitrini"},
     "5": {"time": "11:00", "kind": "liste"},
     "6": {"time": "11:00", "kind": "urun", "pool": "pazar", "kicker": "Pazar önerisi"}
   },

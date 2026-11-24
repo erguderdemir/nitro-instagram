@@ -349,8 +349,8 @@ class Audit:
             k = common_lower(c.get("kicker"))
             if k == "haftanın bisikleti":
                 weekly[d.isocalendar()[:2]].append(c)
-                if not (c["type"] == "post" and c["format"] == "reel" and d.weekday() == 0):
-                    self.add(c, "ritim", "'Haftanın bisikleti' yalnız Pazartesi reel'inde kullanılır")
+                if not (c["type"] == "post" and d.weekday() == 0):
+                    self.add(c, "ritim", "'Haftanın bisikleti' yalnız Pazartesi postunda kullanılır")
             if k == "günün ürünü":
                 daily[c["date"]].append(c)
                 if not (c["type"] == "story" and c["theme"] == "urun"):

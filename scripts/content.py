@@ -382,8 +382,8 @@ def name_fits(rule_id: str, name: str) -> bool:
 
 # ---- Havuzlar: hangi yayın türü hangi kurallardan ürün seçer ------------------------------------------
 POOLS = {
-    "performans": ["dag", "gravel", "ebike", "bmx"],                       # Pzt reel: Haftanın bisikleti
-    "gunluk": ["sehir", "cocuk", "ebike"],                                 # Cum reel
+    "performans": ["dag", "gravel", "ebike", "bmx"],                       # Pzt carousel: Haftanın bisikleti
+    "gunluk": ["sehir", "cocuk", "ebike"],                                 # Cum carousel: Hafta sonu vitrini
     "parca": ["pedal", "canta", "elcik", "sele", "km_saati", "kaset", "telefon_tutucu", "zincir", "rotor", "gidon",
               "park_ayagi", "kilit", "masa", "sargi", "ic_lastik", "sepet", "pompa"],
     "pazar": ["canta", "telefon_tutucu", "kilit", "km_saati", "ayna", "matara", "zil", "gozluk", "forma", "bandana",

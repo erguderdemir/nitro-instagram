@@ -13,11 +13,11 @@ UTM'li bağlantılar ve yayın. Bilgisayardan bağımsızdır; her şey GitHub A
 
 | Gün | Post | Not |
 |---|---|---|
-| Pazartesi 19:30 | Reel | Performans bisikleti, “Haftanın bisikleti” |
+| Pazartesi 19:30 | Carousel | Performans bisikleti, “Haftanın bisikleti” |
 | Salı 19:30 | Ürün carousel | Parça ve aksesuar |
 | Çarşamba 19:30 | İpucu carousel | `data/tips.json` |
 | Perşembe 19:30 | Ürün carousel | Mevsim seçkisi (kışın lamba, çamurluk, balata…) |
-| Cuma 19:30 | Reel | Şehir / çocuk / elektrikli bisiklet |
+| Cuma 19:30 | Carousel | Şehir / çocuk / elektrikli bisiklet |
 | Cumartesi 11:00 | Liste carousel | `config.json` → `lists` |
 | Pazar 11:00 | Ürün carousel | Giyim ve aksesuar |
 
@@ -64,7 +64,7 @@ saatte API “Link profilde” sürümünü yayınlar.
 | `scripts/content.py` | Kurallar, başlık havuzları, açıklama, alt metin, UTM, listeler, mevsim süzgeci |
 | `scripts/plan.py` | Takvimi üretir ve günceller (şema v2), görselleri ve reel'leri çizdirir |
 | `scripts/render.py` | Tasarım motoru: HTML şablon → headless Chrome → JPEG (post 1080×1350, story 1080×1920) |
-| `scripts/reel.py` | Karelerden Reels MP4 (H.264/AAC, 9:16) |
+| `scripts/reel.py` | Karelerden Reels MP4 (H.264/AAC, 9:16). Şu an kullanılmıyor: takvimde reel yuvası yok |
 | `scripts/denetim.py` | Denetçi; bulgu varsa çıkış kodu 1 |
 | `scripts/simulasyon.py` · `bio.py` · `takvim.py` · `suite.py` | `docs/onizleme/`, `docs/index.html`, `docs/TAKVIM.md`, `docs/suite/` |
 | `scripts/publish.py` · `graph.py` | Graph API ile yayın, `--check`, `--probe` (canlıya yayın yapan tek betik) |

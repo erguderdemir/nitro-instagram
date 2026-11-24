@@ -574,10 +574,11 @@ class Planner:
         if self.dry:
             return
         import render as R
-        from reel import make_reel
         if self.post_jobs:
             self.say(f"Post kareleri çiziliyor: {len(self.post_jobs)}")
             R.render_all(self.post_jobs)
+        if self.reels:  # reel üretimi şu an kapalı (config'te kind "reel" yok); yeniden açılırsa çalışır
+            from reel import make_reel
         for frames, mp4, cover in self.reels:
             make_reel(frames, mp4)
             cover.parent.mkdir(parents=True, exist_ok=True)
