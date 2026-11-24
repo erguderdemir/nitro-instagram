@@ -3475,7 +3475,8 @@
   "rule": "balata_spreyi",
   "status": "planned",
   "fp": "e872207c6495",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3514,7 +3515,8 @@
   "rule": "marka",
   "status": "planned",
   "fp": "42ed24aaa583",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3567,7 +3569,8 @@
   "rule": "pedal",
   "status": "planned",
   "fp": "46ad2cd18cb9",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3718,7 +3721,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "89cb93ae116a",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3885,7 +3889,8 @@
   "rule": "zincir",
   "status": "planned",
   "fp": "3a086a8ca47f",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
