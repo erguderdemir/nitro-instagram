@@ -1418,7 +1418,8 @@
   "rule": "gozluk",
   "status": "planned",
   "fp": "6c7f5378eb0f",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1619,7 +1620,8 @@
   "rule": "yama",
   "status": "planned",
   "fp": "972aff3dc675",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
