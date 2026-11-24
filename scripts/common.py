@@ -104,9 +104,13 @@ def load_scores() -> dict:
 # ---- Biçimlendirme -----------------------------------------------------------------------------
 
 def fmt_price(v: float | None) -> str:
+    """1.250 ₺ · 93,53 ₺. Kuruşlu fiyat yuvarlanmaz: görseldeki fiyat sitedeki fiyatla aynı olmalı."""
     if v is None:
         return ""
-    return f"{v:,.0f}".replace(",", ".") + " ₺"
+    if abs(v - round(v)) < 0.005:
+        return f"{round(v):,}".replace(",", ".") + " ₺"
+    whole, frac = f"{v:,.2f}".split(".")
+    return f"{whole.replace(',', '.')},{frac} ₺"
 
 
 def tr_date(d, with_day: bool = True) -> str:

@@ -1,213 +1,677 @@
 #!/usr/bin/env python3
-"""İçerik takvimini oluşturur: ürün seçer, görselleri ve açıklamaları üretir, bio sayfasını yazar.
+"""İçerik takvimini üretir ve günceller (şema v2): ürün seçer, görselleri ve reel'leri çizer, sayfaları yazar.
 
-Kullanım:  python3 scripts/plan.py [--start YYYY-MM-DD] [--days N]
-Mevcut takvimdeki kayıtlara dokunmaz; yalnızca boş slotları doldurur.
+  python3 scripts/plan.py                takvimi tamamla; gelecekteki kayıtlarda fiyat/stok değişimini yenile
+  python3 scripts/plan.py --yeniden      gelecekteki bütün planlı kayıtları baştan seç ve çiz
+  python3 scripts/plan.py --kuru         görsel çizmeden yalnız seçimi ve metni üret (Chrome gerekmez; sınama için)
+
+Her gün çalışır (04:10 TR). Dokunmadığı kayıtlar: yayınlanmış/atlanmış/hatalı olanlar ve zamanı gelmiş olanlar.
+Gelecekteki planlı kayıtta ürün stoktan çıktıysa yeni ürün seçilir; fiyatı ya da adı değiştiyse aynı ürünle yeniden
+çizilir; şablon ya da metin kodu değiştiyse (parmak izi) yine yeniden çizilir.
+
+Sıra: önce listeler (tek ürünlü kuralları onlar ayırır), sonra gün gün post ve story'ler. Önce post kareleri çizilir;
+20:30 tanıtım story'si günün postunun kapak görselini gömer. Kuralı sağlanamayan içerik üretilmez (yeri boş kalır).
 """
+from __future__ import annotations
+
 import argparse
-import html
-import json
-import random
-from datetime import date, datetime, timedelta, timezone
+import hashlib
+import shutil
+import sys
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
-import content
-from render import render
+import common
+import content as C
+from common import CFG, DATA, DOCS, MEDIA, ROOT, THUMBS, fmt_price
 
-ROOT = Path(__file__).resolve().parent.parent
-CFG = json.loads((ROOT / "config.json").read_text())
-TZ = timezone(timedelta(hours=CFG["timezone_offset_hours"]))
-CAL = ROOT / "data" / "calendar.json"
-DOCS = ROOT / "docs"
-MEDIA = DOCS / "media"
-GUN = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"]
-
-
-def load_calendar() -> list[dict]:
-    return json.loads(CAL.read_text()) if CAL.exists() else []
+SCHEMA = 2
+REEL_TMP = ROOT / "cache" / "reel"
+YENIDEN = DATA / "yeniden.txt"      # bu dosya varsa gelecekteki kayıtlar baştan seçilir, sonra dosya silinir
+LEAD = timedelta(hours=1)           # bu kadar yakın kayıtlara dokunulmaz
+ACTIVE = ("planned", "draft", "published")
+STICKER_TEXTS = ("ÜRÜNE GİT", "FİYATI GÖR", "MAĞAZAYA GİT", "SERVİS RANDEVUSU AL")
+VARIANTS = ("cream", "olive", "ink")
 
 
-def save_calendar(cal: list[dict]) -> None:
-    cal.sort(key=lambda x: (x["date"], x["time"], x["type"]))
-    CAL.parent.mkdir(parents=True, exist_ok=True)
-    CAL.write_text(json.dumps(cal, ensure_ascii=False, indent=1), encoding="utf-8")
+def _version() -> str:
+    """Şablon ve metin kodunun parmak izi: değişince gelecekteki kayıtlar aynı ürünle yeniden çizilir."""
+    h = hashlib.md5()
+    for name in ("render.py", "content.py", "plan.py", "reel.py"):
+        h.update((ROOT / "scripts" / name).read_bytes())
+    return h.hexdigest()[:10]
 
 
-def eligible(p: dict) -> bool:
-    return bool(p.get("price")) and p.get("in_stock", True) and bool(p.get("images"))
+VERSION = _version()
 
 
-def candidates(products: list[dict], group: str, month: int) -> list[dict]:
-    if group == "sezon":
-        cats = set(content.SEASONAL.get(month, []))
-        return [p for p in products if p["category"] in cats]
-    return [p for p in products if content.group_of(p["category"]) == group]
+def md5(*parts) -> str:
+    return hashlib.md5("|".join(map(str, parts)).encode()).hexdigest()
 
 
-def choose(products, groups, day: date, slot: str, last_used: dict, taken: set) -> dict | None:
-    rng = random.Random(f"{day}{slot}")
-    limit = day - timedelta(days=CFG["repeat_after_days"])
-    recent = day - timedelta(days=4)  # aynı kategori 4 gün içinde tekrar gelmesin
-    for g in groups:
-        pool = [p for p in candidates(products, g, day.month) if p["slug"] not in taken]
-        fresh = [p for p in pool if last_used.get(content.family(p), date.min) < limit]
-        if fresh:
-            rng.shuffle(fresh)
-            # hiç paylaşılmamış ürünlere öncelik
-            fresh.sort(key=lambda p: (last_used.get("cat:" + p["category"], date.min) >= recent,
-                                      last_used.get(content.family(p), date.min)))
-            return fresh[0]
-    # hepsi yakın zamanda kullanıldıysa en eski kullanılanı al
-    pool = [p for g in groups for p in candidates(products, g, day.month) if p["slug"] not in taken]
-    return min(pool, key=lambda p: last_used.get(content.family(p), date.min)) if pool else None
+class Planner:
+    def __init__(self, now: datetime, start: date, end: date, reset: bool = False, dry: bool = False):
+        self.now, self.start, self.end, self.reset, self.dry = now, start, end, reset, dry
+        self.products = common.load_products()
+        self.by_slug = {p["slug"]: p for p in self.products}
+        self.codes = common.load_codes()
+        self.site = common.load_site()
+        self.tips = common.load_tips()
+        self.rule_id = {p["slug"]: (r["id"] if (r := C.rule_of(p)) else None) for p in self.products}
+        self.eligible = [p for p in self.products if C.eligible(p)]
+        self.cal = [c for c in common.load_calendar() if c.get("schema") == SCHEMA]
+        self._img: dict[str, list] = {}
+        self.post_jobs: list[tuple[str, Path]] = []
+        self.story_jobs: list[tuple[str, Path]] = []
+        self.reels: list[tuple[list[Path], Path, Path]] = []
+        self.thumbs: list[tuple[Path, Path]] = []
+        self.touched: set[str] = set()
+        self.log: list[str] = []
+        self.ensure_codes()
 
+    # ---- yardımcılar ---------------------------------------------------------------------------
 
-def plan(start: date, days: int) -> list[dict]:
-    products = [p for p in json.loads((ROOT / "data" / "products.json").read_text()) if eligible(p)]
-    by_slug = {p["slug"]: p for p in products}
-    cal = load_calendar()
-    existing = {c["id"] for c in cal}
-    last_used = {}
-    for c in cal:
-        d = date.fromisoformat(c["date"])
-        # Yayınlanmamış (kaçırılan/iptal/hatalı) kayıtlar ürünü 60 gün kilitlemesin
-        if c["slug"] in by_slug and c["status"] in ("planned", "draft", "published"):
-            f = content.family(by_slug[c["slug"]])
-            last_used[f] = max(last_used.get(f, date.min), d)
-            k = "cat:" + c["category"]
-            last_used[k] = max(last_used.get(k, date.min), d)
+    def say(self, msg: str) -> None:
+        print(msg, flush=True)
+        self.log.append(msg)
 
-    new = []
-    for i in range(days):
-        day = start + timedelta(days=i)
-        taken = {c["slug"] for c in cal + new if c["date"] == str(day)}
-        post_today = None
-        slots = [("post", s) for s in CFG["posts"] if s["weekday"] == day.weekday()]
-        slots += [("story", s) for s in CFG["stories"]]
-        for kind, s in slots:
-            sid = f"{day}-{kind}-{s['time'].replace(':', '')}"
-            if sid in existing:
-                if kind == "post":
-                    post_today = by_slug.get(next(c["slug"] for c in cal if c["id"] == sid))
+    def ensure_codes(self) -> None:
+        """Kodu olmayan (siteye yeni eklenmiş) ürüne sıradaki kısa kodu ver. Verilen kod hiç değişmez."""
+        nums = [int(v[1:]) for v in self.codes.values() if v[:1] == "N" and v[1:].isdigit()]
+        nxt, added = (max(nums) if nums else 100) + 1, 0
+        for p in self.products:
+            if p["slug"] not in self.codes:
+                self.codes[p["slug"]] = f"N{nxt}"
+                nxt, added = nxt + 1, added + 1
+        if added and not self.dry:
+            common.write_json(DATA / "codes.json", dict(sorted(self.codes.items())))
+            self.say(f"{added} yeni ürüne kod verildi.")
+
+    def get(self, sid: str) -> dict | None:
+        return next((c for c in self.cal if c["id"] == sid), None)
+
+    def drop(self, sid: str) -> None:
+        self.cal = [c for c in self.cal if c["id"] != sid]
+
+    def put(self, rec: dict) -> None:
+        self.drop(rec["id"])
+        self.cal.append(rec)
+        self.touched.add(rec["id"])
+
+    def uses(self, skip: str | None = None):
+        """(tarih, slug, aile, kural): tanıtım story'leri dışındaki etkin kayıtların ürünleri."""
+        for c in self.cal:
+            if c["id"] == skip or c.get("status") not in ACTIVE or c.get("theme") == "promo":
                 continue
-            groups = s["groups"]
-            kicker_hook = None
-            if groups[0] == "ayni_gun_post" and post_today:
-                p = post_today
-                kicker_hook = ("AKIŞTA YENİ", "Yeni gönderiye <em>göz at</em>")
+            d = date.fromisoformat(c["date"])
+            for x in c.get("products") or []:
+                yield d, x["slug"], x.get("family") or x["slug"], x.get("rule")
+
+    def free(self, p: dict, day: date, skip: str | None = None) -> bool:
+        """Ürün (ve renk/ölçü ailesi) tekrar penceresi içinde başka kayıtta kullanılmamış mı?"""
+        fam, win = C.family(p), CFG["repeat_after_days"]
+        return not any((s == p["slug"] or f == fam) and abs((d - day).days) < win for d, s, f, _ in self.uses(skip))
+
+    def rule_distance(self, rid: str, day: date, posts: bool = False) -> int:
+        """Kuralın en yakın kullanımına gün uzaklığı (posts=True: yalnız postlardaki kullanımlar)."""
+        ds = []
+        for c in self.cal:
+            if c.get("status") in ACTIVE and c.get("theme") != "promo" and (c["type"] == "post" or not posts):
+                ds += [abs((date.fromisoformat(c["date"]) - day).days) for x in c.get("products") or [] if x.get("rule") == rid]
+        return min(min(ds), 28) if ds else 28
+
+    def images(self, p: dict) -> list:
+        """Ürünün tasarımda kullanılabilir fotoğrafları (hazırlanmış). Kuru çalışmada indirme yapılmaz."""
+        if p["slug"] not in self._img:
+            if self.dry:
+                self._img[p["slug"]] = [{"kind": "white", "bg": "#ffffff", "w": 1000, "h": 1000, "path": Path("/x.png")}
+                                        for _ in p["images"][:3]]
             else:
-                p = choose(products, [g for g in groups if g != "ayni_gun_post"], day, sid, last_used, taken)
-            if not p:
+                import render
+                infos = [render.prep(u) for u in p["images"][:4]]
+                self._img[p["slug"]] = [i for i in infos if render.image_ok(i)] if render.image_ok(infos[0]) else []
+        return self._img[p["slug"]]
+
+    def view(self, p: dict) -> dict:
+        return {"name": C.short_name(p), "price": fmt_price(p["price"]), "code": self.codes[p["slug"]],
+                "cat": C.cat_label(p["category"]), "img": self.images(p)[0]}
+
+    def prod(self, p: dict, sid: str, theme: str, medium: str) -> dict:
+        r = C.rule_of(p)
+        return {"slug": p["slug"], "name": C.display_name(p), "price": p["price"], "code": self.codes[p["slug"]],
+                "category": p["category"], "rule": r["id"], "label": r["label"], "family": C.family(p),
+                "link": C.utm(p["url"], medium, theme, sid), "bio_link": C.utm(p["url"], "bio", theme, sid),
+                "image": p["images"][0]}
+
+    def fp(self, slugs: list[str], extra: str = "") -> str:
+        parts = [VERSION, extra]
+        for s in slugs:
+            p = self.by_slug.get(s) or {}
+            parts.append(f"{s}:{p.get('price')}:{p.get('name')}:{self.codes.get(s)}")
+        return md5(*parts)[:12]
+
+    def title_for(self, rule: dict, day: date, seed: str, keep: str | None = None) -> str:
+        opts = C.headlines(rule, day.month)
+        if keep and keep in opts:
+            return keep
+        counts = {h: sum(1 for c in self.cal if c.get("rule") == rule["id"] and c.get("headline") == h) for h in opts}
+        low = min(counts.values())
+        return C.pick([h for h in opts if counts[h] == low], seed)
+
+    def choose(self, rules: list[str], day: date, sid: str, need_specs: int = 0, avoid: set[str] = frozenset(),
+               post: bool = False):
+        """Havuzdaki kurallardan, en uzun süredir kullanılmamış olanın en zengin içerikli boş ürününü seç.
+
+        Postlarda önce postlar arası çeşitlilik (aynı alt tür art arda gelmesin), sonra story'lerle yakınlık gözetilir.
+        """
+        k = 0 if post else day.toordinal() % max(1, len(rules))
+        rot = rules[k:] + rules[:k]
+        gap = CFG.get("rule_gap_days", 6)
+        order = sorted((r for r in rot if r not in avoid),
+                       key=lambda r: (-(self.rule_distance(r, day, True) if post else 0),
+                                      -min(self.rule_distance(r, day), gap if post else 28), rot.index(r)))
+        for rid in order:
+            cands = [p for p in self.eligible if self.rule_id[p["slug"]] == rid and self.free(p, day, sid)]
+            if need_specs:
+                cands = [p for p in cands if len(C.clean_specs(p)) >= need_specs]
+            cands.sort(key=lambda p: (-(min(len(p["images"]), 3) + 2 * (len(C.clean_specs(p)) >= 3)), md5(sid, p["slug"])))
+            for p in cands:
+                if self.images(p):
+                    return p
+        return None
+
+    def rec(self, sid: str, day: date, tm: str, typ: str, fmt: str, theme: str, **kw) -> dict:
+        base = {"schema": SCHEMA, "id": sid, "date": str(day), "time": tm, "type": typ, "format": fmt, "theme": theme,
+                "kicker": "", "title": "", "headline": "", "hook": "", "media": [], "cover": "", "thumb": f"media/t/{sid}.jpg",
+                "caption": "", "alt": "", "alts": [], "products": [], "link": "", "bio_link": "", "code": "",
+                "channel": "api", "sticker": None, "media_link": "", "ref": "", "rule": "",
+                "status": "planned" if CFG.get("auto_publish", True) else "draft", "fp": ""}
+        base.update(kw)
+        base["title"] = C.plain(base["headline"]) if base["headline"] else base["title"]
+        return base
+
+    def frames(self, sid: str, sections: list[str], story: bool = False) -> list[str]:
+        """Kareleri çizim kuyruğuna ekle; docs/ köküne göreli yolları döndür."""
+        rels = [f"media/{sid}-{i}.jpg" for i in range(1, len(sections) + 1)]
+        (self.story_jobs if story else self.post_jobs).extend((s, DOCS / r) for s, r in zip(sections, rels))
+        return rels
+
+    # ---- postlar -------------------------------------------------------------------------------
+
+    def product_carousel(self, sid: str, day: date, tm: str, slot: dict, p: dict, keep: str | None = None) -> dict:
+        import render as R
+        rule = C.rule_of(p)
+        v, code = self.view(p), self.codes[p["slug"]]
+        kicker = C.MEVSIM_KICKER.get(day.month, slot["kicker"]) if slot.get("pool") == "mevsim" else slot["kicker"]
+        head = self.title_for(rule, day, sid, keep)
+        rows, desc, extra = C.clean_specs(p, 6), C.description(p), self.images(p)[1:3]
+        mid = [("gal", i) for i in extra]
+        mid += [("specs", rows)] if len(rows) >= 3 else ([("detail", desc)] if desc else [])
+        n = len(mid) + 3
+        sec = [R.p_cover(v, kicker, head, C.pick(VARIANTS, sid))]
+        alts = [C.product_alt(p, head)]
+        for i, (kind, val) in enumerate(mid, 2):
+            if kind == "gal":
+                sec.append(R.p_gallery(v, val, i, n))
+                alts.append(f"{C.display_name(p)}: ürün fotoğrafı.")
+            elif kind == "specs":
+                sec.append(R.p_specs(v, val, i, n))
+                alts.append("Teknik özellikler: " + "; ".join(f"{k}: {x}" for k, x in val) + ".")
+            else:
+                sec.append(R.p_detail(v, val, i, n))
+                alts.append("Ürün detayı: " + val)
+        sec += [R.p_why(C.perks(p), n - 1, n), R.p_cta("urun", n, n, code=code)]
+        alts += ["Neden NITRO: " + "; ".join(f"{t}, {s}" for _, t, s in C.perks(p)) + ".",
+                 f"Nasıl alırım: profildeki linke dokun, arama kutusuna {code} yaz."]
+        media = self.frames(sid, sec)
+        cap, hook = C.product_caption(p, code, rule, str(day))
+        x = self.prod(p, sid, "urun", "social")
+        return self.rec(sid, day, tm, "post", "carousel", "urun", kicker=kicker, headline=head, hook=hook, media=media,
+                        cover=media[0], caption=cap, alt=alts[0], alts=[a[:1000] for a in alts], products=[x],
+                        link=x["link"], bio_link=x["bio_link"], code=code, rule=rule["id"], fp=self.fp([p["slug"]]))
+
+    def reel(self, sid: str, day: date, tm: str, slot: dict, p: dict, keep: str | None = None) -> dict:
+        import render as R
+        rule = C.rule_of(p)
+        v, code = self.view(p), self.codes[p["slug"]]
+        head = self.title_for(rule, day, sid, keep)
+        sec = [R.r_hook(v, slot["kicker"], head), R.r_hero(v), R.r_specs(v, C.clean_specs(p, 3)),
+               R.r_perks(C.perks(p)[:3]), R.r_cta(v)]
+        tmp = [REEL_TMP / f"{sid}-{i}.jpg" for i in range(1, 6)]
+        self.post_jobs.extend(zip(sec, tmp))
+        mp4, cover = f"media/{sid}.mp4", f"media/{sid}-kapak.jpg"
+        self.reels.append((tmp, DOCS / mp4, DOCS / cover))
+        cap, hook = C.product_caption(p, code, rule, str(day))
+        x = self.prod(p, sid, "urun", "social")
+        return self.rec(sid, day, tm, "post", "reel", "urun", kicker=slot["kicker"], headline=head, hook=hook,
+                        media=[mp4], cover=cover, caption=cap, alt=C.product_alt(p, head), alts=[C.product_alt(p, head)],
+                        products=[x], link=x["link"], bio_link=x["bio_link"], code=code, rule=rule["id"],
+                        fp=self.fp([p["slug"]]))
+
+    def list_post(self, sid: str, day: date, tm: str, list_id: str, items: list[dict]) -> dict:
+        import render as R
+        cfg = C.LISTS[list_id]
+        xs = [self.prod(p, sid, "liste", "social") for p in items]
+        title, sub = C.list_title(list_id, xs), C.list_sub(list_id, xs)   # eşik sağlanmıyorsa ValueError
+        views = [self.view(p) for p in items]
+        n = len(items) + 2
+        sec = [R.l_cover(cfg["kicker"], title, sub, views)]
+        sec += [R.l_item(v, k, k + 1, n, "cream" if k % 2 else "olive", label=x["label"])
+                for k, (v, x) in enumerate(zip(views, xs), 1)]
+        sec.append(R.p_cta("magaza", n, n))
+        media = self.frames(sid, sec)
+        lst = {"items": xs, "hook": cfg["hook"], "q": cfg["q"], "tags": cfg["tags"]}
+        cap, hook = C.list_caption(lst)
+        store = self.site["urls"]["magaza"]
+        alts = [f"{C.plain(title)}. {sub}"] + [f"{k}. {x['name']}, {fmt_price(x['price'])}, kod {x['code']}."
+                                                for k, x in enumerate(xs, 1)]
+        alts.append("Hepsi profildeki linkte: ürünü adıyla ya da koduyla ara.")
+        return self.rec(sid, day, tm, "post", "carousel", "liste", kicker=cfg["kicker"], headline=title, hook=hook,
+                        media=media, cover=media[0], caption=cap, alt=alts[0], alts=alts, products=xs,
+                        link=C.utm(store, "social", "liste", sid), bio_link=C.utm(store, "bio", "liste", sid),
+                        ref=list_id, rule=f"liste:{list_id}", fp=self.fp([p["slug"] for p in items], list_id))
+
+    def tip_post(self, sid: str, day: date, tm: str, tip: dict) -> dict:
+        import render as R
+        steps = tip["steps"]
+        n = len(steps) + 3
+        servis = tip.get("cta") == "servis"
+        sec = [R.t_cover(tip["kicker"], tip["title"], tip["intro"], len(steps))]
+        sec += [R.t_step(s["h"], s["t"], k, len(steps), k + 1, n, "cream" if k % 2 else "olive")
+                for k, s in enumerate(steps, 1)]
+        sec += [R.t_end(tip["takeaway"], n - 1, n),
+                R.p_cta("servis" if servis else "magaza", n, n, phone=self.site.get("phone", ""))]
+        media = self.frames(sid, sec)
+        cap, hook = C.tip_caption(tip)
+        url = self.site["service"]["booking_url"] if servis else self.site["urls"]["magaza"]
+        alts = [tip.get("alt") or f"{tip['title']}. {tip['intro']}"]
+        alts += [f"{k}. {s['h']}: {s['t']}" for k, s in enumerate(steps, 1)]
+        alts += [f"Özetle: {tip['takeaway']}", "Servis randevusu için profildeki linke dokun." if servis
+                 else "Hepsi profildeki linkte."]
+        return self.rec(sid, day, tm, "post", "carousel", "ipucu", kicker=tip["kicker"], title=tip["title"], hook=hook,
+                        media=media, cover=media[0], caption=cap, alt=alts[0][:1000], alts=[a[:1000] for a in alts],
+                        link=C.utm(url, "social", "ipucu", sid), bio_link=C.utm(url, "bio", "ipucu", sid),
+                        ref=tip["id"], rule=C.RULE_IPUCU, cta="servis" if servis else "magaza",
+                        fp=self.fp([], md5(tip["id"], tip["title"], tip["caption"], *[s["t"] for s in steps])))
+
+    def newyear_post(self, sid: str, day: date, tm: str) -> dict:
+        import render as R
+        year = day.year + 1
+        media = self.frames(sid, [R.b_newyear(year, "Yeni yılda da satış ve servis için Köyceğiz'deyiz.")])
+        cap, hook = C.newyear_caption(year)
+        store = self.site["urls"]["magaza"]
+        alt = f"Mutlu yıllar. {year} bol kilometreli bir yıl olsun. NITRO Bisiklet, Köyceğiz."
+        return self.rec(sid, day, tm, "post", "image", "marka", kicker="Mutlu yıllar", title=f"Mutlu yıllar {year}",
+                        hook=hook, media=media, cover=media[0], caption=cap, alt=alt, alts=[alt],
+                        link=C.utm(store, "social", "marka", sid), bio_link=C.utm(store, "bio", "marka", sid),
+                        ref="yilbasi", rule=C.RULE_YILBASI, fp=self.fp([], f"yilbasi{year}"))
+
+    # ---- story'ler -----------------------------------------------------------------------------
+
+    def suite_story(self, sid: str, sections: tuple[str, str]) -> tuple[list[str], str]:
+        """Linkli story iki sürüm çizilir: API yedeği ('Link profilde') ve çıkartma yuvalı Suite sürümü."""
+        media, link = f"media/{sid}.jpg", f"media/{sid}-link.jpg"
+        self.story_jobs += [(sections[0], DOCS / media), (sections[1], DOCS / link)]
+        return [media], link
+
+    def product_story(self, sid: str, day: date, tm: str, p: dict, keep: str | None = None) -> dict:
+        import render as R
+        rule, kicker = C.rule_of(p), CFG["stories"]["urun"]["kicker"]
+        v, code = self.view(p), self.codes[p["slug"]]
+        head = self.title_for(rule, day, sid, keep)
+        var = C.pick(("cream", "olive"), sid)
+        media, mlink = self.suite_story(sid, (R.s_product(v, kicker, head, False, var), R.s_product(v, kicker, head, True, var)))
+        x = self.prod(p, sid, "urun", "story")
+        text = C.pick(STICKER_TEXTS[:2], sid)
+        return self.rec(sid, day, tm, "story", "story", "urun", kicker=kicker, headline=head, media=media, cover=media[0],
+                        alt=C.product_alt(p, head), products=[x], link=x["link"], bio_link=x["bio_link"], code=code,
+                        channel="suite", sticker={"url": x["link"], "text": text, **R.STICKER}, media_link=mlink,
+                        rule=rule["id"], fp=self.fp([p["slug"]]))
+
+    def promo_story(self, sid: str, day: date, tm: str, post: dict) -> dict:
+        import render as R
+        kicker, theme = CFG["stories"]["tanitim"]["kicker"], post["theme"]
+        store, cover = self.site["urls"]["magaza"], DOCS / post["cover"]
+        if theme == "urun":
+            x = post["products"][0]
+            head, url, text = post["headline"], self.by_slug[x["slug"]]["url"], "ÜRÜNE GİT"
+            label, fallback = "Ürüne gitmek için dokun", f"Link profilde<u>·</u>Kod {x['code']}"
+        elif theme == "ipucu":
+            head = "Yeni rehber <em>akışta</em>"
+            if post.get("cta") == "servis":
+                url, text = self.site["service"]["booking_url"], "SERVİS RANDEVUSU AL"
+                label, fallback = "Randevu almak için dokun", "Link profilde<u>·</u>Servis randevusu"
+            else:
+                url, text, label, fallback = store, "MAĞAZAYA GİT", "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Mağaza"
+        elif theme == "liste":
+            head, url, text = post["headline"], store, "MAĞAZAYA GİT"
+            label, fallback = "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Kodu yaz, bul"
+        else:
+            head, url, text = "Mutlu <em>yıllar!</em>", store, "MAĞAZAYA GİT"
+            label, fallback = "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Mağaza"
+        link = C.utm(url, "story", "promo", sid)
+        media, mlink = self.suite_story(sid, (R.s_promo(cover, kicker, head, False, label, fallback),
+                                              R.s_promo(cover, kicker, head, True, label, fallback)))
+        prods = [dict(x, link=C.utm(self.by_slug[x["slug"]]["url"], "story", "promo", sid),
+                      bio_link=C.utm(self.by_slug[x["slug"]]["url"], "bio", "promo", sid)) for x in post["products"]]
+        return self.rec(sid, day, tm, "story", "story", "promo", kicker=kicker, headline=head, media=media, cover=media[0],
+                        alt=f"Bugünün gönderisi: {post['title']}.", products=prods, link=link,
+                        bio_link=C.utm(url, "bio", "promo", sid), code=post.get("code", ""), channel="suite",
+                        sticker={"url": link, "text": text, **R.STICKER}, media_link=mlink, ref=post["id"],
+                        rule=post["rule"], fp=md5(VERSION, post["fp"])[:12])
+
+    def value_story(self, sid: str, day: date, tm: str, kind: str) -> dict | None:
+        import render as R
+        refs = [c["ref"] for c in self.cal if c.get("ref") and c["id"] != sid]
+        used, m = set(refs), day.month
+        if kind == "ipucu":
+            pool = [t for t in self.tips.get("story_tips", []) if C.in_season(t["h"] + " " + t["t"], m)]
+            t = next((t for t in pool if "ipucu:" + md5(t["h"])[:8] not in used), None)
+            if not t:
+                return None
+            ref, title = "ipucu:" + md5(t["h"])[:8], t["h"]
+            sec = R.s_tip("İpucu", t["h"], t["t"], C.pick(("olive", "ink"), sid))
+            rec = self._value(sid, day, tm, "ipucu", sec, title, f"İpucu: {t['h']}. {t['t']}", ref, C.RULE_IPUCU,
+                              md5(t["h"], t["t"]))
+            rec["kicker"] = "İpucu"
+            return rec
+        if kind == "soru":
+            pool = [q for q in self.tips.get("questions", []) if C.in_season(q, m)]
+            q = next((q for q in pool if "soru:" + md5(q)[:8] not in used), None)
+            if not q:
+                return None
+            rec = self._value(sid, day, tm, "etkilesim", R.s_question(q), q, f"Soru: {q}", "soru:" + md5(q)[:8],
+                              C.RULE_SORU, md5(q))
+            rec["kicker"] = "Soru"
+            return rec
+        variants = C.service_facts(self.site) if kind == "servis" else C.brand_facts(self.site)
+        tag = "servis" if kind == "servis" else "marka"
+        k = next((i for i in range(len(variants)) if f"{tag}:{i}" not in used), None)
+        if k is None:
+            k = sum(1 for r in refs if r.startswith(tag + ":")) % len(variants)
+        f = variants[k]
+        chip = "Servis" if kind == "servis" else "NITRO"
+        fallback = "Link profilde<u>·</u>" + ("Servis randevusu" if kind == "servis" else "NITROBISIKLET.COM")
+        sec = R.s_facts(chip, f["kicker"], f["title"], f["facts"], False, "", fallback, "ink" if kind == "servis" else "olive")
+        alt = f"{C.plain(f['title'])}: " + "; ".join(f"{t} ({s})" for _, t, s in f["facts"]) + "."
+        url = self.site["service"]["url"] if kind == "servis" else self.site["urls"]["hikaye"]
+        rec = self._value(sid, day, tm, tag, sec, "", alt, f"{tag}:{k}", C.RULE_SERVIS if kind == "servis" else C.RULE_MARKA,
+                          md5(str(f)))
+        rec.update(kicker=f["kicker"], headline=f["title"], title=C.plain(f["title"]),
+                   bio_link=C.utm(url, "bio", tag, sid))
+        return rec
+
+    def _value(self, sid, day, tm, theme, section, title, alt, ref, rule, sig) -> dict:
+        media = f"media/{sid}.jpg"
+        self.story_jobs.append((section, DOCS / media))
+        return self.rec(sid, day, tm, "story", "story", theme, title=title, media=[media], cover=media, alt=alt[:1000],
+                        ref=ref, rule=rule, fp=self.fp([], sig))
+
+    # ---- mevcut kayıtların denetimi ----------------------------------------------------------------
+
+    def state(self, c: dict | None) -> str:
+        """'yok' | 'kalsin' | 'ayni' (aynı ürünle yeniden çiz) | 'yeni' (baştan seç)."""
+        if c is None:
+            return "yok"
+        if c.get("status") not in ("planned", "draft") or common.item_dt(c) <= self.now + LEAD:
+            return "kalsin"
+        if self.reset:
+            return "yeni"
+        slugs = [x["slug"] for x in c.get("products") or []]
+        if c.get("theme") != "promo":
+            if any(s not in self.by_slug or not C.eligible(self.by_slug[s]) for s in slugs):
+                return "yeni"
+            if any(C.rule_of(self.by_slug[s])["id"] != x.get("rule") for s, x in zip(slugs, c["products"])):
+                return "yeni"
+        files = list(c.get("media") or []) + [c.get("cover"), c.get("thumb"), c.get("media_link")]
+        missing = not self.dry and any(f and not (DOCS / f).exists() for f in files)
+        return "ayni" if missing or c.get("audit") or self.current_fp(c) != c.get("fp") else "kalsin"
+
+    def current_fp(self, c: dict) -> str:
+        """Kaydın bugünkü veriye göre parmak izi (ürün dışı kayıtlarda içerik yeniden kurulmadan bilinemez: sürüm)."""
+        slugs = [x["slug"] for x in c.get("products") or []]
+        if c.get("theme") == "promo":
+            post = self.get(c.get("ref", ""))
+            return md5(VERSION, post["fp"])[:12] if post else ""
+        if c.get("theme") == "liste":
+            return self.fp(slugs, c.get("ref", ""))
+        if slugs:
+            return self.fp(slugs)
+        return c.get("fp") if c.get("ver") == VERSION else ""
+
+    # ---- gün gün planlama --------------------------------------------------------------------------
+
+    def days(self):
+        d = self.start
+        while d <= self.end:
+            yield d
+            d += timedelta(days=1)
+
+    def sid(self, day: date, typ: str, tm: str) -> str:
+        return f"{day}-{typ}-{tm.replace(':', '')}"
+
+    def open(self, day: date, tm: str) -> bool:
+        return datetime.fromisoformat(f"{day}T{tm}").replace(tzinfo=common.TZ) > self.now + LEAD
+
+    def keep_flags(self, old: dict | None, new: dict) -> dict:
+        """Yeniden kurulan kayıtta korunacak alanlar; Suite'te zamanlanmış kayıt değiştiyse uyarılır."""
+        new["ver"] = VERSION
+        if old and old.get("suite_scheduled") and (old.get("sticker") != new.get("sticker") or old.get("fp") != new.get("fp")):
+            self.say(f"UYARI: {new['id']} Business Suite'te zamanlanmıştı ama içeriği değişti; Suite'te yeniden planla.")
+        return new
+
+    def plan_lists(self) -> None:
+        for ds, list_id in sorted(CFG.get("lists", {}).items()):
+            day = date.fromisoformat(ds)
+            slot = CFG["posts"][str(day.weekday())]
+            sid = self.sid(day, "post", slot["time"])
+            old = self.get(sid)
+            st = self.state(old)
+            if not (self.start <= day <= self.end) or st == "kalsin" or (st == "yok" and not self.open(day, slot["time"])):
                 continue
-            taken.add(p["slug"])
-            last_used[content.family(p)] = day
-            last_used["cat:" + p["category"]] = day
-            if kind == "post":
-                post_today = p
-            stamp = day.strftime("%Y%m%d")
-            item = {
-                "id": sid, "date": str(day), "time": s["time"], "type": kind,
-                "slug": p["slug"], "name": content.display_name(p), "price": p["price"], "category": p["category"],
-                "link": content.utm_url(p, "social", kind, stamp),
-                "bio_link": content.utm_url(p, "bio", kind, stamp),
-                "image": f"media/{sid}.jpg",
-                "caption": content.caption(p, str(day)) if kind == "post" else "",
-                "status": "planned" if CFG["auto_publish"] else "draft",
-            }
-            kicker, hook = kicker_hook or content.story_hook(p, str(day), sid)
-            render(p, kind, DOCS / item["image"], hook=hook, kicker=kicker)
-            item["hook"] = html.unescape(hook.replace("<em>", "").replace("</em>", ""))
-            new.append(item)
-            print(f"{sid}  {p['name'][:60]}")
-    cal += new
-    save_calendar(cal)
-    return cal
+            items = None
+            if st == "ayni":
+                items = [self.by_slug[x["slug"]] for x in old["products"]]
+            self.drop(sid)
+            self.drop(self.sid(day, "story", CFG["stories"]["tanitim"]["time"]))
+            try:
+                if items is None or not all(self.images(p) for p in items):
+                    items = C.build_list(list_id, self.eligible, lambda p: self.free(p, day, sid) and bool(self.images(p)))
+                if not items:
+                    raise ValueError("yeterli ürün yok")
+                self.put(self.keep_flags(old, self.list_post(sid, day, slot["time"], list_id, items)))
+                self.say(f"{sid}  liste:{list_id}  {len(items)} ürün")
+            except ValueError as e:
+                self.say(f"ATLANDI {sid}: liste kuralı sağlanamadı ({e}); içerik üretilmedi.")
+
+    def plan_post(self, day: date) -> dict | None:
+        slot = CFG["posts"][str(day.weekday())]
+        special = CFG.get("specials", {}).get(str(day))
+        kind = "yilbasi" if special == "yilbasi" else slot["kind"]
+        tm = slot["time"]
+        sid = self.sid(day, "post", tm)
+        old = self.get(sid)
+        st = self.state(old)
+        if kind == "liste" or st == "kalsin" or (st == "yok" and not self.open(day, tm)):
+            return self.get(sid)
+        self.drop(self.sid(day, "story", CFG["stories"]["tanitim"]["time"]))   # tanıtım story'si postla birlikte yenilenir
+        self.drop(sid)
+        new = None
+        if kind == "yilbasi":
+            new = self.newyear_post(sid, day, tm)
+        elif kind == "ipucu":
+            tips = {t["id"]: t for t in self.tips.get("carousels", [])}
+            order = [i for i in CFG.get("tips", []) if i in tips] + [i for i in tips if i not in CFG.get("tips", [])]
+            used = {c["ref"] for c in self.cal if c.get("theme") == "ipucu" and c["type"] == "post"}
+            tid = old["ref"] if st == "ayni" and old.get("ref") in tips else next(
+                (i for i in order if i not in used and C.in_season(tips[i]["title"], day.month)), None)
+            if tid:
+                new = self.tip_post(sid, day, tm, tips[tid])
+        else:
+            reel = kind == "reel"
+            p = self.by_slug[old["products"][0]["slug"]] if st == "ayni" and old.get("products") else None
+            if p and (not self.images(p) or (reel and len(C.clean_specs(p)) < 3)):
+                p = None
+            keep = old.get("headline") if p else None
+            p = p or self.choose(C.pool_rules(slot["pool"], day.month), day, sid, need_specs=3 if reel else 0, post=True)
+            if p:
+                new = (self.reel if reel else self.product_carousel)(sid, day, tm, slot, p, keep)
+        if not new:
+            self.say(f"ATLANDI {sid}: kurala uyan içerik bulunamadı; yeri boş bırakıldı.")
+            return None
+        self.put(self.keep_flags(old, new))
+        self.say(f"{sid}  {new['format']:8} {new['theme']:6} {new['title'][:38]:38} "
+                 f"{(new['products'][0]['name'] if new['products'] else new['ref'])[:50]}")
+        return new
+
+    def plan_stories(self, day: date, post: dict | None) -> None:
+        st_cfg = CFG["stories"]
+        # 09:30 değer story'si
+        tm = st_cfg["deger"]["time"]
+        sid = self.sid(day, "story", tm)
+        old, s = self.get(sid), None
+        s = self.state(old)
+        if s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
+            self.drop(sid)
+            new = self.value_story(sid, day, tm, st_cfg["deger"]["weekdays"][day.weekday()])
+            if new:
+                self.put(self.keep_flags(old, new))
+            else:
+                self.say(f"ATLANDI {sid}: mevsime uyan içerik kalmadı.")
+        # 12:30 Günün ürünü
+        tm = st_cfg["urun"]["time"]
+        sid = self.sid(day, "story", tm)
+        old = self.get(sid)
+        s = self.state(old)
+        if s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
+            p = self.by_slug[old["products"][0]["slug"]] if s == "ayni" else None
+            keep = old.get("headline") if p else None
+            self.drop(sid)
+            if p and not self.images(p):
+                p = None
+            avoid = {x.get("rule") for x in (post or {}).get("products") or []}
+            p = p or self.choose(C.pool_rules("hepsi", day.month), day, sid, avoid=avoid)
+            if p:
+                self.put(self.keep_flags(old, self.product_story(sid, day, tm, p, keep)))
+            else:
+                self.say(f"ATLANDI {sid}: boş ürün kalmadı.")
+        # 20:30 günün postunun tanıtımı
+        tm = st_cfg["tanitim"]["time"]
+        sid = self.sid(day, "story", tm)
+        old = self.get(sid)
+        s = self.state(old)
+        if not post or post.get("status") not in ("planned", "draft", "published"):
+            if old and s != "kalsin":
+                self.drop(sid)
+            return
+        if s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
+            self.drop(sid)
+            self.put(self.keep_flags(old, self.promo_story(sid, day, tm, post)))
+
+    # ---- çizim -------------------------------------------------------------------------------------
+
+    def render(self) -> None:
+        if self.dry:
+            return
+        import render as R
+        from reel import make_reel
+        if self.post_jobs:
+            self.say(f"Post kareleri çiziliyor: {len(self.post_jobs)}")
+            R.render_all(self.post_jobs)
+        for frames, mp4, cover in self.reels:
+            make_reel(frames, mp4)
+            cover.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(frames[0], cover)
+        if self.reels:
+            self.say(f"Reel üretildi: {len(self.reels)}")
+        if self.story_jobs:
+            self.say(f"Story kareleri çiziliyor: {len(self.story_jobs)}")
+            R.render_all(self.story_jobs)
+        for c in self.cal:
+            if c["id"] in self.touched:
+                R.thumb(DOCS / c["cover"], DOCS / c["thumb"])
+
+    def verify(self) -> None:
+        """Dosyası oluşmayan kayıt takvime girmez."""
+        if self.dry:
+            return
+        for c in list(self.cal):
+            if c["id"] not in self.touched:
+                continue
+            files = list(c["media"]) + [c["cover"], c["thumb"]] + ([c["media_link"]] if c["media_link"] else [])
+            lost = [f for f in files if not (DOCS / f).exists() or (DOCS / f).stat().st_size == 0]
+            if lost:
+                self.say(f"HATA {c['id']}: dosya oluşmadı ({', '.join(lost)}); kayıt takvime alınmadı.")
+                self.drop(c["id"])
+
+    def cleanup(self) -> None:
+        """Takvimde geçmeyen medya dosyalarını sil (eski şemanın görselleri dahil)."""
+        if self.dry:
+            return
+        keep = set()
+        for c in self.cal:
+            keep.update(f for f in list(c.get("media") or []) + [c.get("cover"), c.get("thumb"), c.get("media_link")] if f)
+        gone = 0
+        for folder in (MEDIA, THUMBS):
+            if not folder.exists():
+                continue
+            for f in folder.iterdir():
+                if f.is_file() and f.suffix.lower() in (".jpg", ".jpeg", ".mp4", ".png") \
+                        and str(f.relative_to(DOCS)).replace("\\", "/") not in keep:
+                    f.unlink()
+                    gone += 1
+        if gone:
+            self.say(f"{gone} eski medya dosyası silindi.")
+
+    def run(self) -> list[dict]:
+        before = len(common.load_calendar())
+        if before != len(self.cal):
+            self.say(f"Eski şemadaki {before - len(self.cal)} kayıt takvimden çıkarıldı.")
+        self.plan_lists()
+        for day in self.days():
+            post = self.plan_post(day)
+            self.plan_stories(day, post)
+        self.render()
+        self.verify()
+        self.cleanup()
+        if not self.dry:
+            common.save_calendar(self.cal)
+        self.say(f"Takvim: {len(self.cal)} kayıt ({len(self.touched)} yeni/yenilenen), {self.start} → {self.end}.")
+        return self.cal
 
 
-# ---- Çıktılar ----------------------------------------------------------------------------------
-
-def item_dt(c: dict) -> datetime:
-    return datetime.fromisoformat(f"{c['date']}T{c['time']}").replace(tzinfo=TZ)
-
-
-def build_bio(cal: list[dict], now: datetime | None = None) -> None:
-    """Instagram bio linki için: yayınlanmış ürünler, en yenisi en üstte."""
-    now = now or datetime.now(TZ)
-    seen, rows = set(), []
-    for c in sorted(cal, key=item_dt, reverse=True):
-        if c["slug"] in seen or item_dt(c) > now or c["status"] != "published":
-            continue
-        seen.add(c["slug"])
-        rows.append(c)
-        if len(rows) == 30:
-            break
-    cards = "\n".join(
-        f'<a class="card" href="{html.escape(c["bio_link"])}"><img src="{c["image"]}" loading="lazy" alt="">'
-        f'<div><b>{html.escape(c["name"])}</b><span>{content.fmt_price(c["price"])}</span><i>Satın al →</i></div></a>'
-        for c in rows)
-    page = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>Nitro Bisiklet · Instagram ürünleri</title>
-<meta name="robots" content="noindex">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Barlow:wght@500;700&display=swap" rel="stylesheet">
-<style>
-body{{margin:0;background:#f1ede2;font-family:Barlow,system-ui,sans-serif;color:#14150f}}
-header{{background:#14150f;color:#f1ede2;padding:22px 18px;text-align:center}}
-header img{{height:84px}} header p{{margin:8px 0 0;color:#a8b78a;font-size:15px}}
-main{{max-width:520px;margin:0 auto;padding:16px}}
-.btn{{display:block;text-align:center;background:#f5821f;color:#14150f;font:800 18px Archivo,sans-serif;
- padding:16px;border-radius:999px;text-decoration:none;margin:0 0 16px}}
-.btn.alt{{background:transparent;border:2px solid #14150f}}
-.card{{display:flex;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:10px;margin:0 0 12px;
- text-decoration:none;color:inherit;box-shadow:0 2px 0 #14150f1a}}
-.card img{{width:96px;height:120px;object-fit:cover;border-radius:12px}}
-.card b{{display:block;font-size:16px;line-height:1.25}} .card span{{display:block;color:#a8480a;font-weight:700;margin:6px 0}}
-.card i{{font-style:normal;font-weight:700;color:#f5821f}}
-.foot{{text-align:center;font-size:13px;margin-top:28px}} .foot a{{color:#6b6658}}
-h2{{font:800 15px Archivo,sans-serif;letter-spacing:.12em;color:#6b6658;margin:22px 4px 12px}}
-</style></head><body>
-<header><img src="logo.png" alt="Nitro Bisiklet"><p>Köyceğiz · Bisiklet satış ve servis</p></header>
-<main>
-<a class="btn" href="https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=bio&utm_campaign=magaza">Tüm ürünler · Mağaza</a>
-<a class="btn alt" href="https://nitrobisiklet.com/servis/?utm_source=instagram&utm_medium=bio&utm_campaign=servis">Servis randevusu al</a>
-<h2>INSTAGRAM'DA GÖRDÜĞÜN ÜRÜNLER</h2>
-{cards or '<p>Yakında burada.</p>'}
-<p class="foot"><a href="gizlilik.html">Gizlilik</a> · <a href="veri-silme.html">Veri silme</a></p>
-</main></body></html>"""
-    DOCS.mkdir(exist_ok=True)
-    (DOCS / "index.html").write_text(page, encoding="utf-8")
-    logo = ROOT / "assets" / "logo.png"
-    if logo.exists():
-        (DOCS / "logo.png").write_bytes(logo.read_bytes())
+def build_pages(cal: list[dict]) -> None:
+    """Simülasyon, bio, takvim ve Suite listesi sayfalarını yeniden üret."""
+    import bio
+    import simulasyon
+    import suite
+    import takvim
+    bio.build_bio(cal)
+    simulasyon.build_sim(cal)
+    takvim.build_takvim(cal)
+    suite.build_suite(cal)
 
 
-def build_takvim(cal: list[dict]) -> None:
-    """İnsan okunur takvim: TAKVIM.md"""
-    out = ["# Instagram içerik takvimi", "", "Otomatik üretilir (`scripts/plan.py`). Bir paylaşımı iptal etmek için "
-           "`data/calendar.json` içinde `status` değerini `skipped` yap.", ""]
-    cur = None
-    for c in sorted(cal, key=item_dt):
-        if c["date"] != cur:
-            cur = c["date"]
-            d = date.fromisoformat(cur)
-            out += ["", f"## {d.strftime('%d.%m.%Y')} {GUN[d.weekday()]}", "",
-                    "| Saat | Tür | Ürün | Fiyat | Durum | Görsel |", "|---|---|---|---|---|---|"]
-        tur = "Post" if c["type"] == "post" else "Story"
-        out.append(f"| {c['time']} | {tur} | [{c['name']}]({c['link']}) | {content.fmt_price(c['price'])} "
-                   f"| {c['status']} | [görsel](docs/{c['image']}) |")
-    posts = [c for c in sorted(cal, key=item_dt) if c["type"] == "post"]
-    if posts:
-        out += ["", "---", "", "# Post açıklamaları", ""]
-        for c in posts:
-            out += [f"### {c['date']} {c['time']} · {c['name']}", "", "```", c["caption"], "```", ""]
-    (ROOT / "TAKVIM.md").write_text("\n".join(out), encoding="utf-8")
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="İçerik takvimini üretir ve günceller.")
+    ap.add_argument("--start", type=date.fromisoformat, default=date.fromisoformat(CFG["plan_start"]))
+    ap.add_argument("--end", type=date.fromisoformat, default=date.fromisoformat(CFG["plan_end"]))
+    ap.add_argument("--now", type=datetime.fromisoformat, help="sınama için şimdiki zaman (YYYY-AA-GGTSS:DD)")
+    ap.add_argument("--yeniden", action="store_true", help="gelecekteki planlı kayıtları baştan seç")
+    ap.add_argument("--kuru", action="store_true", help="görsel çizme, dosya yazma")
+    a = ap.parse_args(argv)
+    now = a.now.replace(tzinfo=common.TZ) if a.now else common.now()
+    reset = a.yeniden or YENIDEN.exists()
+    pl = Planner(now, a.start, a.end, reset=reset, dry=a.kuru)
+    cal = pl.run()
+    if a.kuru:
+        return 0
+    if YENIDEN.exists():
+        YENIDEN.unlink()
+    build_pages(cal)
+    print("Sayfalar yazıldı: docs/onizleme/, docs/index.html, docs/TAKVIM.md, docs/suite/")
+    return 0
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--start", type=date.fromisoformat, default=datetime.now(TZ).date() + timedelta(days=1))
-    ap.add_argument("--days", type=int, default=CFG["plan_days_ahead"])
-    a = ap.parse_args()
-    cal = plan(a.start, a.days)
-    build_bio(cal)
-    build_takvim(cal)
-    print(f"Takvimde {len(cal)} kayıt. TAKVIM.md ve docs/index.html güncellendi.")
+    sys.exit(main())
