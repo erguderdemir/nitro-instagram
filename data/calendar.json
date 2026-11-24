@@ -2333,7 +2333,8 @@
   "rule": "liste:hediye250",
   "status": "planned",
   "fp": "dbc67996d0e9",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2577,7 +2578,8 @@
   "rule": "sele",
   "status": "planned",
   "fp": "07097d9b4b80",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
