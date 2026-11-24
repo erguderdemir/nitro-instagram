@@ -7742,7 +7742,8 @@
   "rule": "zincir",
   "status": "planned",
   "fp": "ce7fdf3c7ce3",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -7979,7 +7980,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "7a49fe9a2030",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -8018,7 +8020,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "7a49fe9a2030",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
