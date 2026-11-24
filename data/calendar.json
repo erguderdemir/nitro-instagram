@@ -1732,7 +1732,8 @@
   "rule": "dag",
   "status": "planned",
   "fp": "f473c6d87131",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1980,7 +1981,8 @@
   "rule": "park_ayagi",
   "status": "planned",
   "fp": "2dfffb0f022c",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2218,7 +2220,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "8a18ad7203e8",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
