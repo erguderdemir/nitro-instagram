@@ -38,6 +38,8 @@ from graph import GraphError
 
 LOCK_MSG = "YAYIN KAPALI: config.json içinde live=false. Onay gelene kadar hiçbir şey yayınlanmaz."
 LATE_LIMIT = timedelta(hours=3)     # bu kadar gecikmiş paylaşım atlanır (gece yarısı story atmasın)
+EARLY_WINDOW = timedelta(minutes=35)  # tetik bu kadar erken geldiyse çalışma paylaşım saatini bekleyip tam vaktinde yayınlar
+                                      # (:02 ve :17 cron'ları :30 paylaşımını, :32 ve :47 cron'ları :00 paylaşımını yakalar)
 DEDUP_WINDOW = timedelta(hours=36)  # aynı açıklamalı medya bu süre içinde yayınlandıysa yeniden yayınlanmaz
 MAX_ATTEMPTS = 3                    # bu kadar başarısız denemeden sonra kayıt 'error' olur
 CAROUSEL_MAX = 10                   # Instagram bir carousel'de en çok 10 çocuk kabul eder
@@ -598,7 +600,28 @@ def main(argv: list[str] | None = None) -> int:
     dry = args.dry_run or not live or not os.environ.get("IG_ACCESS_TOKEN")
     if dry:
         print("DRY-RUN: IG_ACCESS_TOKEN yok ya da --dry-run verildi, hiçbir şey yayınlanmayacak.")
-    return run(dry)
+    rc = run(dry)
+    # Tetikler (GitHub :17/:47, bulut tetikçisi) paylaşımdan 10-15 dk önce gelir. Kuyruk ve koşu süresi yüzünden
+    # paylaşım geç çıkmasın diye: yakında API ile yayınlanacak kayıt varsa saatini bekle, sonra tam vaktinde yayınla.
+    # Bekleyen çalışma 'instagram' concurrency grubunu tutar; aynı anda ikinci bir yayın çalışması olmaz.
+    # Tek bekleme: en çok ~35 dk, iş akışının 50 dk zaman aşımı içinde kalır (yayın kaydı commit'i kaybolmaz).
+    nxt = None if dry else next_api_slot(common.now())
+    if nxt is not None:
+        wait = (nxt - common.now()).total_seconds() + 3
+        print(f"BEKLENİYOR: sıradaki API paylaşımı {nxt:%H:%M}; {wait / 60:.1f} dk sonra tam vaktinde yayınlanacak.")
+        sys.stdout.flush()
+        time.sleep(max(wait, 0))
+        rc = run(dry) or rc
+    return rc
+
+
+def next_api_slot(now: datetime) -> datetime | None:
+    """EARLY_WINDOW içinde API ile yayınlanacak (Suite'te zamanlanmamış, iptal edilmemiş) ilk planned kaydın zamanı."""
+    cancelled = common.cancelled_ids()
+    slots = [dt for c in common.load_calendar()
+             if c.get("status") == "planned" and not c.get("suite_scheduled") and c.get("id") not in cancelled
+             and (dt := when(c)) is not None and now < dt <= now + EARLY_WINDOW]
+    return min(slots) if slots else None
 
 
 if __name__ == "__main__":
