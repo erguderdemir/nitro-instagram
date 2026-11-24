@@ -59,7 +59,7 @@ def main() -> None:
         try:
             run("scrape.py", must=False, log=True)  # site erişilemezse eldeki ürün verisiyle devam
             run("plan.py", log=True)
-            run("denetim.py", log=True)
+            run("denetim.py", log=True)   # sıfır bulgu şartı: bulgu varsa görev kırmızı biter, bulgulu kayıt yayınlanmaz
         finally:
             head = f"görev: plan · {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC"
             (ROOT / "data" / "son-calisma.log").write_text("\n".join([head, *LOG[-400:]]) + "\n", encoding="utf-8")
@@ -68,6 +68,7 @@ def main() -> None:
         if not live():
             print("[gorev] Yayın kilitli (config.json live=false). Hiçbir şey yayınlanmadı.")
             return
+        run("denetim.py", must=False)  # bulgulu kayıt taslağa çekilir; yayıncı yalnız planlı kayıtları işler
         run("publish.py")
     elif task == "check":
         run("publish.py", "--check")

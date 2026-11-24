@@ -316,7 +316,7 @@ h2.h{font-size:92px;margin-top:10px;flex:none}
 .rfoot{position:absolute;left:64px;right:64px;top:1290px;display:flex;justify-content:space-between;font-size:22px;color:var(--mut)}
 .rsp{background:var(--soft);border-radius:34px;padding:26px 34px;flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}
 .rsp small{font:700 24px 'Space Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--mut)}
-.rsp b{font-family:Archivo,sans-serif;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:84px;line-height:.98;margin-top:8px;max-height:168px;overflow:hidden;display:block}
+.rsp b{font-family:Archivo,sans-serif;font-weight:800;font-stretch:72%;text-transform:none;font-size:84px;line-height:.98;margin-top:8px;max-height:168px;overflow:hidden;display:block}
 .rprice{font-size:230px;color:var(--em);line-height:.86;margin-top:8px;white-space:nowrap;flex:none}
 .ny{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .ny .yr{font-size:420px;line-height:.8;color:var(--em);letter-spacing:-.02em}
@@ -333,7 +333,7 @@ h2.h{font-size:92px;margin-top:10px;flex:none}
 .txt{font-size:58px;line-height:1.28}
 .th{font-size:100px;max-height:300px}
 .tt{font-size:54px}
-.q p{font-size:46px}
+.q p{font-size:54px}
 .dk-l{font-size:28px}
 .tr .stage{width:200px;height:200px}.tr .pname{font-size:38px;max-height:88px}.tr .code{font-size:22px}
 .mockw{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;margin-top:30px}
@@ -558,7 +558,7 @@ def r_hook(v: dict, kicker: str, headline: str) -> str:
 def r_hero(v: dict) -> str:
     return _reel("cream", v["code"] + "r2", f'''{top(chip("Kod " + v["code"], True))}
 {stage(v["img"], 952 / 640, "flex:1;margin-top:26px")}
-<div class="h" data-fit="52" style="font-size:84px;max-height:164px;margin-top:26px;overflow:hidden">{E(v["name"])}</div>''')
+<div class="h" data-fit="52" style="font-size:84px;max-height:164px;margin-top:26px;overflow:hidden;text-transform:none">{E(v["name"])}</div>''')
 
 
 def r_specs(v: dict, rows: list[tuple[str, str]]) -> str:
@@ -570,7 +570,7 @@ def r_specs(v: dict, rows: list[tuple[str, str]]) -> str:
 def r_perks(facts: list[tuple[str, str, str]]) -> str:
     body = "".join(f'<div class="wy"><div class="ic">{ico(ic, 52)}</div><div><b>{E(t)}</b>'
                    f'{f"<span>{E(s)}</span>" if s else ""}</div></div>' for ic, t, s in facts[:3])
-    return _reel("ink", "perks", f'''{top(chip("NITRO güvencesi", True))}
+    return _reel("ink", "perks", f'''{top(chip("Neden NITRO", True))}
 <h1 class="h" style="font-size:118px;margin-top:34px">NITRO'dan <em>alınca</em></h1><div class="facts">{body}</div>''')
 
 

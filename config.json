@@ -2,60 +2,38 @@
   "live": false,
   "timezone_offset_hours": 3,
   "graph_api_version": "v23.0",
+  "instagram_username": "nitrobisiklet",
+  "repo": "erguderdemir/nitro-instagram",
+  "public_base_url": "https://erguderdemir.github.io/nitro-instagram",
   "auto_publish": true,
-  "plan_days_ahead": 14,
-  "posts": [
-    {
-      "weekday": 0,
-      "time": "19:30",
-      "groups": [
-        "bisiklet_performans"
-      ]
-    },
-    {
-      "weekday": 2,
-      "time": "19:30",
-      "groups": [
-        "sezon"
-      ]
-    },
-    {
-      "weekday": 4,
-      "time": "19:30",
-      "groups": [
-        "bisiklet_gunluk",
-        "bisiklet_performans"
-      ]
-    },
-    {
-      "weekday": 6,
-      "time": "11:00",
-      "groups": [
-        "giyim",
-        "aksesuar",
-        "sezon"
-      ]
-    }
-  ],
-  "stories": [
-    {
-      "time": "12:30",
-      "groups": [
-        "sezon",
-        "aksesuar",
-        "parca",
-        "giyim"
-      ]
-    },
-    {
-      "time": "20:30",
-      "groups": [
-        "ayni_gun_post",
-        "parca",
-        "aksesuar",
-        "bisiklet_gunluk"
-      ]
-    }
-  ],
-  "repeat_after_days": 60
+  "plan_start": "2026-11-25",
+  "plan_end": "2026-12-31",
+  "repeat_after_days": 60,
+  "rule_gap_days": 6,
+  "posts": {
+    "0": {"time": "19:30", "kind": "reel", "pool": "performans", "kicker": "Haftanın bisikleti"},
+    "1": {"time": "19:30", "kind": "urun", "pool": "parca", "kicker": "Parça ve aksesuar"},
+    "2": {"time": "19:30", "kind": "ipucu"},
+    "3": {"time": "19:30", "kind": "urun", "pool": "mevsim", "kicker": "Mevsim seçkisi"},
+    "4": {"time": "19:30", "kind": "reel", "pool": "gunluk", "kicker": "Hafta sonu vitrini"},
+    "5": {"time": "11:00", "kind": "liste"},
+    "6": {"time": "11:00", "kind": "urun", "pool": "pazar", "kicker": "Pazar önerisi"}
+  },
+  "lists": {
+    "2026-11-28": "kis",
+    "2026-12-05": "hediye250",
+    "2026-12-12": "hediye500",
+    "2026-12-19": "cocuk",
+    "2026-12-26": "yukseltme"
+  },
+  "specials": {
+    "2026-12-31": "yilbasi"
+  },
+  "tips": ["kis-bakimi", "islak-zemin", "cocuk-jant-boyu", "servis-isaretleri", "zincir-bakimi", "lastik-basinci",
+           "kask-ayari", "ebike-batarya-kis"],
+  "stories": {
+    "deger": {"time": "09:30", "weekdays": ["ipucu", "soru", "servis", "ipucu", "marka", "ipucu", "soru"]},
+    "urun": {"time": "12:30", "kicker": "Günün ürünü"},
+    "tanitim": {"time": "20:30", "kicker": "Bugün akışta"}
+  }
 }

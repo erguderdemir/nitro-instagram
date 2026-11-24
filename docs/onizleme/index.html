@@ -1,0 +1,140 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>NITRO · Instagram simülasyonu</title>
+<meta name="robots" content="noindex"><link rel="stylesheet" href="../fonts/fonts.css"><style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f1ede2;font-family:Barlow,system-ui,sans-serif;color:#14150f;font-size:16px;line-height:1.4}
+a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}
+header{position:sticky;top:0;z-index:5;background:#14150f;color:#f1ede2}
+.bar{display:flex;align-items:center;gap:10px;max-width:760px;margin:0 auto;padding:10px 14px}
+.bar b{font:800 18px Archivo,sans-serif;letter-spacing:.02em;flex:1}.bar b i{font-style:normal;color:#f5821f}
+nav{display:flex;gap:6px}nav a{font:700 13px 'Space Mono',monospace;text-decoration:none;padding:8px 11px;border-radius:999px;border:1.5px solid #555a48;text-transform:uppercase;letter-spacing:.05em}
+nav a.on{background:#f5821f;border-color:#f5821f;color:#14150f}
+.lock{background:#f5821f;color:#14150f;font-weight:700;font-size:14px;text-align:center;padding:7px 12px}
+.lock.live{background:#b3261e;color:#fff}
+main{max-width:760px;margin:0 auto;padding:14px 14px 60px}
+h1{font:800 26px Archivo,sans-serif;margin:8px 0 2px}h2{font:800 13px Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6b6658;margin:24px 0 8px}
+.sum{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.sum span{background:#fff;border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+.sum .ok{background:#2a3220;color:#f1ede2}.sum .bad{background:#b3261e;color:#fff}
+.day{display:flex;gap:10px;align-items:stretch;background:#fff;border-radius:16px;padding:10px;margin:0 0 8px;text-decoration:none}
+.day .d{width:62px;flex:none;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f1ede2;border-radius:12px}
+.day .d b{font:800 26px Archivo,sans-serif;line-height:1}.day .d i{font:700 11px 'Space Mono',monospace;font-style:normal;text-transform:uppercase;color:#6b6658}
+.day.today .d{background:#f5821f}.day.past{opacity:.55}
+.strip{display:flex;gap:6px;flex:1;min-width:0;align-items:flex-end}
+.strip .t{position:relative;border-radius:8px;overflow:hidden;background:#e3dccb;flex:none}
+.strip .t img{display:block;width:100%;height:100%;object-fit:cover}
+.strip .post{width:78px;height:98px}.strip .story{width:50px;height:89px}
+.strip .none{width:78px;height:98px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#6b6658;text-align:center;border:1.5px dashed #a39d8c;background:none}
+.tag{position:absolute;left:3px;bottom:3px;font:700 9px 'Space Mono',monospace;background:#14150f;color:#f1ede2;border-radius:5px;padding:1px 4px;text-transform:uppercase}
+.tag.w{background:#b3261e}
+.row{display:flex;gap:12px;background:#fff;border-radius:16px;padding:10px;margin:0 0 8px;text-decoration:none;align-items:center}
+.row img{width:74px;border-radius:8px;flex:none;display:block}.row .x{min-width:0;flex:1}
+.row .m{font:700 12px 'Space Mono',monospace;text-transform:uppercase;letter-spacing:.05em;color:#a8480a}
+.row b{display:block;font-size:17px;line-height:1.2;margin:2px 0}.row small{color:#6b6658;display:block}
+.chip{display:inline-block;font:700 11px 'Space Mono',monospace;text-transform:uppercase;border-radius:999px;padding:2px 8px;background:#e3dccb;margin:3px 4px 0 0}
+.chip.bad{background:#b3261e;color:#fff}.chip.ok{background:#2a3220;color:#f1ede2}
+.pager{display:flex;justify-content:space-between;gap:8px;margin:14px 0}.pager a,.btn{display:inline-block;background:#14150f;color:#f1ede2;border-radius:999px;padding:9px 16px;text-decoration:none;font-weight:700;font-size:14px;border:0}
+.ig{background:#fff;border-radius:16px;overflow:hidden;margin:10px 0}
+.igh{display:flex;align-items:center;gap:10px;padding:10px 12px;font-weight:700}.igh img{width:34px;height:34px;border-radius:50%;background:#14150f;object-fit:contain}
+.igh small{display:block;font-weight:500;color:#6b6658;font-size:12px}
+.car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;background:#14150f;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}.car>*{flex:0 0 100%;scroll-snap-align:start;display:block;width:100%}
+.car img,.car video{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}.car video{aspect-ratio:9/16;object-fit:contain;background:#000;max-height:80vh}
+.cnt{text-align:center;font:700 12px 'Space Mono',monospace;color:#6b6658;padding:6px}
+.cap{padding:4px 14px 14px;white-space:pre-wrap;word-break:break-word;font-size:15px}.cap b{font-weight:700}
+.box{background:#fff;border-radius:16px;padding:12px 14px;margin:10px 0;font-size:14px;word-break:break-word}
+.box label{display:block;font:700 11px 'Space Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:#6b6658;margin:8px 0 2px}
+.box label:first-child{margin-top:0}.box ol{margin:4px 0;padding-left:20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#fff}
+.grid a{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;background:#e3dccb}
+.grid img{width:100%;height:100%;object-fit:cover;display:block}.grid .fut{opacity:1}
+.grid i{position:absolute;right:5px;top:5px;font:700 10px 'Space Mono',monospace;font-style:normal;background:rgba(20,21,15,.75);color:#fff;border-radius:5px;padding:1px 5px}
+.grid u{position:absolute;left:5px;bottom:5px;text-decoration:none;font:700 10px 'Space Mono',monospace;background:rgba(241,237,226,.9);border-radius:5px;padding:1px 5px}
+.prof{background:#fff;border-radius:16px 16px 0 0;padding:16px;display:flex;gap:16px;align-items:center}
+.prof img{width:86px;height:86px;border-radius:50%;background:#14150f;object-fit:contain;flex:none}.prof p{margin:2px 0;font-size:14px}
+.sv{position:fixed;inset:0;z-index:20;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.sv .fr{position:relative;height:100%;max-height:100vh;aspect-ratio:9/16;max-width:100vw;background:#111}
+.sv .fr>img{width:100%;height:100%;object-fit:contain;display:block}
+.sv .pb{position:absolute;top:8px;left:8px;right:8px;display:flex;gap:4px;z-index:3}.sv .pb i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.35)}.sv .pb i.on{background:#fff}
+.sv .hd{position:absolute;top:18px;left:12px;right:12px;z-index:3;color:#fff;font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center;text-shadow:0 1px 3px #000}
+.sv .hd a{font-size:26px;text-decoration:none;padding:0 6px}
+.sv .nv{position:absolute;top:60px;bottom:90px;width:38%;z-index:2}.sv .nv.l{left:0}.sv .nv.r{right:0}
+.sv .stk{position:absolute;z-index:4;transform:translate(-50%,-50%);background:#fff;color:#0a66c2;font:800 15px Barlow,sans-serif;border-radius:10px;padding:9px 14px;text-align:center;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.35);white-space:nowrap}
+.sv .ft{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:10px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:12px}
+.sv .ft button{background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:999px;padding:6px 10px;font-size:12px;margin-top:4px}
+.empty{background:#fff;border-radius:16px;padding:18px}
+</style></head><body>
+<header><div class="bar"><b>NITRO <i>simülasyon</i></b><nav><a id="n-takvim" href="#/takvim">Takvim</a><a id="n-gun" href="#/gun/2026-11-24">Gün</a><a id="n-profil" href="#/profil">Profil</a></nav></div><div class="lock">SİMÜLASYON · Yayın kilitli (live=false): Instagram'a hiçbir şey gönderilmez</div></header>
+<main id="app"></main>
+<p style="text-align:center;font-size:12px;color:#6b6658;padding:0 14px 24px">Üretim: 24.11.2026 07:44 (TR) · <a href="../suite/">Business Suite listesi</a> · <a href="https://github.com/erguderdemir/nitro-instagram/blob/main/docs/TAKVIM.md">TAKVIM.md</a> · <a href="../index.html">bio sayfası</a></p>
+<script>var D={"cal":[],"today":"2026-11-24","built":"24.11.2026 07:44","live":false,"user":"nitrobisiklet","bio":"erguderdemir.github.io/nitro-instagram/","audit":null};</script>
+<script>
+var GUN=['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'],AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+var TUR={carousel:'Carousel',reel:'Reel',image:'Görsel',story:'Story'},TEMA={urun:'ürün',ipucu:'ipucu',liste:'liste',servis:'servis',marka:'marka',promo:'tanıtım',etkilesim:'soru'};
+var DURUM={planned:'planlı',draft:'taslak',published:'yayında',skipped:'iptal',missed:'kaçtı',error:'hata'};
+var R='../',app=document.getElementById('app'),BY={},DAYS={},ORDER=[];
+D.cal.forEach(function(c){BY[c.id]=c;(DAYS[c.date]=DAYS[c.date]||[]).push(c)});ORDER=Object.keys(DAYS).sort();
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function dt(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function dl(s){var d=dt(s);return d.getDate()+' '+AY[d.getMonth()]+' '+['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'][d.getDay()]}
+function posts(day){return (DAYS[day]||[]).filter(function(c){return c.type==='post'})}
+function stories(day){return (DAYS[day]||[]).filter(function(c){return c.type==='story'})}
+function chips(c){var h='<span class="chip">'+esc(TUR[c.format]||c.format)+' · '+esc(TEMA[c.theme]||c.theme)+'</span><span class="chip">'+(c.channel==='suite'?'Suite + link':'API')+'</span><span class="chip'+(c.status==='draft'||c.status==='error'?' bad':'')+'">'+esc(DURUM[c.status]||c.status)+'</span>';
+ if(c.audit)h+='<span class="chip bad">denetim: '+c.audit.length+' bulgu</span>';return h}
+function nav(on){['takvim','profil','gun'].forEach(function(k){var a=document.getElementById('n-'+k);if(a)a.className=k===on?'on':''})}
+function summary(){var p=0,s=0,r=0;D.cal.forEach(function(c){if(c.type==='post'){p++;if(c.format==='reel')r++}else s++});
+ var a=D.audit,h='<div class="sum"><span>'+ORDER.length+' gün</span><span>'+p+' post ('+r+' reel)</span><span>'+s+' story</span>';
+ if(a)h+='<span class="'+(a.findings.length?'bad':'ok')+'">Denetim: '+a.findings.length+' bulgu'+(a.files?'':' (dosyasız)')+'</span>';
+ return h+'</div>'}
+function vTakvim(){nav('takvim');var h='<h1>Takvim</h1><p>'+esc(dl(ORDER[0]||D.today))+' → '+esc(dl(ORDER[ORDER.length-1]||D.today))+'</p>'+summary(),wk=null;
+ if(D.audit&&D.audit.findings.length){h+='<div class="box"><label>Denetim bulguları</label><ol>'+D.audit.findings.slice(0,40).map(function(f){return '<li><a href="#/p/'+esc(f.id)+'">'+esc(f.id)+'</a> ['+esc(f.code)+'] '+esc(f.msg)+'</li>'}).join('')+'</ol></div>'}
+ ORDER.forEach(function(day){var d=dt(day),w=new Date(d);w.setDate(d.getDate()-((d.getDay()+6)%7));var wl=w.getDate()+' '+AY[w.getMonth()]+' haftası';
+  if(wl!==wk){wk=wl;h+='<h2>'+esc(wl)+'</h2>'}
+  var ps=posts(day),ss=stories(day),cls=day===D.today?' today':(day<D.today?' past':'');
+  h+='<a class="day'+cls+'" href="#/gun/'+day+'"><div class="d"><b>'+d.getDate()+'</b><i>'+GUN[d.getDay()]+'</i></div><div class="strip">';
+  if(ps.length)ps.forEach(function(c){h+='<div class="t post"><img loading="lazy" src="'+R+esc(c.thumb)+'" alt=""><span class="tag'+(c.audit?' w':'')+'">'+esc(TUR[c.format])+'</span></div>'});
+  else h+='<div class="t none">post yok</div>';
+  ss.forEach(function(c){h+='<div class="t story"><img loading="lazy" src="'+R+esc(c.thumb)+'" alt=""><span class="tag'+(c.audit?' w':'')+'">'+esc(c.time)+'</span></div>'});
+  h+='</div></a>'});
+ if(!ORDER.length)h+='<div class="empty">Takvim boş. Plan görevi çalışınca burada görünecek.</div>';app.innerHTML=h}
+function pager(day){var i=ORDER.indexOf(day),a=ORDER[i-1],b=ORDER[i+1];
+ return '<div class="pager">'+(a?'<a href="#/gun/'+a+'">← '+esc(dl(a).split(' ').slice(0,2).join(' '))+'</a>':'<span></span>')+(b?'<a href="#/gun/'+b+'">'+esc(dl(b).split(' ').slice(0,2).join(' '))+' →</a>':'<span></span>')+'</div>'}
+function vGun(day){nav('gun');if(!DAYS[day]){day=ORDER.filter(function(d){return d>=D.today})[0]||ORDER[0]}
+ if(!day){app.innerHTML='<div class="empty">Takvim boş.</div>';return}
+ var h='<h1>'+esc(dl(day))+'</h1>'+pager(day)+'<a class="btn" href="#/story/'+day+'">Story\'leri tam ekran izle</a><h2>Günün akışı</h2>';
+ DAYS[day].forEach(function(c){var p=c.products[0];
+  h+='<a class="row" href="'+(c.type==='post'?'#/p/'+c.id:'#/story/'+day+'/'+c.id)+'"><img loading="lazy" src="'+R+esc(c.thumb)+'" alt=""><div class="x"><span class="m">'+esc(c.time)+' · '+esc(c.kicker||TEMA[c.theme])+'</span><b>'+esc(c.title||'')+'</b>'+
+   (p?'<small>'+esc(p.name)+(c.products.length>1?' +'+(c.products.length-1):' · '+esc(p.price)+' · '+esc(p.code))+'</small>':'')+chips(c)+'</div></a>'});
+ app.innerHTML=h+pager(day)}
+function vPost(id){nav('');var c=BY[id];if(!c){app.innerHTML='<div class="empty">Kayıt bulunamadı.</div>';return}
+ var n=c.media.length,h='<p><a href="#/gun/'+c.date+'">← '+esc(dl(c.date))+'</a></p><div class="ig"><div class="igh"><img src="'+R+'logo.png" alt=""><div>'+esc(D.user)+'<small>'+esc(dl(c.date))+' · '+esc(c.time)+'</small></div></div><div class="car" id="car">';
+ c.media.forEach(function(m){h+=/\.mp4$/.test(m)?'<video controls playsinline muted loop poster="'+R+esc(c.cover)+'" src="'+R+esc(m)+'"></video>':'<img loading="lazy" src="'+R+esc(m)+'" alt="">'});
+ h+='</div><div class="cnt" id="cnt">'+(n>1?'1 / '+n+' · kaydır':esc(TUR[c.format]))+'</div><div class="cap"><b>'+esc(D.user)+'</b> '+esc(c.caption||'')+'</div></div>';
+ h+='<div class="box"><label>Durum</label>'+chips(c)+(c.audit?'<ol>'+c.audit.map(function(a){return '<li>'+esc(a)+'</li>'}).join('')+'</ol>':'');
+ if(c.products.length){h+='<label>Ürün'+(c.products.length>1?'ler':'')+'</label><ol>'+c.products.map(function(p){return '<li><a href="'+esc(p.link)+'" target="_blank" rel="noopener">'+esc(p.name)+'</a> · '+esc(p.price)+' · '+esc(p.code)+(p.label?' · '+esc(p.label):'')+'</li>'}).join('')+'</ol>'}
+ if(c.link)h+='<label>Bağlantı (UTM)</label><a href="'+esc(c.link)+'" target="_blank" rel="noopener">'+esc(c.link)+'</a>';
+ h+='<label>Açıklama</label>'+(c.caption||'').length+' karakter · '+((c.caption||'').match(/#[^\s#]+/g)||[]).length+' etiket';
+ if(c.alts&&c.alts.length)h+='<label>Alt metinler</label><ol>'+c.alts.map(function(a){return '<li>'+esc(a)+'</li>'}).join('')+'</ol>';
+ h+='<label>Kimlik</label>'+esc(c.id)+' · kural: '+esc(c.rule)+'</div>';app.innerHTML=h;
+ var car=document.getElementById('car');if(n>1)car.addEventListener('scroll',function(){document.getElementById('cnt').textContent=(Math.round(car.scrollLeft/car.clientWidth)+1)+' / '+n})}
+function vProfil(){nav('profil');var ps=D.cal.filter(function(c){return c.type==='post'}).sort(function(a,b){return (b.date+b.time).localeCompare(a.date+a.time)});
+ var h='<h1>Profil ızgarası</h1><p>Takvim tamamlandığında profilin görünümü (en yeni üstte, 3:4 kırpılmış).</p><div class="prof"><img src="'+R+'logo.png" alt=""><div><b>'+esc(D.user)+'</b><p>NITRO Bisiklet · Köyceğiz</p><p>Bisiklet satış ve servis</p><p><a href="'+R+'index.html">'+esc(D.bio)+'</a></p></div></div><div class="grid">';
+ ps.forEach(function(c){var d=dt(c.date);h+='<a href="#/p/'+c.id+'"><img loading="lazy" src="'+R+esc(c.thumb)+'" alt=""><i>'+esc(TUR[c.format])+'</i><u>'+d.getDate()+' '+AY[d.getMonth()].slice(0,3)+'</u></a>'});
+ app.innerHTML=h+'</div>'}
+function vStory(day,id){nav('');var ss=stories(day);if(!ss.length){app.innerHTML='<div class="empty">Bu gün için story yok. <a href="#/takvim">Takvime dön</a></div>';return}
+ var i=Math.max(0,ss.map(function(c){return c.id}).indexOf(id)),alt=false,el=document.createElement('div');el.className='sv';document.body.appendChild(el);
+ function close(){if(el.parentNode)el.parentNode.removeChild(el)}
+ function draw(){var c=ss[i],src=(c.media_link&&!alt)?c.media_link:c.media[0],st=c.sticker;
+  var h='<div class="fr"><div class="pb">'+ss.map(function(_,k){return '<i class="'+(k<=i?'on':'')+'"></i>'}).join('')+'</div><div class="hd"><span>'+esc(D.user)+' · '+esc(c.time)+'</span><a href="#/gun/'+day+'" id="sx">×</a></div><img src="'+R+esc(src)+'" alt="">';
+  if(st&&!alt)h+='<a class="stk" target="_blank" rel="noopener" href="'+esc(st.url)+'" style="left:'+(st.x*100)+'%;top:'+(st.y*100)+'%">🔗 '+esc(st.text)+'</a>';
+  h+='<div class="nv l" id="sl"></div><div class="nv r" id="sr"></div><div class="ft">'+esc(c.kicker||TEMA[c.theme])+' · '+(c.channel==='suite'?'Business Suite, link çıkartmalı':'API')+(c.audit?' · DENETİM: '+c.audit.length+' bulgu':'')+
+   (c.media_link?'<br><button id="sa">'+(alt?'Link çıkartmalı sürümü göster':'API yedeğini göster (“Link profilde”)')+'</button>':'')+'</div></div>';
+  el.innerHTML=h;document.getElementById('sl').onclick=function(){if(i>0){i--;alt=false;draw()}};
+  document.getElementById('sr').onclick=function(){if(i<ss.length-1){i++;alt=false;draw()}else{location.hash='#/gun/'+day}};
+  var sa=document.getElementById('sa');if(sa)sa.onclick=function(){alt=!alt;draw()}}
+ draw();window.addEventListener('hashchange',close,{once:true})}
+function route(){var old=document.querySelector('.sv');if(old)old.parentNode.removeChild(old);
+ var p=(location.hash||'#/takvim').replace(/^#\/?/,'').split('/');window.scrollTo(0,0);
+ if(p[0]==='gun')vGun(p[1]);else if(p[0]==='p')vPost(p.slice(1).join('/'));else if(p[0]==='profil')vProfil();
+ else if(p[0]==='story'){vGun(p[1]);vStory(p[1],p[2])}else vTakvim()}
+window.addEventListener('hashchange',route);route();
+</script></body></html>
