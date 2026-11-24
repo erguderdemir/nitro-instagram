@@ -847,7 +847,8 @@
   "rule": "liste:kis",
   "status": "planned",
   "fp": "5260f448e0d1",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1093,7 +1094,8 @@
   "rule": "gozluk",
   "status": "planned",
   "fp": "01c286f77fc9",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1348,7 +1350,8 @@
   "rule": "dag",
   "status": "planned",
   "fp": "fc369654dbf5",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
