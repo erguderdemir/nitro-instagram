@@ -4955,7 +4955,8 @@
   "rule": "liste:hediye500",
   "status": "planned",
   "fp": "0ae23a6da865",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5257,7 +5258,8 @@
   "rule": "matara_kafesi",
   "status": "planned",
   "fp": "ceb6633975f2",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
