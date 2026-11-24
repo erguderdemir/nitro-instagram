@@ -80,11 +80,20 @@ BEKLEYEN (yalnız sahibinin onayıyla):
 Günlük önizleme rutini: her gün 05:00 UTC (08:00 TR) bulut oturumu o günün kayıtlarını denetler ve özet verir
 (https://claude.ai/code/routines/trig_01JpWx6k9XF1YtHEQKGa2Xq2).
 
-Yayın güvencesi (bilgisayardan bağımsız): Actions 15 dakikada bir (09:02–22:47 TR) zamanı gelen kaydı yayınlar;
-geciken kayıt 3 saate kadar telafi edilir. Bulut bekçi rutini 2 saatte bir (09:50–21:50 TR) kaçan kayıt görürse
-`claude/bekci-*` dalına `tetik.txt = publish` push eder; `birlestir.yml` main'e alıp `publish` başlatır
-(https://claude.ai/code/routines/trig_01VXidum3KAj3Ghf2Wrk5Dc5). Business Suite'e planlanmamış linkli story,
-API yedeğiyle ("Link profilde" sürümü) yine yayınlanır; yalnız tıklanabilir çıkartma olmaz.
+Yayın güvencesi (bilgisayardan bağımsız): GitHub'ın kendi `schedule` cron'u güvenilir değil (24 Kasım'da
+06:00–13:13 UTC arası hiç tetiklenmedi, tek tetik 9,5 saat gecikti). Bu yüzden asıl tetik bulut rutinleridir;
+her biri `claude/tetik-*` dalına iki satırlı `tetik.txt` (görev + UTC zaman) push eder, `birlestir.yml` main'e alıp
+görevi başlatır (push olayı gecikmez):
+- Yayın anları tetikçisi `31 6,9,16,17 * * *` UTC = 09:31, 12:31, 19:31, 20:31 TR → `publish`
+  (https://claude.ai/code/routines/trig_01Xykq1LaT2aTbfZwaoWyM5y)
+- Gece planı + 11:00 tetikçisi `1 1,8 * * *` UTC = 04:01 TR `plan`, 11:01 TR `publish`
+  (https://claude.ai/code/routines/trig_01J3bv59HU8my9XdG93nnsj9)
+- Bekçi 2 saatte bir (09:50–21:50 TR) kaçan kayıt görürse `claude/bekci-*` dalıyla `publish` tetikler
+  (https://claude.ai/code/routines/trig_01VXidum3KAj3Ghf2Wrk5Dc5)
+Actions cron'u (15 dakikada bir) yedek olarak durur. Çift tetik zararsız: `concurrency: instagram`, `ref: main` ve
+yayın durumu kontrolü aynı kaydı ikinci kez yayınlatmaz; geciken kayıt 3 saate kadar telafi edilir.
+Business Suite'e planlanmamış linkli story API yedeğiyle ("Link profilde" sürümü) yine yayınlanır; yalnız
+tıklanabilir çıkartma olmaz.
 
 Bilinen küçük notlar (site verisinden, bırakıldı): Conti iç lastik fotoğrafında farklı kutu, düşük çözünürlüklü
 görsellerde bulanık dolgu, bandana fotoğraf çerçevesi, bazı mağaza fotoğraflarında arka plan, forma görselinde "İSMİNİZ" yazısı. Teknik özelliği 3'ten az üründe carousel 3 karedir.

@@ -52,9 +52,11 @@ Simülasyon: https://erguderdemir.github.io/nitro-instagram/onizleme/
 ## Günlük takip
 - Bulut rutini her sabah 08:00 TR'de o günün kayıtlarını denetler, özet verir:
   https://claude.ai/code/routines/trig_01JpWx6k9XF1YtHEQKGa2Xq2
-- Yayın bilgisayardan bağımsız: GitHub Actions 15 dakikada bir (09:02–22:47 TR) yayınlar, geciken kaydı 3 saate
-  kadar telafi eder. Bulut bekçi rutini 2 saatte bir kaçan kayıt arar, varsa yayını yeniden tetikler:
-  https://claude.ai/code/routines/trig_01VXidum3KAj3Ghf2Wrk5Dc5
+- Yayın bilgisayardan bağımsız. GitHub'ın kendi zamanlayıcısı gecikebildiği için asıl tetik bulut rutinleridir:
+  yayın anları (09:31, 12:31, 19:31, 20:31 TR) https://claude.ai/code/routines/trig_01Xykq1LaT2aTbfZwaoWyM5y ,
+  gece planı 04:01 + 11:01 TR yayını https://claude.ai/code/routines/trig_01J3bv59HU8my9XdG93nnsj9 ,
+  bekçi 2 saatte bir kaçan kayıt arar https://claude.ai/code/routines/trig_01VXidum3KAj3Ghf2Wrk5Dc5 .
+  Actions 15 dakikalık cron'u yedektir; geciken kayıt 3 saate kadar telafi edilir, çift yayın olmaz.
 - Business Suite'e planlanmamış linkli story de bulutta API yedeğiyle yayınlanır ("Link profilde"); yalnız
   tıklanabilir çıkartma olmaz. Çıkartmalı planlama bir kez yapılınca Meta kendisi yayınlar.
 - Ayrıntılı devir notu: `DEVAM.md`.
