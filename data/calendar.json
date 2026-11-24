@@ -2697,7 +2697,8 @@
   "rule": "sele",
   "status": "planned",
   "fp": "38a263bade31",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2736,7 +2737,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "8f40d8190908",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2789,7 +2791,8 @@
   "rule": "sepet",
   "status": "planned",
   "fp": "e3bc1d87ade9",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2898,7 +2901,8 @@
   "rule": "gravel",
   "status": "planned",
   "fp": "6e5e3e8ce974",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2984,7 +2988,8 @@
   "rule": "sargi",
   "status": "planned",
   "fp": "38722cd7a064",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
