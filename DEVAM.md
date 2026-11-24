@@ -149,5 +149,5 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
 
 ## Devam (24 Kas 20:10)
 - Her posta aynı dakikada "Şimdi akışta" paylaşım story'si eklendi (plan.py, kanal suite). Suite'te planlanmamış olanlar API ile (sticker'sız) zamanında çıkar.
-- Suite story durumu (24 Kasım): 2026-12-13'e kadar tüm linkli story'ler Suite'te planlı (`suite_scheduled: true`). Kalan (Suite penceresi içinde, Chrome bağlantısı koptuğu için yarım): 2026-12-14-story-1930 … 2026-12-23-story-2030 (11 adet). 2026-12-24 ve sonrası 29 story Suite'in 29 gün sınırı dışında; tarih yaklaştıkça planlanabilir. Planlanmayanlar API ile zamanında, sticker'sız çıkar. Liste: `type=story, channel=suite, suite_scheduled yok, status=planned`.
+- Suite story durumu (24 Kasım): 2026-12-15'e kadar tüm linkli story'ler Suite'te planlı (`suite_scheduled: true`). Kalan (Suite penceresi içinde, Chrome bağlantısı koptuğu için yarım): 2026-12-16-story-1930 … 2026-12-23-story-2030 (9 adet). 2026-12-24 ve sonrası 29 story Suite'in 29 gün sınırı dışında; tarih yaklaştıkça planlanabilir. Planlanmayanlar API ile zamanında, sticker'sız çıkar. Liste: `type=story, channel=suite, suite_scheduled yok, status=planned`.
 - Öne Çıkanlar: web'den yapılamıyor (Chrome'daki hesap nitrobisiklet değil, kapak yükleme yalnızca mobil). Kapaklar: paylas/kapaklar/*.jpg — telefondan elle.
