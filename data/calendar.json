@@ -3093,7 +3093,8 @@
   "rule": "kaset",
   "status": "planned",
   "fp": "d58c4d9add10",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3132,7 +3133,8 @@
   "rule": "servis",
   "status": "planned",
   "fp": "86ebed6294ed",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3185,7 +3187,8 @@
   "rule": "ic_lastik",
   "status": "planned",
   "fp": "ac082c2db0f0",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3275,7 +3278,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "d4cf991fa612",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3368,7 +3372,8 @@
   "rule": "sele",
   "status": "planned",
   "fp": "c2be36e69849",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
