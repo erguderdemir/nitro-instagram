@@ -105,7 +105,8 @@
   "rule": "pedal",
   "status": "planned",
   "fp": "86bf5edcfd84",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
