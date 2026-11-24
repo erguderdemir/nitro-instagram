@@ -110,10 +110,13 @@
   "media_link": "media/2026-11-24-story-2030-link.jpg",
   "ref": "2026-11-24-post-1930",
   "rule": "pedal",
-  "status": "planned",
+  "status": "published",
   "fp": "86bf5edcfd84",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-24T20:30:00+03:00"
  },
  {
   "schema": 2,

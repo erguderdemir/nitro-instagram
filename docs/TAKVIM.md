@@ -9,7 +9,7 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 19:30 | Carousel · ürün | Pedalını yenile | [Pedal M504 Siyah](https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-24-post-1930) | 743,69 ₺ | API | yayında | [görsel](media/2026-11-24-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Pedalını yenile | [Pedal M504 Siyah](https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-24-story-2030) | 743,69 ₺ | Suite + link | planlı | [görsel](media/2026-11-24-story-2030.jpg) |
+| 20:30 | Story · tanıtım | Pedalını yenile | [Pedal M504 Siyah](https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-24-story-2030) | 743,69 ₺ | Suite + link | yayında | [görsel](media/2026-11-24-story-2030.jpg) |
 
 ## 25.11.2026 Çarşamba
 
