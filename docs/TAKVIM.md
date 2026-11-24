@@ -326,10 +326,10 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · ipucu | KIŞIN ÇAMURLUK TAK | — | — | Suite + link | planlı | [görsel](media/2026-12-26-story-0930.jpg) |
-| 11:00 | Carousel · liste | Bisikletine 5 yükseltme | [Pedal M505 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100) | — | API | planlı | [görsel](media/2026-12-26-post-1100-1.jpg) |
-| 11:00 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M505 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-1100) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-1100.jpg) |
+| 11:00 | Carousel · liste | Bisikletine 5 yükseltme | [Pedal M506 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100) | — | API | planlı | [görsel](media/2026-12-26-post-1100-1.jpg) |
+| 11:00 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M506 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-1100) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-1100.jpg) |
 | 12:30 | Story · ürün | Yedek iç lastik yanında mı? | [Maxxis Welter Weight İç Lastik 700x23-32c İnce Sibop 48 mm](https://nitrobisiklet.com/urun/maxxis-welter-weight-ic-lastik-700x23-32c-ince-sibop-48mm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-26-story-1230) | 265 ₺ | Suite + link | planlı | [görsel](media/2026-12-26-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M505 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-2030.jpg) |
+| 20:30 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M506 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-2030.jpg) |
 
 ## 27.12.2026 Pazar
 
@@ -1147,7 +1147,7 @@ Bisikletle işe ya da okula gidiyor musun?
 ```
 Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.
 
-1. Pedal M505 Siyah · 863,21 ₺ · Kod N343
+1. Pedal M506 Siyah · 863,21 ₺ · Kod N344
 2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · Kod N180
 3. Rectus Mtb Sele Kırmızı · 345 ₺ · Kod N357
 4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · Kod N173

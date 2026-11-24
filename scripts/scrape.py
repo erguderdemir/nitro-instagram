@@ -74,7 +74,7 @@ def parse(url: str, page: str) -> dict:
     m = re.search(r"Bu üründen son\D{0,40}(\d+)\D{0,10}adet", page, re.S)
     if m:
         stock = int(m.group(1))
-    out_of_stock = bool(re.search(r"(Tükendi|Stokta yok|Gelince haber ver)", page))
+    out_of_stock = bool(re.search(r"(Bu ürün şu an tükendi|Stokta yok|Gelince haber ver)", page, re.I))
 
     specs = {}
     if "Teknik döküm" in lines:

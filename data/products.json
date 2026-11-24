@@ -761,7 +761,7 @@
   "price": 120.0,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Grayzer Fren Balata Temizleme Spreyi 500 ML Fren parçalarında oluşan yağ, toz, kir ve kalıntıları hızla temizler; Fırçalama gerektirmez; Hızlı kurur, kalıntı…",
   "specs": {},
   "images": [
@@ -1819,7 +1819,7 @@
   "price": 700.0,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "610 denye kumaştan imal edilmiştir. 6,2 inç sökülebilen dokunmatik telefonluk. Hacim 1 lt Pc-290 Kadroüstü Bike&Bike Heybe, bisiklet kullanıcılarının uzun yol…",
   "specs": {
    "610 denye kumaştan imal edilmiştir.": "6,2 inç sökülebilen dokunmatik telefonluk.",
@@ -4338,7 +4338,7 @@
   "price": 2350.08,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "1 ADET FİYATIDIR. 1 BAĞ 8 ADETTİR. DIŞ GENİŞLİK : 35 MM İÇ GENİŞLİK : 30 MM YÜKSEKLİK : 20 MM",
   "specs": {
    "1 ADET FİYATIDIR. 1 BAĞ 8 ADETTİR.": "DIŞ GENİŞLİK : 35 MM",
@@ -4381,7 +4381,7 @@
   "price": 646.78,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC sele borusu kelepçesi ve Led Işık. - LED ışıklar bisikletinizde arka ışık görevi gördüğü için arka bisiklet lambalarına harika bir alternatif. -…",
   "specs": {
    "XLC sele borusu kelepçesi ve Led Işık.": "- LED ışıklar bisikletinizde arka ışık görevi gördüğü için arka bisiklet lambalarına harika bir alternatif."
@@ -4401,7 +4401,7 @@
   "price": 756.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon BH-30 800 mm Mavi. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4422,7 +4422,7 @@
   "price": 756.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon BH-30 800 mm Kırmızı. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4443,7 +4443,7 @@
   "price": 2390.4,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "1 ADET FİYATIDIR. 1 BAĞ 8 ADETTİR. DIŞ GENİŞLİK : 35 MM İÇ GENİŞLİK : 30 MM YÜKSEKLİK : 20 MM",
   "specs": {
    "1 ADET FİYATIDIR. 1 BAĞ 8 ADETTİR.": "DIŞ GENİŞLİK : 35 MM",
@@ -4486,7 +4486,7 @@
   "price": 646.78,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC sele borusu kelepçesi ve Led Işık. - LED ışıklar bisikletinizde arka ışık görevi gördüğü için arka bisiklet lambalarına harika bir alternatif. -…",
   "specs": {
    "XLC sele borusu kelepçesi ve Led Işık.": "- LED ışıklar bisikletinizde arka ışık görevi gördüğü için arka bisiklet lambalarına harika bir alternatif."
@@ -4506,7 +4506,7 @@
   "price": 646.78,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC özel tasarım sele borusu kelepçesi. Tasarımı sayesinde arka bagaj bağlantı noktası mevcuttur.",
   "specs": {},
   "images": [
@@ -4524,7 +4524,7 @@
   "price": 646.78,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC özel tasarım sele borusu kelepçesi. Tasarımı sayesinde arka bagaj bağlantı noktası mevcuttur.",
   "specs": {},
   "images": [
@@ -4542,7 +4542,7 @@
   "price": 137.11,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "31.6mm sele boruları içindir.",
   "specs": {
    "31.6mm sele boruları içindir.": "Gülpınar, Fevzi Paşa Cd. No:73/B",
@@ -4579,7 +4579,7 @@
   "price": 1992.05,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon KS-05 Rainbow. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4599,7 +4599,7 @@
   "price": 756.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon BH-30 800 mm Siyah. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4620,7 +4620,7 @@
   "price": 137.11,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "31.8mm sele boruları ile uyumludur. 5mm alyan anahtar ile kullanım imkanı Malzeme : Alüminyum Renk : Mat Siyah",
   "specs": {
    "31.8mm sele boruları ile uyumludur.": "5mm alyan anahtar ile kullanım imkanı",
@@ -4662,7 +4662,7 @@
   "price": 756.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon BH-30 800 mm Mor. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4683,7 +4683,7 @@
   "price": 2972.16,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "ARKA GÖBEK İLE AŞAĞIDAKİ KAPAMA MANDALI SİPARİŞİ DE VERİLMELİDİR 20-9900-90000 : UNIX ARKA GÖBEK MANDALI 151MM SİYAH",
   "specs": {},
   "images": [
@@ -4702,7 +4702,7 @@
   "price": 504.65,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon Boğazı BM-10 45 mm Siyah. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4721,7 +4721,7 @@
   "price": 504.65,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon Boğazı BM-10 45 mm Mavi. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4740,7 +4740,7 @@
   "price": 504.65,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon Boğazı BM-10 45 mm Mor. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4759,7 +4759,7 @@
   "price": 504.65,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Gidon Boğazı BM-10 45 mm Kırmızı. Gidon Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4778,7 +4778,7 @@
   "price": 3119.33,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Sağlam alüminyum XLC All MTN Gövde, engebeli arazilerde agresif sürüş için üretilmiş yüksek sertlikte bir gövdedir. Gövde, üretimde kullanılan 3D dövme…",
   "specs": {},
   "images": [
@@ -4796,7 +4796,7 @@
   "price": 1867.2,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Schwalbe DIŞ LASTİK 700x28C DELTA CRUISER K-GUARD BEYAZ YANAK 11101087. Dış Lastik kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4816,7 +4816,7 @@
   "price": 1690.2,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "ÜRÜN AÇIKLAMASI Yolda, çakılda ve hafif arazide kullanıma yönelik GİRİŞ SEVİYE ARAZİ LASTİKLERİ. - Kolay yuvarlanma ve iyi viraj alma tutuşu için çekici…",
   "specs": {
    "ÜRÜN AÇIKLAMASI": "Yolda, çakılda ve hafif arazide kullanıma yönelik GİRİŞ SEVİYE ARAZİ LASTİKLERİ."
@@ -4838,7 +4838,7 @@
   "price": 3017.81,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Schwalbe DIŞ LASTİK 16X1.35 MARATHON ( 5 FAKTÖR PATLAMAYA DİRENÇLİ ) BROMPTON UYUMLU GREENGUARD 11100147. Dış Lastik kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -4858,7 +4858,7 @@
   "price": 292.75,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Gövde:Tek Parça Siyah PP Rulman:DU rulman Aks:Bor Boyut: 107x100mm Ağırlık: 282g",
   "specs": {
    "Gövde:Tek Parça Siyah PP": "Rulman:DU rulman",
@@ -4897,7 +4897,7 @@
   "price": 924.65,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Özellikler: Ön tekerlek, arka tekerlek ve sele kelepçesi için set Beş farklı renkte üretim Sele kelepçesi için kısa gerdirme kolu, bisikletteki gerginin…",
   "specs": {
    "Özellikler:": "Ön tekerlek, arka tekerlek ve sele kelepçesi için set",
@@ -4921,7 +4921,7 @@
   "price": 1094.4,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Özellikler: Ön tekerlek, arka tekerlek ve sele kelepçesi için set Beş farklı renkte üretim Sele kelepçesi için kısa gerdirme kolu, bisikletteki gerginin…",
   "specs": {
    "Özellikler:": "Ön tekerlek, arka tekerlek ve sele kelepçesi için set",
@@ -4945,7 +4945,7 @@
   "price": 644.04,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Gövde: Alüminyum Namlu cilalı/ED Rulman:Gelişmiş bilyalı rulman Aks:Bor Boyut: 110x100mm Ağırlık: 363g",
   "specs": {
    "Gövde: Alüminyum Namlu cilalı/ED": "Rulman:Gelişmiş bilyalı rulman",
@@ -4984,7 +4984,7 @@
   "price": 1921.46,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "ÜRÜN AÇIKLAMASI KENTSEL, BİREYSEL VE DİNAMİK. Road Cruiser, çekici sırt tasarımı ve 12 inçten 28 inç'e kadar bisikletler için çok sayıda renk seçeneğiyle…",
   "specs": {
    "ÜRÜN AÇIKLAMASI": "KENTSEL, BİREYSEL VE DİNAMİK. Road Cruiser, çekici sırt tasarımı ve 12 inçten 28 inç'e kadar bisikletler için çok sayıda renk seçeneğiyle etkileyicidir. Ancak Road Cruiser'ın öne çıkan özelliği sırtındadır ve buna Yeşil Bileşik adı verilir. Sadece yenilenebilir ve geri dönüştürülmüş hammaddelerden üretilen ve ilk kez geleneksel bir bisiklet lastiğinde kullanacağımız kalitede polimer içeren bir kauçuk."
@@ -5005,7 +5005,7 @@
   "price": 2110.56,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Tempo, benzersiz bir performans, dayanıklılık ve çok yönlülük için tasarlanmış gidon bandıdır. Bondcush, darbelerin emilmesine yardımcı olan orta katmanda…",
   "specs": {},
   "images": [
@@ -5023,7 +5023,7 @@
   "price": 1096.85,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Fizik yol bisikleti gidon sargısı Ekstra konfor ve daha iyi kontrol için 2,5 mm kalınlığında, tüm hava koşullarında yumuşak ve rahat kullanıma uygundur.…",
   "specs": {},
   "images": [
@@ -5041,7 +5041,7 @@
   "price": 979.2,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC'nin kahverengi deri imitasyonu elciktir. Eva Foam yapısı sayesinde konforu artırılmıştır. Retro tarz bisikletler için oldukça kullanışlıdır. Teknik…",
   "specs": {},
   "images": [
@@ -5059,7 +5059,7 @@
   "price": 1775.86,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Schwalbe DIŞ LASTİK 700x40C LAND CRUISER K-Guard 11101043. Dış Lastik kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5079,7 +5079,7 @@
   "price": 2284.06,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Schwalbe TUBELESS JANT ŞERİDİ TL GENİŞLİK 23mm UZUNLUK 10m 887023. Jant Grubu kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5098,7 +5098,7 @@
   "price": 478.08,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Elcik XR-30 Turuncu 130 mm. Elcik Sargı Barend kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5118,7 +5118,7 @@
   "price": 478.08,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Elcik XR-30 Yeşil 130 mm. Elcik Sargı Barend kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5138,7 +5138,7 @@
   "price": 3344.3,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "BRIVIGA GÖZLÜK GLS-39406 PEMBE. Gözlük kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5159,7 +5159,7 @@
   "price": 478.08,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Elcik XR-30 Mavi. Elcik Sargı Barend kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5179,7 +5179,7 @@
   "price": 2177.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal K203 Siyah. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5198,7 +5198,7 @@
   "price": 2177.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal K203 Mavi. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5217,7 +5217,7 @@
   "price": 2177.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal K203 Mor. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5236,7 +5236,7 @@
   "price": 2177.98,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal K203 Kırmızı. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5255,7 +5255,7 @@
   "price": 778.37,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Briviga AYNA RVM-313 SOL 6X11.2CM 95g 360° DÖNEBİLEN GİDON ÖLÇÜSÜ 2-2.4cm. Zil, Korna, Ayna kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5273,7 +5273,7 @@
   "price": 743.69,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal M504 Siyah. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5311,7 +5311,7 @@
   "price": 863.21,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal M505 Siyah. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5334,7 +5334,7 @@
   "price": 725.35,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC Bisiklet Aynası MR-K03, şehri veya kırsalı keşfederken güvenilir bir arkadaş olacak ve yolda veya arkanızda neler olup bittiği konusunda sizi…",
   "specs": {},
   "images": [
@@ -5355,7 +5355,7 @@
   "price": 1381.15,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Pedal NY-02 Sarı. Pedal ve Kal kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5373,7 +5373,7 @@
   "price": 1363.82,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "ECHOWELL KİLOMETRE SAATİ BRI-10 Kablolu Km saati 10 fonksiyon Özellikler: ● Otomatik Başlat / Durdur ● Düşük pil göstergesi ● Enerji tasarrufu için akıllı…",
   "specs": {
    "ECHOWELL KİLOMETRE SAATİ BRI-10": "Kablolu Km saati 10 fonksiyon",
@@ -5417,7 +5417,7 @@
   "price": 1975.06,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Moon FAR HELIX LITE-W 150 LM USB 90110460101. Aydınlatma ve Reflektör kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5435,7 +5435,7 @@
   "price": 443.62,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Briviga MATARA KAFESİ BCG-301 PC SİYAH - LEVYE HEDİYELİ SİYAH 21g. Matara ve Kafes kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5453,7 +5453,7 @@
   "price": 437.42,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Briviga MATARA KAFESİ BCG-31711B ALÜMİNYUM GRİ 33g. Matara ve Kafes kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5472,7 +5472,7 @@
   "price": 2517.65,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Moon FAR HELIX PRO-W 250 LM USB 90110440101. Aydınlatma ve Reflektör kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5490,7 +5490,7 @@
   "price": 866.76,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "XLC Ön Tekerlek Çamurluğu MG-C15 ve Arka Tekerlek Çamurluğu MG-C16'dan oluşan settir. Kolay kurulum, alet gerektirmez, klipsli kurulum. 700C için uygun,…",
   "specs": {},
   "images": [
@@ -5526,7 +5526,7 @@
   "price": 551.06,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Briviga AYNA RVM-372 SOL GİDON UCU BAĞLANTILI 75X75mm ÖLÇÜ : 16-22mm 360° DÖNEBİLEN. Zil, Korna, Ayna kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5544,7 +5544,7 @@
   "price": 584.33,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Enlee Duvar Askısı OBP-22. Park Ayağı ve Sehpa kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5565,7 +5565,7 @@
   "price": 437.42,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "Briviga MATARA KAFESİ BCG-31711B ALÜMİNYUM SİYAH 33g. Matara ve Kafes kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -5584,7 +5584,7 @@
   "price": 617.16,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "ORTLIEB E227 Bağlantı tokası Rack-Pack Urban/Back-Roller. Çanta ve Sepet kategorisinde, Nitro Bisiklet'te.",
   "specs": {},
   "images": [
@@ -7594,7 +7594,7 @@
   "price": 249.0,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "2'li set: 2 adet 2.5 m çelik örgülü fren iç teli, fıçı tipi başlık. Elektrikli bisiklet, MTB ve şehir bisikletleriyle uyumlu.",
   "specs": {
    "Uzunluk": "2.5 metre (250 cm)",
@@ -7642,7 +7642,7 @@
   "price": 249.0,
   "old_price": null,
   "stock_left": null,
-  "in_stock": true,
+  "in_stock": false,
   "description": "2'li set: 2 adet 3.5 m çelik örgülü vites iç teli, silindirik vites başlığı. Elektrikli bisiklet, MTB ve şehir bisikletleriyle uyumlu.",
   "specs": {
    "Uzunluk": "3.5 metre (350 cm)",

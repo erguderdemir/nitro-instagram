@@ -1,8 +1,60 @@
 {
- "updated": "2026-11-24T20:12:22+03:00",
+ "updated": "2026-11-24T23:01:24+03:00",
  "records": 187,
  "checked": 186,
  "files": true,
  "live": true,
- "findings": []
+ "findings": [],
+ "suite_warnings": [
+  {
+   "id": "2026-11-24-story-2030",
+   "code": "stok",
+   "msg": "ürün stokta değil: Pedal M504 Siyah"
+  },
+  {
+   "id": "2026-11-26-story-1230",
+   "code": "stok",
+   "msg": "ürün stokta değil: Gidon BH-30 800 mm Kırmızı"
+  },
+  {
+   "id": "2026-11-29-post-1100",
+   "code": "stok",
+   "msg": "ürün stokta değil: Briviga Gözlük GLS-39406 Pembe"
+  },
+  {
+   "id": "2026-11-29-story-1100",
+   "code": "stok",
+   "msg": "ürün stokta değil: Briviga Gözlük GLS-39406 Pembe"
+  },
+  {
+   "id": "2026-11-29-story-2030",
+   "code": "stok",
+   "msg": "ürün stokta değil: Briviga Gözlük GLS-39406 Pembe"
+  },
+  {
+   "id": "2026-12-08-story-1230",
+   "code": "stok",
+   "msg": "ürün stokta değil: Gidon Sargısı Tempo Yeşil Classic 2 mm BT10"
+  },
+  {
+   "id": "2026-12-10-post-1930",
+   "code": "stok",
+   "msg": "ürün stokta değil: Grayzer Fren Balata Temizleme Spreyi 500 ml"
+  },
+  {
+   "id": "2026-12-10-story-1930",
+   "code": "stok",
+   "msg": "ürün stokta değil: Grayzer Fren Balata Temizleme Spreyi 500 ml"
+  },
+  {
+   "id": "2026-12-10-story-2030",
+   "code": "stok",
+   "msg": "ürün stokta değil: Grayzer Fren Balata Temizleme Spreyi 500 ml"
+  },
+  {
+   "id": "2026-12-21-story-1230",
+   "code": "stok",
+   "msg": "ürün stokta değil: Ayna MR-K03 (360° Dönebilir, 20° Açı Ayarlanabilir)"
+  }
+ ]
 }

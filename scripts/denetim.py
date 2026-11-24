@@ -425,14 +425,21 @@ def main(argv: list[str] | None = None) -> int:
     cal = common.read_json(a.takvim, []) if a.takvim else common.load_calendar()
     found = Audit(cal, files=not a.dosyasiz).run()
     live = [c for c in cal if c.get("status") in ("planned", "draft")]
+    # Suite'te zamanlanmış kaydı Business Suite yayınlar; taslağa çekmek yayını durdurmaz, yalnız kaydın
+    # 'published' işaretlenmesini engeller. Bu bulgular uyarı olarak raporlanır, düzeltmesi Suite'te elle yapılır.
+    suite_ids = {c.get("id") for c in cal if c.get("suite_scheduled")}
+    suite_found = [f for f in found if f["id"] in suite_ids]
+    found = [f for f in found if f["id"] not in suite_ids]
     for f in found:
         print(f"BULGU {f['id']} [{f['code']}] {f['msg']}")
+    for f in suite_found:
+        print(f"SUITE-UYARI {f['id']} [{f['code']}] {f['msg']} (Suite'te düzeltilmeli)")
     if not a.takvim:
         if apply(cal, found):
             common.save_calendar(cal)
         common.write_json(OUT, {"updated": common.now().isoformat(timespec="seconds"), "records": len(cal),
                                 "checked": len(live), "files": not a.dosyasiz, "live": CFG.get("live") is True,
-                                "findings": found})
+                                "findings": found, "suite_warnings": suite_found})
         try:
             import simulasyon
             simulasyon.build_sim(cal)
@@ -440,6 +447,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"UYARI: simülasyon sayfası güncellenemedi: {e}", file=sys.stderr)
     held = len({f["id"] for f in found})
     print(f"DENETİM: {len(live)} kayıt denetlendi, {len(found)} bulgu" + (f" ({held} kayıt taslağa çekildi)" if found else "")
+          + (f" · {len(suite_found)} Suite uyarısı" if suite_found else "")
           + (" · dosyalar denetlenmedi" if a.dosyasiz else ""))
     return 1 if found else 0
 

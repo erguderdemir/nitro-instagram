@@ -8589,11 +8589,11 @@
   ],
   "cover": "media/2026-12-26-post-1100-1.jpg",
   "thumb": "media/t/2026-12-26-post-1100.jpg",
-  "caption": "Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.\n\n1. Pedal M505 Siyah · 863,21 ₺ · Kod N343\n2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · Kod N180\n3. Rectus Mtb Sele Kırmızı · 345 ₺ · Kod N357\n4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · Kod N173\n5. Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah · 702 ₺ · Kod N254\n\nFiyatlar KDV dahildir.\n✔️ Köyceğiz içi aynı gün, ücretsiz teslimat\n✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz\n✔️ 14 gün içinde iade, iade kargosu bizden\n\n🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.\n\nBisikletinde ilk değiştirdiğin parça neydi?\n\n📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis\n\n#nitrobisiklet #köyceğiz #bisiklet #bisikletparçası #bisikletbakımı",
+  "caption": "Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.\n\n1. Pedal M506 Siyah · 863,21 ₺ · Kod N344\n2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · Kod N180\n3. Rectus Mtb Sele Kırmızı · 345 ₺ · Kod N357\n4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · Kod N173\n5. Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah · 702 ₺ · Kod N254\n\nFiyatlar KDV dahildir.\n✔️ Köyceğiz içi aynı gün, ücretsiz teslimat\n✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz\n✔️ 14 gün içinde iade, iade kargosu bizden\n\n🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.\n\nBisikletinde ilk değiştirdiğin parça neydi?\n\n📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis\n\n#nitrobisiklet #köyceğiz #bisiklet #bisikletparçası #bisikletbakımı",
   "alt": "Bisikletine 5 yükseltme. Pedal, elcik, sele, dış lastik, gidon.",
   "alts": [
    "Bisikletine 5 yükseltme. Pedal, elcik, sele, dış lastik, gidon.",
-   "1. Pedal M505 Siyah, 863,21 ₺, kod N343.",
+   "1. Pedal M506 Siyah, 863,21 ₺, kod N344.",
    "2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah, 418,50 ₺, kod N180.",
    "3. Rectus Mtb Sele Kırmızı, 345 ₺, kod N357.",
    "4. Schwalbe Tough Tom 29x2.25 Dış Lastik, 1.044 ₺, kod N173.",
@@ -8602,17 +8602,17 @@
   ],
   "products": [
    {
-    "slug": "pedal-m505-siyah",
-    "name": "Pedal M505 Siyah",
+    "slug": "pedal-m506-siyah",
+    "name": "Pedal M506 Siyah",
     "price": 863.21,
-    "code": "N343",
+    "code": "N344",
     "category": "Pedal ve Kal",
     "rule": "pedal",
     "label": "Pedal",
-    "family": "pedal m505",
-    "link": "https://nitrobisiklet.com/urun/pedal-m505-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100",
-    "bio_link": "https://nitrobisiklet.com/urun/pedal-m505-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=liste&utm_content=2026-12-26-post-1100",
-    "image": "https://nitrobisiklet.com/media/product/pedal-m505-siyah-1.jpg"
+    "family": "pedal m506",
+    "link": "https://nitrobisiklet.com/urun/pedal-m506-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100",
+    "bio_link": "https://nitrobisiklet.com/urun/pedal-m506-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=liste&utm_content=2026-12-26-post-1100",
+    "image": "https://nitrobisiklet.com/media/product/pedal-m506-siyah-1.jpg"
    },
    {
     "slug": "epic-165-mm-bmx-dirt-jump-elcik-mor-siyah",
@@ -8676,7 +8676,7 @@
   "ref": "yukseltme",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "4befac67c6cd",
+  "fp": "d12d08499b3c",
   "ver": "d7889f16e8"
  },
  {
@@ -8701,17 +8701,17 @@
   "alts": [],
   "products": [
    {
-    "slug": "pedal-m505-siyah",
-    "name": "Pedal M505 Siyah",
+    "slug": "pedal-m506-siyah",
+    "name": "Pedal M506 Siyah",
     "price": 863.21,
-    "code": "N343",
+    "code": "N344",
     "category": "Pedal ve Kal",
     "rule": "pedal",
     "label": "Pedal",
-    "family": "pedal m505",
-    "link": "https://nitrobisiklet.com/urun/pedal-m505-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-1100",
-    "bio_link": "https://nitrobisiklet.com/urun/pedal-m505-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=promo&utm_content=2026-12-26-story-1100",
-    "image": "https://nitrobisiklet.com/media/product/pedal-m505-siyah-1.jpg"
+    "family": "pedal m506",
+    "link": "https://nitrobisiklet.com/urun/pedal-m506-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-1100",
+    "bio_link": "https://nitrobisiklet.com/urun/pedal-m506-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=promo&utm_content=2026-12-26-story-1100",
+    "image": "https://nitrobisiklet.com/media/product/pedal-m506-siyah-1.jpg"
    },
    {
     "slug": "epic-165-mm-bmx-dirt-jump-elcik-mor-siyah",
@@ -8781,7 +8781,7 @@
   "ref": "2026-12-26-post-1100",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "dc955839b764",
+  "fp": "b66151c04e7f",
   "ver": "d7889f16e8"
  },
  {
@@ -8859,17 +8859,17 @@
   "alts": [],
   "products": [
    {
-    "slug": "pedal-m505-siyah",
-    "name": "Pedal M505 Siyah",
+    "slug": "pedal-m506-siyah",
+    "name": "Pedal M506 Siyah",
     "price": 863.21,
-    "code": "N343",
+    "code": "N344",
     "category": "Pedal ve Kal",
     "rule": "pedal",
     "label": "Pedal",
-    "family": "pedal m505",
-    "link": "https://nitrobisiklet.com/urun/pedal-m505-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-2030",
-    "bio_link": "https://nitrobisiklet.com/urun/pedal-m505-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=promo&utm_content=2026-12-26-story-2030",
-    "image": "https://nitrobisiklet.com/media/product/pedal-m505-siyah-1.jpg"
+    "family": "pedal m506",
+    "link": "https://nitrobisiklet.com/urun/pedal-m506-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-2030",
+    "bio_link": "https://nitrobisiklet.com/urun/pedal-m506-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=promo&utm_content=2026-12-26-story-2030",
+    "image": "https://nitrobisiklet.com/media/product/pedal-m506-siyah-1.jpg"
    },
    {
     "slug": "epic-165-mm-bmx-dirt-jump-elcik-mor-siyah",
@@ -8939,7 +8939,7 @@
   "ref": "2026-12-26-post-1100",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "dc955839b764",
+  "fp": "b66151c04e7f",
   "ver": "d7889f16e8"
  },
  {

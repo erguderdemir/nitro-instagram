@@ -84,7 +84,7 @@ Yayın güvencesi (bilgisayardan bağımsız): GitHub'ın kendi `schedule` cron'
 06:00–13:13 UTC arası hiç tetiklenmedi, tek tetik 9,5 saat gecikti). Bu yüzden asıl tetik bulut rutinleridir;
 her biri `claude/tetik-*` dalına iki satırlı `tetik.txt` (görev + UTC zaman) push eder, `birlestir.yml` main'e alıp
 görevi başlatır (push olayı gecikmez):
-- Yayın anları tetikçisi `31 6,9,16,17 * * *` UTC = 09:31, 12:31, 19:31, 20:31 TR → `publish`
+- Yayın anları tetikçisi `10 6,9,16,17 * * *` UTC = 09:10, 12:10, 19:10, 20:10 TR (erken tetik slota kadar bekler) → `publish`
   (https://claude.ai/code/routines/trig_01Xykq1LaT2aTbfZwaoWyM5y)
 - Gece planı + 11:00 tetikçisi `1 1,8 * * *` UTC = 04:01 TR `plan`, 11:01 TR `publish`
   (https://claude.ai/code/routines/trig_01J3bv59HU8my9XdG93nnsj9)
@@ -140,7 +140,7 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
 - Suite en fazla 29 gün ileriye planlar. 23–31 Aralık postları ve 29 Kasım 20:30 sonrası storyler API ile (GitHub Actions) yayınlanır. API storylerinde link sticker'ı yok (Meta API kısıtı); link görselde ve açıklamada.
 - Suite story planlaması yalnız sahibinin oturum açık Chrome'u ile yapılabilir (bulut oturumu yapamaz). Akış: `docs/suite/` sayfası + `data/calendar.json` işaretleme. Yeni planlanan kayıt `suite_scheduled: true` yapılmalı, yoksa API ikinci kez yayınlar.
 - **GitHub schedule güvenilmez** (24 Kasım'da 15 dakikalık cron hiç tetiklenmedi). Yayın bulut rutinleriyle tetiklenir; hepsi `claude/tetik-*` dalı push eder, birlestir.yml main'e alır ve `instagram.yml task=publish` başlatır. Zincir 24 Kasım 14:27 UTC'de uçtan uca test edildi (push → birlestir → publish, ~15 sn).
-  - Yayın tetikçisi: `31 6,9,16,17 * * *` UTC (TR 09:31, 12:31, 19:31, 20:31).
+  - Yayın tetikçisi: `10 6,9,16,17 * * *` UTC (TR 09:10, 12:10, 19:10, 20:10; erken tetik slota kadar bekler).
   - Tetikçi: `1 1,8 * * *` UTC (TR 04:01 plan, 11:01 publish).
   - Doğrulayıcı: `41 6-19 * * *` UTC, saatte bir; 8 dk–3 sa gecikmiş planned kayıt varsa publish tetikler.
   - Bekçi: `50 6-19/2 * * *` UTC; 25 dk–2 sa 45 dk gecikme yedeği.
