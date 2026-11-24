@@ -543,7 +543,8 @@
   "rule": "dis_lastik",
   "status": "planned",
   "fp": "c365e1fc72fd",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -800,7 +801,8 @@
   "rule": "sehir",
   "status": "planned",
   "fp": "51732f53691d",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1113,7 +1115,8 @@
   "rule": "liste:kis",
   "status": "planned",
   "fp": "be6e39acaebe",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
