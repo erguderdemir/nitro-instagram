@@ -3408,7 +3408,8 @@
   "rule": "balata_spreyi",
   "status": "planned",
   "fp": "ed50ee3b43e8",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3610,7 +3611,8 @@
   "rule": "sehir",
   "status": "planned",
   "fp": "99fd04ff39b6",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3815,7 +3817,8 @@
   "rule": "liste:hediye500",
   "status": "planned",
   "fp": "2464b4a30f41",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
