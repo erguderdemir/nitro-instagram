@@ -740,7 +740,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "ad725d917d0e",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -907,7 +908,8 @@
   "rule": "rotor",
   "status": "planned",
   "fp": "7ab25ba54646",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1012,7 +1014,8 @@
   "rule": "liste:kis",
   "status": "planned",
   "fp": "9598460e6281",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1154,7 +1157,8 @@
   "rule": "masa",
   "status": "planned",
   "fp": "d8841d89f0c8",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
