@@ -1211,7 +1211,8 @@
   "rule": "gozluk",
   "status": "planned",
   "fp": "555ed0b5fb92",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1250,7 +1251,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "fe849ac22ba5",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
