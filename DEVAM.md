@@ -1,5 +1,5 @@
 DURUM: DEVAM EDİYOR
-Son güncelleme: 2026-11-24 02:40 TR (yerel oturum)
+Son güncelleme: 2026-11-24 08:00 TR (bulut devam oturumu)
 
 # Devir notu — nitro-instagram
 
@@ -39,7 +39,7 @@ Hedef: en yüksek etkileşim, siteye trafik, satış. Depo sahibi denetçidir; t
   `render_all(jobs)`, `thumb`, `contact_sheet`, `prep(url)`; `STICKER = {x:0.5, y:0.781, w:0.5}`.
   Küçük kalanlar: `.q p` 54px; ürün adı/teknik değerde `text-transform:none`; `s_facts` link yoksa `fallback` ver.
 - `scripts/reel.py` HAZIR: `make_reel(frames, out, hold=2.3, fade=0.45, last_hold=3.2, fps=30)`; 5 kare ≈ 10,6 sn.
-- `scripts/publish.py` (yeniden yazıldı, gözden geçirilmedi): Graph API v23.0; `--check`, `--probe`; çift yayın
+- `scripts/publish.py` (yeniden yazıldı; bulut oturumunda okundu, şema v2 ile uyumlu): Graph API v23.0; `--check`, `--probe`; çift yayın
   kilidi; sayfa üreticilerini çağırır: `bio.build_bio`, `simulasyon.build_sim`, `takvim.build_takvim` (yoksa atlar).
 - `scripts/report.py` HAZIR: `data/metrics.json`, `data/scores.json`, `RAPOR.md`; `--no-api`.
 - `scripts/common.py`, `scripts/graph.py` ortak yardımcılar. `scripts/gorev.py` Actions giriş noktası.
@@ -47,30 +47,32 @@ Hedef: en yüksek etkileşim, siteye trafik, satış. Depo sahibi denetçidir; t
   elle `check|plan|publish|probe|report`. Çıktıları (`data`, `docs`, `RAPOR.md`) `main`'e geri yazar.
 - Yayın: GitHub Pages `main:/docs` → https://erguderdemir.github.io/nitro-instagram/
 
-## 4. Kalan işler (sırayla)
-1. `scripts/content.py` YENİDEN YAZ (eskisi yeni render ile uyumsuz): kategori + ad anahtar kelimesiyle alt tür
-   kuralları ve her kurala doğru başlık havuzu; hariç tutma listesi; `clean_specs` (altbilgi anahtarları, ':' ile
-   biten, cümle gibi, ürün adına eşit anahtarlar atılır; "Shımano"→"Shimano"); bisiklette kısa ad (marka + model);
-   yalnız tam cümleli açıklama; açıklama metni (ilk satır ≤125 karakter, ad + fiyat, 3–4 özellik, gerçek
-   avantajlar, "Profildeki linke dokun, arama kutusuna N247 yaz", soru, yerel SEO, en çok 5 etiket, ≤2200);
-   alt metin; UTM (`utm_source=instagram&utm_medium=social|story|bio&utm_campaign=<tema>&utm_content=<id>`);
-   başlığı veriden hesaplanan liste üreticileri; mevsim süzgeci (kışın sıcak hava ipucu yok).
-2. `scripts/plan.py` YENİDEN YAZ: şema v2 (bölüm 5), 2026-11-25 → 2026-12-31; önce postlar çizilir (promo story
-   kapak görselini gömer); reel = 5 kare + `make_reel`; küçük resimler `docs/media/t/`; eski 36 kayıt ve eski
-   `docs/media` görselleri silinir; her gün çalışınca gelecekteki kayıtların fiyat/stok değişimini yeniler.
-3. `scripts/denetim.py`: kural–başlık eşleşmesi, liste iddiaları, takvim fiyatı = güncel fiyat, stok, link/UTM/kod,
-   çıkartma metni ≤25, açıklama sınırları, ≤5 etiket, dosya var + ölçü + boyut, reel geçerli, haftada tek
-   "Haftanın bisikleti", günde tek "Günün ürünü", liste içi ve tekrar penceresi içinde yinelenen ürün yok.
-   Bulgulu kayıt yayınlanmaz; çıkış kodu ≠ 0.
-4. `scripts/simulasyon.py` (`build_sim(cal, now=None, out=None)` → `docs/onizleme/index.html`; `#/takvim`,
-   `#/gun/<tarih>`, `#/profil`, `#/story/<tarih>`, `#/p/<id>`) ve `scripts/bio.py` (`build_bio(cal, now=None,
-   out=None)` → `docs/index.html`; `?k=N247`, `?q=kask`). Depoda yoksa yaz. `scripts/takvim.py`
-   (`build_takvim(cal)` → `TAKVIM.md`), `scripts/suite.py` (Business Suite için haftalık story listesi: görsel,
-   link, çıkartma metni, saat). Eski `scripts/onizleme.py` silinir.
-5. `config.json` ritim ayarları (live=false kalır), `README.md` baştan (Meta kurulum kaydı korunur).
-6. Takvimi üret, `denetim.py` sıfır bulgu, gerçek çıktıdan kontak föyüyle göz denetimi.
-7. Bulutta doğrula: `plan`, sonra `check` ve `probe` (yayın kilitli).
-8. İlk satırı `DURUM: TAMAM` yap; özet yaz; simülasyon adresi: …/nitro-instagram/onizleme/
+## 4. Durum ve kalan işler
+
+YAPILDI (bulut devam oturumu, 24 Kasım; yerelde sahte ürün görselleriyle uçtan uca sınandı: 148 kayıt, 10 reel,
+`denetim.py` dosyalar dahil 0 bulgu, 12 olumsuz sınamanın hepsi yakalandı):
+- `scripts/content.py` baştan: 46 kural (alt tür) ve başlık havuzları, `MUST` ile bağımsız ad doğrulaması, hariç
+  tutma, `clean_specs` (beyaz liste), kısa ad, tam cümle süzgeci, açıklama / alt metin / UTM, listeler, mevsim süzgeci.
+- `scripts/plan.py` baştan: şema v2, 25 Kas → 31 Ara; listeler önce, sonra gün gün; reel = 5 kare; parmak iziyle
+  fiyat/stok/şablon değişiminde yenileme; `data/yeniden.txt` ile baştan seçim; `--kuru`.
+- `scripts/denetim.py`, `simulasyon.py`, `bio.py`, `takvim.py` (→ `docs/TAKVIM.md`; iş akışı kök dizini kaydetmediği
+  için), `suite.py` (→ `docs/suite/`). Eski `onizleme.py`, eski takvim ve eski `docs/media` silindi.
+- `render.py`: `.q p` 54px, ürün adı / teknik değer büyük harfe çevrilmez, "Neden NITRO" etiketi.
+  `common.fmt_price`: kuruşlu fiyat yuvarlanmaz (93,53 ₺). `gorev.py`: yayından önce denetim.
+- `config.json` ritim ayarları (live=false), `README.md` baştan.
+
+KALDI (sırayla):
+1. **PUSH.** Bulut oturumunun GitHub yazma izni yoktu (git push ve API 403: Claude GitHub App depoda yazma yetkili
+   değil). Çalışma `claude/devam` dalında tek commit olarak hazır; oturum sahibine git paketi (bundle) olarak verildi.
+   Yazma izni olan oturum: `git push -u origin claude/devam` (tetik.txt = `plan`; birlestir.yml main'e alır ve
+   `plan` görevini başlatır).
+2. Actions `plan` bitince `git pull`; `data/son-calisma.log` ve `data/denetim.json` (0 bulgu olmalı) denetlenir;
+   GERÇEK ürün fotoğraflarıyla kontak föyü göz denetimi yapılır (bulutta siteye erişim yoktu, bu adım yapılamadı).
+3. `tetik.txt` → `check`, sonra `probe` (yayın kilitli; günlükleri Actions'tan okunur).
+4. İlk satır `DURUM: TAMAM`, özet; sahibinden canlıya geçiş onayı istenir (live anahtarını sahibi açar).
+
+Bilinen notlar: site açıklamaları çoğunlukla pazarlama metni olduğu için yalnız yüklemle biten, iddiasız tam
+cümleler alınır (16 ürün); teknik özelliği 3'ten az ürünlerde carousel 3 karedir. "Hediyeli" adlı ürün içerik dışıdır.
 
 Yalnız yerelde (sahibinin Chrome'u) yapılabilenler, bulutta ATLA ve raporla: Business Suite'te link çıkartmalı
 story planlama (onaydan sonra), Öne Çıkanlar, günlük önizleme bildirimi rutini.
