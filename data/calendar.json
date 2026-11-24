@@ -5570,7 +5570,8 @@
   "rule": "bmx",
   "status": "planned",
   "fp": "eea7b0fe4839",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5820,7 +5821,8 @@
   "rule": "rotor",
   "status": "planned",
   "fp": "245f4d920844",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
