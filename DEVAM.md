@@ -1,5 +1,5 @@
 DURUM: TAMAM
-Son güncelleme: 2026-11-24 (yerel oturum; canlı onayı bekliyor)
+Son güncelleme: 2026-11-24 17:30 TR (canlı: live=true; Suite planlaması yapıldı)
 
 # Devir notu — nitro-instagram
 
@@ -133,3 +133,16 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
   `birlestir.yml` görevi başlatmaz) Actions takvimi ve görselleri üretir, sonucu `main`'e yazar; günlük
   `data/son-calisma.log` içindedir. `git pull` ile al, denetle.
 - Sahibi telefondan izler: kısa, net Türkçe rapor ver.
+
+## 8. Canlı yayın düzeni (24 Kasım 2026, 17:30 TR)
+- `config.json` → `"live": true`. Yayın canlı.
+- **Business Suite (Meta sunucusu, PC'den bağımsız):** postlar 25 Kasım → 22 Aralık hepsi, storyler 24 Kasım 20:30 → 29 Kasım 12:30 planlandı. Bu kayıtlarda `suite_scheduled: true`; publish.py atlar, plan.py dondurur. Storylerde tıklanabilir link sticker'ı var.
+- Suite en fazla 29 gün ileriye planlar. 23–31 Aralık postları ve 29 Kasım 20:30 sonrası storyler API ile (GitHub Actions) yayınlanır. API storylerinde link sticker'ı yok (Meta API kısıtı); link görselde ve açıklamada.
+- Suite story planlaması yalnız sahibinin oturum açık Chrome'u ile yapılabilir (bulut oturumu yapamaz). Akış: `docs/suite/` sayfası + `data/calendar.json` işaretleme. Yeni planlanan kayıt `suite_scheduled: true` yapılmalı, yoksa API ikinci kez yayınlar.
+- **GitHub schedule güvenilmez** (24 Kasım'da 15 dakikalık cron hiç tetiklenmedi). Yayın bulut rutinleriyle tetiklenir; hepsi `claude/tetik-*` dalı push eder, birlestir.yml main'e alır ve `instagram.yml task=publish` başlatır. Zincir 24 Kasım 14:27 UTC'de uçtan uca test edildi (push → birlestir → publish, ~15 sn).
+  - Yayın tetikçisi: `31 6,9,16,17 * * *` UTC (TR 09:31, 12:31, 19:31, 20:31).
+  - Tetikçi: `1 1,8 * * *` UTC (TR 04:01 plan, 11:01 publish).
+  - Doğrulayıcı: `41 6-19 * * *` UTC, saatte bir; 8 dk–3 sa gecikmiş planned kayıt varsa publish tetikler.
+  - Bekçi: `50 6-19/2 * * *` UTC; 25 dk–2 sa 45 dk gecikme yedeği.
+  - Önizleme: `0 5 * * *` UTC, salt okur.
+- Suite'te alt metin ve konum girilmedi.
