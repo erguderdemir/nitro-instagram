@@ -2464,7 +2464,8 @@
   "rule": "dis_lastik",
   "status": "planned",
   "fp": "071b00e2c227",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2721,7 +2722,8 @@
   "rule": "ebike",
   "status": "planned",
   "fp": "9fb3de489468",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3034,7 +3036,8 @@
   "rule": "liste:hediye250",
   "status": "planned",
   "fp": "afda2c369236",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
