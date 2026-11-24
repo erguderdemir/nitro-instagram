@@ -50,9 +50,16 @@
   "media_link": "",
   "ref": "",
   "rule": "pedal",
-  "status": "planned",
+  "status": "published",
   "fp": "3c3ae74a7813",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "attempts": 1,
+  "container_id": "18199666825385813",
+  "via": "api",
+  "error": "",
+  "media_id": "18183895708448150",
+  "permalink": "https://www.instagram.com/p/DgIZJPNFwKA/",
+  "published_at": "2026-11-24T19:33:06+03:00"
  },
  {
   "schema": 2,
