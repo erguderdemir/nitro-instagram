@@ -5303,7 +5303,8 @@
   "rule": "liste:cocuk",
   "status": "planned",
   "fp": "7cb71e095eb9",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5547,7 +5548,8 @@
   "rule": "yama",
   "status": "planned",
   "fp": "6f13e52c7edd",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5804,7 +5806,8 @@
   "rule": "dag",
   "status": "planned",
   "fp": "d9059c50e97f",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5996,7 +5999,8 @@
   "rule": "zincir",
   "status": "planned",
   "fp": "4f9c741722d3",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
