@@ -2832,7 +2832,8 @@
   "rule": "gravel",
   "status": "planned",
   "fp": "22e246a68667",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3026,7 +3027,8 @@
   "rule": "kaset",
   "status": "planned",
   "fp": "978ca63960b5",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3221,7 +3223,8 @@
   "status": "planned",
   "fp": "b59a8a5fed94",
   "cta": "cocuk",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
