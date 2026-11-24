@@ -3337,7 +3337,8 @@
   "rule": "sele",
   "status": "planned",
   "fp": "a35f9cfba60f",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3648,7 +3649,8 @@
   "rule": "gravel",
   "status": "planned",
   "fp": "734191c04fff",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -3898,7 +3900,8 @@
   "rule": "kaset",
   "status": "planned",
   "fp": "9ea450e9ab59",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
