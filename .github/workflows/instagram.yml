@@ -2,7 +2,7 @@ name: Instagram otomasyonu
 
 on:
   schedule:
-    - cron: "2,32 6-18 * * *"   # 09:02–21:32 TR, yarım saatte bir: zamanı gelen paylaşımı yayınla
+    - cron: "2,17,32,47 6-19 * * *"   # 09:02–22:47 TR, 15 dakikada bir: zamanı gelen paylaşımı yayınla
     - cron: "10 1 * * *"        # 04:10 TR: siteyi tara, takvimi ve görselleri yenile
   workflow_dispatch:
     inputs:

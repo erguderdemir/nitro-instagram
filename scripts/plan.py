@@ -66,6 +66,7 @@ class Planner:
         self.reels: list[tuple[list[Path], Path, Path]] = []
         self.thumbs: list[tuple[Path, Path]] = []
         self.touched: set[str] = set()
+        self._kalsin: dict[str, bool] = {}
         self.log: list[str] = []
         self.ensure_codes()
 
@@ -92,6 +93,15 @@ class Planner:
 
     def drop(self, sid: str) -> None:
         self.cal = [c for c in self.cal if c["id"] != sid]
+
+    def settled(self, c: dict) -> bool:
+        """Kayıt bu çalışmada kesinleşti mi (yenilendi ya da olduğu gibi kalacak)? Yenilenecek kayıtların eski
+        başlık/ref'i seçimi saptırmasın diye çeşitlilik sayımları yalnız kesinleşmiş kayıtlara bakar."""
+        if c["id"] in self.touched:
+            return True
+        if c["id"] not in self._kalsin:
+            self._kalsin[c["id"]] = self.state(c) == "kalsin"
+        return self._kalsin[c["id"]]
 
     def put(self, rec: dict) -> None:
         self.drop(rec["id"])
@@ -152,9 +162,11 @@ class Planner:
 
     def title_for(self, rule: dict, day: date, seed: str, keep: str | None = None) -> str:
         opts = C.headlines(rule, day.month)
-        if keep and keep in opts:
+        # Başlık tüm takvimde ne kadar az kullanıldıysa o seçilir (aynı başlık farklı günlerde tekrar etmesin)
+        counts = {h: sum(1 for c in self.cal if c.get("headline") == h and c.get("theme") != "promo"
+                         and c["id"] != seed and self.settled(c)) for h in opts}
+        if keep and keep in opts and counts[keep] == min(counts.values()):
             return keep
-        counts = {h: sum(1 for c in self.cal if c.get("rule") == rule["id"] and c.get("headline") == h) for h in opts}
         low = min(counts.values())
         return C.pick([h for h in opts if counts[h] == low], seed)
 
@@ -221,7 +233,7 @@ class Planner:
                 sec.append(R.p_detail(v, val, i, n))
                 alts.append("Ürün detayı: " + val)
         sec += [R.p_why(C.perks(p), n - 1, n), R.p_cta("urun", n, n, code=code)]
-        alts += ["Neden NITRO: " + "; ".join(f"{t}, {s}" for _, t, s in C.perks(p)) + ".",
+        alts += ["Neden NITRO: " + "; ".join(f"{t}, {C.tr_lower(s[:1])}{s[1:]}" for _, t, s in C.perks(p)) + ".",
                  f"Nasıl alırım: profildeki linke dokun, arama kutusuna {code} yaz."]
         media = self.frames(sid, sec)
         cap, hook = C.product_caption(p, code, rule, str(day))
@@ -280,18 +292,23 @@ class Planner:
         sec += [R.t_step(s["h"], s["t"], k, len(steps), k + 1, n, "cream" if k % 2 else "olive")
                 for k, s in enumerate(steps, 1)]
         sec += [R.t_end(tip["takeaway"], n - 1, n),
-                R.p_cta("servis" if servis else "magaza", n, n, phone=self.site.get("phone", ""))]
+                R.p_cta("servis" if servis else ("cocuk" if tip.get("cta") == "cocuk" else "ipucu"), n, n,
+                        phone=self.site.get("phone", ""))]
         media = self.frames(sid, sec)
         cap, hook = C.tip_caption(tip)
-        url = self.site["service"]["booking_url"] if servis else self.site["urls"]["magaza"]
+        cocuk = tip.get("cta") == "cocuk"
+        url = (self.site["service"]["booking_url"] if servis else
+               self.site["urls"]["categories"].get("Çocuk Bisikleti", self.site["urls"]["magaza"]) if cocuk else
+               self.site["urls"]["magaza"])
         alts = [tip.get("alt") or f"{tip['title']}. {tip['intro']}"]
         alts += [f"{k}. {s['h']}: {s['t']}" for k, s in enumerate(steps, 1)]
         alts += [f"Özetle: {tip['takeaway']}", "Servis randevusu için profildeki linke dokun." if servis
-                 else "Hepsi profildeki linkte."]
+                 else "Çocuk bisikletleri profildeki linkte." if cocuk
+                 else "İhtiyacın olan parça ve aksesuarlar profildeki linkte."]
         return self.rec(sid, day, tm, "post", "carousel", "ipucu", kicker=tip["kicker"], title=tip["title"], hook=hook,
                         media=media, cover=media[0], caption=cap, alt=alts[0][:1000], alts=[a[:1000] for a in alts],
                         link=C.utm(url, "social", "ipucu", sid), bio_link=C.utm(url, "bio", "ipucu", sid),
-                        ref=tip["id"], rule=C.RULE_IPUCU, cta="servis" if servis else "magaza",
+                        ref=tip["id"], rule=C.RULE_IPUCU, cta="servis" if servis else "cocuk" if cocuk else "magaza",
                         fp=self.fp([], md5(tip["id"], tip["title"], tip["caption"], *[s["t"] for s in steps])))
 
     def newyear_post(self, sid: str, day: date, tm: str) -> dict:
@@ -322,7 +339,7 @@ class Planner:
         var = C.pick(("cream", "olive"), sid)
         media, mlink = self.suite_story(sid, (R.s_product(v, kicker, head, False, var), R.s_product(v, kicker, head, True, var)))
         x = self.prod(p, sid, "urun", "story")
-        text = C.pick(STICKER_TEXTS[:2], sid)
+        text = "ÜRÜNE GİT"
         return self.rec(sid, day, tm, "story", "story", "urun", kicker=kicker, headline=head, media=media, cover=media[0],
                         alt=C.product_alt(p, head), products=[x], link=x["link"], bio_link=x["bio_link"], code=code,
                         channel="suite", sticker={"url": x["link"], "text": text, **R.STICKER}, media_link=mlink,
@@ -341,6 +358,9 @@ class Planner:
             if post.get("cta") == "servis":
                 url, text = self.site["service"]["booking_url"], "SERVİS RANDEVUSU AL"
                 label, fallback = "Randevu almak için dokun", "Link profilde<u>·</u>Servis randevusu"
+            elif post.get("cta") == "cocuk":
+                url = self.site["urls"]["categories"].get("Çocuk Bisikleti", store)
+                text, label, fallback = "ÇOCUK BİSİKLETLERİ", "Çocuk bisikletleri için dokun", "Link profilde<u>·</u>Çocuk bisikletleri"
             else:
                 url, text, label, fallback = store, "MAĞAZAYA GİT", "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Mağaza"
         elif theme == "liste":
@@ -355,14 +375,14 @@ class Planner:
         prods = [dict(x, link=C.utm(self.by_slug[x["slug"]]["url"], "story", "promo", sid),
                       bio_link=C.utm(self.by_slug[x["slug"]]["url"], "bio", "promo", sid)) for x in post["products"]]
         return self.rec(sid, day, tm, "story", "story", "promo", kicker=kicker, headline=head, media=media, cover=media[0],
-                        alt=f"Bugünün gönderisi: {post['title']}.", products=prods, link=link,
+                        alt=C.cumle(f"Bugünün gönderisi: {post['title']}"), products=prods, link=link,
                         bio_link=C.utm(url, "bio", "promo", sid), code=post.get("code", ""), channel="suite",
                         sticker={"url": link, "text": text, **R.STICKER}, media_link=mlink, ref=post["id"],
                         rule=post["rule"], fp=md5(VERSION, post["fp"])[:12])
 
     def value_story(self, sid: str, day: date, tm: str, kind: str) -> dict | None:
         import render as R
-        refs = [c["ref"] for c in self.cal if c.get("ref") and c["id"] != sid]
+        refs = [c["ref"] for c in self.cal if c.get("ref") and c["id"] != sid and self.settled(c)]
         used, m = set(refs), day.month
         if kind == "ipucu":
             pool = [t for t in self.tips.get("story_tips", []) if C.in_season(t["h"] + " " + t["t"], m)]
@@ -370,9 +390,17 @@ class Planner:
             if not t:
                 return None
             ref, title = "ipucu:" + md5(t["h"])[:8], t["h"]
-            sec = R.s_tip("İpucu", t["h"], t["t"], C.pick(("olive", "ink"), sid))
-            rec = self._value(sid, day, tm, "ipucu", sec, title, f"İpucu: {t['h']}. {t['t']}", ref, C.RULE_IPUCU,
-                              md5(t["h"], t["t"]))
+            var, alt = C.pick(("olive", "ink"), sid), f"İpucu: {C.cumle(t['h'])} {t['t']}"
+            target = self.tip_target(t)
+            if not target:
+                sec = R.s_tip("İpucu", t["h"], t["t"], var)
+                rec = self._value(sid, day, tm, "ipucu", sec, title, alt, ref, C.RULE_IPUCU, md5(t["h"], t["t"]))
+            else:
+                url, text, label, fallback = target
+                media, mlink = self.suite_story(sid, (R.s_tip("İpucu", t["h"], t["t"], var, (False, label, fallback)),
+                                                      R.s_tip("İpucu", t["h"], t["t"], var, (True, label, fallback))))
+                rec = self._linked_value(sid, day, tm, "ipucu", media, mlink, title, alt, ref, C.RULE_IPUCU,
+                                         md5(VERSION, t["h"], t["t"], url, text), url, text, "ipucu")
             rec["kicker"] = "İpucu"
             return rec
         if kind == "soru":
@@ -391,15 +419,48 @@ class Planner:
             k = sum(1 for r in refs if r.startswith(tag + ":")) % len(variants)
         f = variants[k]
         chip = "Servis" if kind == "servis" else "NITRO"
-        fallback = "Link profilde<u>·</u>" + ("Servis randevusu" if kind == "servis" else "NITROBISIKLET.COM")
-        sec = R.s_facts(chip, f["kicker"], f["title"], f["facts"], False, "", fallback, "ink" if kind == "servis" else "olive")
+        url, text, label, fallback = self.fact_target(kind, f["kicker"])
+        variant = "ink" if kind == "servis" else "olive"
+        media, mlink = self.suite_story(sid, (R.s_facts(chip, f["kicker"], f["title"], f["facts"], False, label, fallback, variant),
+                                              R.s_facts(chip, f["kicker"], f["title"], f["facts"], True, label, fallback, variant)))
         alt = f"{C.plain(f['title'])}: " + "; ".join(f"{t} ({s})" for _, t, s in f["facts"]) + "."
-        url = self.site["service"]["url"] if kind == "servis" else self.site["urls"]["hikaye"]
-        rec = self._value(sid, day, tm, tag, sec, "", alt, f"{tag}:{k}", C.RULE_SERVIS if kind == "servis" else C.RULE_MARKA,
-                          md5(str(f)))
-        rec.update(kicker=f["kicker"], headline=f["title"], title=C.plain(f["title"]),
-                   bio_link=C.utm(url, "bio", tag, sid))
+        rec = self._linked_value(sid, day, tm, tag, media, mlink, "", alt, f"{tag}:{k}",
+                                 C.RULE_SERVIS if kind == "servis" else C.RULE_MARKA, md5(VERSION, str(f), url, text),
+                                 url, text, tag)
+        rec.update(kicker=f["kicker"], headline=f["title"], title=C.plain(f["title"]))
         return rec
+
+    def tip_target(self, t: dict) -> tuple[str, str, str, str] | None:
+        """İpucu story'sinin konusuna göre link: ilgili kategori ya da servis randevusu. Eşleşme yoksa None."""
+        dest = t.get("link")
+        if dest == "servis":
+            return (self.site["service"]["booking_url"], "SERVİS RANDEVUSU AL", "Randevu almak için dokun",
+                    "Link profilde<u>·</u>Servis randevusu")
+        url = self.site["urls"]["categories"].get(dest or "")
+        if not url or not t.get("st"):
+            return None
+        return url, t["st"], f"{t['st']} için dokun", f"Link profilde<u>·</u>{t['st']}"
+
+    def fact_target(self, kind: str, kicker: str) -> tuple[str, str, str, str]:
+        """Servis/marka story'sinin konusuna göre link hedefi, çıkartma metni, yuva etiketi, API yedeği."""
+        u = self.site["urls"]
+        if kind == "servis":
+            return (self.site["service"]["booking_url"], "SERVİS RANDEVUSU AL", "Randevu almak için dokun",
+                    "Link profilde<u>·</u>Servis randevusu")
+        return {
+            "Kargo ve teslimat": (u["kargo"], "TESLİMAT BİLGİSİ", "Teslimat ayrıntıları için dokun",
+                                  "Link profilde<u>·</u>Teslimat"),
+            "İade ve garanti": (u["iade"], "İADE KOŞULLARI", "İade koşulları için dokun", "Link profilde<u>·</u>İade"),
+            "Mağaza": (u["iletisim"], "ADRES VE İLETİŞİM", "Adres ve yol tarifi için dokun",
+                       "Link profilde<u>·</u>İletişim"),
+        }.get(kicker, (u["hikaye"], "HİKAYEMİZ", "Hikayemizi okumak için dokun", "Link profilde<u>·</u>Hikayemiz"))
+
+    def _linked_value(self, sid, day, tm, theme, media, mlink, title, alt, ref, rule, sig, url, text, camp) -> dict:
+        import render as R
+        link = C.utm(url, "story", camp, sid)
+        return self.rec(sid, day, tm, "story", "story", theme, title=title, media=media, cover=media[0], alt=alt[:1000],
+                        ref=ref, rule=rule, fp=self.fp([], sig), link=link, bio_link=C.utm(url, "bio", camp, sid),
+                        channel="suite", sticker={"url": link, "text": text, **R.STICKER}, media_link=mlink)
 
     def _value(self, sid, day, tm, theme, section, title, alt, ref, rule, sig) -> dict:
         media = f"media/{sid}.jpg"

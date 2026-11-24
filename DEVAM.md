@@ -1,5 +1,5 @@
-DURUM: DEVAM EDİYOR
-Son güncelleme: 2026-11-24 08:00 TR (bulut devam oturumu)
+DURUM: TAMAM
+Son güncelleme: 2026-11-24 (yerel oturum; canlı onayı bekliyor)
 
 # Devir notu — nitro-instagram
 
@@ -38,7 +38,7 @@ Hedef: en yüksek etkileşim, siteye trafik, satış. Depo sahibi denetçidir; t
   b_newyear, s_product/s_promo/s_tip/s_question/s_trio/s_facts, r_hook/r_hero/r_specs/r_perks/r_cta;
   `render_all(jobs)`, `thumb`, `contact_sheet`, `prep(url)`; `STICKER = {x:0.5, y:0.781, w:0.5}`.
   Küçük kalanlar: `.q p` 54px; ürün adı/teknik değerde `text-transform:none`; `s_facts` link yoksa `fallback` ver.
-- `scripts/reel.py` HAZIR: `make_reel(frames, out, hold=2.3, fade=0.45, last_hold=3.2, fps=30)`; 5 kare ≈ 10,6 sn.
+- `scripts/reel.py` (KAPALI, sahibi reel istemedi; kod duruyor): `make_reel(frames, out, hold=2.3, fade=0.45, last_hold=3.2, fps=30)`; 5 kare ≈ 10,6 sn.
 - `scripts/publish.py` (yeniden yazıldı; bulut oturumunda okundu, şema v2 ile uyumlu): Graph API v23.0; `--check`, `--probe`; çift yayın
   kilidi; sayfa üreticilerini çağırır: `bio.build_bio`, `simulasyon.build_sim`, `takvim.build_takvim` (yoksa atlar).
 - `scripts/report.py` HAZIR: `data/metrics.json`, `data/scores.json`, `RAPOR.md`; `--no-api`.
@@ -49,33 +49,45 @@ Hedef: en yüksek etkileşim, siteye trafik, satış. Depo sahibi denetçidir; t
 
 ## 4. Durum ve kalan işler
 
-YAPILDI (bulut devam oturumu, 24 Kasım; yerelde sahte ürün görselleriyle uçtan uca sınandı: 148 kayıt, 10 reel,
-`denetim.py` dosyalar dahil 0 bulgu, 12 olumsuz sınamanın hepsi yakalandı):
-- `scripts/content.py` baştan: 46 kural (alt tür) ve başlık havuzları, `MUST` ile bağımsız ad doğrulaması, hariç
-  tutma, `clean_specs` (beyaz liste), kısa ad, tam cümle süzgeci, açıklama / alt metin / UTM, listeler, mevsim süzgeci.
-- `scripts/plan.py` baştan: şema v2, 25 Kas → 31 Ara; listeler önce, sonra gün gün; reel = 5 kare; parmak iziyle
-  fiyat/stok/şablon değişiminde yenileme; `data/yeniden.txt` ile baştan seçim; `--kuru`.
-- `scripts/denetim.py`, `simulasyon.py`, `bio.py`, `takvim.py` (→ `docs/TAKVIM.md`; iş akışı kök dizini kaydetmediği
-  için), `suite.py` (→ `docs/suite/`). Eski `onizleme.py`, eski takvim ve eski `docs/media` silindi.
-- `render.py`: `.q p` 54px, ürün adı / teknik değer büyük harfe çevrilmez, "Neden NITRO" etiketi.
-  `common.fmt_price`: kuruşlu fiyat yuvarlanmaz (93,53 ₺). `gorev.py`: yayından önce denetim.
-- `config.json` ritim ayarları (live=false), `README.md` baştan.
+TAMAMLANDI (24 Kasım, yerel oturum + Actions):
+- Bulut çalışması (`claude/devam`) main'e alındı; Claude GitHub App depoda yazma yetkili.
+- Reel üretimi kapatıldı (sahibinin isteği): Pzt ve Cum akışı da ürün carousel'i. Takvim 148 kayıt
+  (111 story, 36 carousel, 1 görsel), 25 Kas → 31 Ara.
+- `check` (token sahibi nitro-instagram-bot, 24 saatte 0/100) ve `probe` (carousel 8 medya, görsel, story
+  container FINISHED, yayın yok) başarılı.
+- GERÇEK ürün fotoğraflarıyla göz denetimi yapıldı. Düzeltilenler: yanlış renk fotoğrafı (Carraro antrasit, Sorrento
+  koyu yeşil 3. kare), ölçü çizimli lamba görseli (`common.GORSEL_ENGEL`), sahibinden filigranlı Tanke TK6
+  (`content.HARIC_SLUG`), büyük harf Türkçe başlıklarda İ/Ş/Ğ çakışması (line-height 1.04), ipucu kapağında
+  "madde" rozeti, ipucu postlarında ürün yerine "profildeki link" CTA, liste alt başlığında küçük harf, alt
+  metinde "?." çift noktalama, İngilizce teknik değerler (STEEL, SUSPENSION FORK) Türkçeye.
+- `denetim.py` yeni kurallar: engelli görsel, çift noktalama.
+- İkinci göz denetimi (24 Kasım): başlık son satırında Ş/Ç alt çengeli kesilmesi (`.hl/.th/.q .h` alt dolgu),
+  yarım bisiklet/galeri oku/MOSSO/duvar içeren kareler `GORSEL_ENGEL`'e, uygun fotoğrafı olmayan 10 ürün
+  `HARIC_SLUG`'a; teknik değer biçimi (`content._spec_value`: büyük harf → başlık, V/Ah birimi), "Orjinal",
+  "Cable Lock", çift "Fren Sistemi"; çocuk jant ipucu için `cta: "cocuk"` (kategori linki, CTA karesi, story).
+- Sabah değer story'leri konu linkine bağlı (`plan.py` tip_target/fact_target/_linked_value).
+- Üçüncü tur (24 Kasım): ürün story çıkartması hep "ÜRÜNE GİT"; `content.FORMATS` (mm/ml/psi boşluğu, 26x1.95,
+  34'lü, 16-20 Jant, "Dağ Bisikleti", model kodu büyük harf); 5 ürün daha `HARIC_SLUG`'a, 4 görsel `GORSEL_ENGEL`'e;
+  `title_for` başlığı tüm takvimde en az kullanılanlardan seçer (gün arası tekrar yok); `render.hl` sayı+sözcük
+  arası &nbsp;; `.h` line-height 1.08, `.q .h` 1.14 (Ş çengeli–Ü noktası çakışması).
 
-KALDI (sırayla):
-1. **PUSH.** Bulut oturumunun GitHub yazma izni yoktu (git push ve API 403: Claude GitHub App depoda yazma yetkili
-   değil). Çalışma `claude/devam` dalında tek commit olarak hazır; oturum sahibine git paketi (bundle) olarak verildi.
-   Yazma izni olan oturum: `git push -u origin claude/devam` (tetik.txt = `plan`; birlestir.yml main'e alır ve
-   `plan` görevini başlatır).
-2. Actions `plan` bitince `git pull`; `data/son-calisma.log` ve `data/denetim.json` (0 bulgu olmalı) denetlenir;
-   GERÇEK ürün fotoğraflarıyla kontak föyü göz denetimi yapılır (bulutta siteye erişim yoktu, bu adım yapılamadı).
-3. `tetik.txt` → `check`, sonra `probe` (yayın kilitli; günlükleri Actions'tan okunur).
-4. İlk satır `DURUM: TAMAM`, özet; sahibinden canlıya geçiş onayı istenir (live anahtarını sahibi açar).
+BEKLEYEN (yalnız sahibinin onayıyla):
+1. Canlıya geçiş: `config.json` → `"live": true`. Sahibi simülasyonu
+   (https://erguderdemir.github.io/nitro-instagram/onizleme/) görüp onay verene kadar AÇMA.
+2. Onaydan sonra yerel oturum (sahibinin Chrome'u): Business Suite'te link çıkartmalı story planlama
+   (`docs/suite/`), Öne Çıkanlar.
 
-Bilinen notlar: site açıklamaları çoğunlukla pazarlama metni olduğu için yalnız yüklemle biten, iddiasız tam
-cümleler alınır (16 ürün); teknik özelliği 3'ten az ürünlerde carousel 3 karedir. "Hediyeli" adlı ürün içerik dışıdır.
+Günlük önizleme rutini: her gün 05:00 UTC (08:00 TR) bulut oturumu o günün kayıtlarını denetler ve özet verir
+(https://claude.ai/code/routines/trig_01JpWx6k9XF1YtHEQKGa2Xq2).
 
-Yalnız yerelde (sahibinin Chrome'u) yapılabilenler, bulutta ATLA ve raporla: Business Suite'te link çıkartmalı
-story planlama (onaydan sonra), Öne Çıkanlar, günlük önizleme bildirimi rutini.
+Yayın güvencesi (bilgisayardan bağımsız): Actions 15 dakikada bir (09:02–22:47 TR) zamanı gelen kaydı yayınlar;
+geciken kayıt 3 saate kadar telafi edilir. Bulut bekçi rutini 2 saatte bir (09:50–21:50 TR) kaçan kayıt görürse
+`claude/bekci-*` dalına `tetik.txt = publish` push eder; `birlestir.yml` main'e alıp `publish` başlatır
+(https://claude.ai/code/routines/trig_01VXidum3KAj3Ghf2Wrk5Dc5). Business Suite'e planlanmamış linkli story,
+API yedeğiyle ("Link profilde" sürümü) yine yayınlanır; yalnız tıklanabilir çıkartma olmaz.
+
+Bilinen küçük notlar (site verisinden, bırakıldı): Conti iç lastik fotoğrafında farklı kutu, düşük çözünürlüklü
+görsellerde bulanık dolgu, bandana fotoğraf çerçevesi, bazı mağaza fotoğraflarında arka plan, forma görselinde "İSMİNİZ" yazısı. Teknik özelliği 3'ten az üründe carousel 3 karedir.
 
 ## 5. Takvim şeması v2 ve ritim
 Kayıt: `id` ("2026-11-25-post-1930" / "…-story-0930"), `date`, `time`, `type` post|story, `format`
@@ -87,8 +99,8 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
 - Linkli her story `channel:"suite"` + `sticker` (API link çıkartması desteklemez); `media[0]` API yedeği
   ("Link profilde"), `media_link` çıkartma boşluklu sürüm. Çıkartma metni ≤25: "ÜRÜNE GİT", "FİYATI GÖR",
   "MAĞAZAYA GİT", "SERVİS RANDEVUSU AL".
-- Akış (haftada 7): Pzt 19:30 reel (performans bisikleti, "Haftanın bisikleti"); Sal 19:30 ürün carousel (parça/
-  aksesuar); Çar 19:30 ipucu carousel; Per 19:30 ürün carousel (mevsim); Cum 19:30 reel (bisiklet, farklı kicker);
+- Akış (haftada 7): Pzt 19:30 ürün carousel (performans bisikleti, "Haftanın bisikleti"); Sal 19:30 ürün carousel (parça/
+  aksesuar); Çar 19:30 ipucu carousel; Per 19:30 ürün carousel (mevsim); Cum 19:30 ürün carousel ("Hafta sonu vitrini");
   Cmt 11:00 liste carousel (28 Kas kışa hazırlık, 5 Ara 250 ₺ altı hediye, 12 Ara 500 ₺ altı hediye, 19 Ara
   çocuklara yılbaşı, 26 Ara yükseltme); Paz 11:00 ürün carousel; 31 Ara yılbaşı marka postu (`b_newyear`).
 - Story (günde 3): 09:30 değer (ipucu/servis/marka/soru, API); 12:30 ürün ("Günün ürünü", suite + link);

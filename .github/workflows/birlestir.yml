@@ -36,6 +36,6 @@ jobs:
           if git diff --name-only "$once" HEAD | grep -qx 'tetik.txt'; then
             gorev=$(head -n1 tetik.txt | tr -cd 'a-z')
             case "$gorev" in
-              plan|check|probe|report) gh workflow run instagram.yml --ref main -f task="$gorev" ;;
+              plan|check|probe|report|publish) gh workflow run instagram.yml --ref main -f task="$gorev" ;;
             esac
           fi

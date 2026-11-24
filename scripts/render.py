@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+import re
 import json
 import math
 import os
@@ -128,7 +129,8 @@ def E(s) -> str:
 
 def hl(s: str) -> str:
     """Başlık: yalnızca <em> vurgusuna izin verir."""
-    return E(s).replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")
+    s = E(s).replace("&lt;em&gt;", "<em>").replace("&lt;/em&gt;", "</em>")
+    return re.sub(r"(?<![\d.,])(\d{1,3}) (?=[^\s<])", "\\1&nbsp;", s)   # sayı, ait olduğu sözcükten kopmasın
 
 
 ICONS = {
@@ -229,7 +231,7 @@ body{width:1080px;background:#777;font-family:Barlow,sans-serif;-webkit-font-smo
 .pad{position:absolute;inset:0;padding:54px 64px 50px;display:flex;flex-direction:column}
 .story .pad{padding:262px 64px 326px}
 .reel .pad{padding:262px 64px 0;height:1262px;inset:0 0 auto 0}
-.h{font-family:Archivo,sans-serif;font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:.93}
+.h{font-family:Archivo,sans-serif;font-weight:800;font-stretch:72%;text-transform:uppercase;line-height:1.08}
 .mono{font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.13em}
 em{font-style:normal;color:var(--em)}
 .top{display:flex;justify-content:space-between;align-items:center;height:104px;flex:none}
@@ -243,7 +245,7 @@ em{font-style:normal;color:var(--em)}
 .kick{font-size:24px;color:var(--em);margin-top:26px;flex:none;display:flex;align-items:center;gap:14px;white-space:nowrap;overflow:hidden}
 .kick:before{content:"";width:44px;height:5px;background:var(--em);flex:none}
 .story .kick{font-size:28px;margin-top:34px}
-.hl{overflow:hidden;flex:none;margin-top:12px}
+.hl{overflow:hidden;flex:none;margin-top:12px;box-sizing:content-box;padding-bottom:.34em;margin-bottom:-.34em;text-wrap:balance}
 .stage{position:relative;border-radius:40px;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:0;flex:none}
 .stage img{position:relative;width:100%;height:100%;object-fit:contain}
 .k-white{padding:34px}.k-flat{padding:26px}
@@ -271,7 +273,7 @@ h2.h{font-size:92px;margin-top:10px;flex:none}
 .why{flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px;margin-top:10px}
 .wy{display:flex;align-items:center;gap:28px}
 .wy .ic{width:104px;height:104px;border-radius:30px;background:var(--acc);color:var(--accfg);display:flex;align-items:center;justify-content:center;flex:none}
-.wy b{font-family:Archivo,sans-serif;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:50px;line-height:.98;display:block}
+.wy b{font-family:Archivo,sans-serif;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:50px;line-height:1.04;display:block}
 .wy span{display:block;font-size:28px;color:var(--mut);margin-top:6px;font-weight:500;line-height:1.2}
 .steps{flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px;margin-top:8px}
 .st{display:flex;align-items:center;gap:26px;background:var(--soft);border-radius:30px;padding:22px 28px}
@@ -291,7 +293,7 @@ h2.h{font-size:92px;margin-top:10px;flex:none}
 .ltx .pname{font-size:42px;max-height:96px;margin-top:10px;font-weight:700}
 .big{font-size:150px}
 .tnum{font-size:300px;line-height:.78;color:var(--em);flex:none;margin-top:34px}
-.th{font-size:86px;margin-top:22px;flex:none;max-height:250px;overflow:hidden}
+.th{font-size:86px;margin-top:22px;flex:none;max-height:250px;overflow:hidden;box-sizing:content-box;padding-bottom:.34em;margin-bottom:-.34em;text-wrap:balance}
 .tt{font-size:45px;line-height:1.3;font-weight:500;margin-top:28px;flex:1;min-height:0;overflow:hidden}
 .dots{display:flex;gap:10px;flex:none;margin-top:18px}
 .dots i{height:8px;flex:1;border-radius:9px;background:var(--line)}.dots i.on{background:var(--em)}
@@ -305,7 +307,7 @@ h2.h{font-size:92px;margin-top:10px;flex:none}
 .mock img{width:100%;height:100%;object-fit:cover;display:block}
 .s-sub{font-size:36px;line-height:1.25;font-weight:500;text-align:center;margin-top:44px;flex:1}
 .q{flex:1;display:flex;flex-direction:column;justify-content:center}
-.q .h{font-size:132px;overflow:hidden;max-height:760px}
+.q .h{font-size:132px;line-height:1.14;overflow:hidden;max-height:760px;box-sizing:content-box;padding-bottom:.34em;margin-bottom:-.34em;text-wrap:balance}
 .q p{font-size:40px;line-height:1.3;font-weight:500;margin-top:34px}
 .tr{display:flex;align-items:center;gap:24px;background:var(--soft);border-radius:32px;padding:16px 26px 16px 16px}
 .tr .stage{width:168px;height:168px;border-radius:24px;padding:12px}
@@ -408,8 +410,16 @@ def p_why(facts: list[tuple[str, str, str]], i: int, n: int, variant: str = "oli
 def p_cta(mode: str, i: int, n: int, code: str = "", phone: str = "", variant: str = "orange") -> str:
     if mode == "servis":
         title = "Servis <em>randevusu</em>"
-        steps = ["Profildeki linke dokun", "“Servis randevusu al”a bas", "Bisikletini atölyeye getir"]
+        steps = ["Profildeki linke dokun", "“Servis randevusu al” düğmesine bas", "Bisikletini atölyeye getir"]
         tile = f'<div><small>Telefonla da olur</small></div><b style="font-size:66px">{E(phone)}</b>'
+    elif mode == "ipucu":
+        title = "İhtiyacın <em>profildeki linkte</em>"
+        steps = ["Profildeki linke dokun", "Parça ya da aksesuarı adıyla ara", "Ürün sayfasından sepete ekle"]
+        tile = f'<div><small>Tüm ürünler</small></div><b style="font-size:66px">{SITE_TXT}</b>'
+    elif mode == "cocuk":
+        title = "Çocuk bisikletleri <em>profildeki linkte</em>"
+        steps = ["Profildeki linke dokun", "Çocuk bisikletleri bölümüne gir", "Jant boyunu seç, sepete ekle"]
+        tile = f'<div><small>Tüm ürünler</small></div><b style="font-size:66px">{SITE_TXT}</b>'
     elif mode == "magaza":
         title = "Hepsi <em>profildeki linkte</em>"
         steps = ["Profildeki linke dokun", "Ürünü adıyla ya da koduyla ara", "Ürün sayfasından sepete ekle"]
@@ -450,7 +460,7 @@ def t_cover(kicker: str, title: str, intro: str, n_steps: int, variant: str = "o
 <div class="pad">{top(chip(kicker, True))}
 <h1 class="h hl" data-fit="74" style="font-size:168px;max-height:660px;margin-top:44px">{hl(title)}</h1>
 <div style="flex:1"></div><div class="sub" style="font-size:42px;max-width:900px">{E(intro)}</div>
-<div class="badge mono">{ico("bookmark", 30)} {n_steps} adım · kaydet</div>{bot(SWIPE)}</div></section>'''
+<div class="badge mono">{ico("bookmark", 30)} {n_steps} madde · kaydet</div>{bot(SWIPE)}</div></section>'''
 
 
 def t_step(h: str, t: str, k: int, total: int, i: int, n: int, variant: str = "cream") -> str:
@@ -463,7 +473,7 @@ def t_step(h: str, t: str, k: int, total: int, i: int, n: int, variant: str = "c
 def t_end(text: str, i: int, n: int, variant: str = "ink") -> str:
     return f'''<section class="cv post v-{variant}">{contour("end" + text[:8], 980, 260, 560)}
 <div class="pad">{top(cnt(i, n))}<div class="kick mono" style="margin-top:70px">Özetle</div>
-<div class="h hl" data-fit="60" style="font-size:124px;max-height:700px;margin-top:22px;line-height:.98">{E(text)}</div>
+<div class="h hl" data-fit="60" style="font-size:124px;max-height:700px;margin-top:22px;line-height:1.04">{E(text)}</div>
 <div class="badge mono">{ico("bookmark", 30)} Lazım olunca bulmak için kaydet</div>
 <div style="flex:1"></div>{bot(SWIPE)}</div></section>'''
 
@@ -506,11 +516,13 @@ def s_promo(cover: Path, kicker: str, headline: str, link: bool, label: str, fal
 {_dock(link, label, fallback)}</div></section>'''
 
 
-def s_tip(kicker: str, h: str, t: str, variant: str = "olive") -> str:
+def s_tip(kicker: str, h: str, t: str, variant: str = "olive", dock: tuple[bool, str, str] | None = None) -> str:
+    """dock=(link, label, fallback): konuya özel linkli story; None: linksiz değer story'si."""
+    tail = _dock(*dock) if dock else bot("", SITE_TXT)
     return f'''<section class="cv story v-{variant}">{sbg(h)}
 <div class="pad">{top(chip(kicker, True))}<div class="q"><div class="kick mono" style="margin-top:0">Atölyeden not</div>
 <div class="h" data-fit="70" style="margin-top:22px">{E(h)}</div><p>{E(t)}</p>
-<div class="badge mono">{ico("send", 30)} Lazım olana gönder</div></div>{bot("", SITE_TXT)}</div></section>'''
+<div class="badge mono">{ico("send", 30)} Lazım olana gönder</div></div>{tail}</div></section>'''
 
 
 def s_question(q: str, variant: str = "orange") -> str:
@@ -596,7 +608,15 @@ def _shoot(sections: list[str], outs: list[Path], kind: str) -> None:
         cmd = [chrome(), "--headless=new", "--disable-gpu", "--no-sandbox", "--hide-scrollbars",
                "--force-device-scale-factor=1", f"--user-data-dir={td}/ud", f"--window-size={w},{h * len(sections)}",
                "--virtual-time-budget=12000", f"--screenshot={png}", src.as_uri()]
-        subprocess.run(cmd, check=True, capture_output=True, timeout=240)
+        try:
+            subprocess.run(cmd, check=True, capture_output=True, timeout=240)
+        except subprocess.TimeoutExpired:
+            # Chrome bazen takılır: kareleri tek tek yeniden dene (tek karede bir kez daha dene, sonra hata ver)
+            if len(sections) > 1:
+                for s, o in zip(sections, outs):
+                    _shoot([s], [o], kind)
+                return
+            subprocess.run(cmd, check=True, capture_output=True, timeout=240)
         im = Image.open(png).convert("RGB")
         if im.size != (w, h * len(sections)):
             if len(sections) == 1:

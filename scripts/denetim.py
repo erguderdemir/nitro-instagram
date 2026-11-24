@@ -30,13 +30,17 @@ from pathlib import Path
 
 import common
 import content as C
-from common import CFG, DATA, DOCS, fmt_price
+from common import CFG, DATA, DOCS, GORSEL_ENGEL, fmt_price
 
 OUT = DATA / "denetim.json"
 STATUSES = ("planned", "draft", "published", "skipped", "missed", "error")
 THEMES = ("urun", "ipucu", "liste", "servis", "marka", "promo", "etkilesim")
 FORMATS = {"post": ("carousel", "reel", "image"), "story": ("story",)}
-STICKERS = ("ÜRÜNE GİT", "FİYATI GÖR", "MAĞAZAYA GİT", "SERVİS RANDEVUSU AL")
+STICKERS = ("ÜRÜNE GİT", "FİYATI GÖR", "MAĞAZAYA GİT", "SERVİS RANDEVUSU AL", "ÇOCUK BİSİKLETLERİ", "TESLİMAT BİLGİSİ",
+            "İADE KOŞULLARI", "ADRES VE İLETİŞİM", "HİKAYEMİZ")
+# İpucu story'lerinin kategori çıkartmaları (data/tips.json → story_tips[].st)
+TIP_STICKERS = tuple(sorted({t["st"] for t in __import__("json").loads((common.ROOT / "data" / "tips.json").read_text(
+    encoding="utf-8")).get("story_tips", []) if t.get("st")}))
 SIZE = {"post": (1080, 1350), "story": (1080, 1920)}
 MAX_IMAGE, MAX_VIDEO = 8 * 1024 * 1024, 100 * 1024 * 1024
 BANNED = re.compile(r"indirim|kampanya|fırsat|bedava|son \d+ (adet|gün|saat)|stokta son|tükenmeden|%\s?\d+|\d+\s?%'?\s?(indirim|ucuz)",
@@ -174,7 +178,10 @@ class Audit:
                 self.add(c, "veri", f"ürün artık sitede yok: {x['slug']}")
                 continue
             if C.excluded(p):
-                self.add(c, "veri", f"hariç tutulan ürün (scooter/motosiklet/otomobil): {p['name']}")
+                self.add(c, "veri", f"hariç tutulan ürün (scooter/motosiklet/otomobil/yanlış fotoğraf): {p['name']}")
+            img = (x.get("image") or "").rsplit("/", 1)[-1]
+            if img and img in GORSEL_ENGEL:
+                self.add(c, "veri", f"engelli ürün fotoğrafı kullanılmış: {img}")
             if p.get("in_stock") is not True:
                 self.add(c, "stok", f"ürün stokta değil: {x['name']}")
             if not p.get("price") or abs(p["price"] - x["price"]) > 0.004:
@@ -214,7 +221,7 @@ class Audit:
                 return
             if st.get("url") != link:
                 self.add(c, "link", "çıkartma adresi kayıt linki değil")
-            if st.get("text") not in STICKERS or len(st.get("text") or "") > 25:
+            if st.get("text") not in STICKERS + TIP_STICKERS or len(st.get("text") or "") > 25:
                 self.add(c, "metin", f"çıkartma metni geçersiz ya da 25 karakterden uzun: {st.get('text')}")
             if not all(isinstance(st.get(k), (int, float)) and 0 < st[k] < 1 for k in ("x", "y", "w")):
                 self.add(c, "link", "çıkartma konumu (x, y, w) eksik")
@@ -229,6 +236,10 @@ class Audit:
 
     def text(self, c: dict, day: date) -> None:
         cap = c.get("caption") or ""
+        for a in [c.get("alt") or ""] + list(c.get("alts") or []):
+            if re.search(r"[?!]\.|\.\.(?!\.)", a):
+                self.add(c, "metin", f"alt metinde çift noktalama: {a[:60]}")
+                break
         for field in ("kicker", "title"):
             m = FOREIGN.search(c.get(field) or "")
             if m:

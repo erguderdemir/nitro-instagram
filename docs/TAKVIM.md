@@ -8,7 +8,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · servis | Bisikletine bakım zamanı | — | — | API | planlı | [görsel](media/2026-11-25-story-0930.jpg) |
+| 09:30 | Story · servis | Bisikletine bakım zamanı | — | — | Suite + link | planlı | [görsel](media/2026-11-25-story-0930.jpg) |
 | 12:30 | Story · ürün | Dişler silindiyse vakit geldi | [Chaoyang 20x4.0 Fat Bike Dış Lastik 3 mm Zırhlı Siyah](https://nitrobisiklet.com/urun/chaoyang-20x4-0-fat-bike-dis-lastik-3-mm-zirhli-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-25-story-1230) | 1.379,66 ₺ | Suite + link | planlı | [görsel](media/2026-11-25-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK | — | — | API | planlı | [görsel](media/2026-11-25-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-11-25-story-2030.jpg) |
@@ -17,16 +17,16 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | YAĞLADIKTAN SONRA FAZLASINI AL | — | — | API | planlı | [görsel](media/2026-11-26-story-0930.jpg) |
-| 12:30 | Story · ürün | Uzamış zinciri değiştir | [Maya M410 Zincir](https://nitrobisiklet.com/urun/maya-m410-zincir/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-26-story-1230) | 130 ₺ | Suite + link | planlı | [görsel](media/2026-11-26-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Frenlerin temiz kalsın | [404 Balata Spreyi (Metal Temizleyici) 500 ml](https://nitrobisiklet.com/urun/404-balata-spreyi-metal-temizleyici-500-ml/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-26-post-1930) | 93,53 ₺ | API | planlı | [görsel](media/2026-11-26-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Frenlerin temiz kalsın | [404 Balata Spreyi (Metal Temizleyici) 500 ml](https://nitrobisiklet.com/urun/404-balata-spreyi-metal-temizleyici-500-ml/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-26-story-2030) | 93,53 ₺ | Suite + link | planlı | [görsel](media/2026-11-26-story-2030.jpg) |
+| 09:30 | Story · ipucu | YAĞLADIKTAN SONRA FAZLASINI AL | — | — | Suite + link | planlı | [görsel](media/2026-11-26-story-0930.jpg) |
+| 12:30 | Story · ürün | Gidonunu yenile | [Gidon BH-30 800 mm Kırmızı](https://nitrobisiklet.com/urun/gidon-bh-30-800-mm-kirmizi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-26-story-1230) | 756,98 ₺ | Suite + link | planlı | [görsel](media/2026-11-26-story-1230.jpg) |
+| 19:30 | Carousel · ürün | Lastiğini yenile | [20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah - 2'li Set](https://nitrobisiklet.com/urun/20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-26-post-1930) | 1.990 ₺ | API | planlı | [görsel](media/2026-11-26-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Lastiğini yenile | [20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah - 2'li Set](https://nitrobisiklet.com/urun/20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-26-story-2030) | 1.990 ₺ | Suite + link | planlı | [görsel](media/2026-11-26-story-2030.jpg) |
 
 ## 27.11.2026 Cuma
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · marka | Dükkânı pistte öğrendik | — | — | API | planlı | [görsel](media/2026-11-27-story-0930.jpg) |
+| 09:30 | Story · marka | Dükkânı pistte öğrendik | — | — | Suite + link | planlı | [görsel](media/2026-11-27-story-0930.jpg) |
 | 12:30 | Story · ürün | Kasetini yenile | [Shimano Alivio CS-HG51 8 Vites Kaset Dişli](https://nitrobisiklet.com/urun/shimano-alivio-cs-hg51-8-vites-kaset-disli/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-27-story-1230) | 882 ₺ | Suite + link | planlı | [görsel](media/2026-11-27-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Her güne bir pedal | [Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koyu Yeşil](https://nitrobisiklet.com/urun/bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-koyu-yesil/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-27-post-1930) | 17.640 ₺ | API | planlı | [görsel](media/2026-11-27-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Her güne bir pedal | [Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koyu Yeşil](https://nitrobisiklet.com/urun/bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-koyu-yesil/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-27-story-2030) | 17.640 ₺ | Suite + link | planlı | [görsel](media/2026-11-27-story-2030.jpg) |
@@ -35,7 +35,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | HAFTADA BİR BASINÇ ÖLÇ | — | — | API | planlı | [görsel](media/2026-11-28-story-0930.jpg) |
+| 09:30 | Story · ipucu | HAFTADA BİR BASINÇ ÖLÇ | — | — | Suite + link | planlı | [görsel](media/2026-11-28-story-0930.jpg) |
 | 11:00 | Carousel · liste | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-11-28-post-1100) | — | API | planlı | [görsel](media/2026-11-28-post-1100-1.jpg) |
 | 12:30 | Story · ürün | Rotorunu yenile | [Shimano SLX SM-RT66 180 mm 6 Vidalı Disk Fren Rotoru](https://nitrobisiklet.com/urun/shimano-slx-sm-rt66-180-mm-6-vidali-disk-fren-rotoru/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-28-story-1230) | 1.395 ₺ | Suite + link | planlı | [görsel](media/2026-11-28-story-1230.jpg) |
 | 20:30 | Story · tanıtım | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-28-story-2030) | — | Suite + link | planlı | [görsel](media/2026-11-28-story-2030.jpg) |
@@ -46,14 +46,14 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Bu hafta kaç kilometre sürdün? | — | — | API | planlı | [görsel](media/2026-11-29-story-0930.jpg) |
 | 11:00 | Carousel · ürün | Gözlük yalnızca güneş için değil | [Briviga Gözlük GLS-39406 Pembe](https://nitrobisiklet.com/urun/briviga-gozluk-gls-39406-pembe/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-29-post-1100) | 3.344,30 ₺ | API | planlı | [görsel](media/2026-11-29-post-1100-1.jpg) |
-| 12:30 | Story · ürün | İnişe hazır | [Fox 36 Rhythm 160mm 27.5" Ön Süspansiyon Maşası Siyah](https://nitrobisiklet.com/urun/fox-36-rhythm-160mm-27-5-on-suspansiyon-masasi-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-29-story-1230) | 55.000 ₺ | Suite + link | planlı | [görsel](media/2026-11-29-story-1230.jpg) |
+| 12:30 | Story · ürün | İnişe hazır | [Fox 36 Rhythm 160 mm 27.5" Ön Süspansiyon Maşası Siyah](https://nitrobisiklet.com/urun/fox-36-rhythm-160mm-27-5-on-suspansiyon-masasi-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-29-story-1230) | 55.000 ₺ | Suite + link | planlı | [görsel](media/2026-11-29-story-1230.jpg) |
 | 20:30 | Story · tanıtım | Gözlük yalnızca güneş için değil | [Briviga Gözlük GLS-39406 Pembe](https://nitrobisiklet.com/urun/briviga-gozluk-gls-39406-pembe/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-29-story-2030) | 3.344,30 ₺ | Suite + link | planlı | [görsel](media/2026-11-29-story-2030.jpg) |
 
 ## 30.11.2026 Pazartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | TAZYİKLİ SUYLA YIKAMA | — | — | API | planlı | [görsel](media/2026-11-30-story-0930.jpg) |
+| 09:30 | Story · ipucu | TAZYİKLİ SUYLA YIKAMA | — | — | Suite + link | planlı | [görsel](media/2026-11-30-story-0930.jpg) |
 | 12:30 | Story · ürün | Tamir kitin yanında olsun | [Super B Tb-1118 Solüsyonsuz Yama Seti](https://nitrobisiklet.com/urun/super-b-tb-1118-solusyonsuz-yama-seti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-30-story-1230) | 190 ₺ | Suite + link | planlı | [görsel](media/2026-11-30-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Rotanı dağa çevir | [Bisan MTX 7200 27.5" Dağ Bisikleti 3x8 Vites 17" (43cm) Kadro Siyah-Mavi](https://nitrobisiklet.com/urun/bisan-mtx-7200-27-5-dag-bisikleti-3x8-vites-17-43cm-kadro-siyah-mavi/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-30-post-1930) | 18.895,50 ₺ | API | planlı | [görsel](media/2026-11-30-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Rotanı dağa çevir | [Bisan MTX 7200 27.5" Dağ Bisikleti 3x8 Vites 17" (43cm) Kadro Siyah-Mavi](https://nitrobisiklet.com/urun/bisan-mtx-7200-27-5-dag-bisikleti-3x8-vites-17-43cm-kadro-siyah-mavi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-30-story-2030) | 18.895,50 ₺ | Suite + link | planlı | [görsel](media/2026-11-30-story-2030.jpg) |
@@ -71,7 +71,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · servis | Sürpriz kalem yok | — | — | API | planlı | [görsel](media/2026-12-02-story-0930.jpg) |
+| 09:30 | Story · servis | Sürpriz kalem yok | — | — | Suite + link | planlı | [görsel](media/2026-12-02-story-0930.jpg) |
 | 12:30 | Story · ürün | Pedalına güç kat | [Bisan Moon 700C Elektrikli Şehir Bisikleti](https://nitrobisiklet.com/urun/bisan-moon-700c-elektrikli-sehir-bisikleti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-02-story-1230) | 48.500 ₺ | Suite + link | planlı | [görsel](media/2026-12-02-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | ISLAK ZEMİNDE GÜVENLİ SÜRÜŞÜN 5 KURALI | — | — | API | planlı | [görsel](media/2026-12-02-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-02-story-2030.jpg) |
@@ -80,7 +80,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | LASTİKTE ÇATLAK VAR MI? | — | — | API | planlı | [görsel](media/2026-12-03-story-0930.jpg) |
+| 09:30 | Story · ipucu | LASTİKTE ÇATLAK VAR MI? | — | — | Suite + link | planlı | [görsel](media/2026-12-03-story-0930.jpg) |
 | 12:30 | Story · ürün | Uzun rotaların bisikleti | [Carraro GRAVEL G0 28" 16-V MD Mat mavi, Neon Sarı](https://nitrobisiklet.com/urun/carraro-gravel-g0-28-16-v-md-mat-mavi-neon-sari/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-03-story-1230) | 36.224 ₺ | Suite + link | planlı | [görsel](media/2026-12-03-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Yol tutuş lastikten gelir | [Schwalbe Smart Sam Performance 29x2.25 Dış Lastik](https://nitrobisiklet.com/urun/schwalbe-smart-sam-performance-29x2-25-dis-lastik/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-03-post-1930) | 1.014,30 ₺ | API | planlı | [görsel](media/2026-12-03-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yol tutuş lastikten gelir | [Schwalbe Smart Sam Performance 29x2.25 Dış Lastik](https://nitrobisiklet.com/urun/schwalbe-smart-sam-performance-29x2-25-dis-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-03-story-2030) | 1.014,30 ₺ | Suite + link | planlı | [görsel](media/2026-12-03-story-2030.jpg) |
@@ -89,16 +89,16 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · marka | Yarışlarda takım olarak | — | — | API | planlı | [görsel](media/2026-12-04-story-0930.jpg) |
+| 09:30 | Story · marka | Yarışlarda artık takımız | — | — | Suite + link | planlı | [görsel](media/2026-12-04-story-0930.jpg) |
 | 12:30 | Story · ürün | Havalanmaya hazır | [Carraro Bandit Dirt Jump Bisiklet](https://nitrobisiklet.com/urun/carraro-bandit-dirt-jump-bisiklet/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-04-story-1230) | 35.290 ₺ | Suite + link | planlı | [görsel](media/2026-12-04-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Elektrik desteğiyle sür | [Bisan Envious Deore 29" Elektrikli Dağ Bisiklet 45cm 17.5"](https://nitrobisiklet.com/urun/bisan-envious-deore-29-elektrikli-dag-bisiklet-45cm-175/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-04-post-1930) | 189.090 ₺ | API | planlı | [görsel](media/2026-12-04-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Elektrik desteğiyle sür | [Bisan Envious Deore 29" Elektrikli Dağ Bisiklet 45cm 17.5"](https://nitrobisiklet.com/urun/bisan-envious-deore-29-elektrikli-dag-bisiklet-45cm-175/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-04-story-2030) | 189.090 ₺ | Suite + link | planlı | [görsel](media/2026-12-04-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Elektrik desteğiyle sür | [Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 45cm 17.5"](https://nitrobisiklet.com/urun/bisan-envious-deore-29-elektrikli-dag-bisiklet-45cm-175/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-04-post-1930) | 189.090 ₺ | API | planlı | [görsel](media/2026-12-04-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Elektrik desteğiyle sür | [Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 45cm 17.5"](https://nitrobisiklet.com/urun/bisan-envious-deore-29-elektrikli-dag-bisiklet-45cm-175/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-04-story-2030) | 189.090 ₺ | Suite + link | planlı | [görsel](media/2026-12-04-story-2030.jpg) |
 
 ## 05.12.2026 Cumartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | KISA MESAFEDE DE KASK | — | — | API | planlı | [görsel](media/2026-12-05-story-0930.jpg) |
+| 09:30 | Story · ipucu | KISA MESAFEDE DE KASK | — | — | Suite + link | planlı | [görsel](media/2026-12-05-story-0930.jpg) |
 | 11:00 | Carousel · liste | 250 ₺ altı 5 hediye | [Polisport C600 Matara +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-05-post-1100) | — | API | planlı | [görsel](media/2026-12-05-post-1100-1.jpg) |
 | 12:30 | Story · ürün | Takımın forması | [NITRO Bike Team Enduro Downhill Forması](https://nitrobisiklet.com/urun/nitro-bike-team-enduro-downhill-formasi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-05-story-1230) | 1.199 ₺ | Suite + link | planlı | [görsel](media/2026-12-05-story-1230.jpg) |
 | 20:30 | Story · tanıtım | 250 ₺ altı 5 hediye | [Polisport C600 Matara +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-05-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-05-story-2030.jpg) |
@@ -108,16 +108,16 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Bisiklete binmeyi kaç yaşında öğrendin? | — | — | API | planlı | [görsel](media/2026-12-06-story-0930.jpg) |
-| 11:00 | Carousel · ürün | Küçük yolcuya yer aç | [Sarissa Elektrikli Bisiklet Uyumlu Kadro Bağlantılı Çocuk Koltuğu Siyah-Kırmızı](https://nitrobisiklet.com/urun/sarissa-elektrikli-bisiklet-uyumlu-kadro-baglantili-cocuk-koltugu-siyah-kirmizi/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-06-post-1100) | 3.150 ₺ | API | planlı | [görsel](media/2026-12-06-post-1100-1.jpg) |
+| 11:00 | Carousel · ürün | Rahat otur, uzun sür | [Rectus Bisiklet Sele Kırmızı Mtb](https://nitrobisiklet.com/urun/rectus-bisiklet-sele-kirmizi-mtb/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-06-post-1100) | 380 ₺ | API | planlı | [görsel](media/2026-12-06-post-1100-1.jpg) |
 | 12:30 | Story · ürün | Mataran elinin altında | [Sutak 2 - 500 ml Su Bidonu Tutucu](https://nitrobisiklet.com/urun/sutak-2-500-ml-su-bidonu-tutucu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-06-story-1230) | 189 ₺ | Suite + link | planlı | [görsel](media/2026-12-06-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Küçük yolcuya yer aç | [Sarissa Elektrikli Bisiklet Uyumlu Kadro Bağlantılı Çocuk Koltuğu Siyah-Kırmızı](https://nitrobisiklet.com/urun/sarissa-elektrikli-bisiklet-uyumlu-kadro-baglantili-cocuk-koltugu-siyah-kirmizi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-06-story-2030) | 3.150 ₺ | Suite + link | planlı | [görsel](media/2026-12-06-story-2030.jpg) |
+| 20:30 | Story · tanıtım | Rahat otur, uzun sür | [Rectus Bisiklet Sele Kırmızı Mtb](https://nitrobisiklet.com/urun/rectus-bisiklet-sele-kirmizi-mtb/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-06-story-2030) | 380 ₺ | Suite + link | planlı | [görsel](media/2026-12-06-story-2030.jpg) |
 
 ## 07.12.2026 Pazartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | YOLA ÇIKMADAN FRENİ DENE | — | — | API | planlı | [görsel](media/2026-12-07-story-0930.jpg) |
-| 12:30 | Story · ürün | Alışveriş sepette | [26 MTB Ön Sepet Demir [Kızaklı] 25.4-31.8 Mm Siyah](https://nitrobisiklet.com/urun/26-mtb-on-sepet-demir-kizakli-254-318-mm-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-07-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-07-story-1230.jpg) |
+| 09:30 | Story · ipucu | YOLA ÇIKMADAN FRENİ DENE | — | — | Suite + link | planlı | [görsel](media/2026-12-07-story-0930.jpg) |
+| 12:30 | Story · ürün | Alışveriş sepette | [26 MTB Ön Sepet Demir [Kızaklı] 25.4-31.8 mm Siyah](https://nitrobisiklet.com/urun/26-mtb-on-sepet-demir-kizakli-254-318-mm-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-07-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-07-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Yol bitince devam et | [Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites 56cm](https://nitrobisiklet.com/urun/bisan-all-trail-eco-sora-gravel-bisiklet-2x9-vites-56cm/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-07-post-1930) | 66.910 ₺ | API | planlı | [görsel](media/2026-12-07-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yol bitince devam et | [Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites 56cm](https://nitrobisiklet.com/urun/bisan-all-trail-eco-sora-gravel-bisiklet-2x9-vites-56cm/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-07-story-2030) | 66.910 ₺ | Suite + link | planlı | [görsel](media/2026-12-07-story-2030.jpg) |
 
@@ -126,7 +126,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Sabah sürüşü mü, akşam sürüşü mü? | — | — | API | planlı | [görsel](media/2026-12-08-story-0930.jpg) |
-| 12:30 | Story · ürün | Yeni sargı, yeni his | [Gidon Sargısı Tempo Yeşil Classic 2mm BT10](https://nitrobisiklet.com/urun/gidon-sargisi-tempo-yesil-classic-2mm-bt10-a00025/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-08-story-1230) | 2.110,56 ₺ | Suite + link | planlı | [görsel](media/2026-12-08-story-1230.jpg) |
+| 12:30 | Story · ürün | Yeni sargı, yeni his | [Gidon Sargısı Tempo Yeşil Classic 2 mm BT10](https://nitrobisiklet.com/urun/gidon-sargisi-tempo-yesil-classic-2mm-bt10-a00025/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-08-story-1230) | 2.110,56 ₺ | Suite + link | planlı | [görsel](media/2026-12-08-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Arka dişlini yenile | [Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli](https://nitrobisiklet.com/urun/shimano-slx-cs-hg81-10-vites-11-36t-kaset-disli/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-08-post-1930) | 2.601 ₺ | API | planlı | [görsel](media/2026-12-08-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Arka dişlini yenile | [Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli](https://nitrobisiklet.com/urun/shimano-slx-cs-hg81-10-vites-11-36t-kaset-disli/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-08-story-2030) | 2.601 ₺ | Suite + link | planlı | [görsel](media/2026-12-08-story-2030.jpg) |
 
@@ -134,7 +134,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · servis | Randevunu online al | — | — | API | planlı | [görsel](media/2026-12-09-story-0930.jpg) |
+| 09:30 | Story · servis | Randevunu online al | — | — | Suite + link | planlı | [görsel](media/2026-12-09-story-0930.jpg) |
 | 12:30 | Story · ürün | Patlak yolda bırakmasın | [MEGHNA 20 x 4.00 Fat Bike İç Lastik A/V Oto Sibop Butil](https://nitrobisiklet.com/urun/meghna-20-x-400-fat-bike-ic-lastik-av-oto-sibop-butil/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-09-story-1230) | 490 ₺ | Suite + link | planlı | [görsel](media/2026-12-09-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | ÇOCUĞUNA HANGİ JANT BOYU UYAR? | — | — | API | planlı | [görsel](media/2026-12-09-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-09-story-2030.jpg) |
@@ -143,28 +143,28 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | GÜNDÜZ DE IŞIK YAK | — | — | API | planlı | [görsel](media/2026-12-10-story-0930.jpg) |
+| 09:30 | Story · ipucu | GÜNDÜZ DE IŞIK YAK | — | — | Suite + link | planlı | [görsel](media/2026-12-10-story-0930.jpg) |
 | 12:30 | Story · ürün | Seleni yenile | [Rectus Geniş Konfor Sele](https://nitrobisiklet.com/urun/rectus-genis-konfor-sele/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-10-story-1230) | 445 ₺ | Suite + link | planlı | [görsel](media/2026-12-10-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Fren bakımına sprey | [Grayzer Fren Balata Temizleme Spreyi 500 ML](https://nitrobisiklet.com/urun/grayzer-fren-balata-temizleme-spreyi-500-ml/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-10-post-1930) | 120 ₺ | API | planlı | [görsel](media/2026-12-10-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Fren bakımına sprey | [Grayzer Fren Balata Temizleme Spreyi 500 ML](https://nitrobisiklet.com/urun/grayzer-fren-balata-temizleme-spreyi-500-ml/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-10-story-2030) | 120 ₺ | Suite + link | planlı | [görsel](media/2026-12-10-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Fren bakımına sprey | [Grayzer Fren Balata Temizleme Spreyi 500 ml](https://nitrobisiklet.com/urun/grayzer-fren-balata-temizleme-spreyi-500-ml/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-10-post-1930) | 120 ₺ | API | planlı | [görsel](media/2026-12-10-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Fren bakımına sprey | [Grayzer Fren Balata Temizleme Spreyi 500 ml](https://nitrobisiklet.com/urun/grayzer-fren-balata-temizleme-spreyi-500-ml/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-10-story-2030) | 120 ₺ | Suite + link | planlı | [görsel](media/2026-12-10-story-2030.jpg) |
 
 ## 11.12.2026 Cuma
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · marka | Siparişin nasıl gelir? | — | — | API | planlı | [görsel](media/2026-12-11-story-0930.jpg) |
+| 09:30 | Story · marka | Siparişin nasıl gelir? | — | — | Suite + link | planlı | [görsel](media/2026-12-11-story-0930.jpg) |
 | 12:30 | Story · ürün | Gücün pedaldan geçer | [Tanke TP-60 Naylon Fiber Platform Pedal DU Yataklı 9/16"](https://nitrobisiklet.com/urun/tanke-tp-60-naylon-fiber-platform-pedal-du-yatakli-9-16/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-11-story-1230) | 1.332 ₺ | Suite + link | planlı | [görsel](media/2026-12-11-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Günlük sürüşün bisikleti | [Carraro Sportive 225 28" Jant 24 Vites Hidrolik Disk Şehir Bisikleti 46cm Mat Antrasit-Siyah-Kırmızı](https://nitrobisiklet.com/urun/carraro-sportive-225-28-jant-24-vites-hidrolik-disk-sehir-bisikleti-46cm-mat-antrasit-siyah-kirmizi/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-11-post-1930) | 31.825 ₺ | API | planlı | [görsel](media/2026-12-11-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Günlük sürüşün bisikleti | [Carraro Sportive 225 28" Jant 24 Vites Hidrolik Disk Şehir Bisikleti 46cm Mat Antrasit-Siyah-Kırmızı](https://nitrobisiklet.com/urun/carraro-sportive-225-28-jant-24-vites-hidrolik-disk-sehir-bisikleti-46cm-mat-antrasit-siyah-kirmizi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-11-story-2030) | 31.825 ₺ | Suite + link | planlı | [görsel](media/2026-12-11-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Şehirde özgürlük | [Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites](https://nitrobisiklet.com/urun/bisan-trx-8300-city-sehir-bisikleti-3x9-vites/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-11-post-1930) | 28.440 ₺ | API | planlı | [görsel](media/2026-12-11-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Şehirde özgürlük | [Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites](https://nitrobisiklet.com/urun/bisan-trx-8300-city-sehir-bisikleti-3x9-vites/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-11-story-2030) | 28.440 ₺ | Suite + link | planlı | [görsel](media/2026-12-11-story-2030.jpg) |
 
 ## 12.12.2026 Cumartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | GÖZLÜK YALNIZCA GÜNEŞ İÇİN DEĞİL | — | — | API | planlı | [görsel](media/2026-12-12-story-0930.jpg) |
-| 11:00 | Carousel · liste | 500 ₺ altı 5 hediye | [Asistan Cape Gl 200 Kısa Parmak Eldiven Gri +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-12-post-1100) | — | API | planlı | [görsel](media/2026-12-12-post-1100-1.jpg) |
+| 09:30 | Story · ipucu | GÖZLÜK YALNIZCA GÜNEŞ İÇİN DEĞİL | — | — | Suite + link | planlı | [görsel](media/2026-12-12-story-0930.jpg) |
+| 11:00 | Carousel · liste | 500 ₺ altı 5 hediye | [Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-12-post-1100) | — | API | planlı | [görsel](media/2026-12-12-post-1100-1.jpg) |
 | 12:30 | Story · ürün | Zincirini yenile | [Rectus M30 1/2 X3/32 112L Zincir](https://nitrobisiklet.com/urun/rectus-m30-12-x332-112l-zincir/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-12-story-1230) | 130 ₺ | Suite + link | planlı | [görsel](media/2026-12-12-story-1230.jpg) |
-| 20:30 | Story · tanıtım | 500 ₺ altı 5 hediye | [Asistan Cape Gl 200 Kısa Parmak Eldiven Gri +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-12-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-12-story-2030.jpg) |
+| 20:30 | Story · tanıtım | 500 ₺ altı 5 hediye | [Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-12-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-12-story-2030.jpg) |
 
 ## 13.12.2026 Pazar
 
@@ -172,14 +172,14 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Tek başına sürmeyi mi seversin, grupla mı? | — | — | API | planlı | [görsel](media/2026-12-13-story-0930.jpg) |
 | 11:00 | Carousel · ürün | Mataraya sağlam yuva | [Sedona SD100 Matara Kafesi](https://nitrobisiklet.com/urun/sedona-sd100-matara-kafesi-4/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-13-post-1100) | 115 ₺ | API | planlı | [görsel](media/2026-12-13-post-1100-1.jpg) |
-| 12:30 | Story · ürün | Akşam sürüşüne ışık | [Far Helix Lite-W 150 LM USB](https://nitrobisiklet.com/urun/far-helix-lite-w-150-lm-usb-90110460101/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-13-story-1230) | 1.975,06 ₺ | Suite + link | planlı | [görsel](media/2026-12-13-story-1230.jpg) |
+| 12:30 | Story · ürün | Gidonu sağlam kavra | [Ovela 165 mm DH / Enduro / BMX Elcik Mavi](https://nitrobisiklet.com/urun/ovela-165-mm-dh-enduro-bmx-elcik-mavi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-13-story-1230) | 418,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-13-story-1230.jpg) |
 | 20:30 | Story · tanıtım | Mataraya sağlam yuva | [Sedona SD100 Matara Kafesi](https://nitrobisiklet.com/urun/sedona-sd100-matara-kafesi-4/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-13-story-2030) | 115 ₺ | Suite + link | planlı | [görsel](media/2026-12-13-story-2030.jpg) |
 
 ## 14.12.2026 Pazartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | VİTESİ YOKUŞTAN ÖNCE KÜÇÜLT | — | — | API | planlı | [görsel](media/2026-12-14-story-0930.jpg) |
+| 09:30 | Story · ipucu | VİTESİ YOKUŞTAN ÖNCE KÜÇÜLT | — | — | Suite + link | planlı | [görsel](media/2026-12-14-story-0930.jpg) |
 | 12:30 | Story · ürün | Çamur sende kalmasın | [Epic 20x4.0 Elektrikli Bisiklet Çamurluk Seti](https://nitrobisiklet.com/urun/epic-20x40-elektrikli-bisiklet-camurluk-seti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-14-story-1230) | 1.590 ₺ | Suite + link | planlı | [görsel](media/2026-12-14-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Rampaya hazır | [Carraro RAVE BMX 20" 1-V VB Mat Mor](https://nitrobisiklet.com/urun/carraro-rave-bmx-20-1-v-vb-mat-mor/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-14-post-1930) | 22.601 ₺ | API | planlı | [görsel](media/2026-12-14-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Rampaya hazır | [Carraro RAVE BMX 20" 1-V VB Mat Mor](https://nitrobisiklet.com/urun/carraro-rave-bmx-20-1-v-vb-mat-mor/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-14-story-2030) | 22.601 ₺ | Suite + link | planlı | [görsel](media/2026-12-14-story-2030.jpg) |
@@ -190,15 +190,15 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Bisikletine bir ad taktın mı? | — | — | API | planlı | [görsel](media/2026-12-15-story-0930.jpg) |
 | 12:30 | Story · ürün | Balatan bitmeden değiştir | [Shimano K05S-RX Organik Yol Bisikleti Fren Balatası](https://nitrobisiklet.com/urun/shimano-k05s-rx-organik-yol-bisikleti-fren-balatasi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-15-story-1230) | 750 ₺ | Suite + link | planlı | [görsel](media/2026-12-15-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Fren gücü rotordan geçer | [Shimano Deore XT SM-RT76 203 mm 6 Vidalı Disk Fren Rotoru](https://nitrobisiklet.com/urun/shimano-deore-xt-sm-rt76-203-mm-6-vidali-disk-fren-rotoru/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-15-post-1930) | 2.970 ₺ | API | planlı | [görsel](media/2026-12-15-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Fren gücü rotordan geçer | [Shimano Deore XT SM-RT76 203 mm 6 Vidalı Disk Fren Rotoru](https://nitrobisiklet.com/urun/shimano-deore-xt-sm-rt76-203-mm-6-vidali-disk-fren-rotoru/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-15-story-2030) | 2.970 ₺ | Suite + link | planlı | [görsel](media/2026-12-15-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Fren gücü rotordan geçer | [Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru](https://nitrobisiklet.com/urun/shimano-sm-rt56-180-mm-6-vidali-disk-fren-rotoru/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-15-post-1930) | 1.188 ₺ | API | planlı | [görsel](media/2026-12-15-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Fren gücü rotordan geçer | [Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru](https://nitrobisiklet.com/urun/shimano-sm-rt56-180-mm-6-vidali-disk-fren-rotoru/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-15-story-2030) | 1.188 ₺ | Suite + link | planlı | [görsel](media/2026-12-15-story-2030.jpg) |
 
 ## 16.12.2026 Çarşamba
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · servis | Bisikletine bakım zamanı | — | — | API | planlı | [görsel](media/2026-12-16-story-0930.jpg) |
-| 12:30 | Story · ürün | Ön takımı yükselt | [FOX 36 Float 160mm 27.5” (E-Bike’la da uyumlu)](https://nitrobisiklet.com/urun/fox-36-float-160mm-275-e-bikela-da-uyumlu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-16-story-1230) | 36.390 ₺ | Suite + link | planlı | [görsel](media/2026-12-16-story-1230.jpg) |
+| 09:30 | Story · servis | Bisikletine bakım zamanı | — | — | Suite + link | planlı | [görsel](media/2026-12-16-story-0930.jpg) |
+| 12:30 | Story · ürün | Ön takımı yükselt | [FOX 36 Float 160 mm 27.5” (E-Bike’la da uyumlu)](https://nitrobisiklet.com/urun/fox-36-float-160mm-275-e-bikela-da-uyumlu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-16-story-1230) | 36.390 ₺ | Suite + link | planlı | [görsel](media/2026-12-16-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | BİSİKLETİN SERVİS İSTİYOR: 5 İŞARET | — | — | API | planlı | [görsel](media/2026-12-16-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-16-story-2030.jpg) |
 
@@ -206,16 +206,16 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | İKİ FRENİ BİRLİKTE KULLAN | — | — | API | planlı | [görsel](media/2026-12-17-story-0930.jpg) |
-| 12:30 | Story · ürün | Patlak sürüşü bitirmesin | [Thumbs Up Soğuk Yama 34 Lü](https://nitrobisiklet.com/urun/thumbs-up-soguk-yama-34-lu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-17-story-1230) | 140 ₺ | Suite + link | planlı | [görsel](media/2026-12-17-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Karanlıkta görün | [Far Helix Pro-W 250 LM USB](https://nitrobisiklet.com/urun/far-helix-pro-w-250-lm-usb-90110440101/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-17-post-1930) | 2.517,65 ₺ | API | planlı | [görsel](media/2026-12-17-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Karanlıkta görün | [Far Helix Pro-W 250 LM USB](https://nitrobisiklet.com/urun/far-helix-pro-w-250-lm-usb-90110440101/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-17-story-2030) | 2.517,65 ₺ | Suite + link | planlı | [görsel](media/2026-12-17-story-2030.jpg) |
+| 09:30 | Story · ipucu | İKİ FRENİ BİRLİKTE KULLAN | — | — | Suite + link | planlı | [görsel](media/2026-12-17-story-0930.jpg) |
+| 12:30 | Story · ürün | Patlak sürüşü bitirmesin | [Thumbs Up Soğuk Yama 34'lü](https://nitrobisiklet.com/urun/thumbs-up-soguk-yama-34-lu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-17-story-1230) | 140 ₺ | Suite + link | planlı | [görsel](media/2026-12-17-story-1230.jpg) |
+| 19:30 | Carousel · ürün | Karanlıkta görün | [XBYC 6125 USB Şarjlı 400 Lumen Bisiklet Ön Lamba Far (StVZO)](https://nitrobisiklet.com/urun/xbyc-6125-usb-sarjli-400-lumen-bisiklet-on-lamba-far-stvzo/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-17-post-1930) | 650 ₺ | API | planlı | [görsel](media/2026-12-17-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Karanlıkta görün | [XBYC 6125 USB Şarjlı 400 Lumen Bisiklet Ön Lamba Far (StVZO)](https://nitrobisiklet.com/urun/xbyc-6125-usb-sarjli-400-lumen-bisiklet-on-lamba-far-stvzo/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-17-story-2030) | 650 ₺ | Suite + link | planlı | [görsel](media/2026-12-17-story-2030.jpg) |
 
 ## 18.12.2026 Cuma
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · marka | Dükkâna uğra | — | — | API | planlı | [görsel](media/2026-12-18-story-0930.jpg) |
+| 09:30 | Story · marka | Dükkâna uğra | — | — | Suite + link | planlı | [görsel](media/2026-12-18-story-0930.jpg) |
 | 12:30 | Story · ürün | Asfaltın bittiği yerde | [Lapierre Zesty TR 4.9 29" Jant 12 Vites Çift Süspansiyonlu Dağ Bisikleti 43cm (M) Mat Koyu Turkuaz](https://nitrobisiklet.com/urun/lapierre-zesty-tr-4-9-29-jant-12-vites-cift-suspansiyonlu-dag-bisikleti-43cm-m-mat-koyu-turkuaz/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-18-story-1230) | 144.825 ₺ | Suite + link | planlı | [görsel](media/2026-12-18-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Daha uzağa, daha rahat | [Bisan Florida 26" Elektrikli Şehir Bisikleti Mercan Rengi](https://nitrobisiklet.com/urun/bisan-florida-26-elektrikli-sehir-bisikleti-mercan-rengi/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-18-post-1930) | 38.160 ₺ | API | planlı | [görsel](media/2026-12-18-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Daha uzağa, daha rahat | [Bisan Florida 26" Elektrikli Şehir Bisikleti Mercan Rengi](https://nitrobisiklet.com/urun/bisan-florida-26-elektrikli-sehir-bisikleti-mercan-rengi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-18-story-2030) | 38.160 ₺ | Suite + link | planlı | [görsel](media/2026-12-18-story-2030.jpg) |
@@ -224,28 +224,28 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | ÇAPRAZ ZİNCİRDEN KAÇIN | — | — | API | planlı | [görsel](media/2026-12-19-story-0930.jpg) |
-| 11:00 | Carousel · liste | Çocuklara 6 yılbaşı hediyesi | [Bisan Floki V 20" Çocuk Bisikleti Mavi +5](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-19-post-1100) | — | API | planlı | [görsel](media/2026-12-19-post-1100-1.jpg) |
+| 09:30 | Story · ipucu | ÇAPRAZ ZİNCİRDEN KAÇIN | — | — | Suite + link | planlı | [görsel](media/2026-12-19-story-0930.jpg) |
+| 11:00 | Carousel · liste | Çocuklara 5 yılbaşı hediyesi | [Bisan Floki V 20" Çocuk Bisikleti Mavi +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-19-post-1100) | — | API | planlı | [görsel](media/2026-12-19-post-1100-1.jpg) |
 | 12:30 | Story · ürün | Elden geçti, yola hazır | [24" Jant Btwin Kız Bisikleti](https://nitrobisiklet.com/urun/24-jant-btwin-kiz-bisikleti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-19-story-1230) | 3.750 ₺ | Suite + link | planlı | [görsel](media/2026-12-19-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Çocuklara 6 yılbaşı hediyesi | [Bisan Floki V 20" Çocuk Bisikleti Mavi +5](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-19-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-19-story-2030.jpg) |
+| 20:30 | Story · tanıtım | Çocuklara 5 yılbaşı hediyesi | [Bisan Floki V 20" Çocuk Bisikleti Mavi +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-19-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-19-story-2030.jpg) |
 
 ## 20.12.2026 Pazar
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Sence hangisi daha zor: yokuş mu, karşıdan esen rüzgâr mı? | — | — | API | planlı | [görsel](media/2026-12-20-story-0930.jpg) |
-| 11:00 | Carousel · ürün | Tamir kitin yanında olsun | [Bisiklet Tamir Kiti](https://nitrobisiklet.com/urun/bisiklet-tamir-kiti/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-20-post-1100) | 140 ₺ | API | planlı | [görsel](media/2026-12-20-post-1100-1.jpg) |
-| 12:30 | Story · ürün | Zil çal, haber ver | [ZİL 070 - Kırmızı - Zır Zır](https://nitrobisiklet.com/urun/zil-070-kirmizi-zir-zir/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-20-story-1230) | 90 ₺ | Suite + link | planlı | [görsel](media/2026-12-20-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Tamir kitin yanında olsun | [Bisiklet Tamir Kiti](https://nitrobisiklet.com/urun/bisiklet-tamir-kiti/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-20-story-2030) | 140 ₺ | Suite + link | planlı | [görsel](media/2026-12-20-story-2030.jpg) |
+| 11:00 | Carousel · ürün | Delik lastiğe yolda çözüm | [Bisiklet Tamir Kiti](https://nitrobisiklet.com/urun/bisiklet-tamir-kiti/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-20-post-1100) | 140 ₺ | API | planlı | [görsel](media/2026-12-20-post-1100-1.jpg) |
+| 12:30 | Story · ürün | Zil çal, haber ver | [ZİL 070 - Sarı - Zır Zır](https://nitrobisiklet.com/urun/zil-070-sari-zir-zir/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-20-story-1230) | 90 ₺ | Suite + link | planlı | [görsel](media/2026-12-20-story-1230.jpg) |
+| 20:30 | Story · tanıtım | Delik lastiğe yolda çözüm | [Bisiklet Tamir Kiti](https://nitrobisiklet.com/urun/bisiklet-tamir-kiti/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-20-story-2030) | 140 ₺ | Suite + link | planlı | [görsel](media/2026-12-20-story-2030.jpg) |
 
 ## 21.12.2026 Pazartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | SELE YÜKSEKLİĞİNİ AYARLA | — | — | API | planlı | [görsel](media/2026-12-21-story-0930.jpg) |
-| 12:30 | Story · ürün | Arkadan geleni gör | [Ayna MR-K03 ( 360 ° Dönebilir, 20 ° Açı Ayarlanabilir )](https://nitrobisiklet.com/urun/ayna-mr-k03-360-donebilir-20-aci-ayarlanabilir-2503240200/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-21-story-1230) | 725,35 ₺ | Suite + link | planlı | [görsel](media/2026-12-21-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Patikaya hazır | [Tanke TK6 29" Enduro Dağ Bisikleti 1x10 Vites M (17") Kadro](https://nitrobisiklet.com/urun/tanke-tk6-29-enduro-dag-bisikleti-1x10-vites-m-17-kadro/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-21-post-1930) | 89.000 ₺ | API | planlı | [görsel](media/2026-12-21-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Patikaya hazır | [Tanke TK6 29" Enduro Dağ Bisikleti 1x10 Vites M (17") Kadro](https://nitrobisiklet.com/urun/tanke-tk6-29-enduro-dag-bisikleti-1x10-vites-m-17-kadro/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-21-story-2030) | 89.000 ₺ | Suite + link | planlı | [görsel](media/2026-12-21-story-2030.jpg) |
+| 09:30 | Story · ipucu | SELE YÜKSEKLİĞİNİ AYARLA | — | — | Suite + link | planlı | [görsel](media/2026-12-21-story-0930.jpg) |
+| 12:30 | Story · ürün | Arkadan geleni gör | [Ayna MR-K03 (360° Dönebilir, 20° Açı Ayarlanabilir)](https://nitrobisiklet.com/urun/ayna-mr-k03-360-donebilir-20-aci-ayarlanabilir-2503240200/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-21-story-1230) | 725,35 ₺ | Suite + link | planlı | [görsel](media/2026-12-21-story-1230.jpg) |
+| 19:30 | Carousel · ürün | Patikaya hazır | [Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi](https://nitrobisiklet.com/urun/bisan-trail-x-29-dag-bisikleti-1x8-vites-koyu-mavi-acik-mavi/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-21-post-1930) | 35.608,50 ₺ | API | planlı | [görsel](media/2026-12-21-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Patikaya hazır | [Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi](https://nitrobisiklet.com/urun/bisan-trail-x-29-dag-bisikleti-1x8-vites-koyu-mavi-acik-mavi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-21-story-2030) | 35.608,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-21-story-2030.jpg) |
 
 ## 22.12.2026 Salı
 
@@ -260,7 +260,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · servis | Sürpriz kalem yok | — | — | API | planlı | [görsel](media/2026-12-23-story-0930.jpg) |
+| 09:30 | Story · servis | Sürpriz kalem yok | — | — | Suite + link | planlı | [görsel](media/2026-12-23-story-0930.jpg) |
 | 12:30 | Story · ürün | Eşyaların yanında gelsin | [Procycle PC-350 Kadro Arası Çanta Siyah](https://nitrobisiklet.com/urun/procycle-pc-350-kadro-arasi-canta-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-23-story-1230) | 702 ₺ | Suite + link | planlı | [görsel](media/2026-12-23-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | ZİNCİRİNİ YANLIŞ MI YAĞLIYORSUN? | — | — | API | planlı | [görsel](media/2026-12-23-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-23-story-2030.jpg) |
@@ -269,7 +269,7 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | ISLAK SÜRÜŞTEN SONRA KURULA | — | — | API | planlı | [görsel](media/2026-12-24-story-0930.jpg) |
+| 09:30 | Story · ipucu | ISLAK SÜRÜŞTEN SONRA KURULA | — | — | Suite + link | planlı | [görsel](media/2026-12-24-story-0930.jpg) |
 | 12:30 | Story · ürün | Asfalt da toprak da | [Bisan All Trail GRX 400 Gravel 56cm](https://nitrobisiklet.com/urun/bisan-all-trail-grx-400-gravel-56cm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-1230) | 81.570 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Islak yola hazırlan | [MTB Plastik Çamurluk Takım Geniş](https://nitrobisiklet.com/urun/mtb-plastik-camurluk-takim-genis/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-24-post-1930) | 120 ₺ | API | planlı | [görsel](media/2026-12-24-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Islak yola hazırlan | [MTB Plastik Çamurluk Takım Geniş](https://nitrobisiklet.com/urun/mtb-plastik-camurluk-takim-genis/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-24-story-2030) | 120 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-2030.jpg) |
@@ -278,8 +278,8 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · marka | İçin rahat olsun | — | — | API | planlı | [görsel](media/2026-12-25-story-0930.jpg) |
-| 12:30 | Story · ürün | Kasetini yenile | [Shimano Acera CS-HG41-7 7 Vites 11-28T Kaset Dişli](https://nitrobisiklet.com/urun/shimano-acera-cs-hg41-7-7-vites-11-28t-kaset-disli/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-1230) | 1.034,10 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1230.jpg) |
+| 09:30 | Story · marka | İçin rahat olsun | — | — | Suite + link | planlı | [görsel](media/2026-12-25-story-0930.jpg) |
+| 12:30 | Story · ürün | Vitesler pürüzsüz geçsin | [Shimano Acera CS-HG41-7 7 Vites 11-28T Kaset Dişli](https://nitrobisiklet.com/urun/shimano-acera-cs-hg41-7-7-vites-11-28t-kaset-disli/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-1230) | 1.034,10 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1230.jpg) |
 | 19:30 | Carousel · ürün | İşe, okula, sahile | [Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri](https://nitrobisiklet.com/urun/bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metalik-gri/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-25-post-1930) | 16.885 ₺ | API | planlı | [görsel](media/2026-12-25-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | İşe, okula, sahile | [Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri](https://nitrobisiklet.com/urun/bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-25-story-2030) | 16.885 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-2030.jpg) |
 
@@ -287,9 +287,9 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | KIŞIN ÇAMURLUK TAK | — | — | API | planlı | [görsel](media/2026-12-26-story-0930.jpg) |
+| 09:30 | Story · ipucu | KIŞIN ÇAMURLUK TAK | — | — | Suite + link | planlı | [görsel](media/2026-12-26-story-0930.jpg) |
 | 11:00 | Carousel · liste | Bisikletine 5 yükseltme | [Pedal M505 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100) | — | API | planlı | [görsel](media/2026-12-26-post-1100-1.jpg) |
-| 12:30 | Story · ürün | Yedek iç lastik yanında mı? | [Maxxis Welter Weight İç Lastik 700"x23-32c İnce Sibop 48mm](https://nitrobisiklet.com/urun/maxxis-welter-weight-ic-lastik-700x23-32c-ince-sibop-48mm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-26-story-1230) | 265 ₺ | Suite + link | planlı | [görsel](media/2026-12-26-story-1230.jpg) |
+| 12:30 | Story · ürün | Yedek iç lastik yanında mı? | [Maxxis Welter Weight İç Lastik 700x23-32c İnce Sibop 48 mm](https://nitrobisiklet.com/urun/maxxis-welter-weight-ic-lastik-700x23-32c-ince-sibop-48mm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-26-story-1230) | 265 ₺ | Suite + link | planlı | [görsel](media/2026-12-26-story-1230.jpg) |
 | 20:30 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M505 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-2030.jpg) |
 
 ## 27.12.2026 Pazar
@@ -307,8 +307,8 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · ipucu | KAT KAT GİYİN | — | — | API | planlı | [görsel](media/2026-12-28-story-0930.jpg) |
 | 12:30 | Story · ürün | Sürüşünü ölç | [Assize 528 Bisiklet Hız Göstergesi](https://nitrobisiklet.com/urun/assize-528-bisiklet-hiz-gostergesi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-1230) | 550 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Pedalına güç kat | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-28-post-1930) | 46.955 ₺ | API | planlı | [görsel](media/2026-12-28-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Pedalına güç kat | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-28-story-2030) | 46.955 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Yokuşlar dert olmasın | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-28-post-1930) | 46.955 ₺ | API | planlı | [görsel](media/2026-12-28-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Yokuşlar dert olmasın | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-28-story-2030) | 46.955 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-2030.jpg) |
 
 ## 29.12.2026 Salı
 
@@ -316,15 +316,15 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Bisikletle işe ya da okula gidiyor musun? | — | — | API | planlı | [görsel](media/2026-12-29-story-0930.jpg) |
 | 12:30 | Story · ürün | Bisikletin yerinde kalsın | [Zoli High Security Bisiklet Kilit](https://nitrobisiklet.com/urun/zoli-high-security-bisiklet-kilit/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Yedek iç lastik yanında mı? | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-29-post-1930) | 345 ₺ | API | planlı | [görsel](media/2026-12-29-post-1930-1.jpg) |
-| 20:30 | Story · tanıtım | Yedek iç lastik yanında mı? | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-29-story-2030) | 345 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Lastiğin havası yerinde | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-29-post-1930) | 345 ₺ | API | planlı | [görsel](media/2026-12-29-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Lastiğin havası yerinde | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-29-story-2030) | 345 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-2030.jpg) |
 
 ## 30.12.2026 Çarşamba
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · servis | Randevunu online al | — | — | API | planlı | [görsel](media/2026-12-30-story-0930.jpg) |
-| 12:30 | Story · ürün | Lastiğin inik kalmasın | [Giyo GP-45E Pompa 80 Psi](https://nitrobisiklet.com/urun/giyo-gp-45e-pompa-80-psi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-30-story-1230) | 350 ₺ | Suite + link | planlı | [görsel](media/2026-12-30-story-1230.jpg) |
+| 09:30 | Story · servis | Randevunu online al | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-0930.jpg) |
+| 12:30 | Story · ürün | Lastiğin inik kalmasın | [Giyo GP-45E Pompa 80 psi](https://nitrobisiklet.com/urun/giyo-gp-45e-pompa-80-psi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-30-story-1230) | 350 ₺ | Suite + link | planlı | [görsel](media/2026-12-30-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | LASTİĞİNE KAÇ BAR HAVA BASMALISIN? | — | — | API | planlı | [görsel](media/2026-12-30-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-2030.jpg) |
 
@@ -332,8 +332,8 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | ELLERİNİ SICAK TUT | — | — | API | planlı | [görsel](media/2026-12-31-story-0930.jpg) |
-| 12:30 | Story · ürün | Mataran elinin altında | [Matara Kafesi BCG-323 Siyah Ayarlanabilir](https://nitrobisiklet.com/urun/matara-kafesi-bcg-323-siyah-ayarlanabilir/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-31-story-1230) | 675,05 ₺ | Suite + link | planlı | [görsel](media/2026-12-31-story-1230.jpg) |
+| 09:30 | Story · ipucu | ELLERİNİ SICAK TUT | — | — | Suite + link | planlı | [görsel](media/2026-12-31-story-0930.jpg) |
+| 12:30 | Story · ürün | Suyun hep yanında | [Polisport Plastik Matara Kafesi Premium](https://nitrobisiklet.com/urun/polisport-plastik-matara-kafesi-premium/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-31-story-1230) | 200 ₺ | Suite + link | planlı | [görsel](media/2026-12-31-story-1230.jpg) |
 | 19:30 | Görsel · marka | Mutlu yıllar 2027 | — | — | API | planlı | [görsel](media/2026-12-31-post-1930-1.jpg) |
 | 20:30 | Story · tanıtım | Mutlu yıllar! | — | — | Suite + link | planlı | [görsel](media/2026-12-31-story-2030.jpg) |
 
@@ -361,28 +361,29 @@ Sen kışın sürmeye devam ediyor musun, yoksa bisikleti bahara kadar kaldıran
 #nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #bisikletipuçları
 ```
 
-### 2026-11-26 19:30 · Frenlerin temiz kalsın
+### 2026-11-26 19:30 · Lastiğini yenile
 
 ```
-Kirli fren ses yapar.
+Yanağında çatlak, sırtında silinmiş diş varsa değişim zamanı.
 
-404 Balata Spreyi (Metal Temizleyici) 500 ml · 93,53 ₺ (KDV dahil)
+20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah - 2'li Set · 1.990 ₺ (KDV dahil)
 
-▪️ Hacim: 500 ml
-▪️ Kullanım: Fren balatası ve rotor temizliği
+▪️ Ölçü: 20x4.0
+▪️ Renk: Siyah
+▪️ Kullanım: Fat bike, elektrikli bisiklet
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N292 yaz.
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N516 yaz.
 
-Frenlerin ses yapıyor mu?
+Lastiklerini en son ne zaman değiştirdin?
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #diskfren
+#nitrobisiklet #köyceğiz #bisiklet #bisikletlastiği #bisikletparçası
 ```
 
 ### 2026-11-27 19:30 · Her güne bir pedal
@@ -395,7 +396,7 @@ Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koyu Yeşil · 17.640 ₺ (KDV d
 ▪️ Jant Ölçüsü: 28"
 ▪️ Vites: 7 vites (1x7)
 ▪️ Fren Tipi: V Fren
-▪️ Maşa: ÇELİK/STEEL
+▪️ Maşa: Çelik
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -420,7 +421,7 @@ Kış geldi diye bisiklet kenara konmaz. Islak ve karanlık günler için liste 
 2. Asistan Drox Çamurluk · 145 ₺ · Kod N430
 3. Rectus R-632 Kışlık Eldiven · 550 ₺ · Kod N201
 4. Best - Zincir Yağlayıcı Sprey LU-80 400 ml · 250 ₺ · Kod N293
-5. Shimano B05S Orjinal Organik Fren Balatası Kutusuz · 245 ₺ · Kod N226
+5. V-Brake Alyan Fren Pabucu, Fren Pedi [2ADET] · 95 ₺ · Kod N133
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -556,12 +557,12 @@ Lastiklerini en son ne zaman değiştirdin?
 ```
 Pedalı sen çevir, desteği motor versin.
 
-Bisan Envious Deore 29" Elektrikli Dağ Bisiklet 45cm 17.5" · 189.090 ₺ (KDV dahil)
+Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 45cm 17.5" · 189.090 ₺ (KDV dahil)
 
 ▪️ Jant Ölçüsü: 29"
 ▪️ Vites: 12 vites (1x12)
 ▪️ Fren Tipi: Hidrolik Disk Fren
-▪️ Motor: Shimano du-ep800
+▪️ Motor: Shimano DU-EP800
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -585,7 +586,7 @@ Bisikletçiye hediye almak pahalı olmak zorunda değil.
 1. Polisport C600 Matara · 220 ₺ · Kod N308
 2. Bandana Bisiklet & Outdoor · 189 ₺ · Kod N135
 3. Procycle PC-300 Kadro Üçgen Çanta · 220 ₺ · Kod N452
-4. I Love My Bike Zil Kırmızı · 80 ₺ · Kod N420
+4. I Love My Bike Zil Sarı · 80 ₺ · Kod N422
 5. Gidon Bağlantılı 360 Derece Dönebilir Yan Ayna Tekli · 190 ₺ · Kod N419
 
 Fiyatlar KDV dahildir.
@@ -602,27 +603,25 @@ Sana bisikletle ilgili alınan en güzel hediye neydi?
 #nitrobisiklet #köyceğiz #bisiklet #hediyefikri #yılbaşıhediyesi
 ```
 
-### 2026-12-06 11:00 · Küçük yolcuya yer aç
+### 2026-12-06 11:00 · Rahat otur, uzun sür
 
 ```
-Aile sürüşleri için.
+Yıpranan seleyi değiştirmek sürüşü değiştirir.
 
-Sarissa Elektrikli Bisiklet Uyumlu Kadro Bağlantılı Çocuk Koltuğu Siyah-Kırmızı · 3.150 ₺ (KDV dahil)
-
-▪️ Renk: Siyah-Kırmızı
+Rectus Bisiklet Sele Kırmızı Mtb · 380 ₺ (KDV dahil)
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N378 yaz.
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N372 yaz.
 
-Çocuğunla ilk sürüşünü hatırlıyor musun?
+Seleni hiç değiştirdin mi?
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #çocukkoltuğu #ailecebisiklet
+#nitrobisiklet #köyceğiz #bisiklet #bisikletselesi #bisikletparçası
 ```
 
 ### 2026-12-07 19:30 · Yol bitince devam et
@@ -635,7 +634,7 @@ Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites 56cm · 66.910 ₺ (KDV dahil
 ▪️ Jant Ölçüsü: 28" (700c)
 ▪️ Vites: 18 vites (2x9)
 ▪️ Fren Tipi: Mekanik Disk Fren
-▪️ Maşa: Carbon
+▪️ Maşa: Karbon
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -692,7 +691,7 @@ Tabloyu kaydet, bisiklet bakarken lazım olur. Emin olamıyorsan çocuğunla bir
 
 Senin ilk bisikletin kaç janttı, hatırlıyor musun?
 
-🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.
+🚲 Çocuk bisikletleri profildeki linkte; jant boyuna göre seçebilirsin.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
@@ -704,7 +703,7 @@ Senin ilk bisikletin kaç janttı, hatırlıyor musun?
 ```
 Fren bakımında işini kolaylaştırır.
 
-Grayzer Fren Balata Temizleme Spreyi 500 ML · 120 ₺ (KDV dahil)
+Grayzer Fren Balata Temizleme Spreyi 500 ml · 120 ₺ (KDV dahil)
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -720,24 +719,24 @@ Frenlerin ses yapıyor mu?
 #nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #diskfren
 ```
 
-### 2026-12-11 19:30 · Günlük sürüşün bisikleti
+### 2026-12-11 19:30 · Şehirde özgürlük
 
 ```
-İşe, okula, sahile: tek bisiklet, her yere.
+Arabayı park et, keyfi pedalla.
 
-Carraro Sportive 225 28" Jant 24 Vites Hidrolik Disk Şehir Bisikleti 46cm Mat Antrasit-Siyah-Kırmızı · 31.825 ₺ (KDV dahil)
+Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites · 28.440 ₺ (KDV dahil)
 
-▪️ Jant Ölçüsü: 28"
-▪️ Vites: 24 vites (3x8)
+▪️ Jant Ölçüsü: 28" (700c)
+▪️ Vites: 27 vites (3x9)
 ▪️ Fren Tipi: Hidrolik Disk Fren
-▪️ Maşa: SUNTOUR NEX HLO 63mm MAŞADAN KİLİTLİ
+▪️ Maşa: Mozo
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N510 yaz.
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N506 yaz.
 
 Bisikletle işe ya da okula gidiyor musun?
 
@@ -751,9 +750,9 @@ Bisikletle işe ya da okula gidiyor musun?
 ```
 Yılbaşı listesindeki bisikletçi için fikirler.
 
-1. Asistan Cape Gl 200 Kısa Parmak Eldiven Gri · 380 ₺ · Kod N192
+1. Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi · 380 ₺ · Kod N195
 2. Procycle PC-260 Kadro Telefon Tutucu Çanta Siyah · 270 ₺ · Kod N381
-3. Ab 12x800 Cable Lock · 350 ₺ · Kod N288
+3. Ab 12x800 Kablo Kilidi · 350 ₺ · Kod N288
 4. Vona GP-03 Bisiklet El Pompası · 265,50 ₺ · Kod N352
 5. Rectus Kilometre Saati · 450 ₺ · Kod N300
 
@@ -778,7 +777,7 @@ Matara çantada değil, kadroda dursun.
 
 Sedona SD100 Matara Kafesi · 115 ₺ (KDV dahil)
 
-Sedona SD100 Matara Kafesi Malzeme Plastik olduğu için ürün hafiftir. Esnemelerde kırılmaya karşı dayanıklıdır.
+Malzemesi plastik olduğu için ürün hafiftir. Esnemelerde kırılmaya karşı dayanıklıdır.
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -804,7 +803,7 @@ Carraro RAVE BMX 20" 1-V VB Mat Mor · 22.601 ₺ (KDV dahil)
 ▪️ Jant Ölçüsü: 20"
 ▪️ Vites: Tek vites
 ▪️ Fren Tipi: V Fren
-▪️ Maşa: ÇELİK RİJİT 1.1/8"
+▪️ Maşa: Çelik Rijit 1.1/8"
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -825,19 +824,18 @@ Neden NITRO?
 ```
 Disk frenin yarısı balata, yarısı rotor.
 
-Shimano Deore XT SM-RT76 203 mm 6 Vidalı Disk Fren Rotoru · 2.970 ₺ (KDV dahil)
+Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru · 1.188 ₺ (KDV dahil)
 
-▪️ Çap: 203 mm
+▪️ Çap: 180 mm
 ▪️ Bağlantı: 6 vida
-▪️ Seri: Deore XT
-▪️ Model: SM-RT76
+▪️ Model: SM-RT56
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N158 yaz.
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N163 yaz.
 
 Rotorun kaç milim?
 
@@ -857,7 +855,7 @@ En çok dikkat etmen gereken yer frenler. Fren kolu gidona yaklaşıyorsa ya da 
 
 Vites atlaması, paslı zincir, jantta yalpa ve pedaldan gelen tık sesi de ertelendikçe büyür. Erken fark edilen sorun çoğu zaman bir ayarla çözülür.
 
-Köyceğiz'deki atölyemizde servis ve bakım yapıyoruz. Sloganımız "aynı gün servis"; randevunu sitemizden alabilirsin.
+Köyceğiz'deki atölyemizde servis ve bakım yapıyoruz; randevunu sitemizden alabilirsin.
 
 Senin bisikletin en son ne zaman bakım gördü?
 
@@ -873,14 +871,14 @@ Senin bisikletin en son ne zaman bakım gördü?
 ```
 Işık yalnızca görmek için değil, görünmek için.
 
-Far Helix Pro-W 250 LM USB · 2.517,65 ₺ (KDV dahil)
+XBYC 6125 USB Şarjlı 400 Lumen Bisiklet Ön Lamba Far (StVZO) · 650 ₺ (KDV dahil)
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N128 yaz.
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N129 yaz.
 
 Akşam sürüşünde ışıkların hep yanında mı?
 
@@ -899,7 +897,7 @@ Bisan Florida 26" Elektrikli Şehir Bisikleti Mercan Rengi · 38.160 ₺ (KDV da
 ▪️ Jant Ölçüsü: 26"
 ▪️ Vites: 21 vites (3x7)
 ▪️ Fren Tipi: V Fren
-▪️ Motor: ANANDA M131SD Rear Hub Motor
+▪️ Motor: ANANDA M131SD arka göbek motoru
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -915,7 +913,7 @@ E-bisiklet denedin mi, ilk izlenimin neydi?
 #nitrobisiklet #köyceğiz #bisiklet #elektriklibisiklet #ebisiklet
 ```
 
-### 2026-12-19 11:00 · Çocuklara 6 yılbaşı hediyesi
+### 2026-12-19 11:00 · Çocuklara 5 yılbaşı hediyesi
 
 ```
 Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli.
@@ -924,8 +922,7 @@ Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli.
 2. Bisan B-Bike 12" Çocuk Bisikleti Metalik Pembe · 5.560 ₺ · Kod N464
 3. Raptor Çocuk Bisiklet Kaskı Candy M Beden · 850 ₺ · Kod N286
 4. Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Mavi S · 380 ₺ · Kod N197
-5. Bisiklet Zili Pembe Kalp Desenli Çocuk Bisiklet Zili · 149 ₺ · Kod N416
-6. Bisiklet Selesi Siyah-Gri 16 20 Jant Rectus · 250 ₺ · Kod N368
+5. Bisiklet Selesi Siyah-Gri 16-20 Jant Rectus · 250 ₺ · Kod N368
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
@@ -941,7 +938,7 @@ Senin ilk bisikletin kaç janttı, hatırlıyor musun?
 #nitrobisiklet #köyceğiz #bisiklet #çocukbisikleti #yılbaşıhediyesi
 ```
 
-### 2026-12-20 11:00 · Tamir kitin yanında olsun
+### 2026-12-20 11:00 · Delik lastiğe yolda çözüm
 
 ```
 Patlak lastik sürüşün sonu olmak zorunda değil.
@@ -967,19 +964,19 @@ Yolda lastik tamir ettin mi hiç?
 ```
 Köyceğiz'in tepeleri için bir dağ bisikleti.
 
-Tanke TK6 29" Enduro Dağ Bisikleti 1x10 Vites M (17") Kadro · 89.000 ₺ (KDV dahil)
+Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi · 35.608,50 ₺ (KDV dahil)
 
-▪️ Jant Ölçüsü: 29"
-▪️ Vites: 1x10
-▪️ Fren Tipi: Hidrolik Disk Fren (ön - arka)
-▪️ Maşa: Tanke TF-36 160 mm havalı, kilitlenebilir
+▪️ Maşa: Alüminyum Süspansiyon 120 mm
+▪️ Fren Sistemi: Shimano, BR-MT200 Hidrolik Disk
+▪️ Arka Aktarıcı: Shimano Acera RD-M3020-8
+▪️ Lastik: Maxxıs 29"X2.40
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N156 yaz.
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N151 yaz.
 
 Senin favori patikan neresi?
 
@@ -1086,8 +1083,8 @@ Bisikletle işe ya da okula gidiyor musun?
 Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.
 
 1. Pedal M505 Siyah · 863,21 ₺ · Kod N343
-2. Asistan Drox GR170 Bisiklet Elciği 170mm · 349 ₺ · Kod N174
-3. Vona 1928 Comfort Sele · 540 ₺ · Kod N375
+2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · Kod N180
+3. Rectus Mtb Sele Kırmızı · 345 ₺ · Kod N357
 4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · Kod N173
 5. Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah · 702 ₺ · Kod N254
 
@@ -1126,7 +1123,7 @@ Bisikletinde ayna kullanıyor musun?
 #nitrobisiklet #köyceğiz #bisiklet #bisikletaynası #güvenlisürüş
 ```
 
-### 2026-12-28 19:30 · Pedalına güç kat
+### 2026-12-28 19:30 · Yokuşlar dert olmasın
 
 ```
 Yokuş da rüzgâr da artık bahane değil.
@@ -1152,7 +1149,7 @@ E-bisiklet denedin mi, ilk izlenimin neydi?
 #nitrobisiklet #köyceğiz #bisiklet #elektriklibisiklet #ebisiklet
 ```
 
-### 2026-12-29 19:30 · Yedek iç lastik yanında mı?
+### 2026-12-29 19:30 · Lastiğin havası yerinde
 
 ```
 Yolda yama yapmak yerine iç lastik değiştirmek daha hızlıdır.

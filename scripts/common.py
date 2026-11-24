@@ -78,8 +78,36 @@ def cancelled_ids() -> set[str]:
 
 # ---- Veri dosyaları ----------------------------------------------------------------------------
 
+# Sitedeki bazı ürün fotoğrafları ürünü yanlış gösteriyor; bu dosya adları içerikte hiç kullanılmaz.
+GORSEL_ENGEL = {
+    "comet-isik.png",   # lamba yerine ölçü çizimi ve Çince yazı
+    "bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-koyu-yesil-3.jpeg",   # koyu yeşil ürünün altında açık yeşil kadro
+    "bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-koyu-yesil-4.jpeg",   # aynı: açık yeşil kadro
+    # Bisikletin yarısını gösteren yakın plan site görselleri (karede kesik bisiklet gibi duruyor)
+    "bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-koyu-yesil-2.jpeg",
+    "bisan-all-trail-eco-sora-gravel-bisiklet-28-jant.png",
+    "Bisan-envious-29-22-jant-elektrikli-dag-bisikleti-m-kadro.png",
+    "bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metali-2.jpeg",
+    "carraro-gravel-g0-28-jant-bisiklet.png",   # site galerisinden kesilmiş, ok işareti kalmış
+    "schwalbe-smart-sam-performance-29x2-25-d-2.jpg",   # kahverengi yanaklı varyant; ürün siyah
+    # Kadro arası çanta: başka markalı bisiklet öne çıkıyor
+    "procycle-pc-350-kadro-arasi-canta-siyah-1.jpg",
+    "procycle-pc-350-kadro-arasi-canta-siyah-4.jpg",
+    "procycle-pc-350-kadro-arasi-canta-siyah-5.jpg",
+    # İkinci göz denetimi (24 Kasım)
+    "shimano-kutusuz-balata-seti.png",   # tek takım ürün, görselde toplu servis kutusu
+    "bisan-mtx-7200-27-5-dag-bisikleti-3x8-vi-3.jpg",   # arka teker kesik
+    "360-donebilen-genis-acili-ikili-dikiz-ay-3.jpg",   # ölçü çizimi
+    "ayna-mr-k03-360-donebilir-20-aci-ayarlanabilir-2503240200-1.jpg",   # gidon kesik kırpılmış
+}
+
+
 def load_products() -> list[dict]:
-    return read_json(DATA / "products.json", [])
+    prods = read_json(DATA / "products.json", [])
+    for p in prods:
+        if p.get("images"):
+            p["images"] = [u for u in p["images"] if u.rsplit("/", 1)[-1] not in GORSEL_ENGEL]
+    return prods
 
 
 def load_codes() -> dict[str, str]:

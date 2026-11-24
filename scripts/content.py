@@ -34,7 +34,7 @@ GROUPS = {
 BIKE_CATS = ("Dağ Bisikleti", "Gravel", "Elektrikli Bisiklet", "BMX/Dirtjump", "Şehir Bisikleti", "Çocuk Bisikleti",
              "2. El Bisiklet")
 # Görseldeki kategori etiketi CSS ile büyütülür; Türkçe kuralın bozacağı adlar hazır büyük harfle verilir
-CAT_LABEL = {"BMX/Dirtjump": "BMX / DIRT JUMP", "Outlet": "OUTLET"}
+CAT_LABEL = {"BMX/Dirtjump": "BMX / DIRT JUMP", "Outlet": "OUTLET", "Elcik Sargı Barend": "Elcik · Sargı · Bar ucu"}
 
 KIS_AYLARI = (11, 12, 1, 2)
 YAZ_AYLARI = (5, 6, 7, 8, 9)
@@ -63,7 +63,18 @@ FOREIGN_I = {"ACTIVE", "BRIVIGA", "CLASSIC", "CRUISER", "HELIX", "LINE", "LITE",
              "RELEASE", "PREMIUM", "LINKGLIDE", "BIKE", "CITY", "TRAIL", "DIRT", "LIGHT", "MINI", "PRIME", "SPRINT"}
 # Sitedeki yazım hataları (Türkçe küçük harfe çevrilmiş yabancı adlar)
 FIXES = (("Shımano", "Shimano"), ("SHİMANO", "SHIMANO"), ("Premıum", "Premium"), ("Iç Lastik", "İç Lastik"), ("Gıneyea", "Gineyea"), ("Slikon", "Silikon"), ("Solusyonsuz", "Solüsyonsuz"),
-         ("Bisiklet&Kayak&Cross", "Bisiklet & Kayak & Cross"))
+         ("Bisiklet&Kayak&Cross", "Bisiklet & Kayak & Cross"), ("Orjinal", "Orijinal"), ("ORJİNAL", "ORİJİNAL"),
+         ("Cable Lock", "Kablo Kilidi"), ('700"x', "700x"), ("Malzeme Plastik olduğu için", "Malzemesi plastik olduğu için"),
+         ("Maxxıs", "Maxxis"), ("Rockshox", "RockShox"), ("ZİL 070 - Kırmızı - Zır Zır", "Zır Zır Zil 070 Kırmızı"),
+         ("Bisiklet Zili Pembe Kalp Desenli Çocuk Bisiklet Zili", "Pembe Kalp Desenli Çocuk Bisiklet Zili"))
+# Biçim düzeltmeleri: birim boşluğu/küçük harf, ölçü çarpısı, parantez boşlukları, sayı ekleri, tamlama
+FORMATS = ((r"(\d+(?:[.,]\d+)?)\s*(?:mm|MM|Mm)\b", r"\1 mm"), (r"(\d+(?:[.,]\d+)?)\s*(?:ml|ML|Ml)\b", r"\1 ml"),
+           (r"(\d+(?:[.,]\d+)?)\s*(?:PSI|Psi|PSİ)\b", r"\1 psi"), (r"(\d)X(\d)", r"\1x\2"),
+           (r"\(\s+", "("), (r"\s+\)", ")"), (r"\s+°", "°"),
+           (r"\b(\d+) (?:Lü|LÜ)\b", r"\1'lü"), (r"\b(\d+) (?:Li|Lİ)\b", r"\1'li"), (r"\b(\d+) (?:Lu|LU)\b", r"\1'lu"),
+           (r"\b(\d+) (?:Lı|LI)\b", r"\1'lı"), (r"\b(\d{2}) (\d{2}) Jant\b", r"\1-\2 Jant"),
+           (r"\b(Dağ|Şehir|Yol|Çocuk) Bisiklet\b(?! Kask| Zil| Eldiven| Sele)", r"\1 Bisikleti"),
+           (r"\b([a-z]{2,3}-[a-z]{1,3}\d{3,}[a-z]?)\b", lambda m: m.group(1).upper()))
 COLORS = {"siyah", "beyaz", "kırmızı", "mavi", "yeşil", "gri", "sarı", "turuncu", "mor", "pembe", "lacivert",
           "mat", "parlak", "renkli", "antrasit", "bordo", "kahverengi", "füme", "haki", "krom", "gümüş", "gold",
           "krem", "metalik", "koyu", "açık", "bebek", "çağla", "yeşili", "mavisi", "pudra", "oilsick", "neon",
@@ -94,6 +105,8 @@ def _title_word(w: str) -> str:
 def fix_text(s: str) -> str:
     for a, b in FIXES:
         s = s.replace(a, b)
+    for a, b in FORMATS:
+        s = re.sub(a, b, s)
     return s
 
 
@@ -155,8 +168,31 @@ HARIC = re.compile(r"scooter|motosiklet|motor kilidi|jump starter|akü|kompresö
                    r"ortlieb e227|xbyc blt|balata xbyc|hediyeli")   # "hediyeli": addaki kampanya iddiası yinelenmez
 
 
+# Fotoğrafı ürünü yanlış gösteren ya da başka sitenin filigranını taşıyan ürünler içeriğe girmez.
+HARIC_SLUG = (
+    "carraro-sportive-225-28-jant-24-vites-hidrolik-disk-sehir-bisikleti-46cm-mat-ant",  # adı antrasit, fotoğrafları mavi
+    "tanke-tk6-29-enduro-dag-bisikleti",   # fotoğraflarda sahibinden.com filigranı
+    # Tek/tüm görseli ürünle çelişen ya da paylaşılamaz ürünler (site görseli düzelince çıkarılabilir)
+    "maya-m410-zincir",                    # kutuda X410 yazıyor
+    "wake-wk-rt01-160-mm-6-vidali-disk-fren-rotoru",   # tek görsel ölçü çizimi
+    "i-love-my-bike-zil-mavi",             # adı mavi, fotoğrafta 7 renk
+    "zil-070-kirmizi-zir-zir",             # adı kırmızı, fotoğrafta 4 renk
+    "bisiklet-zili-pembe-kalp-desenli",    # elde çekilmiş amatör fotoğraf
+    "asistan-cape-gl-200-kisa-parmak-eldiven-gri",   # adı gri, fotoğrafta siyah eldiven
+    "404-balata-spreyi-metal-temizleyici",  # açılır pencere ekran görüntüsü (X simgesi)
+    "i-love-my-bike-zil-kirmizi",          # fotoğrafta 7 renk zil
+    "sarissa-elektrikli-bisiklet-uyumlu-kadro-baglantili-cocuk-koltugu-siyah-kirmizi",  # fotoğraf siyah-sarı
+    "far-helix-lite-w-150-lm",             # İngilizce pazarlama bandı
+    "far-helix-pro-w-250-lm",              # İngilizce pazarlama bandı
+    "shimano-deore-xt-sm-rt76-203-mm",     # fotoğraftaki rotor 180 mm
+    "vona-1928-comfort-sele",              # fotoğrafta başka marka sele
+    "asistan-drox-gr170-bisiklet-elcigi",  # görsellerde yapay zekâ filigranı
+    "matara-kafesi-bcg-323",               # İngilizce "Extendable" yazısı
+)
+
+
 def excluded(p: dict) -> bool:
-    return bool(HARIC.search(tr_lower(p.get("name") or "")))
+    return bool(HARIC.search(tr_lower(p.get("name") or ""))) or (p.get("slug") or "").startswith(HARIC_SLUG)
 
 
 # ---- Kurallar: (kategori + ad anahtar kelimesi) -> alt tür ve o alt türe uyan başlık havuzu --------
@@ -178,7 +214,7 @@ RULES = [
         "Sıfır şart değil. Bu bisiklet kontrollü 2. el."],
        "Senin ilk bisikletin sıfır mıydı, 2. el mi?", ["#ikincielbisiklet", "#bisikletsevenler"]),
     _r("ebike", "Elektrikli bisiklet", ["Elektrikli Bisiklet"],
-       ["Pedalına <em>güç kat</em>", "Elektrik <em>desteğiyle</em> sür", "Daha uzağa, <em>daha rahat</em>"],
+       ["Pedalına <em>güç kat</em>", "Elektrik <em>desteğiyle</em> sür", "Daha uzağa, <em>daha rahat</em>", "Yokuşlar <em>dert olmasın</em>"],
        ["Pedalı sen çevir, desteği motor versin.", "Yokuş da rüzgâr da artık bahane değil.",
         "Elektrik desteğiyle rotanı uzat."],
        "E-bisiklet denedin mi, ilk izlenimin neydi?", ["#elektriklibisiklet", "#ebisiklet"]),
@@ -257,7 +293,7 @@ RULES = [
        ["Lastikler sürmesen de hava kaybeder.", "İnik lastikle sürüş hem yorar hem lastiği yıpratır."],
        "Lastik basıncını pompayla mı ölçersin, parmakla mı?", ["#bisikletpompası", "#bisikletbakımı"], inc="pompa"),
     _r("matara_kafesi", "Matara kafesi", ["Matara ve Kafes"],
-       ["Mataran <em>elinin altında</em>", "Mataraya <em>sağlam yuva</em>"],
+       ["Mataran <em>elinin altında</em>", "Mataraya <em>sağlam yuva</em>", "Suyun <em>hep yanında</em>"],
        ["Matara çantada değil, kadroda dursun.", "Su elinin altında olunca daha sık içersin."],
        "Mataran kadroda mı durur, çantada mı?", ["#matarakafesi", "#bisikletaksesuarı"], inc="kafes|tutucu"),
     _r("matara", "Matara", ["Matara ve Kafes"], ["Suyun <em>yanında olsun</em>", ("Kışın da <em>su iç</em>", KIS)],
@@ -305,7 +341,7 @@ RULES = [
     _r("elcik", "Elcik", ["Elcik Sargı Barend"], ["Gidonu <em>sağlam kavra</em>", "Elciğini <em>yenile</em>"],
        ["Elin her sürüşte gidonda; elcik düşündüğünden önemli.", "Yıpranan elcik kayar. Yenisi takılır, fark hissedilir."],
        "Bisikletinde ilk değiştirdiğin parça neydi?", ["#elcik", "#bisikletparçası"], inc="elci[kğ]"),
-    _r("ic_lastik", "İç lastik", ["İç Lastik"], ["Yedek iç lastik <em>yanında mı?</em>", "Patlak <em>yolda bırakmasın</em>"],
+    _r("ic_lastik", "İç lastik", ["İç Lastik"], ["Yedek iç lastik <em>yanında mı?</em>", "Patlak <em>yolda bırakmasın</em>", "Lastiğin <em>havası yerinde</em>"],
        ["Yolda yama yapmak yerine iç lastik değiştirmek daha hızlıdır.", "Yedek iç lastik: küçük yük, büyük rahatlık."],
        "Yolda lastiğin patladı mı hiç, o gün ne yaptın?", ["#içlastik", "#bisikletbakımı"]),
     _r("dis_lastik", "Dış lastik", ["Dış Lastik"],
@@ -317,7 +353,7 @@ RULES = [
         "Yeni zincir, aktarmanın geri kalanını korur."],
        "Zincirini en son ne zaman değiştirdin?", ["#bisikletzinciri", "#bisikletbakımı"], inc="zincir",
        exc="gergi|kılavuz|powerlink|aynakol|koruma|teli"),
-    _r("kaset", "Kaset dişli", ["Vites Grubu"], ["Kasetini <em>yenile</em>", "Arka dişlini <em>yenile</em>"],
+    _r("kaset", "Kaset dişli", ["Vites Grubu"], ["Kasetini <em>yenile</em>", "Arka dişlini <em>yenile</em>", "Vitesler <em>pürüzsüz geçsin</em>"],
        ["Aşınmış dişli zinciri attırır.", "Zincirle birlikte kaset de yıpranır."],
        "Arkada kaç vitesin var?", ["#bisikletparçası", "#shimano"], inc="kaset"),
     _r("balata", "Fren balatası", ["Fren Grubu", "Balatalar & Pabuçlar"],
@@ -347,7 +383,7 @@ RULES = [
        ["Çok amaçlı bir bakım spreyi.", "Bakım çantasında bulunması iyi olanlardan."],
        "Bisikletinin bakımını kendin mi yaparsın?", ["#bisikletbakımı", "#bisikletservisi"], inc="bakım spreyi"),
     _r("yama", "Yama ve tamir kiti", ["Atölye ve Tamir", "Anahtar ve Alet"],
-       ["Patlak <em>sürüşü bitirmesin</em>", "Tamir kitin <em>yanında olsun</em>"],
+       ["Patlak <em>sürüşü bitirmesin</em>", "Tamir kitin <em>yanında olsun</em>", "Delik lastiğe <em>yolda çözüm</em>"],
        ["Patlak lastik sürüşün sonu olmak zorunda değil.", "Küçük bir kit, yolda büyük rahatlık."],
        "Yolda lastik tamir ettin mi hiç?", ["#bisiklettamiri", "#bisikletbakımı"], inc="yama|tamir kiti"),
 ]
@@ -450,6 +486,22 @@ FOOTER_KEYS = {"Atölye", "Fiş takibi", "Destek", "Sipariş takibi", "Kargo", "
 FOOTER_VALUES = FOOTER_KEYS | {"Çamur günlüğü", "Uygulamayı kur", "İade & değişim", "Reddet", "Açıklama"}
 
 
+EN_TR = [(r"\bsuspension fork\b", "süspansiyonlu maşa"), (r"\brear hub motor\b", "arka göbek motoru"),
+         (r"\bfront hub motor\b", "ön göbek motoru"), (r"\blithium battery\b", "lityum batarya"),
+         (r"\balloy suspension\b", "alüminyum süspansiyonlu"), (r"\bcarbon\b", "Karbon"), (r"\bbarend\b", "bar uç")]
+
+
+def _spec_value(v: str) -> str:
+    """Değer biçimi: tümü büyük harfli değer başlık düzenine, birimler standart yazıma (36v/10.4ah -> 36 V / 10,4 Ah)."""
+    letters = [ch for ch in v if ch.isalpha()]
+    if len(letters) > 3 and sum(ch.isupper() for ch in letters) / len(letters) > 0.7:
+        v = " ".join(_title_word(w) for w in v.split(" "))
+    v = re.sub(r"(\d+)\.(\d+)\s*ah\b", r"\1,\2 Ah", v, flags=re.I)
+    v = re.sub(r"(\d+)\s*ah\b", r"\1 Ah", v, flags=re.I)
+    v = re.sub(r"(\d+)\s*v\b", r"\1 V", v, flags=re.I)
+    return re.sub(r"\s*/\s*(?=\d+(,\d+)? Ah)", " / ", v)
+
+
 def clean_specs(p: dict, n: int = 6) -> list[tuple[str, str]]:
     """Görsele ve açıklamaya girebilecek temiz (anahtar, değer) çiftleri, öncelik sırasıyla."""
     raw = p.get("specs") or {}
@@ -463,12 +515,17 @@ def clean_specs(p: dict, n: int = 6) -> list[tuple[str, str]]:
             continue
         if re.search(r"[.!?]$", v) or v.count(" ") > 6 or re.match(r"^[-•●*]", v):  # cümle ya da madde imi
             continue
-        if "/" in v and re.search(r"[a-z]{4,}\s*/\s*[A-Za-z]{4,}|/[a-z]+ [a-z]+", v):   # çift dilli değer: Türkçesi
+        if "/" in v and re.search(r"[a-z]{4,}\s*/\s*[A-Za-z]{4,}|/[a-z]+ [a-z]+|/\s*(steel|alloy|alumin[i]?um|carbon)\b",
+                                  v, re.I):   # çift dilli değer: Türkçesi
             v = v.split("/")[0].strip()
-        out[k] = v
+        for en, tr in EN_TR:
+            v = re.sub(en, tr, v, flags=re.I)
+        out[k] = _spec_value(v)
     rows = [(k, out[k]) for k in SPEC_ORDER if k in out]
     if "Kadro Malzemesi" in out:     # aynı bilgiyi iki kez gösterme
         rows = [(k, v) for k, v in rows if k != "Kadro"]
+    if "Fren Tipi" in out and "Fren Sistemi" in out:
+        rows = [(k, v) for k, v in rows if k != "Fren Sistemi"]
     return rows[:n]
 
 
@@ -494,6 +551,9 @@ def description(p: dict, limit: int = 300) -> str:
         while len(words) > 1 and len(words[0]) > 1 and not any(ch.islower() for ch in words[0]):  # baştaki BÜYÜK ad
             words.pop(0)
         s = " ".join(words)
+        if tr_lower(s).startswith(name_l + " ") and len(s) > len(name_l) + 35:   # cümle ürün adıyla başlıyorsa ad atılır
+            s = s[len(name_l):].strip()
+            s = s[:1].translate(TR_UPPER).upper() + s[1:]
         letters = [ch for ch in s if ch.isalpha()]
         if len(s) < 35 or not s[0].isupper() or _BAD_SENT.search(s) or _BAD_CASE.search(s) or not letters:
             continue
@@ -586,6 +646,7 @@ def list_caption(lst: dict) -> tuple[str, str]:
 def tip_caption(tip: dict) -> tuple[str, str]:
     text = tip["caption"].strip()
     cta = ("🔧 Servis randevusu için profildeki linke dokun: “Servis randevusu al”." if tip.get("cta") == "servis"
+           else "🚲 Çocuk bisikletleri profildeki linkte; jant boyuna göre seçebilirsin." if tip.get("cta") == "cocuk"
            else "🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.")
     return _join([text, cta, SEO_LINE, tags_for(["#bisikletbakımı", "#bisikletipuçları"])]), text.split("\n", 1)[0]
 
@@ -597,6 +658,12 @@ def newyear_caption(year: int) -> tuple[str, str]:
 
 
 # ---- Alt metin -----------------------------------------------------------------------------------
+
+def cumle(s: str) -> str:
+    """Cümle sonuna nokta koy; zaten . ? ! ile bitiyorsa ikinci noktalama ekleme ("UYAR?." olmaz)."""
+    s = s.strip()
+    return s if s[-1:] in ".?!…" else s + "."
+
 
 def product_alt(p: dict, title: str) -> str:
     return f"{display_name(p)}, {fmt_price(p['price'])}. NITRO Bisiklet ürün görseli: “{plain(title)}”."[:1000]
@@ -672,8 +739,9 @@ def list_sub(list_id: str, items: list[dict]) -> str:
     rng = f"{fmt_price(lo)} – {fmt_price(hi)}" if lo != hi else fmt_price(lo)
     if list_id in ("hediye250", "hediye500"):
         return f"Fiyatlar {rng} arasında. Hepsinin kodu görselde."
-    labels = list(dict.fromkeys(x["label"] for x in items))
-    return (", ".join(labels[:5]) + ".")[:110]
+    labels = list(dict.fromkeys(x["label"] for x in items))[:5]
+    labels = labels[:1] + [tr_lower(s[:1]) + s[1:] for s in labels[1:]]
+    return (", ".join(labels) + ".")[:110]
 
 
 def build_list(list_id: str, pool: list[dict], ok) -> list[dict] | None:
@@ -731,8 +799,8 @@ def brand_facts(site: dict) -> list[dict]:
          "facts": [("pin", "2021'den beri", "Köyceğiz, Ölemez Dağı etekleri"),
                    ("tool", "Satış ve servis", "İkisi tek çatı altında"),
                    ("shield", "Yarışan bir kurucu", "Enduro ve downhill")]},
-        {"kicker": "NITRO BIKE TEAM", "title": "Yarışlarda <em>takım olarak</em>",
-         "facts": [("check", "6 takım sürücüsü", "Enduro · downhill"),
+        {"kicker": "NITRO BIKE TEAM", "title": "Yarışlarda artık <em>takımız</em>",
+         "facts": [("check", "6 takım sürücüsü", "Enduro ve downhill"),
                    ("shield", "2026'da kuruldu", "NITRO BIKE TEAM"),
                    ("pin", "Köyceğiz'den", "Yarış pistlerine")]},
         {"kicker": "Kargo ve teslimat", "title": "Siparişin <em>nasıl gelir?</em>",
