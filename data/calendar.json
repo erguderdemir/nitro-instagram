@@ -2232,7 +2232,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "95be520e2f70",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2399,7 +2400,8 @@
   "rule": "forma",
   "status": "planned",
   "fp": "a376aeaa3ade",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2504,7 +2506,8 @@
   "rule": "liste:hediye250",
   "status": "planned",
   "fp": "76e6f556820f",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2644,7 +2647,8 @@
   "rule": "matara_kafesi",
   "status": "planned",
   "fp": "18f324779813",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
