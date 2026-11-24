@@ -7177,7 +7177,8 @@
   "rule": "yama",
   "status": "planned",
   "fp": "43fd8c16e258",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -7492,7 +7493,8 @@
   "rule": "dag",
   "status": "planned",
   "fp": "98fc0441cfc1",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
