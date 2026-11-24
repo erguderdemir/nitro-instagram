@@ -1,5 +1,5 @@
 DURUM: TAMAM
-Son güncelleme: 2026-11-24 17:30 TR (canlı: live=true; Suite planlaması yapıldı)
+Son güncelleme: 2026-11-24 23:55 TR (canlı: live=true; Suite planlaması 23 Aralık'a kadar tamam, tükenen ürünlü 9 kayıt yenilendi)
 
 # Devir notu — nitro-instagram
 
@@ -136,8 +136,8 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
 
 ## 8. Canlı yayın düzeni (24 Kasım 2026, 17:30 TR)
 - `config.json` → `"live": true`. Yayın canlı.
-- **Business Suite (Meta sunucusu, PC'den bağımsız):** postlar 25 Kasım → 22 Aralık hepsi, storyler 24 Kasım 20:30 → 29 Kasım 12:30 planlandı. Bu kayıtlarda `suite_scheduled: true`; publish.py atlar, plan.py dondurur. Storylerde tıklanabilir link sticker'ı var.
-- Suite en fazla 29 gün ileriye planlar. 23–31 Aralık postları ve 29 Kasım 20:30 sonrası storyler API ile (GitHub Actions) yayınlanır. API storylerinde link sticker'ı yok (Meta API kısıtı); link görselde ve açıklamada.
+- **Business Suite (Meta sunucusu, PC'den bağımsız):** postlar 25 Kasım → 22 Aralık hepsi, kanalı `suite` olan storyler 24 Kasım 20:30 → 23 Aralık 20:30 planlandı (108 bekleyen story, 28 post). Bu kayıtlarda `suite_scheduled: true`; publish.py atlar, plan.py dondurur. Storylerde tıklanabilir link sticker'ı var.
+- Suite en fazla 29 gün ileriye planlar. 23–31 Aralık postları ve kanalı `api` olan 09:30 storyleri API ile (GitHub Actions) yayınlanır. 24–31 Aralık'ın 29 `suite` storysi pencere açıldıkça (25 Kasım → 3 Aralık) Suite'e eklenmeli; eklenmeyen story API ile çıkartmasız yayınlanır. API storylerinde link sticker'ı yok (Meta API kısıtı); link görselde ve açıklamada.
 - Suite story planlaması yalnız sahibinin oturum açık Chrome'u ile yapılabilir (bulut oturumu yapamaz). Akış: `docs/suite/` sayfası + `data/calendar.json` işaretleme. Yeni planlanan kayıt `suite_scheduled: true` yapılmalı, yoksa API ikinci kez yayınlar.
 - **GitHub schedule güvenilmez** (24 Kasım'da 15 dakikalık cron hiç tetiklenmedi). Yayın bulut rutinleriyle tetiklenir; hepsi `claude/tetik-*` dalı push eder, birlestir.yml main'e alır ve `instagram.yml task=publish` başlatır. Zincir 24 Kasım 14:27 UTC'de uçtan uca test edildi (push → birlestir → publish, ~15 sn).
   - Yayın tetikçisi: `10 6,9,16,17 * * *` UTC (TR 09:10, 12:10, 19:10, 20:10; erken tetik slota kadar bekler).
