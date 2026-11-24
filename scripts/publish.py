@@ -427,7 +427,7 @@ def run(dry: bool) -> int:
 
     for dt, c in sorted(due, key=lambda x: x[0]):
         suite = c.get("channel") == "suite"
-        if suite and c.get("suite_scheduled"):
+        if c.get("suite_scheduled"):  # story ya da post: Suite'te zamanlanan kayda API dokunmaz (çift paylaşım olmasın)
             # Business Suite planlanan saatte kendisi yayınlar; burada yalnız kayıt güncellenir (gecikme önemsiz)
             c.update(status="published", via="suite", error="", published_at=dt.isoformat(timespec="seconds"))
             print(f"SUITE: {c.get('id')} Business Suite'te zamanlanmış; yayınlandı sayıldı (API'ye dokunulmadı).")
