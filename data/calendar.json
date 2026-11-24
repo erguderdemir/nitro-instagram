@@ -6060,7 +6060,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "eb1cac79210f",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -6301,7 +6302,8 @@
   "rule": "lamba",
   "status": "planned",
   "fp": "af50a103948c",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
