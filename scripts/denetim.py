@@ -146,7 +146,7 @@ class Audit:
                 self.add(c, "kural", "tanıtım başlığı postun başlığı değil")
             if [x["slug"] for x in ps] != [x["slug"] for x in post.get("products") or []] or c["rule"] != post["rule"]:
                 self.add(c, "kural", "tanıtım story'sinin ürünleri/kuralı postla aynı değil")
-            if common.item_dt(c) <= common.item_dt(post):
+            if common.item_dt(c) < common.item_dt(post):   # eşit: postla aynı dakikada paylaşım story'si
                 self.add(c, "kural", "tanıtım story'si posttan önce")
         elif theme == "ipucu":
             text = c.get("title") or ""

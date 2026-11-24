@@ -427,7 +427,8 @@ def run(dry: bool) -> int:
     if not due:
         print("Zamanı gelen paylaşım yok.")
 
-    for dt, c in sorted(due, key=lambda x: x[0]):
+    # Aynı dakikada post önce: postla eş zamanlı paylaşım story'si postun yayında olmasını bekler
+    for dt, c in sorted(due, key=lambda x: (x[0], x[1].get("type") != "post")):
         suite = c.get("channel") == "suite"
         if c.get("suite_scheduled"):  # story ya da post: Suite'te zamanlanan kayda API dokunmaz (çift paylaşım olmasın)
             # Business Suite planlanan saatte kendisi yayınlar; burada yalnız kayıt güncellenir (gecikme önemsiz)

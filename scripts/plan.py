@@ -351,9 +351,10 @@ class Planner:
                         channel="suite", sticker={"url": x["link"], "text": text, **R.STICKER}, media_link=mlink,
                         rule=rule["id"], fp=self.fp([p["slug"]]))
 
-    def promo_story(self, sid: str, day: date, tm: str, post: dict) -> dict:
+    def promo_story(self, sid: str, day: date, tm: str, post: dict, kicker: str = "") -> dict:
         import render as R
-        kicker, theme = CFG["stories"]["tanitim"]["kicker"], post["theme"]
+        kicker = kicker or CFG["stories"]["tanitim"]["kicker"]
+        theme = post["theme"]
         store, cover = self.site["urls"]["magaza"], DOCS / post["cover"]
         if theme == "urun":
             x = post["products"][0]
@@ -557,6 +558,7 @@ class Planner:
                 items = [self.by_slug[x["slug"]] for x in old["products"]]
             self.drop(sid)
             self.drop(self.sid(day, "story", CFG["stories"]["tanitim"]["time"]))
+            self.drop(self.sid(day, "story", slot["time"]))   # paylaşım story'si postla aynı dakikada
             try:
                 if items is None or not all(self.images(p) for p in items):
                     items = C.build_list(list_id, self.eligible, lambda p: self.free(p, day, sid) and bool(self.images(p)))
@@ -578,6 +580,7 @@ class Planner:
         if kind == "liste" or st == "kalsin" or (st == "yok" and not self.open(day, tm)):
             return self.get(sid)
         self.drop(self.sid(day, "story", CFG["stories"]["tanitim"]["time"]))   # tanıtım story'si postla birlikte yenilenir
+        self.drop(self.sid(day, "story", tm))   # paylaşım story'si (postla aynı dakikada) da
         self.drop(sid)
         new = None
         if kind == "yilbasi":
@@ -650,6 +653,15 @@ class Planner:
         if s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
             self.drop(sid)
             self.put(self.keep_flags(old, self.promo_story(sid, day, tm, post)))
+        # Postla aynı dakikada paylaşım story'si: her post story'de de duyurulur (post kapağı + tıklanabilir link)
+        if st_cfg.get("paylasim") and post["time"] not in {st_cfg[k]["time"] for k in ("deger", "urun", "tanitim")}:
+            tm = post["time"]
+            sid = self.sid(day, "story", tm)
+            old = self.get(sid)
+            s = self.state(old)
+            if s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
+                self.drop(sid)
+                self.put(self.keep_flags(old, self.promo_story(sid, day, tm, post, st_cfg["paylasim"]["kicker"])))
 
     # ---- çizim -------------------------------------------------------------------------------------
 

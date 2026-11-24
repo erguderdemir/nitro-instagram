@@ -34,6 +34,7 @@
   "stories": {
     "deger": {"time": "09:30", "weekdays": ["ipucu", "soru", "servis", "ipucu", "marka", "ipucu", "soru"]},
     "urun": {"time": "12:30", "kicker": "Günün ürünü"},
-    "tanitim": {"time": "20:30", "kicker": "Bugün akışta"}
+    "tanitim": {"time": "20:30", "kicker": "Bugün akışta"},
+    "paylasim": {"kicker": "Şimdi akışta"}
   }
 }
