@@ -31,7 +31,11 @@ jobs:
       GOREV: ${{ inputs.task }}
       ZAMANLAMA: ${{ github.event.schedule }}
     steps:
+      # Kuyrukta bekleyen çalışma, tetiklendiği andaki eski commit'i değil main'in o anki hâlini almalı;
+      # yoksa önceki çalışmanın yayınladığı kaydı 'planned' görür ve aynı paylaşımı ikinci kez yayınlar.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -53,5 +57,28 @@ jobs:
           [ -f RAPOR.md ] && git add RAPOR.md
           if git diff --cached --quiet; then echo "Değişiklik yok"; exit 0; fi
           git commit -m "Otomatik: ${GOREV:-zamanlanmış} çalışması"
-          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && exit 0; sleep 5; done
+          # Yayın durumu kaybolursa sonraki çalışma aynı paylaşımı yeniden yayınlar: push mutlaka başarmalı.
+          # Çakışmada satır bazlı birleştirme yerine takvim kayıt bazında birleştirilir (takvim_birlestir.py).
+          gorev="$GOREV"; [ -z "$gorev" ] && [ "$ZAMANLAMA" = "10 1 * * *" ] && gorev=plan
+          taban=theirs; [ "$gorev" = "plan" ] && taban=ours
+          for i in 1 2 3 4 5; do
+            git fetch origin main || { sleep $((i * 5)); continue; }
+            if git merge-base --is-ancestor origin/main HEAD; then
+              git push origin HEAD:main && exit 0
+            else
+              git show HEAD:data/calendar.json > "$RUNNER_TEMP/bizim.json"
+              git show origin/main:data/calendar.json > "$RUNNER_TEMP/uzak.json"
+              ata=""
+              if mb=$(git merge-base HEAD origin/main) && git show "$mb:data/calendar.json" > "$RUNNER_TEMP/ata.json"; then
+                ata="--ata $RUNNER_TEMP/ata.json"
+              fi
+              git merge --no-edit -X ours origin/main || { git add -A .; git commit --no-edit; }
+              python scripts/takvim_birlestir.py "$RUNNER_TEMP/bizim.json" "$RUNNER_TEMP/uzak.json" --base "$taban" $ata
+              git add -A data docs
+              git diff --cached --quiet || git commit -m "Otomatik: takvim birleştirildi"
+              git push origin HEAD:main && exit 0
+            fi
+            sleep $((i * 5))
+          done
+          echo "::error::Yayın durumu main'e yazılamadı; sonraki çalışma kaydı yeniden deneyebilir."
           exit 1

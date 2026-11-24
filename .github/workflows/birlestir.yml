@@ -33,7 +33,10 @@ jobs:
           git fetch origin "$DAL"
           git merge --no-edit "origin/$DAL"
           git push origin HEAD:main
-          if git diff --name-only "$once" HEAD | grep -qx 'tetik.txt'; then
+          # tetik.txt içeriği main'deki önceki hâlinden farklıysa tetikle. Her tetik 2. satıra zaman damgası
+          # yazar (bekçi: 'publish' + UTC zaman), böylece aynı görev tekrar istenince de içerik değişir;
+          # amend/force-push edilmiş ama tetiği yeni olmayan dal ise görevi ikinci kez başlatmaz.
+          if ! git diff --quiet "$once" HEAD -- tetik.txt; then
             gorev=$(head -n1 tetik.txt | tr -cd 'a-z')
             case "$gorev" in
               plan|check|probe|report|publish) gh workflow run instagram.yml --ref main -f task="$gorev" ;;

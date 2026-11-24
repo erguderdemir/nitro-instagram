@@ -73,6 +73,8 @@ class Planner:
     # ---- yardımcılar ---------------------------------------------------------------------------
 
     def say(self, msg: str) -> None:
+        if msg.startswith("UYARI") and msg in self.log:  # state() aynı kayıt için birden çok kez sorulabilir
+            return
         print(msg, flush=True)
         self.log.append(msg)
 
@@ -91,7 +93,11 @@ class Planner:
     def get(self, sid: str) -> dict | None:
         return next((c for c in self.cal if c["id"] == sid), None)
 
-    def drop(self, sid: str) -> None:
+    def drop(self, sid: str, force: bool = False) -> None:
+        """Kaydı takvimden çıkar. Business Suite'te zamanlanmış kayıt (ör. postla birlikte yenilenen tanıtım
+        story'si) silinmez: bayraksız yeniden kurulursa Suite eski hâlini, API de yenisini yayınlar (çift story)."""
+        if not force and any(c["id"] == sid and c.get("suite_scheduled") for c in self.cal):
+            return
         self.cal = [c for c in self.cal if c["id"] != sid]
 
     def settled(self, c: dict) -> bool:
@@ -104,7 +110,7 @@ class Planner:
         return self._kalsin[c["id"]]
 
     def put(self, rec: dict) -> None:
-        self.drop(rec["id"])
+        self.drop(rec["id"], force=True)
         self.cal.append(rec)
         self.touched.add(rec["id"])
 
@@ -476,6 +482,22 @@ class Planner:
             return "yok"
         if c.get("status") not in ("planned", "draft") or common.item_dt(c) <= self.now + LEAD:
             return "kalsin"
+        # Business Suite'te zamanlanmış story dondurulur: yeniden kurulursa Suite eski içeriği yayınlar,
+        # bayrak düşerse API de aynı story'yi ikinci kez atar.
+        if c.get("suite_scheduled"):
+            slugs = [x["slug"] for x in c.get("products") or []]
+            if any(s not in self.by_slug or not C.eligible(self.by_slug[s]) for s in slugs):
+                self.say(f"UYARI: {c['id']} Suite'te zamanlanmış ama ürünü artık uygun değil (stok/fiyat); Suite'ten kaldır.")
+            return "kalsin"
+        st = self._state(c)
+        if st != "kalsin":
+            promo = [x["id"] for x in self.cal if x.get("suite_scheduled") and x.get("ref") == c["id"]]
+            if promo:
+                self.say(f"UYARI: {c['id']} yeniden kuruluyor; Suite'te zamanlanmış {', '.join(promo)} eski kapağı "
+                         f"gösteriyor. Suite'teki story'yi güncelle.")
+        return st
+
+    def _state(self, c: dict) -> str:
         if self.reset:
             return "yeni"
         slugs = [x["slug"] for x in c.get("products") or []]
@@ -664,7 +686,7 @@ class Planner:
             lost = [f for f in files if not (DOCS / f).exists() or (DOCS / f).stat().st_size == 0]
             if lost:
                 self.say(f"HATA {c['id']}: dosya oluşmadı ({', '.join(lost)}); kayıt takvime alınmadı.")
-                self.drop(c["id"])
+                self.drop(c["id"], force=True)
 
     def cleanup(self) -> None:
         """Takvimde geçmeyen medya dosyalarını sil (eski şemanın görselleri dahil)."""

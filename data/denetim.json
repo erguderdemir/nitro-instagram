@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-24T15:26:40+03:00",
- "records": 148,
- "checked": 148,
+ "updated": "2026-11-24T16:09:04+03:00",
+ "records": 150,
+ "checked": 150,
  "files": true,
- "live": false,
+ "live": true,
  "findings": []
 }

@@ -1,8 +1,15 @@
 # Instagram içerik takvimi
 
 Otomatik üretilir (`scripts/plan.py`); elle düzenleme bir sonraki çalışmada silinir.
-Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel önizleme: [simülasyon](https://erguderdemir.github.io/nitro-instagram/onizleme/). Bir paylaşımı iptal etmek için kimliğini `data/iptal.txt` dosyasına yaz.
+Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://erguderdemir.github.io/nitro-instagram/onizleme/). Bir paylaşımı iptal etmek için kimliğini `data/iptal.txt` dosyasına yaz.
 
+
+## 24.11.2026 Salı
+
+| Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
+|---|---|---|---|---|---|---|---|
+| 19:30 | Carousel · ürün | Pedalını yenile | [Pedal M504 Siyah](https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-24-post-1930) | 743,69 ₺ | API | planlı | [görsel](media/2026-11-24-post-1930-1.jpg) |
+| 20:30 | Story · tanıtım | Pedalını yenile | [Pedal M504 Siyah](https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-24-story-2030) | 743,69 ₺ | Suite + link | planlı | [görsel](media/2026-11-24-story-2030.jpg) |
 
 ## 25.11.2026 Çarşamba
 
@@ -340,6 +347,27 @@ Yayın kilidi: **KAPALI (live=false) — hiçbir şey yayınlanmaz**. Görsel ö
 ---
 
 # Post açıklamaları
+
+### 2026-11-24 19:30 · Pedalını yenile
+
+```
+Yıpranan pedal ayağı kaydırır; yenisi takılır, fark hissedilir.
+
+Pedal M504 Siyah · 743,69 ₺ (KDV dahil)
+
+Neden NITRO?
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
+✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
+✔️ 14 gün içinde iade, iade kargosu bizden
+
+🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N342 yaz.
+
+Düz pedal mı, kilitli pedal mı?
+
+📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
+
+#nitrobisiklet #köyceğiz #bisiklet #bisikletpedalı #bisikletparçası
+```
 
 ### 2026-11-25 19:30 · KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK
 

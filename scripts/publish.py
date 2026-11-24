@@ -433,6 +433,18 @@ def run(dry: bool) -> int:
             print(f"SUITE: {c.get('id')} Business Suite'te zamanlanmış; yayınlandı sayıldı (API'ye dokunulmadı).")
             p.save()
             continue
+        if c.get("theme") == "promo" and c.get("ref"):
+            # Tanıtım story'si "bugün akışta" der: tanıttığı post yayında değilse yayınlanmaz
+            post = next((x for x in cal if x.get("id") == c["ref"]), None)
+            pst = post.get("status") if post else "yok"
+            if pst != "published":
+                if pst in ("planned", "draft") and now - dt <= LATE_LIMIT:
+                    print(f"BEKLİYOR: {c.get('id')} tanıttığı post ({c['ref']}) henüz yayında değil.")
+                    continue
+                c.update(status="skipped", error=f"tanıttığı post yayınlanmadı ({c['ref']}: {pst})")
+                print(f"ATLANDI: {c.get('id')} tanıttığı post yayınlanmadı ({pst}).")
+                p.save()
+                continue
         fmt, via = resolve_format(c), ("api-yedek" if suite else "api")
         if now - dt > LATE_LIMIT:
             if not p.late_but_published(c, fmt, via):
@@ -579,6 +591,10 @@ def main(argv: list[str] | None = None) -> int:
         print(LOCK_MSG)
         if not args.dry_run:
             return 0
+    if live and not args.dry_run:
+        # IG_USER_ID isteğe bağlı (graph.ig_user_id token'dan bulur); token yoksa yayın imkânsız.
+        if not os.environ.get("IG_ACCESS_TOKEN"):  # kilit açıkken sessizce dry-run'a düşmek yayının durduğunu gizler
+            sys.exit("YAYIN YAPILAMADI: IG_ACCESS_TOKEN tanımlı değil (GitHub secrets).")
     dry = args.dry_run or not live or not os.environ.get("IG_ACCESS_TOKEN")
     if dry:
         print("DRY-RUN: IG_ACCESS_TOKEN yok ya da --dry-run verildi, hiçbir şey yayınlanmayacak.")

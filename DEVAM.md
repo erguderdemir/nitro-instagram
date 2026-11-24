@@ -119,7 +119,8 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
 - Gruplar eski `content.py` içindeki `GROUPS` tablosunda (yeniden yazarken koru).
 
 ## 7. Bulut oturumu için
-- Chrome yoksa görsel üretme: kodu yaz, saf Python kısımlarını sına, push et. `tetik.txt` ilk satırına `plan`
-  yazıp push edince Actions takvimi ve görselleri üretir, sonucu `main`'e yazar; günlük
+- Chrome yoksa görsel üretme: kodu yaz, saf Python kısımlarını sına, push et. `tetik.txt` ilk satırına `plan`,
+  ikinci satırına UTC zaman damgası (`date -u +%Y-%m-%dT%H:%M:%SZ`) yazıp push edince (içerik değişmezse
+  `birlestir.yml` görevi başlatmaz) Actions takvimi ve görselleri üretir, sonucu `main`'e yazar; günlük
   `data/son-calisma.log` içindedir. `git pull` ile al, denetle.
 - Sahibi telefondan izler: kısa, net Türkçe rapor ver.

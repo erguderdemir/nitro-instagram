@@ -1,6 +1,114 @@
 [
  {
   "schema": 2,
+  "id": "2026-11-24-post-1930",
+  "date": "2026-11-24",
+  "time": "19:30",
+  "type": "post",
+  "format": "carousel",
+  "theme": "urun",
+  "kicker": "Parça ve aksesuar",
+  "title": "Pedalını yenile",
+  "headline": "Pedalını <em>yenile</em>",
+  "hook": "Yıpranan pedal ayağı kaydırır; yenisi takılır, fark hissedilir.",
+  "media": [
+   "media/2026-11-24-post-1930-1.jpg",
+   "media/2026-11-24-post-1930-2.jpg",
+   "media/2026-11-24-post-1930-3.jpg",
+   "media/2026-11-24-post-1930-4.jpg"
+  ],
+  "cover": "media/2026-11-24-post-1930-1.jpg",
+  "thumb": "media/t/2026-11-24-post-1930.jpg",
+  "caption": "Yıpranan pedal ayağı kaydırır; yenisi takılır, fark hissedilir.\n\nPedal M504 Siyah · 743,69 ₺ (KDV dahil)\n\nNeden NITRO?\n✔️ Köyceğiz içi aynı gün, ücretsiz teslimat\n✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz\n✔️ 14 gün içinde iade, iade kargosu bizden\n\n🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N342 yaz.\n\nDüz pedal mı, kilitli pedal mı?\n\n📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis\n\n#nitrobisiklet #köyceğiz #bisiklet #bisikletpedalı #bisikletparçası",
+  "alt": "Pedal M504 Siyah, 743,69 ₺. NITRO Bisiklet ürün görseli: “Pedalını yenile”.",
+  "alts": [
+   "Pedal M504 Siyah, 743,69 ₺. NITRO Bisiklet ürün görseli: “Pedalını yenile”.",
+   "Pedal M504 Siyah: ürün fotoğrafı.",
+   "Neden NITRO: Köyceğiz içi aynı gün, teslimat ücretsiz; Türkiye geneli kargo, 3.000 ₺ ve üzeri siparişte ücretsiz; 14 gün içinde iade, iade kargosu bizden; 2 yıl yasal garanti, teslimden itibaren.",
+   "Nasıl alırım: profildeki linke dokun, arama kutusuna N342 yaz."
+  ],
+  "products": [
+   {
+    "slug": "pedal-m504-siyah",
+    "name": "Pedal M504 Siyah",
+    "price": 743.69,
+    "code": "N342",
+    "category": "Pedal ve Kal",
+    "rule": "pedal",
+    "label": "Pedal",
+    "family": "pedal m504",
+    "link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-24-post-1930",
+    "bio_link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=urun&utm_content=2026-11-24-post-1930",
+    "image": "https://nitrobisiklet.com/media/product/pedal-m504-siyah-1.webp"
+   }
+  ],
+  "link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-11-24-post-1930",
+  "bio_link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=urun&utm_content=2026-11-24-post-1930",
+  "code": "N342",
+  "channel": "api",
+  "sticker": null,
+  "media_link": "",
+  "ref": "",
+  "rule": "pedal",
+  "status": "planned",
+  "fp": "3c3ae74a7813",
+  "ver": "ae66bdb263"
+ },
+ {
+  "schema": 2,
+  "id": "2026-11-24-story-2030",
+  "date": "2026-11-24",
+  "time": "20:30",
+  "type": "story",
+  "format": "story",
+  "theme": "promo",
+  "kicker": "Bugün akışta",
+  "title": "Pedalını yenile",
+  "headline": "Pedalını <em>yenile</em>",
+  "hook": "",
+  "media": [
+   "media/2026-11-24-story-2030.jpg"
+  ],
+  "cover": "media/2026-11-24-story-2030.jpg",
+  "thumb": "media/t/2026-11-24-story-2030.jpg",
+  "caption": "",
+  "alt": "Bugünün gönderisi: Pedalını yenile.",
+  "alts": [],
+  "products": [
+   {
+    "slug": "pedal-m504-siyah",
+    "name": "Pedal M504 Siyah",
+    "price": 743.69,
+    "code": "N342",
+    "category": "Pedal ve Kal",
+    "rule": "pedal",
+    "label": "Pedal",
+    "family": "pedal m504",
+    "link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-24-story-2030",
+    "bio_link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=promo&utm_content=2026-11-24-story-2030",
+    "image": "https://nitrobisiklet.com/media/product/pedal-m504-siyah-1.webp"
+   }
+  ],
+  "link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-24-story-2030",
+  "bio_link": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=bio&utm_campaign=promo&utm_content=2026-11-24-story-2030",
+  "code": "N342",
+  "channel": "suite",
+  "sticker": {
+   "url": "https://nitrobisiklet.com/urun/pedal-m504-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-24-story-2030",
+   "text": "ÜRÜNE GİT",
+   "x": 0.5,
+   "y": 0.781,
+   "w": 0.5
+  },
+  "media_link": "media/2026-11-24-story-2030-link.jpg",
+  "ref": "2026-11-24-post-1930",
+  "rule": "pedal",
+  "status": "planned",
+  "fp": "86bf5edcfd84",
+  "ver": "ae66bdb263"
+ },
+ {
+  "schema": 2,
   "id": "2026-11-25-story-0930",
   "date": "2026-11-25",
   "time": "09:30",
@@ -35,8 +143,8 @@
   "ref": "servis:0",
   "rule": "servis",
   "status": "planned",
-  "fp": "deef531b4ef9",
-  "ver": "2157bb8b54"
+  "fp": "b891b4eaa00a",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -88,8 +196,8 @@
   "ref": "",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "afab4d3908b8",
-  "ver": "2157bb8b54"
+  "fp": "dcb13119155f",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -137,9 +245,9 @@
   "ref": "kis-bakimi",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "73e37f7f5450",
+  "fp": "c2437a6285ef",
   "cta": "servis",
-  "ver": "2157bb8b54"
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -177,8 +285,8 @@
   "ref": "2026-11-25-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "2acb2510e15d",
-  "ver": "2157bb8b54"
+  "fp": "e5a0ef14c382",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -216,8 +324,8 @@
   "ref": "ipucu:b4483f4c",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "1f60dee8e089",
-  "ver": "2157bb8b54"
+  "fp": "aae4d2452882",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -269,8 +377,8 @@
   "ref": "",
   "rule": "gidon",
   "status": "planned",
-  "fp": "34c58c1767a8",
-  "ver": "2157bb8b54"
+  "fp": "72538755c336",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -326,8 +434,8 @@
   "ref": "",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "aafe8f454f56",
-  "ver": "2157bb8b54"
+  "fp": "4a3a8e66b417",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -379,8 +487,8 @@
   "ref": "2026-11-26-post-1930",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "66354a2e5f01",
-  "ver": "2157bb8b54"
+  "fp": "e81f92f82baf",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -418,8 +526,8 @@
   "ref": "marka:0",
   "rule": "marka",
   "status": "planned",
-  "fp": "624d0fc907d9",
-  "ver": "2157bb8b54"
+  "fp": "eddc6d8fa3ac",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -471,8 +579,8 @@
   "ref": "",
   "rule": "kaset",
   "status": "planned",
-  "fp": "8e5f7bee0bf8",
-  "ver": "2157bb8b54"
+  "fp": "73b9332041fe",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -526,8 +634,8 @@
   "ref": "",
   "rule": "sehir",
   "status": "planned",
-  "fp": "a3988e99688c",
-  "ver": "2157bb8b54"
+  "fp": "3aaf5347ebdb",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -579,8 +687,8 @@
   "ref": "2026-11-27-post-1930",
   "rule": "sehir",
   "status": "planned",
-  "fp": "2d5fd2d534d6",
-  "ver": "2157bb8b54"
+  "fp": "48136559f1a5",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -618,8 +726,8 @@
   "ref": "ipucu:a26235e5",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "7a467da4d506",
-  "ver": "2157bb8b54"
+  "fp": "ad725d917d0e",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -731,8 +839,8 @@
   "ref": "kis",
   "rule": "liste:kis",
   "status": "planned",
-  "fp": "24ccd5ad1205",
-  "ver": "2157bb8b54"
+  "fp": "5260f448e0d1",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -784,8 +892,8 @@
   "ref": "",
   "rule": "rotor",
   "status": "planned",
-  "fp": "bdc4515891e0",
-  "ver": "2157bb8b54"
+  "fp": "7ab25ba54646",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -889,8 +997,8 @@
   "ref": "2026-11-28-post-1100",
   "rule": "liste:kis",
   "status": "planned",
-  "fp": "3745cd016ec8",
-  "ver": "2157bb8b54"
+  "fp": "9598460e6281",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -922,8 +1030,8 @@
   "ref": "soru:946d578e",
   "rule": "soru",
   "status": "planned",
-  "fp": "8bf74bbddc39",
-  "ver": "2157bb8b54"
+  "fp": "d614a9ff8f00",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -977,8 +1085,8 @@
   "ref": "",
   "rule": "gozluk",
   "status": "planned",
-  "fp": "4d977a051731",
-  "ver": "2157bb8b54"
+  "fp": "01c286f77fc9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1030,8 +1138,8 @@
   "ref": "",
   "rule": "masa",
   "status": "planned",
-  "fp": "da2baad613b3",
-  "ver": "2157bb8b54"
+  "fp": "d8841d89f0c8",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1083,8 +1191,8 @@
   "ref": "2026-11-29-post-1100",
   "rule": "gozluk",
   "status": "planned",
-  "fp": "4e592d7731ac",
-  "ver": "2157bb8b54"
+  "fp": "555ed0b5fb92",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1122,8 +1230,8 @@
   "ref": "ipucu:b9c59050",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "5a3a96bc90b9",
-  "ver": "2157bb8b54"
+  "fp": "fe849ac22ba5",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1175,8 +1283,8 @@
   "ref": "",
   "rule": "yama",
   "status": "planned",
-  "fp": "d81d3e991f22",
-  "ver": "2157bb8b54"
+  "fp": "75e77fc52e4b",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1232,8 +1340,8 @@
   "ref": "",
   "rule": "dag",
   "status": "planned",
-  "fp": "2f8dc31d7e8a",
-  "ver": "2157bb8b54"
+  "fp": "fc369654dbf5",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1285,8 +1393,8 @@
   "ref": "2026-11-30-post-1930",
   "rule": "dag",
   "status": "planned",
-  "fp": "11d83b5cb9f7",
-  "ver": "2157bb8b54"
+  "fp": "5970c7161d43",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1318,8 +1426,8 @@
   "ref": "soru:ff24f66c",
   "rule": "soru",
   "status": "planned",
-  "fp": "fdbcbc388683",
-  "ver": "2157bb8b54"
+  "fp": "fe14c413ed18",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1371,8 +1479,8 @@
   "ref": "",
   "rule": "ikinciel",
   "status": "planned",
-  "fp": "8df41b4d9cc4",
-  "ver": "2157bb8b54"
+  "fp": "1e914745529b",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1424,8 +1532,8 @@
   "ref": "",
   "rule": "park_ayagi",
   "status": "planned",
-  "fp": "cc700850006d",
-  "ver": "2157bb8b54"
+  "fp": "86b9bbd05687",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1477,8 +1585,8 @@
   "ref": "2026-12-01-post-1930",
   "rule": "park_ayagi",
   "status": "planned",
-  "fp": "0dcaf4109fc7",
-  "ver": "2157bb8b54"
+  "fp": "fc878216576f",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1516,8 +1624,8 @@
   "ref": "servis:1",
   "rule": "servis",
   "status": "planned",
-  "fp": "afa1ae5973db",
-  "ver": "2157bb8b54"
+  "fp": "f9c08dce705e",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1569,8 +1677,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "d12fd8a33ec9",
-  "ver": "2157bb8b54"
+  "fp": "801bcb2e4f1f",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1618,9 +1726,9 @@
   "ref": "islak-zemin",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "dd2d0742d225",
+  "fp": "cb9a539be58f",
   "cta": "magaza",
-  "ver": "2157bb8b54"
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1658,8 +1766,8 @@
   "ref": "2026-12-02-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "f94a21ec525a",
-  "ver": "2157bb8b54"
+  "fp": "9e9d57ade59d",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1697,8 +1805,8 @@
   "ref": "ipucu:a0d59495",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "d0df4e0e0487",
-  "ver": "2157bb8b54"
+  "fp": "2e32b980fd98",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1750,8 +1858,8 @@
   "ref": "",
   "rule": "gravel",
   "status": "planned",
-  "fp": "485d414575df",
-  "ver": "2157bb8b54"
+  "fp": "a00cca233f52",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1805,8 +1913,8 @@
   "ref": "",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "9dbe511ee03d",
-  "ver": "2157bb8b54"
+  "fp": "c922c468dd67",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1858,8 +1966,8 @@
   "ref": "2026-12-03-post-1930",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "6ff915f2390d",
-  "ver": "2157bb8b54"
+  "fp": "da6c5489d08e",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1897,8 +2005,8 @@
   "ref": "marka:1",
   "rule": "marka",
   "status": "planned",
-  "fp": "f37252a88751",
-  "ver": "2157bb8b54"
+  "fp": "22c6bcb065a5",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -1950,8 +2058,8 @@
   "ref": "",
   "rule": "bmx",
   "status": "planned",
-  "fp": "e36dde39553f",
-  "ver": "2157bb8b54"
+  "fp": "03177c5bb8a3",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2005,8 +2113,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "cfe04ee898d5",
-  "ver": "2157bb8b54"
+  "fp": "d6f97c849696",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2058,8 +2166,8 @@
   "ref": "2026-12-04-post-1930",
   "rule": "ebike",
   "status": "planned",
-  "fp": "d813e66a177a",
-  "ver": "2157bb8b54"
+  "fp": "2c5eae9a76af",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2097,8 +2205,8 @@
   "ref": "ipucu:cb450d3f",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "a1e9ffe57ce1",
-  "ver": "2157bb8b54"
+  "fp": "95be520e2f70",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2210,8 +2318,8 @@
   "ref": "hediye250",
   "rule": "liste:hediye250",
   "status": "planned",
-  "fp": "8b510a8436a0",
-  "ver": "2157bb8b54"
+  "fp": "dbc67996d0e9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2263,8 +2371,8 @@
   "ref": "",
   "rule": "forma",
   "status": "planned",
-  "fp": "7aec40e94e11",
-  "ver": "2157bb8b54"
+  "fp": "a376aeaa3ade",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2368,8 +2476,8 @@
   "ref": "2026-12-05-post-1100",
   "rule": "liste:hediye250",
   "status": "planned",
-  "fp": "f99a00f7dbeb",
-  "ver": "2157bb8b54"
+  "fp": "76e6f556820f",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2401,8 +2509,8 @@
   "ref": "soru:ba368b1e",
   "rule": "soru",
   "status": "planned",
-  "fp": "9cd1589ec833",
-  "ver": "2157bb8b54"
+  "fp": "8e76c2f3eb62",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2454,8 +2562,8 @@
   "ref": "",
   "rule": "sele",
   "status": "planned",
-  "fp": "9efbc78c3bcd",
-  "ver": "2157bb8b54"
+  "fp": "07097d9b4b80",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2507,8 +2615,8 @@
   "ref": "",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "0d5ec0304ffe",
-  "ver": "2157bb8b54"
+  "fp": "18f324779813",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2560,8 +2668,8 @@
   "ref": "2026-12-06-post-1100",
   "rule": "sele",
   "status": "planned",
-  "fp": "ac992615e232",
-  "ver": "2157bb8b54"
+  "fp": "38a263bade31",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2599,8 +2707,8 @@
   "ref": "ipucu:29e5949d",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "ce82e47540cb",
-  "ver": "2157bb8b54"
+  "fp": "8f40d8190908",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2652,8 +2760,8 @@
   "ref": "",
   "rule": "sepet",
   "status": "planned",
-  "fp": "b7f0bfdbe3b3",
-  "ver": "2157bb8b54"
+  "fp": "e3bc1d87ade9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2707,8 +2815,8 @@
   "ref": "",
   "rule": "gravel",
   "status": "planned",
-  "fp": "02f18642623c",
-  "ver": "2157bb8b54"
+  "fp": "22e246a68667",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2760,8 +2868,8 @@
   "ref": "2026-12-07-post-1930",
   "rule": "gravel",
   "status": "planned",
-  "fp": "31ea58375484",
-  "ver": "2157bb8b54"
+  "fp": "6e5e3e8ce974",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2793,8 +2901,8 @@
   "ref": "soru:5cf051d6",
   "rule": "soru",
   "status": "planned",
-  "fp": "cb55fbe3ccc2",
-  "ver": "2157bb8b54"
+  "fp": "f10a8f8f0123",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2846,8 +2954,8 @@
   "ref": "",
   "rule": "sargi",
   "status": "planned",
-  "fp": "b124e3409bc7",
-  "ver": "2157bb8b54"
+  "fp": "38722cd7a064",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2901,8 +3009,8 @@
   "ref": "",
   "rule": "kaset",
   "status": "planned",
-  "fp": "071c55a75eb2",
-  "ver": "2157bb8b54"
+  "fp": "978ca63960b5",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2954,8 +3062,8 @@
   "ref": "2026-12-08-post-1930",
   "rule": "kaset",
   "status": "planned",
-  "fp": "d65a307f3db6",
-  "ver": "2157bb8b54"
+  "fp": "d58c4d9add10",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -2993,8 +3101,8 @@
   "ref": "servis:2",
   "rule": "servis",
   "status": "planned",
-  "fp": "d22e6c5df5d0",
-  "ver": "2157bb8b54"
+  "fp": "86ebed6294ed",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3046,8 +3154,8 @@
   "ref": "",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "b75638b789a5",
-  "ver": "2157bb8b54"
+  "fp": "ac082c2db0f0",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3095,9 +3203,9 @@
   "ref": "cocuk-jant-boyu",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "38232e754018",
+  "fp": "b59a8a5fed94",
   "cta": "cocuk",
-  "ver": "2157bb8b54"
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3135,8 +3243,8 @@
   "ref": "2026-12-09-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "0377637c2931",
-  "ver": "2157bb8b54"
+  "fp": "d4cf991fa612",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3174,8 +3282,8 @@
   "ref": "ipucu:b983d2b2",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "630b9bf5379c",
-  "ver": "2157bb8b54"
+  "fp": "d921eba85779",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3227,8 +3335,8 @@
   "ref": "",
   "rule": "sele",
   "status": "planned",
-  "fp": "c5627549ab51",
-  "ver": "2157bb8b54"
+  "fp": "c2be36e69849",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3280,8 +3388,8 @@
   "ref": "",
   "rule": "balata_spreyi",
   "status": "planned",
-  "fp": "9cdf065b09be",
-  "ver": "2157bb8b54"
+  "fp": "ed50ee3b43e8",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3333,8 +3441,8 @@
   "ref": "2026-12-10-post-1930",
   "rule": "balata_spreyi",
   "status": "planned",
-  "fp": "d4c0fcc30080",
-  "ver": "2157bb8b54"
+  "fp": "e872207c6495",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3372,8 +3480,8 @@
   "ref": "marka:2",
   "rule": "marka",
   "status": "planned",
-  "fp": "12829926ae53",
-  "ver": "2157bb8b54"
+  "fp": "42ed24aaa583",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3425,8 +3533,8 @@
   "ref": "",
   "rule": "pedal",
   "status": "planned",
-  "fp": "b587f1b6bede",
-  "ver": "2157bb8b54"
+  "fp": "46ad2cd18cb9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3482,8 +3590,8 @@
   "ref": "",
   "rule": "sehir",
   "status": "planned",
-  "fp": "c72ea5a07ec3",
-  "ver": "2157bb8b54"
+  "fp": "99fd04ff39b6",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3535,8 +3643,8 @@
   "ref": "2026-12-11-post-1930",
   "rule": "sehir",
   "status": "planned",
-  "fp": "085a67079fd8",
-  "ver": "2157bb8b54"
+  "fp": "c224bdf9095b",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3574,8 +3682,8 @@
   "ref": "ipucu:1fd11dee",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "784af81df775",
-  "ver": "2157bb8b54"
+  "fp": "89cb93ae116a",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3687,8 +3795,8 @@
   "ref": "hediye500",
   "rule": "liste:hediye500",
   "status": "planned",
-  "fp": "b8ee1ee99f73",
-  "ver": "2157bb8b54"
+  "fp": "2464b4a30f41",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3740,8 +3848,8 @@
   "ref": "",
   "rule": "zincir",
   "status": "planned",
-  "fp": "bc11e54a04ad",
-  "ver": "2157bb8b54"
+  "fp": "3a086a8ca47f",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3845,8 +3953,8 @@
   "ref": "2026-12-12-post-1100",
   "rule": "liste:hediye500",
   "status": "planned",
-  "fp": "1e0c62e719f3",
-  "ver": "2157bb8b54"
+  "fp": "3bf9aeb1c2ad",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3878,8 +3986,8 @@
   "ref": "soru:94f15ca5",
   "rule": "soru",
   "status": "planned",
-  "fp": "77f6aa6be51c",
-  "ver": "2157bb8b54"
+  "fp": "9b4206830214",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3933,8 +4041,8 @@
   "ref": "",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "64fff600ece8",
-  "ver": "2157bb8b54"
+  "fp": "ba875c404b92",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -3986,8 +4094,8 @@
   "ref": "",
   "rule": "elcik",
   "status": "planned",
-  "fp": "ad1dc1aa4b82",
-  "ver": "2157bb8b54"
+  "fp": "9d4d0a1c337d",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4039,8 +4147,8 @@
   "ref": "2026-12-13-post-1100",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "57e7bb557cad",
-  "ver": "2157bb8b54"
+  "fp": "95eccf5129ad",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4078,8 +4186,8 @@
   "ref": "ipucu:e7bd8dd6",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "c99e97be486c",
-  "ver": "2157bb8b54"
+  "fp": "a22e8ff5637e",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4131,8 +4239,8 @@
   "ref": "",
   "rule": "camurluk",
   "status": "planned",
-  "fp": "4e5e8f53aae4",
-  "ver": "2157bb8b54"
+  "fp": "0ce00be95703",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4186,8 +4294,8 @@
   "ref": "",
   "rule": "bmx",
   "status": "planned",
-  "fp": "6d047a4ec0af",
-  "ver": "2157bb8b54"
+  "fp": "f27a152c5931",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4239,8 +4347,8 @@
   "ref": "2026-12-14-post-1930",
   "rule": "bmx",
   "status": "planned",
-  "fp": "e227b0621703",
-  "ver": "2157bb8b54"
+  "fp": "09edb746244d",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4272,8 +4380,8 @@
   "ref": "soru:5f650ea8",
   "rule": "soru",
   "status": "planned",
-  "fp": "df7ed2f85f2d",
-  "ver": "2157bb8b54"
+  "fp": "0940f9b109ac",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4325,8 +4433,8 @@
   "ref": "",
   "rule": "balata",
   "status": "planned",
-  "fp": "afa37399a3d3",
-  "ver": "2157bb8b54"
+  "fp": "d48bc2136504",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4380,8 +4488,8 @@
   "ref": "",
   "rule": "rotor",
   "status": "planned",
-  "fp": "163a340ce38c",
-  "ver": "2157bb8b54"
+  "fp": "177fbbbf2eff",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4433,8 +4541,8 @@
   "ref": "2026-12-15-post-1930",
   "rule": "rotor",
   "status": "planned",
-  "fp": "567f63973361",
-  "ver": "2157bb8b54"
+  "fp": "ed1df8a5ebf9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4472,8 +4580,8 @@
   "ref": "servis:0",
   "rule": "servis",
   "status": "planned",
-  "fp": "deef531b4ef9",
-  "ver": "2157bb8b54"
+  "fp": "b891b4eaa00a",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4525,8 +4633,8 @@
   "ref": "",
   "rule": "masa",
   "status": "planned",
-  "fp": "256a58d755c2",
-  "ver": "2157bb8b54"
+  "fp": "7c34f93860f6",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4574,9 +4682,9 @@
   "ref": "servis-isaretleri",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "e956c492a7a0",
+  "fp": "8ffb6852b44f",
   "cta": "servis",
-  "ver": "2157bb8b54"
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4614,8 +4722,8 @@
   "ref": "2026-12-16-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "d4742b3a3fa3",
-  "ver": "2157bb8b54"
+  "fp": "b46088f0fe3c",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4653,8 +4761,8 @@
   "ref": "ipucu:14ac768a",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "0d3393159bad",
-  "ver": "2157bb8b54"
+  "fp": "4318748e20d1",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4706,8 +4814,8 @@
   "ref": "",
   "rule": "yama",
   "status": "planned",
-  "fp": "58cf5d8340b7",
-  "ver": "2157bb8b54"
+  "fp": "a28586cd8447",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4759,8 +4867,8 @@
   "ref": "",
   "rule": "lamba",
   "status": "planned",
-  "fp": "54af142b0f09",
-  "ver": "2157bb8b54"
+  "fp": "a75a80a3fd44",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4812,8 +4920,8 @@
   "ref": "2026-12-17-post-1930",
   "rule": "lamba",
   "status": "planned",
-  "fp": "fd77b15f7064",
-  "ver": "2157bb8b54"
+  "fp": "f6892cca77c0",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4851,8 +4959,8 @@
   "ref": "marka:3",
   "rule": "marka",
   "status": "planned",
-  "fp": "72354ae551f4",
-  "ver": "2157bb8b54"
+  "fp": "8fa652c4fe33",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4904,8 +5012,8 @@
   "ref": "",
   "rule": "dag",
   "status": "planned",
-  "fp": "b80db8f8a1f2",
-  "ver": "2157bb8b54"
+  "fp": "73caaeae43c9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -4961,8 +5069,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "67ae61a07665",
-  "ver": "2157bb8b54"
+  "fp": "f4f4069aec38",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5014,8 +5122,8 @@
   "ref": "2026-12-18-post-1930",
   "rule": "ebike",
   "status": "planned",
-  "fp": "848563ee4e15",
-  "ver": "2157bb8b54"
+  "fp": "ed0a9a38bf23",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5053,8 +5161,8 @@
   "ref": "ipucu:7a9e3015",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "77a9c9dba44f",
-  "ver": "2157bb8b54"
+  "fp": "c935c4dbf17d",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5166,8 +5274,8 @@
   "ref": "cocuk",
   "rule": "liste:cocuk",
   "status": "planned",
-  "fp": "d1ad2be2e3e3",
-  "ver": "2157bb8b54"
+  "fp": "7cb71e095eb9",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5219,8 +5327,8 @@
   "ref": "",
   "rule": "ikinciel",
   "status": "planned",
-  "fp": "cddc6422f3ca",
-  "ver": "2157bb8b54"
+  "fp": "6814f64feb70",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5324,8 +5432,8 @@
   "ref": "2026-12-19-post-1100",
   "rule": "liste:cocuk",
   "status": "planned",
-  "fp": "753a2d80ff50",
-  "ver": "2157bb8b54"
+  "fp": "e5b8518098bd",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5357,8 +5465,8 @@
   "ref": "soru:9f1163f5",
   "rule": "soru",
   "status": "planned",
-  "fp": "23d401367259",
-  "ver": "2157bb8b54"
+  "fp": "cf68d78ee11c",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5410,8 +5518,8 @@
   "ref": "",
   "rule": "yama",
   "status": "planned",
-  "fp": "6b95d92c98fe",
-  "ver": "2157bb8b54"
+  "fp": "6f13e52c7edd",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5463,8 +5571,8 @@
   "ref": "",
   "rule": "zil",
   "status": "planned",
-  "fp": "4b53b4995e5a",
-  "ver": "2157bb8b54"
+  "fp": "2ae5a63e1d09",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5516,8 +5624,8 @@
   "ref": "2026-12-20-post-1100",
   "rule": "yama",
   "status": "planned",
-  "fp": "496f8ca5f21d",
-  "ver": "2157bb8b54"
+  "fp": "02bfa1f12825",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5555,8 +5663,8 @@
   "ref": "ipucu:58007f1e",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "6323ccb1b518",
-  "ver": "2157bb8b54"
+  "fp": "128f564f189c",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5608,8 +5716,8 @@
   "ref": "",
   "rule": "ayna",
   "status": "planned",
-  "fp": "77058c6262ca",
-  "ver": "2157bb8b54"
+  "fp": "c9c14c08c312",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5667,8 +5775,8 @@
   "ref": "",
   "rule": "dag",
   "status": "planned",
-  "fp": "318b3f39c07b",
-  "ver": "2157bb8b54"
+  "fp": "d9059c50e97f",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5720,8 +5828,8 @@
   "ref": "2026-12-21-post-1930",
   "rule": "dag",
   "status": "planned",
-  "fp": "73ac9920e91b",
-  "ver": "2157bb8b54"
+  "fp": "7df3fe8d1049",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5753,8 +5861,8 @@
   "ref": "soru:4efb0982",
   "rule": "soru",
   "status": "planned",
-  "fp": "4ae5f1e4c527",
-  "ver": "2157bb8b54"
+  "fp": "58288a375272",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5806,8 +5914,8 @@
   "ref": "",
   "rule": "matara",
   "status": "planned",
-  "fp": "f217d49b3417",
-  "ver": "2157bb8b54"
+  "fp": "bde047b1e81c",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5859,8 +5967,8 @@
   "ref": "",
   "rule": "zincir",
   "status": "planned",
-  "fp": "80e2d649c092",
-  "ver": "2157bb8b54"
+  "fp": "4f9c741722d3",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5912,8 +6020,8 @@
   "ref": "2026-12-22-post-1930",
   "rule": "zincir",
   "status": "planned",
-  "fp": "ec607f9940c7",
-  "ver": "2157bb8b54"
+  "fp": "483e2ab3b332",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -5951,8 +6059,8 @@
   "ref": "servis:1",
   "rule": "servis",
   "status": "planned",
-  "fp": "afa1ae5973db",
-  "ver": "2157bb8b54"
+  "fp": "f9c08dce705e",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6004,8 +6112,8 @@
   "ref": "",
   "rule": "canta",
   "status": "planned",
-  "fp": "fb428b7da442",
-  "ver": "2157bb8b54"
+  "fp": "9cee320e7c37",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6053,9 +6161,9 @@
   "ref": "zincir-bakimi",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "60cf8f2e9653",
+  "fp": "529f75efccc3",
   "cta": "servis",
-  "ver": "2157bb8b54"
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6093,8 +6201,8 @@
   "ref": "2026-12-23-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "aae4a40ebb29",
-  "ver": "2157bb8b54"
+  "fp": "d50bf2b7ddd1",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6132,8 +6240,8 @@
   "ref": "ipucu:d72377fb",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "841933fe1a89",
-  "ver": "2157bb8b54"
+  "fp": "7a509acf5081",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6185,8 +6293,8 @@
   "ref": "",
   "rule": "gravel",
   "status": "planned",
-  "fp": "916a60adf903",
-  "ver": "2157bb8b54"
+  "fp": "5b9615a382b5",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6238,8 +6346,8 @@
   "ref": "",
   "rule": "camurluk",
   "status": "planned",
-  "fp": "d292b427a5c9",
-  "ver": "2157bb8b54"
+  "fp": "7e06c3743e03",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6291,8 +6399,8 @@
   "ref": "2026-12-24-post-1930",
   "rule": "camurluk",
   "status": "planned",
-  "fp": "6415c1e5a1b0",
-  "ver": "2157bb8b54"
+  "fp": "9ccb46ca3b41",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6330,8 +6438,8 @@
   "ref": "marka:4",
   "rule": "marka",
   "status": "planned",
-  "fp": "1294def5e225",
-  "ver": "2157bb8b54"
+  "fp": "de4c37a67e4a",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6383,8 +6491,8 @@
   "ref": "",
   "rule": "kaset",
   "status": "planned",
-  "fp": "7d72e1dee89d",
-  "ver": "2157bb8b54"
+  "fp": "21cb56f424f0",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6438,8 +6546,8 @@
   "ref": "",
   "rule": "sehir",
   "status": "planned",
-  "fp": "f86feecef9dc",
-  "ver": "2157bb8b54"
+  "fp": "2e7914c9ad2e",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6491,8 +6599,8 @@
   "ref": "2026-12-25-post-1930",
   "rule": "sehir",
   "status": "planned",
-  "fp": "402dd3d94a97",
-  "ver": "2157bb8b54"
+  "fp": "553f7cb6d458",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6530,8 +6638,8 @@
   "ref": "ipucu:de1344d0",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "893abd80ed70",
-  "ver": "2157bb8b54"
+  "fp": "6d1d8c27e7ff",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6643,8 +6751,8 @@
   "ref": "yukseltme",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "dd20f56fd5b3",
-  "ver": "2157bb8b54"
+  "fp": "17956bab0e92",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6696,8 +6804,8 @@
   "ref": "",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "7a264dd72c21",
-  "ver": "2157bb8b54"
+  "fp": "e5a8ffab32ad",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6801,8 +6909,8 @@
   "ref": "2026-12-26-post-1100",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "047469ae1162",
-  "ver": "2157bb8b54"
+  "fp": "e8b8fd403203",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6834,8 +6942,8 @@
   "ref": "soru:43b9fdcb",
   "rule": "soru",
   "status": "planned",
-  "fp": "c623bb7829e9",
-  "ver": "2157bb8b54"
+  "fp": "d58294fc8c26",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6889,8 +6997,8 @@
   "ref": "",
   "rule": "ayna",
   "status": "planned",
-  "fp": "92a366452916",
-  "ver": "2157bb8b54"
+  "fp": "f621d757a969",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6942,8 +7050,8 @@
   "ref": "",
   "rule": "telefon_tutucu",
   "status": "planned",
-  "fp": "71d44ae41015",
-  "ver": "2157bb8b54"
+  "fp": "c7b1f7bce7b6",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -6995,8 +7103,8 @@
   "ref": "2026-12-27-post-1100",
   "rule": "ayna",
   "status": "planned",
-  "fp": "273cad5278c9",
-  "ver": "2157bb8b54"
+  "fp": "795e4ce5f1ed",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7028,8 +7136,8 @@
   "ref": "ipucu:813a0136",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "bd9259be4ba0",
-  "ver": "2157bb8b54"
+  "fp": "9ba20a2474e3",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7081,8 +7189,8 @@
   "ref": "",
   "rule": "km_saati",
   "status": "planned",
-  "fp": "5c4f07e5f1a0",
-  "ver": "2157bb8b54"
+  "fp": "2055cd74f663",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7136,8 +7244,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "e6a9d0a63d24",
-  "ver": "2157bb8b54"
+  "fp": "35109867bbb8",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7189,8 +7297,8 @@
   "ref": "2026-12-28-post-1930",
   "rule": "ebike",
   "status": "planned",
-  "fp": "0a245bcae65c",
-  "ver": "2157bb8b54"
+  "fp": "4906dd116230",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7222,8 +7330,8 @@
   "ref": "soru:e4e13487",
   "rule": "soru",
   "status": "planned",
-  "fp": "4677e98553c2",
-  "ver": "2157bb8b54"
+  "fp": "94f579447c43",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7275,8 +7383,8 @@
   "ref": "",
   "rule": "kilit",
   "status": "planned",
-  "fp": "8bfb019a6958",
-  "ver": "2157bb8b54"
+  "fp": "e0bf22f36cfd",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7330,8 +7438,8 @@
   "ref": "",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "4abb86f1e492",
-  "ver": "2157bb8b54"
+  "fp": "bed8f93e3d44",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7383,8 +7491,8 @@
   "ref": "2026-12-29-post-1930",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "33d1bb58738a",
-  "ver": "2157bb8b54"
+  "fp": "8c1a92b244a3",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7422,8 +7530,8 @@
   "ref": "servis:2",
   "rule": "servis",
   "status": "planned",
-  "fp": "d22e6c5df5d0",
-  "ver": "2157bb8b54"
+  "fp": "86ebed6294ed",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7475,8 +7583,8 @@
   "ref": "",
   "rule": "pompa",
   "status": "planned",
-  "fp": "123c51fb1348",
-  "ver": "2157bb8b54"
+  "fp": "ec2f20c5b0df",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7524,9 +7632,9 @@
   "ref": "lastik-basinci",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "aa7fccbf9cfd",
+  "fp": "fa6aef27509a",
   "cta": "magaza",
-  "ver": "2157bb8b54"
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7564,8 +7672,8 @@
   "ref": "2026-12-30-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "fcb5693282d2",
-  "ver": "2157bb8b54"
+  "fp": "9d6ac94aa6e8",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7603,8 +7711,8 @@
   "ref": "ipucu:0e8797f4",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "c487aa422237",
-  "ver": "2157bb8b54"
+  "fp": "1ef6c662093b",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7656,8 +7764,8 @@
   "ref": "",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "57d98ccc61ac",
-  "ver": "2157bb8b54"
+  "fp": "f70c1bb29645",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7691,8 +7799,8 @@
   "ref": "yilbasi",
   "rule": "yilbasi",
   "status": "planned",
-  "fp": "1ef508350fd4",
-  "ver": "2157bb8b54"
+  "fp": "dcd764cdd03c",
+  "ver": "ae66bdb263"
  },
  {
   "schema": 2,
@@ -7730,7 +7838,7 @@
   "ref": "2026-12-31-post-1930",
   "rule": "yilbasi",
   "status": "planned",
-  "fp": "32c704fe12be",
-  "ver": "2157bb8b54"
+  "fp": "c7417d25f112",
+  "ver": "ae66bdb263"
  }
 ]
