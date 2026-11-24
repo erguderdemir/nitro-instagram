@@ -1,0 +1,9 @@
+görev: plan · 2026-11-24 10:53 UTC
+$ scrape.py  -> çıkış 0
+420 ürün bulundu, çekiliyor…
+420 ürün yazıldı: data/products.json
+$ plan.py  -> çıkış 1
+Traceback (most recent call last):
+  File "/home/runner/work/nitro-instagram/nitro-instagram/scripts/plan.py", line 15, in <module>
+    from render import render
+ImportError: cannot import name 'render' from 'render' (/home/runner/work/nitro-instagram/nitro-instagram/scripts/render.py)

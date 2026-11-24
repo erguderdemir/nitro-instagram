@@ -5639,13 +5639,9 @@
    "Kullanım": "Enduro, All Mountain, Trail, Freeride"
   },
   "images": [
-   "https://nitrobisiklet.com/media/product/tanke-tf36-renk-secenekleri.jpg",
-   "https://nitrobisiklet.com/media/product/tanke-tf36-teknik-ozellikler.jpg",
-   "https://nitrobisiklet.com/media/product/tanke-tf36-gold-1.jpg",
-   "https://nitrobisiklet.com/media/product/tanke-tf36-gold-2.jpg",
-   "https://nitrobisiklet.com/media/product/tanke-tf36-turuncu-1.jpg",
-   "https://nitrobisiklet.com/media/product/tanke-tf36-mor-1.jpg",
-   "https://nitrobisiklet.com/media/product/tanke-tf36-mor-2.jpg"
+   "https://nitrobisiklet.com/media/product/tanke-tf36-gold.jpg",
+   "https://nitrobisiklet.com/media/product/tanke-tf36-turuncu.jpg",
+   "https://nitrobisiklet.com/media/product/tanke-tf36-mor.jpg"
   ]
  },
  {
@@ -8685,31 +8681,6 @@
   ]
  },
  {
-  "url": "https://nitrobisiklet.com/urun/shimano-deore-fc-t521-36t-104-mm-bcd-orta-yaprak-aynakol-dislisi-siyah/",
-  "slug": "shimano-deore-fc-t521-36t-104-mm-bcd-orta-yaprak-aynakol-dislisi-siyah",
-  "name": "Shimano Deore FC-T521 36T 104 mm BCD Orta Yaprak Aynakol Dişlisi Siyah",
-  "category": "Vites Grubu",
-  "condition": "Sıfır",
-  "sku": "ShımanoDeoreDişli",
-  "breadcrumbs": [],
-  "price": 621.0,
-  "old_price": null,
-  "stock_left": null,
-  "in_stock": true,
-  "description": "SHİMANO DEORE FC-T521 36T 104 MM BCD ORTA YAPRAK AYNAKOL DİŞLİSİ SİYAH Shimano Deore FC-T521 aynakol için 104 mm BCD, 36 dişli orta yaprak dişlisi. TEKNİK",
-  "specs": {
-   "Seri": "Deore",
-   "Model": "FC-T521",
-   "Diş": "36T",
-   "BCD": "104 mm",
-   "Konum": "Orta yaprak",
-   "Renk": "Siyah"
-  },
-  "images": [
-   "https://nitrobisiklet.com/media/product/shimano-deore-fc-t521-36t-104-mm-bcd-ort-1.jpg"
-  ]
- },
- {
   "url": "https://nitrobisiklet.com/urun/peak-sunrun-3x7-vites-cevirmeli-vites-kolu-kirmizi/",
   "slug": "peak-sunrun-3x7-vites-cevirmeli-vites-kolu-kirmizi",
   "name": "Peak Sunrun 3x7 Vites Çevirmeli Vites Kolu Kırmızı",
@@ -10357,6 +10328,275 @@
   "images": [
    "https://nitrobisiklet.com/media/product/onvo-ov-012-ov-013-elektrikli-scooter-sa-1.jpg",
    "https://nitrobisiklet.com/media/product/onvo-ov-012-ov-013-elektrikli-scooter-sa-2.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah/",
+  "slug": "cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah",
+  "name": "CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah",
+  "category": "Dış Lastik",
+  "condition": "Sıfır",
+  "sku": "NB-CST-PALMBAY-700X48C",
+  "breadcrumbs": [],
+  "price": 990.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "CST METROPOLİTAN PALMBAY 700X48C (28X2.00) ZIRHLI DIŞ LASTİK E-BİKE UYUMLU SİYAH CST Metropolitan Palmbay; 28 jant şehir, trekking ve elektrikli",
+  "specs": {
+   "Marka": "CST",
+   "Model": "Metropolitan Palmbay (C1779)",
+   "Ölçü": "700x48C (28x2.00)",
+   "ETRTO": "50-622",
+   "Zırh": "Seviye 1 (APL, 0,7 mm)",
+   "Damak": "Tel",
+   "TPI": "22",
+   "Maksimum Basınç": "65 PSI",
+   "Ağırlık": "Yaklaşık 945 g",
+   "Kullanım": "Şehir, trekking, elektrikli bisiklet",
+   "Renk": "Siyah"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/cst-metropolitan-palmbay-700x48c-28x2-00-1.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah/",
+  "slug": "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah",
+  "name": "20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah",
+  "category": "Dış Lastik",
+  "condition": "Sıfır",
+  "sku": "NB-FAT-20X40",
+  "breadcrumbs": [],
+  "price": 1099.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "20X4.0 FAT BİKE DIŞ LASTİK ELEKTRİKLİ BİSİKLET UYUMLU SİYAH 20 jant fat bike ve elektrikli bisikletler için 20x4.0 ölçüsünde dış lastik. Geniş ve tırtıklı",
+  "specs": {
+   "Ölçü": "20x4.0",
+   "Jant": "20\"",
+   "Kullanım": "Fat bike, elektrikli bisiklet",
+   "Sırt Tipi": "Tırtıklı (arazi)",
+   "Renk": "Siyah",
+   "Paket İçeriği": "1 adet dış lastik"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/20x4-0-fat-bike-dis-lastik-elektrikli-bi-1.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set/",
+  "slug": "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set",
+  "name": "20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah - 2'li Set",
+  "category": "Dış Lastik",
+  "condition": "Sıfır",
+  "sku": "NB-FAT-20X40-2LI",
+  "breadcrumbs": [],
+  "price": 1990.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "20X4.0 FAT BİKE DIŞ LASTİK ELEKTRİKLİ BİSİKLET UYUMLU SİYAH - 2'Lİ SET 20 jant fat bike ve elektrikli bisikletler için 20x4.0 ölçüsünde dış lastik, 2'li",
+  "specs": {
+   "Ölçü": "20x4.0",
+   "Jant": "20\"",
+   "Kullanım": "Fat bike, elektrikli bisiklet",
+   "Sırt Tipi": "Tırtıklı (arazi)",
+   "Renk": "Siyah",
+   "Paket İçeriği": "2 adet dış lastik"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/20x4-0-fat-bike-dis-lastik-elektrikli-bi-1_TkKHO2R.jpg",
+   "https://nitrobisiklet.com/media/product/20x4-0-fat-bike-dis-lastik-elektrikli-bi-2.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/shimano-deore-fc-m617-36t-aynakol-dislisi-yaprak-104-bcd-10-vites-siyah/",
+  "slug": "shimano-deore-fc-m617-36t-aynakol-dislisi-yaprak-104-bcd-10-vites-siyah",
+  "name": "Shimano Deore FC-M617 36T Aynakol Dişlisi (Yaprak) 104 BCD 10 Vites Siyah",
+  "category": "Vites Grubu",
+  "condition": "Sıfır",
+  "sku": "NB-SHIMANO-FCM617-36T",
+  "breadcrumbs": [],
+  "price": 621.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "SHİMANO DEORE FC-M617 36T AYNAKOL DİŞLİSİ (YAPRAK) 104 BCD 10 VİTES SİYAH",
+  "specs": {
+   "Marka": "Shimano",
+   "Seri": "Deore",
+   "Model": "FC-M617 (Y1RP98070)",
+   "Diş Sayısı": "36T (AY tipi)",
+   "BCD": "104 mm (4 kollu)",
+   "Vites": "2x10 (36-22T)",
+   "Uyumlu Aynakol": "FC-M617 / FC-M627",
+   "Uyumlu Zincir": "10 vites HG-X",
+   "Malzeme": "Alüminyum",
+   "Ağırlık": "Yaklaşık 59 g",
+   "Renk": "Siyah"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/shimano-deore-fc-m617-36t-aynakol-dislis-1.jpg",
+   "https://nitrobisiklet.com/media/product/shimano-deore-fc-m617-36t-aynakol-dislis-2.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/hassns-pro-bisiklet-on-gobek-28h-32h-36h-rainbow-mor-siyah-kirmizi/",
+  "slug": "hassns-pro-bisiklet-on-gobek-28h-32h-36h-rainbow-mor-siyah-kirmizi",
+  "name": "HASSNS Pro Bisiklet Ön Göbek 28H / 32H / 36H - Rainbow, Mor, Siyah, Kırmızı",
+  "category": "Jant Grubu",
+  "condition": "Sıfır",
+  "sku": "NB-HASSNS-ARKA-GOBEK",
+  "breadcrumbs": [],
+  "price": 1490.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "HASSNS PRO BİSİKLET ÖN GÖBEK 28H / 32H / 36H - RAİNBOW, MOR, SİYAH, KIRMIZI",
+  "specs": {
+   "Marka": "HASSNS",
+   "Model": "Pro",
+   "Konum": "Ön",
+   "Delik Sayısı": "28H / 32H / 36H (seçeneğe göre)",
+   "Renk": "Rainbow, Mor, Siyah, Kırmızı (seçeneğe göre)",
+   "Malzeme": "Alüminyum (anodize)"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-1.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-2.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-3.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-4.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-5.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-6.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-7.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-pro-bisiklet-arka-gobek-28h-32h-3-8.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/hassns-pro-bisiklet-arka-gobek-32h-36h-rainbow-siyah/",
+  "slug": "hassns-pro-bisiklet-arka-gobek-32h-36h-rainbow-siyah",
+  "name": "HASSNS Pro Bisiklet Arka Göbek 32H / 36H - Rainbow, Siyah",
+  "category": "Jant Grubu",
+  "condition": "Sıfır",
+  "sku": "NB-HASSNS-ON-GOBEK",
+  "breadcrumbs": [],
+  "price": 2490.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "HASSNS PRO BİSİKLET ARKA GÖBEK 32H / 36H - RAİNBOW, SİYAH",
+  "specs": {
+   "Marka": "HASSNS",
+   "Konum": "Arka",
+   "Delik Sayısı": "32H / 36H (seçeneğe göre)",
+   "Renk": "Rainbow, Siyah (seçeneğe göre)",
+   "Malzeme": "Alüminyum (anodize)",
+   "Model": "Pro",
+   "Gövde": "Kaset gövdeli"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/hassns-bisiklet-on-gobek-32h-36h-rainbow-1.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-bisiklet-on-gobek-32h-36h-rainbow-2.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-bisiklet-on-gobek-32h-36h-rainbow-5.jpg",
+   "https://nitrobisiklet.com/media/product/hassns-bisiklet-on-gobek-32h-36h-rainbow-6.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/bisiklet-arka-gobek-32h-mor-markasiz/",
+  "slug": "bisiklet-arka-gobek-32h-mor-markasiz",
+  "name": "Bisiklet Arka Göbek 32H Mor (Markasız)",
+  "category": "Jant Grubu",
+  "condition": "Sıfır",
+  "sku": "NB-GOBEK-ARKA-32H-MOR",
+  "breadcrumbs": [],
+  "price": 2490.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "BİSİKLET ARKA GÖBEK 32H MOR (MARKASIZ)",
+  "specs": {
+   "Marka": "Markasız",
+   "Konum": "Arka",
+   "Delik Sayısı": "32H",
+   "Renk": "Mor",
+   "Malzeme": "Alüminyum (anodize)",
+   "BİSİKLET ARKA GÖBEK 32H MOR (MARKASIZ)": "32 delikli, mor anodize alüminyum arka göbek. MTB, şehir ve elektrikli bisikletler için uygundur. Ürün markasızdır; görsel temsilidir.",
+   "TEKNİK ÖZELLİKLER": "Marka: Markasız",
+   "Konum: Arka": "Delik Sayısı: 32H",
+   "Renk: Mor": "Malzeme: Alüminyum (anodize)",
+   "Gülpınar, Fevzi Paşa Cd. No:73/B": "48800 Köyceğiz / Muğla",
+   "Pzt–Cmt 08:30–19:00, Pazar kapalı": "0554 939 92 69",
+   "info@nitrobisiklet.com": "Atölye",
+   "Servis randevusu": "Fiş takibi",
+   "Çamur günlüğü": "Destek",
+   "Uygulamayı kur": "Sipariş takibi",
+   "İade & değişim": "Kargo",
+   "İletişim": "Mağaza",
+   "Bisiklet": "Yedek Parça",
+   "Aksesuar": "Giyim",
+   "2. El Bisiklet": "Yasal",
+   "Mesafeli satış sözleşmesi": "Ön bilgilendirme formu",
+   "Üyelik sözleşmesi": "KVKK aydınlatma metni",
+   "Gizlilik ve çerezler": "Ticari ileti onayı",
+   "Çerez ayarları": "© 2026 NITRO BISIKLET",
+   "Barış Şen": "· Vergi: Köyceğiz 8020812018",
+   "· ETBİS: 4837713041": "Made by",
+   "ERYA Digital": "Siteyi nasıl kullandığını anlamak için analiz çerezi (Google Analytics) kullanmak istiyoruz. Siteyi çalıştıran zorunlu çerezler her zaman açık.",
+   "Çerez politikası": "Reddet"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/bisiklet-arka-gobek-32h-mor-markasiz-1.jpg",
+   "https://nitrobisiklet.com/media/product/bisiklet-arka-gobek-32h-mor-markasiz-2.jpg"
+  ]
+ },
+ {
+  "url": "https://nitrobisiklet.com/urun/bisiklet-on-gobek-32h-mor-markasiz/",
+  "slug": "bisiklet-on-gobek-32h-mor-markasiz",
+  "name": "Bisiklet Ön Göbek 32H Mor (Markasız)",
+  "category": "Jant Grubu",
+  "condition": "Sıfır",
+  "sku": "NB-GOBEK-ON-32H-MOR",
+  "breadcrumbs": [],
+  "price": 1490.0,
+  "old_price": null,
+  "stock_left": null,
+  "in_stock": true,
+  "description": "BİSİKLET ÖN GÖBEK 32H MOR (MARKASIZ)",
+  "specs": {
+   "Marka": "Markasız",
+   "Konum": "Ön",
+   "Delik Sayısı": "32H",
+   "Renk": "Mor",
+   "Malzeme": "Alüminyum (anodize)",
+   "BİSİKLET ÖN GÖBEK 32H MOR (MARKASIZ)": "32 delikli, mor anodize alüminyum ön göbek. MTB, şehir ve elektrikli bisikletler için uygundur. Ürün markasızdır; görsel temsilidir.",
+   "TEKNİK ÖZELLİKLER": "Marka: Markasız",
+   "Konum: Ön": "Delik Sayısı: 32H",
+   "Renk: Mor": "Malzeme: Alüminyum (anodize)",
+   "Gülpınar, Fevzi Paşa Cd. No:73/B": "48800 Köyceğiz / Muğla",
+   "Pzt–Cmt 08:30–19:00, Pazar kapalı": "0554 939 92 69",
+   "info@nitrobisiklet.com": "Atölye",
+   "Servis randevusu": "Fiş takibi",
+   "Çamur günlüğü": "Destek",
+   "Uygulamayı kur": "Sipariş takibi",
+   "İade & değişim": "Kargo",
+   "İletişim": "Mağaza",
+   "Bisiklet": "Yedek Parça",
+   "Aksesuar": "Giyim",
+   "2. El Bisiklet": "Yasal",
+   "Mesafeli satış sözleşmesi": "Ön bilgilendirme formu",
+   "Üyelik sözleşmesi": "KVKK aydınlatma metni",
+   "Gizlilik ve çerezler": "Ticari ileti onayı",
+   "Çerez ayarları": "© 2026 NITRO BISIKLET",
+   "Barış Şen": "· Vergi: Köyceğiz 8020812018",
+   "· ETBİS: 4837713041": "Made by",
+   "ERYA Digital": "Siteyi nasıl kullandığını anlamak için analiz çerezi (Google Analytics) kullanmak istiyoruz. Siteyi çalıştıran zorunlu çerezler her zaman açık.",
+   "Çerez politikası": "Reddet"
+  },
+  "images": [
+   "https://nitrobisiklet.com/media/product/bisiklet-on-gobek-32h-mor-markasiz-1.jpg",
+   "https://nitrobisiklet.com/media/product/bisiklet-on-gobek-32h-mor-markasiz-2.jpg"
   ]
  }
 ]
