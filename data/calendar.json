@@ -1648,7 +1648,8 @@
   "rule": "servis",
   "status": "planned",
   "fp": "f9c08dce705e",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1701,7 +1702,8 @@
   "rule": "ebike",
   "status": "planned",
   "fp": "801bcb2e4f1f",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1791,7 +1793,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "9e9d57ade59d",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1830,7 +1833,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "2e32b980fd98",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
