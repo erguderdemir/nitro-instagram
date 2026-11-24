@@ -1,9 +1,49 @@
-görev: plan · 2026-11-24 10:53 UTC
+görev: plan · 2026-11-24 11:23 UTC
 $ scrape.py  -> çıkış 0
 420 ürün bulundu, çekiliyor…
 420 ürün yazıldı: data/products.json
-$ plan.py  -> çıkış 1
-Traceback (most recent call last):
-  File "/home/runner/work/nitro-instagram/nitro-instagram/scripts/plan.py", line 15, in <module>
-    from render import render
-ImportError: cannot import name 'render' from 'render' (/home/runner/work/nitro-instagram/nitro-instagram/scripts/render.py)
+$ plan.py  -> çıkış 0
+8 yeni ürüne kod verildi.
+2026-11-28-post-1100  liste:kis  5 ürün
+2026-12-05-post-1100  liste:hediye250  5 ürün
+2026-12-12-post-1100  liste:hediye500  5 ürün
+2026-12-19-post-1100  liste:cocuk  6 ürün
+2026-12-26-post-1100  liste:yukseltme  5 ürün
+2026-11-25-post-1930  carousel ipucu  KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK kis-bakimi
+2026-11-26-post-1930  carousel urun   Frenlerin temiz kalsın                 404 Balata Spreyi (Metal Temizleyici) 500 ml
+2026-11-27-post-1930  carousel urun   Her güne bir pedal                     Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koy
+2026-11-29-post-1100  carousel urun   Gözlük yalnızca güneş için değil       Briviga Gözlük GLS-39406 Pembe
+2026-11-30-post-1930  carousel urun   Rotanı dağa çevir                      Bisan MTX 7200 27.5" Dağ Bisikleti 3x8 Vites 17" (
+2026-12-01-post-1930  carousel urun   Bisikletin ayakta dursun               Arka Park Ayağı 26" Siyah
+2026-12-02-post-1930  carousel ipucu  ISLAK ZEMİNDE GÜVENLİ SÜRÜŞÜN 5 KURALI islak-zemin
+2026-12-03-post-1930  carousel urun   Yol tutuş lastikten gelir              Schwalbe Smart Sam Performance 29x2.25 Dış Lastik
+2026-12-04-post-1930  carousel urun   Elektrik desteğiyle sür                Bisan Envious Deore 29" Elektrikli Dağ Bisiklet 45
+2026-12-06-post-1100  carousel urun   Küçük yolcuya yer aç                   Sarissa Elektrikli Bisiklet Uyumlu Kadro Bağlantıl
+2026-12-07-post-1930  carousel urun   Yol bitince devam et                   Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites
+2026-12-08-post-1930  carousel urun   Arka dişlini yenile                    Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli
+2026-12-09-post-1930  carousel ipucu  ÇOCUĞUNA HANGİ JANT BOYU UYAR?         cocuk-jant-boyu
+2026-12-10-post-1930  carousel urun   Fren bakımına sprey                    Grayzer Fren Balata Temizleme Spreyi 500 ML
+2026-12-11-post-1930  carousel urun   Günlük sürüşün bisikleti               Carraro Sportive 225 28" Jant 24 Vites Hidrolik Di
+2026-12-13-post-1100  carousel urun   Mataraya sağlam yuva                   Sedona SD100 Matara Kafesi
+2026-12-14-post-1930  carousel urun   Rampaya hazır                          Carraro RAVE BMX 20" 1-V VB Mat Mor
+2026-12-15-post-1930  carousel urun   Fren gücü rotordan geçer               Shimano Deore XT SM-RT76 203 mm 6 Vidalı Disk Fren
+2026-12-16-post-1930  carousel ipucu  BİSİKLETİN SERVİS İSTİYOR: 5 İŞARET    servis-isaretleri
+2026-12-17-post-1930  carousel urun   Karanlıkta görün                       Far Helix Pro-W 250 LM USB
+2026-12-18-post-1930  carousel urun   Daha uzağa, daha rahat                 Bisan Florida 26" Elektrikli Şehir Bisikleti Merca
+2026-12-20-post-1100  carousel urun   Tamir kitin yanında olsun              Bisiklet Tamir Kiti
+2026-12-21-post-1930  carousel urun   Patikaya hazır                         Tanke TK6 29" Enduro Dağ Bisikleti 1x10 Vites M (1
+2026-12-22-post-1930  carousel urun   Uzamış zinciri değiştir                SHIMANO Deore XT CN-HG93 Zincir 9S
+2026-12-23-post-1930  carousel ipucu  ZİNCİRİNİ YANLIŞ MI YAĞLIYORSUN?       zincir-bakimi
+2026-12-24-post-1930  carousel urun   Islak yola hazırlan                    MTB Plastik Çamurluk Takım Geniş
+2026-12-25-post-1930  carousel urun   İşe, okula, sahile                     Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm A
+2026-12-27-post-1100  carousel urun   Arkanı gör                             360° Dönebilen Geniş Açılı İkili Dikiz Aynası
+2026-12-28-post-1930  carousel urun   Pedalına güç kat                       Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x
+2026-12-29-post-1930  carousel urun   Yedek iç lastik yanında mı?            Continental Conti Tube (700C) 25-32c İç Lastik
+2026-12-30-post-1930  carousel ipucu  LASTİĞİNE KAÇ BAR HAVA BASMALISIN?     lastik-basinci
+2026-12-31-post-1930  image    marka  Mutlu yıllar 2027                      yilbasi
+Post kareleri çiziliyor: 193
+Story kareleri çiziliyor: 185
+Takvim: 148 kayıt (148 yeni/yenilenen), 2026-11-25 → 2026-12-31.
+Sayfalar yazıldı: docs/onizleme/, docs/index.html, docs/TAKVIM.md, docs/suite/
+$ denetim.py  -> çıkış 0
+DENETİM: 148 kayıt denetlendi, 0 bulgu
