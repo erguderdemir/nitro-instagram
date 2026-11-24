@@ -250,7 +250,8 @@
   "status": "planned",
   "fp": "c2437a6285ef",
   "cta": "servis",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -439,7 +440,8 @@
   "rule": "dis_lastik",
   "status": "planned",
   "fp": "4a3a8e66b417",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -639,7 +641,8 @@
   "rule": "sehir",
   "status": "planned",
   "fp": "3aaf5347ebdb",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
