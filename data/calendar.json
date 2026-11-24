@@ -4709,7 +4709,8 @@
   "status": "planned",
   "fp": "8ffb6852b44f",
   "cta": "servis",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4893,7 +4894,8 @@
   "rule": "lamba",
   "status": "planned",
   "fp": "a75a80a3fd44",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5095,7 +5097,8 @@
   "rule": "ebike",
   "status": "planned",
   "fp": "f4f4069aec38",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
