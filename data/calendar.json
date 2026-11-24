@@ -6562,7 +6562,8 @@
   "rule": "ebike",
   "status": "planned",
   "fp": "85d68278deed",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -6875,7 +6876,8 @@
   "rule": "liste:cocuk",
   "status": "planned",
   "fp": "e42300386c2e",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
