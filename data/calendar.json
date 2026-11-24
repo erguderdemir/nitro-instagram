@@ -145,7 +145,8 @@
   "rule": "servis",
   "status": "planned",
   "fp": "b891b4eaa00a",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -198,7 +199,8 @@
   "rule": "dis_lastik",
   "status": "planned",
   "fp": "dcb13119155f",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -287,7 +289,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "e5a0ef14c382",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
