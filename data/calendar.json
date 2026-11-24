@@ -1883,7 +1883,8 @@
   "rule": "gravel",
   "status": "planned",
   "fp": "a00cca233f52",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -1992,7 +1993,8 @@
   "rule": "dis_lastik",
   "status": "planned",
   "fp": "da6c5489d08e",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2031,7 +2033,8 @@
   "rule": "marka",
   "status": "planned",
   "fp": "22c6bcb065a5",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2084,7 +2087,8 @@
   "rule": "bmx",
   "status": "planned",
   "fp": "03177c5bb8a3",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -2193,7 +2197,8 @@
   "rule": "ebike",
   "status": "planned",
   "fp": "2c5eae9a76af",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
