@@ -146,3 +146,8 @@ carousel|reel|image|story, `theme` urun|ipucu|liste|servis|marka|promo|etkilesim
   - Bekçi: `50 6-19/2 * * *` UTC; 25 dk–2 sa 45 dk gecikme yedeği.
   - Önizleme: `0 5 * * *` UTC, salt okur.
 - Suite'te alt metin ve konum girilmedi.
+
+## Devam (24 Kas 20:10)
+- Her posta aynı dakikada "Şimdi akışta" paylaşım story'si eklendi (plan.py, kanal suite). Suite'te planlanmamış olanlar API ile (sticker'sız) zamanında çıkar.
+- Suite'e linkli planlanacak kalan paylaşım story'leri: 2026-11-26-story-1930 … 2026-12-23-story-1930 (+ 2026-11-30-story-1230, 2026-12-23-story-2030). Liste: `type=story, channel=suite, suite_scheduled yok, status=planned`.
+- Öne Çıkanlar: web'den yapılamıyor (Chrome'daki hesap nitrobisiklet değil, kapak yükleme yalnızca mobil). Kapaklar: paylas/kapaklar/*.jpg — telefondan elle.

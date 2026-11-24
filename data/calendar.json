@@ -297,7 +297,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "5ed455b3b1f3",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
