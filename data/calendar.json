@@ -4622,7 +4622,8 @@
   "rule": "servis",
   "status": "planned",
   "fp": "b891b4eaa00a",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4675,7 +4676,8 @@
   "rule": "masa",
   "status": "planned",
   "fp": "7c34f93860f6",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4765,7 +4767,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "b46088f0fe3c",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4804,7 +4807,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "4318748e20d1",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4965,7 +4969,8 @@
   "rule": "lamba",
   "status": "planned",
   "fp": "f6892cca77c0",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5004,7 +5009,8 @@
   "rule": "marka",
   "status": "planned",
   "fp": "8fa652c4fe33",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5057,7 +5063,8 @@
   "rule": "dag",
   "status": "planned",
   "fp": "73caaeae43c9",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -5168,7 +5175,8 @@
   "rule": "ebike",
   "status": "planned",
   "fp": "ed0a9a38bf23",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
