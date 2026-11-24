@@ -4064,7 +4064,8 @@
   "rule": "matara_kafesi",
   "status": "planned",
   "fp": "ba875c404b92",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4317,7 +4318,8 @@
   "rule": "bmx",
   "status": "planned",
   "fp": "f27a152c5931",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -4511,7 +4513,8 @@
   "rule": "rotor",
   "status": "planned",
   "fp": "177fbbbf2eff",
-  "ver": "ae66bdb263"
+  "ver": "ae66bdb263",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
