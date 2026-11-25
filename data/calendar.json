@@ -153,10 +153,13 @@
   "media_link": "media/2026-11-25-story-0930-link.jpg",
   "ref": "servis:0",
   "rule": "servis",
-  "status": "planned",
+  "status": "published",
   "fp": "b891b4eaa00a",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-25T09:30:00+03:00"
  },
  {
   "schema": 2,
