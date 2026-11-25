@@ -113,11 +113,16 @@ def live() -> bool:
 
 
 def yayinla() -> None:
-    if not live():
-        print("[gorev] Yayın kilitli (config.json live=false). Hiçbir şey yayınlanmadı.")
-        return
-    run("denetim.py", must=False)  # bulgulu kayıt taslağa çekilir; yayıncı yalnız planlı kayıtları işler
-    run("publish.py")
+    try:
+        if not live():
+            print("[gorev] Yayın kilitli (config.json live=false). Hiçbir şey yayınlanmadı.")
+            return
+        run("denetim.py", must=False)  # bulgulu kayıt taslağa çekilir; yayıncı yalnız planlı kayıtları işler
+        run("publish.py")
+    finally:
+        # Suite'te zamanlanmış postları Business Suite yayınlar (kilitten bağımsız): /media ile eşle, 72 saat
+        # dolmuş ölçümü dondur -> data/metrics.json. Hafif mod; hatası ya da izin eksikliği yayını kırmaz.
+        run("report.py", "--esle", must=False)
 
 
 def main() -> None:
@@ -140,6 +145,8 @@ def main() -> None:
                 head = f"görev: plan · {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC"
                 (ROOT / "data" / "son-calisma.log").write_text("\n".join([head, *LOG[-400:]]) + "\n", encoding="utf-8")
             run("report.py", must=False)
+            run("paylas.py", must=False)   # O12: data/paylas/ paketleri; betik yoksa atlanır
+            run("yorum.py", must=False)    # O15: yorum özeti; betik yoksa atlanır, hatası planı kırmaz
             run("publish.py", "--check", must=False)  # jeton geçerliliği ve bitiş tarihi -> data/jeton.json
         finally:
             if gecikmis:  # plan düşse bile kuyruktan düşmüş olabilecek yayın yapılsın

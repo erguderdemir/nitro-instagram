@@ -35,7 +35,10 @@
       ],
       "cta": "servis",
       "caption": "Bisikleti yağmur değil, ıslak bırakmak yıpratır.\n\nYağmurda sürmek tek başına sorun değil. Asıl zararı sürüşten sonra üzerinde kalan su ve çamur verir: zincir paslanır, kir hareketli parçaları aşındırır.\n\nÇözüm zor değil. Eve gelince kadroyu ve zinciri kurula, zinciri yağla, bisikleti kuru bir yerde tut. Çamurluk da işini epey kolaylaştırır.\n\nFrenlerinden ses geliyorsa ya da vitesler eskisi gibi geçmiyorsa kış ilerlemeden bir bakım iyi olur. Köyceğiz'deki atölyemizde servis ve bakım yapıyoruz; randevunu sitemizden alabilirsin.\n\nSen kışın sürmeye devam ediyor musun, yoksa bisikleti bahara kadar kaldıranlardan mısın?",
-      "alt": "Kışın bisikleti koruyan beş alışkanlığı sırayla anlatan kaydırmalı bilgi görseli."
+      "alt": "Kışın bisikleti koruyan beş alışkanlığı sırayla anlatan kaydırmalı bilgi görseli.",
+      "story_baslik": "Kışa <em>bakım rehberi</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/kimyasal/",
+      "cta_st": "BAKIM ÜRÜNLERİ"
     },
     {
       "id": "cocuk-jant-boyu",
@@ -71,7 +74,10 @@
       ],
       "cta": "cocuk",
       "caption": "\"Büyüyünce olur\" diye alınan bisiklet, çocuğu bisikletten soğutabilir.\n\nÇocuk bisikletinde boy jant çapıyla anılır: 12, 14, 16, 20, 24 jant. Yaş aralıkları kabaca yol gösterir; asıl bakman gereken çocuğun boyu ve iç bacak ölçüsü.\n\nBisikleti denerken üç şeye bak: Selede otururken ayak uçları yere rahatça değiyor mu? Gidona uzanırken kolları gergin kalıyor mu? Parmakları fren koluna yetişiyor mu?\n\nBüyük gelen bisiklette çocuk dengesini zor kurar, frene geç ulaşır.\n\nTabloyu kaydet, bisiklet bakarken lazım olur. Emin olamıyorsan çocuğunla birlikte Köyceğiz'deki mağazamıza uğra; bisikletin üzerinde birlikte bakalım.\n\nSenin ilk bisikletin kaç janttı, hatırlıyor musun?",
-      "alt": "Çocuğun boyuna göre 12 jant ile 26 jant arasında bisiklet boyu seçimini gösteren kaydırmalı bilgi görseli."
+      "alt": "Çocuğun boyuna göre 12 jant ile 26 jant arasında bisiklet boyu seçimini gösteren kaydırmalı bilgi görseli.",
+      "story_baslik": "Hangi jant <em>boyu uyar?</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/kask/",
+      "cta_st": "KASKLAR"
     },
     {
       "id": "islak-zemin",
@@ -108,7 +114,10 @@
       ],
       "cta": "magaza",
       "caption": "Yağmurda sürmek değil, kuru zemindeymiş gibi sürmek risklidir.\n\nIslak asfaltta lastiğin tutunması azalır, durma mesafen uzar. Bu yüzden her hareketi biraz erkene al: erken frenle, viraja girmeden yavaşla, öndeki araçla arandaki mesafeyi artır.\n\nEn çok şaşırtan yerler yolun kendisi değil, üzerindekiler: boyalı çizgiler, rögar kapakları, ıslak yapraklar. Bunların üzerinde fren yapma, gidonu çevirme; düz ve sakin geç.\n\nBir de görünürlük var. Yağmurda sürücülerin görüşü daralır; ışıkların gündüz de yansın.\n\nBu kuralları kaydet, ilk yağmurlu günde aklında olsun.\n\nSen yağmurda sürer misin, yoksa hava açana kadar bekler misin?",
-      "alt": "Islak zeminde güvenli bisiklet sürüşü için beş kuralı anlatan kaydırmalı bilgi görseli."
+      "alt": "Islak zeminde güvenli bisiklet sürüşü için beş kuralı anlatan kaydırmalı bilgi görseli.",
+      "story_baslik": "Islak zeminde <em>güvenli sür</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/aydinlatma-ve-reflektor/",
+      "cta_st": "IŞIKLAR"
     },
     {
       "id": "servis-isaretleri",
@@ -145,7 +154,10 @@
       ],
       "cta": "servis",
       "caption": "Bisikletin sana bir şey söylemeye çalışıyor olabilir.\n\nArızaların çoğu bir anda ortaya çıkmaz. Önce küçük bir ses gelir, fren kolu biraz daha derine iner, vites bir kez atlar. Hepsi aynı şeyi söyler: bakım zamanı.\n\nEn çok dikkat etmen gereken yer frenler. Fren kolu gidona yaklaşıyorsa ya da frenden metal sesi geliyorsa sürmeye devam etme; önce kontrol ettir.\n\nVites atlaması, paslı zincir, jantta yalpa ve pedaldan gelen tık sesi de ertelendikçe büyür. Erken fark edilen sorun çoğu zaman bir ayarla çözülür.\n\nKöyceğiz'deki atölyemizde servis ve bakım yapıyoruz; randevunu sitemizden alabilirsin.\n\nSenin bisikletin en son ne zaman bakım gördü?",
-      "alt": "Bisikletin servise gitmesi gerektiğini gösteren beş belirtiyi anlatan kaydırmalı bilgi görseli."
+      "alt": "Bisikletin servise gitmesi gerektiğini gösteren beş belirtiyi anlatan kaydırmalı bilgi görseli.",
+      "story_baslik": "Servis zamanı: <em>5 işaret</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/kimyasal/",
+      "cta_st": "BAKIM ÜRÜNLERİ"
     },
     {
       "id": "lastik-basinci",
@@ -182,7 +194,10 @@
       ],
       "cta": "magaza",
       "caption": "Lastik basıncı parmakla sıkarak ölçülmez.\n\nElle sert gelen lastik, olması gerekenden düşük basınçta olabilir. Doğru değeri göstergeli bir pompa söyler.\n\nGenel aralıklar şöyle: dağ bisikletinde yaklaşık 1,8-2,8 bar, şehir ve tur bisikletinde yaklaşık 3-5 bar, yol bisikletinde yaklaşık 5,5-8 bar. Son sözü ise her zaman lastiğin yanağında yazan aralık söyler.\n\nDüşük basınçta bir çukura girersen jant iç lastiği sıkıştırıp kesebilir. Fazla basınçta lastik zemine daha az tutunur, bisiklet her tümsekte zıplar.\n\nLastikler sürmesen de zamanla hava kaybeder. Haftada bir kontrol yeterli. Değerleri kaydet, pompanın başında işine yarar.\n\nSen basıncı pompanın göstergesinden mi takip ediyorsun, yoksa hâlâ parmak testi mi?",
-      "alt": "Dağ, şehir ve yol bisikleti için genel lastik basıncı aralıklarını gösteren kaydırmalı bilgi görseli."
+      "alt": "Dağ, şehir ve yol bisikleti için genel lastik basıncı aralıklarını gösteren kaydırmalı bilgi görseli.",
+      "story_baslik": "Lastiğe kaç <em>bar hava?</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/pompa/",
+      "cta_st": "POMPALAR"
     },
     {
       "id": "zincir-bakimi",
@@ -218,7 +233,10 @@
       ],
       "cta": "servis",
       "caption": "Zinciri yağlamak, üzerine yağ dökmek demek değil.\n\nZincirin yağa ihtiyaç duyduğu yer baklaların içi ve makaralar. Dışarıda kalan yağ işe yaramaz; tozu ve kumu üzerine toplar, zinciri daha hızlı aşındırır.\n\nDoğru sıra şöyle: Önce sil ve temizle. Sonra her baklaya bir damla yağ ver. Birkaç dakika bekle, fazlasını bezle al.\n\nSık yapılan iki hata var. Biri kirli zincirin üstüne yağ eklemek. Diğeri çok amaçlı çözücü spreyleri zincir yağı sanmak; bu spreyler zincirdeki yağı da çözer, kalıcı yağlama sağlamaz.\n\nZincir kullandıkça uzar; zamanında değişmezse rubleyi ve aynakolu da yıpratır. Atölyemizde ölçüp durumunu söyleyebiliriz.\n\nAdımları kaydet, zincir bakımında yanında olsun.\n\nSen zincirini ne sıklıkla yağlıyorsun?",
-      "alt": "Bisiklet zincirini temizleme, yağlama ve uzamasını ölçtürme adımlarını anlatan kaydırmalı bilgi görseli."
+      "alt": "Bisiklet zincirini temizleme, yağlama ve uzamasını ölçtürme adımlarını anlatan kaydırmalı bilgi görseli.",
+      "story_baslik": "Zinciri <em>doğru yağla</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/kimyasal/",
+      "cta_st": "BAKIM ÜRÜNLERİ"
     },
     {
       "id": "kask-ayari",
@@ -255,7 +273,10 @@
       ],
       "cta": "magaza",
       "caption": "Kask takmak yetmez; doğru takmak gerekir.\n\nSık görülen bir hata, kaskın arkaya yatık durması. Alın açıkta kalınca kask en çok gerektiği anda işini yapamaz.\n\nKontrolü kolay: Kask başında düz dursun. Ön kenarıyla kaşların arasında yaklaşık iki parmak boşluk olsun. Yan kayışlar kulağının altında V çizsin. Çene kayışının altına bir iki parmak girsin.\n\nSonra başını sağa sola salla. Kask yerinden oynuyorsa arkasındaki ayar mekanizmasını biraz daha sık.\n\nBir kural daha var: Darbe almış kask değiştirilir. Dışı sağlam görünse de içindeki köpük ezilmiş olabilir.\n\nSen her sürüşte kask takıyor musun, yoksa kısa mesafede boş verenlerden misin?",
-      "alt": "Bisiklet kaskının başa doğru oturması için beş kontrolü anlatan kaydırmalı bilgi görseli."
+      "alt": "Bisiklet kaskının başa doğru oturması için beş kontrolü anlatan kaydırmalı bilgi görseli.",
+      "story_baslik": "Kask ayarı: <em>5 kontrol</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/kask/",
+      "cta_st": "KASKLAR"
     },
     {
       "id": "ebike-batarya-kis",
@@ -290,7 +311,10 @@
       ],
       "cta": "servis",
       "caption": "Kışın menzilin düştüyse bataryan bozulmuş olmayabilir.\n\nLityum bataryalar soğukta daha az enerji verir. Hava ısınınca menzil geri gelir; bu normal bir durum.\n\nAsıl dikkat etmen gereken şarj. Bataryayı içeride, oda sıcaklığında şarj et. Dışarıda soğukta kalmış bataryayı hemen prize takma; önce oda sıcaklığına gelmesini bekle.\n\nBisikleti birkaç hafta sürmeyeceksen bataryayı yaklaşık %40-60 dolulukta, serin ve kuru bir yerde sakla. Tam dolu ya da tamamen boş beklemek bataryayı yorar.\n\nŞarj için yalnızca bisikletle gelen orijinal cihazı kullan, temas noktalarını da kuru tut.\n\nBataryanla ilgili aklına takılan bir şey varsa Köyceğiz'deki atölyemize uğrayabilirsin.\n\nSenin e-bisikletin kışın kaç kilometre menzil veriyor?",
-      "alt": "E-bisiklet bataryasını kışın şarj etme ve saklama kurallarını anlatan kaydırmalı bilgi görseli."
+      "alt": "E-bisiklet bataryasını kışın şarj etme ve saklama kurallarını anlatan kaydırmalı bilgi görseli.",
+      "story_baslik": "Batarya kışın <em>nasıl korunur?</em>",
+      "cta_url": "https://nitrobisiklet.com/magaza/elektrikli-bisiklet/",
+      "cta_st": "E-BİSİKLETLER"
     }
   ],
   "story_tips": [

@@ -10,7 +10,9 @@ Kullanım:
   python3 scripts/publish.py               zamanı gelenleri yayınla (config.json'da live=true değilse hiçbir şey yapmaz)
   python3 scripts/publish.py --dry-run     yalnızca ne yapılacağını yaz
   python3 scripts/publish.py --check       token'ı, hesabı, kotayı ve medya sunucusunu doğrula
-  python3 scripts/publish.py --probe [ID]  kapsayıcıları oluşturup hazır olmalarını bekle; ASLA yayınlamaz
+  python3 scripts/publish.py --probe [ID]  kapsayıcıları oluşturup hazır olmalarını bekle; ASLA yayınlamaz.
+                                           Önce bağlı Facebook Sayfası'nın konumunu okur: doluysa Sayfa ID'si
+                                           location_id olarak config.json'a ve data/konum.json'a yazılır
 
 Çift yayın koruması:
   1. Üst kapsayıcı oluşur oluşmaz kimliği takvime yazılıp diske kaydedilir; media_publish ondan sonra çağrılır
@@ -25,7 +27,9 @@ from __future__ import annotations
 import argparse
 import copy
 import importlib
+import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -209,7 +213,7 @@ def build_container(ig: str, c: dict, fmt: str) -> str:
     for u in urls + ([cover] if cover else []):
         if not url_ok(u):
             raise PublishError(f"Medya herkese açık değil (Pages henüz güncellenmemiş olabilir): {u}")
-    caption, loc = c.get("caption") or "", common.CFG.get("location_id")
+    caption, loc = c.get("caption") or "", konum_id()
     if fmt == "story":
         return create_container(ig, {"image_url": urls[0], "media_type": "STORIES"})
     if fmt == "image":
@@ -224,6 +228,28 @@ def build_container(ig: str, c: dict, fmt: str) -> str:
         wait_ready(child)
     return create_container(ig, {"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption},
                             {"location_id": loc})
+
+
+def konum_id() -> str | None:
+    """Postlara eklenecek konum (Facebook Sayfası ID'si): config.json'daki location_id, yoksa data/konum.json.
+
+    data/konum.json'u --probe yazar; iş akışı yalnız data/ ve docs/ altını commit ettiği için Actions'ta bulunan
+    konum oradan okunur. Konum reddedilirse create_container kapsayıcıyı konumsuz yeniden dener.
+    """
+    loc = common.CFG.get("location_id")
+    if not loc:
+        loc = _konum_dosyasi().get("location_id")
+    return str(loc) if loc else None
+
+
+def _konum_dosyasi() -> dict:
+    """data/konum.json; yoksa ya da bozuksa {} (bozuk dosya yayını kırmaz, post konumsuz çıkar)."""
+    try:
+        d = common.read_json(common.DATA / "konum.json", {})
+    except (ValueError, OSError) as e:
+        print(f"UYARI: data/konum.json okunamadı, konum kullanılmıyor: {e}", file=sys.stderr)
+        return {}
+    return d if isinstance(d, dict) else {}
 
 
 def media_publish(ig: str, container: str) -> str:
@@ -593,6 +619,70 @@ def check() -> int:
     return 0
 
 
+def config_yaz(key: str, value: str) -> bool:
+    """config.json'da tek bir üst düzey anahtarı yazar; dosyanın elle verilmiş biçimi korunur (yalnız o satır
+    değişir ya da "graph_api_version" satırının altına eklenir). Sonuç JSON olarak doğrulanmadan yazılmaz."""
+    path = common.ROOT / "config.json"
+    text = path.read_text(encoding="utf-8")
+    line = f'  "{key}": {json.dumps(value, ensure_ascii=False)},'
+    pat = re.compile(rf'^[ \t]*"{re.escape(key)}"[ \t]*:[ \t]*("[^"\n]*"|[0-9]+|null)[ \t]*,?[ \t]*$', re.M)
+    if pat.search(text):
+        new = pat.sub(lambda m: line if m.group(0).rstrip().endswith(",") else line[:-1], text, count=1)
+    else:
+        anchor = re.compile(r'^[ \t]*"graph_api_version"[^\n]*,[ \t]*$', re.M)
+        hit = anchor.search(text)
+        if not hit:
+            return False
+        new = text[:hit.end()] + "\n" + line + text[hit.end():]
+    try:
+        if json.loads(new).get(key) != value:
+            return False
+    except ValueError:
+        return False
+    if new != text:
+        path.write_text(new, encoding="utf-8")
+    return True
+
+
+def konum_oku() -> None:
+    """--probe'un ilk adımı: Instagram hesabına bağlı Facebook Sayfası'nın konumunu okur.
+
+    Sayfada konum doluysa Sayfa ID'si location_id olarak config.json'a ve data/konum.json'a yazılır (post, reel ve
+    carousel kapsayıcıları onu kullanır). Konum boşsa ya da izin (pages_read_engagement) yoksa yalnız uyarı basılır;
+    probe'un geri kalanı ve yayın etkilenmez. Hiçbir şey yayınlamaz.
+    """
+    try:
+        accounts = [(name, pid, ig) for name, pid, ig in graph.ig_accounts() if ig]
+        ig_user = os.environ.get("IG_USER_ID") or ""
+        pages = [a for a in accounts if str(a[2].get("id")) == ig_user] if ig_user else accounts
+        if len(pages) != 1:
+            print(f"UYARI: konum: Instagram hesabına bağlı Sayfa bulunamadı ({len(pages)} aday); location_id "
+                  "yazılmadı.", file=sys.stderr)
+            return
+        name, page_id, _ig = pages[0]
+        page = api("GET", str(page_id), fields="location,name")
+    except Exception as e:  # noqa: BLE001
+        print(f"UYARI: konum: Sayfa konumu okunamadı (pages_read_engagement izni gerekebilir); location_id "
+              f"yazılmadı: {e}", file=sys.stderr)
+        return
+    loc = page.get("location") if isinstance(page.get("location"), dict) else {}
+    if not any(loc.get(k) for k in ("street", "city", "latitude", "longitude", "zip")):
+        print(f"UYARI: konum: '{page.get('name') or name}' Sayfasında konum yok; location_id yazılmadı "
+              "(postlar konumsuz yayınlanır).", file=sys.stderr)
+        return
+    page_id = str(page_id)
+    yer = ", ".join(str(loc[k]) for k in ("street", "city", "country") if loc.get(k))
+    yeni = {"location_id": page_id, "sayfa": page.get("name") or name, "yer": yer}
+    eski = _konum_dosyasi()
+    if {k: eski.get(k) for k in yeni} != yeni:   # aynı konum yeniden yazılmaz (her probe'da boşuna commit olmasın)
+        common.write_json(common.DATA / "konum.json", {"kontrol": common.now().isoformat(timespec="seconds"), **yeni})
+    ok = config_yaz("location_id", page_id)
+    common.CFG["location_id"] = page_id
+    print(f"Konum: '{page.get('name') or name}' ({yer or 'koordinat'}) -> location_id={page_id}"
+          + ("" if ok else " (config.json güncellenemedi; data/konum.json kullanılacak)")
+          + ". İlk konumlu postun permalink'ini elle kontrol et.")
+
+
 def probe(target: str | None) -> int:
     """Canlıya çıkmadan uçtan uca doğrulama: kapsayıcıları oluşturur ve hazır olmalarını bekler.
 
@@ -600,6 +690,7 @@ def probe(target: str | None) -> int:
     """
     if not os.environ.get("IG_ACCESS_TOKEN"):
         sys.exit("--probe: IG_ACCESS_TOKEN tanımlı değil.")
+    konum_oku()
     cal = common.load_calendar()
     if target:
         picks = [c for c in cal if c.get("id") == target]

@@ -4,9 +4,12 @@
 Kullanım:
   python3 scripts/report.py            Graph API'den güncel sayıları topla, puanları ve raporu yaz
   python3 scripts/report.py --no-api   API'ye bağlanma; yalnız kayıtlı dosyalardan rapor üret
+  python3 scripts/report.py --esle     hafif mod (publish adımında): yalnız Suite eşlemesi ve 72 saat dondurması;
+                                       RAPOR.md ve scores.json yazılmaz, jeton yoksa sessizce atlanır
 
 Yazdıkları (takvime, yani data/calendar.json'a hiçbir durumda dokunmaz):
-  data/metrics.json   hesap (takipçi) geçmişi ve gönderi başına ham sayılar
+  data/metrics.json   hesap (takipçi) geçmişi ve gönderi başına ham sayılar; Suite'ten yayınlanan postların
+                      eşlenen media_id/permalink'i (kaynak=suite) ve yayından ≥72 saat sonraki ilk ölçüm (dondurulmus)
   data/scores.json    planlayıcı için 0..1 arası göreli puanlar: kategori, biçim, tema, saat
   RAPOR.md            okunur haftalık özet
 
@@ -24,8 +27,8 @@ import unicodedata
 from datetime import date, datetime, timedelta
 
 import graph
-from common import (AY, CFG, DATA, GUN, IG_USERNAME, ROOT, TZ, item_dt, load_calendar, now, read_json, tr_date,
-                    write_json)
+from common import (AY, CFG, DATA, GUN, IG_USERNAME, ROOT, TZ, cancelled_ids, item_dt, load_calendar, now, read_json,
+                    tr_date, write_json)
 
 # Çıktı yolları. İşlevler bunları çağrı anında okur; testte başka dizine yönlendirmek için üzerine yazılabilir.
 # Aynı şekilde `graph.api` ve bu modüldeki `now` da sahtesiyle değiştirilebilir.
@@ -51,6 +54,20 @@ STREAK_LIMIT = 3              # art arda bu kadar başarısız çağrı: bu çal
 WEEK = timedelta(days=7)
 MONTH = timedelta(days=30)
 GRACE = timedelta(hours=3)    # publish.py'deki LATE_LIMIT: bundan eski "planned" kayıt, yayıncı işlemedi demektir
+
+# Suite eşlemesi: Business Suite'te zamanlanan (suite_scheduled, kilitli) postlar yayıncıdan geçmez; media_id'leri
+# hesabın /media listesinden zaman damgasıyla bulunur ve yalnız metrics.json'a yazılır (takvime asla yazılmaz).
+MEDIA_LIST_FIELDS = "id,timestamp,permalink,caption,media_type"
+ESLE_TOL = timedelta(minutes=10)        # planlanan saat ile /media zaman damgası arasındaki en büyük fark
+ESLE_GERI = timedelta(days=21)          # günlük raporda bundan eski eşlenmemiş post artık aranmaz
+ESLE_GERI_HAFIF = timedelta(hours=6)    # --esle (15 dakikada bir) yalnız yakın geçmişteki postları arar
+ESLE_GEC = timedelta(minutes=45)        # planlanan saatten bu kadar sonra eşlenmemiş post "eşlenemedi" sayılır
+ESLE_BASLANGIC = "2026-11-25"           # bu tarihten itibaren planlanan Suite postları eşlenir
+ESLE_SAYFA = 4                          # /media'da gezilen en çok sayfa (sayfa başına 50 medya)
+ESLE_TUR = {"carousel": "CAROUSEL_ALBUM", "image": "IMAGE", "reel": "VIDEO"}   # eşit puanda türü tutan seçilir
+DONDUR = timedelta(hours=72)            # yayından en az bu kadar sonra alınan ilk ölçüm "dondurulmus"a bir kez yazılır
+DONDUR_HAFIF = timedelta(hours=48)      # --esle yalnız 72..120 saatlik postları dondurur; daha eskisini günlük rapor
+EXTRA_KEYS = ("kaynak", "yayin", "eslesme", "dondurulmus")   # yeniden toplamada korunan eşleme/dondurma alanları
 
 STATUS_TR = (("published", "Yayınlandı (published)"), ("missed", "Kaçırıldı (missed)"), ("error", "Hata (error)"),
              ("skipped", "Atlandı (skipped)"))
@@ -213,16 +230,25 @@ def collect(cal: list[dict]) -> dict:
             errors.append(f"Hesap verisi (takipçi sayısı) alınamadı: {_emsg(e)}")
 
     media = m["media"]
-    targets = sorted((c for c in cal if isinstance(c, dict) and c.get("id") and c.get("media_id")
-                      and c.get("status") == "published" and not _is_story(c)),
-                     key=lambda c: (str(c.get("date")), str(c.get("time"))))
-    gone: dict[str, tuple[dict, str]] = {}   # kalıcı hata veren (silinmiş vb.) gönderiler: takvim id -> (kayıt, hata)
+    if stop is None:
+        try:
+            n = esle(cal, m, stamp)
+            if n:
+                print(f"Suite eşlemesi: {n} post eşlendi")
+        except Exception as e:  # noqa: BLE001
+            _warn(f"Suite eşlemesi yapılamadı: {_emsg(e)}")
+            if _global_error(e):
+                stop = e
+            elif not _permission_error(e):
+                errors.append(f"Suite postları /media ile eşlenemedi: {_emsg(e)}")
+    targets = _targets(cal, media)
+    gone: dict[str, tuple[dict, str, str]] = {}   # kalıcı hata veren (silinmiş vb.) gönderiler: id -> (kayıt, media_id, hata)
     try_insights, denied, ins_ok, ins_fail, ins_err = True, False, 0, 0, ""
     done = streak = 0
-    for c in targets:
+    for c, mid in targets:
         if stop is not None:
             break
-        cid, mid = str(c["id"]), str(c["media_id"])
+        cid = str(c["id"])
         try:
             d = graph.api("GET", mid, fields=MEDIA_FIELDS)
             if not isinstance(d, dict):
@@ -234,34 +260,32 @@ def collect(cal: list[dict]) -> dict:
             if _global_error(e) or (streak >= STREAK_LIMIT and (transient or not api_ok)):
                 stop = e
             elif not transient:
-                gone[cid] = (c, _emsg(e))
+                gone[cid] = (c, mid, _emsg(e))
             continue
         streak, api_ok, done = 0, True, done + 1
         old = media.get(cid, {})
         if str(old.get("media_id")) != mid:   # aynı takvim kaydı yeniden yayınlanmış: eski sayılar başka medyaya ait
             old = {}
-        rec = {"media_id": mid,
-               "permalink": d.get("permalink") or old.get("permalink") or c.get("permalink"),
-               "likes": _num(d.get("like_count"), _num(old.get("likes"), 0)),
-               "comments": _num(d.get("comments_count"), _num(old.get("comments"), 0)),
-               **{k: _num(old.get(k)) for k in INSIGHT_KEYS},
-               "checked": stamp}
+        rec = _kayit(c, mid, d, old, stamp)
+        taze: dict | None = {} if denied else None   # bu ölçümde alınan insights ({}: izin yok); None: alınamadı
         if try_insights:
             try:
-                rec.update({k: v for k, v in _insights(mid).items() if k in INSIGHT_KEYS})
+                taze = {k: v for k, v in _insights(mid).items() if k in INSIGHT_KEYS}
+                rec.update(taze)
                 ins_ok += 1
             except Exception as e:  # noqa: BLE001
                 if _global_error(e):
                     stop = e
                 elif _permission_error(e):
                     # İzin gelene kadar her çalışmada yalnız bu tek deneme yapılır; izin gelince kendiliğinden açılır.
-                    try_insights, denied = False, True
+                    try_insights, denied, taze = False, True, {}
                     _warn(f"insights izni yok, bu çalışmada bir daha denenmeyecek: {_emsg(e)}")
                 else:
                     ins_fail, ins_err = ins_fail + 1, ins_err or _emsg(e)
                     _warn(f"{cid}: insights alınamadı: {_emsg(e)}")
                     if ins_fail >= STREAK_LIMIT and not ins_ok:
                         try_insights = False
+        _dondur(rec, _pub(c, rec), taze)
         media[cid] = rec
 
     if stop is not None:
@@ -270,8 +294,8 @@ def collect(cal: list[dict]) -> dict:
                        f"Veri toplama yarıda kesildi ({done}/{len(targets)} gönderi güncellendi): ") + _emsg(stop))
     if api_ok:
         # API'nin çalıştığı kesinken alınan kalıcı hata o gönderiye özgüdür: eski sayıları saklayıp işaretle.
-        for cid, (c, msg) in gone.items():
-            mid, old = str(c["media_id"]), media.get(cid, {})
+        for cid, (c, mid, msg) in gone.items():
+            old = media.get(cid, {})
             keep = old if str(old.get("media_id")) == mid else {}
             media[cid] = {**dict.fromkeys(RECORD_KEYS), **keep, "media_id": mid,
                           "permalink": keep.get("permalink") or c.get("permalink"), "error": msg}
@@ -290,6 +314,203 @@ def collect(cal: list[dict]) -> dict:
     return m
 
 
+def _kayit(c: dict, mid: str, d: dict, old: dict, stamp: str) -> dict:
+    """Gönderinin /{media-id} yanıtından metrics kaydı; insights ve eşleme/dondurma alanları eski kayıttan korunur."""
+    return {**{k: old[k] for k in EXTRA_KEYS if k in old},
+            "media_id": mid,
+            "permalink": d.get("permalink") or old.get("permalink") or c.get("permalink"),
+            "likes": _num(d.get("like_count"), _num(old.get("likes"), 0)),
+            "comments": _num(d.get("comments_count"), _num(old.get("comments"), 0)),
+            **{k: _num(old.get(k)) for k in INSIGHT_KEYS},
+            "checked": stamp}
+
+
+# ---- Suite eşlemesi ve 72 saat dondurması --------------------------------------------------------
+
+def _graph_ts(s) -> datetime | None:
+    """Graph API zaman damgası (2026-11-27T16:30:05+0000) -> datetime; çözülemezse None."""
+    try:
+        return datetime.strptime(str(s), "%Y-%m-%dT%H:%M:%S%z")
+    except ValueError:
+        return _dt(s)
+
+
+def _caption_key(text) -> str:
+    """publish.py'deki kuralla aynı: boşlukları kırpılmış ilk 60 karakter."""
+    return " ".join(str(text or "").split())[:60]
+
+
+def _suite_posts(cal: list[dict]) -> list[dict]:
+    """Suite kanalından yayınlanan (Suite'te zamanlanmış, kilitli) post kayıtları; story'ler ve iptal edilenler hariç."""
+    cancelled = cancelled_ids()
+    return [c for c in cal if isinstance(c, dict) and c.get("id") and c.get("suite_scheduled") and not _is_story(c)
+            and not c.get("media_id") and str(c.get("id")) not in cancelled
+            and str(c.get("date") or "") >= ESLE_BASLANGIC and _planned(c) is not None]
+
+
+def _suite_rec(media: dict, cid: str) -> dict | None:
+    """Suite eşlemesiyle metrics.json'a yazılmış kayıt (media_id'li); yoksa None."""
+    rec = media.get(cid)
+    return rec if isinstance(rec, dict) and rec.get("kaynak") == "suite" and rec.get("media_id") else None
+
+
+def _pub(c: dict, rec: dict | None) -> datetime | None:
+    """Gerçek yayın zamanı: Suite postunda /media zaman damgası, API postunda published_at."""
+    if rec and rec.get("kaynak") == "suite":
+        return _dt(rec.get("yayin"))
+    return _dt(c.get("published_at")) if c.get("status") == "published" else None
+
+
+def _targets(cal: list[dict], media: dict) -> list[tuple[dict, str]]:
+    """Sayıları toplanacak postlar: (takvim kaydı, media_id). API ile yayınlananlar ve eşlenmiş Suite postları."""
+    out = [(c, str(c["media_id"])) for c in cal if isinstance(c, dict) and c.get("id") and c.get("media_id")
+           and c.get("status") == "published" and not _is_story(c)]
+    out += [(c, str(r["media_id"])) for c in _suite_posts(cal) if (r := _suite_rec(media, str(c["id"])))]
+    return sorted(out, key=lambda x: (str(x[0].get("date")), str(x[0].get("time"))))
+
+
+def _medya_listesi(ig: str, oldest: datetime) -> list[dict]:
+    """Hesabın /media listesi (yeniden eskiye); `oldest`tan eskiye inilince ya da ESLE_SAYFA sayfada durur."""
+    out: list[dict] = []
+    after = None
+    for _ in range(ESLE_SAYFA):
+        res = graph.api("GET", f"{ig}/media", fields=MEDIA_LIST_FIELDS, limit=50, after=after)
+        data = [d for d in (res.get("data") or []) if isinstance(d, dict) and d.get("id")]
+        out += data
+        paging = res.get("paging") if isinstance(res.get("paging"), dict) else {}
+        after = (paging.get("cursors") or {}).get("after")
+        stamps = [ts for d in data if (ts := _graph_ts(d.get("timestamp"))) is not None]
+        if not data or not after or not paging.get("next") or (stamps and min(stamps) < oldest):
+            break
+    return out
+
+
+def esle(cal: list[dict], m: dict, stamp: str, geri: timedelta = ESLE_GERI) -> int:
+    """Suite postlarını hesabın /media listesiyle ±ESLE_TOL zaman farkıyla eşler; yeni eşleşme sayısını döndürür.
+
+    Sonuç yalnız `m["media"]`a yazılır (media_id, permalink, kaynak=suite, yayin, eslesme); kilitli takvim kaydına
+    dokunulmaz. Aynı zaman aralığında birden çok aday varsa önce açıklaması tutan, sonra türü tutan, sonra zamana
+    en yakın olan seçilir; bir medya yalnız bir kayda, bir kayıt yalnız bir medyaya eşlenir. Bekleyen post yoksa
+    API'ye hiç gidilmez. Graph hatası dışarı fırlatılır (çağıran karar verir).
+    """
+    t, media = now(), m["media"]
+    bekleyen = [c for c in _suite_posts(cal) if not _suite_rec(media, str(c["id"]))
+                and t - geri <= _planned(c) <= t + ESLE_TOL]
+    if not bekleyen:
+        return 0
+    liste = _medya_listesi(graph.ig_user_id(), min(_planned(c) for c in bekleyen) - ESLE_TOL)
+    kullanilan = {str(c["media_id"]) for c in cal if isinstance(c, dict) and c.get("media_id")}
+    kullanilan |= {str(r["media_id"]) for r in media.values() if isinstance(r, dict) and r.get("media_id")}
+    adaylar = []
+    for c in bekleyen:
+        p, key, tur = _planned(c), _caption_key(c.get("caption")), ESLE_TUR.get(str(c.get("format")))
+        for d in liste:
+            ts = _graph_ts(d.get("timestamp"))
+            if str(d["id"]) in kullanilan or ts is None or abs(ts - p) > ESLE_TOL:
+                continue
+            ayni = bool(key) and _caption_key(d.get("caption")) == key
+            adaylar.append(((not ayni, bool(tur) and d.get("media_type") != tur, abs(ts - p)), c, d, ts, ayni))
+    adaylar.sort(key=lambda x: x[0])
+    yeni = 0
+    for (_, _, fark), c, d, ts, ayni in adaylar:
+        cid, mid = str(c["id"]), str(d["id"])
+        if _suite_rec(media, cid) or mid in kullanilan:
+            continue
+        kullanilan.add(mid)
+        media[cid] = {**dict.fromkeys(RECORD_KEYS), "media_id": mid, "permalink": d.get("permalink"),
+                      "kaynak": "suite", "yayin": ts.astimezone(TZ).isoformat(timespec="seconds"),
+                      "eslesme": {"zaman": stamp, "fark_sn": int(fark.total_seconds()), "aciklama_tutuyor": ayni,
+                                  "tur": d.get("media_type")}}
+        yeni += 1
+        print(f"Suite eşlemesi: {cid} -> {mid} (fark {int(fark.total_seconds())} sn"
+              + ("" if ayni else ", açıklama farklı") + ")")
+    return yeni
+
+
+def _dondur(rec: dict, pub: datetime | None, taze: dict | None) -> bool:
+    """Yayından ≥72 saat sonra alınmış ilk ölçümü `dondurulmus` alanına yazar. Bir kez yazılır, sonra değişmez.
+
+    `taze`: bu ölçümde alınan insights değerleri; izin yoksa {} (erişim/kaydetme boş dondurulur). None ise insights
+    geçici bir hatayla alınamamıştır: kayıttaki eski (72 saatten önceki) değerler dondurulmaz, sonraki ölçüm beklenir.
+    """
+    checked = _dt(rec.get("checked"))
+    if (taze is None or rec.get("dondurulmus") or rec.get("error") or pub is None or checked is None
+            or checked - pub < DONDUR or _num(rec.get("likes")) is None):
+        return False
+    rec["dondurulmus"] = {"saat": int((checked - pub).total_seconds() // 3600), "zaman": rec.get("checked"),
+                          "likes": _num(rec.get("likes")), "comments": _num(rec.get("comments")),
+                          **{k: _num(taze.get(k)) for k in INSIGHT_KEYS}}
+    return True
+
+
+def _eslenemeyen(cal: list[dict], metrics: dict, t: datetime) -> tuple[list[dict], int]:
+    """Saati ESLE_GEC'ten fazla geçmiş ama media_id'si bulunamamış Suite postları ve saati geçmiş Suite post sayısı."""
+    media = metrics.get("media") if isinstance(metrics.get("media"), dict) else {}
+    due = [c for c in _suite_posts(cal) if _planned(c) < t - ESLE_GEC]
+    return [c for c in due if not _suite_rec(media, str(c["id"]))], len(due)
+
+
+def esle_hafif() -> None:
+    """--esle: publish adımında (15 dakikada bir) çalışan hafif mod. Yalnız yakın geçmişteki Suite postlarını eşler
+    ve 72..120 saatlik postların ilk ölçümünü dondurur. RAPOR.md/scores.json yazılmaz; jeton yoksa sessizce atlanır.
+    Hatalar yalnız uyarıdır (çıkış kodu main() sayesinde her durumda 0)."""
+    if not os.environ.get("IG_ACCESS_TOKEN"):
+        return
+    cal = load_calendar()
+    cal = [c for c in cal if isinstance(c, dict)] if isinstance(cal, list) else []
+    m, t = load_metrics(), now()
+    stamp = t.isoformat(timespec="seconds")
+    degisti = 0
+    try:
+        degisti += esle(cal, m, stamp, ESLE_GERI_HAFIF)
+    except Exception as e:  # noqa: BLE001
+        _warn(f"Suite eşlemesi yapılamadı: {_emsg(e)}")
+        if _global_error(e):
+            return
+    media, try_insights = m["media"], True
+    for c, mid in _targets(cal, media):
+        cid = str(c["id"])
+        old = media.get(cid) if isinstance(media.get(cid), dict) else {}
+        if str(old.get("media_id")) != mid:
+            old = {}
+        pub = _pub(c, old or None)
+        if old.get("dondurulmus") or old.get("error") or pub is None or not DONDUR <= t - pub <= DONDUR + DONDUR_HAFIF:
+            continue
+        try:
+            d = graph.api("GET", mid, fields=MEDIA_FIELDS)
+            if not isinstance(d, dict):
+                raise ValueError("beklenmeyen yanıt biçimi")
+        except Exception as e:  # noqa: BLE001
+            _warn(f"{cid}: dondurma için gönderi verisi alınamadı: {_emsg(e)}")
+            if _global_error(e):
+                break
+            continue
+        rec = _kayit(c, mid, d, old, stamp)
+        taze: dict | None = None if try_insights else {}
+        if try_insights:
+            try:
+                taze = {k: v for k, v in _insights(mid).items() if k in INSIGHT_KEYS}
+                rec.update(taze)
+            except Exception as e:  # noqa: BLE001
+                if _permission_error(e):
+                    # İzin (instagram_manage_insights) yoksa yalnız beğeni/yorum dondurulur; yayın akışı kırılmaz.
+                    try_insights, taze = False, {}
+                    _warn(f"insights izni yok, yalnız beğeni/yorum donduruluyor: {_emsg(e)}")
+                else:
+                    # Geçici hata: eski insights dondurulmaz; bu post sonraki çalışmada yeniden denenir.
+                    _warn(f"{cid}: insights alınamadı, dondurma sonraki çalışmaya kaldı: {_emsg(e)}")
+                    if _global_error(e):
+                        break
+        if not _dondur(rec, pub, taze):
+            continue   # dondurulmayan kayıt yazılmaz: metrics.json 15 dakikada bir boşuna değişmesin
+        print(f"Dondurma: {cid} ({rec['dondurulmus']['saat']} saat) beğeni {rec['likes']} yorum {rec['comments']}")
+        media[cid] = rec
+        degisti += 1
+    if degisti:
+        m["media"] = dict(sorted(media.items()))
+        write_json(METRICS, m)
+
+
 # ---- Puanlama ----------------------------------------------------------------------------------
 
 def _measured(cal: list[dict], metrics: dict) -> tuple[list[dict], str]:
@@ -302,13 +523,15 @@ def _measured(cal: list[dict], metrics: dict) -> tuple[list[dict], str]:
     media = metrics.get("media") if isinstance(metrics.get("media"), dict) else {}
     t = now()
     rows = []
+    suite = {str(c["id"]) for c in _suite_posts(cal) if _suite_rec(media, str(c["id"]))}   # eşlenmiş Suite postları
     for c in cal:
-        if not isinstance(c, dict) or c.get("status") != "published" or _is_story(c):
+        if not isinstance(c, dict) or _is_story(c) or (c.get("status") != "published" and str(c.get("id")) not in suite):
             continue
         rec = media.get(str(c.get("id")))
         if not isinstance(rec, dict) or rec.get("error") or _num(rec.get("likes")) is None:
             continue
-        pub, checked = _when(c), _dt(rec.get("checked")) or t   # ölçüm zamanı kayıtlı değilse şimdi alınmış sayılır
+        pub = _pub(c, rec) if str(c.get("id")) in suite else _when(c)
+        checked = _dt(rec.get("checked")) or t   # ölçüm zamanı kayıtlı değilse şimdi alınmış sayılır
         if pub is None or checked - pub < MATURE:
             continue
         products = c.get("products") if isinstance(c.get("products"), list) else []
@@ -479,7 +702,9 @@ def _health(cal: list[dict], t: datetime) -> list[str]:
         return [label, len(items) - stories, stories, len(items)]
 
     body = [row(label, [c for c in recent if c.get("status") == st]) for st, label in STATUS_TR]
-    stuck = [c for c in recent if c.get("status") in ("planned", "draft") and _when(c) < t - GRACE]
+    # Suite'te zamanlanmış postları Business Suite yayınlar (yayıncı değil); onlar "Suite eşlemesi" bölümünde izlenir.
+    stuck = [c for c in recent if c.get("status") in ("planned", "draft") and _when(c) < t - GRACE
+             and not (c.get("suite_scheduled") and not _is_story(c))]
     if stuck:
         body.append(row("Bekliyor (saati geçmiş planned/draft)", stuck))
     out = _table(["Durum", "Gönderi", "Story", "Toplam"], body, right=(1, 2, 3))
@@ -562,6 +787,21 @@ def _categories(rows: list[dict], sc: dict) -> list[str]:
     else:
         out += ["", f"Yalnız {len(data)} kategoride en az {MIN_GROUP} gönderi var; hepsi yukarıdaki tabloda, ayrı bir "
                     "en zayıf listesi çıkarılmadı."]
+    return out
+
+
+def _suite_esleme(cal: list[dict], metrics: dict, t: datetime) -> list[str]:
+    """Business Suite'ten yayınlanan postların /media eşlemesi: oran ve eşlenemeyenlerin listesi."""
+    miss, due = _eslenemeyen(cal, metrics, t)
+    if not due:
+        return [f"{tr_date(_dt(ESLE_BASLANGIC + 'T00:00') or t)} sonrasında saati gelmiş Suite postu yok."]
+    out = [f"Saati gelmiş {due} Suite postunun **{due - len(miss)}** tanesi `media_id` ile eşlendi "
+           f"(planlanan saat ±{int(ESLE_TOL.total_seconds() // 60)} dk; sonuç `data/metrics.json`, takvim değişmez)."]
+    if miss:
+        out += ["", f"Eşlenemeyen {len(miss)} post (yayınlanmamış, saati kaymış ya da silinmiş olabilir; permalink'i "
+                    "elle kontrol et):", ""]
+        out += [f"- `{c.get('id')}` · {tr_date(_planned(c))} {_planned(c):%H:%M} · "
+                f"{_md(_short(_one(c.get('title') or ''), 60))}" for c in sorted(miss, key=_planned)]
     return out
 
 
@@ -663,11 +903,15 @@ def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | No
 
     media = metrics.get("media") if isinstance(metrics.get("media"), dict) else {}
     posts = {str(c.get("id")) for c in cal if c.get("status") == "published" and not _is_story(c)}
+    posts |= {str(c["id"]) for c in _suite_posts(cal) if _suite_rec(media, str(c["id"]))}
     gone = sorted(k for k, r in media.items() if k in posts and isinstance(r, dict) and r.get("error"))
     errors = metrics.get("errors") if isinstance(metrics.get("errors"), list) else []
     warn = [*(notes or []), *(f"Son veri toplamada sorun: {e}" for e in errors)]
     if metrics.get("insights") is False:
         warn.append(PERMISSION_NOTE)
+    miss, _ = _eslenemeyen(cal, metrics, t)
+    if miss:
+        warn.append(f"{len(miss)} Suite postu /media ile eşlenemedi (liste: Suite eşlemesi bölümü)")
     if gone:
         warn.append(f"{len(gone)} gönderinin verisi okunamadı (silinmiş olabilir), hesaplara katılmadı: "
                     + ", ".join(f"`{k}`" for k in gone[:5]) + (" …" if len(gone) > 5 else ""))
@@ -676,6 +920,7 @@ def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | No
 
     for title, lines in (("Özet", _summary(cal, metrics, rows, t)),
                          ("Yayın sağlığı (son 7 gün)", _health(cal, t)),
+                         ("Suite eşlemesi", _suite_esleme(cal, metrics, t)),
                          ("En iyi 5 gönderi", _top(rows, formula, t)),
                          ("Biçim ve tema karşılaştırması", _compare(rows, sc)),
                          ("Kategori performansı", _categories(rows, sc)),
@@ -695,9 +940,14 @@ def _run() -> None:
     ap = argparse.ArgumentParser(description="Instagram performans raporu: metrics.json, scores.json ve RAPOR.md")
     ap.add_argument("--no-api", action="store_true",
                     help="Graph API'ye bağlanma; yalnız kayıtlı dosyalardan rapor üret")
+    ap.add_argument("--esle", action="store_true",
+                    help="hafif mod: yalnız Suite eşlemesi ve 72 saat dondurması (rapor yazılmaz)")
     args, unknown = ap.parse_known_args()
     if unknown:
         _warn(f"bilinmeyen argüman yok sayıldı: {' '.join(unknown)}")
+    if args.esle:
+        esle_hafif()
+        return
     cal = load_calendar()
     cal = [c for c in cal if isinstance(c, dict)] if isinstance(cal, list) else []
     notes = []

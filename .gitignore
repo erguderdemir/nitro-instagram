@@ -2,5 +2,6 @@ cache/
 out/
 __pycache__/
 .env
-paylas/
+/paylas/
 .DS_Store
+data/yorumlar.json

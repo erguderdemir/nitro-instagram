@@ -7,6 +7,7 @@ Ortam değişkenleri:
 """
 from __future__ import annotations
 
+import http.client
 import json
 import os
 import time
@@ -51,6 +52,9 @@ def _call(method: str, path: str, params: dict) -> dict:
         except Exception:  # noqa: BLE001
             msg, code, sub, transient = body[:300], None, None, e.code >= 500
         raise GraphError(e.code, msg, code, sub, transient) from None
+    except http.client.InvalidURL:
+        # İstisna metni tam URL'yi (erişim jetonunu) içerir: yutulur, jetonsuz mesaj verilir.
+        raise GraphError(0, "Geçersiz istek URL'si (erişim jetonunda boşluk ya da satır sonu olabilir)") from None
 
 
 def api(method: str, path: str, *, retries: int | None = None, **params) -> dict:

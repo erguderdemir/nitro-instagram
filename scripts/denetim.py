@@ -14,6 +14,10 @@ Denetimler:
   veri       takvimdeki ad/fiyat/kod = güncel ürün verisi; ürün stokta; hariç tutulan ürün yok
   link       ürün adresi + UTM (source, medium, campaign, content); linkli story Suite kanalında ve çıkartmalı
   metin      açıklama ≤2200, ilk satır ≤125, ≤5 etiket, fiyat ve kod açıklamada; yasak iddia yok; çıkartma ≤25
+  caption    (O3/O9; yalnız kilitsiz, gelecekteki planned/draft post) 5 etiket, #köyceğiz var, #bisiklet ve
+             #nitrobisiklet yok; ilk 3 satırda iki seçenekli soru, evet/hayır sorusu yok; CTA satırında "en üstte" /
+             "bugün" yok; bölgeye özel hizmet iddiası yok; 30 gün içinde aynı kanca (ilk satır) ya da soru yok.
+             Kilitli (suite_scheduled) kayıtta bu bulgular `kilitli_bilgi` listesine yazılır, kaydı taslağa çekmez.
   dosya      dosya var, JPEG, ölçü (post 1080×1350, story 1080×1920), ≤8 MB; reel MP4 H.264/AAC 9:16
   ritim      günde tek post, haftada tek "Haftanın bisikleti", günde tek "Günün ürünü"
   tekrar     tekrar penceresi içinde aynı ürün ya da aynı ürün ailesi iki kayıtta yok
@@ -48,6 +52,8 @@ BANNED = re.compile(r"indirim|kampanya|fırsat|bedava|son \d+ (adet|gün|saat)|s
                     re.I)
 # Görselde CSS Türkçe büyük harfe çevirir: küçük harfle yazılmış "i" içeren yabancı sözcük bozulur (BİKE)
 FOREIGN = re.compile(r"\b(bike|nitro|trail|city|line|dirt|ride|light|mini|shimano|helix|unix|link)\b")
+# Bölge etiketi yalnız etikettir: "Dalyan'a teslimat", "Fethiye servisi" gibi bölgeye özel hizmet iddiası yazılmaz
+BOLGE_IDDIA = re.compile(r"\b(?:dalyan|ortaca|marmaris|fethiye|muğla)\w*\s+(?:içi|geneli|teslimat|kargo|servis|aynı gün)\w*")
 REQUIRED = ("id", "date", "time", "type", "format", "theme", "media", "cover", "thumb", "status", "rule", "channel")
 
 
@@ -59,9 +65,41 @@ class Audit:
         self.tips = common.load_tips()
         self.by_id = {c.get("id"): c for c in cal}
         self.found: list[dict] = []
+        self.now = common.now()
+        self.kilitli_bilgi: list[dict] = []   # kilitli kayıtta yeni (O3/O9) kurallara uymayanlar: bilgi, bulgu değil
+        # Bugünkü kodun sürümü (plan.py VERSION). Kaydın `ver` alanı farklıysa açıklama eski kodla yazılmıştır ve
+        # plan.py'nin bir sonraki çalışmasında yeniden üretilir (ya da LEAD içinde olduğu için dokunulmaz). Böyle
+        # kayıtta yeni kuralların bulgusu `yenilenecek` listesine yazılır: plan çalışmadan önce gelen publish
+        # çalışmasındaki denetim kilitsiz postları taslağa çekip yayını kaçırmasın.
+        self.surum = surum()
+        self.yenilenecek: list[dict] = []
 
     def add(self, c: dict, code: str, msg: str) -> None:
         self.found.append({"id": c.get("id", "?"), "code": code, "msg": msg})
+
+    def gelecek(self, c: dict) -> bool:
+        """Kilitsiz, henüz yayınlanmamış gelecekteki kayıt (sürümden bağımsız)."""
+        if c.get("suite_scheduled") or c.get("status") not in ("planned", "draft"):
+            return False
+        try:
+            return common.item_dt(c) > self.now
+        except (KeyError, ValueError, TypeError):
+            return False
+
+    def yeni(self, c: dict) -> bool:
+        """Yeni açıklama kuralları (O3/O9) yalnız kilitsiz, henüz yayınlanmamış gelecekteki ve bugünkü kodla
+        üretilmiş (`ver` = sürüm) kayıtlara uygulanır. Sürüm okunamazsa sürüm şartı aranmaz."""
+        return self.gelecek(c) and (self.surum is None or c.get("ver") == self.surum)
+
+    def yeni_add(self, c: dict, code: str, msg: str) -> None:
+        """Kilitsiz gelecekteki kayıtta bulgu; kilitli kayıtta `kilitli_bilgi`; eski sürümle yazılmış kilitsiz kayıtta
+        `yenilenecek`; yayınlanmış/geçmiş kayıtta yok sayılır."""
+        if self.yeni(c):
+            self.add(c, code, msg)
+        elif c.get("suite_scheduled"):
+            self.kilitli_bilgi.append({"id": c.get("id", "?"), "code": code, "msg": msg})
+        elif self.gelecek(c):
+            self.yenilenecek.append({"id": c.get("id", "?"), "code": code, "msg": msg})
 
     # ---- tek kayıt ---------------------------------------------------------------------------------
 
@@ -199,7 +237,11 @@ class Audit:
 
     def links(self, c: dict) -> None:
         medium = "story" if c["type"] == "story" else "social"
+        # Tanıtım story'sinin kampanyası tanıttığı postun temasıdır (plan.py tanitim_hedefi). Business Suite'te
+        # zamanlanmış (kilitli) eski story'ler bu kuraldan önce "promo" kampanyasıyla kuruldu ve değiştirilemez.
         camp = c["theme"]
+        if camp == "promo" and not c.get("suite_scheduled"):
+            camp = (self.by_id.get(c.get("ref")) or {}).get("theme", "promo")
         for x in c.get("products") or []:
             p = self.products.get(x["slug"])
             if not p:
@@ -260,8 +302,11 @@ class Audit:
         tags = re.findall(r"(?<!\w)#\w+", cap)
         if len(tags) > C.TAG_MAX:
             self.add(c, "metin", f"{len(tags)} etiket var (sınır {C.TAG_MAX})")
-        if "#nitrobisiklet" not in tags:
-            self.add(c, "metin", "#nitrobisiklet etiketi yok")
+        if self.gelecek(c) or c.get("suite_scheduled"):
+            self.caption(c, cap, tags)
+        elif not {"#nitrobisiklet", "#köyceğiz"} & {C.tr_lower(t) for t in tags}:
+            # yeni kuraldan muaf (geçmiş) kayıt eski ya da yeni etiket setiyle yazılmış olabilir: biri yeter
+            self.add(c, "metin", "#nitrobisiklet / #köyceğiz etiketi yok")
         m = BANNED.search(cap) if c["theme"] != "ipucu" else re.search(r"indirim|kampanya|bedava|stokta son", cap, re.I)
         if m:
             self.add(c, "metin", f"açıklamada doğrulanamayan iddia: “{m.group(0)}”")
@@ -283,6 +328,30 @@ class Audit:
             self.add(c, "metin", "alt metin eksik (her kare için bir alt metin olmalı)")
         if any(len(a) > 1000 for a in alts + [c.get("alt") or ""]):
             self.add(c, "metin", "alt metin 1000 karakteri aşıyor")
+
+    def caption(self, c: dict, cap: str, tags: list[str]) -> None:
+        """O3/O9 açıklama kuralları. Bulgular yeni_add ile: kilitli kayıtta yalnız bilgi."""
+        low = [C.tr_lower(t) for t in tags]
+        if "#köyceğiz" not in low:
+            self.yeni_add(c, "caption", "#köyceğiz etiketi yok")
+        yasak = sorted(set(low) & C.YASAK_TAGS)
+        if yasak:
+            self.yeni_add(c, "caption", f"kaldırılan etiket var: {' '.join(yasak)}")
+        if len(tags) != C.TAG_MAX:
+            self.yeni_add(c, "caption", f"{len(tags)} etiket var (tam {C.TAG_MAX} olmalı)")
+        soru = C.soru_satiri(cap)
+        if not soru:
+            self.yeni_add(c, "caption", "ilk 3 satırda soru yok")
+        elif C.evet_hayir(soru):
+            self.yeni_add(c, "caption", f"evet/hayır sorusu: “{soru}”")
+        elif not C.iki_secenekli(soru):
+            self.yeni_add(c, "caption", f"soru iki seçenekli değil: “{soru}”")
+        for line in cap.split("\n"):
+            if re.search(r"nitrobisiklet\.com|aramaya|profildeki", line, re.I) and C.CTA_YASAK.search(line):
+                self.yeni_add(c, "caption", f"CTA satırında zamana bağlı ifade: “{C.CTA_YASAK.search(line).group(0)}”")
+        m = BOLGE_IDDIA.search(C.tr_lower(cap))
+        if m:
+            self.yeni_add(c, "caption", f"bölgeye özel hizmet iddiası: “{m.group(0)}”")
 
     # ---- dosyalar ----------------------------------------------------------------------------------
 
@@ -391,13 +460,45 @@ class Audit:
                 if c1 is not c2 and (s1 == s2 or f1 == f2) and (d2 - d1).days < win:
                     self.add(c2, "tekrar", f"{s2} ({f2}) {c1['id']} kaydında da var; tekrar penceresi {win} gün")
 
+    def tekrar_caption(self) -> None:
+        """30 gün (C.TEKRAR_GUN) içinde aynı kanca (ilk satır) ya da aynı soru: kilitsiz kayıtta bulgu."""
+        posts = [c for c in self.cal if c.get("type") == "post" and c.get("caption")
+                 and c.get("status") in ("planned", "draft", "published") and C._gun(c.get("date"))]
+        posts.sort(key=lambda c: (c["date"], c.get("id", "")))
+        for i, c in enumerate(posts):
+            if not (self.gelecek(c) or (c.get("suite_scheduled") and c.get("status") in ("planned", "draft"))):
+                continue
+            d, ilk, soru = C._gun(c["date"]), C.ilk_satir(c["caption"]), C.soru_satiri(c["caption"])
+            for j, o in enumerate(posts):
+                if o is c or abs((C._gun(o["date"]) - d).days) >= C.TEKRAR_GUN:
+                    continue
+                # ikisi de denetlenen kayıtsa bulgu yalnız sonrakine yazılır
+                if j > i and (self.gelecek(o) or (o.get("suite_scheduled") and o.get("status") in ("planned", "draft"))):
+                    continue
+                oi = C.ilk_satir(o["caption"])
+                if ilk and oi and (ilk.startswith(oi) or oi.startswith(ilk)):
+                    self.yeni_add(c, "caption", f"kanca {o['id']} kaydında da var ({C.TEKRAR_GUN} gün): “{ilk[:50]}”")
+                if soru and soru in C.sorular(o["caption"]):
+                    self.yeni_add(c, "caption", f"soru {o['id']} kaydında da var ({C.TEKRAR_GUN} gün): “{soru}”")
+
     def run(self) -> list[dict]:
         live = [c for c in self.cal if c.get("status") in ("planned", "draft")]
         for c in live:
             self.check(c)
         ok = [c for c in live if all(k in c for k in REQUIRED)]
         self.calendar(ok)
+        self.tekrar_caption()
         return self.found
+
+
+def surum() -> str | None:
+    """plan.py'nin kod sürümü (VERSION); okunamazsa None (sürüm şartı aranmaz, yeni kurallar hepsine uygulanır)."""
+    try:
+        import plan
+        return plan.VERSION
+    except Exception as e:  # noqa: BLE001
+        print(f"UYARI: kod sürümü okunamadı, açıklama kuralları sürüme bakmadan uygulanıyor: {e}", file=sys.stderr)
+        return None
 
 
 def common_lower(s) -> str:
@@ -429,7 +530,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--takvim", type=Path, help="denetlenecek takvim dosyası (varsayılan data/calendar.json; yazılmaz)")
     a = ap.parse_args(argv)
     cal = common.read_json(a.takvim, []) if a.takvim else common.load_calendar()
-    found = Audit(cal, files=not a.dosyasiz).run()
+    au = Audit(cal, files=not a.dosyasiz)
+    found = au.run()
     live = [c for c in cal if c.get("status") in ("planned", "draft")]
     # Suite'te zamanlanmış kaydı Business Suite yayınlar; taslağa çekmek yayını durdurmaz, yalnız kaydın
     # 'published' işaretlenmesini engeller. Bu bulgular uyarı olarak raporlanır, düzeltmesi Suite'te elle yapılır.
@@ -440,12 +542,22 @@ def main(argv: list[str] | None = None) -> int:
         print(f"BULGU {f['id']} [{f['code']}] {f['msg']}")
     for f in suite_found:
         print(f"SUITE-UYARI {f['id']} [{f['code']}] {f['msg']} (Suite'te düzeltilmeli)")
+    for f in au.kilitli_bilgi:
+        print(f"KILITLI-BILGI {f['id']} [{f['code']}] {f['msg']}")
+    for f in au.yenilenecek:
+        print(f"YENILENECEK {f['id']} [{f['code']}] {f['msg']} (eski sürümle yazılmış; plan.py yeniden üretir)")
+    kilitli_live = [c for c in live if c.get("id") in suite_ids]
+    sayim = {"kilitli": {"kayit": len(kilitli_live), "uyari": len(suite_found), "bilgi": len(au.kilitli_bilgi)},
+             "kilitsiz": {"kayit": len(live) - len(kilitli_live), "bulgu": len(found),
+                          "caption": sum(1 for f in found if f["code"] == "caption"),
+                          "yenilenecek": len(au.yenilenecek)}}
     if not a.takvim:
         if apply(cal, found):
             common.save_calendar(cal)
         common.write_json(OUT, {"updated": common.now().isoformat(timespec="seconds"), "records": len(cal),
                                 "checked": len(live), "files": not a.dosyasiz, "live": CFG.get("live") is True,
-                                "findings": found, "suite_warnings": suite_found})
+                                "findings": found, "suite_warnings": suite_found,
+                                "kilitli_bilgi": au.kilitli_bilgi, "yenilenecek": au.yenilenecek, "sayim": sayim})
         try:
             import simulasyon
             simulasyon.build_sim(cal)
@@ -455,6 +567,9 @@ def main(argv: list[str] | None = None) -> int:
     print(f"DENETİM: {len(live)} kayıt denetlendi, {len(found)} bulgu" + (f" ({held} kayıt taslağa çekildi)" if found else "")
           + (f" · {len(suite_found)} Suite uyarısı" if suite_found else "")
           + (" · dosyalar denetlenmedi" if a.dosyasiz else ""))
+    print(f"SAYIM: kilitsiz {sayim['kilitsiz']['kayit']} kayıt / {sayim['kilitsiz']['bulgu']} bulgu "
+          f"({sayim['kilitsiz']['caption']} caption, {sayim['kilitsiz']['yenilenecek']} yenilenecek) · kilitli {sayim['kilitli']['kayit']} kayıt / "
+          f"{sayim['kilitli']['uyari']} uyarı / {sayim['kilitli']['bilgi']} bilgi")
     return 1 if found else 0
 
 

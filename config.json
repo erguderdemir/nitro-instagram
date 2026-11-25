@@ -24,10 +24,15 @@
     "2026-12-05": "hediye250",
     "2026-12-12": "hediye500",
     "2026-12-19": "cocuk",
-    "2026-12-26": "yukseltme"
+    "2026-12-26": "hediye1000"
   },
   "specials": {
     "2026-12-31": "yilbasi"
+  },
+  "yeni_kural_baslangic": "2026-12-24",
+  "post_kural": {
+    "2026-12-25": "cocuk",
+    "2026-12-28": "ikinciel"
   },
   "tips": ["kis-bakimi", "islak-zemin", "cocuk-jant-boyu", "servis-isaretleri", "zincir-bakimi", "lastik-basinci",
            "kask-ayari", "ebike-batarya-kis"],

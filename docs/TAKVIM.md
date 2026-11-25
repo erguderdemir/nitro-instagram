@@ -307,9 +307,9 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · ipucu | ISLAK SÜRÜŞTEN SONRA KURULA | — | — | Suite + link | planlı | [görsel](media/2026-12-24-story-0930.jpg) |
 | 12:30 | Story · ürün | Asfalt da toprak da | [Bisan All Trail GRX 400 Gravel 56cm](https://nitrobisiklet.com/urun/bisan-all-trail-grx-400-gravel-56cm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-1230) | 81.570 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Islak yola hazırlan | [MTB Plastik Çamurluk Takım Geniş](https://nitrobisiklet.com/urun/mtb-plastik-camurluk-takim-genis/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-24-post-1930) | 120 ₺ | API | planlı | [görsel](media/2026-12-24-post-1930-1.jpg) |
-| 19:30 | Story · tanıtım | Islak yola hazırlan | [MTB Plastik Çamurluk Takım Geniş](https://nitrobisiklet.com/urun/mtb-plastik-camurluk-takim-genis/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-24-story-1930) | 120 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Islak yola hazırlan | [MTB Plastik Çamurluk Takım Geniş](https://nitrobisiklet.com/urun/mtb-plastik-camurluk-takim-genis/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-24-story-2030) | 120 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Dişler silindiyse vakit geldi | [CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah](https://nitrobisiklet.com/urun/cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-24-post-1930) | 990 ₺ | API | planlı | [görsel](media/2026-12-24-post-1930-1.jpg) |
+| 19:30 | Story · tanıtım | Dişler silindiyse vakit geldi | [CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah](https://nitrobisiklet.com/urun/cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-1930) | 990 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-1930.jpg) |
+| 20:30 | Story · tanıtım | Dişler silindiyse vakit geldi | [CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah](https://nitrobisiklet.com/magaza/dis-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-2030) | 990 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-2030.jpg) |
 
 ## 25.12.2026 Cuma
 
@@ -317,29 +317,29 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · marka | İçin rahat olsun | — | — | Suite + link | planlı | [görsel](media/2026-12-25-story-0930.jpg) |
 | 12:30 | Story · ürün | Vitesler pürüzsüz geçsin | [Shimano Acera CS-HG41-7 7 Vites 11-28T Kaset Dişli](https://nitrobisiklet.com/urun/shimano-acera-cs-hg41-7-7-vites-11-28t-kaset-disli/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-1230) | 1.034,10 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1230.jpg) |
-| 19:30 | Carousel · ürün | İşe, okula, sahile | [Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri](https://nitrobisiklet.com/urun/bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metalik-gri/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-25-post-1930) | 16.885 ₺ | API | planlı | [görsel](media/2026-12-25-post-1930-1.jpg) |
-| 19:30 | Story · tanıtım | İşe, okula, sahile | [Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri](https://nitrobisiklet.com/urun/bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-25-story-1930) | 16.885 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1930.jpg) |
-| 20:30 | Story · tanıtım | İşe, okula, sahile | [Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri](https://nitrobisiklet.com/urun/bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-25-story-2030) | 16.885 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Çocuğunun yeni bisikleti | [Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu](https://nitrobisiklet.com/urun/bisan-flash-16-cocuk-bisikleti-mat-siyah-turuncu/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-25-post-1930) | 8.170 ₺ | API | planlı | [görsel](media/2026-12-25-post-1930-1.jpg) |
+| 19:30 | Story · tanıtım | Çocuğunun yeni bisikleti | [Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu](https://nitrobisiklet.com/urun/bisan-flash-16-cocuk-bisikleti-mat-siyah-turuncu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-1930) | 8.170 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1930.jpg) |
+| 20:30 | Story · tanıtım | Çocuğunun yeni bisikleti | [Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu](https://nitrobisiklet.com/magaza/cocuk-bisikleti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-2030) | 8.170 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-2030.jpg) |
 
 ## 26.12.2026 Cumartesi
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · ipucu | KIŞIN ÇAMURLUK TAK | — | — | Suite + link | planlı | [görsel](media/2026-12-26-story-0930.jpg) |
-| 11:00 | Carousel · liste | Bisikletine 5 yükseltme | [Pedal M506 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100) | — | API | planlı | [görsel](media/2026-12-26-post-1100-1.jpg) |
-| 11:00 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M506 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-1100) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-1100.jpg) |
+| 11:00 | Carousel · liste | 1.000 ₺ altı 4 hediye | [Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah +3](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100) | — | API | planlı | [görsel](media/2026-12-26-post-1100-1.jpg) |
+| 11:00 | Story · tanıtım | 1.000 ₺ altı 4 hediye | [Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah +3](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=liste&utm_content=2026-12-26-story-1100) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-1100.jpg) |
 | 12:30 | Story · ürün | Yedek iç lastik yanında mı? | [Maxxis Welter Weight İç Lastik 700x23-32c İnce Sibop 48 mm](https://nitrobisiklet.com/urun/maxxis-welter-weight-ic-lastik-700x23-32c-ince-sibop-48mm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-26-story-1230) | 265 ₺ | Suite + link | planlı | [görsel](media/2026-12-26-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Bisikletine 5 yükseltme | [Pedal M506 Siyah +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-26-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-2030.jpg) |
+| 20:30 | Story · tanıtım | 1.000 ₺ altı 4 hediye | [Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah +3](https://nitrobisiklet.com/magaza/canta-ve-sepet/?utm_source=instagram&utm_medium=story&utm_campaign=liste&utm_content=2026-12-26-story-2030) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-2030.jpg) |
 
 ## 27.12.2026 Pazar
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Köyceğiz çevresinde en sevdiğin rota hangisi? | — | — | API | planlı | [görsel](media/2026-12-27-story-0930.jpg) |
-| 11:00 | Carousel · ürün | Arkanı gör | [360° Dönebilen Geniş Açılı İkili Dikiz Aynası](https://nitrobisiklet.com/urun/360-donebilen-genis-acili-ikili-dikiz-aynasi/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-27-post-1100) | 405 ₺ | API | planlı | [görsel](media/2026-12-27-post-1100-1.jpg) |
-| 11:00 | Story · tanıtım | Arkanı gör | [360° Dönebilen Geniş Açılı İkili Dikiz Aynası](https://nitrobisiklet.com/urun/360-donebilen-genis-acili-ikili-dikiz-aynasi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-27-story-1100) | 405 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-1100.jpg) |
+| 11:00 | Carousel · ürün | Yükün bisiklette dursun | [Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah](https://nitrobisiklet.com/urun/procycle-pc-550-sele-alti-mega-heybe-12-lt-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-27-post-1100) | 1.615,50 ₺ | API | planlı | [görsel](media/2026-12-27-post-1100-1.jpg) |
+| 11:00 | Story · tanıtım | Yükün bisiklette dursun | [Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah](https://nitrobisiklet.com/urun/procycle-pc-550-sele-alti-mega-heybe-12-lt-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-27-story-1100) | 1.615,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-1100.jpg) |
 | 12:30 | Story · ürün | Rotan gözünün önünde | [OEM NITRO Alüminyum Bisiklet Telefon Tutucu](https://nitrobisiklet.com/urun/oem-nitro-aluminyum-bisiklet-telefon-tutucu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-27-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Arkanı gör | [360° Dönebilen Geniş Açılı İkili Dikiz Aynası](https://nitrobisiklet.com/urun/360-donebilen-genis-acili-ikili-dikiz-aynasi/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-27-story-2030) | 405 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-2030.jpg) |
+| 20:30 | Story · tanıtım | Yükün bisiklette dursun | [Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah](https://nitrobisiklet.com/magaza/canta-ve-sepet/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-27-story-2030) | 1.615,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-2030.jpg) |
 
 ## 28.12.2026 Pazartesi
 
@@ -347,9 +347,9 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · ipucu | KAT KAT GİYİN | — | — | API | planlı | [görsel](media/2026-12-28-story-0930.jpg) |
 | 12:30 | Story · ürün | Sürüşünü ölç | [Assize 528 Bisiklet Hız Göstergesi](https://nitrobisiklet.com/urun/assize-528-bisiklet-hiz-gostergesi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-1230) | 550 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Yokuşlar dert olmasın | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-28-post-1930) | 46.955 ₺ | API | planlı | [görsel](media/2026-12-28-post-1930-1.jpg) |
-| 19:30 | Story · tanıtım | Yokuşlar dert olmasın | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-28-story-1930) | 46.955 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Yokuşlar dert olmasın | [Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri](https://nitrobisiklet.com/urun/bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-28-story-2030) | 46.955 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Elden geçti, yola hazır | [Salcano Ng650 26” Dağ Bisikleti](https://nitrobisiklet.com/urun/salcano-ng650-26-dag-bisikleti/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-28-post-1930) | 5.500 ₺ | API | planlı | [görsel](media/2026-12-28-post-1930-1.jpg) |
+| 19:30 | Story · tanıtım | Elden geçti, yola hazır | [Salcano Ng650 26” Dağ Bisikleti](https://nitrobisiklet.com/urun/salcano-ng650-26-dag-bisikleti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-1930) | 5.500 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-1930.jpg) |
+| 20:30 | Story · tanıtım | Elden geçti, yola hazır | [Salcano Ng650 26” Dağ Bisikleti](https://nitrobisiklet.com/magaza/2-el-bisiklet/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-2030) | 5.500 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-2030.jpg) |
 
 ## 29.12.2026 Salı
 
@@ -357,9 +357,9 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · soru | Bisikletle işe ya da okula gidiyor musun? | — | — | API | planlı | [görsel](media/2026-12-29-story-0930.jpg) |
 | 12:30 | Story · ürün | Bisikletin yerinde kalsın | [Zoli High Security Bisiklet Kilit](https://nitrobisiklet.com/urun/zoli-high-security-bisiklet-kilit/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-1230.jpg) |
-| 19:30 | Carousel · ürün | Lastiğin havası yerinde | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-29-post-1930) | 345 ₺ | API | planlı | [görsel](media/2026-12-29-post-1930-1.jpg) |
-| 19:30 | Story · tanıtım | Lastiğin havası yerinde | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-29-story-1930) | 345 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Lastiğin havası yerinde | [Continental Conti Tube (700C) 25-32c İç Lastik](https://nitrobisiklet.com/urun/continental-conti-tube-700c-25-32c-ic-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-12-29-story-2030) | 345 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-2030.jpg) |
+| 19:30 | Carousel · ürün | Elciğini yenile | [Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah](https://nitrobisiklet.com/urun/epic-165-mm-bmx-dirt-jump-elcik-mor-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-29-post-1930) | 418,50 ₺ | API | planlı | [görsel](media/2026-12-29-post-1930-1.jpg) |
+| 19:30 | Story · tanıtım | Elciğini yenile | [Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah](https://nitrobisiklet.com/urun/epic-165-mm-bmx-dirt-jump-elcik-mor-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-1930) | 418,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-1930.jpg) |
+| 20:30 | Story · tanıtım | Elciğini yenile | [Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah](https://nitrobisiklet.com/magaza/elcik-sargi-barend/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-2030) | 418,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-2030.jpg) |
 
 ## 30.12.2026 Çarşamba
 
@@ -368,8 +368,8 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 09:30 | Story · servis | Randevunu online al | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-0930.jpg) |
 | 12:30 | Story · ürün | Lastiğin inik kalmasın | [Giyo GP-45E Pompa 80 psi](https://nitrobisiklet.com/urun/giyo-gp-45e-pompa-80-psi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-30-story-1230) | 350 ₺ | Suite + link | planlı | [görsel](media/2026-12-30-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | LASTİĞİNE KAÇ BAR HAVA BASMALISIN? | — | — | API | planlı | [görsel](media/2026-12-30-post-1930-1.jpg) |
-| 19:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-2030.jpg) |
+| 19:30 | Story · tanıtım | Lastiğe kaç bar hava? | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-1930.jpg) |
+| 20:30 | Story · tanıtım | Lastiğe kaç bar hava? | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-2030.jpg) |
 
 ## 31.12.2026 Perşembe
 
@@ -429,7 +429,8 @@ Sen kışın sürmeye devam ediyor musun, yoksa bisikleti bahara kadar kaldıran
 ### 2026-11-26 19:30 · Lastiğini yenile
 
 ```
-Yanağında çatlak, sırtında silinmiş diş varsa değişim zamanı.
+Yanağında çatlak, sırtında silinmiş diş varsa değişim zamanı. Bisiklet dış lastiği: NITRO Bisiklet, Köyceğiz.
+Dişli lastik mi, düz lastik mi?
 
 20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah - 2'li Set · 1.990 ₺ (KDV dahil)
 
@@ -437,24 +438,22 @@ Yanağında çatlak, sırtında silinmiş diş varsa değişim zamanı.
 ▪️ Renk: Siyah
 ▪️ Kullanım: Fat bike, elektrikli bisiklet
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Siyah - 2'li” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Siyah - 2'li” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Lastiklerini en son ne zaman değiştirdin?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletlastiği #bisikletparçası
+#köyceğiz #dalyan #bisikletlastiği #bisikletparçası #bisikletsevenler
 ```
 
 ### 2026-11-27 19:30 · Her güne bir pedal
 
 ```
-Arabayı park et, keyfi pedalla.
+Günlük sürüş için rahat bir bisiklet. Şehir bisikleti: NITRO Bisiklet, Köyceğiz.
+Sepetli mi, sepetsiz mi?
 
 Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koyu Yeşil · 17.640 ₺ (KDV dahil)
 
@@ -463,24 +462,22 @@ Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koyu Yeşil · 17.640 ₺ (KDV d
 ▪️ Fren Tipi: V Fren
 ▪️ Maşa: Çelik
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “1x7 Vites Koyu” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “1x7 Vites Koyu” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Bisikletle işe ya da okula gidiyor musun?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #şehirbisikleti #bisikletlehayat
+#köyceğiz #ortaca #şehirbisikleti #bisikletlehayat #bisikletsevenler
 ```
 
 ### 2026-11-28 11:00 · Kışa hazırlayan 5 ürün
 
 ```
-Kış geldi diye bisiklet kenara konmaz. Islak ve karanlık günler için liste burada.
+Kış geldi diye bisiklet kenara konmaz. Islak ve karanlık günler için liste burada. Kış bisiklet ekipmanı, Köyceğiz.
+Islak yolda lastik mi önemli, fren mi?
 
 1. Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık · 450 ₺ · 🔍 “Fonksiyonlu”
 2. Asistan Drox Çamurluk · 145 ₺ · 🔍 “Drox Çamurluk”
@@ -489,44 +486,42 @@ Kış geldi diye bisiklet kenara konmaz. Islak ve karanlık günler için liste 
 5. V-Brake Alyan Fren Pabucu, Fren Pedi [2ADET] · 95 ₺ · 🔍 “V-Brake”
 
 Fiyatlar KDV dahildir.
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya ürünün yanındaki terimi yaz.
 
-Sen kışın sürmeye devam ediyor musun?
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
+
+📌 Kaydet, sürüşten önce bir daha bak.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #kışbisikleti #bisikletbakımı
+#köyceğiz #marmaris #kışbisikleti #bisikletbakımı #bisikletaksesuarı
 ```
 
 ### 2026-11-29 11:00 · Suyun hep yanında
 
 ```
-Matara çantada değil, bisikletinde dursun.
+Su elinin altında olunca daha sık içersin. Bisiklet matara kafesi: NITRO Bisiklet, Köyceğiz.
+Matara kafesi kadroda mı, gidonda mı?
 
 Gidon Bağlantılı Matara Kafesi · 200 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Bağlantılı Matara” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Bağlantılı Matara” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Mataran bisiklette mi durur, çantada mı?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #matarakafesi #bisikletaksesuarı
+#köyceğiz #fethiye #matarakafesi #bisikletaksesuarı #bisikletsevenler
 ```
 
 ### 2026-11-30 19:30 · Rotanı dağa çevir
 
 ```
-Asfaltın bittiği yerde başlar.
+Köyceğiz'in tepeleri için bir dağ bisikleti.
+Sabah sürüşü mü, gün batımı sürüşü mü?
 
 Bisan MTX 7200 27.5" Dağ Bisikleti 3x8 Vites 17" (43cm) Kadro Siyah-Mavi · 18.895,50 ₺ (KDV dahil)
 
@@ -535,39 +530,34 @@ Bisan MTX 7200 27.5" Dağ Bisikleti 3x8 Vites 17" (43cm) Kadro Siyah-Mavi · 18.
 ▪️ Fren Tipi: Mekanik disk fren
 ▪️ Maşa: Mozo
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Kadro Siyah-Mavi” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Kadro Siyah-Mavi” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Senin favori patikan neresi?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #dağbisikleti #mtb
+#köyceğiz #muğla #dağbisikleti #mtb #bisikletsevenler
 ```
 
 ### 2026-12-01 19:30 · Bisikletin ayakta dursun
 
 ```
-Küçük bir parça, her gün işe yarar.
+Bisikleti duvara yaslamak ya da yere yatırmak zorunda değilsin. Bisiklet park ayağı: NITRO Bisiklet, Köyceğiz.
+Bisikletini duvara mı yaslarsın, park ayağına mı?
 
 Arka Park Ayağı 26" Siyah · 200 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “C4-129LNMWH” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “C4-129LNMWH” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Bisikletini nereye yaslarsın?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #parkayağı #bisikletaksesuarı
+#köyceğiz #dalyan #parkayağı #bisikletaksesuarı #bisikletsevenler
 ```
 
 ### 2026-12-02 19:30 · ISLAK ZEMİNDE GÜVENLİ SÜRÜŞÜN 5 KURALI
@@ -595,7 +585,8 @@ Sen yağmurda sürer misin, yoksa hava açana kadar bekler misin?
 ### 2026-12-03 19:30 · Yol tutuş lastikten gelir
 
 ```
-Bisikletin yola değen tek yeri lastiği.
+Bisikletin yola değen tek yeri lastiği. Bisiklet dış lastiği: NITRO Bisiklet, Köyceğiz.
+Lastiği sezon başında mı değiştirirsin, dişler bitince mi?
 
 Schwalbe Smart Sam Performance 29x2.25 Dış Lastik · 1.014,30 ₺ (KDV dahil)
 
@@ -603,24 +594,22 @@ Schwalbe Smart Sam Performance 29x2.25 Dış Lastik · 1.014,30 ₺ (KDV dahil)
 ▪️ Seri: Performance
 ▪️ Renk: Siyah
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Performance” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Performance” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Lastiklerini en son ne zaman değiştirdin?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletlastiği #bisikletparçası
+#köyceğiz #marmaris #bisikletlastiği #bisikletparçası #bisikletsevenler
 ```
 
 ### 2026-12-04 19:30 · Elektrik desteğiyle sür
 
 ```
-Pedalı sen çevir, desteği motor versin.
+Elektrik desteğiyle rotanı uzat. Elektrikli bisiklet: NITRO Bisiklet, Köyceğiz.
+E-bisiklette menzil mi önemli, hafiflik mi?
 
 Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 45cm 17.5" · 189.090 ₺ (KDV dahil)
 
@@ -629,24 +618,22 @@ Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 45cm 17.5" · 189.090 ₺ (KDV
 ▪️ Fren Tipi: Hidrolik Disk Fren
 ▪️ Motor: Shimano DU-EP800
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Envious” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Envious” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-E-bisiklet denedin mi, ilk izlenimin neydi?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #elektriklibisiklet #ebisiklet
+#köyceğiz #fethiye #elektriklibisiklet #ebisiklet #bisikletsevenler
 ```
 
 ### 2026-12-05 11:00 · 250 ₺ altı 5 hediye
 
 ```
-Bisikletçiye hediye almak pahalı olmak zorunda değil.
+Bisikletçiye hediye almak pahalı olmak zorunda değil. NITRO Bisiklet, Köyceğiz.
+Hediye pratik mi olsun, sürpriz mi?
 
 1. Polisport C600 Matara · 220 ₺ · 🔍 “C4-96WG6KZ”
 2. Bandana Bisiklet & Outdoor · 189 ₺ · 🔍 “Bandana”
@@ -655,44 +642,42 @@ Bisikletçiye hediye almak pahalı olmak zorunda değil.
 5. Gidon Bağlantılı 360 Derece Dönebilir Yan Ayna Tekli · 190 ₺ · 🔍 “DERECE”
 
 Fiyatlar KDV dahildir.
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya ürünün yanındaki terimi yaz.
 
-Sana bisikletle ilgili alınan en güzel hediye neydi?
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
+
+📤 Listeyi hediye alacak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #hediyefikri #yılbaşıhediyesi
+#köyceğiz #muğla #hediyefikri #yılbaşıhediyesi #bisikletaksesuarı
 ```
 
 ### 2026-12-06 11:00 · Rahat otur, uzun sür
 
 ```
-Yıpranan seleyi değiştirmek sürüşü değiştirir.
+Yıpranan seleyi değiştirmek sürüşü değiştirir. Bisiklet selesi: NITRO Bisiklet, Köyceğiz.
+Geniş sele mi, ince sele mi?
 
 Rectus Bisiklet Sele Kırmızı Mtb · 380 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Rectus Bisiklet” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Rectus Bisiklet” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Seleni hiç değiştirdin mi?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletselesi #bisikletparçası
+#köyceğiz #dalyan #bisikletselesi #bisikletparçası #bisikletaksesuarı
 ```
 
 ### 2026-12-07 19:30 · Yol bitince devam et
 
 ```
-Asfaltta hızlı, toprakta rahat: gravel.
+Yol bitince dönmek zorunda değilsin. Gravel bisiklet: NITRO Bisiklet, Köyceğiz.
+Sahil yolu mu, köy yolları mı?
 
 Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites 56cm · 66.910 ₺ (KDV dahil)
 
@@ -701,24 +686,22 @@ Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites 56cm · 66.910 ₺ (KDV dahil
 ▪️ Fren Tipi: Mekanik Disk Fren
 ▪️ Maşa: Karbon
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Trail Eco” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Trail Eco” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Asfalt mı, toprak yol mu?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #gravel #gravelbisiklet
+#köyceğiz #ortaca #gravel #gravelbisiklet #bisikletsevenler
 ```
 
 ### 2026-12-08 19:30 · Arka dişlini yenile
 
 ```
-Aşınmış dişli zinciri attırır.
+Aşınmış dişli zinciri attırır. Kaset dişli: NITRO Bisiklet, Köyceğiz.
+Geniş vites aralığı mı, sık vites mi?
 
 Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli · 2.601 ₺ (KDV dahil)
 
@@ -727,18 +710,15 @@ Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli · 2.601 ₺ (KDV dahil)
 ▪️ Model: CS-HG81
 ▪️ Diş Aralığı: 11-36T
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “CS-HG81” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “CS-HG81” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Arkada kaç vitesin var?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletparçası #shimano
+#köyceğiz #marmaris #bisikletparçası #shimano #bisikletsevenler
 ```
 
 ### 2026-12-09 19:30 · ÇOCUĞUNA HANGİ JANT BOYU UYAR?
@@ -766,28 +746,27 @@ Senin ilk bisikletin kaç janttı, hatırlıyor musun?
 ### 2026-12-10 19:30 · Frenine güven
 
 ```
-Islak ve çamurlu yolda balata daha hızlı aşınır.
+Frenden metal sesi geliyorsa balata bitmiş olabilir. Fren balatası: NITRO Bisiklet, Köyceğiz.
+Organik balata mı, metal balata mı?
 
 SHIMANO B05S Organik Disk Fren Balatası Kutusuz · 389 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “B05S Organik” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “B05S Organik” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Senin bisikletinde disk fren mi var, jant freni mi?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #frenbalatası #bisikletbakımı
+#köyceğiz #muğla #frenbalatası #bisikletbakımı #bisikletparçası
 ```
 
 ### 2026-12-11 19:30 · Şehirde özgürlük
 
 ```
-Arabayı park et, keyfi pedalla.
+Arabayı park et, keyfi pedalla. Şehir bisikleti: NITRO Bisiklet, Köyceğiz.
+İşe bisikletle mi, arabayla mı?
 
 Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites · 28.440 ₺ (KDV dahil)
 
@@ -796,24 +775,22 @@ Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites · 28.440 ₺ (KDV dahil)
 ▪️ Fren Tipi: Hidrolik Disk Fren
 ▪️ Maşa: Mozo
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “8300” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “8300” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Bisikletle işe ya da okula gidiyor musun?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #şehirbisikleti #bisikletlehayat
+#köyceğiz #dalyan #şehirbisikleti #bisikletlehayat #bisikletsevenler
 ```
 
 ### 2026-12-12 11:00 · 500 ₺ altı 5 hediye
 
 ```
-Yılbaşı listesindeki bisikletçi için fikirler.
+Yılbaşı listesindeki bisikletçi için fikirler. Bisikletçiye yılbaşı hediyesi: NITRO Bisiklet, Köyceğiz.
+Hediyeyi kendin mi seçersin, listeden mi?
 
 1. Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi · 380 ₺ · 🔍 “Eldiven Mavi”
 2. Procycle PC-260 Kadro Telefon Tutucu Çanta Siyah · 270 ₺ · 🔍 “PC-260”
@@ -822,46 +799,44 @@ Yılbaşı listesindeki bisikletçi için fikirler.
 5. Rectus Kilometre Saati · 450 ₺ · 🔍 “Rectus Kilometre”
 
 Fiyatlar KDV dahildir.
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya ürünün yanındaki terimi yaz.
 
-Bu listeden hangisi senin bisikletinde eksik?
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
+
+📤 Hediye arayan birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #hediyefikri #yılbaşıhediyesi
+#köyceğiz #ortaca #hediyefikri #yılbaşıhediyesi #bisikletaksesuarı
 ```
 
 ### 2026-12-13 11:00 · Mataraya sağlam yuva
 
 ```
-Matara çantada değil, bisikletinde dursun.
+Matara çantada değil, bisikletinde dursun. Bisiklet matara kafesi: NITRO Bisiklet, Köyceğiz.
+Mataran bisiklette mi durur, çantada mı?
 
 Sedona SD100 Matara Kafesi · 115 ₺ (KDV dahil)
 
 Malzemesi plastik olduğu için ürün hafiftir. Esnemelerde kırılmaya karşı dayanıklıdır.
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “C4-12054GEM” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “C4-12054GEM” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Mataran bisiklette mi durur, çantada mı?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #matarakafesi #bisikletaksesuarı
+#köyceğiz #marmaris #matarakafesi #bisikletaksesuarı #bisikletsevenler
 ```
 
 ### 2026-12-14 19:30 · Rampaya hazır
 
 ```
-Tekerlek küçük, eğlence büyük.
+Tekerlek küçük, eğlence büyük. BMX ve dirt jump bisikleti: NITRO Bisiklet, Köyceğiz.
+Rampa mı, pist mi?
 
 Carraro RAVE BMX 20" 1-V VB Mat Mor · 22.601 ₺ (KDV dahil)
 
@@ -870,24 +845,22 @@ Carraro RAVE BMX 20" 1-V VB Mat Mor · 22.601 ₺ (KDV dahil)
 ▪️ Fren Tipi: V Fren
 ▪️ Maşa: Çelik Rijit 1.1/8"
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Carraro RAVE” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Carraro RAVE” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-İlk numaranı hangi bisikletle denedin?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bmx #dirtjump
+#köyceğiz #fethiye #bmx #dirtjump #bisikletsevenler
 ```
 
 ### 2026-12-15 19:30 · Fren gücü rotordan geçer
 
 ```
-Disk frenin yarısı balata, yarısı rotor.
+Aşınmış ya da eğrilmiş rotor freni zayıflatır. Disk fren rotoru: NITRO Bisiklet, Köyceğiz.
+Ön ve arka rotor aynı mı, farklı mı?
 
 Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru · 1.188 ₺ (KDV dahil)
 
@@ -895,18 +868,15 @@ Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru · 1.188 ₺ (KDV dahil)
 ▪️ Bağlantı: 6 vida
 ▪️ Model: SM-RT56
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “SM-RT56” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “SM-RT56” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Rotorun kaç milim?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #diskfren #bisikletparçası
+#köyceğiz #muğla #diskfren #bisikletparçası #bisikletsevenler
 ```
 
 ### 2026-12-16 19:30 · BİSİKLETİN SERVİS İSTİYOR: 5 İŞARET
@@ -934,28 +904,27 @@ Senin bisikletin en son ne zaman bakım gördü?
 ### 2026-12-17 19:30 · Karanlıkta görün
 
 ```
-Işık yalnızca görmek için değil, görünmek için.
+Seni görmeyen sürücü sana yol veremez. Bisiklet lambası: NITRO Bisiklet, Köyceğiz.
+Akşam sürüşünde sabit ışık mı, yanıp sönen mi?
 
 XBYC 6125 USB Şarjlı 400 Lumen Bisiklet Ön Lamba Far (StVZO) · 650 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “6125” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “6125” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Akşam sürüşünde ışıkların hep yanında mı?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletlambası #güvenlisürüş
+#köyceğiz #ortaca #bisikletlambası #güvenlisürüş #bisikletaksesuarı
 ```
 
 ### 2026-12-18 19:30 · Daha uzağa, daha rahat
 
 ```
-Yokuş da rüzgâr da artık bahane değil.
+Pedalı sen çevir, desteği motor versin. Elektrikli bisiklet: NITRO Bisiklet, Köyceğiz.
+E-bisikleti işe gidişte mi kullanırdın, hafta sonu turunda mı?
 
 Bisan Florida 26" Elektrikli Şehir Bisikleti Mercan Rengi · 38.160 ₺ (KDV dahil)
 
@@ -964,24 +933,22 @@ Bisan Florida 26" Elektrikli Şehir Bisikleti Mercan Rengi · 38.160 ₺ (KDV da
 ▪️ Fren Tipi: V Fren
 ▪️ Motor: ANANDA M131SD arka göbek motoru
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Florida” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Florida” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-E-bisiklet denedin mi, ilk izlenimin neydi?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #elektriklibisiklet #ebisiklet
+#köyceğiz #marmaris #elektriklibisiklet #ebisiklet #bisikletsevenler
 ```
 
 ### 2026-12-19 11:00 · Çocuklara 5 yılbaşı hediyesi
 
 ```
-Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli.
+Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli. Çocuk bisikleti: NITRO Bisiklet, Köyceğiz.
+Çocuğun yılbaşında bisiklet mi ister, oyuncak mı?
 
 1. Bisan Floki V 20" Çocuk Bisikleti Mavi · 9.375 ₺ · 🔍 “Bisan Floki”
 2. Bisan B-Bike 12" Çocuk Bisikleti Metalik Pembe · 5.560 ₺ · 🔍 “B-Bike”
@@ -990,44 +957,42 @@ Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli.
 5. Bisiklet Selesi Siyah-Gri 16-20 Jant Rectus · 250 ₺ · 🔍 “Selesi Siyah-Gri”
 
 Fiyatlar KDV dahildir.
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya ürünün yanındaki terimi yaz.
 
-Senin ilk bisikletin kaç janttı, hatırlıyor musun?
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
+
+📤 Hediye alacağın kişiye gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #çocukbisikleti #yılbaşıhediyesi
+#köyceğiz #fethiye #çocukbisikleti #yılbaşıhediyesi #hediyefikri
 ```
 
 ### 2026-12-20 11:00 · Delik lastiğe yolda çözüm
 
 ```
-Patlak lastik sürüşün sonu olmak zorunda değil.
+Patlak lastik sürüşün sonu olmak zorunda değil. Bisiklet tamir kiti: NITRO Bisiklet, Köyceğiz.
+Yolda lastiği yamayla mı kurtarırsın, iç lastik değişimiyle mi?
 
 Bisiklet Tamir Kiti · 140 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Bisiklet Tamir” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Bisiklet Tamir” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Yolda lastik tamir ettin mi hiç?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisiklettamiri #bisikletbakımı
+#köyceğiz #muğla #bisiklettamiri #bisikletbakımı #bisikletaksesuarı
 ```
 
 ### 2026-12-21 19:30 · Patikaya hazır
 
 ```
-Köyceğiz'in tepeleri için bir dağ bisikleti.
+Asfaltın bittiği yerde başlar. Dağ bisikleti: NITRO Bisiklet, Köyceğiz.
+Tırmanış mı, iniş mi?
 
 Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi · 35.608,50 ₺ (KDV dahil)
 
@@ -1036,45 +1001,41 @@ Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi · 35.608,50 �
 ▪️ Arka Aktarıcı: Shimano Acera RD-M3020-8
 ▪️ Lastik: Maxxis 29"X2.40
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Mavi-Açık” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Mavi-Açık” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Senin favori patikan neresi?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #dağbisikleti #mtb
+#köyceğiz #dalyan #dağbisikleti #mtb #bisikletsevenler
 ```
 
 ### 2026-12-22 19:30 · Uzamış zinciri değiştir
 
 ```
-Yeni zincir, aktarmanın geri kalanını korur.
+Zincir kullandıkça uzar; zamanında değişmezse rubleyi ve aynakolu da yıpratır. Bisiklet zinciri: NITRO Bisiklet, Köyceğiz.
+Zincir ölçer mi kullanırsın, ustaya mı bırakırsın?
 
 SHIMANO Deore XT CN-HG93 Zincir 9S · 1.300 ₺ (KDV dahil)
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “CN-HG93” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “CN-HG93” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Zincirini en son ne zaman değiştirdin?
+📤 Bunu soracak birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletzinciri #bisikletbakımı
+#köyceğiz #ortaca #bisikletzinciri #bisikletbakımı #bisikletparçası
 ```
 
 ### 2026-12-23 19:30 · ZİNCİRİNİ YANLIŞ MI YAĞLIYORSUN?
 
 ```
-Zinciri yağlamak, üzerine yağ dökmek demek değil.
+Zinciri yağlamak, üzerine yağ dökmek demek değil. Bisiklet zincir bakımı: NITRO Bisiklet, Köyceğiz.
+Zinciri önce temizler misin, doğrudan yağlar mısın?
 
 Zincirin yağa ihtiyaç duyduğu yer baklaların içi ve makaralar. Dışarıda kalan yağ işe yaramaz; tozu ve kumu üzerine toplar, zinciri daha hızlı aşındırır.
 
@@ -1084,163 +1045,161 @@ Sık yapılan iki hata var. Biri kirli zincirin üstüne yağ eklemek. Diğeri �
 
 Zincir kullandıkça uzar; zamanında değişmezse rubleyi ve aynakolu da yıpratır. Atölyemizde ölçüp durumunu söyleyebiliriz.
 
-Adımları kaydet, zincir bakımında yanında olsun.
-
-Sen zincirini ne sıklıkla yağlıyorsun?
-
 🔧 Servis randevusu için profildeki linke dokun: “Servis randevusu al”.
 
-📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
-
-#nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #bisikletipuçları
-```
-
-### 2026-12-24 19:30 · Islak yola hazırlan
-
-```
-Yağmurdan sonra da sürenler için.
-
-MTB Plastik Çamurluk Takım Geniş · 120 ₺ (KDV dahil)
-
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
-
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “MTB PLASTİK” yaz.
-
-Çamurluk takar mısın, çamura aldırmaz mısın?
+📌 Adımları kaydet, zincir bakımında yanında olsun.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #çamurluk #kışbisikleti
+#köyceğiz #marmaris #bisikletbakımı #bisikletipuçları #bisikletservisi
 ```
 
-### 2026-12-25 19:30 · İşe, okula, sahile
+### 2026-12-24 19:30 · Dişler silindiyse vakit geldi
 
 ```
-İşe, okula, sahile: tek bisiklet, her yere.
+Bisiklet dış lastiği arıyorsan bu modele yakından bak. NITRO Bisiklet, Köyceğiz.
+Geniş lastik mi, ince lastik mi?
 
-Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri · 16.885 ₺ (KDV dahil)
+CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah · 990 ₺ (KDV dahil)
 
-▪️ Jant Ölçüsü: 28" (700c)
-▪️ Vites: 21 vites (3x7)
+▪️ Ölçü: 700x48C (28x2.00)
+▪️ Ağırlık: Yaklaşık 945 g
+▪️ Model: Metropolitan Palmbay (C1779)
+▪️ Renk: Siyah
+
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Metropolitan” yaz.
+
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
+
+📤 Bunu soracak birine gönder.
+
+📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
+
+#köyceğiz #fethiye #bisikletlastiği #bisikletparçası #bisikletsevenler
+```
+
+### 2026-12-25 19:30 · Çocuğunun yeni bisikleti
+
+```
+Bir çocuğun unutmadığı hediye: ilk bisikleti. Çocuk bisikleti: NITRO Bisiklet, Köyceğiz.
+Senin ilk bisikletin 16 jant mıydı, 20 jant mı?
+
+Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu · 8.170 ₺ (KDV dahil)
+
+▪️ Jant Ölçüsü: 16"
+▪️ Vites: Tek vites
 ▪️ Fren Tipi: V Fren
-▪️ Maşa: Mozo
+▪️ Maşa: Çelik
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Siyah-Turuncu” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “8200” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Bisikletle işe ya da okula gidiyor musun?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #şehirbisikleti #bisikletlehayat
+#köyceğiz #muğla #çocukbisikleti #bisikletsevenler #bisikletlehayat
 ```
 
-### 2026-12-26 11:00 · Bisikletine 5 yükseltme
+### 2026-12-26 11:00 · 1.000 ₺ altı 4 hediye
 
 ```
-Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.
+Yılbaşı yaklaşıyor; bisiklet sevene işe yarar hediyeler burada. Bisikletçiye yılbaşı hediyesi: NITRO Bisiklet, Köyceğiz.
+Hediye sürüşe mi yarasın, bisiklete mi?
 
-1. Pedal M506 Siyah · 863,21 ₺ · 🔍 “M506”
-2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · 🔍 “Mor-Siyah”
-3. Rectus Mtb Sele Kırmızı · 345 ₺ · 🔍 “Mtb Sele Kırmızı”
-4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · 🔍 “Schwalbe Tough”
-5. Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah · 702 ₺ · 🔍 “Wake 780”
+1. Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah · 756 ₺ · 🔍 “PC-250”
+2. Pedal M506 Siyah · 863,21 ₺ · 🔍 “M506”
+3. VELO – Mtb Sele Siyah-Kırmızı · 850 ₺ · 🔍 “VELO”
+4. Elektrikli Bisiklet Çantası 17LT Siyah (Arka Bagaj Çantası) · 950 ₺ · 🔍 “17LT”
 
 Fiyatlar KDV dahildir.
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya ürünün yanındaki terimi yaz.
 
-Bisikletinde ilk değiştirdiğin parça neydi?
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
-
-#nitrobisiklet #köyceğiz #bisiklet #bisikletparçası #bisikletbakımı
-```
-
-### 2026-12-27 11:00 · Arkanı gör
-
-```
-Başını çevirmeden arkanı gör.
-
-360° Dönebilen Geniş Açılı İkili Dikiz Aynası · 405 ₺ (KDV dahil)
-
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
-
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Dönebilen Geniş” yaz.
-
-Bisikletinde ayna kullanıyor musun?
+📤 Hediye arayan birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletaynası #güvenlisürüş
+#köyceğiz #dalyan #yılbaşıhediyesi #hediyefikri #bisikletaksesuarı
 ```
 
-### 2026-12-28 19:30 · Yokuşlar dert olmasın
+### 2026-12-27 11:00 · Yükün bisiklette dursun
 
 ```
-Yokuş da rüzgâr da artık bahane değil.
+Tura çıkmadan önce yükün yerini belirle. Bisiklet çantası: NITRO Bisiklet, Köyceğiz.
+Günübirlik tur mu, kamp turu mu?
 
-Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri · 46.955 ₺ (KDV dahil)
+Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah · 1.615,50 ₺ (KDV dahil)
 
-▪️ Jant Ölçüsü: 20"
-▪️ Vites: 7 vites (1x7)
-▪️ Fren Tipi: Hidrolik Disk Fren
-▪️ Menzil: ~60 km
+▪️ Ölçü: 45 x 25 cm
+▪️ Hacim: 12 lt
+▪️ Montaj: 5 nokta
+▪️ Ağırlık: Yaklaşık 300 g
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “PC-550” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Vites Metalik” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-E-bisiklet denedin mi, ilk izlenimin neydi?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #elektriklibisiklet #ebisiklet
+#köyceğiz #ortaca #bisikletçantası #bisikletturu #bisikletaksesuarı
 ```
 
-### 2026-12-29 19:30 · Lastiğin havası yerinde
+### 2026-12-28 19:30 · Elden geçti, yola hazır
 
 ```
-Yolda yama yapmak yerine iç lastik değiştirmek daha hızlıdır.
+Kontrollü 2. el: atölyemizin elinden geçti, yeni sahibini bekliyor. Kontrollü 2. el bisiklet: NITRO Bisiklet, Köyceğiz.
+Sıfır mı alırsın, kontrollü 2. el mi?
 
-Continental Conti Tube (700C) 25-32c İç Lastik · 345 ₺ (KDV dahil)
+Salcano Ng650 26” Dağ Bisikleti · 5.500 ₺ (KDV dahil)
+Kontrollü 2. el.
 
-Delinmeye karşı iyi derecede direnç sağlar.
+▪️ Jant Ölçüsü: 26"
 
-Neden NITRO?
-✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
-✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
-✔️ 14 gün içinde iade, iade kargosu bizden
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Ng650” yaz.
 
-🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Continental” yaz.
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
 
-Yolda lastiğin patladı mı hiç, o gün ne yaptın?
+📤 Arayan birini biliyorsan ona gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #içlastik #bisikletbakımı
+#köyceğiz #marmaris #ikincielbisiklet #bisikletsevenler #bisikletlehayat
+```
+
+### 2026-12-29 19:30 · Elciğini yenile
+
+```
+Yıpranan elcik kayar. Yenisi takılır, fark hissedilir. Bisiklet elciği: NITRO Bisiklet, Köyceğiz.
+Bisikletinde ilk değiştirdiğin parça elcik miydi, sele mi?
+
+Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ (KDV dahil)
+
+▪️ Uzunluk: 165 mm
+▪️ Ağırlık: 170 g
+▪️ Renk: Mor-Siyah
+
+🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “Mor-Siyah” yaz.
+
+✔️ Köyceğiz içi aynı gün, ücretsiz teslimat · Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz · 14 gün içinde iade, iade kargosu bizden
+
+📤 Birlikte sürdüğün birine gönder.
+
+📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
+
+#köyceğiz #fethiye #elcik #bisikletparçası #bisikletsevenler
 ```
 
 ### 2026-12-30 19:30 · LASTİĞİNE KAÇ BAR HAVA BASMALISIN?
 
 ```
-Lastik basıncı parmakla sıkarak ölçülmez.
+Lastik basıncı parmakla sıkarak ölçülmez. Bisiklet lastik basıncı: NITRO Bisiklet, Köyceğiz.
+Sen basıncı pompanın göstergesinden mi takip ediyorsun, yoksa hâlâ parmak testi mi?
 
 Elle sert gelen lastik, olması gerekenden düşük basınçta olabilir. Doğru değeri göstergeli bir pompa söyler.
 
@@ -1248,28 +1207,27 @@ Genel aralıklar şöyle: dağ bisikletinde yaklaşık 1,8-2,8 bar, şehir ve tu
 
 Düşük basınçta bir çukura girersen jant iç lastiği sıkıştırıp kesebilir. Fazla basınçta lastik zemine daha az tutunur, bisiklet her tümsekte zıplar.
 
-Lastikler sürmesen de zamanla hava kaybeder. Haftada bir kontrol yeterli. Değerleri kaydet, pompanın başında işine yarar.
-
-Sen basıncı pompanın göstergesinden mi takip ediyorsun, yoksa hâlâ parmak testi mi?
-
 🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.
+
+📌 Lastikler sürmesen de zamanla hava kaybeder. Haftada bir kontrol yeterli. Değerleri kaydet, pompanın başında işine yarar.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #bisikletipuçları
+#köyceğiz #muğla #bisikletbakımı #bisikletipuçları #bisikletsevenler
 ```
 
 ### 2026-12-31 19:30 · Mutlu yıllar 2027
 
 ```
-Mutlu yıllar! 2027 bol kilometreli bir yıl olsun.
+Mutlu yıllar! 2027 bol kilometreli bir yıl olsun. NITRO Bisiklet, Köyceğiz.
+Yeni yılda daha çok kilometre mi, daha çok rota mı?
 
 Bu yıl bizimle süren, dükkâna uğrayan, bisikletini atölyemize emanet eden herkese teşekkürler.
 
-Yeni yılda ilk rotan neresi olacak?
+📤 Birlikte sürdüğün birine gönder.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #mutluyıllar #bisikletsevenler
+#köyceğiz #dalyan #mutluyıllar #bisikletsevenler #yılbaşı
 ```
 

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import hashlib
 import re
+from datetime import date
 from urllib.parse import urlencode
 
 from common import fmt_price
@@ -419,6 +420,142 @@ def name_fits(rule_id: str, name: str) -> bool:
     n = tr_lower(name)
     return bool(re.search(need, n)) and not (ban and re.search(ban, n))
 
+
+# ---- Soru havuzları (O3): açıklamanın 2. satırı, iki seçenekli soru ---------------------------------
+# Evet/hayır sorusu yok: her soru iki seçenek sunar ("X mı, Y mı?"). Kural başına ≥3 soru; bir soru yalnız
+# bir havuzda geçer (30 gün tekrar denetimi havuzlar arası çakışmayı da yakalar). Kuralların eski tek
+# sorusu (`q`) artık kullanılmaz: aşağıda havuzun ilk sorusuyla değiştirilir.
+SORULAR = {
+    "ikinciel": ["İlk bisikletin sıfır mıydı, 2. el mi?", "2. el alırken önce kadroya mı bakarsın, parçalara mı?",
+                 "Sıfır mı alırsın, kontrollü 2. el mi?"],
+    "ebike": ["E-bisikleti işe gidişte mi kullanırdın, hafta sonu turunda mı?",
+              "Yokuşta motor desteği mi, kendi bacak gücün mü?", "E-bisiklette menzil mi önemli, hafiflik mi?"],
+    "dag": ["Tırmanış mı, iniş mi?", "Patika mı, orman yolu mu?", "Sabah sürüşü mü, gün batımı sürüşü mü?"],
+    "gravel": ["Asfalt mı, toprak yol mu?", "Gravelle uzun tur mu, kısa kaçamak mı?", "Sahil yolu mu, köy yolları mı?"],
+    "bmx": ["Rampa mı, pist mi?", "Zıplama mı, tek teker mi?", "Park mı, sokak mı?"],
+    "sehir": ["İşe bisikletle mi, arabayla mı?", "Sepetli mi, sepetsiz mi?", "Sahil turu mu, çarşı turu mu?"],
+    "cocuk": ["Senin ilk bisikletin 16 jant mıydı, 20 jant mı?", "Yardımcı tekerlek mi, denge bisikleti mi?",
+              "Çocuğunla sahilde mi sürersin, parkta mı?"],
+    "eldiven_kis": ["Kışın da sürenlerden misin, baharı bekleyenlerden mi?",
+                    "Soğukta önce ellerin mi üşür, ayakların mı?", "Kış sürüşü sabah mı, öğlen mi?"],
+    "eldiven_cocuk": ["Çocuğun bisiklete 4 yaşında mı başladı, 6 yaşında mı?",
+                      "Minik sürücü eldivenle mi sürer, eldivensiz mi?",
+                      "Çocuğunun en sevdiği renk kırmızı mı, mavi mi?"],
+    "eldiven": ["Eldivenle mi sürersin, eldivensiz mi?", "Kısa parmak mı, uzun parmak mı?",
+                "Eldivende jel destekli mi seversin, ince mi?"],
+    "kask_cocuk": ["Çocuğun kaskını kendisi mi seçti, sen mi?", "Çocuk kaskı desenli mi olsun, düz renk mi?",
+                   "Kaskı çocuk mu ilk takar, sen mi hatırlatırsın?"],
+    "bandana": ["Bandana boyunda mı, başta mı?", "Bandana mı, boyunluk mu?", "Sürüşte seni rüzgâr mı yorar, toz mu?"],
+    "gozluk": ["Koyu cam mı, şeffaf cam mı?", "Gözlüklü mü sürersin, gözlüksüz mü?",
+               "Sürüşte gözünü rüzgâr mı yorar, güneş mi?"],
+    "forma": ["Enduro mu, downhill mi?", "Kısa kollu forma mı, uzun kollu mu?", "Yarış günü mü, antrenman mı?"],
+    "lamba": ["Akşam sürüşünde sabit ışık mı, yanıp sönen mi?", "Önce ön far mı alınır, arka stop mu?",
+              "Gün batınca sürmeye devam mı, eve dönüş mü?"],
+    "camurluk": ["Çamurluk takar mısın, çamura aldırmaz mısın?",
+                 "Yağmurdan sonra hemen sürer misin, yolun kurumasını mı beklersin?",
+                 "Sabit çamurluk mu, sökülüp takılan mı?"],
+    "kilit": ["Zincir kilit mi, U kilit mi?", "Şifreli kilit mi, anahtarlı mı?",
+              "Bisikletin gece içeride mi kalır, dışarıda mı?"],
+    "zil_cocuk": ["Çocukken bisikletinde zil var mıydı, korna mı?", "Çocuk bisikletine zil mi, korna mı?",
+                  "Çocuğun zili en çok parkta mı çalar, sokakta mı?"],
+    "zil": ["Zil mi çalarsın, seslenir misin?", "Klasik zil mi, tiz sesli zil mi?",
+            "Zili en çok sahilde mi çalarsın, şehirde mi?"],
+    "ayna": ["Sağ ayna mı, sol ayna mı?", "Arkana ayna ile mi bakarsın, omzunun üstünden mi?",
+             "Gidon aynası mı, kask aynası mı?"],
+    "pompa": ["Lastik basıncını pompayla mı ölçersin, parmakla mı?", "Ayak pompası mı, el pompası mı?",
+              "Basıncı haftada bir mi kontrol edersin, sürüşten önce mi?"],
+    "matara_kafesi": ["Mataran bisiklette mi durur, çantada mı?", "Tek matara mı, iki matara mı?",
+                      "Matara kafesi kadroda mı, gidonda mı?"],
+    "matara": ["Mataranda soğuk su mu olur, ılık su mu?", "Matarayı sürüşte mi bitirirsin, eve dolu mu dönersin?",
+               "Küçük matara mı, büyük matara mı?"],
+    "telefon_tutucu": ["Sürerken navigasyon mu, ezberden rota mı?", "Telefon gidonda mı, cepte mi?",
+                       "Rotayı haritadan mı izlersin, saatten mi?"],
+    "km_saati": ["Hızı mı takip edersin, mesafeyi mi?", "Kablolu mu, kablosuz mu?",
+                 "En uzun sürüşün 50 kilometreden kısa mı, uzun mu?"],
+    "sepet": ["Alışverişe bisikletle mi gidersin, arabayla mı?", "Ön sepet mi, arka sepet mi?",
+              "Sepete pazar alışverişi mi girer, piknik çantası mı?"],
+    "canta": ["Turda yükü bisiklet çantası mı taşır, sırt çantası mı?", "Kadro çantası mı, sele altı çantası mı?",
+              "Günübirlik tur mu, kamp turu mu?"],
+    "cocuk_koltugu": ["Çocuk koltuğu önde mi, arkada mı?", "Küçük yolcuyla sahil mi, park mı?",
+                      "Küçük yolcuyla kısa tur mu, uzun tur mu?"],
+    "park_ayagi": ["Bisikletini duvara mı yaslarsın, park ayağına mı?", "Orta ayak mı, arka ayak mı?",
+                   "Bisiklet evde mi durur, balkonda mı?"],
+    "sele_cocuk": ["Çocuğunun bisikleti 16 jant mı, 20 jant mı?", "Sele yüksekliğini sen mi ayarlarsın, çocuğun mu?",
+                   "Renkli sele mi, siyah sele mi?"],
+    "sele": ["Geniş sele mi, ince sele mi?", "Sele yumuşak mı olsun, sert mi?",
+             "Seleni sürüş tarzına göre mi seçersin, görünüşe göre mi?"],
+    "pedal": ["Düz pedal mı, kilitli pedal mı?", "Metal pedal mı, plastik pedal mı?",
+              "Pedala ayak ucuyla mı basarsın, orta tabanla mı?"],
+    "sargi": ["Gidon sargısı siyah mı olsun, renkli mi?", "İnce sargı mı, kalın sargı mı?",
+              "Sargıyı kendin mi sararsın, atölyeye mi bırakırsın?"],
+    "elcik": ["Kilitli elcik mi, geçmeli elcik mi?", "İnce elcik mi, kalın elcik mi?",
+              "Bisikletinde ilk değiştirdiğin parça elcik miydi, sele mi?"],
+    "ic_lastik": ["Yolda patlakta yama mı yaparsın, iç lastik mi değiştirirsin?",
+                  "Yedek iç lastik çantada mı durur, evde mi?", "İnce sibop mu, kalın sibop mu?"],
+    "dis_lastik": ["Dişli lastik mi, düz lastik mi?", "Lastiği sezon başında mı değiştirirsin, dişler bitince mi?",
+                   "Geniş lastik mi, ince lastik mi?"],
+    "zincir": ["Zincirini kilometreye göre mi değiştirirsin, sesine göre mi?",
+               "Zincir ölçer mi kullanırsın, ustaya mı bırakırsın?",
+               "Zincir değişimini kendin mi yaparsın, atölyede mi?"],
+    "kaset": ["Arkada 8 vites mi, 11 vites mi?", "Kaset ile zinciri birlikte mi değiştirirsin, ayrı ayrı mı?",
+              "Geniş vites aralığı mı, sık vites mi?"],
+    "balata": ["Disk fren mi, jant freni mi?", "Balatayı ses gelince mi değiştirirsin, kontrolde mi?",
+               "Organik balata mı, metal balata mı?"],
+    "rotor": ["160 mm rotor mu, 180 mm mi?", "Rotoru kendin mi değiştirirsin, atölyeye mi bırakırsın?",
+              "Ön ve arka rotor aynı mı, farklı mı?"],
+    "gidon": ["Geniş gidon mu, dar gidon mu?", "Düz gidon mu, yükseltilmiş gidon mu?",
+              "Gidonu konfor için mi değiştirirsin, kontrol için mi?"],
+    "masa": ["Maşa kilidi tırmanışta açık mı, kapalı mı?", "Hava maşa mı, yaylı maşa mı?",
+             "Maşa ayarını kendin mi yaparsın, atölyede mi?"],
+    "zincir_yagi": ["Kuru yağ mı, ıslak yağ mı?", "Zincirini her sürüşten sonra mı yağlarsın, ses gelince mi?",
+                    "Zinciri yağlamadan önce siler misin, doğrudan mı yağlarsın?"],
+    "balata_spreyi": ["Frenlerin sessiz mi, ötüyor mu?", "Fren temizliği ayda bir mi, sezonda bir mi?",
+                      "Fren bakımını evde mi yaparsın, atölyede mi?"],
+    "bakim_spreyi": ["Bisikletinin bakımını kendin mi yaparsın, atölyeye mi bırakırsın?",
+                     "Bakımı her ay mı yaparsın, sezon başında mı?", "Bakım çantasında sprey mi olur, bez mi?"],
+    "yama": ["Yolda lastiği yamayla mı kurtarırsın, iç lastik değişimiyle mi?",
+             "Tamir kiti sele çantasında mı, sırt çantasında mı?", "Patlak lastiği yolda mı tamir edersin, eve mi dönersin?"],
+}
+for _r_ in RULES:
+    _r_["qs"] = SORULAR[_r_["id"]]
+    _r_["q"] = _r_["qs"][0]
+
+# İpucu carousel'leri (data/tips.json → carousels[].id). Tanımsız ipucunda genel havuz kullanılır.
+IPUCU_SORULARI = {
+    "kis-bakimi": ["Yağmurdan sonra bisikleti hemen mi silersin, ertesi gün mü?",
+                   "Bisikletin kışın içeride mi durur, balkonda mı?", "Kış bakımı evde mi, atölyede mi?"],
+    "cocuk-jant-boyu": ["Çocuğa bisiklet alırken boya mı bakarsın, yaşa mı?",
+                        "Bisikleti çocukla birlikte mi denersin, ölçüyle mi seçersin?", "İlk bisiklet 16 jant mı, 20 jant mı?"],
+    "islak-zemin": ["Islak yolda erken fren mi, yavaş viraj mı?", "Yağmurlu günde bisiklet mi, otobüs mü?",
+                    "Islakta seni rögar kapağı mı şaşırtır, boyalı çizgi mi?"],
+    "servis-isaretleri": ["Bisikletin önce frenden mi ses verir, vitesten mi?",
+                          "Servise arıza çıkınca mı gelirsin, düzenli bakıma mı?",
+                          "Fren kolu gidona yaklaşınca hemen mi bakarsın, sonraya mı bırakırsın?"],
+    "lastik-basinci": ["Basıncı göstergeyle mi ölçersin, elle mi?", "Lastik basıncın yüksek mi, düşük mü?",
+                       "Basıncı her sürüşten önce mi kontrol edersin, ayda bir mi?"],
+    "zincir-bakimi": ["Zinciri önce temizler misin, doğrudan yağlar mısın?", "Zincir yağı damla damla mı, sprey mi?",
+                      "Zincir bakımı her ay mı, ses gelince mi?"],
+    "kask-ayari": ["Kask ayarını evde mi yaparsın, yola çıkınca mı?", "Çene kayışı sıkı mı, gevşek mi?",
+                   "Kısa yolda da kask mı, yalnız uzun turda mı?"],
+    "ebike-batarya-kis": ["Bataryayı içeride mi şarj edersin, garajda mı?",
+                          "Kışın e-bisiklet mi, klasik bisiklet mi?", "Menzil kışın mı düşer, yokuşta mı?"],
+}
+IPUCU_GENEL = ["Bisiklet bakımını kendin mi yaparsın, atölyeye mi getirirsin?",
+               "Bu ipucunu biliyor muydun, yeni mi öğrendin?", "Bu ipucunu hemen mi denersin, sonraya mı saklarsın?"]
+YILBASI_SORULARI = ["Yeni yılın ilk sürüşü patika mı, sahil yolu mu?",
+                    "Yeni yılda daha çok kilometre mi, daha çok rota mı?", "Yılın ilk turu sabah mı, öğleden sonra mı?"]
+
+# 1. satırdaki konu adı (SEO): kural etiketi görselde büyük harfle yazılanlarda düz metne çevrilir
+SEO_AD = {"ikinciel": "Kontrollü 2. el bisiklet", "bmx": "BMX ve dirt jump bisikleti",
+          "eldiven": "Kısa parmak bisiklet eldiveni", "bandana": "Bisiklet bandanası", "forma": "Enduro forması",
+          "camurluk": "Bisiklet çamurluğu", "matara_kafesi": "Bisiklet matara kafesi", "matara": "Bisiklet matarası",
+          "telefon_tutucu": "Bisiklet telefon tutucu", "km_saati": "Bisiklet kilometre saati", "sepet": "Bisiklet sepeti",
+          "cocuk_koltugu": "Bisiklet çocuk koltuğu", "park_ayagi": "Bisiklet park ayağı", "sele": "Bisiklet selesi",
+          "pedal": "Bisiklet pedalı", "sargi": "Gidon sargısı", "elcik": "Bisiklet elciği",
+          "ic_lastik": "Bisiklet iç lastiği", "dis_lastik": "Bisiklet dış lastiği", "zincir": "Bisiklet zinciri",
+          "gidon": "Bisiklet gidonu", "masa": "Bisiklet ön maşası", "zincir_yagi": "Zincir yağı",
+          "bakim_spreyi": "Bisiklet bakım spreyi", "yama": "Bisiklet tamir kiti"}
+
 # ---- Havuzlar: hangi yayın türü hangi kurallardan ürün seçer ------------------------------------------
 POOLS = {
     "performans": ["dag", "gravel", "ebike", "bmx"],                       # Pzt carousel: Haftanın bisikleti
@@ -607,62 +744,294 @@ def utm_ok(link: str, medium: str, campaign: str, content: str) -> bool:
 
 # ---- Açıklama metni ------------------------------------------------------------------------------
 
-BASE_TAGS = ["#nitrobisiklet", "#köyceğiz", "#bisiklet"]
+# O9: #bisiklet ve #nitrobisiklet çıktı. Set: #köyceğiz + dönüşümlü bölge etiketi + 3 konu etiketi = 5.
+# Bölge etiketi yalnız etikettir; açıklamada o bölgeye özel hizmet iddiası yazılmaz.
+BASE_TAGS = ["#köyceğiz"]
+BOLGE_TAGS = ["#muğla", "#dalyan", "#ortaca", "#marmaris", "#fethiye"]
+YASAK_TAGS = {"#bisiklet", "#nitrobisiklet"}
+KONU_YEDEK = {"bisiklet_performans": "#bisikletsevenler", "bisiklet_gunluk": "#bisikletlehayat",
+              "parca": "#bisikletparçası", "aksesuar": "#bisikletaksesuarı", "giyim": "#bisikletekipmanı"}
+KONU_GENEL = ["#bisikletsevenler", "#bisikletbakımı", "#bisikletlehayat", "#bisikletaksesuarı"]
 SEO_LINE = "📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis"
 CAPTION_MAX, FIRST_LINE_MAX, TAG_MAX = 2200, 125, 5
+TEKRAR_GUN = 30   # aynı kanca / soru bu kadar gün içinde (önce ya da sonra) tekrar etmez
 
 
-def tags_for(extra: list[str]) -> str:
-    return " ".join(list(dict.fromkeys(BASE_TAGS + list(extra)))[:TAG_MAX])
+def bolge_tag(gun: str | None = None, *seed) -> str:
+    """Tarihe göre dönüşümlü (ardışık günler farklı bölge); tarih yoksa tohumdan."""
+    d = _gun(gun)
+    return BOLGE_TAGS[d.toordinal() % len(BOLGE_TAGS)] if d else pick(BOLGE_TAGS, gun, *seed)
+
+
+def tags_for(extra: list[str], gun: str | None = None, grup: str | None = None) -> str:
+    """#köyceğiz + bölge + 3 konu etiketi (önce verilenler, eksik kalırsa grup / genel yedek)."""
+    konu = [t for t in dict.fromkeys(list(extra) + [KONU_YEDEK.get(grup or "", "")] + KONU_GENEL)
+            if t and t not in YASAK_TAGS and t not in BASE_TAGS and t not in BOLGE_TAGS]
+    return " ".join(BASE_TAGS + [bolge_tag(gun, *extra)] + konu[:TAG_MAX - len(BASE_TAGS) - 1])
 
 
 def how_to_buy(q: str | None = None) -> str:
     """Profil linki nitrobisiklet.com; sitenin araması ürün adında alt dize arar (N-kodlarını tanımaz).
-    q: scripts/arama.py'nin canlı sitede doğruladığı, ürünü tek başına bulan terim."""
+    q: scripts/arama.py'nin canlı sitede doğruladığı, ürünü tek başına bulan terim.
+    Zamandan bağımsız: CTA satırında "en üstte" / "bugün" yok (denetim.py yakalar)."""
     if q:
-        return f"🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “{q}” yaz."
-    return "🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz."
+        return f"🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya “{q}” yaz."
+    return "🛒 Nasıl alırım? Profildeki linke dokun: nitrobisiklet.com → 🔍 aramaya ürünün yanındaki terimi yaz."
+
+
+CTA_YASAK = re.compile(r"en üstte|bugün", re.I)
+GUVEN_LINE = "✔️ " + " · ".join(PERK_LINES)   # tek satır güven bilgisi
+
+# Türe göre tek çağrı (etkileşim yemi yok): rehber/ipucu "kaydet", ürün/hediye "gönder".
+KAYDET = ["📌 Kaydet, servise gelmeden bak.", "📌 Kaydet; bir sonraki bakımda işine yarar.",
+          "📌 Kaydet, sürüşten önce bir daha bak."]
+GONDER = ["📤 Bunu soracak birine gönder.", "📤 Arayan birini biliyorsan ona gönder.",
+          "📤 Birlikte sürdüğün birine gönder."]
+GONDER_HEDIYE = ["📤 Hediye alacağın kişiye gönder.", "📤 Hediye arayan birine gönder.",
+                 "📤 Listeyi hediye alacak birine gönder."]
+
+
+# ---- Soru / kanca yardımcıları (denetim.py de kullanır) -------------------------------------------
+
+_SORU_EKI = re.compile(r"m[ıiuü](?:s[ıiuü]n(?:[ıiuü]z)?|y[ıiuü][mz]|yd[ıiuü](?:[mkn]|n[ıiuü]z)?|d[ıiuü]r)?")
+
+
+def ilk_satir(cap: str) -> str:
+    return (cap or "").strip().split("\n", 1)[0].strip()
+
+
+def sorular(cap: str) -> list[str]:
+    """Açıklamada "?" ile biten satırlar."""
+    return [x.strip() for x in (cap or "").split("\n") if x.strip().endswith("?")]
+
+
+def soru_satiri(cap: str, n: int = 3) -> str:
+    """İlk n (boş olmayan) satırdaki ilk soru; yoksa ""."""
+    satirlar = [x.strip() for x in (cap or "").strip().split("\n") if x.strip()][:n]
+    return next((x for x in satirlar if x.endswith("?")), "")
+
+
+def soru_ekleri(s: str) -> int:
+    """Soru eki (mı/mi/mu/mü, mısın, mıydı...) sayısı."""
+    return sum(1 for w in tr_lower(s).split() if _SORU_EKI.fullmatch(w.strip(".,;:!?…\"“”'")))
+
+
+def iki_secenekli(s: str) -> bool:
+    """"X mı, Y mı?" ya da "..., yoksa ...?" biçimi."""
+    return s.strip().endswith("?") and (soru_ekleri(s) >= 2 or "yoksa" in tr_lower(s).split())
+
+
+def evet_hayir(s: str) -> bool:
+    """Tek soru ekli, seçeneksiz soru ("Denedin mi?", "Sürüyor musun?")."""
+    return s.strip().endswith("?") and soru_ekleri(s) == 1 and "yoksa" not in tr_lower(s).split()
+
+
+def _gun(s) -> date | None:
+    try:
+        return date.fromisoformat(str(s)[:10])
+    except (TypeError, ValueError):
+        return None
+
+
+_URETILEN: dict[str, tuple[str, str]] = {}   # bu çalışmada üretilen post açıklamaları: tarih -> (ilk satır, soru)
+_TAKVIM: list[dict] | None = None
+
+
+def _takvim(onceki: list[dict] | None) -> list[dict]:
+    global _TAKVIM
+    if onceki is not None:
+        return onceki
+    if _TAKVIM is None:
+        try:
+            import common
+            _TAKVIM = common.load_calendar()
+        except Exception:
+            _TAKVIM = []
+    return _TAKVIM
+
+
+def kullanilan(gun: str | None, onceki: list[dict] | None = None) -> tuple[list[str], list[str]]:
+    """±TEKRAR_GUN gün içindeki (aynı gün hariç) postların ilk satırları ve soruları.
+    onceki: plan.py'nin takvimi; verilmezse data/calendar.json. Bu çalışmada yeniden üretilenler takvimdeki eskisinin yerine geçer."""
+    g = _gun(gun)
+    if g is None:
+        return [], []
+    yakin = lambda d: d is not None and d != g and abs((d - g).days) < TEKRAR_GUN
+    ilkler, sorus = [], []
+    for c in _takvim(onceki):
+        if c.get("type") != "post" or c.get("status") not in ("planned", "draft", "published"):
+            continue
+        if not yakin(_gun(c.get("date"))):
+            continue
+        # yeniden üretilen kaydın eskisi sayılmaz; kilitli / yayınlanmış kaydın metni ise değişmez, hep sayılır
+        if c.get("date") in _URETILEN and not c.get("suite_scheduled") and c.get("status") != "published":
+            continue
+        ilkler.append(ilk_satir(c.get("caption") or ""))
+        sorus += sorular(c.get("caption") or "")
+    for d, (ilk, soru) in _URETILEN.items():
+        if yakin(_gun(d)):
+            ilkler.append(ilk)
+            sorus.append(soru)
+    return ilkler, sorus
+
+
+def _sec(options: list[str], say, *seed, yedek: list[str] | tuple = ()) -> str:
+    """En az kullanılan seçenekler arasından pick ile (deterministik) seç. Asıl seçeneklerin hepsi pencerede
+    kullanılmışsa yedekler de adaya katılır: yedek yalnız gerektiğinde, asıl seçeneklerin yerine geçmez."""
+    n = {o: say(o) for o in options}
+    if yedek and min(n.values()) > 0:
+        n.update({o: say(o) for o in yedek if o not in n})
+    m = min(n.values())
+    return pick([o for o in n if n[o] == m], *seed)
+
+
+def kanca_sec(options: list[str], gun: str | None, onceki=None, *seed, yedek=()) -> str:
+    ilkler, _ = kullanilan(gun, onceki)
+    return _sec(options, lambda h: sum(1 for x in ilkler if x.startswith(h)), gun, *seed, yedek=yedek)
+
+
+def soru_sec(options: list[str], gun: str | None, onceki=None, *seed, yedek=()) -> str:
+    _, sorus = kullanilan(gun, onceki)
+    return _sec(options, lambda q: sorus.count(q), gun, *seed, yedek=yedek)
+
+
+def _kaydet(gun: str | None, cap: str) -> None:
+    if _gun(gun):
+        _URETILEN[str(gun)[:10]] = (ilk_satir(cap), soru_satiri(cap))
+
+
+def _kucuk(s: str) -> str:
+    """Cümle içi konu: ilk harf küçük (BMX gibi kısaltmalar olduğu gibi)."""
+    return s if s[:2].isupper() else tr_lower(s[:1]) + s[1:]
+
+
+def seo_ilk(hook: str, konu: str) -> str:
+    """1. satır: kanca + birincil arama kelimesi (konu) + yer adı, ≤125 karakter."""
+    h = hook.strip()
+    t = tr_lower(h)
+    konu_var, yer_var = tr_lower(konu) in t, "köyceğiz" in t
+    if konu_var and yer_var:
+        return h
+    ek = [] if konu_var else [konu]
+    adaylar = ([f"{h} {': '.join(ek + ['NITRO Bisiklet, Köyceğiz.'])}", f"{h} {', '.join(ek + ['Köyceğiz.'])}"]
+               if not yer_var else [f"{h} {konu}."])
+    return next((x for x in adaylar if len(x) <= FIRST_LINE_MAX), h)
 
 
 def _join(blocks: list[list[str] | str]) -> str:
-    parts = ["\n".join(b) if isinstance(b, list) else b for b in blocks]
+    parts = ["\n".join(x for x in b if x) if isinstance(b, list) else b for b in blocks]
     text = "\n\n".join(x for x in parts if x)
     assert len(text) <= CAPTION_MAX, "açıklama 2200 karakteri aşıyor"
     assert len(text.split("\n", 1)[0]) <= FIRST_LINE_MAX, "ilk satır 125 karakteri aşıyor"
     return text
 
 
-def product_caption(p: dict, q: str, rule: dict, day: str) -> tuple[str, str]:
-    """(açıklama, kanca). İlk satır kanca; ad + fiyat; 3-4 özellik; gerçek avantajlar; nasıl alırım; soru; yerel SEO."""
-    hook = pick(rule["hooks"], p["slug"], day)
+# Kuralın kendi kancaları azsa (30 gün tekrar yasağı) konuya göre kurulan genel kancalar eklenir.
+# Yalnız yedek: kuralın kancalarının hepsi pencerede kullanılmışsa devreye girer. "Bu haftanın" gibi zaman
+# ifadesi yok (günlük postta "haftanın seçimi" doğru olmaz; "Haftanın bisikleti" ayrı bir yayın).
+GENEL_KANCA = ["{Konu} arıyorsan bu modele yakından bak.", "{Konu} seçerken özelliklere bak; bu modelinkiler aşağıda.",
+               "{Konu}: özellikleri ve fiyatı aşağıda."]
+# Kuralın 3 sorusu pencerede kullanılmışsa (aynı kural 30 günde 4+ kez) yedek ürün soruları; denetim tekrarı yakalar.
+GENEL_SORU = ["Bisiklette önce konfor mu gelir, hız mı?", "Hafta içi mi sürersin, hafta sonu mu?",
+              "Sürüşe sabah mı çıkarsın, akşam mı?", "Kısa rota mı, uzun rota mı?",
+              "Bisikletle yalnız mı sürersin, arkadaşlarla mı?"]
+
+
+def konu_of(rule: dict) -> str:
+    return SEO_AD.get(rule["id"], rule["label"])
+
+
+def product_caption(p: dict, q: str, rule: dict, day: str, onceki: list[dict] | None = None) -> tuple[str, str]:
+    """(açıklama, ilk satır). Sıra: kanca (SEO) / iki seçenekli soru; ad + fiyat; 3-4 özellik; nasıl alırım;
+    tek satır güven bilgisi; gönder çağrısı; yerel SEO; 5 etiket."""
+    konu = konu_of(rule)
+    genel = [k.format(Konu=konu, konu=_kucuk(konu)) for k in GENEL_KANCA]
+    hook = kanca_sec(list(rule["hooks"]) or genel, day, onceki, p["slug"], yedek=genel)
+    soru = soru_sec(rule.get("qs") or [rule["q"]], day, onceki, p["slug"], yedek=GENEL_SORU)
     head = [f"{display_name(p)} · {fmt_price(p['price'])} (KDV dahil)"]
     if p.get("category") == "2. El Bisiklet":
         head.append("Kontrollü 2. el.")
     specs = [f"▪️ {k}: {v}" for k, v in clean_specs(p, 4)]
     body = specs if len(specs) >= 3 else (description(p, 280) or specs)
-    return _join([hook, head, body, ["Neden NITRO?"] + [f"✔️ {x}" for x in PERK_LINES], how_to_buy(q),
-                  rule["q"], SEO_LINE, tags_for(rule["tags"])]), hook
+    ilk = seo_ilk(hook, konu)
+    cap = _join([[ilk, soru], head, body, how_to_buy(q), GUVEN_LINE, pick(GONDER, p["slug"], day), SEO_LINE,
+                 tags_for(rule["tags"], day, group_of(p.get("category")))])
+    _kaydet(day, cap)
+    return cap, ilk
 
 
-def list_caption(lst: dict) -> tuple[str, str]:
+def _liste_id(lst: dict) -> str | None:
+    return lst.get("id") or next((k for k, v in LISTS.items() if v["hook"] == lst.get("hook")), None)
+
+
+def _liste_gunu(lst: dict) -> str | None:
+    for x in lst.get("items") or []:
+        m = re.search(r"utm_content=(\d{4}-\d{2}-\d{2})", x.get("link") or "")
+        if m:
+            return m.group(1)
+    return None
+
+
+def list_caption(lst: dict, gun: str | None = None, onceki: list[dict] | None = None) -> tuple[str, str]:
+    cfg = LISTS.get(_liste_id(lst) or "", {})
+    gun = gun or _liste_gunu(lst)
     hook = lst["hook"]
+    soru = soru_sec(cfg.get("qs") or [lst["q"]], gun, onceki, hook)
+    ilk = seo_ilk(hook, cfg.get("konu") or "Bisiklet aksesuarı")
+    cagri = GONDER_HEDIYE if cfg.get("cagri") == "gonder" else KAYDET
     rows = [f"{i}. {x['name']} · {fmt_price(x['price'])} · 🔍 “{x['q']}”" for i, x in enumerate(lst["items"], 1)]
-    return _join([hook, rows, ["Fiyatlar KDV dahildir."] + [f"✔️ {x}" for x in PERK_LINES], how_to_buy(),
-                  lst["q"], SEO_LINE, tags_for(lst["tags"])]), hook
+    cap = _join([[ilk, soru], rows, "Fiyatlar KDV dahildir.", how_to_buy(), GUVEN_LINE, pick(cagri, hook, gun),
+                 SEO_LINE, tags_for(lst["tags"], gun, "aksesuar")])
+    _kaydet(gun, cap)
+    return cap, ilk
 
 
-def tip_caption(tip: dict) -> tuple[str, str]:
-    text = tip["caption"].strip()
+IPUCU_KONU = {"kis-bakimi": "Kışın bisiklet bakımı", "cocuk-jant-boyu": "Çocuk bisikleti jant boyu",
+              "islak-zemin": "Islak zeminde bisiklet sürüşü", "servis-isaretleri": "Bisiklet servisi",
+              "lastik-basinci": "Bisiklet lastik basıncı", "zincir-bakimi": "Bisiklet zincir bakımı",
+              "kask-ayari": "Bisiklet kaskı ayarı", "ebike-batarya-kis": "E-bisiklet bataryası"}
+
+
+def _ipucu_gunu(tip: dict, onceki: list[dict] | None) -> str | None:
+    return next((c.get("date") for c in _takvim(onceki)
+                 if c.get("type") == "post" and c.get("theme") == "ipucu" and c.get("ref") == tip.get("id")), None)
+
+
+def tip_caption(tip: dict, gun: str | None = None, onceki: list[dict] | None = None) -> tuple[str, str]:
+    """İpucunun 1. paragrafı kanca; kendi kapanış sorusu çıkarılır, yerine iki seçenekli havuz sorusu 2. satıra gelir."""
+    paras = [x.strip() for x in tip["caption"].strip().split("\n\n") if x.strip()]
+    hook, body = paras[0], paras[1:]
+    havuz = list(IPUCU_SORULARI.get(tip.get("id"), IPUCU_GENEL))
+    if body and body[-1].endswith("?") and "\n" not in body[-1]:
+        son = body.pop()
+        if iki_secenekli(son) and son not in havuz:
+            havuz.insert(0, son)
+    # İpucunun kendi "kaydet" paragrafı varsa çağrı o olur (iki kez "kaydet" yazılmaz)
+    kendi = [x for x in body if "\n" not in x and re.search(r"\bkaydet", tr_lower(x))]
+    body = [x for x in body if x not in kendi]
+    gun = gun or _ipucu_gunu(tip, onceki)
+    soru = soru_sec(havuz, gun, onceki, tip.get("id"), yedek=[x for x in IPUCU_GENEL if x not in havuz])
+    konu = IPUCU_KONU.get(tip.get("id"), tip.get("kicker", "").capitalize() or "Bisiklet bakımı")
+    ilk = seo_ilk(hook, konu)
     cta = ("🔧 Servis randevusu için profildeki linke dokun: “Servis randevusu al”." if tip.get("cta") == "servis"
            else "🚲 Çocuk bisikletleri profildeki linkte; jant boyuna göre seçebilirsin." if tip.get("cta") == "cocuk"
            else "🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.")
-    return _join([text, cta, SEO_LINE, tags_for(["#bisikletbakımı", "#bisikletipuçları"])]), text.split("\n", 1)[0]
+    ek = {"servis": "#bisikletservisi", "cocuk": "#çocukbisikleti"}.get(tip.get("cta"), "#bisikletsevenler")
+    cagri = "📌 " + kendi[-1] if kendi else pick(KAYDET, tip.get("id"), gun)
+    cap = _join([[ilk, soru]] + body + [cta, cagri, SEO_LINE,
+                                        tags_for(["#bisikletbakımı", "#bisikletipuçları", ek], gun)])
+    _kaydet(gun, cap)
+    return cap, ilk
 
 
-def newyear_caption(year: int) -> tuple[str, str]:
-    hook = f"Mutlu yıllar! {year} bol kilometreli bir yıl olsun."
-    return _join([hook, "Bu yıl bizimle süren, dükkâna uğrayan, bisikletini atölyemize emanet eden herkese teşekkürler.",
-                  "Yeni yılda ilk rotan neresi olacak?", SEO_LINE, tags_for(["#mutluyıllar", "#bisikletsevenler"])]), hook
+def newyear_caption(year: int, gun: str | None = None, onceki: list[dict] | None = None) -> tuple[str, str]:
+    gun = gun or f"{year - 1}-12-31"
+    ilk = f"Mutlu yıllar! {year} bol kilometreli bir yıl olsun. NITRO Bisiklet, Köyceğiz."
+    soru = soru_sec(YILBASI_SORULARI, gun, onceki, year)
+    cap = _join([[ilk, soru], "Bu yıl bizimle süren, dükkâna uğrayan, bisikletini atölyemize emanet eden herkese teşekkürler.",
+                 GONDER[2], SEO_LINE, tags_for(["#mutluyıllar", "#bisikletsevenler", "#yılbaşı"], gun)])
+    _kaydet(gun, cap)
+    return cap, ilk
 
 
 # ---- Alt metin -----------------------------------------------------------------------------------
@@ -674,7 +1043,9 @@ def cumle(s: str) -> str:
 
 
 def product_alt(p: dict, title: str) -> str:
-    return f"{display_name(p)}, {fmt_price(p['price'])}. NITRO Bisiklet ürün görseli: “{plain(title)}”."[:1000]
+    """Alt metin kategori kelimesiyle başlar (arama SEO'su)."""
+    kat = p.get("category") or "Ürün"
+    return f"{kat}: {display_name(p)}, {fmt_price(p['price'])}. NITRO Bisiklet ürün görseli: “{plain(title)}”."[:1000]
 
 
 # ---- Mevsim süzgeci ------------------------------------------------------------------------------
@@ -691,31 +1062,53 @@ def in_season(text: str, month: int) -> bool:
 
 # ---- Listeler: başlıktaki adet ve eşik seçilen ürünlerden hesaplanır ---------------------------------
 # slots: (kural, adet). cap: fiyat üst sınırı (dahil değil), floor: alt sınır (dahil).
+# qs: iki seçenekli soru havuzu (≥3; q = ilki, plan.py uyumu). konu: 1. satır arama kelimesi. cagri: kaydet | gonder.
 
 LISTS = {
     "kis": {"kicker": "Kışa hazırlık", "need": 4, "want": 5, "cap": None, "floor": None,
             "slots": [("lamba", 1), ("camurluk", 1), ("eldiven_kis", 1), ("zincir_yagi", 1), ("balata", 1),
                       ("dis_lastik", 1)],
             "hook": "Kış geldi diye bisiklet kenara konmaz. Islak ve karanlık günler için liste burada.",
-            "q": "Sen kışın sürmeye devam ediyor musun?", "tags": ["#kışbisikleti", "#bisikletbakımı"]},
+            "q": "Kışın sürmeye devam mı, bahara kadar mola mı?", "tags": ["#kışbisikleti", "#bisikletbakımı", "#bisikletaksesuarı"],
+            "qs": ["Kışın sürmeye devam mı, bahara kadar mola mı?", "Kış sürüşünde önce görünürlük mü, konfor mu?",
+                   "Islak yolda lastik mi önemli, fren mi?"], "konu": "Kış bisiklet ekipmanı", "cagri": "kaydet"},
     "hediye250": {"kicker": "Hediye rehberi", "need": 4, "want": 5, "cap": 250, "floor": None,
                   "slots": [("matara", 1), ("bandana", 1), ("canta", 1), ("zil", 1), ("ayna", 1), ("elcik", 1),
                             ("matara_kafesi", 1)],
                   "hook": "Bisikletçiye hediye almak pahalı olmak zorunda değil.",
-                  "q": "Sana bisikletle ilgili alınan en güzel hediye neydi?", "tags": ["#hediyefikri", "#yılbaşıhediyesi"]},
+                  "q": "Hediye pratik mi olsun, sürpriz mi?", "tags": ["#hediyefikri", "#yılbaşıhediyesi", "#bisikletaksesuarı"],
+                  "qs": ["Hediye pratik mi olsun, sürpriz mi?", "Hediyeyi kendin mi seçersin, listeden mi?",
+                         "Küçük bir hediye mi, ortak büyük bir hediye mi?"], "konu": "Bisikletçiye hediye", "cagri": "gonder"},
     "hediye500": {"kicker": "Hediye rehberi", "need": 4, "want": 5, "cap": 500, "floor": 250,
                   "slots": [("eldiven", 1), ("telefon_tutucu", 1), ("kilit", 1), ("pompa", 1), ("km_saati", 1),
                             ("lamba", 1), ("sele", 1)],
                   "hook": "Yılbaşı listesindeki bisikletçi için fikirler.",
-                  "q": "Bu listeden hangisi senin bisikletinde eksik?", "tags": ["#hediyefikri", "#yılbaşıhediyesi"]},
+                  "q": "Hediye sürüşe mi yarasın, bisiklete mi?", "tags": ["#hediyefikri", "#yılbaşıhediyesi", "#bisikletaksesuarı"],
+                  "qs": ["Hediye sürüşe mi yarasın, bisiklete mi?", "Hediyeyi kendin mi seçersin, listeden mi?",
+                         "Yılbaşı hediyesi kullanışlı mı olsun, eğlenceli mi?"], "konu": "Bisikletçiye yılbaşı hediyesi",
+                  "cagri": "gonder"},
+    "hediye1000": {"kicker": "Yılbaşı hediyesi", "need": 4, "want": 5, "cap": 1000, "floor": 500,
+                   "slots": [("canta", 1), ("km_saati", 1), ("pedal", 1), ("kilit", 1), ("lamba", 1), ("sele", 1),
+                             ("telefon_tutucu", 1), ("eldiven_kis", 1), ("eldiven", 1), ("pompa", 1), ("kask", 1),
+                             ("canta", 1)],
+                   "hook": "Yılbaşı yaklaşıyor; bisiklet sevene işe yarar hediyeler burada.",
+                   "q": "Hediye sürüşe mi yarasın, bisiklete mi?", "tags": ["#yılbaşıhediyesi", "#hediyefikri", "#bisikletaksesuarı"],
+                   "qs": ["Hediye sürüşe mi yarasın, bisiklete mi?", "Yılbaşı hediyesi kullanışlı mı olsun, şık mı?",
+                          "Hediyeyi paketletir misin, elden mi verirsin?"], "konu": "Bisikletçiye yılbaşı hediyesi",
+                   "cagri": "gonder"},
     "cocuk": {"kicker": "Yılbaşı hediyesi", "need": 4, "want": 6, "cap": None, "floor": None,
               "slots": [("cocuk", 2), ("kask_cocuk", 1), ("eldiven_cocuk", 1), ("zil_cocuk", 1), ("sele_cocuk", 1)],
               "hook": "Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli.",
-              "q": "Senin ilk bisikletin kaç janttı, hatırlıyor musun?", "tags": ["#çocukbisikleti", "#yılbaşıhediyesi"]},
+              "q": "Çocuğa ilk bisiklet mi, ilk kask mı?", "tags": ["#çocukbisikleti", "#yılbaşıhediyesi", "#hediyefikri"],
+              "qs": ["Çocuğa ilk bisiklet mi, ilk kask mı?", "Hediye paketi bisikletli mi olsun, aksesuarlı mı?",
+                     "Çocuğun yılbaşında bisiklet mi ister, oyuncak mı?"], "konu": "Çocuk bisikleti", "cagri": "gonder"},
     "yukseltme": {"kicker": "Yükseltme rehberi", "need": 4, "want": 5, "cap": None, "floor": None,
                   "slots": [("pedal", 1), ("elcik", 1), ("sele", 1), ("dis_lastik", 1), ("gidon", 1), ("rotor", 1)],
                   "hook": "Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.",
-                  "q": "Bisikletinde ilk değiştirdiğin parça neydi?", "tags": ["#bisikletparçası", "#bisikletbakımı"]},
+                  "q": "Önce sele mi değişir, pedal mı?", "tags": ["#bisikletparçası", "#bisikletbakımı", "#bisikletsevenler"],
+                  "qs": ["Önce sele mi değişir, pedal mı?", "Yükseltmede konfor mu önce, performans mı?",
+                         "Yeni parçayı kendin mi takarsın, atölyede mi taktırırsın?"], "konu": "Bisiklet parçası",
+                  "cagri": "kaydet"},
 }
 
 
@@ -732,7 +1125,7 @@ def list_title(list_id: str, items: list[dict]) -> str:
         raise ValueError(f"{list_id}: eşik ({cap}) sağlanmıyor")
     if list_id == "kis":
         return f"Kışa hazırlayan <em>{n} ürün</em>"
-    if list_id in ("hediye250", "hediye500"):
+    if list_id.startswith("hediye"):
         return f"{_int_tl(cap)} ₺ altı <em>{n} hediye</em>"
     if list_id == "cocuk":
         return f"Çocuklara <em>{n} yılbaşı hediyesi</em>"
@@ -745,8 +1138,8 @@ def list_sub(list_id: str, items: list[dict]) -> str:
     """Kapak alt satırı; fiyat aralığı ürünlerden hesaplanır."""
     lo, hi = min(x["price"] for x in items), max(x["price"] for x in items)
     rng = f"{fmt_price(lo)} – {fmt_price(hi)}" if lo != hi else fmt_price(lo)
-    if list_id in ("hediye250", "hediye500"):
-        return f"Fiyatlar {rng} arasında. Hepsinin kodu görselde."
+    if list_id.startswith("hediye"):
+        return f"Fiyatlar {rng} arasında."
     labels = list(dict.fromkeys(x["label"] for x in items))[:5]
     labels = labels[:1] + [tr_lower(s[:1]) + s[1:] for s in labels[1:]]
     return (", ".join(labels) + ".")[:110]
