@@ -665,6 +665,9 @@ class Planner:
     def keep_flags(self, old: dict | None, new: dict) -> dict:
         """Yeniden kurulan kayıtta korunacak alanlar; Suite'te zamanlanmış kayıt değiştiyse uyarılır."""
         new["ver"] = VERSION
+        # Elle eklenen collab daveti (O14) yeniden kurulumda kaybolmasın.
+        if old and old.get("collaborators") and "collaborators" not in new:
+            new["collaborators"] = old["collaborators"]
         if old and old.get("suite_scheduled") and (old.get("sticker") != new.get("sticker") or old.get("fp") != new.get("fp")):
             self.say(f"UYARI: {new['id']} Business Suite'te zamanlanmıştı ama içeriği değişti; Suite'te yeniden planla.")
         return new
@@ -805,20 +808,30 @@ class Planner:
                 self.put(self.keep_flags(old, self.product_story(sid, day, tm, p, keep)))
             else:
                 self.say(f"ATLANDI {sid}: boş ürün kalmadı.")
-        # 20:30 günün postunun tanıtımı
+        # Her post story'de TEK kez duyurulur. Paylaşım story'si (postla aynı dakikada) kurulabiliyorsa 20:30
+        # tanıtımı kurulmaz: ikisi birden aynı post kapağını iki kez story'ye koyar (25 Kas 2026 hatası).
+        aktif = bool(post) and post.get("status") in ("planned", "draft", "published")
+        paylasim = aktif and bool(st_cfg.get("paylasim")) and \
+            post["time"] not in {st_cfg[k]["time"] for k in ("deger", "urun", "tanitim")}
+        # 20:30 günün postunun tanıtımı (yalnız paylaşım story'si yoksa)
         tm = st_cfg["tanitim"]["time"]
         sid = self.sid(day, "story", tm)
         old = self.get(sid)
         s = self.state(old)
-        if not post or post.get("status") not in ("planned", "draft", "published"):
+        if not aktif or paylasim:
             if old and s != "kalsin":
                 self.drop(sid)
-            return
-        if s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
+            elif old and paylasim and old.get("status") in ("planned", "draft") \
+                    and sid not in common.cancelled_ids() and common.item_dt(old) > self.now:
+                self.say(f"UYARI: {sid} Suite'te zamanlanmış ikinci story ({post['id']} zaten paylaşım story'siyle "
+                         f"duyuruluyor): Suite'ten sil, kimliği data/iptal.txt'ye yaz.")
+            if not paylasim:
+                return
+        elif s in ("ayni", "yeni") or (s == "yok" and self.open(day, tm)):
             self.drop(sid)
             self.put(self.keep_flags(old, self.promo_story(sid, day, tm, post, yonlendir=True)))
         # Postla aynı dakikada paylaşım story'si: her post story'de de duyurulur (post kapağı + tıklanabilir link)
-        if st_cfg.get("paylasim") and post["time"] not in {st_cfg[k]["time"] for k in ("deger", "urun", "tanitim")}:
+        if paylasim:
             tm = post["time"]
             sid = self.sid(day, "story", tm)
             old = self.get(sid)

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import ssl
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -108,6 +109,26 @@ def load_products() -> list[dict]:
         if p.get("images"):
             p["images"] = [u for u in p["images"] if u.rsplit("/", 1)[-1] not in GORSEL_ENGEL]
     return prods
+
+
+# O14 ortak gönderi (collab): en çok 3 kullanıcı adı; yalnız config.json'da "collab_onay": true iken gönderilir
+COLLAB_MAX = 3
+KULLANICI_ADI = re.compile(r"^[a-z0-9._]{1,30}$")
+
+
+def collab_listesi(c: dict) -> list[str] | None:
+    """Kaydın `collaborators` alanı geçerliyse küçük harfli kullanıcı adları, değilse None.
+
+    Geçerli: boş olmayan liste, en çok 3, yinelenmeyen, Instagram kullanıcı adı biçiminde, kendi hesabımız değil.
+    publish.py geçersiz listeyi göndermez; denetim.py aynı işlevle bulgu verir."""
+    names = c.get("collaborators")
+    if not isinstance(names, list) or not names:
+        return None
+    out = [str(n).strip().lstrip("@").lower() for n in names]
+    own = str(CFG.get("instagram_username") or "").lower()
+    if len(out) > COLLAB_MAX or len(set(out)) != len(out) or own in out or not all(KULLANICI_ADI.match(n) for n in out):
+        return None
+    return out
 
 
 def load_codes() -> dict[str, str]:

@@ -321,9 +321,9 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 | O11 | İptal | N-kodu kaldırıldı; CTA doğrulanmış site arama terimini kullanıyor, `/k/` yönlendirmesi gerekmiyor |
 | O12 | Tamam | `scripts/paylas.py` → `data/paylas/` (GBP, QR, hızlı yanıtlar, öne çıkanlar, grup metinleri) |
 | O13 | Bekliyor | Rota verisi (kaynaklı) gerekli |
-| O14 | Bekliyor | Collab için Barış onayı gerekli |
+| O14 | Tamam (kod) | `collaborators` alanı + `collab_onay` bayrağı (varsayılan kapalı); Barış onayıyla açılır |
 | O15 | 1. aşama tamam | `scripts/yorum.py` salt okuma özeti (`data/yorumlar.json`, depoya girmez); 2. aşama (yanıt) onay bekliyor |
-| O16 | Bekliyor | En az bir aylık ölçüm verisi gerekli |
+| O16 | Tamam | RAPOR.md'de "Aylık tema raporu" (yalnız öneri); veri biriktikçe dolar |
 
 | Sıra | İş | Dosya | Kabul kriteri | Efor |
 |---|---|---|---|---|

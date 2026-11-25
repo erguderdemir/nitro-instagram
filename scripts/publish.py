@@ -52,7 +52,9 @@ ALT_MAX = 1000
 AUTH_CODES = {190, 10, 200}         # geçersiz token / uygulama izni yok / izin hatası
 FORMATS = ("carousel", "reel", "image", "story")
 # İsteğe bağlı parametre → hata mesajında geçerse "reddedilen budur" dedirten ipuçları
-OPTIONAL_HINTS = {"alt_text": ("alt_text", "alt text"), "location_id": ("location",)}
+OPTIONAL_HINTS = {"alt_text": ("alt_text", "alt text"), "location_id": ("location",),
+                  "collaborators": ("collaborator", "collab")}
+
 # Yayın döngüsünden sonra yeniden üretilen sayfalar: (modül, işlev)
 PAGES = (("bio", "build_bio"), ("simulasyon", "build_sim"), ("takvim", "build_takvim"))
 
@@ -156,8 +158,8 @@ def create_container(ig: str, params: dict[str, Any], optional: dict[str, Any] |
     """`POST {ig}/media` ile kapsayıcı oluştur, kimliğini döndür.
 
     Kapsayıcı oluşturmak yayın değildir; geçici hatada yeniden denemek güvenlidir (retries=2).
-    İsteğe bağlı parametre (alt_text, location_id) reddedilirse onsuz bir kez daha denenir: hata mesajında
-    adı geçen çıkarılır, hiçbiri geçmiyorsa hepsi.
+    İsteğe bağlı parametre (alt_text, location_id, collaborators) reddedilirse onsuz bir kez daha denenir: hata
+    mesajında adı geçen çıkarılır, hiçbiri geçmiyorsa hepsi.
     """
     params = {k: v for k, v in params.items() if v not in (None, "")}
     extra = {k: v for k, v in (optional or {}).items() if v}
@@ -213,21 +215,32 @@ def build_container(ig: str, c: dict, fmt: str) -> str:
     for u in urls + ([cover] if cover else []):
         if not url_ok(u):
             raise PublishError(f"Medya herkese açık değil (Pages henüz güncellenmemiş olabilir): {u}")
-    caption, loc = c.get("caption") or "", konum_id()
+    caption, loc, ortak = c.get("caption") or "", konum_id(), collab(c)
     if fmt == "story":
         return create_container(ig, {"image_url": urls[0], "media_type": "STORIES"})
     if fmt == "image":
         return create_container(ig, {"image_url": urls[0], "caption": caption},
-                                {"alt_text": alt_texts(c, 1)[0], "location_id": loc})
+                                {"alt_text": alt_texts(c, 1)[0], "location_id": loc, "collaborators": ortak})
     if fmt == "reel":
         return create_container(ig, {"media_type": "REELS", "video_url": urls[0], "caption": caption,
-                                     "share_to_feed": "true", "cover_url": cover}, {"location_id": loc})
+                                     "share_to_feed": "true", "cover_url": cover},
+                                {"location_id": loc, "collaborators": ortak})
     children = [create_container(ig, {"image_url": u, "is_carousel_item": "true"}, {"alt_text": a})
                 for u, a in zip(urls, alt_texts(c, len(urls)))]
     for child in children:
         wait_ready(child)
     return create_container(ig, {"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption},
-                            {"location_id": loc})
+                            {"location_id": loc, "collaborators": ortak})
+
+
+def collab(c: dict) -> str | None:
+    """O14: Graph API `collaborators` değeri (JSON dizi). Barış onayı bayrağı (`collab_onay` true) yoksa ya da
+    liste geçersizse None: collab gönderilmez. Davet reddedilse de gönderi yayında kalır; kapsayıcı collab yüzünden
+    reddedilirse create_container onsuz yeniden dener (yayın kaçmaz)."""
+    if common.CFG.get("collab_onay") is not True:
+        return None
+    names = common.collab_listesi(c)
+    return json.dumps(names) if names else None
 
 
 def konum_id() -> str | None:

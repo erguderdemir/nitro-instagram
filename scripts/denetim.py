@@ -21,6 +21,8 @@ Denetimler:
   dosya      dosya var, JPEG, ölçü (post 1080×1350, story 1080×1920), ≤8 MB; reel MP4 H.264/AAC 9:16
   ritim      günde tek post, haftada tek "Haftanın bisikleti", günde tek "Günün ürünü"
   tekrar     tekrar penceresi içinde aynı ürün ya da aynı ürün ailesi iki kayıtta yok
+  cift_story bir posta bağlı (ref) ikinci iptalsiz story yok: her post story'de tek kez duyurulur
+  collab     (O14) `collaborators` yalnız API postunda; en çok 3 geçerli, farklı kullanıcı adı, kendi hesabımız değil
 """
 from __future__ import annotations
 
@@ -122,8 +124,21 @@ class Audit:
         self.data(c)
         self.links(c)
         self.text(c, day)
+        self.collab(c)
         if self.files:
             self.media(c)
+
+    def collab(self, c: dict) -> None:
+        """O14: `collaborators` alanı varsa yalnız API ile yayınlanacak (Suite dışı) postta, en çok 3 geçerli, farklı
+        ve kendi hesabımız olmayan kullanıcı adı olabilir. Bayrak (`collab_onay`) yoksa collab zaten gönderilmez;
+        alan yine de doğrulanır ki bayrak açıldığında hatalı davet gitmesin. Yayınlanmış kayda bakılmaz."""
+        if "collaborators" not in c or c.get("status") not in ("planned", "draft"):
+            return
+        if c.get("type") != "post" or c.get("channel") == "suite":
+            self.add(c, "collab", "collaborators yalnız API ile yayınlanan postta kullanılabilir (story/Suite değil)")
+        elif common.collab_listesi(c) is None:
+            self.add(c, "collab", f"collaborators geçersiz: en çok {common.COLLAB_MAX} farklı kullanıcı adı, "
+                                  f"@{CFG.get('instagram_username')} hariç: {c.get('collaborators')!r}"[:300])
 
     def rule(self, c: dict, day: date) -> None:
         theme, ps = c["theme"], c.get("products") or []
@@ -481,13 +496,34 @@ class Audit:
                 if soru and soru in C.sorular(o["caption"]):
                     self.yeni_add(c, "caption", f"soru {o['id']} kaydında da var ({C.TEKRAR_GUN} gün): “{soru}”")
 
+    def cift_story(self) -> None:
+        """Bir post story'de yalnız bir kez duyurulur: aynı posta bağlı (ref) ikinci iptalsiz story bulgudur.
+        Yayınlanmış story'ler de sayılır; bulgu yalnız yayınlanmamış (planned/draft) fazlalığa yazılır."""
+        iptal = common.cancelled_ids()
+        posts = {c.get("id") for c in self.cal if c.get("type") == "post"}
+        by_ref = defaultdict(list)
+        for c in self.cal:
+            if c.get("type") == "story" and c.get("ref") in posts and c.get("id") not in iptal \
+                    and c.get("status") in ("planned", "draft", "published"):
+                by_ref[c["ref"]].append(c)
+        for ref, rows in by_ref.items():
+            if len(rows) < 2:
+                continue
+            rows.sort(key=lambda c: (c.get("status") != "published", c.get("date", ""), c.get("time", ""), c.get("id", "")))
+            for c in rows[1:]:
+                if c.get("status") in ("planned", "draft"):
+                    self.add(c, "cift_story", f"{ref} story'de zaten {rows[0]['id']} ile duyuruluyor; ikinci story "
+                                              f"yasak (Suite'teyse sil, kimliği data/iptal.txt'ye yaz)")
+
     def run(self) -> list[dict]:
-        live = [c for c in self.cal if c.get("status") in ("planned", "draft")]
+        iptal = common.cancelled_ids()
+        live = [c for c in self.cal if c.get("status") in ("planned", "draft") and c.get("id") not in iptal]
         for c in live:
             self.check(c)
         ok = [c for c in live if all(k in c for k in REQUIRED)]
         self.calendar(ok)
         self.tekrar_caption()
+        self.cift_story()
         return self.found
 
 
@@ -570,7 +606,8 @@ def main(argv: list[str] | None = None) -> int:
     print(f"SAYIM: kilitsiz {sayim['kilitsiz']['kayit']} kayıt / {sayim['kilitsiz']['bulgu']} bulgu "
           f"({sayim['kilitsiz']['caption']} caption, {sayim['kilitsiz']['yenilenecek']} yenilenecek) · kilitli {sayim['kilitli']['kayit']} kayıt / "
           f"{sayim['kilitli']['uyari']} uyarı / {sayim['kilitli']['bilgi']} bilgi")
-    return 1 if found else 0
+    # Çift story Suite'te zamanlanmış olsa da çalışmayı kırmızıya çeker: Suite onu yayınlar, düzeltme Suite'te yapılır.
+    return 1 if found or any(f["code"] == "cift_story" for f in suite_found) else 0
 
 
 if __name__ == "__main__":

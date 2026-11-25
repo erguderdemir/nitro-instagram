@@ -27,8 +27,8 @@ import unicodedata
 from datetime import date, datetime, timedelta
 
 import graph
-from common import (AY, CFG, DATA, GUN, IG_USERNAME, ROOT, TZ, cancelled_ids, item_dt, load_calendar, now, read_json,
-                    tr_date, write_json)
+from common import (AY, CFG, DATA, GUN, GUN_KISA, IG_USERNAME, ROOT, TZ, cancelled_ids, item_dt, load_calendar, now,
+                    read_json, tr_date, write_json)
 
 # Çıktı yolları. İşlevler bunları çağrı anında okur; testte başka dizine yönlendirmek için üzerine yazılabilir.
 # Aynı şekilde `graph.api` ve bu modüldeki `now` da sahtesiyle değiştirilebilir.
@@ -889,6 +889,51 @@ def _advice(rows: list[dict]) -> list[str]:
                         "Öneri üretilmedi."]
 
 
+def _aylik_tema(rows: list[dict], t: datetime) -> list[str]:
+    """O16: geçen takvim ayının tema × gün tablosu (ortalama puan ve gönderi sayısı n) ve yalnız öneri.
+
+    Takvime, config.json'a ve scores.json'a hiçbir şey yazmaz. Rapor her gün yeniden üretildiğinden ay boyunca
+    aynı (geçen ayın) tablosu görünür; ayın ilk pazartesisi de dahil. Ölçümlü gönderi yoksa yalnız n=0 notu yazılır.
+    """
+    bu_ay = t.astimezone(TZ).date().replace(day=1)
+    gecen = (bu_ay - timedelta(days=1)).replace(day=1)
+    ay = [r for r in rows if gecen <= r["when"].astimezone(TZ).date() < bu_ay]
+    baslik = f"{AY[gecen.month - 1]} {gecen.year}"
+    if not ay:
+        return [f"{baslik}: hesaba giren gönderi yok (n=0). Tablo ve öneri üretilmedi."]
+    gun = lambda r: r["when"].astimezone(TZ).weekday()  # noqa: E731
+    body = []
+    for k, g, _ in sorted(_ranked(ay, "theme"), key=lambda x: (-len(x[1]), x[0])):
+        cells = []
+        for d in range(7):
+            gd = [r["score"] for r in g if gun(r) == d]
+            cells.append(f"{_n(_mean(gd), 1)} (n={len(gd)})" if gd else "—")
+        body.append([THEME_TR.get(k, k), *cells, f"{_n(_mean([r['score'] for r in g]), 1)} (n={len(g)})"])
+    out = [f"{baslik} · hesaba giren {len(ay)} gönderi · hücre: ortalama puan (n)", "",
+           *_table(["Tema", *GUN_KISA, "Toplam"], body, right=tuple(range(1, 9))), ""]
+    if len(ay) < MIN_POSTS:
+        return out + [f"Öneri için veri yetersiz: ayda en az {MIN_POSTS} gönderi gerekir (n={len(ay)})."]
+    overall = _mean([r["score"] for r in ay])
+    tips = []
+    rk = _ranked(ay, "theme", MIN_GROUP)
+    if len(rk) >= 2 and overall > 0 and rk[-1][2] > 0 and rk[0][2] / rk[-1][2] - 1 >= NOTABLE:
+        (bk, bg, ba), (wk, wg, wa) = rk[0], rk[-1]
+        tips.append(f"Tema: {THEME_TR.get(bk, bk)} ({_rel(ba, overall)}, n={len(bg)}) en yüksek, "
+                    f"{THEME_TR.get(wk, wk)} ({_rel(wa, overall)}, n={len(wg)}) en düşük.")
+    gunler = sorted(((d, [r["score"] for r in ay if gun(r) == d]) for d in range(7)), key=lambda x: -_mean(x[1]))
+    gunler = [(d, xs) for d, xs in gunler if len(xs) >= MIN_GROUP]
+    if len(gunler) >= 2 and overall > 0 and _mean(gunler[-1][1]) > 0 \
+            and _mean(gunler[0][1]) / _mean(gunler[-1][1]) - 1 >= NOTABLE:
+        tips.append(f"Gün: {GUN[gunler[0][0]]} ({_rel(_mean(gunler[0][1]), overall)}, n={len(gunler[0][1])}) en "
+                    f"yüksek, {GUN[gunler[-1][0]]} ({_rel(_mean(gunler[-1][1]), overall)}, n={len(gunler[-1][1])}) "
+                    "en düşük.")
+    if not tips:
+        tips.append(f"Tema ve günler arasında %{round(NOTABLE * 100)}'i aşan fark yok ya da grup başına en az "
+                    f"{MIN_GROUP} gönderi yok.")
+    return out + [f"- {s}" for s in tips] + ["- Yalnız öneri: takvim kendiliğinden değişmez; tema/gün değişikliği "
+                                             "`config.json` `posts` alanında elle yapılır."]
+
+
 def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | None = None) -> str:
     """RAPOR.md metnini üretir, dosyaya yazar ve döndürür. `notes`: bu çalıştırmaya özgü uyarılar (isteğe bağlı)."""
     cal = [c for c in cal if isinstance(c, dict)]
@@ -925,6 +970,7 @@ def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | No
                          ("Biçim ve tema karşılaştırması", _compare(rows, sc)),
                          ("Kategori performansı", _categories(rows, sc)),
                          ("Önümüzdeki 7 gün", _upcoming(cal, t)),
+                         ("Aylık tema raporu (geçen ay, yalnız öneri)", _aylik_tema(rows, t)),
                          ("Öneriler", [f"- {s}" for s in _advice(rows)])):
         out += [f"## {title}", "", *lines, ""]
     out += ["---", "", "Site trafiği için site panelinde `utm_source=instagram` filtresine bak.", ""]
