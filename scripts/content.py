@@ -1089,7 +1089,7 @@ LISTS = {
                   "cagri": "gonder"},
     "hediye1000": {"kicker": "Yılbaşı hediyesi", "need": 4, "want": 5, "cap": 1000, "floor": 500,
                    "slots": [("canta", 1), ("km_saati", 1), ("pedal", 1), ("kilit", 1), ("lamba", 1), ("sele", 1),
-                             ("telefon_tutucu", 1), ("eldiven_kis", 1), ("eldiven", 1), ("pompa", 1), ("kask", 1),
+                             ("telefon_tutucu", 1), ("eldiven_kis", 1), ("eldiven", 1), ("pompa", 1),
                              ("canta", 1)],
                    "hook": "Yılbaşı yaklaşıyor; bisiklet sevene işe yarar hediyeler burada.",
                    "q": "Hediye sürüşe mi yarasın, bisiklete mi?", "tags": ["#yılbaşıhediyesi", "#hediyefikri", "#bisikletaksesuarı"],
