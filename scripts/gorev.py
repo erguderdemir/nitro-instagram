@@ -58,6 +58,7 @@ def main() -> None:
     if task == "plan":
         try:
             run("scrape.py", must=False, log=True)  # site erişilemezse eldeki ürün verisiyle devam
+            run("arama.py", must=False, log=True)   # yeni/adı değişen ürünler için site arama terimi (CTA)
             run("plan.py", log=True)
             run("denetim.py", log=True)   # sıfır bulgu şartı: bulgu varsa görev kırmızı biter, bulgulu kayıt yayınlanmaz
         finally:

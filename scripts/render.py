@@ -255,7 +255,7 @@ em{font-style:normal;color:var(--em)}
 .k-photo img{width:auto;height:auto;max-width:100%;max-height:100%;border-radius:22px}
 .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;margin-top:24px;flex:none}
 .pname{font-weight:600;font-size:36px;line-height:1.13;max-height:84px;overflow:hidden}
-.code{font-size:21px;color:var(--mut);margin-top:10px;white-space:nowrap}
+.code{font-size:21px;color:var(--mut);margin-top:10px;white-space:nowrap;overflow:hidden}
 .price{font-size:62px;background:var(--acc);color:var(--accfg);padding:17px 28px 12px;border-radius:24px;white-space:nowrap;flex:none}
 .price.sm{font-size:44px;padding:13px 22px 9px;border-radius:20px}
 .bot{display:flex;justify-content:space-between;align-items:center;font-size:20px;color:var(--mut);margin-top:22px;flex:none;height:26px}
@@ -349,6 +349,8 @@ document.fonts.ready.then(function(){
   document.querySelectorAll('[data-fit]').forEach(function(el){
     var fs=parseFloat(getComputedStyle(el).fontSize),min=+el.dataset.fit||20;
     while((el.scrollHeight>el.clientHeight+Math.max(2,fs*0.22)||el.scrollWidth>el.clientWidth+1)&&fs>min){fs-=2;el.style.fontSize=fs+'px';}
+    // data-tam: metin asla kesilmez (arama terimi eksik görünürse yanlış aranır); en küçük boyda da sığmazsa satır kaydır
+    if(el.dataset.tam&&el.scrollWidth>el.clientWidth+1){el.style.whiteSpace='normal';el.style.overflowWrap='anywhere';el.style.overflow='visible';el.style.lineHeight='1.15';}
   });
 });
 """
@@ -360,17 +362,26 @@ def page(sections: list[str]) -> str:
 
 
 # ---- Carousel kareleri (1080x1350) -------------------------------------------------------------
-# v (ürün görünümü): name, price (yazı), code, cat, img (prep çıktısı), imgs (ek fotoğraflar)
+# v (ürün görünümü): name, price (yazı), code (iç kimlik: desen tohumu), q (nitrobisiklet.com arama terimi), cat, img,
+# imgs (ek fotoğraflar)
+
+
+def _ara(v: dict, style: str = "") -> str:
+    """Kartta sitede aranacak terim (scripts/arama.py doğrular). Terim aranacağı gibi (büyük harfe çevrilmeden) yazılır.
+    Sığmazsa yazı küçülür, yine sığmazsa satır kayar; kesilmez."""
+    st = f' style="{style}"' if style else ""
+    return f'<div class="code mono" data-fit="13" data-tam="1"{st}>ARA: <span style="text-transform:none;letter-spacing:.04em">“{E(v["q"])}”</span></div>'
+
 
 def _meta(v: dict, small: bool = False) -> str:
     return (f'<div class="meta"><div style="min-width:0"><div class="pname" data-fit="24">{E(v["name"])}</div>'
-            f'<div class="code mono">KOD {E(v["code"])}</div></div>'
+            + _ara(v) + '</div>'
             f'<div class="price h{" sm" if small else ""}">{E(v["price"])}</div></div>')
 
 
 def _strip(v: dict) -> str:
     return (f'<div class="strip">{stage(v["img"], 1)}<div class="tx"><div class="pname" data-fit="20">{E(v["name"])}</div>'
-            f'<div class="code mono">KOD {E(v["code"])}</div></div><div class="price h sm">{E(v["price"])}</div></div>')
+            + _ara(v) + f'</div><div class="price h sm">{E(v["price"])}</div></div>')
 
 
 def p_cover(v: dict, kicker: str, headline: str, variant: str = "cream") -> str:
@@ -407,7 +418,7 @@ def p_why(facts: list[tuple[str, str, str]], i: int, n: int, variant: str = "oli
 <div class="why">{body}</div>{bot(SWIPE, SITE_TXT)}</div></section>'''
 
 
-def p_cta(mode: str, i: int, n: int, code: str = "", phone: str = "", variant: str = "orange") -> str:
+def p_cta(mode: str, i: int, n: int, q: str = "", phone: str = "", variant: str = "orange") -> str:
     if mode == "servis":
         title = "Servis <em>randevusu</em>"
         steps = ["Profildeki linke dokun", "“Servis randevusu al” düğmesine bas", "Bisikletini atölyeye getir"]
@@ -422,12 +433,15 @@ def p_cta(mode: str, i: int, n: int, code: str = "", phone: str = "", variant: s
         tile = f'<div><small>Tüm ürünler</small></div><b style="font-size:66px">{SITE_TXT}</b>'
     elif mode == "magaza":
         title = "Hepsi <em>profildeki linkte</em>"
-        steps = ["Profildeki linke dokun", "Ürünü adıyla ya da koduyla ara", "Ürün sayfasından sepete ekle"]
+        steps = ["Profildeki nitrobisiklet.com linkine dokun", "Karttaki “ARA” terimini aramaya yaz",
+                 "Ürün sayfasından sepete ekle"]
         tile = f'<div><small>Tüm ürünler</small></div><b style="font-size:66px">{SITE_TXT}</b>'
     else:
         title = "Nasıl <em>alırım?</em>"
-        steps = ["Profildeki linke dokun", f"Arama kutusuna {code} yaz", "Ürün sayfasından sepete ekle"]
-        tile = f'<div><small>Ürün<br>kodu</small></div><b>{E(code)}</b>'
+        steps = ["Profildeki nitrobisiklet.com linkine dokun", "Arama simgesine dokun, alttakini yaz",
+                 "Ürün sayfasından sepete ekle"]
+        tile = (f'<div style="flex:none"><small>Aramaya<br>yaz</small></div>'
+                f'<b data-fit="30" data-tam="1" style="flex:1;min-width:0;text-align:right;overflow:hidden">“{E(q)}”</b>')
     body = "".join(f'<div class="st"><i>{k}</i><b>{E(s)}</b></div>' for k, s in enumerate(steps, 1))
     return f'''<section class="cv post v-{variant}">{contour("cta" + mode, 1010, 150, 520, op=0.14)}
 <div class="pad">{top(cnt(i, n))}<h2 class="h">{title}</h2><div class="steps">{body}</div>
@@ -451,7 +465,7 @@ def l_item(v: dict, idx: int, i: int, n: int, variant: str = "cream", label: str
 <div class="lrow">{num}<div class="ltx"><div class="kick mono">{E(label or v["cat"])}</div>
 <div class="pname" data-fit="26">{E(v["name"])}</div></div></div>
 {stage(v["img"], 952 / 690, "flex:1;margin-top:22px")}
-<div class="meta"><div class="code mono" style="font-size:26px;color:var(--fg)">KOD {E(v["code"])}</div>
+<div class="meta"><div style="min-width:0;flex:1">{_ara(v, "font-size:26px;color:var(--fg)")}</div>
 <div class="price h">{E(v["price"])}</div></div>{bot(SWIPE)}</div></section>'''
 
 
@@ -504,7 +518,7 @@ def s_product(v: dict, kicker: str, headline: str, link: bool, variant: str = "c
 <div class="pad">{top(chip(v["cat"]))}<div class="kick mono">{E(kicker)}</div>
 <h1 class="h hl" data-fit="64" style="font-size:118px;max-height:224px">{hl(headline)}</h1>
 {stage(v["img"], 952 / 520, "flex:1;margin-top:26px")}{_meta(v)}
-{_dock(link, "Ürüne gitmek için dokun", f"Link profilde<u>·</u>Kod {E(v['code'])}")}</div></section>'''
+{_dock(link, "Ürüne gitmek için dokun", "Ürüne git")}</div></section>'''
 
 
 def s_promo(cover: Path, kicker: str, headline: str, link: bool, label: str, fallback: str,
@@ -535,12 +549,12 @@ def s_question(q: str, variant: str = "orange") -> str:
 
 def s_trio(kicker: str, title: str, views: list[dict], link: bool, variant: str = "cream") -> str:
     rows = "".join(f'<div class="tr">{stage(v["img"], 1)}<div class="tx"><div class="pname" data-fit="22">{E(v["name"])}</div>'
-                   f'<div class="code mono">KOD {E(v["code"])}</div></div><div class="price h sm">{E(v["price"])}</div></div>'
+                   + _ara(v) + f'</div><div class="price h sm">{E(v["price"])}</div></div>'
                    for v in views[:3])
     return f'''<section class="cv story v-{variant}">{sbg(title)}
 <div class="pad">{top(chip(kicker, True))}
 <h1 class="h hl" data-fit="64" style="font-size:112px;max-height:212px;margin-top:30px">{hl(title)}</h1>
-<div class="trs">{rows}</div>{_dock(link, "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Kodu yaz, bul")}</div></section>'''
+<div class="trs">{rows}</div>{_dock(link, "Mağazaya gitmek için dokun", "Mağazaya git")}</div></section>'''
 
 
 def s_facts(chip_txt: str, kicker: str, title: str, facts: list[tuple[str, str, str]], link: bool, label: str,
@@ -568,7 +582,7 @@ def r_hook(v: dict, kicker: str, headline: str) -> str:
 
 
 def r_hero(v: dict) -> str:
-    return _reel("cream", v["code"] + "r2", f'''{top(chip("Kod " + v["code"], True))}
+    return _reel("cream", v["code"] + "r2", f'''{top(chip("nitrobisiklet.com", True))}
 {stage(v["img"], 952 / 640, "flex:1;margin-top:26px")}
 <div class="h" data-fit="52" style="font-size:84px;max-height:164px;margin-top:26px;overflow:hidden;text-transform:none">{E(v["name"])}</div>''')
 
@@ -589,9 +603,9 @@ def r_perks(facts: list[tuple[str, str, str]]) -> str:
 def r_cta(v: dict) -> str:
     return _reel("cream", v["code"] + "r5", f'''{top(chip(v["cat"]))}<div class="kick mono" style="margin-top:40px">Fiyat</div>
 <div class="h rprice" data-fit="110">{E(v["price"])}</div>
-<div class="tile" style="margin-top:34px"><div><small>Ürün<br>kodu</small></div><b>{E(v["code"])}</b></div>
+<div class="tile" style="margin-top:34px"><div style="flex:none"><small>Aramaya<br>yaz</small></div><b data-fit="30" data-tam="1" style="flex:1;min-width:0;text-align:right;overflow:hidden">“{E(v["q"])}”</b></div>
 <div class="steps" style="justify-content:flex-start;margin-top:22px;flex:1">
-<div class="st"><i>1</i><b>Profildeki linke dokun</b></div><div class="st"><i>2</i><b>Arama kutusuna {E(v["code"])} yaz</b></div></div>''')
+<div class="st"><i>1</i><b>Profildeki nitrobisiklet.com linkine dokun</b></div><div class="st"><i>2</i><b>Arama simgesine dokun, üstteki terimi yaz</b></div></div>''')
 
 
 # ---- Çizim ---------------------------------------------------------------------------------------
@@ -678,7 +692,7 @@ if __name__ == "__main__":
     prods = load_products()
     p = next((x for x in prods if x["slug"] == slug), prods[0])
     info = prep(p["images"][0])
-    v = {"name": content.display_name(p), "price": fmt_price(p["price"]), "code": load_codes().get(p["slug"], "N000"),
+    v = {"name": content.display_name(p), "price": fmt_price(p["price"]), "code": load_codes().get(p["slug"], "N000"), "q": __import__("arama").terim(p),
          "cat": p["category"], "img": info}
     out = ROOT / "out" / "deneme"
     render_all([(p_cover(v, "Günün ürünü", "Sürüşü <em>kolaylaştır</em>"), out / "kapak.jpg"),

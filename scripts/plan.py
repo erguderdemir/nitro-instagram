@@ -21,6 +21,7 @@ import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
+import arama
 import common
 import content as C
 from common import CFG, DATA, DOCS, MEDIA, ROOT, THUMBS, fmt_price
@@ -55,6 +56,7 @@ class Planner:
         self.products = common.load_products()
         self.by_slug = {p["slug"]: p for p in self.products}
         self.codes = common.load_codes()
+        self.arama = arama.yukle()   # slug -> nitrobisiklet.com'da ürünü tek bulan terim (scripts/arama.py)
         self.site = common.load_site()
         self.tips = common.load_tips()
         self.rule_id = {p["slug"]: (r["id"] if (r := C.rule_of(p)) else None) for p in self.products}
@@ -148,14 +150,18 @@ class Planner:
                 self._img[p["slug"]] = [i for i in infos if render.image_ok(i)] if render.image_ok(infos[0]) else []
         return self._img[p["slug"]]
 
+    def q(self, p: dict) -> str:
+        """Açıklama ve görsellerde 'aramaya yaz' denecek terim (profil linki nitrobisiklet.com; site N-kodunu tanımaz)."""
+        return arama.terim(p, self.arama)
+
     def view(self, p: dict) -> dict:
-        return {"name": C.short_name(p), "price": fmt_price(p["price"]), "code": self.codes[p["slug"]],
+        return {"name": C.short_name(p), "price": fmt_price(p["price"]), "code": self.codes[p["slug"]], "q": self.q(p),
                 "cat": C.cat_label(p["category"]), "img": self.images(p)[0]}
 
     def prod(self, p: dict, sid: str, theme: str, medium: str) -> dict:
         r = C.rule_of(p)
         return {"slug": p["slug"], "name": C.display_name(p), "price": p["price"], "code": self.codes[p["slug"]],
-                "category": p["category"], "rule": r["id"], "label": r["label"], "family": C.family(p),
+                "q": self.q(p), "category": p["category"], "rule": r["id"], "label": r["label"], "family": C.family(p),
                 "link": C.utm(p["url"], medium, theme, sid), "bio_link": C.utm(p["url"], "bio", theme, sid),
                 "image": p["images"][0]}
 
@@ -163,15 +169,15 @@ class Planner:
         parts = [VERSION, extra]
         for s in slugs:
             p = self.by_slug.get(s) or {}
-            parts.append(f"{s}:{p.get('price')}:{p.get('name')}:{self.codes.get(s)}")
+            parts.append(f"{s}:{p.get('price')}:{p.get('name')}:{self.codes.get(s)}:{self.q(p) if p else ''}")
         return md5(*parts)[:12]
 
-    def title_for(self, rule: dict, day: date, seed: str, keep: str | None = None) -> str:
+    def title_for(self, rule: dict, day: date, seed: str, keep: str | None = None, force: bool = False) -> str:
         opts = C.headlines(rule, day.month)
         # Başlık tüm takvimde ne kadar az kullanıldıysa o seçilir (aynı başlık farklı günlerde tekrar etmesin)
         counts = {h: sum(1 for c in self.cal if c.get("headline") == h and c.get("theme") != "promo"
                          and c["id"] != seed and self.settled(c)) for h in opts}
-        if keep and keep in opts and counts[keep] == min(counts.values()):
+        if keep and keep in opts and (force or counts[keep] == min(counts.values())):
             return keep
         low = min(counts.values())
         return C.pick([h for h in opts if counts[h] == low], seed)
@@ -216,12 +222,13 @@ class Planner:
 
     # ---- postlar -------------------------------------------------------------------------------
 
-    def product_carousel(self, sid: str, day: date, tm: str, slot: dict, p: dict, keep: str | None = None) -> dict:
+    def product_carousel(self, sid: str, day: date, tm: str, slot: dict, p: dict, keep: str | None = None,
+                         force: bool = False) -> dict:
         import render as R
         rule = C.rule_of(p)
         v, code = self.view(p), self.codes[p["slug"]]
         kicker = C.MEVSIM_KICKER.get(day.month, slot["kicker"]) if slot.get("pool") == "mevsim" else slot["kicker"]
-        head = self.title_for(rule, day, sid, keep)
+        head = self.title_for(rule, day, sid, keep, force)
         rows, desc, extra = C.clean_specs(p, 6), C.description(p), self.images(p)[1:3]
         mid = [("gal", i) for i in extra]
         mid += [("specs", rows)] if len(rows) >= 3 else ([("detail", desc)] if desc else [])
@@ -238,28 +245,29 @@ class Planner:
             else:
                 sec.append(R.p_detail(v, val, i, n))
                 alts.append("Ürün detayı: " + val)
-        sec += [R.p_why(C.perks(p), n - 1, n), R.p_cta("urun", n, n, code=code)]
+        sec += [R.p_why(C.perks(p), n - 1, n), R.p_cta("urun", n, n, q=v["q"])]
         alts += ["Neden NITRO: " + "; ".join(f"{t}, {C.tr_lower(s[:1])}{s[1:]}" for _, t, s in C.perks(p)) + ".",
-                 f"Nasıl alırım: profildeki linke dokun, arama kutusuna {code} yaz."]
+                 f"Nasıl alırım: profildeki nitrobisiklet.com linkine dokun, aramaya “{v['q']}” yaz."]
         media = self.frames(sid, sec)
-        cap, hook = C.product_caption(p, code, rule, str(day))
+        cap, hook = C.product_caption(p, v["q"], rule, str(day))
         x = self.prod(p, sid, "urun", "social")
         return self.rec(sid, day, tm, "post", "carousel", "urun", kicker=kicker, headline=head, hook=hook, media=media,
                         cover=media[0], caption=cap, alt=alts[0], alts=[a[:1000] for a in alts], products=[x],
                         link=x["link"], bio_link=x["bio_link"], code=code, rule=rule["id"], fp=self.fp([p["slug"]]))
 
-    def reel(self, sid: str, day: date, tm: str, slot: dict, p: dict, keep: str | None = None) -> dict:
+    def reel(self, sid: str, day: date, tm: str, slot: dict, p: dict, keep: str | None = None,
+             force: bool = False) -> dict:
         import render as R
         rule = C.rule_of(p)
         v, code = self.view(p), self.codes[p["slug"]]
-        head = self.title_for(rule, day, sid, keep)
+        head = self.title_for(rule, day, sid, keep, force)
         sec = [R.r_hook(v, slot["kicker"], head), R.r_hero(v), R.r_specs(v, C.clean_specs(p, 3)),
                R.r_perks(C.perks(p)[:3]), R.r_cta(v)]
         tmp = [REEL_TMP / f"{sid}-{i}.jpg" for i in range(1, 6)]
         self.post_jobs.extend(zip(sec, tmp))
         mp4, cover = f"media/{sid}.mp4", f"media/{sid}-kapak.jpg"
         self.reels.append((tmp, DOCS / mp4, DOCS / cover))
-        cap, hook = C.product_caption(p, code, rule, str(day))
+        cap, hook = C.product_caption(p, v["q"], rule, str(day))
         x = self.prod(p, sid, "urun", "social")
         return self.rec(sid, day, tm, "post", "reel", "urun", kicker=slot["kicker"], headline=head, hook=hook,
                         media=[mp4], cover=cover, caption=cap, alt=C.product_alt(p, head), alts=[C.product_alt(p, head)],
@@ -281,9 +289,9 @@ class Planner:
         lst = {"items": xs, "hook": cfg["hook"], "q": cfg["q"], "tags": cfg["tags"]}
         cap, hook = C.list_caption(lst)
         store = self.site["urls"]["magaza"]
-        alts = [f"{C.plain(title)}. {sub}"] + [f"{k}. {x['name']}, {fmt_price(x['price'])}, kod {x['code']}."
+        alts = [f"{C.plain(title)}. {sub}"] + [f"{k}. {x['name']}, {fmt_price(x['price'])}, sitede ara: “{x['q']}”."
                                                 for k, x in enumerate(xs, 1)]
-        alts.append("Hepsi profildeki linkte: ürünü adıyla ya da koduyla ara.")
+        alts.append("Hepsi profildeki nitrobisiklet.com linkinde: karttaki ARA terimini aramaya yaz.")
         return self.rec(sid, day, tm, "post", "carousel", "liste", kicker=cfg["kicker"], headline=title, hook=hook,
                         media=media, cover=media[0], caption=cap, alt=alts[0], alts=alts, products=xs,
                         link=C.utm(store, "social", "liste", sid), bio_link=C.utm(store, "bio", "liste", sid),
@@ -359,7 +367,7 @@ class Planner:
         if theme == "urun":
             x = post["products"][0]
             head, url, text = post["headline"], self.by_slug[x["slug"]]["url"], "ÜRÜNE GİT"
-            label, fallback = "Ürüne gitmek için dokun", f"Link profilde<u>·</u>Kod {x['code']}"
+            label, fallback = "Ürüne gitmek için dokun", "Ürüne git"
         elif theme == "ipucu":
             head = "Yeni rehber <em>akışta</em>"
             if post.get("cta") == "servis":
@@ -372,7 +380,7 @@ class Planner:
                 url, text, label, fallback = store, "MAĞAZAYA GİT", "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Mağaza"
         elif theme == "liste":
             head, url, text = post["headline"], store, "MAĞAZAYA GİT"
-            label, fallback = "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Kodu yaz, bul"
+            label, fallback = "Mağazaya gitmek için dokun", "Mağazaya git"
         else:
             head, url, text = "Mutlu <em>yıllar!</em>", store, "MAĞAZAYA GİT"
             label, fallback = "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Mağaza"
@@ -599,9 +607,11 @@ class Planner:
             if p and (not self.images(p) or (reel and len(C.clean_specs(p)) < 3)):
                 p = None
             keep = old.get("headline") if p else None
+            # Suite'te zamanlanmış tanıtım story'si eski başlığı gösteriyor: aynı ürünle kuruluyorsa başlık korunsun
+            force = bool(keep) and any(x.get("suite_scheduled") and x.get("ref") == sid for x in self.cal)
             p = p or self.choose(C.pool_rules(slot["pool"], day.month), day, sid, need_specs=3 if reel else 0, post=True)
             if p:
-                new = (self.reel if reel else self.product_carousel)(sid, day, tm, slot, p, keep)
+                new = (self.reel if reel else self.product_carousel)(sid, day, tm, slot, p, keep, force)
         if not new:
             self.say(f"ATLANDI {sid}: kurala uyan içerik bulunamadı; yeri boş bırakıldı.")
             return None

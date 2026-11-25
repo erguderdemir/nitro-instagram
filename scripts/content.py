@@ -616,10 +616,12 @@ def tags_for(extra: list[str]) -> str:
     return " ".join(list(dict.fromkeys(BASE_TAGS + list(extra)))[:TAG_MAX])
 
 
-def how_to_buy(code: str | None = None) -> str:
-    if code:
-        return f"🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna {code} yaz."
-    return "🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz."
+def how_to_buy(q: str | None = None) -> str:
+    """Profil linki nitrobisiklet.com; sitenin araması ürün adında alt dize arar (N-kodlarını tanımaz).
+    q: scripts/arama.py'nin canlı sitede doğruladığı, ürünü tek başına bulan terim."""
+    if q:
+        return f"🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “{q}” yaz."
+    return "🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz."
 
 
 def _join(blocks: list[list[str] | str]) -> str:
@@ -630,7 +632,7 @@ def _join(blocks: list[list[str] | str]) -> str:
     return text
 
 
-def product_caption(p: dict, code: str, rule: dict, day: str) -> tuple[str, str]:
+def product_caption(p: dict, q: str, rule: dict, day: str) -> tuple[str, str]:
     """(açıklama, kanca). İlk satır kanca; ad + fiyat; 3-4 özellik; gerçek avantajlar; nasıl alırım; soru; yerel SEO."""
     hook = pick(rule["hooks"], p["slug"], day)
     head = [f"{display_name(p)} · {fmt_price(p['price'])} (KDV dahil)"]
@@ -638,13 +640,13 @@ def product_caption(p: dict, code: str, rule: dict, day: str) -> tuple[str, str]
         head.append("Kontrollü 2. el.")
     specs = [f"▪️ {k}: {v}" for k, v in clean_specs(p, 4)]
     body = specs if len(specs) >= 3 else (description(p, 280) or specs)
-    return _join([hook, head, body, ["Neden NITRO?"] + [f"✔️ {x}" for x in PERK_LINES], how_to_buy(code),
+    return _join([hook, head, body, ["Neden NITRO?"] + [f"✔️ {x}" for x in PERK_LINES], how_to_buy(q),
                   rule["q"], SEO_LINE, tags_for(rule["tags"])]), hook
 
 
 def list_caption(lst: dict) -> tuple[str, str]:
     hook = lst["hook"]
-    rows = [f"{i}. {x['name']} · {fmt_price(x['price'])} · Kod {x['code']}" for i, x in enumerate(lst["items"], 1)]
+    rows = [f"{i}. {x['name']} · {fmt_price(x['price'])} · 🔍 “{x['q']}”" for i, x in enumerate(lst["items"], 1)]
     return _join([hook, rows, ["Fiyatlar KDV dahildir."] + [f"✔️ {x}" for x in PERK_LINES], how_to_buy(),
                   lst["q"], SEO_LINE, tags_for(lst["tags"])]), hook
 

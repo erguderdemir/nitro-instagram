@@ -28,6 +28,7 @@ from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
+import arama
 import common
 import content as C
 from common import CFG, DATA, DOCS, GORSEL_ENGEL, fmt_price
@@ -267,11 +268,16 @@ class Audit:
         if "Köyceğiz" not in cap:
             self.add(c, "metin", "yerel SEO satırı (Köyceğiz) yok")
         ps = c.get("products") or []
+        # Profil linki nitrobisiklet.com; site araması N-kodunu tanımaz. Yönlendirme scripts/arama.py'nin
+        # canlı aramada ürünü bulduğunu doğruladığı terimle yapılmalı.
         for x in ps:
-            if fmt_price(x["price"]) not in cap or x["code"] not in cap:
-                self.add(c, "metin", f"açıklamada {x['name']} için fiyat ya da kod yok")
-        if c["theme"] == "urun" and ps and f"arama kutusuna {ps[0]['code']} yaz" not in cap:
-            self.add(c, "metin", "açıklamada 'arama kutusuna <kod> yaz' yönlendirmesi yok")
+            q = x.get("q") or ""
+            if fmt_price(x["price"]) not in cap or not q or f"“{q}”" not in cap:
+                self.add(c, "metin", f"açıklamada {x['name']} için fiyat ya da site arama terimi yok")
+        if c["theme"] == "urun" and ps and f"aramaya “{ps[0].get('q') or ''}” yaz" not in cap:
+            self.add(c, "metin", "açıklamada 'nitrobisiklet.com aramasına “terim” yaz' yönlendirmesi yok")
+        if re.search(r"arama kutusuna N\d+|koduyla ara", cap):
+            self.add(c, "metin", "açıklama sitede çalışmayan N-kodu aramasını öneriyor")
         alts = c.get("alts") or []
         if not c.get("alt") or (c["format"] == "carousel" and len(alts) != len(c["media"])):
             self.add(c, "metin", "alt metin eksik (her kare için bir alt metin olmalı)")

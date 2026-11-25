@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Instagram bio linkinin açtığı sayfa: docs/index.html
 
-Açıklamalardaki yönlendirme buraya gelir: "Profildeki linke dokun, arama kutusuna N247 yaz".
+Instagram profil linki nitrobisiklet.com'dur; açıklamalar oranın aramasına yönlendirir (scripts/arama.py).
+Bu sayfa yardımcı/yedek ürün listesidir:
   ?k=N247   kodu verilen ürünü en üstte gösterir
   ?q=kask   adında/kategorisinde geçen ürünleri listeler
 Arama tüm mağaza ürünlerinde (stokta, fiyatı olan) çalışır; "Instagram'da son paylaşılanlar" yalnız yayınlanmış

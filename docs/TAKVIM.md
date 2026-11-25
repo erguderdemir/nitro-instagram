@@ -442,7 +442,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N516 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Siyah - 2'li” yaz.
 
 Lastiklerini en son ne zaman değiştirdin?
 
@@ -468,7 +468,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N501 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “1x7 Vites Koyu” yaz.
 
 Bisikletle işe ya da okula gidiyor musun?
 
@@ -482,18 +482,18 @@ Bisikletle işe ya da okula gidiyor musun?
 ```
 Kış geldi diye bisiklet kenara konmaz. Islak ve karanlık günler için liste burada.
 
-1. Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık · 450 ₺ · Kod N126
-2. Asistan Drox Çamurluk · 145 ₺ · Kod N430
-3. Rectus R-632 Kışlık Eldiven · 550 ₺ · Kod N201
-4. Best - Zincir Yağlayıcı Sprey LU-80 400 ml · 250 ₺ · Kod N293
-5. V-Brake Alyan Fren Pabucu, Fren Pedi [2ADET] · 95 ₺ · Kod N133
+1. Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık · 450 ₺ · 🔍 “Fonksiyonlu”
+2. Asistan Drox Çamurluk · 145 ₺ · 🔍 “Drox Çamurluk”
+3. Rectus R-632 Kışlık Eldiven · 550 ₺ · 🔍 “R-632”
+4. Best - Zincir Yağlayıcı Sprey LU-80 400 ml · 250 ₺ · 🔍 “YAĞLAYICI”
+5. V-Brake Alyan Fren Pabucu, Fren Pedi [2ADET] · 95 ₺ · 🔍 “V-Brake”
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
 
 Sen kışın sürmeye devam ediyor musun?
 
@@ -505,7 +505,7 @@ Sen kışın sürmeye devam ediyor musun?
 ### 2026-11-29 11:00 · Suyun hep yanında
 
 ```
-Matara çantada değil, kadroda dursun.
+Matara çantada değil, bisikletinde dursun.
 
 Gidon Bağlantılı Matara Kafesi · 200 ₺ (KDV dahil)
 
@@ -514,9 +514,9 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N302 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Bağlantılı Matara” yaz.
 
-Mataran kadroda mı durur, çantada mı?
+Mataran bisiklette mi durur, çantada mı?
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
@@ -540,7 +540,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N144 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Kadro Siyah-Mavi” yaz.
 
 Senin favori patikan neresi?
 
@@ -561,7 +561,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N322 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “C4-129LNMWH” yaz.
 
 Bisikletini nereye yaslarsın?
 
@@ -608,7 +608,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N172 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Performance” yaz.
 
 Lastiklerini en son ne zaman değiştirdin?
 
@@ -634,7 +634,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N205 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Envious” yaz.
 
 E-bisiklet denedin mi, ilk izlenimin neydi?
 
@@ -648,18 +648,18 @@ E-bisiklet denedin mi, ilk izlenimin neydi?
 ```
 Bisikletçiye hediye almak pahalı olmak zorunda değil.
 
-1. Polisport C600 Matara · 220 ₺ · Kod N308
-2. Bandana Bisiklet & Outdoor · 189 ₺ · Kod N135
-3. Procycle PC-300 Kadro Üçgen Çanta · 220 ₺ · Kod N452
-4. I Love My Bike Zil Sarı · 80 ₺ · Kod N422
-5. Gidon Bağlantılı 360 Derece Dönebilir Yan Ayna Tekli · 190 ₺ · Kod N419
+1. Polisport C600 Matara · 220 ₺ · 🔍 “C4-96WG6KZ”
+2. Bandana Bisiklet & Outdoor · 189 ₺ · 🔍 “Bandana”
+3. Procycle PC-300 Kadro Üçgen Çanta · 220 ₺ · 🔍 “PC-300”
+4. I Love My Bike Zil Sarı · 80 ₺ · 🔍 “Zil Sarı”
+5. Gidon Bağlantılı 360 Derece Dönebilir Yan Ayna Tekli · 190 ₺ · 🔍 “DERECE”
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
 
 Sana bisikletle ilgili alınan en güzel hediye neydi?
 
@@ -680,7 +680,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N372 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Rectus Bisiklet” yaz.
 
 Seleni hiç değiştirdin mi?
 
@@ -706,7 +706,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N256 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Trail Eco” yaz.
 
 Asfalt mı, toprak yol mu?
 
@@ -732,7 +732,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N404 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “CS-HG81” yaz.
 
 Arkada kaç vitesin var?
 
@@ -775,7 +775,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N132 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “B05S Organik” yaz.
 
 Senin bisikletinde disk fren mi var, jant freni mi?
 
@@ -801,7 +801,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N506 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “8300” yaz.
 
 Bisikletle işe ya da okula gidiyor musun?
 
@@ -815,18 +815,18 @@ Bisikletle işe ya da okula gidiyor musun?
 ```
 Yılbaşı listesindeki bisikletçi için fikirler.
 
-1. Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi · 380 ₺ · Kod N195
-2. Procycle PC-260 Kadro Telefon Tutucu Çanta Siyah · 270 ₺ · Kod N381
-3. Ab 12x800 Kablo Kilidi · 350 ₺ · Kod N288
-4. Vona GP-03 Bisiklet El Pompası · 265,50 ₺ · Kod N352
-5. Rectus Kilometre Saati · 450 ₺ · Kod N300
+1. Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi · 380 ₺ · 🔍 “Eldiven Mavi”
+2. Procycle PC-260 Kadro Telefon Tutucu Çanta Siyah · 270 ₺ · 🔍 “PC-260”
+3. Ab 12x800 Kablo Kilidi · 350 ₺ · 🔍 “12x800”
+4. Vona GP-03 Bisiklet El Pompası · 265,50 ₺ · 🔍 “GP-03”
+5. Rectus Kilometre Saati · 450 ₺ · 🔍 “Rectus Kilometre”
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
 
 Bu listeden hangisi senin bisikletinde eksik?
 
@@ -838,7 +838,7 @@ Bu listeden hangisi senin bisikletinde eksik?
 ### 2026-12-13 11:00 · Mataraya sağlam yuva
 
 ```
-Matara çantada değil, kadroda dursun.
+Matara çantada değil, bisikletinde dursun.
 
 Sedona SD100 Matara Kafesi · 115 ₺ (KDV dahil)
 
@@ -849,9 +849,9 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N315 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “C4-12054GEM” yaz.
 
-Mataran kadroda mı durur, çantada mı?
+Mataran bisiklette mi durur, çantada mı?
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
@@ -875,7 +875,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N131 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Carraro RAVE” yaz.
 
 İlk numaranı hangi bisikletle denedin?
 
@@ -900,7 +900,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N163 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “SM-RT56” yaz.
 
 Rotorun kaç milim?
 
@@ -943,7 +943,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N129 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “6125” yaz.
 
 Akşam sürüşünde ışıkların hep yanında mı?
 
@@ -969,7 +969,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N206 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Florida” yaz.
 
 E-bisiklet denedin mi, ilk izlenimin neydi?
 
@@ -983,18 +983,18 @@ E-bisiklet denedin mi, ilk izlenimin neydi?
 ```
 Yılbaşında bir çocuğu en çok ne sevindirir? Bizce cevap belli.
 
-1. Bisan Floki V 20" Çocuk Bisikleti Mavi · 9.375 ₺ · Kod N467
-2. Bisan B-Bike 12" Çocuk Bisikleti Metalik Pembe · 5.560 ₺ · Kod N464
-3. Raptor Çocuk Bisiklet Kaskı Candy M Beden · 850 ₺ · Kod N286
-4. Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Mavi S · 380 ₺ · Kod N197
-5. Bisiklet Selesi Siyah-Gri 16-20 Jant Rectus · 250 ₺ · Kod N368
+1. Bisan Floki V 20" Çocuk Bisikleti Mavi · 9.375 ₺ · 🔍 “Bisan Floki”
+2. Bisan B-Bike 12" Çocuk Bisikleti Metalik Pembe · 5.560 ₺ · 🔍 “B-Bike”
+3. Raptor Çocuk Bisiklet Kaskı Candy M Beden · 850 ₺ · 🔍 “KASKI CANDY”
+4. Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Mavi S · 380 ₺ · 🔍 “Mavi S”
+5. Bisiklet Selesi Siyah-Gri 16-20 Jant Rectus · 250 ₺ · 🔍 “Selesi Siyah-Gri”
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
 
 Senin ilk bisikletin kaç janttı, hatırlıyor musun?
 
@@ -1015,7 +1015,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N121 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Bisiklet Tamir” yaz.
 
 Yolda lastik tamir ettin mi hiç?
 
@@ -1034,14 +1034,14 @@ Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi · 35.608,50 �
 ▪️ Maşa: Alüminyum Süspansiyon 120 mm
 ▪️ Fren Sistemi: Shimano, BR-MT200 Hidrolik Disk
 ▪️ Arka Aktarıcı: Shimano Acera RD-M3020-8
-▪️ Lastik: Maxxıs 29"X2.40
+▪️ Lastik: Maxxis 29"X2.40
 
 Neden NITRO?
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N151 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Mavi-Açık” yaz.
 
 Senin favori patikan neresi?
 
@@ -1062,7 +1062,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N390 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “CN-HG93” yaz.
 
 Zincirini en son ne zaman değiştirdin?
 
@@ -1107,7 +1107,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N433 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “MTB PLASTİK” yaz.
 
 Çamurluk takar mısın, çamura aldırmaz mısın?
 
@@ -1133,7 +1133,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N503 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “8200” yaz.
 
 Bisikletle işe ya da okula gidiyor musun?
 
@@ -1147,18 +1147,18 @@ Bisikletle işe ya da okula gidiyor musun?
 ```
 Yeni yıla yeni bisiklet şart değil; birkaç parça da sürüşü değiştirir.
 
-1. Pedal M506 Siyah · 863,21 ₺ · Kod N344
-2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · Kod N180
-3. Rectus Mtb Sele Kırmızı · 345 ₺ · Kod N357
-4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · Kod N173
-5. Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah · 702 ₺ · Kod N254
+1. Pedal M506 Siyah · 863,21 ₺ · 🔍 “M506”
+2. Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah · 418,50 ₺ · 🔍 “Mor-Siyah”
+3. Rectus Mtb Sele Kırmızı · 345 ₺ · 🔍 “Mtb Sele Kırmızı”
+4. Schwalbe Tough Tom 29x2.25 Dış Lastik · 1.044 ₺ · 🔍 “Schwalbe Tough”
+5. Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah · 702 ₺ · 🔍 “Wake 780”
 
 Fiyatlar KDV dahildir.
 ✔️ Köyceğiz içi aynı gün, ücretsiz teslimat
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna ürün kodunu yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya ürünün yanındaki terimi yaz.
 
 Bisikletinde ilk değiştirdiğin parça neydi?
 
@@ -1179,7 +1179,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N412 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Dönebilen Geniş” yaz.
 
 Bisikletinde ayna kullanıyor musun?
 
@@ -1205,7 +1205,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N203 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Vites Metalik” yaz.
 
 E-bisiklet denedin mi, ilk izlenimin neydi?
 
@@ -1228,7 +1228,7 @@ Neden NITRO?
 ✔️ Türkiye geneli kargo; 3.000 ₺ ve üzeri siparişte ücretsiz
 ✔️ 14 gün içinde iade, iade kargosu bizden
 
-🛒 Nasıl alırım? Profildeki linke dokun, arama kutusuna N479 yaz.
+🛒 Nasıl alırım? Profildeki nitrobisiklet.com linkine dokun, 🔍 aramaya “Continental” yaz.
 
 Yolda lastiğin patladı mı hiç, o gün ne yaptın?
 

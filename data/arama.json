@@ -1,0 +1,2522 @@
+{
+ "12s-zincir-powerlink": {
+  "q": "Powerlink",
+  "n": 1,
+  "ad": "12S Zincir Powerlink",
+  "t": "2026-11-25"
+ },
+ "20-cocuk-bisikleti": {
+  "q": "C5-206PQ3IA",
+  "n": 1,
+  "ad": "20” Çocuk Bisikleti",
+  "t": "2026-11-25"
+ },
+ "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah": {
+  "q": "Lastik Elektrikli",
+  "n": 2,
+  "ad": "20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah",
+  "t": "2026-11-25"
+ },
+ "20x4-0-fat-bike-dis-lastik-elektrikli-bisiklet-uyumlu-siyah-2li-set": {
+  "q": "Siyah - 2'li",
+  "n": 1,
+  "ad": "20x4.0 Fat Bike Dış Lastik Elektrikli Bisiklet Uyumlu Siyah - 2'li Set",
+  "t": "2026-11-25"
+ },
+ "24-jant-btwin-kiz-bisikleti": {
+  "q": "Btwin Kız",
+  "n": 1,
+  "ad": "24\" Jant Btwin Kız Bisikleti",
+  "t": "2026-11-25"
+ },
+ "24-jant-umit-kiz-bisikleti": {
+  "q": "Jant Ümit",
+  "n": 1,
+  "ad": "24\" Jant Ümit Kız Bisikleti",
+  "t": "2026-11-25"
+ },
+ "26-jant-btwin-sehir-bisikleti": {
+  "q": "Btwin Şehir",
+  "n": 1,
+  "ad": "26” Jant Btwin Şehir Bisikleti",
+  "t": "2026-11-25"
+ },
+ "26-mtb-on-sepet-demir-kizakli-254-318-mm-siyah": {
+  "q": "25.4-31.8",
+  "n": 1,
+  "ad": "26 MTB ÖN SEPET DEMİR [KIZAKLI] 25.4-31.8 MM SİYAH",
+  "t": "2026-11-25"
+ },
+ "28-umit-magnetic-disk-fren": {
+  "q": "Magnetic",
+  "n": 1,
+  "ad": "28” Ümit Magnetic Disk Fren",
+  "t": "2026-11-25"
+ },
+ "360-donebilen-genis-acili-ikili-dikiz-aynasi": {
+  "q": "Dönebilen Geniş",
+  "n": 1,
+  "ad": "360° Dönebilen Geniş Açılı İkili Dikiz Aynası",
+  "t": "2026-11-25"
+ },
+ "404-balata-spreyi-metal-temizleyici-500-ml": {
+  "q": "Temizleyici",
+  "n": 1,
+  "ad": "404 Balata Spreyi (Metal Temizleyici) 500 ml",
+  "t": "2026-11-25"
+ },
+ "ab-12x800-cable-lock": {
+  "q": "12x800",
+  "n": 1,
+  "ad": "Ab 12x800 Cable Lock",
+  "t": "2026-11-25"
+ },
+ "arka-park-ayagi-20-siyah": {
+  "q": "C4-130MDYM1",
+  "n": 1,
+  "ad": "Arka Park Ayağı 20\" Siyah",
+  "t": "2026-11-25"
+ },
+ "arka-park-ayagi-24-siyah": {
+  "q": "C4-131AHS36",
+  "n": 1,
+  "ad": "Arka Park Ayağı 24\" Siyah",
+  "t": "2026-11-25"
+ },
+ "arka-park-ayagi-26-siyah": {
+  "q": "C4-129LNMWH",
+  "n": 1,
+  "ad": "Arka Park Ayağı 26\" Siyah",
+  "t": "2026-11-25"
+ },
+ "arka-park-ayagi-275-siyah": {
+  "q": "C4-132ZKU4S",
+  "n": 1,
+  "ad": "Arka Park Ayağı 27.5\" Siyah",
+  "t": "2026-11-25"
+ },
+ "arka-park-ayagi-29-siyah": {
+  "q": "C4-133F4ZQC",
+  "n": 1,
+  "ad": "Arka Park Ayağı 29\" Siyah",
+  "t": "2026-11-25"
+ },
+ "arwic-32-lt-siyah-motosiklet-cantasi": {
+  "q": "ARWIC 32",
+  "n": 1,
+  "ad": "ARWIC 32 LT Siyah Motosiklet Çantası",
+  "t": "2026-11-25"
+ },
+ "as-4000-assize-kablosuz-bisiklet-bilgisayari": {
+  "q": "AS-4000",
+  "n": 1,
+  "ad": "AS-4000 ASSIZE Kablosuz Bisiklet Bilgisayarı",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-200-kisa-parmak-eldiven-gri": {
+  "q": "C4-35AHZO0",
+  "n": 1,
+  "ad": "Asistan Cape Gl 200 Kısa Parmak Eldiven Gri",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-200-kisa-parmak-eldiven-gri-xxl": {
+  "q": "Gri XXL",
+  "n": 1,
+  "ad": "Asistan Cape Gl 200 Kısa Parmak Eldiven Gri XXL",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-200-kisa-parmak-eldiven-kirmizi": {
+  "q": "Eldiven Kırmızı",
+  "n": 1,
+  "ad": "Asistan Cape Gl 200 Kısa Parmak Eldiven Kırmızı",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-200-kisa-parmak-eldiven-mavi": {
+  "q": "Eldiven Mavi",
+  "n": 1,
+  "ad": "Asistan Cape Gl 200 Kısa Parmak Eldiven Mavi",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-200-kisa-parmak-eldiven-yesil": {
+  "q": "Eldiven Yeşil",
+  "n": 1,
+  "ad": "Asistan Cape Gl 200 Kısa Parmak Eldiven Yeşil",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-5-kisa-parmak-cocuk-eldiveni-mavi-s": {
+  "q": "Mavi S",
+  "n": 1,
+  "ad": "Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Mavi S",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-5-kisa-parmak-cocuk-eldiveni-mavi-xs": {
+  "q": "Mavi XS",
+  "n": 1,
+  "ad": "Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Mavi XS",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-5-kisa-parmak-cocuk-eldiveni-pembe-s": {
+  "q": "Pembe S",
+  "n": 1,
+  "ad": "Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Pembe S",
+  "t": "2026-11-25"
+ },
+ "asistan-cape-gl-5-kisa-parmak-cocuk-eldiveni-pembe-xs": {
+  "q": "Pembe XS",
+  "n": 1,
+  "ad": "Asistan Cape Gl 5 Kısa Parmak Çocuk Eldiveni Pembe XS",
+  "t": "2026-11-25"
+ },
+ "asistan-drox-camurluk": {
+  "q": "Drox Çamurluk",
+  "n": 1,
+  "ad": "Asistan Drox Çamurluk",
+  "t": "2026-11-25"
+ },
+ "asistan-drox-gr170-bisiklet-elcigi-170mm": {
+  "q": "GR170",
+  "n": 1,
+  "ad": "Asistan Drox GR170 Bisiklet Elciği 170mm",
+  "t": "2026-11-25"
+ },
+ "asistan-rolle-g30-elcik": {
+  "q": "Asistan Rolle",
+  "n": 1,
+  "ad": "Asistan Rolle G30 Elcik",
+  "t": "2026-11-25"
+ },
+ "assize-528-bisiklet-hiz-gostergesi": {
+  "q": "Assize 528",
+  "n": 1,
+  "ad": "Assize 528 Bisiklet Hız Göstergesi",
+  "t": "2026-11-25"
+ },
+ "ayna-mr-k03-360-donebilir-20-aci-ayarlanabilir-2503240200": {
+  "q": "MR-K03",
+  "n": 1,
+  "ad": "AYNA MR-K03 ( 360 ° DÖNEBİLİR, 20 ° AÇI AYARLANABİLİR ) 2503240200",
+  "t": "2026-11-25"
+ },
+ "ayna-rvm-313-sol-6x112cm-95g-360-donebilen-gidon-olcusu-2-24cm": {
+  "q": "RVM-313",
+  "n": 1,
+  "ad": "AYNA RVM-313 SOL 6X11.2CM 95g 360° DÖNEBİLEN GİDON ÖLÇÜSÜ 2-2.4cm",
+  "t": "2026-11-25"
+ },
+ "ayna-rvm-372-sol-gidon-ucu-baglantili-75x75mm-olcu-16-22mm-360-donebilen": {
+  "q": "RVM-372",
+  "n": 1,
+  "ad": "AYNA RVM-372 SOL GİDON UCU BAĞLANTILI 75X75mm ÖLÇÜ : 16-22mm 360° DÖNEBİLEN",
+  "t": "2026-11-25"
+ },
+ "aynakol-koruyucu-4-delik": {
+  "q": "KORUYUCU 4",
+  "n": 1,
+  "ad": "AYNAKOL KORUYUCU 4 DELİK",
+  "t": "2026-11-25"
+ },
+ "aynakol-koruyucu-5-delik": {
+  "q": "KORUYUCU 5",
+  "n": 1,
+  "ad": "AYNAKOL KORUYUCU 5 DELİK",
+  "t": "2026-11-25"
+ },
+ "balata-xbyc-blt-1": {
+  "q": "Blt 1",
+  "n": 1,
+  "ad": "Balata Xbyc Blt 1",
+  "t": "2026-11-25"
+ },
+ "balata-xbyc-blt-5": {
+  "q": "Blt 5",
+  "n": 1,
+  "ad": "Balata Xbyc Blt 5",
+  "t": "2026-11-25"
+ },
+ "balata-xbyc-blt-6": {
+  "q": "Blt 6",
+  "n": 1,
+  "ad": "Balata Xbyc Blt 6",
+  "t": "2026-11-25"
+ },
+ "bandana-bisiklet-outdoor": {
+  "q": "Bandana",
+  "n": 1,
+  "ad": "Bandana Bisiklet & Outdoor",
+  "t": "2026-11-25"
+ },
+ "best-zincir-yaglayici-sprey-lu-80-400-ml": {
+  "q": "YAĞLAYICI",
+  "n": 1,
+  "ad": "BEST - ZİNCİR YAĞLAYICI SPREY LU-80 400 ml",
+  "t": "2026-11-25"
+ },
+ "bianchi-stella-24-jant-kiz-bisikleti": {
+  "q": "Bianchi",
+  "n": 1,
+  "ad": "Bianchi Stella 24” Jant Kız Bisikleti",
+  "t": "2026-11-25"
+ },
+ "bisan-all-trail-eco-sora-gravel-bisiklet-2x9-vites-56cm": {
+  "q": "Trail Eco",
+  "n": 1,
+  "ad": "Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites 56cm",
+  "t": "2026-11-25"
+ },
+ "bisan-all-trail-grx-400-gravel-56cm": {
+  "q": "Trail GRX",
+  "n": 1,
+  "ad": "Bisan All Trail GRX 400 Gravel 56cm",
+  "t": "2026-11-25"
+ },
+ "bisan-athena-hd-29-dag-bisikleti-3x7-vites-19-48cm-kadro-metalik-gri": {
+  "q": "Kadro Metalik",
+  "n": 1,
+  "ad": "Bisan Athena HD 29\" Dağ Bisikleti 3x7 Vites 19\" (48cm) Kadro Metalik Gri",
+  "t": "2026-11-25"
+ },
+ "bisan-athena-hd-29-dag-bisikleti-3x7-vites-19-48cm-kadro-siyah": {
+  "q": "BSN-87643964",
+  "n": 1,
+  "ad": "Bisan Athena HD 29\" Dağ Bisikleti 3x7 Vites 19\" (48cm) Kadro Siyah",
+  "t": "2026-11-25"
+ },
+ "bisan-b-bike-12-cocuk-bisikleti-metalik-pembe": {
+  "q": "B-Bike",
+  "n": 1,
+  "ad": "Bisan B-Bike 12\" Çocuk Bisikleti Metalik Pembe",
+  "t": "2026-11-25"
+ },
+ "bisan-bold-7-3-29-dag-bisikleti-3x7-vites-17-43cm-kadro-siyah": {
+  "q": "bisanbold7.3",
+  "n": 1,
+  "ad": "Bisan Bold 7.3 29\" Dağ Bisikleti 3x7 Vites 17\" (43cm) Kadro Siyah",
+  "t": "2026-11-25"
+ },
+ "bisan-bold-7-3-29-dag-bisikleti-3x7-vites-17-kadro-gri-koyu-yesil": {
+  "q": "BSN-65417020",
+  "n": 1,
+  "ad": "Bisan Bold 7.3 29\" Dağ Bisikleti 3x7 Vites 17\" Kadro Gri-Koyu Yeşil",
+  "t": "2026-11-25"
+ },
+ "bisan-bold-8-3-27-5-dag-bisikleti-3x8-vites-17-43cm-kadro-siyah-gri": {
+  "q": "bisanbold8.3",
+  "n": 1,
+  "ad": "Bisan Bold 8.3 27.5\" Dağ Bisikleti 3x8 Vites 17\" (43cm) Kadro Siyah-Gri",
+  "t": "2026-11-25"
+ },
+ "bisan-bold-8-3-29-dag-bisikleti-3x8-vites-17-43cm-kadro-gri-koyu-yesil": {
+  "q": "bold8.3yeşil29",
+  "n": 1,
+  "ad": "Bisan Bold 8.3 29\" Dağ Bisikleti 3x8 Vites 17\" (43cm) Kadro Gri-Koyu Yeşil",
+  "t": "2026-11-25"
+ },
+ "bisan-bold-8-3-29-dag-bisikleti-3x8-vites-17-kadro-siyah": {
+  "q": "BSN-58339132",
+  "n": 1,
+  "ad": "Bisan Bold 8.3 29\" Dağ Bisikleti 3x8 Vites 17\" Kadro Siyah",
+  "t": "2026-11-25"
+ },
+ "bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-mat-siyah": {
+  "q": "1x7 Vites Mat",
+  "n": 1,
+  "ad": "Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Mat Siyah",
+  "t": "2026-11-25"
+ },
+ "bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-metalik-gri": {
+  "q": "Vites Metalik",
+  "n": 1,
+  "ad": "Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Metalik Gri",
+  "t": "2026-11-25"
+ },
+ "bisan-e-folding-f3-katlanir-elektrikli-bisiklet-1x7-vites-yesil-haki": {
+  "q": "Vites Yeşil",
+  "n": 1,
+  "ad": "Bisan E-Folding F3 Katlanır Elektrikli Bisiklet 1x7 Vites Yeşil (Haki)",
+  "t": "2026-11-25"
+ },
+ "bisan-ella-20-cocuk-bisikleti-pembe": {
+  "q": "Bisan Ella",
+  "n": 1,
+  "ad": "Bisan Ella 20\" Çocuk Bisikleti Pembe",
+  "t": "2026-11-25"
+ },
+ "bisan-envious-deore-29-elektrikli-dag-bisiklet-45cm-175": {
+  "q": "Envious",
+  "n": 1,
+  "ad": "Bisan Envious Deore 29\" Elektrikli Dağ Bisiklet 45cm 17.5\"",
+  "t": "2026-11-25"
+ },
+ "bisan-flash-16-cocuk-bisikleti-mat-siyah-turuncu": {
+  "q": "Siyah-Turuncu",
+  "n": 1,
+  "ad": "Bisan Flash 16\" Çocuk Bisikleti Mat Siyah-Turuncu",
+  "t": "2026-11-25"
+ },
+ "bisan-floki-v-20-cocuk-bisikleti-mavi": {
+  "q": "Bisan Floki",
+  "n": 1,
+  "ad": "Bisan Floki V 20\" Çocuk Bisikleti Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-florida-26-elektrikli-sehir-bisikleti-mercan-rengi": {
+  "q": "Florida",
+  "n": 1,
+  "ad": "Bisan Florida 26\" Elektrikli Şehir Bisikleti Mercan Rengi",
+  "t": "2026-11-25"
+ },
+ "bisan-gazelle-v-cocuk-bisikleti-3x6-vites-20-mor": {
+  "q": "Gazelle",
+  "n": 1,
+  "ad": "Bisan Gazelle V Çocuk Bisikleti 3x6 Vites 20\" Mor",
+  "t": "2026-11-25"
+ },
+ "bisan-hardtrail-29-dag-bisikleti-1x8-vites-17-kadro-siyah-gri": {
+  "q": "Hardtrail",
+  "n": 1,
+  "ad": "Bisan Hardtrail 29\" Dağ Bisikleti 1x8 Vites 17\" Kadro Siyah-Gri",
+  "t": "2026-11-25"
+ },
+ "bisan-kdx-2800-v-24-cocuk-bisikleti-3x7-vites-sari": {
+  "q": "2800",
+  "n": 1,
+  "ad": "Bisan KDX 2800 V 24\" Çocuk Bisikleti 3x7 Vites Sarı",
+  "t": "2026-11-25"
+ },
+ "bisan-moon-700c-elektrikli-sehir-bisikleti": {
+  "q": "Bisan Moon",
+  "n": 1,
+  "ad": "Bisan Moon 700C Elektrikli Şehir Bisikleti",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7200-27-5-dag-bisikleti-3x8-vites-17-43cm-kadro-siyah-mavi": {
+  "q": "Kadro Siyah-Mavi",
+  "n": 1,
+  "ad": "Bisan MTX 7200 27.5\" Dağ Bisikleti 3x8 Vites 17\" (43cm) Kadro Siyah-Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7200-27-5-dag-bisikleti-3x8-vites-17-43cm-kadro-siyah-yesil": {
+  "q": "Kadro Siyah-Yeşil",
+  "n": 1,
+  "ad": "Bisan MTX 7200 27.5\" Dağ Bisikleti 3x8 Vites 17\" (43cm) Kadro Siyah-Yeşil",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7200-29-dag-bisikleti-3x8-vites-mat-siyah-mavi": {
+  "q": "Vites Mat Siyah-Mavi",
+  "n": 1,
+  "ad": "Bisan MTX 7200 29\" Dağ Bisikleti 3x8 Vites Mat Siyah-Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7200-29-dag-bisikleti-3x8-vites-mat-siyah-yesil": {
+  "q": "Mat Siyah-Yeşil",
+  "n": 1,
+  "ad": "Bisan MTX 7200 29\" Dağ Bisikleti 3x8 Vites Mat Siyah-Yeşil",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7400-29-jant-dag-bisikleti": {
+  "q": "7400",
+  "n": 1,
+  "ad": "Bisan MTX 7400 29\" Jant Dağ Bisikleti",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7500-cues-27-5-dag-bisikleti-2x10-vites-19-48cm-kadro": {
+  "q": "BSN-89598524",
+  "n": 1,
+  "ad": "Bisan MTX 7500 Cues 27.5\" Dağ Bisikleti 2x10 Vites 17\" (43cm) Kadro",
+  "t": "2026-11-25"
+ },
+ "bisan-mtx-7500-cues-29-dag-bisikleti-2x10-vites-19-48cm-kadro": {
+  "q": "BSN-89631292",
+  "n": 1,
+  "ad": "Bisan MTX 7500 Cues 29\" Dağ Bisikleti 2x10 Vites 19\" (48cm) Kadro",
+  "t": "2026-11-25"
+ },
+ "bisan-python-deore-29-elektrikli-dag-bisikleti-1x12-vites-17-43cm-kadro": {
+  "q": "Python",
+  "n": 1,
+  "ad": "Bisan Python Deore 29\" Elektrikli Dağ Bisikleti 1x12 Vites 17\" (43cm) Kadro",
+  "t": "2026-11-25"
+ },
+ "bisan-smile-26-sehir-bisikleti-1x7-vites-pudra-pembe": {
+  "q": "Vites Pudra",
+  "n": 1,
+  "ad": "Bisan Smile 26\" Şehir Bisikleti 1x7 Vites Pudra Pembe",
+  "t": "2026-11-25"
+ },
+ "bisan-smile-28-sehir-bisikleti-1x7-vites-sari": {
+  "q": "1x7 Vites Sarı",
+  "n": 1,
+  "ad": "Bisan Smile 28\" Şehir Bisikleti 1x7 Vites Sarı",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-24-sehir-bisikleti-1x7-vites-36cm-krem-gold": {
+  "q": "36cm",
+  "n": 1,
+  "ad": "Bisan Sorrento S 24\" Şehir Bisikleti 1x7 Vites 36cm Krem-Gold",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-24-sehir-bisikleti-1x7-vites-bebek-mavi": {
+  "q": "BSN-18449468",
+  "n": 1,
+  "ad": "Bisan Sorrento S 24\" Şehir Bisikleti 1x7 Vites Bebek Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-24-sehir-bisikleti-1x7-vites-cagla-yesili": {
+  "q": "BSN-18515004",
+  "n": 1,
+  "ad": "Bisan Sorrento S 24\" Şehir Bisikleti 1x7 Vites Çağla Yeşili",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-26-sehir-bisikleti-1x7-vites-44cm-mavi": {
+  "q": "44cm Mavi",
+  "n": 1,
+  "ad": "Bisan Sorrento S 26\" Şehir Bisikleti 1x7 Vites 44cm Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-26-sehir-bisikleti-1x7-vites-cagla-yesili": {
+  "q": "BSN-03257148",
+  "n": 1,
+  "ad": "Bisan Sorrento S 26\" Şehir Bisikleti 1x7 Vites Çağla Yeşili",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-28-kadin-sehir-bisikleti-1x7-vites-44cm-krem-gold": {
+  "q": "44cm Krem-Gold",
+  "n": 1,
+  "ad": "Bisan Sorrento S 28\" Kadın Şehir Bisikleti 1x7 Vites 44cm Krem-Gold",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-bebek-mavi": {
+  "q": "BSN-75651900",
+  "n": 1,
+  "ad": "Bisan Sorrento S 28\" Şehir Bisikleti 1x7 Vites Bebek Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-cagla-yesili": {
+  "q": "BSN-75684668",
+  "n": 1,
+  "ad": "Bisan Sorrento S 28\" Şehir Bisikleti 1x7 Vites Çağla Yeşili",
+  "t": "2026-11-25"
+ },
+ "bisan-sorrento-s-28-sehir-bisikleti-1x7-vites-koyu-yesil": {
+  "q": "1x7 Vites Koyu",
+  "n": 1,
+  "ad": "Bisan Sorrento S 28\" Şehir Bisikleti 1x7 Vites Koyu Yeşil",
+  "t": "2026-11-25"
+ },
+ "bisan-spark-20-cocuk-bisikleti-mat-siyah-mavi": {
+  "q": "Bisan Spark",
+  "n": 1,
+  "ad": "Bisan Spark 20\" Çocuk Bisikleti Mat Siyah-Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-trail-x-29-dag-bisikleti-1x8-vites-koyu-mavi-acik-mavi": {
+  "q": "Mavi-Açık",
+  "n": 1,
+  "ad": "Bisan Trail X 29\" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi",
+  "t": "2026-11-25"
+ },
+ "bisan-trx-8200-trekking-bisikleti-3x7-vites-45cm-acik-metalik-gri": {
+  "q": "8200",
+  "n": 1,
+  "ad": "Bisan TRX 8200 Trekking Bisikleti 3x7 Vites 45cm Açık Metalik Gri",
+  "t": "2026-11-25"
+ },
+ "bisan-trx-8300-city-sehir-bisikleti-3x9-vites": {
+  "q": "8300",
+  "n": 1,
+  "ad": "Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites",
+  "t": "2026-11-25"
+ },
+ "bisan-trx-8400-altus-trekking-bisikleti-3x9-vites-52cm-bebek-mavisi": {
+  "q": "8400",
+  "n": 1,
+  "ad": "Bisan TRX 8400 Altus Trekking Bisikleti 3x9 Vites 52cm Bebek Mavisi",
+  "t": "2026-11-25"
+ },
+ "bisan-trx-8500-city-sehir-bisikleti-3x9-vites-50cm-mat-kirmizi": {
+  "q": "8500",
+  "n": 1,
+  "ad": "Bisan TRX 8500 City Şehir Bisikleti 3x9 Vites 50cm Mat Kırmızı",
+  "t": "2026-11-25"
+ },
+ "bisiklet-arka-basamak-takimi": {
+  "q": "Basamak",
+  "n": 1,
+  "ad": "Bisiklet Arka Basamak Takımı",
+  "t": "2026-11-25"
+ },
+ "bisiklet-arka-gobek-32h-mor-markasiz": {
+  "q": "Arka Göbek 32H Mor",
+  "n": 1,
+  "ad": "Bisiklet Arka Göbek 32H Mor (Markasız)",
+  "t": "2026-11-25"
+ },
+ "bisiklet-ayna-mtb-siyah-takim": {
+  "q": "BİSİKLET AYNA",
+  "n": 1,
+  "ad": "BİSİKLET AYNA MTB [SİYAH] [TAKIM]",
+  "t": "2026-11-25"
+ },
+ "bisiklet-comet-usb-120-lumen-guclu-fonksiyonlu-isik": {
+  "q": "Fonksiyonlu",
+  "n": 1,
+  "ad": "Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık",
+  "t": "2026-11-25"
+ },
+ "bisiklet-fren-balatasi-81610-dlhe": {
+  "q": "81610",
+  "n": 1,
+  "ad": "Bisiklet Fren Balatası - 81610, Dlhe,",
+  "t": "2026-11-25"
+ },
+ "bisiklet-fren-teli-tum-bisikletlerle-uyumlu": {
+  "q": "Bisikletlerle",
+  "n": 1,
+  "ad": "Bisiklet Fren Teli (Tüm Bisikletlerle Uyumlu)",
+  "t": "2026-11-25"
+ },
+ "bisiklet-ic-lastik-275x21225-av-48mm-kalin-sibop": {
+  "q": "C2-197W6BIS",
+  "n": 1,
+  "ad": "Bisiklet İç Lastik 27.5\"x2.1/2.25 AV 48MM Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "bisiklet-ic-lastik-275x21225-fv-48mm-ince-sibop": {
+  "q": "C2-1966FO4L",
+  "n": 1,
+  "ad": "Bisiklet İç Lastik 27.5\"x2.1/2.25 FV 48MM İnce Sibop",
+  "t": "2026-11-25"
+ },
+ "bisiklet-ic-lastik-29x21225-av-48mm-kalin-sibop": {
+  "q": "C2-198GUXMK",
+  "n": 1,
+  "ad": "Bisiklet İç Lastik 29\"x2.1/2.25 AV 48MM Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "bisiklet-ic-lastik-29x21225-fv-48mm-ince-sibop": {
+  "q": "C2-195JMYSO",
+  "n": 1,
+  "ad": "Bisiklet İç Lastik 29\"x2.1/2.25 FV 48MM İnce Sibop",
+  "t": "2026-11-25"
+ },
+ "bisiklet-on-gobek-32h-mor-markasiz": {
+  "q": "Ön Göbek 32H",
+  "n": 1,
+  "ad": "Bisiklet Ön Göbek 32H Mor (Markasız)",
+  "t": "2026-11-25"
+ },
+ "bisiklet-pedal-takimi-bilyali": {
+  "q": "Bilyalı",
+  "n": 1,
+  "ad": "Bisiklet Pedal Takımı Bilyalı",
+  "t": "2026-11-25"
+ },
+ "bisiklet-selesi-siyah-gri-16-20-jant-rectus": {
+  "q": "Selesi Siyah-Gri",
+  "n": 1,
+  "ad": "Bisiklet Selesi Siyah-Gri 16 20 Jant Rectus",
+  "t": "2026-11-25"
+ },
+ "bisiklet-selesi-siyah-kirmizi-16-20-jant-rectus": {
+  "q": "Selesi Siyah-Kırmızı",
+  "n": 1,
+  "ad": "Bisiklet Selesi Siyah-Kırmızı 16 20 Jant Rectus",
+  "t": "2026-11-25"
+ },
+ "bisiklet-selesi-siyah-mavi-16-20-jant-rectus": {
+  "q": "Selesi Siyah-Mavi",
+  "n": 1,
+  "ad": "Bisiklet Selesi Siyah-Mavi 16 20 Jant Rectus",
+  "t": "2026-11-25"
+ },
+ "bisiklet-selesi-siyah-pembe-16-20-jant-rectus": {
+  "q": "Siyah-Pembe",
+  "n": 1,
+  "ad": "Bisiklet Selesi Siyah-Pembe 16 20 Jant Rectus",
+  "t": "2026-11-25"
+ },
+ "bisiklet-tamir-kiti": {
+  "q": "Bisiklet Tamir",
+  "n": 1,
+  "ad": "Bisiklet Tamir Kiti",
+  "t": "2026-11-25"
+ },
+ "bisiklet-tasiyici-3lu-plastik-tutacak": {
+  "q": "TAŞIYICI 3'LÜ",
+  "n": 1,
+  "ad": "BİSİKLET TAŞIYICI 3'LÜ [PLASTİK TUTACAK]",
+  "t": "2026-11-25"
+ },
+ "bisiklet-tasiyici-topp-rack-extra-3lu-plastik-tutacak": {
+  "q": "TAŞIYICI TOPP",
+  "n": 1,
+  "ad": "BİSİKLET TAŞIYICI TOPP RACK EXTRA 3'LÜ [PLASTİK TUTACAK]",
+  "t": "2026-11-25"
+ },
+ "bisiklet-zili-pembe-kalp-desenli": {
+  "q": "Bisiklet Zili",
+  "n": 1,
+  "ad": "Bisiklet Zili Pembe Kalp Desenli Çocuk Bisiklet Zili",
+  "t": "2026-11-25"
+ },
+ "brakco-bp-23-yuvarlak-fren-balatasi": {
+  "q": "Brakco",
+  "n": 1,
+  "ad": "Brakco Bp-23 Yuvarlak Fren Balatası",
+  "t": "2026-11-25"
+ },
+ "briviga-gozluk-gls-39406-pembe": {
+  "q": "BRIVIGA",
+  "n": 1,
+  "ad": "BRIVIGA GÖZLÜK GLS-39406 PEMBE",
+  "t": "2026-11-25"
+ },
+ "camurluk-seti-700c-26-uyumlu-mg-c17-2502505700": {
+  "q": "MG-C17",
+  "n": 1,
+  "ad": "ÇAMURLUK SETİ 700C, 26\" UYUMLU MG-C17 2502505700",
+  "t": "2026-11-25"
+ },
+ "carraro-bandit-dirt-jump-bisiklet": {
+  "q": "Bandit",
+  "n": 1,
+  "ad": "Carraro Bandit Dirt Jump Bisiklet",
+  "t": "2026-11-25"
+ },
+ "carraro-crx-921-21-v-hd-29-mat-bronz-kahverengi-44cm": {
+  "q": "Bronz-Kahverengi",
+  "n": 1,
+  "ad": "Carraro CRX 921 29\" Jant 21 Vites Hidrolik Disk Dağ Bisikleti 40cm (S) Mat Bronz-Kahverengi",
+  "t": "2026-11-25"
+ },
+ "carraro-crx-921-21-v-hd-29-metalik-lacivert-44cm": {
+  "q": "40cm (S) Metalik",
+  "n": 1,
+  "ad": "Carraro CRX 921 29\" Jant 21 Vites Hidrolik Disk Dağ Bisikleti 40cm (S) Metalik Lacivert-Gümüş",
+  "t": "2026-11-25"
+ },
+ "carraro-gravel-g0-28-16-v-md-mat-mavi-neon-sari": {
+  "q": "16-V",
+  "n": 1,
+  "ad": "Carraro GRAVEL G0 28\" 16-V MD Mat mavi, Neon Sarı",
+  "t": "2026-11-25"
+ },
+ "carraro-rave-bmx-20-1-v-vb-mat-mor": {
+  "q": "Carraro RAVE",
+  "n": 1,
+  "ad": "Carraro RAVE BMX 20\" 1-V VB Mat Mor",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-222-28-jant-21-vites-v-fren-kadin-sehir-bisikleti-41cm-lime-yesil-koyu-yesil-kahve": {
+  "q": "41cm",
+  "n": 1,
+  "ad": "Carraro Sportive 222 28\" Jant 21 Vites V-Fren Kadın Şehir Bisikleti 41cm Lime Yeşil-Koyu Yeşil-Kahve",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-222-28-jant-21-vites-v-fren-kadin-sehir-bisikleti-46cm-manyetik-mavi": {
+  "q": "46cm Manyetik",
+  "n": 1,
+  "ad": "Carraro Sportive 222 28\" Jant 21 Vites V-Fren Kadın Şehir Bisikleti 46cm Manyetik Mavi",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-224-28-sehir-ve-tur-bisikleti-3x8-vites-manyetik-mavi-siyah": {
+  "q": "Sportive 224",
+  "n": 1,
+  "ad": "Carraro Sportive 224 28\" Şehir ve Tur Bisikleti 3x8 Vites Manyetik Mavi-Siyah",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-225-28-jant-24-vites-hidrolik-disk-sehir-bisikleti-46cm-mat-antrasit-siyah-kirmizi": {
+  "q": "Antrasit-Siyah-Kırmızı",
+  "n": 1,
+  "ad": "Carraro Sportive 225 28\" Jant 24 Vites Hidrolik Disk Şehir Bisikleti 46cm Mat Antrasit-Siyah-Kırmızı",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-225-28-jant-24-vites-hidrolik-disk-sehir-bisikleti-46cm-metalik-lacivert-gumus": {
+  "q": "46cm Metalik",
+  "n": 1,
+  "ad": "Carraro Sportive 225 28\" Jant 24 Vites Hidrolik Disk Şehir Bisikleti 46cm Metalik Lacivert-Gümüş",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-28-sehir-bisikleti": {
+  "q": "Sportive 28”",
+  "n": 1,
+  "ad": "Carraro Sportive 28” Şehir Bisikleti",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-721-27-5-jant-21-vites-v-fren-sehir-bisikleti-46cm-mavi-mor-yesil-bukalemun": {
+  "q": "Mavi-Mor-Yeşil",
+  "n": 1,
+  "ad": "Carraro Sportive 721 27.5\" Jant 21 Vites V-Fren Şehir Bisikleti 46cm Mavi-Mor-Yeşil (Bukalemun)",
+  "t": "2026-11-25"
+ },
+ "carraro-sportive-722-27-5-sehir-bisikleti-3x7-vites-v-fren": {
+  "q": "Sportive 722",
+  "n": 1,
+  "ad": "Carraro Sportive 722 27.5\" Şehir Bisikleti 3x7 Vites V-Fren",
+  "t": "2026-11-25"
+ },
+ "chaoyang-20x4-0-fat-bike-dis-lastik-3-mm-zirhli-siyah": {
+  "q": "Chaoyang",
+  "n": 1,
+  "ad": "Chaoyang 20x4.0 Fat Bike Dış Lastik 3 mm Zırhlı Siyah",
+  "t": "2026-11-25"
+ },
+ "continental-conti-tube-700c-25-32c-ic-lastik": {
+  "q": "Continental",
+  "n": 1,
+  "ad": "Continental Conti Tube (700C) 25-32c İç Lastik",
+  "t": "2026-11-25"
+ },
+ "corratec-uyumlu-kadro-kulagi-gumus": {
+  "q": "Corratec",
+  "n": 1,
+  "ad": "Corratec Uyumlu Kadro Kulağı Gümüş",
+  "t": "2026-11-25"
+ },
+ "cst-700c-3543c-sv-ic-lastik-ince-sibop": {
+  "q": "35/43C",
+  "n": 1,
+  "ad": "CST 700C 35/43C SV İç Lastik İnce Sibop",
+  "t": "2026-11-25"
+ },
+ "cst-700x1825c-fv-presta-ince-sibop-ic-lastik-60mm": {
+  "q": "700X18/25C",
+  "n": 1,
+  "ad": "CST 700X18/25C FV Presta İnce Sibop İç Lastik 60mm",
+  "t": "2026-11-25"
+ },
+ "cst-elektrikli-scooter-ic-lastik-8-12-x-2-duz-sibop": {
+  "q": "CST Elektrikli",
+  "n": 1,
+  "ad": "CST Elektrikli Scooter İç Lastik 8 1/2 x 2 Düz Sibop",
+  "t": "2026-11-25"
+ },
+ "cst-ic-lastik-275-x1902125-48mm-fv-ince-sibop": {
+  "q": "X1.90/2.125",
+  "n": 1,
+  "ad": "CST İç Lastik 27.5\" X1.90/2.125 48mm FV İnce Sibop",
+  "t": "2026-11-25"
+ },
+ "cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah": {
+  "q": "Metropolitan",
+  "n": 1,
+  "ad": "CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah",
+  "t": "2026-11-25"
+ },
+ "dis-lastik-16x135-marathon-5-faktor-patlamaya-direncli-brompton-uyumlu-greenguard-11100147": {
+  "q": "16X1.35",
+  "n": 1,
+  "ad": "DIŞ LASTİK 16X1.35 MARATHON ( 5 FAKTÖR PATLAMAYA DİRENÇLİ ) BROMPTON UYUMLU GREENGUARD 11100147",
+  "t": "2026-11-25"
+ },
+ "dis-lastik-700x28c-delta-cruiser-k-guard-beyaz-yanak-11101087": {
+  "q": "700x28C",
+  "n": 1,
+  "ad": "DIŞ LASTİK 700x28C DELTA CRUISER K-GUARD BEYAZ YANAK 11101087",
+  "t": "2026-11-25"
+ },
+ "dis-lastik-700x30c-cx-comp-active-line-gravel-cyclocross-1115036902-1-bag-25-adet": {
+  "q": "700X30C",
+  "n": 1,
+  "ad": "DIŞ LASTİK 700X30C CX COMP ACTIVE LINE GRAVEL / CYCLOCROSS 11150369.02 1 BAĞ 25 ADET",
+  "t": "2026-11-25"
+ },
+ "dis-lastik-700x35c-road-cruiser-3-faktor-patlamaya-direncli-amber-yanak-k-guard-11101275": {
+  "q": "700X35C",
+  "n": 1,
+  "ad": "DIŞ LASTİK 700X35C ROAD CRUISER ( 3 FAKTÖR PATLAMAYA DİRENÇLİ ) AMBER YANAK K-GUARD 11101275",
+  "t": "2026-11-25"
+ },
+ "dis-lastik-700x40c-land-cruiser-k-guard-11101043": {
+  "q": "700x40C",
+  "n": 1,
+  "ad": "DIŞ LASTİK 700x40C LAND CRUISER K-Guard 11101043",
+  "t": "2026-11-25"
+ },
+ "disk-fren-160mm-6-vidali-rotor": {
+  "q": "FREN 160MM",
+  "n": 1,
+  "ad": "DİSK FREN 160MM 6 VİDALI ROTOR",
+  "t": "2026-11-25"
+ },
+ "disk-fren-balatasi-elektrikli-bisikletler-icin": {
+  "q": "Balatası Elektrikli",
+  "n": 1,
+  "ad": "Disk Fren Balatası Elektrikli Bisikletler İçin",
+  "t": "2026-11-25"
+ },
+ "doga-sol-pedal-kolu-170-mm-kare-mil-siyah": {
+  "q": "Doğa Sol",
+  "n": 1,
+  "ad": "Doğa Sol Pedal Kolu 170 mm Kare Mil Siyah",
+  "t": "2026-11-25"
+ },
+ "duranta-275-x-195-2125-bisiklet-ic-lastik-uzun-sibop-av48": {
+  "q": "1.95",
+  "n": 1,
+  "ad": "Duranta 27.5 X 1.95 / 2.125 Bisiklet İç Lastik Uzun Sibop AV48",
+  "t": "2026-11-25"
+ },
+ "duranta-29x2-25-butil-ic-lastik": {
+  "q": "Duranta 29x2.25",
+  "n": 1,
+  "ad": "Duranta 29x2.25 Bütil İç Lastik",
+  "t": "2026-11-25"
+ },
+ "duvar-askisi-obp-22": {
+  "q": "Askısı",
+  "n": 1,
+  "ad": "Duvar Askısı OBP-22",
+  "t": "2026-11-25"
+ },
+ "elcik-kahverengi-deri-gr-g11-135mm-2501588810": {
+  "q": "GR-G11",
+  "n": 1,
+  "ad": "ELCİK KAHVERENGİ DERİ GR-G11 135MM 2501588810",
+  "t": "2026-11-25"
+ },
+ "elcik-xr-30-mavi": {
+  "q": "XR-30 Mavi",
+  "n": 1,
+  "ad": "Elcik XR-30 Mavi",
+  "t": "2026-11-25"
+ },
+ "elcik-xr-30-turuncu-130-mm": {
+  "q": "XR-30 Turuncu",
+  "n": 1,
+  "ad": "Elcik XR-30 Turuncu 130 mm",
+  "t": "2026-11-25"
+ },
+ "elcik-xr-30-yesil-130-mm": {
+  "q": "XR-30 Yeşil",
+  "n": 1,
+  "ad": "Elcik XR-30 Yeşil 130 mm",
+  "t": "2026-11-25"
+ },
+ "elektrikli-bisiklet-cantasi-17lt-siyah-arka-bagaj-cantasi": {
+  "q": "17LT",
+  "n": 1,
+  "ad": "Elektrikli Bisiklet Çantası 17LT Siyah (Arka Bagaj Çantası)",
+  "t": "2026-11-25"
+ },
+ "elektrikli-bisiklet-vites-teli-ekstra-uzun-3-5-metre": {
+  "q": "Bisiklet Vites",
+  "n": 2,
+  "ad": "Elektrikli Bisiklet Vites Teli Ekstra Uzun 3.5 Metre",
+  "t": "2026-11-25"
+ },
+ "elektrikli-bisiklet-vites-teli-ekstra-uzun-3-5-metre-2li-set": {
+  "q": "3.5 Metre - 2'li",
+  "n": 1,
+  "ad": "Elektrikli Bisiklet Vites Teli Ekstra Uzun 3.5 Metre - 2'li Set",
+  "t": "2026-11-25"
+ },
+ "enduro-downhill-bisikletkayakcross-motosiklet-gozlugu": {
+  "q": "Bisiklet&Kayak&Cross",
+  "n": 1,
+  "ad": "Enduro Downhill Bisiklet&Kayak&Cross Motosiklet Gözlüğü",
+  "t": "2026-11-25"
+ },
+ "epic-165-mm-bmx-dirt-jump-elcik-mor-siyah": {
+  "q": "Mor-Siyah",
+  "n": 1,
+  "ad": "Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah",
+  "t": "2026-11-25"
+ },
+ "epic-20x40-elektrikli-bisiklet-camurluk-seti": {
+  "q": "Epic 20x4.0",
+  "n": 1,
+  "ad": "Epic 20x4.0 Elektrikli Bisiklet Çamurluk Seti",
+  "t": "2026-11-25"
+ },
+ "epic-kadro-alti-on-camurluk": {
+  "q": "Epic Kadro",
+  "n": 1,
+  "ad": "Epic Kadro Altı Ön Çamurluk",
+  "t": "2026-11-25"
+ },
+ "epic-katlanir-ve-e-bike-uyumlu-mandalli-sele-borusu-27-2-x-350-mm-siyah": {
+  "q": "Mandallı",
+  "n": 1,
+  "ad": "Epic Katlanır ve E-Bike Uyumlu Mandallı Sele Borusu 27.2 x 350 mm Siyah",
+  "t": "2026-11-25"
+ },
+ "far-helix-lite-w-150-lm-usb-90110460101": {
+  "q": "LITE-W",
+  "n": 1,
+  "ad": "FAR HELIX LITE-W 150 LM USB 90110460101",
+  "t": "2026-11-25"
+ },
+ "far-helix-pro-w-250-lm-usb-90110440101": {
+  "q": "90110440101",
+  "n": 1,
+  "ad": "FAR HELIX PRO-W 250 LM USB 90110440101",
+  "t": "2026-11-25"
+ },
+ "fox-36-float-160mm-275-e-bikela-da-uyumlu": {
+  "q": "E-Bike’la",
+  "n": 1,
+  "ad": "FOX 36 Float 160mm 27.5” (E-Bike’la da uyumlu)",
+  "t": "2026-11-25"
+ },
+ "fox-36-rhythm-160mm-27-5-on-suspansiyon-masasi-siyah": {
+  "q": "Rhythm",
+  "n": 1,
+  "ad": "Fox 36 Rhythm 160mm 27.5\" Ön Süspansiyon Maşası Siyah",
+  "t": "2026-11-25"
+ },
+ "fox-racing-3-pozisyonlu-masa-kilitleme-kolu-i-spec-tek-kablo": {
+  "q": "Racing",
+  "n": 1,
+  "ad": "Fox Racing 3 Pozisyonlu Maşa Kilitleme Kolu I-SPEC Tek Kablo",
+  "t": "2026-11-25"
+ },
+ "gidon-aynasi-yan-baglantili": {
+  "q": "GİDON AYNASI",
+  "n": 1,
+  "ad": "GİDON AYNASI YAN BAĞLANTILI",
+  "t": "2026-11-25"
+ },
+ "gidon-baglantili-360-derece-donebilir-yan-ayna-tekli": {
+  "q": "DERECE",
+  "n": 1,
+  "ad": "GİDON BAĞLANTILI 360 DERECE DÖNEBİLİR YAN AYNA TEKLİ",
+  "t": "2026-11-25"
+ },
+ "gidon-baglantili-matara-kafesi": {
+  "q": "Bağlantılı Matara",
+  "n": 1,
+  "ad": "Gidon Bağlantılı Matara Kafesi",
+  "t": "2026-11-25"
+ },
+ "gidon-bh-30-800-mm-kirmizi": {
+  "q": "800 mm Kırmızı",
+  "n": 1,
+  "ad": "Gidon BH-30 800 mm Kırmızı",
+  "t": "2026-11-25"
+ },
+ "gidon-bh-30-800-mm-mavi": {
+  "q": "800 mm Mavi",
+  "n": 1,
+  "ad": "Gidon BH-30 800 mm Mavi",
+  "t": "2026-11-25"
+ },
+ "gidon-bh-30-800-mm-mor": {
+  "q": "800 mm Mor",
+  "n": 1,
+  "ad": "Gidon BH-30 800 mm Mor",
+  "t": "2026-11-25"
+ },
+ "gidon-bh-30-800-mm-siyah": {
+  "q": "800 mm Siyah",
+  "n": 1,
+  "ad": "Gidon BH-30 800 mm Siyah",
+  "t": "2026-11-25"
+ },
+ "gidon-bogazi-all-mtn-mm-st-m28-40-mm-2501522570": {
+  "q": "ST-M28",
+  "n": 1,
+  "ad": "GİDON BOĞAZI ALL MTN MM ST-M28 40 MM 2501522570",
+  "t": "2026-11-25"
+ },
+ "gidon-bogazi-bm-10-45-mm-kirmizi": {
+  "q": "45 mm Kırmızı",
+  "n": 1,
+  "ad": "Gidon Boğazı BM-10 45 mm Kırmızı",
+  "t": "2026-11-25"
+ },
+ "gidon-bogazi-bm-10-45-mm-mavi": {
+  "q": "45 mm Mavi",
+  "n": 1,
+  "ad": "Gidon Boğazı BM-10 45 mm Mavi",
+  "t": "2026-11-25"
+ },
+ "gidon-bogazi-bm-10-45-mm-mor": {
+  "q": "45 mm Mor",
+  "n": 1,
+  "ad": "Gidon Boğazı BM-10 45 mm Mor",
+  "t": "2026-11-25"
+ },
+ "gidon-bogazi-bm-10-45-mm-siyah": {
+  "q": "45 mm Siyah",
+  "n": 1,
+  "ad": "Gidon Boğazı BM-10 45 mm Siyah",
+  "t": "2026-11-25"
+ },
+ "gidon-ks-05-rainbow": {
+  "q": "KS-05",
+  "n": 1,
+  "ad": "Gidon KS-05 Rainbow",
+  "t": "2026-11-25"
+ },
+ "gidon-sargisi-endurance-beyaz-soft-touch-25-mm-bt08-a00016": {
+  "q": "ENDURANCE",
+  "n": 1,
+  "ad": "GİDON SARGISI ENDURANCE BEYAZ SOFT TOUCH 2,5 MM BT08 A00016",
+  "t": "2026-11-25"
+ },
+ "gidon-sargisi-tempo-yesil-classic-2mm-bt10-a00025": {
+  "q": "CLASSIC",
+  "n": 1,
+  "ad": "GİDON SARGISI TEMPO YEŞİL CLASSIC 2mm BT10 A00025",
+  "t": "2026-11-25"
+ },
+ "gidon-yukseltici-siyah-131-mm": {
+  "q": "YÜKSELTİCİ",
+  "n": 1,
+  "ad": "GİDON YÜKSELTİCİ SİYAH 131 MM",
+  "t": "2026-11-25"
+ },
+ "gidon-yukseltme-adaptoru-117-mm": {
+  "q": "YÜKSELTME",
+  "n": 1,
+  "ad": "GİDON YÜKSELTME ADAPTÖRÜ 117 MM",
+  "t": "2026-11-25"
+ },
+ "gineyea-bisiklet-pedali-rulmanli-platform-tip-kirmizi": {
+  "q": "Tip Kırmızı",
+  "n": 1,
+  "ad": "Gıneyea Bisiklet Pedalı Rulmanlı Platform Tip Kırmızı",
+  "t": "2026-11-25"
+ },
+ "gineyea-bisiklet-pedali-rulmanli-platform-tip-mor": {
+  "q": "Tip Mor",
+  "n": 1,
+  "ad": "Gıneyea Bisiklet Pedalı Rulmanlı Platform Tip Mor",
+  "t": "2026-11-25"
+ },
+ "gineyea-kirmizi-bisiklet-pedali-reflektorlu": {
+  "q": "Gıneyea Kırmızı",
+  "n": 1,
+  "ad": "Gıneyea Kırmızı Bisiklet Pedalı Reflektörlü",
+  "t": "2026-11-25"
+ },
+ "gineyea-siyah-bisiklet-pedali-reflektorlu-m608": {
+  "q": "M608",
+  "n": 1,
+  "ad": "Gıneyea Siyah Bisiklet Pedalı Reflektörlü M608",
+  "t": "2026-11-25"
+ },
+ "giyo-gp-04s-120psi-plastik-pompa": {
+  "q": "GP-04S",
+  "n": 1,
+  "ad": "Giyo GP-04S 120PSI Plastik Pompa",
+  "t": "2026-11-25"
+ },
+ "giyo-gp-45e-pompa-80-psi": {
+  "q": "GP-45E",
+  "n": 1,
+  "ad": "Giyo GP-45E Pompa 80 Psi",
+  "t": "2026-11-25"
+ },
+ "grayzer-fren-balata-temizleme-spreyi-500-ml": {
+  "q": "Temizleme",
+  "n": 1,
+  "ad": "Grayzer Fren Balata Temizleme Spreyi 500 ML",
+  "t": "2026-11-25"
+ },
+ "grayzer-gr-40-cok-amacli-bakim-spreyi-200-ml": {
+  "q": "GR-40",
+  "n": 1,
+  "ad": "Grayzer GR-40 Çok Amaçlı Bakım Spreyi 200 ML",
+  "t": "2026-11-25"
+ },
+ "h367-arka-vites-kulagi-ns-bikes-octane-one-pride-sabotage-gios-vitus": {
+  "q": "H367",
+  "n": 1,
+  "ad": "H367 Arka Vites Kulağı NS Bikes, Octane One, Pride Sabotage, Gios, Vitus Uyumlu",
+  "t": "2026-11-25"
+ },
+ "hassns-pro-bisiklet-arka-gobek-32h-36h-rainbow-siyah": {
+  "q": "Rainbow, Siyah",
+  "n": 1,
+  "ad": "HASSNS Pro Bisiklet Arka Göbek 32H / 36H - Rainbow, Siyah",
+  "t": "2026-11-25"
+ },
+ "hassns-pro-bisiklet-on-gobek-28h-32h-36h-rainbow-mor-siyah-kirmizi": {
+  "q": "Göbek 28H",
+  "n": 1,
+  "ad": "HASSNS Pro Bisiklet Ön Göbek 28H / 32H / 36H - Rainbow, Mor, Siyah, Kırmızı",
+  "t": "2026-11-25"
+ },
+ "i-love-my-bike-zil-kirmizi": {
+  "q": "Zil Kırmızı",
+  "n": 1,
+  "ad": "I Love My Bike Zil Kırmızı",
+  "t": "2026-11-25"
+ },
+ "i-love-my-bike-zil-mavi": {
+  "q": "Zil Mavi",
+  "n": 1,
+  "ad": "I Love My Bike Zil Mavi",
+  "t": "2026-11-25"
+ },
+ "i-love-my-bike-zil-sari": {
+  "q": "Zil Sarı",
+  "n": 1,
+  "ad": "I Love My Bike Zil Sarı",
+  "t": "2026-11-25"
+ },
+ "kablo-kilit-anahtarli-k805-mavi-15x650-mm": {
+  "q": "ANAHTARLI",
+  "n": 1,
+  "ad": "KABLO KİLİT ANAHTARLI K805 MAVİ 15X650 mm",
+  "t": "2026-11-25"
+ },
+ "kadro-koruyucu-kilif": {
+  "q": "KADRO KORUYUCU",
+  "n": 1,
+  "ad": "KADRO KORUYUCU KILIF",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-model-2": {
+  "q": "Model 2",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum Model 2",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-model-3-gumus": {
+  "q": "Model 3",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum Model 3 Gümüş",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-model-5-gumus": {
+  "q": "Model 5",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum Model 5 Gümüş",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-model-6": {
+  "q": "Model 6",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum Model 6",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-model-7-gumus": {
+  "q": "Model 7",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum Model 7 Gümüş",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-model-8-gumus": {
+  "q": "Model 8",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum Model 8 Gümüş",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-aluminyum-xc1000": {
+  "q": "XC1000",
+  "n": 1,
+  "ad": "Kadro Kulağı Alüminyum XC1000",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-model-11": {
+  "q": "Model 11",
+  "n": 1,
+  "ad": "Kadro Kulağı Model 11",
+  "t": "2026-11-25"
+ },
+ "kadro-kulagi-model-12": {
+  "q": "Model 12",
+  "n": 1,
+  "ad": "Kadro Kulağı Model 12",
+  "t": "2026-11-25"
+ },
+ "kadro-ve-gidon-baglantili-suluk-tutucu": {
+  "q": "Ve Gidon",
+  "n": 1,
+  "ad": "Kadro Ve Gidon Bağlantılı Suluk Tutucu",
+  "t": "2026-11-25"
+ },
+ "kenze-slikon-elcik-160mm-kirmizi": {
+  "q": "160mm Kırmızı",
+  "n": 1,
+  "ad": "KENZE Slikon Elcik 160mm Kırmızı",
+  "t": "2026-11-25"
+ },
+ "kenze-slikon-elcik-160mm-mavi": {
+  "q": "160mm Mavi",
+  "n": 1,
+  "ad": "KENZE Slikon Elcik 160mm Mavi",
+  "t": "2026-11-25"
+ },
+ "kenze-slikon-elcik-160mm-sari": {
+  "q": "160mm Sarı",
+  "n": 1,
+  "ad": "KENZE Slikon Elcik 160mm Sarı",
+  "t": "2026-11-25"
+ },
+ "kenze-slikon-elcik-165mm-gri-siyah": {
+  "q": "Gri-Siyah",
+  "n": 1,
+  "ad": "KENZE Slikon Elcik 165mm - Gri-Siyah",
+  "t": "2026-11-25"
+ },
+ "kenze-slikon-elcik-165mm-mavi-siyah": {
+  "q": "165mm - Mavi-Siyah",
+  "n": 1,
+  "ad": "KENZE Slikon Elcik 165mm - Mavi-Siyah",
+  "t": "2026-11-25"
+ },
+ "kenze-slikon-elcik-165mm-yesil-siyah": {
+  "q": "Yeşil-Siyah",
+  "n": 1,
+  "ad": "KENZE Slikon Elcik 165mm - Yeşil-Siyah",
+  "t": "2026-11-25"
+ },
+ "kenze-vidali-elcik": {
+  "q": "Kenze Vidalı",
+  "n": 1,
+  "ad": "Kenze Vidalı Elcik",
+  "t": "2026-11-25"
+ },
+ "kilometre-saati-kablolu-10-fonksiyon-bri-10": {
+  "q": "KABLOLU",
+  "n": 1,
+  "ad": "KİLOMETRE SAATİ KABLOLU 10 FONKSİYON BRI-10",
+  "t": "2026-11-25"
+ },
+ "knt-sele-borusu-25-4-mm-250-mm-krom": {
+  "q": "KNT Sele",
+  "n": 1,
+  "ad": "KNT Sele Borusu 25.4 mm 250 mm Krom",
+  "t": "2026-11-25"
+ },
+ "lapierre-uyumlu-kadro-kulagi-siyah": {
+  "q": "Lapierre Uyumlu",
+  "n": 1,
+  "ad": "Lapierre Uyumlu Kadro Kulağı Siyah",
+  "t": "2026-11-25"
+ },
+ "lapierre-zesty-tr-4-9-29-jant-12-vites-cift-suspansiyonlu-dag-bisikleti-43cm-m-mat-koyu-turkuaz": {
+  "q": "Turkuaz",
+  "n": 1,
+  "ad": "Lapierre Zesty TR 4.9 29\" Jant 12 Vites Çift Süspansiyonlu Dağ Bisikleti 43cm (M) Mat Koyu Turkuaz",
+  "t": "2026-11-25"
+ },
+ "lapierre-zesty-tr-5-9-29-jant-12-vites-cift-suspansiyonlu-dag-bisikleti-43cm-m-mat-bordo": {
+  "q": "TR 5.9",
+  "n": 1,
+  "ad": "Lapierre Zesty TR 5.9 29\" Jant 12 Vites Çift Süspansiyonlu Dağ Bisikleti 43cm (M) Mat Bordo",
+  "t": "2026-11-25"
+ },
+ "lock-12x1200-mm-tasimasi-kolay-sifreli-bisiklet-motor-kilidi-kilit": {
+  "q": "12X1200",
+  "n": 1,
+  "ad": "Lock 12X1200 mm Taşıması Kolay Şifreli Bisiklet, Motor Kilidi Kilit",
+  "t": "2026-11-25"
+ },
+ "logan-sensorlu-hidrolik-fren-seti": {
+  "q": "Sensörlü",
+  "n": 1,
+  "ad": "Logan Sensörlü Hidrolik Fren Seti",
+  "t": "2026-11-25"
+ },
+ "matara-kafesi-bcg-301-pc-siyah-levye-hediyeli-siyah-21g": {
+  "q": "BCG-301",
+  "n": 1,
+  "ad": "MATARA KAFESİ BCG-301 PC SİYAH - LEVYE HEDİYELİ SİYAH 21g",
+  "t": "2026-11-25"
+ },
+ "matara-kafesi-bcg-31711b-aluminyum-gri-33g": {
+  "q": "ALÜMİNYUM GRİ",
+  "n": 1,
+  "ad": "MATARA KAFESİ BCG-31711B ALÜMİNYUM GRİ 33g",
+  "t": "2026-11-25"
+ },
+ "matara-kafesi-bcg-31711b-aluminyum-siyah-33g": {
+  "q": "SİYAH 33g",
+  "n": 1,
+  "ad": "MATARA KAFESİ BCG-31711B ALÜMİNYUM SİYAH 33g",
+  "t": "2026-11-25"
+ },
+ "matara-kafesi-bcg-323-siyah-ayarlanabilir": {
+  "q": "BCG-323",
+  "n": 1,
+  "ad": "MATARA KAFESİ BCG-323 SİYAH AYARLANABİLİR",
+  "t": "2026-11-25"
+ },
+ "maxxis-275-190235-ic-lastik-kalin-sibop": {
+  "q": "1.90/2.35",
+  "n": 1,
+  "ad": "Maxxis 27.5\" 1.90/2.35 İç Lastik Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "maxxis-275x175-240-ultralight-ince-sibop-ic-lastik-fv48mm": {
+  "q": "27.5x1.75-2.40",
+  "n": 1,
+  "ad": "Maxxis 27.5x1.75-2.40 Ultralight İnce Sibop İç Lastik FV48mm",
+  "t": "2026-11-25"
+ },
+ "maxxis-crossmark-ii-29x225": {
+  "q": "Crossmark",
+  "n": 1,
+  "ad": "Maxxis Crossmark II 29x2.25",
+  "t": "2026-11-25"
+ },
+ "maxxis-welter-weight-ic-lastik-700x23-32c-ince-sibop-48mm": {
+  "q": "Welter",
+  "n": 1,
+  "ad": "Maxxis Welter Weight İç Lastik 700\"x23-32c İnce Sibop 48mm",
+  "t": "2026-11-25"
+ },
+ "maya-m410-zincir": {
+  "q": "M410",
+  "n": 1,
+  "ad": "Maya M410 Zincir",
+  "t": "2026-11-25"
+ },
+ "mc6636-jump-starter-lastik-sisirme-pompasi-aku-takviye": {
+  "q": "MC6636",
+  "n": 1,
+  "ad": "MC6636 Jump Starter & Lastik Şişirme Pompası - Akü Takviye, Dijital Kompresör, Powerbank, LED Fener",
+  "t": "2026-11-25"
+ },
+ "meghna-14-175-2125-av-kalin-sibop-ic-lastik": {
+  "q": "AV Kalın",
+  "n": 1,
+  "ad": "MEGHNA 14\" 1.75 / 2.125 AV Kalın Sibop İç Lastik",
+  "t": "2026-11-25"
+ },
+ "meghna-20-x-400-fat-bike-ic-lastik-av-oto-sibop-butil": {
+  "q": "4.00",
+  "n": 1,
+  "ad": "MEGHNA 20 x 4.00 Fat Bike İç Lastik A/V Oto Sibop Butil",
+  "t": "2026-11-25"
+ },
+ "meghna-700c-x-2838c-fv-ince-sibop-48mm-ic-lastik": {
+  "q": "28/38C",
+  "n": 1,
+  "ad": "MEGHNA 700C x 28/38C FV İnce Sibop 48mm İç Lastik",
+  "t": "2026-11-25"
+ },
+ "meroca-civili-platform-pedal": {
+  "q": "Meroca",
+  "n": 1,
+  "ad": "Meroca Çivili Platform Pedal",
+  "t": "2026-11-25"
+ },
+ "mtb-plastik-camurluk-takim-genis": {
+  "q": "MTB PLASTİK",
+  "n": 1,
+  "ad": "MTB PLASTİK ÇAMURLUK TAKIM GENİŞ",
+  "t": "2026-11-25"
+ },
+ "mtb-race-face-half-nelson-vidali-mtb-elcik": {
+  "q": "Nelson",
+  "n": 1,
+  "ad": "MTB Race Face Half Nelson vidalı MTB Elcik",
+  "t": "2026-11-25"
+ },
+ "nero-lastik-tamir-solusyonu-yesil-380ml": {
+  "q": "Solüsyonu",
+  "n": 1,
+  "ad": "Nero Lastik Tamir Solüsyonu Yeşil 380ml",
+  "t": "2026-11-25"
+ },
+ "netodak-24-vitesli-bisiklet-yan-denge-destek-tekeri-siyah": {
+  "q": "24destek",
+  "n": 1,
+  "ad": "Netodak 24\" Vitesli Bisiklet Yan Denge (Destek) Tekeri Siyah",
+  "t": "2026-11-25"
+ },
+ "netodak-26-vitesli-bisiklet-yan-denge-destek-tekeri-siyah": {
+  "q": "26destek",
+  "n": 1,
+  "ad": "Netodak 26\" Vitesli Bisiklet Yan Denge (Destek) Tekeri Siyah",
+  "t": "2026-11-25"
+ },
+ "nitro-bike-team-enduro-downhill-formasi": {
+  "q": "Forması",
+  "n": 1,
+  "ad": "Nitro Bike Team Enduro Downhill Forması",
+  "t": "2026-11-25"
+ },
+ "nitro-bisiklet-zincir-gergisi": {
+  "q": "Gergisi",
+  "n": 1,
+  "ad": "Nitro Bisiklet Zincir Gergisi",
+  "t": "2026-11-25"
+ },
+ "nitro-eski-tip-sele-alti-kelepcesi-siyah": {
+  "q": "Nitro Eski",
+  "n": 1,
+  "ad": "Nitro Eski Tip Sele Altı Kelepçesi Siyah",
+  "t": "2026-11-25"
+ },
+ "novahub-premium-bmx-gyro-fren-kablo-seti-on-arka": {
+  "q": "Novahub",
+  "n": 1,
+  "ad": "Novahub Premium BMX Gyro Fren Kablo Seti (Ön + Arka)",
+  "t": "2026-11-25"
+ },
+ "ns-kelepceli-sport-model-dikiz-aynasi-takimi-2-adet": {
+  "q": "Kelepçeli",
+  "n": 1,
+  "ad": "NS Kelepçeli Sport Model Dikiz Aynası Takımı (2 Adet)",
+  "t": "2026-11-25"
+ },
+ "oem-nitro-aluminyum-bisiklet-telefon-tutucu": {
+  "q": "OEM Nitro",
+  "n": 1,
+  "ad": "OEM Nitro Alüminyum Bisiklet Telefon Tutucu",
+  "t": "2026-11-25"
+ },
+ "onvo-ov-012-ov-013-elektrikli-scooter-sarj-aleti-54-6v-2-5a": {
+  "q": "OV-012",
+  "n": 1,
+  "ad": "Onvo OV-012 / OV-013 Elektrikli Scooter Şarj Aleti 54.6V 2.5A",
+  "t": "2026-11-25"
+ },
+ "orta-park-ayagi-29-krom": {
+  "q": "C4-137FSV3P",
+  "n": 1,
+  "ad": "Orta Park Ayağı 29\" Krom",
+  "t": "2026-11-25"
+ },
+ "orta-park-ayagi-29-siyah": {
+  "q": "C4-13424J4H",
+  "n": 1,
+  "ad": "Orta Park Ayağı 29\" Siyah",
+  "t": "2026-11-25"
+ },
+ "ortlieb-e227-baglanti-tokasi-rack-pack-urbanback-roller": {
+  "q": "ORTLIEB",
+  "n": 1,
+  "ad": "ORTLIEB E227 Bağlantı tokası Rack-Pack Urban/Back-Roller",
+  "t": "2026-11-25"
+ },
+ "ovela-165-mm-dh-enduro-bmx-elcik-mavi": {
+  "q": "Ovela 165",
+  "n": 1,
+  "ad": "Ovela 165 mm DH / Enduro / BMX Elcik Mavi",
+  "t": "2026-11-25"
+ },
+ "ovela-bisiklet-camurluk-kirmizi": {
+  "q": "Çamurluk Kırmızı",
+  "n": 1,
+  "ad": "Ovela Bisiklet Çamurluk Kırmızı",
+  "t": "2026-11-25"
+ },
+ "ovela-bisiklet-camurluk-mavi": {
+  "q": "Çamurluk Mavi",
+  "n": 1,
+  "ad": "Ovela Bisiklet Çamurluk Mavi",
+  "t": "2026-11-25"
+ },
+ "ovela-bisiklet-camurluk-mor": {
+  "q": "Çamurluk Mor",
+  "n": 1,
+  "ad": "Ovela Bisiklet Çamurluk Mor",
+  "t": "2026-11-25"
+ },
+ "ovela-bisiklet-camurluk-oilsick": {
+  "q": "Oilsick",
+  "n": 1,
+  "ad": "Ovela Bisiklet Çamurluk Oilsick",
+  "t": "2026-11-25"
+ },
+ "ovela-bisiklet-camurluk-renkli": {
+  "q": "Çamurluk Renkli",
+  "n": 1,
+  "ad": "Ovela Bisiklet Çamurluk Renkli",
+  "t": "2026-11-25"
+ },
+ "ovela-bisiklet-camurluk-sari": {
+  "q": "Çamurluk Sarı",
+  "n": 1,
+  "ad": "Ovela Bisiklet Çamurluk Sarı",
+  "t": "2026-11-25"
+ },
+ "pc-270-gidon-telefon-tutucu": {
+  "q": "PC-270",
+  "n": 1,
+  "ad": "PC-270 Gidon Telefon Tutucu",
+  "t": "2026-11-25"
+ },
+ "pc-290-kadroustu-bikebike-heybe": {
+  "q": "Pc-290",
+  "n": 1,
+  "ad": "Pc-290 Kadroüstü bike&bike heybe",
+  "t": "2026-11-25"
+ },
+ "pc-400-arka-bagaj-kucuk-canta": {
+  "q": "PC-400",
+  "n": 1,
+  "ad": "PC-400 Arka Bagaj Küçük Çanta",
+  "t": "2026-11-25"
+ },
+ "pc-635-paralel-arka-bagaj-heybe-6-lt": {
+  "q": "PC-635",
+  "n": 1,
+  "ad": "PC-635 Paralel Arka bagaj heybe 6 LT",
+  "t": "2026-11-25"
+ },
+ "pc-735-gidon-termal-dikdortgen-canta": {
+  "q": "PC-735",
+  "n": 1,
+  "ad": "PC-735 Gidon Termal Dikdörtgen Çanta",
+  "t": "2026-11-25"
+ },
+ "pc-745-katlanir-bisiklet-gidon-cantasi": {
+  "q": "PC-745",
+  "n": 1,
+  "ad": "PC-745 Katlanır Bisiklet Gidon Çantası",
+  "t": "2026-11-25"
+ },
+ "pc-750-gidon-yatay-silindir-canta-xl": {
+  "q": "Pc-750",
+  "n": 1,
+  "ad": "Pc-750 Gidon Yatay Silindir Çanta XL",
+  "t": "2026-11-25"
+ },
+ "peak-sunrun-3x7-vites-cevirmeli-vites-kolu-kirmizi": {
+  "q": "Sunrun",
+  "n": 1,
+  "ad": "Peak Sunrun 3x7 Vites Çevirmeli Vites Kolu Kırmızı",
+  "t": "2026-11-25"
+ },
+ "pedal-hf-805-platform-aluminyum-barrel-siyah-110x100mm-363gpr": {
+  "q": "HF-805",
+  "n": 1,
+  "ad": "PEDAL HF-805 PLATFORM ALÜMİNYUM BARREL SİYAH 110x100mm 363g/pr",
+  "t": "2026-11-25"
+ },
+ "pedal-hf-856-platform-tek-parca-plastik-siyah-107x100mm-282gpr": {
+  "q": "HF-856",
+  "n": 1,
+  "ad": "PEDAL HF-856 PLATFORM TEK PARÇA PLASTİK SİYAH 107x100mm 282g/pr",
+  "t": "2026-11-25"
+ },
+ "pedal-k203-kirmizi": {
+  "q": "K203 Kırmızı",
+  "n": 1,
+  "ad": "Pedal K203 Kırmızı",
+  "t": "2026-11-25"
+ },
+ "pedal-k203-mavi": {
+  "q": "K203 Mavi",
+  "n": 1,
+  "ad": "Pedal K203 Mavi",
+  "t": "2026-11-25"
+ },
+ "pedal-k203-mor": {
+  "q": "K203 Mor",
+  "n": 1,
+  "ad": "Pedal K203 Mor",
+  "t": "2026-11-25"
+ },
+ "pedal-k203-siyah": {
+  "q": "K203 Siyah",
+  "n": 1,
+  "ad": "Pedal K203 Siyah",
+  "t": "2026-11-25"
+ },
+ "pedal-m504-siyah": {
+  "q": "M504",
+  "n": 1,
+  "ad": "Pedal M504 Siyah",
+  "t": "2026-11-25"
+ },
+ "pedal-m505-siyah": {
+  "q": "M505",
+  "n": 1,
+  "ad": "Pedal M505 Siyah",
+  "t": "2026-11-25"
+ },
+ "pedal-m506-siyah": {
+  "q": "M506",
+  "n": 1,
+  "ad": "Pedal M506 Siyah",
+  "t": "2026-11-25"
+ },
+ "pedal-ny-02-sari": {
+  "q": "NY-02",
+  "n": 1,
+  "ad": "Pedal NY-02 Sarı",
+  "t": "2026-11-25"
+ },
+ "pinarello-focus-norco-peugeot-uyumlu-kadro-kulagi-siyah": {
+  "q": "Pinarello",
+  "n": 1,
+  "ad": "Pinarello / Focus / Norco / Peugeot Uyumlu Kadro Kulağı Siyah",
+  "t": "2026-11-25"
+ },
+ "polisport-c600-matara": {
+  "q": "C4-96WG6KZ",
+  "n": 1,
+  "ad": "Polisport C600 Matara",
+  "t": "2026-11-25"
+ },
+ "polisport-c600-matara-beyaz": {
+  "q": "Matara Beyaz",
+  "n": 1,
+  "ad": "Polisport C600 Matara Beyaz",
+  "t": "2026-11-25"
+ },
+ "polisport-c700-matara": {
+  "q": "C700",
+  "n": 1,
+  "ad": "Polisport C700 Matara",
+  "t": "2026-11-25"
+ },
+ "polisport-plastik-matara-kafesi-premium": {
+  "q": "Polisport Plastik",
+  "n": 1,
+  "ad": "Polisport Plastik Matara Kafesi Premıum",
+  "t": "2026-11-25"
+ },
+ "pro-cift-tarafli-gobek-koni-anahtar-seti-13141516-mm": {
+  "q": "Taraflı",
+  "n": 1,
+  "ad": "Pro Çift Taraflı Göbek / Koni Anahtar Seti 13/14/15/16 mm",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-250-telefon-bolmeli-kadro-ustu-heybe-siyah": {
+  "q": "PC-250",
+  "n": 1,
+  "ad": "Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-260-kadro-telefon-tutucu-canta-siyah": {
+  "q": "PC-260",
+  "n": 1,
+  "ad": "Procycle PC-260 Kadro Telefon Tutucu Çanta Siyah",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-300-kadro-ucgen-canta": {
+  "q": "PC-300",
+  "n": 1,
+  "ad": "Procycle PC-300 Kadro Üçgen Çanta",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-350-kadro-arasi-canta-siyah": {
+  "q": "PC-350",
+  "n": 1,
+  "ad": "Procycle PC-350 Kadro Arası Çanta Siyah",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-415-heybeli-arka-bagaj-canta-buyuk": {
+  "q": "Heybeli",
+  "n": 1,
+  "ad": "Procycle Pc 415 Heybeli Arka Bagaj Çanta Büyük",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-420-canta": {
+  "q": "Pc 420",
+  "n": 1,
+  "ad": "Procycle Pc 420 Çanta",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-430-canta": {
+  "q": "Pc 430",
+  "n": 1,
+  "ad": "Procycle Pc 430 Çanta",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-460-termal-koruma-arkabagaj-canta": {
+  "q": "Arkabagaj",
+  "n": 1,
+  "ad": "Procycle Pc 460 Termal Koruma Arkabagaj Çanta",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-500-sele-alti-canta": {
+  "q": "PC-500",
+  "n": 1,
+  "ad": "Procycle PC-500 Sele Altı Çanta",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-550-sele-alti-mega-heybe-12-lt-siyah": {
+  "q": "PC-550",
+  "n": 1,
+  "ad": "Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-670-renkli-tur-heybesi-sag-sol-takim": {
+  "q": "PC-670",
+  "n": 1,
+  "ad": "Procycle PC-670 Renkli Tur Heybesi (Sağ-Sol Takım)",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-800-bisiklet-tasima-cantasi": {
+  "q": "Pc 800",
+  "n": 1,
+  "ad": "Procycle Pc 800 Bisiklet Taşıma Çantası",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-835-jant-teker-tasima-cantasi-1-adet": {
+  "q": "C4-13PRNLV",
+  "n": 1,
+  "ad": "Procycle Pc 835 Jant Teker Taşıma Çantası (1 Adet)",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-835-jant-teker-tasima-cantasi-2-adet": {
+  "q": "C4-12UV6A3",
+  "n": 1,
+  "ad": "Procycle Pc 835 Jant Teker Taşıma Çantası (2 Adet)",
+  "t": "2026-11-25"
+ },
+ "procycle-pc-975-ustten-gecmeli-bisiklet-brandasi-siyah": {
+  "q": "PC-975",
+  "n": 1,
+  "ad": "Procycle PC-975 Üstten Geçmeli Bisiklet Brandası Siyah",
+  "t": "2026-11-25"
+ },
+ "raptor-cocuk-bisiklet-kaski-candy-m-beden": {
+  "q": "KASKI CANDY",
+  "n": 1,
+  "ad": "RAPTOR ÇOCUK BİSİKLET KASKI CANDY M BEDEN",
+  "t": "2026-11-25"
+ },
+ "raptor-cocuk-bisiklet-kaski-ocean-m-beden": {
+  "q": "KASKI OCEAN",
+  "n": 1,
+  "ad": "RAPTOR ÇOCUK BİSİKLET KASKI OCEAN M BEDEN",
+  "t": "2026-11-25"
+ },
+ "rectus-bisiklet-sele-kirmizi-mtb": {
+  "q": "Rectus Bisiklet",
+  "n": 1,
+  "ad": "Rectus Bisiklet Sele Kırmızı Mtb",
+  "t": "2026-11-25"
+ },
+ "rectus-fren-balatasi": {
+  "q": "Rectus Fren",
+  "n": 1,
+  "ad": "Rectus Fren Balatası",
+  "t": "2026-11-25"
+ },
+ "rectus-genis-konfor-sele": {
+  "q": "Konfor",
+  "n": 1,
+  "ad": "Rectus Geniş Konfor Sele",
+  "t": "2026-11-25"
+ },
+ "rectus-kilometre-saati": {
+  "q": "Rectus Kilometre",
+  "n": 1,
+  "ad": "Rectus Kilometre Saati",
+  "t": "2026-11-25"
+ },
+ "rectus-m30-12-x332-112l-zincir": {
+  "q": "X3/32",
+  "n": 1,
+  "ad": "Rectus M30 1/2 X3/32 112L Zincir",
+  "t": "2026-11-25"
+ },
+ "rectus-mtb-sele-kirmizi": {
+  "q": "Mtb Sele Kırmızı",
+  "n": 1,
+  "ad": "Rectus Mtb Sele Kırmızı",
+  "t": "2026-11-25"
+ },
+ "rectus-mtb-sele-mavi": {
+  "q": "Sele Mavi",
+  "n": 1,
+  "ad": "Rectus Mtb Sele Mavi",
+  "t": "2026-11-25"
+ },
+ "rectus-mtb-sele-siyah": {
+  "q": "Rectus Mtb Sele Siyah",
+  "n": 1,
+  "ad": "Rectus Mtb Sele Siyah",
+  "t": "2026-11-25"
+ },
+ "rectus-r-632-kislik-eldiven": {
+  "q": "R-632",
+  "n": 1,
+  "ad": "Rectus R-632 Kışlık Eldiven",
+  "t": "2026-11-25"
+ },
+ "rectus-sirtlikli-arka-bagaj-koltugu-minderi-cocuk-ve-yetiskin": {
+  "q": "Sırtlıklı",
+  "n": 1,
+  "ad": "Rectus Sırtlıklı Arka Bagaj Koltuğu Minderi (Çocuk ve Yetişkin)",
+  "t": "2026-11-25"
+ },
+ "rks-kuba-ola-skyjet-elektrikli-bisiklet-on-arka-fren-teli-ve-kablo-seti": {
+  "q": "Skyjet",
+  "n": 1,
+  "ad": "RKS Kuba / Ola / Skyjet Elektrikli Bisiklet Ön-Arka Fren Teli ve Kablo Seti",
+  "t": "2026-11-25"
+ },
+ "salcano-26-jant-snow-20-fat-bike": {
+  "q": "Jant Snow",
+  "n": 1,
+  "ad": "Salcano 26\" Jant Snow 2.0 Fat Bike",
+  "t": "2026-11-25"
+ },
+ "salcano-kron-uyumlu-kadro-kulagi-aluminyum-gumus": {
+  "q": "Kron",
+  "n": 1,
+  "ad": "Salcano / Kron Uyumlu Kadro Kulağı Alüminyum Gümüş",
+  "t": "2026-11-25"
+ },
+ "salcano-ng650-26-dag-bisikleti": {
+  "q": "Ng650",
+  "n": 1,
+  "ad": "Salcano Ng650 26” Dağ Bisikleti",
+  "t": "2026-11-25"
+ },
+ "sarissa-elektrikli-bisiklet-uyumlu-kadro-baglantili-cocuk-koltugu-siyah-kirmizi": {
+  "q": "Sarissa",
+  "n": 1,
+  "ad": "Sarissa Elektrikli Bisiklet Uyumlu Kadro Bağlantılı Çocuk Koltuğu Siyah-Kırmızı",
+  "t": "2026-11-25"
+ },
+ "schwalbe-smart-sam-performance-29x2-25-dis-lastik": {
+  "q": "Performance",
+  "n": 1,
+  "ad": "Schwalbe Smart Sam Performance 29x2.25 Dış Lastik",
+  "t": "2026-11-25"
+ },
+ "schwalbe-tough-tom-29x2-25-dis-lastik": {
+  "q": "Schwalbe Tough",
+  "n": 1,
+  "ad": "Schwalbe Tough Tom 29x2.25 Dış Lastik",
+  "t": "2026-11-25"
+ },
+ "sedona-sd100-matara-kafesi": {
+  "q": "C4-116YPQPS",
+  "n": 1,
+  "ad": "Sedona SD100 Matara Kafesi",
+  "t": "2026-11-25"
+ },
+ "sedona-sd100-matara-kafesi-2": {
+  "q": "C4-117WQ56L",
+  "n": 1,
+  "ad": "Sedona SD100 Matara Kafesi",
+  "t": "2026-11-25"
+ },
+ "sedona-sd100-matara-kafesi-3": {
+  "q": "C4-118SNIMI",
+  "n": 1,
+  "ad": "Sedona SD100 Matara Kafesi",
+  "t": "2026-11-25"
+ },
+ "sedona-sd100-matara-kafesi-4": {
+  "q": "C4-12054GEM",
+  "n": 1,
+  "ad": "Sedona SD100 Matara Kafesi",
+  "t": "2026-11-25"
+ },
+ "sedona-sd100-matara-kafesi-5": {
+  "q": "C4-121HSKLY",
+  "n": 1,
+  "ad": "Sedona SD100 Matara Kafesi",
+  "t": "2026-11-25"
+ },
+ "sele-kelepcesi-allen-sikmali-318mm-ledli-siyah": {
+  "q": "31.8MM",
+  "n": 1,
+  "ad": "SELE KELEPÇESİ ALLEN SIKMALI 31.8MM LEDLİ SİYAH",
+  "t": "2026-11-25"
+ },
+ "sele-kelepcesi-allen-sikmali-349mm-ledli-siyah": {
+  "q": "SIKMALI 34.9MM",
+  "n": 1,
+  "ad": "SELE KELEPÇESİ ALLEN SIKMALI 34.9MM LEDLİ SİYAH",
+  "t": "2026-11-25"
+ },
+ "sele-kelepcesi-dia316mm-arka-bagaj-baglantili-2502063122": {
+  "q": "DIA:31.6mm",
+  "n": 1,
+  "ad": "SELE KELEPÇESİ DIA:31.6mm ARKA BAGAJ BAĞLANTILI 2502063122",
+  "t": "2026-11-25"
+ },
+ "sele-kelepcesi-dia349-348-allen-sikmali-ursus-art602v-aluminyum-gumus": {
+  "q": "34.8",
+  "n": 1,
+  "ad": "SELE KELEPÇESİ DIA:34.9 (34.8) ALLEN SIKMALI URSUS Art.602V ALÜMİNYUM GÜMÜŞ",
+  "t": "2026-11-25"
+ },
+ "sele-kelepcesi-dia349mm-arka-bagaj-baglantili-2502063124": {
+  "q": "DIA:34.9mm",
+  "n": 1,
+  "ad": "SELE KELEPÇESİ DIA:34.9mm ARKA BAGAJ BAĞLANTILI 2502063124",
+  "t": "2026-11-25"
+ },
+ "sele-kelepcesi-dia35mm-allen-sikmali-hl-at-84-aluminyum-mat-siyah": {
+  "q": "DIA:35mm",
+  "n": 1,
+  "ad": "SELE KELEPÇESİ DIA:35mm ALLEN SIKMALI HL AT-84 ALÜMİNYUM MAT SİYAH",
+  "t": "2026-11-25"
+ },
+ "servis-16-x-175-2125-av-bisiklet-ic-lastik-kalin-sibop": {
+  "q": "C2-194K4MC3",
+  "n": 1,
+  "ad": "Servis 16\" x 1.75 / 2.125 AV Bisiklet Iç Lastik Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "servis-20-x-175-2125-av-bisiklet-ic-lastik-kalin-sibop": {
+  "q": "C2-193XRDUN",
+  "n": 1,
+  "ad": "Servis 20\" x 1.75 / 2.125 AV Bisiklet Iç Lastik Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "servis-24-x-175-2125-av-bisiklet-ic-lastik-kalin-sibop": {
+  "q": "C2-19144UL1",
+  "n": 1,
+  "ad": "Servis 24\" x 1.75 / 2.125 AV Bisiklet Iç Lastik Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "servis-26-x-175-2125-av-bisiklet-ic-lastik-kalin-sibop": {
+  "q": "C2-192RQNM0",
+  "n": 1,
+  "ad": "Servis 26\" x 1.75 / 2.125 AV Bisiklet Iç Lastik Kalın Sibop",
+  "t": "2026-11-25"
+ },
+ "shimano-acera-cs-hg41-7-7-vites-11-28t-kaset-disli": {
+  "q": "CS-HG41-7",
+  "n": 1,
+  "ad": "Shimano Acera CS-HG41-7 7 Vites 11-28T Kaset Dişli",
+  "t": "2026-11-25"
+ },
+ "shimano-alivio-br-t4000-arka-v-fren": {
+  "q": "BR-T4000 Arka",
+  "n": 1,
+  "ad": "Shimano Alivio BR-T4000 Arka V-Fren",
+  "t": "2026-11-25"
+ },
+ "shimano-alivio-br-t4000-on-v-fren": {
+  "q": "BR-T4000 Ön",
+  "n": 1,
+  "ad": "Shimano Alivio BR-T4000 Ön V-Fren",
+  "t": "2026-11-25"
+ },
+ "shimano-alivio-cs-hg51-8-vites-kaset-disli": {
+  "q": "CS-HG51",
+  "n": 1,
+  "ad": "Shimano Alivio CS-HG51 8 Vites Kaset Dişli",
+  "t": "2026-11-25"
+ },
+ "shimano-alivio-m411-aynakol-48-38-28t-170-mm-kare-mil-siyah-gumus": {
+  "q": "M411",
+  "n": 1,
+  "ad": "Shimano Alivio M411 Aynakol 48/38/28T 170 mm Kare Mil Siyah-Gümüş",
+  "t": "2026-11-25"
+ },
+ "shimano-altus-fh-qc300-arka-gobek-135mm-qr-32-delik-center-lock-siyah": {
+  "q": "FH-QC300",
+  "n": 1,
+  "ad": "Shimano Altus FH-QC300 Arka Göbek 135 mm QR 32 Delik Center Lock Siyah",
+  "t": "2026-11-25"
+ },
+ "shimano-altus-mt200-disk-fren-seti-on-mt-200-bl-mt200lbr-mt200f-kutusuz": {
+  "q": "Mt-200",
+  "n": 1,
+  "ad": "Shimano Altus Mt200 Disk Fren Seti Ön Mt-200 Bl-mt200(L)/br-mt200(F) (KUTUSUZ)",
+  "t": "2026-11-25"
+ },
+ "shimano-altus-sl-m2010-l-3lu-sol-vites-kolu": {
+  "q": "SL-M2010-L",
+  "n": 1,
+  "ad": "Shimano Altus SL-M2010-L 3lü Sol Vites Kolu",
+  "t": "2026-11-25"
+ },
+ "shimano-b05s-organik-disk-fren-balatasi-kutusuz": {
+  "q": "B05S Organik",
+  "n": 1,
+  "ad": "SHIMANO B05S Organik Disk Fren Balatası Kutusuz",
+  "t": "2026-11-25"
+ },
+ "shimano-b05s-orjinal-organik-fren-balatasi-kutusuz": {
+  "q": "Orjinal",
+  "n": 1,
+  "ad": "Shimano B05S Orjinal Organik Fren Balatası Kutusuz",
+  "t": "2026-11-25"
+ },
+ "shimano-bl-mt200-hidrolik-fren-kolu-sol-kutusuz": {
+  "q": "Shimano BL-MT200",
+  "n": 1,
+  "ad": "Shimano BL-MT200 Hidrolik Fren Kolu Sol (KUTUSUZ)",
+  "t": "2026-11-25"
+ },
+ "shimano-bp-m06-mx-bisiklet-disk-fren-balatasi-metal": {
+  "q": "BP-M06-MX",
+  "n": 1,
+  "ad": "SHIMANO BP-M06-MX Bisiklet Disk Fren Balatası Metal",
+  "t": "2026-11-25"
+ },
+ "shimano-cn-hg54-116l-cn-hg54-10-vites-uyumlu-zincir": {
+  "q": "C2-157DQXYA",
+  "n": 1,
+  "ad": "Shimano Cn-hg54 116l Cn-hg54 10 Vites Uyumlu Zincir",
+  "t": "2026-11-25"
+ },
+ "shimano-cn-hg54-116l-cn-hg54-10-vites-uyumlu-zincir-kutusuz": {
+  "q": "C2-158VE0HH",
+  "n": 1,
+  "ad": "Shimano Cn-hg54 116l Cn-hg54 10 Vites Uyumlu Zincir (KUTUSUZ)",
+  "t": "2026-11-25"
+ },
+ "shimano-cues-cs-lg400-11-linkglide-11-vites-11-50t-kaset": {
+  "q": "CS-LG400-11",
+  "n": 1,
+  "ad": "Shimano CUES CS-LG400-11 LINKGLIDE 11 Vites 11-50T Arka Kaset Dişli",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-cn-m6100-12v-quick-link-zincir-126-bakla": {
+  "q": "CN-M6100",
+  "n": 1,
+  "ad": "Shimano Deore CN-M6100 12V Quick-Link Zincir 126 Bakla",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-cs-m5100-11-vites-11-42t-kaset-disli": {
+  "q": "CS-M5100",
+  "n": 1,
+  "ad": "Shimano Deore CS-M5100 11 Vites 11-42T Kaset Dişli",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-fc-m617-36t-aynakol-dislisi-yaprak-104-bcd-10-vites-siyah": {
+  "q": "FC-M617",
+  "n": 1,
+  "ad": "Shimano Deore FC-M617 36T Aynakol Dişlisi (Yaprak) 104 BCD 10 Vites Siyah",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-xt-cn-hg93-zincir-9s": {
+  "q": "CN-HG93",
+  "n": 1,
+  "ad": "SHIMANO Deore XT CN-HG93 Zincir 9S",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-xt-dyna-sys-vites-kolu-kapagi-sag-sol-takim": {
+  "q": "Dyna-Sys",
+  "n": 1,
+  "ad": "Shimano Deore XT Dyna-Sys Vites Kolu Kapağı Sağ-Sol Takım",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-xt-sm-rt76-203-mm-6-vidali-disk-fren-rotoru": {
+  "q": "SM-RT76",
+  "n": 1,
+  "ad": "Shimano Deore XT SM-RT76 203 mm 6 Vidalı Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-xt-sm-rt81-center-lock-disk-fren-rotoru": {
+  "q": "SM-RT81",
+  "n": 1,
+  "ad": "Shimano Deore XT SM-RT81 Center Lock Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "shimano-deore-xt-vites-kolu-ust-kapagi-vidali": {
+  "q": "XT Vites",
+  "n": 1,
+  "ad": "Shimano Deore XT Vites Kolu Üst Kapağı (Vidalı)",
+  "t": "2026-11-25"
+ },
+ "shimano-g05s-rx-deorextslxalfine-resin-fren-balatasi": {
+  "q": "G05S-RX",
+  "n": 1,
+  "ad": "Shimano G05S-RX Deore/XT/SLX/Alfine Resin Fren Balatası",
+  "t": "2026-11-25"
+ },
+ "shimano-hidrolik-disk-fren-kolu-bl-mt200-on": {
+  "q": "Shimano Hidrolik",
+  "n": 1,
+  "ad": "Shimano Hidrolik Disk Fren Kolu BL-MT200 Ön",
+  "t": "2026-11-25"
+ },
+ "shimano-hollowtec-tek-yaprak-aynakol-36t": {
+  "q": "Hollowtec",
+  "n": 1,
+  "ad": "Shimano Hollowtec Tek Yaprak Aynakol 36T",
+  "t": "2026-11-25"
+ },
+ "shimano-k05s-rx-organik-yol-bisikleti-fren-balatasi": {
+  "q": "K05S-RX",
+  "n": 1,
+  "ad": "Shimano K05S-RX Organik Yol Bisikleti Fren Balatası",
+  "t": "2026-11-25"
+ },
+ "shimano-mt200-hidrolik-fren-sag-kolkutusuz": {
+  "q": "FREN SAĞ",
+  "n": 1,
+  "ad": "Shimano MT200 HİDROLİK FREN SAĞ KOL(KUTUSUZ)",
+  "t": "2026-11-25"
+ },
+ "shimano-mt200-on-arka-hidrolik-fren-seti-kutusuz": {
+  "q": "Ön Arka",
+  "n": 1,
+  "ad": "Shimano MT200 Ön Arka Hidrolik Fren Seti (KUTUSUZ)",
+  "t": "2026-11-25"
+ },
+ "shimano-rd-tx800-tourney-arka-aktarici-vidali-78v": {
+  "q": "RD-TX800",
+  "n": 1,
+  "ad": "Shimano RD-TX800 Tourney Arka Aktarıcı Vidalı 7/8V",
+  "t": "2026-11-25"
+ },
+ "shimano-slx-cs-hg81-10-vites-11-36t-kaset-disli": {
+  "q": "CS-HG81",
+  "n": 1,
+  "ad": "Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli",
+  "t": "2026-11-25"
+ },
+ "shimano-slx-sl-m7000-r-vites-gostergesi-sag-11-vites": {
+  "q": "SL-M7000-R",
+  "n": 1,
+  "ad": "Shimano SLX SL-M7000-R Vites Göstergesi (Sağ, 11 Vites)",
+  "t": "2026-11-25"
+ },
+ "shimano-slx-sm-rt66-180-mm-6-vidali-disk-fren-rotoru": {
+  "q": "SM-RT66",
+  "n": 1,
+  "ad": "Shimano SLX SM-RT66 180 mm 6 Vidalı Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "shimano-sm-bh60-sm-bh62-hidrolik-hortum-kaliper-baglanti-vidasi-y8h098010": {
+  "q": "SM-BH60",
+  "n": 1,
+  "ad": "Shimano SM-BH60 / SM-BH62 Hidrolik Hortum Kaliper Bağlantı Vidası (Banjo) Y8H098010",
+  "t": "2026-11-25"
+ },
+ "shimano-sm-rt10-180-mm-center-lock-disk-fren-rotoru": {
+  "q": "SM-RT10",
+  "n": 1,
+  "ad": "Shimano SM-RT10 180 mm Center Lock Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "shimano-sm-rt54-180-mm-center-lock-disk-fren-rotoru": {
+  "q": "SM-RT54",
+  "n": 1,
+  "ad": "Shimano SM-RT54 180 mm Center Lock Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "shimano-sm-rt56-180-mm-6-vidali-disk-fren-rotoru": {
+  "q": "SM-RT56",
+  "n": 1,
+  "ad": "Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "shimano-steps-fc-em600-krank-kolu-seti-175mm-siyah": {
+  "q": "FC-EM600",
+  "n": 1,
+  "ad": "Shimano STEPS FC-EM600 Krank Kolu Seti Sağ-Sol 175 mm Siyah (Aynakolsuz)",
+  "t": "2026-11-25"
+ },
+ "shimano-steps-sm-cre61-38t-aynakol-dislisi-zincir-korumali": {
+  "q": "SM-CRE61",
+  "n": 1,
+  "ad": "Shimano STEPS SM-CRE61 38T E-Bike Aynakol Dişlisi Dış Zincir Korumalı (Kapaklı)",
+  "t": "2026-11-25"
+ },
+ "shimano-tourney-fd-tz500-uclu-on-aktarici": {
+  "q": "FD-TZ500",
+  "n": 1,
+  "ad": "Shimano Tourney FD-TZ500 Üçlü Ön Aktarıcı",
+  "t": "2026-11-25"
+ },
+ "shimano-zincir-678-vites-116-bakla-cn-hg40": {
+  "q": "C2-155CTMG2",
+  "n": 1,
+  "ad": "Shimano Zincir 6/7/8 Vites 116 Bakla Cn-hg40",
+  "t": "2026-11-25"
+ },
+ "shimano-zincir-678-vites-116-bakla-cn-hg40-kutusuz": {
+  "q": "C2-1560CE6I",
+  "n": 1,
+  "ad": "Shimano Zincir 6/7/8 Vites 116 Bakla Cn-hg40 (KUTUSUZ)",
+  "t": "2026-11-25"
+ },
+ "shunfeng-mtb-arka-gobek-36-delik-aluminyum-siyah": {
+  "q": "Shunfeng MTB",
+  "n": 1,
+  "ad": "Shunfeng MTB Arka Göbek 36 Delik Alüminyum Siyah",
+  "t": "2026-11-25"
+ },
+ "shunfeng-rulmanli-arka-gobek-36-delik-disk-fren-uyumlu-siyah": {
+  "q": "Shunfeng Rulmanlı",
+  "n": 1,
+  "ad": "Shunfeng Rulmanlı Arka Göbek 36 Delik Disk Fren Uyumlu Siyah",
+  "t": "2026-11-25"
+ },
+ "su-gecirmez-telefon-tutacagi-bisiklet-motosiklet-scooter-icin": {
+  "q": "Geçirmez",
+  "n": 1,
+  "ad": "Su Geçirmez Telefon Tutacağı Bisiklet Motosiklet Scooter için",
+  "t": "2026-11-25"
+ },
+ "suntek-anti-drop-tek-aynakol-zincir-kilavuz-koruyucu-10-adet": {
+  "q": "Suntek",
+  "n": 1,
+  "ad": "Suntek Anti-Drop Tek Aynakol Zincir Kılavuz Koruyucu (10 Adet)",
+  "t": "2026-11-25"
+ },
+ "super-b-tb-1118-solusyonsuz-yama-seti": {
+  "q": "C44-8WCYLC",
+  "n": 1,
+  "ad": "Super B Tb-1118 Solüsyonsuz Yama Seti",
+  "t": "2026-11-25"
+ },
+ "super-b-tb-1118-solusyonsuz-yama-seti-2": {
+  "q": "C44-86DS426",
+  "n": 1,
+  "ad": "Super B Tb-1118 Solusyonsuz Yama Seti",
+  "t": "2026-11-25"
+ },
+ "superb-fren-kaliper-hizalayici": {
+  "q": "SuperB",
+  "n": 1,
+  "ad": "SuperB Fren Kaliper Hizalayıcı",
+  "t": "2026-11-25"
+ },
+ "sutak-2-500-ml-su-bidonu-tutucu": {
+  "q": "Bidonu",
+  "n": 1,
+  "ad": "Sutak 2 - 500 ml Su Bidonu Tutucu",
+  "t": "2026-11-25"
+ },
+ "suzico-26-jant-sehir-bisikleti": {
+  "q": "Suzico",
+  "n": 1,
+  "ad": "Suzico 26” Jant Şehir Bisikleti",
+  "t": "2026-11-25"
+ },
+ "tanke-konik-donusturucu-rulmanli-furc-takimi-tapered-adaptor-siyah": {
+  "q": "Dönüştürücü",
+  "n": 1,
+  "ad": "Tanke Konik Dönüştürücü Rulmanlı Furç Takımı (Tapered Adaptör) Siyah",
+  "t": "2026-11-25"
+ },
+ "tanke-tf-36-275-160mm-havali-kilitli-enduro-bisiklet-masasi": {
+  "q": "Kilitli",
+  "n": 1,
+  "ad": "Tanke TF-36 27.5\" 160mm Havalı Kilitli Enduro Bisiklet Maşası Konik Mil Boost Rebound Ayarlı",
+  "t": "2026-11-25"
+ },
+ "tanke-tk6-29-enduro-dag-bisikleti-1x10-vites-m-17-kadro": {
+  "q": "1x10",
+  "n": 1,
+  "ad": "Tanke TK6 29\" Enduro Dağ Bisikleti 1x10 Vites M (17\") Kadro",
+  "t": "2026-11-25"
+ },
+ "tanke-tp-60-naylon-fiber-platform-pedal-du-yatakli-9-16": {
+  "q": "TP-60",
+  "n": 1,
+  "ad": "Tanke TP-60 Naylon Fiber Platform Pedal DU Yataklı 9/16\"",
+  "t": "2026-11-25"
+ },
+ "thumbs-up-soguk-yama-24-lu-elektrikli-bisikletler-icin": {
+  "q": "Yama 24",
+  "n": 1,
+  "ad": "Thumbs Up Soğuk Yama 24 Lü (Elektrikli Bisikletler İçin)",
+  "t": "2026-11-25"
+ },
+ "thumbs-up-soguk-yama-34-lu": {
+  "q": "Yama 34",
+  "n": 1,
+  "ad": "Thumbs Up Soğuk Yama 34 Lü",
+  "t": "2026-11-25"
+ },
+ "thumbs-up-soguk-yama-48-li": {
+  "q": "Yama 48",
+  "n": 1,
+  "ad": "Thumbs Up Soğuk Yama 48 Li",
+  "t": "2026-11-25"
+ },
+ "troy-lee-design-enduro-downhill-pantolonu-38-beden": {
+  "q": "Design",
+  "n": 1,
+  "ad": "Troy Lee Design Enduro Downhill Pantolonu (38 beden)",
+  "t": "2026-11-25"
+ },
+ "tubeless-jant-seridi-tl-genislik-23mm-uzunluk-10m-887023": {
+  "q": "TUBELESS",
+  "n": 1,
+  "ad": "TUBELESS JANT ŞERİDİ TL GENİŞLİK 23mm UZUNLUK 10m 887023",
+  "t": "2026-11-25"
+ },
+ "tw-mtb-gidon-25-4-mm-gumus-nikel": {
+  "q": "TW MTB",
+  "n": 1,
+  "ad": "TW MTB Gidon 25.4 mm Gümüş Nikel",
+  "t": "2026-11-25"
+ },
+ "ugr-bisiklet-fren-teli-siyah-yesil": {
+  "q": "UGR Bisiklet",
+  "n": 1,
+  "ad": "UGR Bisiklet Fren Teli Siyah-Yeşil",
+  "t": "2026-11-25"
+ },
+ "unix-arka-gobek-d814-1-32-delik-old135mm-sesli-rainbow-kutusuz": {
+  "q": "D814-1",
+  "n": 1,
+  "ad": "UNIX ARKA GÖBEK D814-1, 32 DELİK OLD:135MM SESLİ RAINBOW KUTUSUZ",
+  "t": "2026-11-25"
+ },
+ "unix-jant-275-dc-02-1-32-delik-rainbow-1-adet-fiyatidir": {
+  "q": "FİYATIDIR",
+  "n": 1,
+  "ad": "UNIX JANT 27.5\" DC-02-1 32 DELİK RAINBOW / 1 ADET FİYATIDIR",
+  "t": "2026-11-25"
+ },
+ "unix-jant-29-dc-02-1-32-delik-rainbow-1-adet-fiyati": {
+  "q": "22-2922-90050",
+  "n": 1,
+  "ad": "UNIX JANT 29\" DC-02-1 32 DELİK RAINBOW / 1 ADET FİYATI",
+  "t": "2026-11-25"
+ },
+ "v-brake-alyan-fren-pabucu-fren-pedi-2adet": {
+  "q": "V-Brake",
+  "n": 1,
+  "ad": "V-Brake Alyan Fren Pabucu, Fren Pedi [2ADET]",
+  "t": "2026-11-25"
+ },
+ "v-fren-bacaklari-ve-pabuc-seti-butun-jant-boylarina-uyumlu": {
+  "q": "Bacakları",
+  "n": 1,
+  "ad": "V-Fren Bacakları ve Pabuç Seti (Bütün jant boylarına uyumlu)",
+  "t": "2026-11-25"
+ },
+ "v-fren-seti-kol-kablo-tel-dahil": {
+  "q": "V-Fren Seti",
+  "n": 1,
+  "ad": "V-Fren Seti (Kol, Kablo, Tel Dahil)",
+  "t": "2026-11-25"
+ },
+ "velo-mtb-sele-siyah-kirmizi": {
+  "q": "VELO",
+  "n": 1,
+  "ad": "VELO – Mtb Sele Siyah-Kırmızı",
+  "t": "2026-11-25"
+ },
+ "vona-1928-comfort-sele": {
+  "q": "1928",
+  "n": 1,
+  "ad": "Vona 1928 Comfort Sele",
+  "t": "2026-11-25"
+ },
+ "vona-29-cift-kat-rulmanli-6-vida-disk-on-jant": {
+  "q": "Çift Kat",
+  "n": 1,
+  "ad": "Vona 29\" Çift Kat Rulmanlı 6 Vida Disk Ön Jant",
+  "t": "2026-11-25"
+ },
+ "vona-bisiklet-sergileme-park-standi-siyah": {
+  "q": "Sergileme",
+  "n": 1,
+  "ad": "Vona Bisiklet Sergileme (Park) Standı Siyah",
+  "t": "2026-11-25"
+ },
+ "vona-gp-03-bisiklet-el-pompasi": {
+  "q": "GP-03",
+  "n": 1,
+  "ad": "Vona GP-03 Bisiklet El Pompası",
+  "t": "2026-11-25"
+ },
+ "wake-780-mm-aluminyum-mtb-gidon-31-8-mm-siyah": {
+  "q": "Wake 780",
+  "n": 1,
+  "ad": "Wake 780 mm Alüminyum MTB Gidon 31.8 mm Siyah",
+  "t": "2026-11-25"
+ },
+ "wake-amortisorlu-kizakli-sele-borusu-27-2-x-350-mm-siyah": {
+  "q": "Amortisörlü",
+  "n": 1,
+  "ad": "Wake Amortisörlü Kızaklı Sele Borusu 27.2 x 350 mm Siyah",
+  "t": "2026-11-25"
+ },
+ "wake-wk-rt01-160-mm-6-vidali-disk-fren-rotoru": {
+  "q": "WK-RT01",
+  "n": 1,
+  "ad": "Wake WK-RT01 160 mm 6 Vidalı Disk Fren Rotoru",
+  "t": "2026-11-25"
+ },
+ "wrc-conor-sb0-aluminyum-sele-borusu-30-4-x-350-mm-parlak-siyah": {
+  "q": "30.4",
+  "n": 1,
+  "ad": "WRC Conor SB0 Alüminyum Sele Borusu 30.4 x 350 mm Parlak Siyah",
+  "t": "2026-11-25"
+ },
+ "xbyc-6125-usb-sarjli-400-lumen-bisiklet-on-lamba-far-stvzo": {
+  "q": "6125",
+  "n": 1,
+  "ad": "XBYC 6125 USB Şarjlı 400 Lumen Bisiklet Ön Lamba Far (StVZO)",
+  "t": "2026-11-25"
+ },
+ "xbyc-blt-4-disk-fren-balatasi-onvo-xiaomi-scoowy-uyumlu": {
+  "q": "BLT-4",
+  "n": 1,
+  "ad": "Xbyc BLT-4 Disk Fren Balatası (Onvo, Xiaomi, Scoowy Uyumlu)",
+  "t": "2026-11-25"
+ },
+ "xlc-hb-g01-gravel-gidon-31-8-mm-420-mm-siyah": {
+  "q": "HB-G01",
+  "n": 1,
+  "ad": "XLC HB-G01 Gravel Gidon 31.8 mm 420 mm Siyah",
+  "t": "2026-11-25"
+ },
+ "xlc-quick-release-3lu-set-gri-qr-l05-2501602101": {
+  "q": "2501602101",
+  "n": 1,
+  "ad": "XLC QUICK RELEASE 3'LÜ SET GRİ QR-L05 2501602101",
+  "t": "2026-11-25"
+ },
+ "xlc-quick-release-3lu-set-kirmizi-qr-l05-2501602107": {
+  "q": "2501602107",
+  "n": 1,
+  "ad": "XLC QUICK RELEASE 3'LÜ SET KIRMIZI QR-L05 2501602107",
+  "t": "2026-11-25"
+ },
+ "xuan-cheng-elektrikli-scooter-8-12-x-2-ic-lastik-duz-sibop": {
+  "q": "XUAN CHENG",
+  "n": 1,
+  "ad": "XUAN CHENG Elektrikli Scooter 8 1/2 x 2 İç Lastik Düz Sibop",
+  "t": "2026-11-25"
+ },
+ "yuksek-dayanimli-ekstra-uzun-fren-teli-2-5-metre": {
+  "q": "Dayanımlı",
+  "n": 2,
+  "ad": "Yüksek Dayanımlı Ekstra Uzun Fren Teli 2.5 Metre",
+  "t": "2026-11-25"
+ },
+ "yuksek-dayanimli-ekstra-uzun-fren-teli-2-5-metre-2li-set": {
+  "q": "2.5 Metre - 2'li",
+  "n": 1,
+  "ad": "Yüksek Dayanımlı Ekstra Uzun Fren Teli 2.5 Metre - 2'li Set",
+  "t": "2026-11-25"
+ },
+ "zedonyon-rulmanli-aluminyum-pedal-hafif-ve-dayanikli-bisiklet-pedali-kirmizi": {
+  "q": "Pedalı Kırmızı",
+  "n": 1,
+  "ad": "Zedonyon Rulmanlı Alüminyum Pedal | Hafif ve Dayanıklı Bisiklet Pedalı Kırmızı",
+  "t": "2026-11-25"
+ },
+ "zedonyon-rulmanli-aluminyum-pedal-hafif-ve-dayanikli-bisiklet-pedali-mor": {
+  "q": "Pedalı Mor",
+  "n": 1,
+  "ad": "Zedonyon Rulmanlı Alüminyum Pedal | Hafif ve Dayanıklı Bisiklet Pedalı Mor",
+  "t": "2026-11-25"
+ },
+ "zil-070-gri-zir-zir": {
+  "q": "070 - Gri",
+  "n": 1,
+  "ad": "ZİL 070 - Gri - Zır Zır",
+  "t": "2026-11-25"
+ },
+ "zil-070-kirmizi-zir-zir": {
+  "q": "070 - Kırmızı",
+  "n": 1,
+  "ad": "ZİL 070 - Kırmızı - Zır Zır",
+  "t": "2026-11-25"
+ },
+ "zil-070-mavi-zir-zir": {
+  "q": "Mavi- Zır",
+  "n": 1,
+  "ad": "ZİL 070 - Mavi- Zır Zır",
+  "t": "2026-11-25"
+ },
+ "zil-070-sari-zir-zir": {
+  "q": "070 - Sarı",
+  "n": 1,
+  "ad": "ZİL 070 - Sarı - Zır Zır",
+  "t": "2026-11-25"
+ },
+ "zoli-high-security-bisiklet-kilit": {
+  "q": "Security",
+  "n": 1,
+  "ad": "Zoli High Security Bisiklet Kilit",
+  "t": "2026-11-25"
+ }
+}
