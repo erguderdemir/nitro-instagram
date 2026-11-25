@@ -1,15 +1,9 @@
 {
- "updated": "2026-11-25T01:44:07+03:00",
+ "updated": "2026-11-25T04:45:11+03:00",
  "records": 187,
- "checked": 186,
+ "checked": 185,
  "files": true,
  "live": true,
  "findings": [],
- "suite_warnings": [
-  {
-   "id": "2026-11-24-story-2030",
-   "code": "stok",
-   "msg": "ürün stokta değil: Pedal M504 Siyah"
-  }
- ]
+ "suite_warnings": []
 }
