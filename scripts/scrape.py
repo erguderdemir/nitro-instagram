@@ -13,6 +13,7 @@ import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timezone
 from pathlib import Path
 
 BASE = "https://nitrobisiklet.com"
@@ -130,14 +131,39 @@ def fetch(url: str) -> dict | None:
     return None
 
 
+def durum_yaz(**alan) -> None:
+    """data/tarama.json: son başarılı tarama zamanı ve son hata (gorev.py alarmı okur)."""
+    yol = ROOT / "data" / "tarama.json"
+    try:
+        d = json.loads(yol.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        d = {}
+    d.update(alan)
+    yol.write_text(json.dumps(d, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
 def main() -> None:
     sm = get(BASE + "/sitemap.xml")
     urls = [u for u in re.findall(r"<loc>([^<]+)</loc>", sm) if "/urun/" in u]
     print(f"{len(urls)} ürün bulundu, çekiliyor…")
     with ThreadPoolExecutor(max_workers=4) as ex:
         products = [p for p in ex.map(fetch, urls) if p]
+    try:
+        onceki = len(json.loads(OUT.read_text(encoding="utf-8")))
+    except (OSError, ValueError, TypeError):
+        onceki = 0
+    # Kısmi tarama (site yavaş/erişilemez): eksik ürünler 'kaldırıldı' sanılıp kayıtlar toplu yeniden kurulmasın.
+    # Ölçüt sitemap'teki ürün sayısıdır (gerçek katalog küçülmesi geçer); sitemap'in kendisi yarıdan fazla
+    # küçüldüyse bozuk/eksik sitemap sayılır. Engellenen tarama data/tarama.json'a yazılır; 48 saat başarısız
+    # kalırsa gorev.py alarmı verir.
+    if not urls or len(products) < 0.9 * len(urls) or (onceki and len(urls) < 0.5 * onceki):
+        msg = (f"UYARI: kısmi tarama ({len(products)}/{len(urls)} ürün çekildi, sitemap {len(urls)}, önceki {onceki}); "
+               "yazılmadı, eldeki ürün verisiyle devam.")
+        durum_yaz(son_hata=msg)
+        sys.exit(msg)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(products, ensure_ascii=False, indent=1), encoding="utf-8")
+    durum_yaz(son_basari=datetime.now(timezone.utc).isoformat(timespec="seconds"), urun=len(products), son_hata="")
     print(f"{len(products)} ürün yazıldı: {OUT.relative_to(ROOT)}")
 
 

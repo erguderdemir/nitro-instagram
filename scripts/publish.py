@@ -28,7 +28,7 @@ import importlib
 import os
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import common
@@ -400,6 +400,20 @@ def build_pages(cal: list[dict]) -> None:
             print(f"UYARI: {mod}.{fn} çalışmadı: {e}", file=sys.stderr)
 
 
+def suite_promo_uyar(cal: list[dict], post: dict) -> int:
+    """Yayınlanamayan postu tanıtan, Business Suite'te zamanlanmış story'ler için uyar (1 döner: iş akışı kırmızı
+    olur; gorev.py alarmı da durumu bildirir). Suite story'yi Meta kendisi yayınlar; API buradan durduramaz."""
+    if post.get("type") != "post":
+        return 0
+    bagli = [x.get("id") for x in cal if x.get("ref") == post.get("id") and x.get("suite_scheduled")
+             and x.get("status") == "planned"]
+    if not bagli:
+        return 0
+    print(f"UYARI: {post.get('id')} yayınlanamadı; onu tanıtan Suite story'leri ({', '.join(bagli)}) Business Suite > "
+          "Planlayıcı'dan silinmeli, yoksa olmayan gönderiyi tanıtır.", file=sys.stderr)
+    return 1
+
+
 def run(dry: bool) -> int:
     """Takvimi işle: iptaller, Suite kayıtları, geç kalanlar, API yayınları. Yeni 'error' varsa 1 döner."""
     cal = common.load_calendar()
@@ -453,6 +467,7 @@ def run(dry: bool) -> int:
             if not p.late_but_published(c, fmt, via):
                 c["status"] = "missed"
                 print(f"ATLANDI (geç kaldı): {c.get('id')}")
+                errors += suite_promo_uyar(cal, c)
             p.save()
             continue
         if not dry and p.quota_full():
@@ -466,7 +481,9 @@ def run(dry: bool) -> int:
             p.publish(c, fmt, via)
         except Exception as e:  # noqa: BLE001
             fatal = is_auth(e)
-            errors += int(p.fail(c, e, fatal))
+            if p.fail(c, e, fatal):
+                errors += 1
+                suite_promo_uyar(cal, c)
             p.save()
             if fatal:
                 print("Token/izin hatası: kalan paylaşımlar denenmedi.", file=sys.stderr)
@@ -477,7 +494,8 @@ def run(dry: bool) -> int:
     if not dry:
         build_pages(cal)
     if errors:
-        # Çıkış kodu 1: iş akışı kırmızı görünür, GitHub e-posta bildirimi gönderir. sys.exit değil, çünkü main()
+        # Çıkış kodu 1: iş akışı kırmızı görünür (e-posta yalnız depo sahibinin tetiklediği cron çalışmasında gider;
+        # gorev.py alarmı bu yüzden durumu 48 saat kırmızı tutar). sys.exit değil, çünkü main()
         # bu dönüşten sonra sıradaki API paylaşımını bekleyip tam vaktinde yayınlamalı.
         print(f"{errors} paylaşım hata verdi. Ayrıntı: data/calendar.json içindeki 'error' alanı.", file=sys.stderr)
         return 1
@@ -485,6 +503,41 @@ def run(dry: bool) -> int:
 
 
 # ---- Doğrulama komutları -------------------------------------------------------------------------
+
+def jeton_durumu() -> None:
+    """Jetonun geçerliliğini ve bitiş tarihlerini data/jeton.json'a yaz (gorev.py alarmı buradan okur).
+    Hata verirse yalnız uyarır: debug_token erişimi olmayan jetonda denetim yine sürsün."""
+    try:
+        d = api("GET", "debug_token", input_token=os.environ["IG_ACCESS_TOKEN"]).get("data") or {}
+    except RuntimeError as e:
+        if jeton_hatasi(e):
+            jeton_gecersiz(e)
+        else:
+            print(f"UYARI: jeton bitiş tarihi okunamadı: {e}", file=sys.stderr)
+        return
+    kayit = {"kontrol": common.now().isoformat(timespec="seconds"), "gecerli": bool(d.get("is_valid")),
+             "bitis": int(d.get("expires_at") or 0), "veri_erisim_bitis": int(d.get("data_access_expires_at") or 0)}
+    common.write_json(common.DATA / "jeton.json", kayit)
+
+    def tarih(t: int) -> str:
+        return datetime.fromtimestamp(t, timezone.utc).strftime("%Y-%m-%d") if t else "süresiz"
+    print(f"Jeton: {'geçerli' if kayit['gecerli'] else 'GEÇERSİZ'} · bitiş {tarih(kayit['bitis'])} · "
+          f"veri erişimi {tarih(kayit['veri_erisim_bitis'])}")
+
+
+def jeton_hatasi(e: BaseException) -> bool:
+    """Jetonun kendisi geçersiz/süresi dolmuş mu (190 ya da 401)? İzin hataları (10/200) jetonu geçersiz saymaz:
+    yayın IG_USER_ID ile yine çalışabilir; gerçekten yayını durdururlarsa kayıt hatası olarak alarma düşer."""
+    return isinstance(e, GraphError) and (e.code == 190 or e.status == 401)
+
+
+def jeton_gecersiz(e: BaseException) -> None:
+    """Jeton/izin hatasını data/jeton.json'a yaz: gorev.py alarmı 'GEÇERSİZ' uyarısını buradan verir. Yalnız
+    yetki hatalarında çağrılır (ağ hatası jetonu geçersiz saydırmaz); jeton düzelince jeton_durumu üzerine yazar."""
+    common.write_json(common.DATA / "jeton.json", {"kontrol": common.now().isoformat(timespec="seconds"),
+                                                   "gecerli": False, "hata": str(e)[:200]})
+    print(f"Jeton: GEÇERSİZ ya da yetkisiz ({e})", file=sys.stderr)
+
 
 def check() -> int:
     """Token'ı, bağlı Instagram hesabını, kotayı ve medya sunucusunu doğrula. Kilitten bağımsızdır, yayınlamaz."""
@@ -495,6 +548,10 @@ def check() -> int:
         try:
             me = api("GET", "me", fields="id,name")
             print(f"Token sahibi: {me.get('name')} ({me.get('id')})")
+            if common.read_json(common.DATA / "jeton.json", {}).get("gecerli") is False:
+                # jeton yenilendi: eski 'geçersiz' kaydı, ayrıntıyı jeton_durumu yazamasa bile alarmı sürdürmesin
+                common.write_json(common.DATA / "jeton.json",
+                                  {"kontrol": common.now().isoformat(timespec="seconds"), "gecerli": True})
             accounts = graph.ig_accounts()
             for name, _page_id, ig in accounts:
                 linked = f"{ig.get('username')} / IG_USER_ID={ig.get('id')}" if ig else "bağlı değil"
@@ -506,8 +563,11 @@ def check() -> int:
             lim = (data or [{}])[0]
             print(f"Kullanılan hesap: {ig_user} · son 24 saatte yayın: {lim.get('quota_usage', '?')}/"
                   f"{(lim.get('config') or {}).get('quota_total', '?')}")
+            jeton_durumu()
         except RuntimeError as e:  # GraphError ve graph.ig_user_id hataları dahil
             problems.append(str(e))
+            if jeton_hatasi(e):
+                jeton_gecersiz(e)
     base = common.public_base()
     if not base:
         problems.append("PUBLIC_BASE_URL tanımlı değil")
@@ -608,7 +668,9 @@ def main(argv: list[str] | None = None) -> int:
     # paylaşım geç çıkmasın diye: yakında API ile yayınlanacak kayıt varsa saatini bekle, sonra tam vaktinde yayınla.
     # Bekleyen çalışma 'instagram' concurrency grubunu tutar; aynı anda ikinci bir yayın çalışması olmaz.
     # Tek bekleme: en çok ~35 dk, iş akışının 50 dk zaman aşımı içinde kalır (yayın kaydı commit'i kaybolmaz).
-    nxt = None if dry else next_api_slot(common.now())
+    # YAYIN_BEKLEME_YOK: gecikmiş plan çalışması yayını da üstlendiğinde bekleme 50 dk sınırını aşmasın; yaklaşan
+    # paylaşımı sonraki tetik (LATE_LIMIT içinde) yayınlar.
+    nxt = None if dry or os.environ.get("YAYIN_BEKLEME_YOK") else next_api_slot(common.now())
     if nxt is not None:
         wait = (nxt - common.now()).total_seconds() + 3
         print(f"BEKLENİYOR: sıradaki API paylaşımı {nxt:%H:%M}; {wait / 60:.1f} dk sonra tam vaktinde yayınlanacak.")
