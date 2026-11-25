@@ -16,9 +16,9 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
 | 09:30 | Story · servis | Bisikletine bakım zamanı | — | — | Suite + link | yayında | [görsel](media/2026-11-25-story-0930.jpg) |
-| 12:30 | Story · ürün | Dişler silindiyse vakit geldi | [Chaoyang 20x4.0 Fat Bike Dış Lastik 3 mm Zırhlı Siyah](https://nitrobisiklet.com/urun/chaoyang-20x4-0-fat-bike-dis-lastik-3-mm-zirhli-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-25-story-1230) | 1.379,66 ₺ | Suite + link | planlı | [görsel](media/2026-11-25-story-1230.jpg) |
-| 19:30 | Carousel · ipucu | KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK | — | — | API | planlı | [görsel](media/2026-11-25-post-1930-1.jpg) |
-| 19:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-11-25-story-1930.jpg) |
+| 12:30 | Story · ürün | Dişler silindiyse vakit geldi | [Chaoyang 20x4.0 Fat Bike Dış Lastik 3 mm Zırhlı Siyah](https://nitrobisiklet.com/urun/chaoyang-20x4-0-fat-bike-dis-lastik-3-mm-zirhli-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-25-story-1230) | 1.379,66 ₺ | Suite + link | yayında | [görsel](media/2026-11-25-story-1230.jpg) |
+| 19:30 | Carousel · ipucu | KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK | — | — | API | yayında | [görsel](media/2026-11-25-post-1930-1.jpg) |
+| 19:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | yayında | [görsel](media/2026-11-25-story-1930.jpg) |
 | 20:30 | Story · tanıtım | Yeni rehber akışta | — | — | Suite + link | planlı | [görsel](media/2026-11-25-story-2030.jpg) |
 
 ## 26.11.2026 Perşembe

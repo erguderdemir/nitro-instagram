@@ -210,10 +210,13 @@
   "media_link": "media/2026-11-25-story-1230-link.jpg",
   "ref": "",
   "rule": "dis_lastik",
-  "status": "planned",
+  "status": "published",
   "fp": "dcb13119155f",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-25T12:30:00+03:00"
  },
  {
   "schema": 2,
@@ -260,11 +263,14 @@
   "media_link": "",
   "ref": "kis-bakimi",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "published",
   "fp": "c2437a6285ef",
   "cta": "servis",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-25T19:30:00+03:00"
  },
  {
   "schema": 2,
@@ -301,10 +307,13 @@
   "media_link": "media/2026-11-25-story-1930-link.jpg",
   "ref": "2026-11-25-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "published",
   "fp": "5ed455b3b1f3",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-25T19:30:00+03:00"
  },
  {
   "schema": 2,

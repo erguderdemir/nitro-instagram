@@ -23,6 +23,25 @@
    "shares": null,
    "views": null,
    "checked": "2026-11-25T12:49:16+03:00"
+  },
+  "2026-11-25-post-1930": {
+   "media_id": "18039296729890069",
+   "permalink": "https://www.instagram.com/p/DgK9nT_tlHs/",
+   "likes": null,
+   "comments": null,
+   "reach": null,
+   "saved": null,
+   "shares": null,
+   "views": null,
+   "checked": null,
+   "kaynak": "suite",
+   "yayin": "2026-11-25T19:30:06+03:00",
+   "eslesme": {
+    "zaman": "2026-11-25T20:00:29+03:00",
+    "fark_sn": 6,
+    "aciklama_tutuyor": false,
+    "tur": "CAROUSEL_ALBUM"
+   }
   }
  },
  "insights": false,
