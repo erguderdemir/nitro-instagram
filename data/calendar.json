@@ -8064,7 +8064,8 @@
   "rule": "ipucu",
   "status": "planned",
   "fp": "aa443f5b6480",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
@@ -8117,7 +8118,8 @@
   "rule": "gravel",
   "status": "planned",
   "fp": "d3b2cc376838",
-  "ver": "d7889f16e8"
+  "ver": "d7889f16e8",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
