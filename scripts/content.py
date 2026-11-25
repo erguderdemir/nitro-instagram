@@ -60,7 +60,10 @@ KEEP_UPPER = {"MTB", "BMX", "USB", "LED", "LM", "XS", "S", "M", "L", "XL", "XXL"
               "CRX", "II", "AS", "DIA", "UNIX", "FOX", "VELO", "ARWIC", "OLD", "PVC", "QR", "BCD", "NITRO"}
 # Büyük harfle yazılmış adlarda I harfi: Türkçe sözcükte "ı", yabancı sözcükte "i" olur
 FOREIGN_I = {"ACTIVE", "BRIVIGA", "CLASSIC", "CRUISER", "HELIX", "LINE", "LITE", "QUICK", "RAINBOW", "SHIMANO",
-             "RELEASE", "PREMIUM", "LINKGLIDE", "BIKE", "CITY", "TRAIL", "DIRT", "LIGHT", "MINI", "PRIME", "SPRINT"}
+             "RELEASE", "PREMIUM", "LINKGLIDE", "BIKE", "CITY", "TRAIL", "DIRT", "LIGHT", "MINI", "PRIME", "SPRINT",
+             "MAXXIS", "AIR", "ASSIZE", "BITE", "CENTERLINE", "CLARIS", "DIFFUSION", "DISC", "HYDRAULIC", "INTEGRAL",
+             "LAPIERRE", "LITHIUM", "ORTLIEB", "RAPID", "RIM", "RODI", "SHIFTER", "SINGLE", "SUSPENSION", "TRIGGER",
+             "TRIX", "VIVO", "WELDING", "BISIKLET"}
 # Sitedeki yazım hataları (Türkçe küçük harfe çevrilmiş yabancı adlar)
 FIXES = (("Shımano", "Shimano"), ("SHİMANO", "SHIMANO"), ("Premıum", "Premium"), ("Iç Lastik", "İç Lastik"), ("Gıneyea", "Gineyea"), ("Slikon", "Silikon"), ("Solusyonsuz", "Solüsyonsuz"),
          ("Bisiklet&Kayak&Cross", "Bisiklet & Kayak & Cross"), ("Orjinal", "Orijinal"), ("ORJİNAL", "ORİJİNAL"),
@@ -294,8 +297,8 @@ RULES = [
        "Lastik basıncını pompayla mı ölçersin, parmakla mı?", ["#bisikletpompası", "#bisikletbakımı"], inc="pompa"),
     _r("matara_kafesi", "Matara kafesi", ["Matara ve Kafes"],
        ["Mataran <em>elinin altında</em>", "Mataraya <em>sağlam yuva</em>", "Suyun <em>hep yanında</em>"],
-       ["Matara çantada değil, kadroda dursun.", "Su elinin altında olunca daha sık içersin."],
-       "Mataran kadroda mı durur, çantada mı?", ["#matarakafesi", "#bisikletaksesuarı"], inc="kafes|tutucu"),
+       ["Matara çantada değil, bisikletinde dursun.", "Su elinin altında olunca daha sık içersin."],
+       "Mataran bisiklette mi durur, çantada mı?", ["#matarakafesi", "#bisikletaksesuarı"], inc="kafes|tutucu"),
     _r("matara", "Matara", ["Matara ve Kafes"], ["Suyun <em>yanında olsun</em>", ("Kışın da <em>su iç</em>", KIS)],
        ["Susamayı bekleme, sürüş boyunca yudum yudum iç.", "Her sürüşte yanında olması gereken şey: su."],
        "Mataranda ne olur: sade su mu, başka bir şey mi?", ["#matara", "#bisikletaksesuarı"], inc="matara",
@@ -499,7 +502,10 @@ def _spec_value(v: str) -> str:
     v = re.sub(r"(\d+)\.(\d+)\s*ah\b", r"\1,\2 Ah", v, flags=re.I)
     v = re.sub(r"(\d+)\s*ah\b", r"\1 Ah", v, flags=re.I)
     v = re.sub(r"(\d+)\s*v\b", r"\1 V", v, flags=re.I)
-    return re.sub(r"\s*/\s*(?=\d+(,\d+)? Ah)", " / ", v)
+    v = re.sub(r"\s*/\s*(?=\d+(,\d+)? Ah)", " / ", v)
+    for a, b in FIXES:  # başlık düzeni FIXES'ten sonra çalıştığı için yazım düzeltmeleri yeniden uygulanır
+        v = v.replace(a, b)
+    return v
 
 
 def clean_specs(p: dict, n: int = 6) -> list[tuple[str, str]]:

@@ -9,6 +9,7 @@ Aynı anda iki iş main'e yazınca git satır bazında çakışır ya da birinin
     (published > error/missed/skipped > kapsayıcısı kurulmuş > denenmiş > hiç) kazanır, eşitlikte bizimki,
     bayrakta VEYA;
   - Suite'te zamanlanmış hâli diğer taraftan gelen kaydın içeriğini de oradan alır (Suite o içeriği yayınlar);
+    iki tarafta da zamanlanmışsa içeriği, ataya göre yalnız diğer taraf değiştirdiyse oradan alır;
   - yalnız bir tarafta olan kaydı, ata yoksa (yeni eklenmiş) ya da durumu değişmişse korur;
   - sonucu data/calendar.json'a yazar ve sayfaları (bio, simülasyon, takvim, Suite listesi) yeniden üretir.
 
@@ -25,6 +26,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common  # noqa: E402
 
 STATE = ("status", "via", "error", "media_id", "permalink", "published_at", "container_id", "attempts")
+ICERIK_DISI = set(STATE) | {"suite_scheduled"}
+
+
+def icerik(c: dict | None) -> str | None:
+    """Kaydın yayın durumu ve Suite bayrağı dışındaki içeriği (karşılaştırma için)."""
+    return json.dumps({k: v for k, v in c.items() if k not in ICERIK_DISI}, sort_keys=True) if c else None
 
 
 def rank(c: dict) -> int:
@@ -71,6 +78,12 @@ def merge(base: list[dict], other: list[dict], ata: list[dict] | None = None, ba
                 print(f"UYARI: {cid} Suite'te zamanlanmış hâliyle korunuyor; bu taraftaki yeniden kurulum atıldı.")
             c = dict(o)
         else:
+            if fb and fo and a is not None and icerik(c) == icerik(a) != icerik(o):
+                # İki tarafta da Suite'te zamanlanmış; içeriği yalnız diğer taraf değiştirmiş (Suite'te elle
+                # yeniden planlanan kayıt): içerik oradan gelsin, yayın durumu aşağıdaki kuralla birleşsin.
+                st = {k: c[k] for k in STATE if k in c}
+                c = {k: v for k, v in o.items() if k not in STATE}
+                c.update(st)
             if a is not None:
                 bchg, ochg = durum(c) != durum(a), durum(o) != durum(a)
             else:

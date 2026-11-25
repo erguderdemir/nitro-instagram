@@ -401,7 +401,7 @@ def build_pages(cal: list[dict]) -> None:
 
 
 def run(dry: bool) -> int:
-    """Takvimi işle: iptaller, Suite kayıtları, geç kalanlar, API yayınları. Yeni 'error' varsa SystemExit."""
+    """Takvimi işle: iptaller, Suite kayıtları, geç kalanlar, API yayınları. Yeni 'error' varsa 1 döner."""
     cal = common.load_calendar()
     now = common.now()
     p = Publisher(cal, now, dry)
@@ -477,8 +477,10 @@ def run(dry: bool) -> int:
     if not dry:
         build_pages(cal)
     if errors:
-        # İş akışı kırmızı görünsün, GitHub e-posta bildirimi göndersin
-        sys.exit(f"{errors} paylaşım hata verdi. Ayrıntı: data/calendar.json içindeki 'error' alanı.")
+        # Çıkış kodu 1: iş akışı kırmızı görünür, GitHub e-posta bildirimi gönderir. sys.exit değil, çünkü main()
+        # bu dönüşten sonra sıradaki API paylaşımını bekleyip tam vaktinde yayınlamalı.
+        print(f"{errors} paylaşım hata verdi. Ayrıntı: data/calendar.json içindeki 'error' alanı.", file=sys.stderr)
+        return 1
     return 0
 
 
