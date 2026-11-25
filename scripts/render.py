@@ -373,9 +373,10 @@ def _ara(v: dict, style: str = "") -> str:
     return f'<div class="code mono" data-fit="13" data-tam="1"{st}>ARA: <span style="text-transform:none;letter-spacing:.04em">“{E(v["q"])}”</span></div>'
 
 
-def _meta(v: dict, small: bool = False) -> str:
+def _meta(v: dict, small: bool = False, ara: bool = True) -> str:
+    """ara=False: story'lerde ARA satırı yok (story'de yalnız tıklanabilir ÜRÜNE GİT çıkartması yönlendirir)."""
     return (f'<div class="meta"><div style="min-width:0"><div class="pname" data-fit="24">{E(v["name"])}</div>'
-            + _ara(v) + '</div>'
+            + (_ara(v) if ara else "") + '</div>'
             f'<div class="price h{" sm" if small else ""}">{E(v["price"])}</div></div>')
 
 
@@ -384,11 +385,12 @@ def _strip(v: dict) -> str:
             + _ara(v) + f'</div><div class="price h sm">{E(v["price"])}</div></div>')
 
 
-def p_cover(v: dict, kicker: str, headline: str, variant: str = "cream") -> str:
+def p_cover(v: dict, kicker: str, headline: str, variant: str = "cream", ara: bool = True) -> str:
+    """ara=False: tanıtım story'sinin içine gömülen kapak kopyası (story'de ARA yazmaz)."""
     return f'''<section class="cv post v-{variant}">{contour(v["code"], 1010, 210)}
 <div class="pad">{top(chip(v["cat"]))}<div class="kick mono">{E(kicker)}</div>
 <h1 class="h hl" data-fit="58" style="font-size:108px;max-height:204px">{hl(headline)}</h1>
-{stage(v["img"], 952 / 590, "flex:1;margin-top:24px")}{_meta(v)}{bot(SWIPE)}</div></section>'''
+{stage(v["img"], 952 / 590, "flex:1;margin-top:24px")}{_meta(v, ara=ara)}{bot(SWIPE)}</div></section>'''
 
 
 def p_gallery(v: dict, info: dict, i: int, n: int, variant: str = "cream") -> str:
@@ -517,16 +519,17 @@ def s_product(v: dict, kicker: str, headline: str, link: bool, variant: str = "c
     return f'''<section class="cv story v-{variant}">{sbg(v["code"] + "st")}
 <div class="pad">{top(chip(v["cat"]))}<div class="kick mono">{E(kicker)}</div>
 <h1 class="h hl" data-fit="64" style="font-size:118px;max-height:224px">{hl(headline)}</h1>
-{stage(v["img"], 952 / 520, "flex:1;margin-top:26px")}{_meta(v)}
+{stage(v["img"], 952 / 520, "flex:1;margin-top:26px")}{_meta(v, ara=False)}
 {_dock(link, "Ürüne gitmek için dokun", "Ürüne git")}</div></section>'''
 
 
 def s_promo(cover: Path, kicker: str, headline: str, link: bool, label: str, fallback: str,
-            variant: str = "ink") -> str:
+            variant: str = "ink", mock: Path | None = None) -> str:
+    """mock: kartta gösterilecek kapak görseli (ARA'sız kopya); yoksa postun kendi kapağı."""
     return f'''<section class="cv story v-{variant}">{sbg(str(cover.name))}
 <div class="pad">{top(chip("Yeni gönderi", True))}<div class="kick mono">{E(kicker)}</div>
 <h1 class="h hl" data-fit="60" style="font-size:112px;max-height:212px">{hl(headline)}</h1>
-<div class="mockw"><div class="mock"><img src="{cover.as_uri()}" alt=""></div></div>
+<div class="mockw"><div class="mock"><img src="{(mock or cover).as_uri()}" alt=""></div></div>
 {_dock(link, label, fallback)}</div></section>'''
 
 
@@ -549,7 +552,7 @@ def s_question(q: str, variant: str = "orange") -> str:
 
 def s_trio(kicker: str, title: str, views: list[dict], link: bool, variant: str = "cream") -> str:
     rows = "".join(f'<div class="tr">{stage(v["img"], 1)}<div class="tx"><div class="pname" data-fit="22">{E(v["name"])}</div>'
-                   + _ara(v) + f'</div><div class="price h sm">{E(v["price"])}</div></div>'
+                   + f'</div><div class="price h sm">{E(v["price"])}</div></div>'
                    for v in views[:3])
     return f'''<section class="cv story v-{variant}">{sbg(title)}
 <div class="pad">{top(chip(kicker, True))}

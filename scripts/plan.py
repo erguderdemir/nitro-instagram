@@ -385,8 +385,17 @@ class Planner:
             head, url, text = "Mutlu <em>yıllar!</em>", store, "MAĞAZAYA GİT"
             label, fallback = "Mağazaya gitmek için dokun", "Link profilde<u>·</u>Mağaza"
         link = C.utm(url, "story", "promo", sid)
-        media, mlink = self.suite_story(sid, (R.s_promo(cover, kicker, head, False, label, fallback),
-                                              R.s_promo(cover, kicker, head, True, label, fallback)))
+        mock = None
+        p0 = self.by_slug.get(post["products"][0]["slug"]) if theme == "urun" and post.get("format") == "carousel" \
+            and post.get("products") else None
+        if p0 and self.images(p0):
+            # Post kapağı ARA satırı taşır; story'de ARA yazmasın diye kart için ARA'sız kopya çizilir
+            # (post kareleriyle birlikte, story'lerden önce; cache/ altında kalır, docs/'a girmez).
+            mock = REEL_TMP.parent / "mock" / f"{sid}.jpg"
+            self.post_jobs.append((R.p_cover(self.view(p0), post["kicker"], post["headline"],
+                                             C.pick(VARIANTS, post["id"]), ara=False), mock))
+        media, mlink = self.suite_story(sid, (R.s_promo(cover, kicker, head, False, label, fallback, mock=mock),
+                                              R.s_promo(cover, kicker, head, True, label, fallback, mock=mock)))
         prods = [dict(x, link=C.utm(self.by_slug[x["slug"]]["url"], "story", "promo", sid),
                       bio_link=C.utm(self.by_slug[x["slug"]]["url"], "bio", "promo", sid)) for x in post["products"]]
         return self.rec(sid, day, tm, "story", "story", "promo", kicker=kicker, headline=head, media=media, cover=media[0],

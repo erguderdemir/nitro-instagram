@@ -495,8 +495,8 @@
   "ref": "",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "8646cbfa1418",
-  "ver": "7f2e6679d6"
+  "fp": "134c99b20b8c",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -753,8 +753,8 @@
   "ref": "",
   "rule": "sehir",
   "status": "planned",
-  "fp": "4c8244ec6fff",
-  "ver": "7f2e6679d6"
+  "fp": "6a26f5376976",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -1019,8 +1019,8 @@
   "ref": "kis",
   "rule": "liste:kis",
   "status": "planned",
-  "fp": "bcc884498477",
-  "ver": "7f2e6679d6"
+  "fp": "80ec16bddfed",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -1318,8 +1318,8 @@
   "ref": "soru:946d578e",
   "rule": "soru",
   "status": "planned",
-  "fp": "f4402e0c2f6a",
-  "ver": "7f2e6679d6"
+  "fp": "ca64d97a647c",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -1372,8 +1372,8 @@
   "ref": "",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "a01d93984fc0",
-  "ver": "7f2e6679d6"
+  "fp": "22980e1765e7",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -1686,8 +1686,8 @@
   "ref": "",
   "rule": "dag",
   "status": "planned",
-  "fp": "c0223b2bdb64",
-  "ver": "7f2e6679d6"
+  "fp": "9f85b12ae1ea",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -1827,8 +1827,8 @@
   "ref": "soru:ff24f66c",
   "rule": "soru",
   "status": "planned",
-  "fp": "684eb02641c2",
-  "ver": "7f2e6679d6"
+  "fp": "2d69425d2125",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -1935,8 +1935,8 @@
   "ref": "",
   "rule": "park_ayagi",
   "status": "planned",
-  "fp": "76ff2d2fc4de",
-  "ver": "7f2e6679d6"
+  "fp": "24fb791122ab",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -2418,8 +2418,8 @@
   "ref": "",
   "rule": "dis_lastik",
   "status": "planned",
-  "fp": "75b25cda52f1",
-  "ver": "7f2e6679d6"
+  "fp": "5b0a286935cd",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -2676,8 +2676,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "60d875e0c8cc",
-  "ver": "7f2e6679d6"
+  "fp": "8a231559acfd",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -2942,8 +2942,8 @@
   "ref": "hediye250",
   "rule": "liste:hediye250",
   "status": "planned",
-  "fp": "db75711572e5",
-  "ver": "7f2e6679d6"
+  "fp": "d8852557767c",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -3241,8 +3241,8 @@
   "ref": "soru:ba368b1e",
   "rule": "soru",
   "status": "planned",
-  "fp": "ea6832b08b91",
-  "ver": "7f2e6679d6"
+  "fp": "36718be43cdc",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -3295,8 +3295,8 @@
   "ref": "",
   "rule": "sele",
   "status": "planned",
-  "fp": "858ae896935f",
-  "ver": "7f2e6679d6"
+  "fp": "4c73023bd4f0",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -3607,8 +3607,8 @@
   "ref": "",
   "rule": "gravel",
   "status": "planned",
-  "fp": "b34d9b77324c",
-  "ver": "7f2e6679d6"
+  "fp": "b63c97bc002c",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -3748,8 +3748,8 @@
   "ref": "soru:5cf051d6",
   "rule": "soru",
   "status": "planned",
-  "fp": "152089d991d1",
-  "ver": "7f2e6679d6"
+  "fp": "be1bc55203bf",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -3858,8 +3858,8 @@
   "ref": "",
   "rule": "kaset",
   "status": "planned",
-  "fp": "f5293e005233",
-  "ver": "7f2e6679d6"
+  "fp": "cb9f1768c668",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -4339,8 +4339,8 @@
   "ref": "",
   "rule": "balata",
   "status": "planned",
-  "fp": "f9dc8595f77c",
-  "ver": "7f2e6679d6"
+  "fp": "5f0e2e33f2ed",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -4599,8 +4599,8 @@
   "ref": "",
   "rule": "sehir",
   "status": "planned",
-  "fp": "2b7559a268a1",
-  "ver": "7f2e6679d6"
+  "fp": "f65f13dbb560",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -4865,8 +4865,8 @@
   "ref": "hediye500",
   "rule": "liste:hediye500",
   "status": "planned",
-  "fp": "87a4bfe44ea4",
-  "ver": "7f2e6679d6"
+  "fp": "2e3368a0dcac",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -5164,8 +5164,8 @@
   "ref": "soru:94f15ca5",
   "rule": "soru",
   "status": "planned",
-  "fp": "8ea2b3be39ff",
-  "ver": "7f2e6679d6"
+  "fp": "2eb8c855ac51",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -5220,8 +5220,8 @@
   "ref": "",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "18f242262cf1",
-  "ver": "7f2e6679d6"
+  "fp": "d880deed3a6d",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -5532,8 +5532,8 @@
   "ref": "",
   "rule": "bmx",
   "status": "planned",
-  "fp": "14e5ef9b89fc",
-  "ver": "7f2e6679d6"
+  "fp": "b8bf8c70060c",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -5673,8 +5673,8 @@
   "ref": "soru:5f650ea8",
   "rule": "soru",
   "status": "planned",
-  "fp": "285044f571c5",
-  "ver": "7f2e6679d6"
+  "fp": "b0d9bbecd058",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -5783,8 +5783,8 @@
   "ref": "",
   "rule": "rotor",
   "status": "planned",
-  "fp": "ef4788cf9e05",
-  "ver": "7f2e6679d6"
+  "fp": "a46c5979f660",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -6264,8 +6264,8 @@
   "ref": "",
   "rule": "lamba",
   "status": "planned",
-  "fp": "aa0edd7ea2b5",
-  "ver": "7f2e6679d6"
+  "fp": "e5899b1075ca",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -6524,8 +6524,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "dfcad801fc11",
-  "ver": "7f2e6679d6"
+  "fp": "e6dafebebd07",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -6790,8 +6790,8 @@
   "ref": "cocuk",
   "rule": "liste:cocuk",
   "status": "planned",
-  "fp": "bdae27743e2e",
-  "ver": "7f2e6679d6"
+  "fp": "4f12efff6fff",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -7089,8 +7089,8 @@
   "ref": "soru:9f1163f5",
   "rule": "soru",
   "status": "planned",
-  "fp": "092e085e13ce",
-  "ver": "7f2e6679d6"
+  "fp": "eeed00278cca",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -7143,8 +7143,8 @@
   "ref": "",
   "rule": "yama",
   "status": "planned",
-  "fp": "8a9fc44ca66a",
-  "ver": "7f2e6679d6"
+  "fp": "9a4fae6a9a20",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -7459,8 +7459,8 @@
   "ref": "",
   "rule": "dag",
   "status": "planned",
-  "fp": "ce36bc325235",
-  "ver": "7f2e6679d6"
+  "fp": "bec8f8f540a2",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -7600,8 +7600,8 @@
   "ref": "soru:4efb0982",
   "rule": "soru",
   "status": "planned",
-  "fp": "ce56770dde6c",
-  "ver": "7f2e6679d6"
+  "fp": "de39d6c7b57e",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -7708,8 +7708,8 @@
   "ref": "",
   "rule": "zincir",
   "status": "planned",
-  "fp": "f73275b8a566",
-  "ver": "7f2e6679d6"
+  "fp": "0b4c4071f48e",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -7959,9 +7959,9 @@
   "ref": "zincir-bakimi",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "191101b117ba",
+  "fp": "c13f4fde060e",
   "cta": "servis",
-  "ver": "7f2e6679d6"
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8188,8 +8188,8 @@
   "ref": "",
   "rule": "camurluk",
   "status": "planned",
-  "fp": "47d6c31ecfd2",
-  "ver": "7f2e6679d6"
+  "fp": "23d4dae17f51",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8242,8 +8242,8 @@
   "ref": "2026-12-24-post-1930",
   "rule": "camurluk",
   "status": "planned",
-  "fp": "e6b9e2b4b831",
-  "ver": "7f2e6679d6"
+  "fp": "70e3442be42a",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8296,8 +8296,8 @@
   "ref": "2026-12-24-post-1930",
   "rule": "camurluk",
   "status": "planned",
-  "fp": "e6b9e2b4b831",
-  "ver": "7f2e6679d6"
+  "fp": "70e3442be42a",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8335,8 +8335,8 @@
   "ref": "marka:4",
   "rule": "marka",
   "status": "planned",
-  "fp": "0a94259110f8",
-  "ver": "7f2e6679d6"
+  "fp": "50b10b21cb0d",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8389,8 +8389,8 @@
   "ref": "",
   "rule": "kaset",
   "status": "planned",
-  "fp": "50d7845332a0",
-  "ver": "7f2e6679d6"
+  "fp": "0c68d17766ea",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8445,8 +8445,8 @@
   "ref": "",
   "rule": "sehir",
   "status": "planned",
-  "fp": "ae500bc0564d",
-  "ver": "7f2e6679d6"
+  "fp": "ecd76495f35c",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8499,8 +8499,8 @@
   "ref": "2026-12-25-post-1930",
   "rule": "sehir",
   "status": "planned",
-  "fp": "b38a562695f9",
-  "ver": "7f2e6679d6"
+  "fp": "3a58096f99ff",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8553,8 +8553,8 @@
   "ref": "2026-12-25-post-1930",
   "rule": "sehir",
   "status": "planned",
-  "fp": "b38a562695f9",
-  "ver": "7f2e6679d6"
+  "fp": "3a58096f99ff",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8592,8 +8592,8 @@
   "ref": "ipucu:de1344d0",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "acb97030680f",
-  "ver": "7f2e6679d6"
+  "fp": "fc1277feb33f",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8710,8 +8710,8 @@
   "ref": "yukseltme",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "2cc8e264784a",
-  "ver": "7f2e6679d6"
+  "fp": "29e6bc2d1a06",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8820,8 +8820,8 @@
   "ref": "2026-12-26-post-1100",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "00e35352d38c",
-  "ver": "7f2e6679d6"
+  "fp": "2c9720523ed8",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8874,8 +8874,8 @@
   "ref": "",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "6eb3e2c0d6b0",
-  "ver": "7f2e6679d6"
+  "fp": "f4957dcc5e51",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -8984,8 +8984,8 @@
   "ref": "2026-12-26-post-1100",
   "rule": "liste:yukseltme",
   "status": "planned",
-  "fp": "00e35352d38c",
-  "ver": "7f2e6679d6"
+  "fp": "2c9720523ed8",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9017,8 +9017,8 @@
   "ref": "soru:43b9fdcb",
   "rule": "soru",
   "status": "planned",
-  "fp": "6b4e25c1c16f",
-  "ver": "7f2e6679d6"
+  "fp": "0633996ccaf4",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9073,8 +9073,8 @@
   "ref": "",
   "rule": "ayna",
   "status": "planned",
-  "fp": "6526951260e6",
-  "ver": "7f2e6679d6"
+  "fp": "d3ea7c7fec73",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9127,8 +9127,8 @@
   "ref": "2026-12-27-post-1100",
   "rule": "ayna",
   "status": "planned",
-  "fp": "9cc4b91b1c2d",
-  "ver": "7f2e6679d6"
+  "fp": "1968eb9b62a8",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9181,8 +9181,8 @@
   "ref": "",
   "rule": "telefon_tutucu",
   "status": "planned",
-  "fp": "96bd432d3b1f",
-  "ver": "7f2e6679d6"
+  "fp": "c928e69a7277",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9235,8 +9235,8 @@
   "ref": "2026-12-27-post-1100",
   "rule": "ayna",
   "status": "planned",
-  "fp": "9cc4b91b1c2d",
-  "ver": "7f2e6679d6"
+  "fp": "1968eb9b62a8",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9268,8 +9268,8 @@
   "ref": "ipucu:813a0136",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "d029b00b7fd2",
-  "ver": "7f2e6679d6"
+  "fp": "15cd76cb8a6d",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9322,8 +9322,8 @@
   "ref": "",
   "rule": "km_saati",
   "status": "planned",
-  "fp": "624c65748792",
-  "ver": "7f2e6679d6"
+  "fp": "c841eea492a7",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9378,8 +9378,8 @@
   "ref": "",
   "rule": "ebike",
   "status": "planned",
-  "fp": "0e6356f23669",
-  "ver": "7f2e6679d6"
+  "fp": "10a3d439f4b5",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9432,8 +9432,8 @@
   "ref": "2026-12-28-post-1930",
   "rule": "ebike",
   "status": "planned",
-  "fp": "64a90ed7c539",
-  "ver": "7f2e6679d6"
+  "fp": "8edcb88b57a9",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9486,8 +9486,8 @@
   "ref": "2026-12-28-post-1930",
   "rule": "ebike",
   "status": "planned",
-  "fp": "64a90ed7c539",
-  "ver": "7f2e6679d6"
+  "fp": "8edcb88b57a9",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9519,8 +9519,8 @@
   "ref": "soru:e4e13487",
   "rule": "soru",
   "status": "planned",
-  "fp": "a70aa29ea89e",
-  "ver": "7f2e6679d6"
+  "fp": "903d338e23c6",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9573,8 +9573,8 @@
   "ref": "",
   "rule": "kilit",
   "status": "planned",
-  "fp": "13d574f94e42",
-  "ver": "7f2e6679d6"
+  "fp": "d3171af00100",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9629,8 +9629,8 @@
   "ref": "",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "e1f7b55f2155",
-  "ver": "7f2e6679d6"
+  "fp": "5fdde2a49757",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9683,8 +9683,8 @@
   "ref": "2026-12-29-post-1930",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "83bdd111f286",
-  "ver": "7f2e6679d6"
+  "fp": "1d7e611cc46b",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9737,8 +9737,8 @@
   "ref": "2026-12-29-post-1930",
   "rule": "ic_lastik",
   "status": "planned",
-  "fp": "83bdd111f286",
-  "ver": "7f2e6679d6"
+  "fp": "1d7e611cc46b",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9776,8 +9776,8 @@
   "ref": "servis:2",
   "rule": "servis",
   "status": "planned",
-  "fp": "a77ab161c089",
-  "ver": "7f2e6679d6"
+  "fp": "538e02ac2693",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9830,8 +9830,8 @@
   "ref": "",
   "rule": "pompa",
   "status": "planned",
-  "fp": "5893879de860",
-  "ver": "7f2e6679d6"
+  "fp": "ed09b0c3bc48",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9879,9 +9879,9 @@
   "ref": "lastik-basinci",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "e5e6b9a116db",
+  "fp": "7d3f540d537d",
   "cta": "magaza",
-  "ver": "7f2e6679d6"
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9919,8 +9919,8 @@
   "ref": "2026-12-30-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "9fc4dfb1f74c",
-  "ver": "7f2e6679d6"
+  "fp": "a90592e23494",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9958,8 +9958,8 @@
   "ref": "2026-12-30-post-1930",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "9fc4dfb1f74c",
-  "ver": "7f2e6679d6"
+  "fp": "a90592e23494",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -9997,8 +9997,8 @@
   "ref": "ipucu:0e8797f4",
   "rule": "ipucu",
   "status": "planned",
-  "fp": "3cf08cb48d7d",
-  "ver": "7f2e6679d6"
+  "fp": "ccbc61b637d0",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -10051,8 +10051,8 @@
   "ref": "",
   "rule": "matara_kafesi",
   "status": "planned",
-  "fp": "33aca7ff2a92",
-  "ver": "7f2e6679d6"
+  "fp": "9835232f066f",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -10086,8 +10086,8 @@
   "ref": "yilbasi",
   "rule": "yilbasi",
   "status": "planned",
-  "fp": "14e2ba2add36",
-  "ver": "7f2e6679d6"
+  "fp": "117b023720e5",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -10125,8 +10125,8 @@
   "ref": "2026-12-31-post-1930",
   "rule": "yilbasi",
   "status": "planned",
-  "fp": "48efdee289ca",
-  "ver": "7f2e6679d6"
+  "fp": "c912ff74f614",
+  "ver": "51ccb95e91"
  },
  {
   "schema": 2,
@@ -10164,7 +10164,7 @@
   "ref": "2026-12-31-post-1930",
   "rule": "yilbasi",
   "status": "planned",
-  "fp": "48efdee289ca",
-  "ver": "7f2e6679d6"
+  "fp": "c912ff74f614",
+  "ver": "51ccb95e91"
  }
 ]
