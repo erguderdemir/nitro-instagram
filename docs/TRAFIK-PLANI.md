@@ -10,7 +10,7 @@
 
 ## Yönetici özeti
 
-1. **Kilit gerçeği:** `suite_scheduled=true` olan 139 kayıt (28 post: 25 Kasım–22 Aralık, 111 story: 24 Aralık 12:30'a kadar) donmuş durumda. Otomasyondaki caption, CTA, konum ve etiket iyileştirmeleri Aralık'ta yalnız 23–31 Aralık'taki 9 posta uygulanır. Daha önceki postları Barış isterse Suite'te elle düzeltir.
+1. **Kilit gerçeği:** `suite_scheduled=true` olan 115 kayıt (4 ipucu postu: 25 Kasım, 2, 9 ve 16 Aralık; 111 story: 24 Aralık 12:30'a kadar) donmuş durumda. Otomasyondaki caption, CTA, konum ve etiket iyileştirmeleri kalan 33 kilitsiz posta (25 Kasım–31 Aralık) uygulanır. Kilitli 4 post için öneriler `data/suite_duzelt.json`'da; Barış isterse Suite'te elle düzeltir.
 2. **Ölçüm hemen başlar, büyüme beklemez.** Baz değer zaten var: `data/suite_insights.json` (28 Ekim–24 Kasım) haftada ortalama 33 link tıklaması, 172 profil ziyareti ve 38 takip gösteriyor. "Yalnız ölçüm" dönemi yok. Her yeni kanal kendi UTM'ini taşır; böylece baz değer ölçümü ile büyüme işleri aynı anda yürür.
 3. **Hediye sezonunun en hızlı kaldıraçları Barış'ın elinde:** 1 Aralık'a kadar Google İşletme Profili, IG→FB çapraz paylaşım, Hızlı yanıtlar, 3 sabitlenmiş post ve tezgâh QR kartı. İsteğe bağlı olarak 10–14 Aralık'ta yerel "Öne çıkar" testi yapılabilir (bütçe ve ödeme yalnız sahibin kararı).
 4. **Otomasyonun P0 işleri:** Suite postlarını API medyasıyla eşlemek (bu olmadan baz dönem boş kalır), bio atfını düzeltmek ve son 14 günün post kartlarını göstermek, tarihten bağımsız CTA, sorular ve tekrar yasağı (yalnız kilitsiz kayıtlarda). 24–31 Aralık'taki 8 adet 20:30 story'si aynı ürünü ikinci kez göstermek yerine seçki veya servis hedefine çevrilir.
@@ -180,7 +180,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 
 **Sıra**
 
-1. **Yerel haritalar (1 Aralık'tan itibaren):** GBP (B1). Ardından Yandex Business, Apple Business Connect ve Bing Places. Hepsi ücretsiz ve tek seferlik. NAP (ad, adres, telefon) bilgisi `site.json` ile birebir aynı olur. GBP için haftalık gönderi paketi `data/paylas/gbp-YYYY-WW.md` olarak üretilir; Barış'a yalnız kullanıcı izniyle gider.
+1. **Yerel haritalar (1 Aralık'tan itibaren):** GBP (B1). Ardından Yandex Business, Apple Business Connect ve Bing Places. Hepsi ücretsiz ve tek seferlik. NAP (ad, adres, telefon) bilgisi `site.json` ile birebir aynı olur. GBP için haftalık gönderi paketi `data/paylas/gbp_haftalik.md` olarak üretilir (her plan çalışmasında güncellenir); Barış'a yalnız kullanıcı izniyle gider.
 2. **Instagram'dan siteye yol**
    - Bio'da "Instagram'da son 14 gün" bölümü yer alır: post kapağı ve başlık, tek dokunuşla ürüne ya da koleksiyona geçiş.
    - Daha eski postlar kodla bulunur. Kod, RECENT'taki posta eşlenir.
@@ -304,6 +304,27 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 
 ## Otomasyon iş listesi
 
+### Durum (25 Kasım 2026)
+
+| İş | Durum | Not |
+|---|---|---|
+| O1 | Tamam (kod) | `report.py --esle` her publish çalışmasının sonunda; canlı eşleme ilk Suite postunda doğrulanacak |
+| O2 | Tamam | Bio: son 14 günün yayınlanmış postları, stok ve fiyat kontrolü, iletişim butonları `site.json`'dan |
+| O3 | Tamam | SEO 1. satır, iki seçenekli soru, arama terimli CTA, 30 gün tekrar yasağı; kilitli kayıtlar değişmedi |
+| O4 | Tamam (kod) | Konum probe görevinde okunur (`data/konum.json`); Sayfa konumu boşsa post konumsuz yayınlanır |
+| O5 | Tamam | 20:30 story'leri kategori/servis hedefine; promo kampanyası = post teması; 26 Aralık: 1.000 ₺ altı hediye seçkisi |
+| O6 | Tamam | `data/suite_duzelt.json`: 4 kilitli post için öneri; Barış'a yalnız kullanıcı izniyle |
+| O7 | Bekliyor | Story/hesap insights için jetonda `instagram_manage_insights` izni gerekir (B2) |
+| O8 | Tamam | Postlarda ≥3 teknik özellik, ±1 gün alt tür kontrolü, 25 Aralık çocuk ve 28 Aralık 2. el postu |
+| O9 | Tamam | 5 etiket: `#köyceğiz` + dönüşümlü bölge + 3 konu; alt metinler kategori kelimesiyle başlar |
+| O10 | Bekliyor | Barış'ın linkli story A/B kararı; `plan_end` 15 Aralık'a kadar 2027-01-31'e uzatılacak |
+| O11 | İptal | N-kodu kaldırıldı; CTA doğrulanmış site arama terimini kullanıyor, `/k/` yönlendirmesi gerekmiyor |
+| O12 | Tamam | `scripts/paylas.py` → `data/paylas/` (GBP, QR, hızlı yanıtlar, öne çıkanlar, grup metinleri) |
+| O13 | Bekliyor | Rota verisi (kaynaklı) gerekli |
+| O14 | Bekliyor | Collab için Barış onayı gerekli |
+| O15 | 1. aşama tamam | `scripts/yorum.py` salt okuma özeti (`data/yorumlar.json`, depoya girmez); 2. aşama (yanıt) onay bekliyor |
+| O16 | Bekliyor | En az bir aylık ölçüm verisi gerekli |
+
 | Sıra | İş | Dosya | Kabul kriteri | Efor |
 |---|---|---|---|---|
 | O1 (P0) | Suite postlarını `/media` ile ±10 dk eşleme; `media_id` ve permalink yazma; ilk ≥72 saatlik metrik dondurma (publish adımında `must=False`) | `scripts/report.py`, `scripts/gorev.py` | 25 Kasım'dan itibaren Suite postlarının ≥%90'ında `media_id` var; eşlenemeyenler RAPOR.md'de; izin yoksa publish kırılmıyor | 1 gün |
@@ -311,7 +332,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 | O3 (P0) | Caption sırası; CTA "Profildeki linke dokun, N… yaz."; türe göre gönder/kaydet çağrısı; iki seçenekli sorular (kural başına ≥3); 30 gün kanca/soru tekrar yasağı; CTA satırında "en üstte"/"bugün" yasağı | `scripts/content.py`, `scripts/plan.py`, `scripts/denetim.py` | Kilitsiz kayıtlarda ilk satır ≤125 karakter, soru ilk 3 satırda, evet/hayır sorusu 0, tekrar 0; kilitli kayıtlarda `fp` ve caption değişmedi; bulgular kilitli/kilitsiz ayrı sayılıyor | 1 gün |
 | O4 (P0) | `location_id`: probe görevinde `/{page-id}?fields=location` okunur, doluysa Sayfa ID'si `config.json`'a yazılır | `scripts/gorev.py`, `config.json` | 23 Aralık–5 Ocak arasındaki 14 API postunun hepsinde konum dolu; ilk postun permalink'i elle kontrol edilmiş | 2 saat |
 | O5 (P0, 5 Aralık'a kadar) | 24–31 Aralık'taki kilitsiz 20:30 story'leri seçki `?p=` ya da servis randevu hedefine; promo `utm_campaign`=tema; ipucu story başlığı ve `tips.json` `cta_url`; 26 Aralık fiyat bandı hediye seçkisi; liste story'si `?p=` | `scripts/plan.py`, `data/tips.json`, `config.json` | Yeni kayıtlarda `campaign=promo` yok; 20:30 ile 19:30 aynı URL'ye gitmiyor; seçkide yalnız stoktaki ürünler ve `products.json` fiyatları var; kilitli kayıtlarda değişiklik yok | 4 saat |
-| O6 (P0) | Kilitli postlar için opsiyonel düzeltme listesi | `data/suite_duzelt.json` (`plan.py` üretir) | 28 kilitli postun her biri için önerilen caption ve konum satırı var; Barış'a yalnız kullanıcı izniyle gidiyor | 2 saat |
+| O6 (P0) | Kilitli postlar için opsiyonel düzeltme listesi | `data/suite_duzelt.json` (`plan.py` üretir) | 4 kilitli postun her biri için önerilen caption ve konum satırı var; Barış'a yalnız kullanıcı izniyle gidiyor | 2 saat |
 | O7 (P1) | Story insights (her publish çalışmasında `/stories`, son değer saklanır; 04:10 tamamlar); hesap insights'ı; `manuel.json` okuma; haftalık KPI tablosu | `scripts/report.py`, `scripts/gorev.py` | İzin yoksa yalnız uyarı basılıyor; Suite story eşleme oranı raporlanıyor; KPI tablosunda §2'deki her KPI için 1 satır var; link dokunuşu API testi sonucu RAPOR.md'de | 1 gün |
 | O8 (P1) | Postlarda `need_specs=3`; 12:30 story'sinde ±1 gün alt tür çakışma kontrolü; 24–31 Aralık'ta çocuk ve 2. el havuzu | `scripts/plan.py` | Yeni postlarda özelliksiz ürün 0; ardışık günde aynı alt tür 0; 24–31 Aralık'ta ≥1 çocuk ve ≥1 2. el postu | 4 saat |
 | O9 (P1) | Yeni etiket seti (5), SEO ilk satırı, alt metin | `scripts/content.py`, `scripts/plan.py` | Etiket sayısı 5; `#köyceğiz` var; `#bisiklet` ve `#nitrobisiklet` yok; bölgeye özel hizmet iddiası yok | 2 saat |
