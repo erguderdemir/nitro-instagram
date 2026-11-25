@@ -1,4 +1,4 @@
-görev: plan · 2026-11-25 01:45 UTC
+görev: plan · 2026-11-25 09:49 UTC
 $ scrape.py  -> çıkış 0
 420 ürün bulundu, çekiliyor…
 420 ürün yazıldı: data/products.json
@@ -6,4 +6,4 @@ $ plan.py  -> çıkış 0
 Takvim: 187 kayıt (0 yeni/yenilenen), 2026-11-24 → 2026-12-31.
 Sayfalar yazıldı: docs/onizleme/, docs/index.html, docs/TAKVIM.md, docs/suite/
 $ denetim.py  -> çıkış 0
-DENETİM: 185 kayıt denetlendi, 0 bulgu
+DENETİM: 184 kayıt denetlendi, 0 bulgu
