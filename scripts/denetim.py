@@ -255,19 +255,26 @@ class Audit:
         # Tanıtım story'sinin kampanyası tanıttığı postun temasıdır (plan.py tanitim_hedefi). Business Suite'te
         # zamanlanmış (kilitli) eski story'ler bu kuraldan önce "promo" kampanyasıyla kuruldu ve değiştirilemez.
         camp = c["theme"]
-        if camp == "promo" and not c.get("suite_scheduled"):
+        if camp == "promo":
             camp = (self.by_id.get(c.get("ref")) or {}).get("theme", "promo")
+        # Kilitli (Suite'te zamanlanmış) eski tanıtım story'leri "promo" kampanyasıyla kuruldu; yenileri
+        # postun temasıyla. Kilitli kayıtta ikisi de geçerli.
+        camps = {camp, "promo"} if c["theme"] == "promo" and c.get("suite_scheduled") else {camp}
+
+        def utm(u: str, m: str) -> bool:
+            return any(C.utm_ok(u, m, k, c["id"]) for k in camps)
+
         for x in c.get("products") or []:
             p = self.products.get(x["slug"])
             if not p:
                 continue
-            if not x["link"].startswith(p["url"] + "?") or not C.utm_ok(x["link"], medium, camp, c["id"]):
+            if not x["link"].startswith(p["url"] + "?") or not utm(x["link"], medium):
                 self.add(c, "link", f"ürün linki/UTM hatalı: {x['link']}")
-            if not x.get("bio_link", "").startswith(p["url"] + "?") or not C.utm_ok(x["bio_link"], "bio", camp, c["id"]):
+            if not x.get("bio_link", "").startswith(p["url"] + "?") or not utm(x["bio_link"], "bio"):
                 self.add(c, "link", f"bio linki/UTM hatalı: {x.get('bio_link')}")
         link = c.get("link") or ""
         if link:
-            if not link.startswith(common.SITE + "/") or not C.utm_ok(link, medium, camp, c["id"]):
+            if not link.startswith(common.SITE + "/") or not utm(link, medium):
                 self.add(c, "link", f"kayıt linki/UTM hatalı: {link}")
             if c["theme"] == "urun" and link != c["products"][0]["link"]:
                 self.add(c, "link", "kayıt linki ürün linki değil")

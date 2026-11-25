@@ -8254,7 +8254,8 @@
   "rule": "dis_lastik",
   "status": "planned",
   "fp": "a939ad9d3b9d",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "suite_scheduled": true
  },
  {
   "schema": 2,
