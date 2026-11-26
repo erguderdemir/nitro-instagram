@@ -302,7 +302,7 @@ class Planner:
                 sec.append(R.p_detail(v, val, i, n))
                 alts.append("Ürün detayı: " + val)
         sec += [R.p_why(C.perks(p), n - 1, n), R.p_cta("urun", n, n, q=v["q"])]
-        alts += ["Neden NITRO: " + "; ".join(f"{t}, {C.tr_lower(s[:1])}{s[1:]}" for _, t, s in C.perks(p)) + ".",
+        alts += ["Neden NITRO: " + "; ".join(f"{t}, {C.cumle_ici(s)}" for _, t, s in C.perks(p)) + ".",
                  f"Nasıl alırım: profildeki nitrobisiklet.com linkine dokun, aramaya “{v['q']}” yaz."]
         media = self.frames(sid, sec)
         cap, hook = C.product_caption(p, v["q"], rule, str(day), onceki=self.cal)

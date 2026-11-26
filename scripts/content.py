@@ -885,9 +885,33 @@ def _sec(options: list[str], say, *seed, yedek: list[str] | tuple = ()) -> str:
     return pick([o for o in n if n[o] == m], *seed)
 
 
+def yakin_basliklar(gun: str | None, onceki: list[dict] | None = None) -> list[str]:
+    """±TEKRAR_GUN gün içindeki tüm kayıtların (post + story) görsel başlıkları, küçük harfle."""
+    g = _gun(gun)
+    if g is None:
+        return []
+    out = []
+    for c in _takvim(onceki):
+        d = _gun(c.get("date"))
+        if d is None or abs((d - g).days) >= TEKRAR_GUN or c.get("status") not in ("planned", "draft", "published"):
+            continue
+        t = tr_lower((c.get("title") or "").strip())
+        if t:
+            out.append(t)
+    return out
+
+
 def kanca_sec(options: list[str], gun: str | None, onceki=None, *seed, yedek=()) -> str:
+    """Kanca seçimi: pencerede ilk satır olarak kullanılmış ya da yakın bir görsel başlığıyla aynı sözle
+    başlayan kanca geriye düşer (ör. story başlığı “Asfaltın bittiği yerde” iken aynı sözle açılan kanca)."""
     ilkler, _ = kullanilan(gun, onceki)
-    return _sec(options, lambda h: sum(1 for x in ilkler if x.startswith(h)), gun, *seed, yedek=yedek)
+    say = lambda h: sum(1 for x in ilkler if x.startswith(h))
+    h = _sec(options, say, gun, *seed, yedek=yedek)
+    basliklar = yakin_basliklar(gun, onceki)
+    carpar = lambda k: sum(1 for t in basliklar if tr_lower(k).startswith(t))
+    if not carpar(h):
+        return h   # çakışma yoksa seçim aynen kalır (öteki kayıtların kancası oynamaz)
+    return _sec(options, lambda k: say(k) + carpar(k), gun, *seed, yedek=yedek)
 
 
 def soru_sec(options: list[str], gun: str | None, onceki=None, *seed, yedek=()) -> str:
@@ -900,9 +924,15 @@ def _kaydet(gun: str | None, cap: str) -> None:
         _URETILEN[str(gun)[:10]] = (ilk_satir(cap), soru_satiri(cap))
 
 
-def _kucuk(s: str) -> str:
-    """Cümle içi konu: ilk harf küçük (BMX gibi kısaltmalar olduğu gibi)."""
-    return s if s[:2].isupper() else tr_lower(s[:1]) + s[1:]
+OZEL_AD = ("Köyceğiz", "Türkiye", "Muğla", "NITRO")   # cümle içinde de büyük harfle başlar
+
+
+def cumle_ici(s: str) -> str:
+    """Cümle içi söz: ilk harf küçük; BMX gibi kısaltmalar ve özel adlar (Köyceğiz'de) olduğu gibi kalır."""
+    return s if s[:2].isupper() or s.startswith(OZEL_AD) else tr_lower(s[:1]) + s[1:]
+
+
+_kucuk = cumle_ici
 
 
 def seo_ilk(hook: str, konu: str) -> str:

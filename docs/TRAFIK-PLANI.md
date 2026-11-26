@@ -253,6 +253,8 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 
 **Aralık sonuna kadar (tek seferlik):** GA4 Looker Studio raporu ve pazartesi e-postası; Search Console.
 
+**Durum, 26 Kasım 2026:** GA4 erişimi doğrulandı (mülk "Nitro Bisiklet" 563189464, yönetici rolü, ölçüm kimliği G-CHD8NRMBC9, veri akıyor). Search Console'a `https://nitrobisiklet.com/` URL önekli mülk eklendi ama **sahiplik doğrulanamadı**: GA etiketi çerez onayından sonra yüklendiği için ana sayfanın ham HTML'inde yok, "Google Analytics" yöntemi başarısız. Site geliştiricisinin şunlardan birini yapması gerekiyor: ana sayfanın `<head>` kısmına `<meta name="google-site-verification" content="tzWnns33QNMM5U73MfYAqpJbXQ8XiqOH56h1KBjcg1I" />` eklemek ya da kök dizinde `google5a26801908b1e494.html` dosyasını (içerik: `google-site-verification: google5a26801908b1e494.html`) yayınlamak. Ardından Search Console'da "Doğrula", GA4 Yönetici → Ürün bağlantıları → Search Console'dan bağlantı ve varsa site haritası gönderimi.
+
 **Site geliştiricisine iletilecekler:** Bölüm 5'teki tarihli liste. İsteğe bağlı: GA4 consent mode v2.
 
 **Sürekli**
