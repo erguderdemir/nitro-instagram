@@ -309,7 +309,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 12:30 | Story · ürün | Asfalt da toprak da | [Bisan All Trail GRX 400 Gravel 56cm](https://nitrobisiklet.com/urun/bisan-all-trail-grx-400-gravel-56cm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-1230) | 81.570 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Dişler silindiyse vakit geldi | [CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah](https://nitrobisiklet.com/urun/cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-24-post-1930) | 990 ₺ | API | planlı | [görsel](media/2026-12-24-post-1930-1.jpg) |
 | 19:30 | Story · tanıtım | Dişler silindiyse vakit geldi | [CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah](https://nitrobisiklet.com/urun/cst-metropolitan-palmbay-700x48c-28x2-00-zirhli-dis-lastik-e-bike-uyumlu-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-1930) | 990 ₺ | Suite + link | planlı | [görsel](media/2026-12-24-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Dişler silindiyse vakit geldi | [CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı Dış Lastik E-Bike Uyumlu Siyah](https://nitrobisiklet.com/magaza/dis-lastik/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-24-story-2030) | 990 ₺ | Suite + link | iptal | [görsel](media/2026-12-24-story-2030.jpg) |
 
 ## 25.12.2026 Cuma
 
@@ -319,7 +318,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 12:30 | Story · ürün | Vitesler pürüzsüz geçsin | [Shimano Acera CS-HG41-7 7 Vites 11-28T Kaset Dişli](https://nitrobisiklet.com/urun/shimano-acera-cs-hg41-7-7-vites-11-28t-kaset-disli/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-1230) | 1.034,10 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Çocuğunun yeni bisikleti | [Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu](https://nitrobisiklet.com/urun/bisan-flash-16-cocuk-bisikleti-mat-siyah-turuncu/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-25-post-1930) | 8.170 ₺ | API | planlı | [görsel](media/2026-12-25-post-1930-1.jpg) |
 | 19:30 | Story · tanıtım | Çocuğunun yeni bisikleti | [Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu](https://nitrobisiklet.com/urun/bisan-flash-16-cocuk-bisikleti-mat-siyah-turuncu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-1930) | 8.170 ₺ | Suite + link | planlı | [görsel](media/2026-12-25-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Çocuğunun yeni bisikleti | [Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu](https://nitrobisiklet.com/magaza/cocuk-bisikleti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-25-story-2030) | 8.170 ₺ | Suite + link | iptal | [görsel](media/2026-12-25-story-2030.jpg) |
 
 ## 26.12.2026 Cumartesi
 
@@ -329,7 +327,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 11:00 | Carousel · liste | 1.000 ₺ altı 4 hediye | [Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah +3](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-12-26-post-1100) | — | API | planlı | [görsel](media/2026-12-26-post-1100-1.jpg) |
 | 11:00 | Story · tanıtım | 1.000 ₺ altı 4 hediye | [Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah +3](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=liste&utm_content=2026-12-26-story-1100) | — | Suite + link | planlı | [görsel](media/2026-12-26-story-1100.jpg) |
 | 12:30 | Story · ürün | Yedek iç lastik yanında mı? | [Maxxis Welter Weight İç Lastik 700x23-32c İnce Sibop 48 mm](https://nitrobisiklet.com/urun/maxxis-welter-weight-ic-lastik-700x23-32c-ince-sibop-48mm/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-26-story-1230) | 265 ₺ | Suite + link | planlı | [görsel](media/2026-12-26-story-1230.jpg) |
-| 20:30 | Story · tanıtım | 1.000 ₺ altı 4 hediye | [Procycle PC-250 Telefon Bölmeli Kadro Üstü Heybe Siyah +3](https://nitrobisiklet.com/magaza/canta-ve-sepet/?utm_source=instagram&utm_medium=story&utm_campaign=liste&utm_content=2026-12-26-story-2030) | — | Suite + link | iptal | [görsel](media/2026-12-26-story-2030.jpg) |
 
 ## 27.12.2026 Pazar
 
@@ -339,7 +336,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 11:00 | Carousel · ürün | Yükün bisiklette dursun | [Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah](https://nitrobisiklet.com/urun/procycle-pc-550-sele-alti-mega-heybe-12-lt-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-27-post-1100) | 1.615,50 ₺ | API | planlı | [görsel](media/2026-12-27-post-1100-1.jpg) |
 | 11:00 | Story · tanıtım | Yükün bisiklette dursun | [Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah](https://nitrobisiklet.com/urun/procycle-pc-550-sele-alti-mega-heybe-12-lt-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-27-story-1100) | 1.615,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-1100.jpg) |
 | 12:30 | Story · ürün | Rotan gözünün önünde | [OEM NITRO Alüminyum Bisiklet Telefon Tutucu](https://nitrobisiklet.com/urun/oem-nitro-aluminyum-bisiklet-telefon-tutucu/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-27-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-27-story-1230.jpg) |
-| 20:30 | Story · tanıtım | Yükün bisiklette dursun | [Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah](https://nitrobisiklet.com/magaza/canta-ve-sepet/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-27-story-2030) | 1.615,50 ₺ | Suite + link | iptal | [görsel](media/2026-12-27-story-2030.jpg) |
 
 ## 28.12.2026 Pazartesi
 
@@ -349,7 +345,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 12:30 | Story · ürün | Sürüşünü ölç | [Assize 528 Bisiklet Hız Göstergesi](https://nitrobisiklet.com/urun/assize-528-bisiklet-hiz-gostergesi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-1230) | 550 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Elden geçti, yola hazır | [Salcano Ng650 26” Dağ Bisikleti](https://nitrobisiklet.com/urun/salcano-ng650-26-dag-bisikleti/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-28-post-1930) | 5.500 ₺ | API | planlı | [görsel](media/2026-12-28-post-1930-1.jpg) |
 | 19:30 | Story · tanıtım | Elden geçti, yola hazır | [Salcano Ng650 26” Dağ Bisikleti](https://nitrobisiklet.com/urun/salcano-ng650-26-dag-bisikleti/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-1930) | 5.500 ₺ | Suite + link | planlı | [görsel](media/2026-12-28-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Elden geçti, yola hazır | [Salcano Ng650 26” Dağ Bisikleti](https://nitrobisiklet.com/magaza/2-el-bisiklet/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-28-story-2030) | 5.500 ₺ | Suite + link | iptal | [görsel](media/2026-12-28-story-2030.jpg) |
 
 ## 29.12.2026 Salı
 
@@ -359,7 +354,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 12:30 | Story · ürün | Bisikletin yerinde kalsın | [Zoli High Security Bisiklet Kilit](https://nitrobisiklet.com/urun/zoli-high-security-bisiklet-kilit/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-1230) | 450 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-1230.jpg) |
 | 19:30 | Carousel · ürün | Elciğini yenile | [Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah](https://nitrobisiklet.com/urun/epic-165-mm-bmx-dirt-jump-elcik-mor-siyah/?utm_source=instagram&utm_medium=social&utm_campaign=urun&utm_content=2026-12-29-post-1930) | 418,50 ₺ | API | planlı | [görsel](media/2026-12-29-post-1930-1.jpg) |
 | 19:30 | Story · tanıtım | Elciğini yenile | [Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah](https://nitrobisiklet.com/urun/epic-165-mm-bmx-dirt-jump-elcik-mor-siyah/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-1930) | 418,50 ₺ | Suite + link | planlı | [görsel](media/2026-12-29-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Elciğini yenile | [Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah](https://nitrobisiklet.com/magaza/elcik-sargi-barend/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-29-story-2030) | 418,50 ₺ | Suite + link | iptal | [görsel](media/2026-12-29-story-2030.jpg) |
 
 ## 30.12.2026 Çarşamba
 
@@ -369,7 +363,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 12:30 | Story · ürün | Lastiğin inik kalmasın | [Giyo GP-45E Pompa 80 psi](https://nitrobisiklet.com/urun/giyo-gp-45e-pompa-80-psi/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-30-story-1230) | 350 ₺ | Suite + link | planlı | [görsel](media/2026-12-30-story-1230.jpg) |
 | 19:30 | Carousel · ipucu | LASTİĞİNE KAÇ BAR HAVA BASMALISIN? | — | — | API | planlı | [görsel](media/2026-12-30-post-1930-1.jpg) |
 | 19:30 | Story · tanıtım | Lastiğe kaç bar hava? | — | — | Suite + link | planlı | [görsel](media/2026-12-30-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Lastiğe kaç bar hava? | — | — | Suite + link | iptal | [görsel](media/2026-12-30-story-2030.jpg) |
 
 ## 31.12.2026 Perşembe
 
@@ -379,7 +372,6 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 | 12:30 | Story · ürün | Suyun hep yanında | [Polisport Plastik Matara Kafesi Premium](https://nitrobisiklet.com/urun/polisport-plastik-matara-kafesi-premium/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-12-31-story-1230) | 200 ₺ | Suite + link | planlı | [görsel](media/2026-12-31-story-1230.jpg) |
 | 19:30 | Görsel · marka | Mutlu yıllar 2027 | — | — | API | planlı | [görsel](media/2026-12-31-post-1930-1.jpg) |
 | 19:30 | Story · tanıtım | Mutlu yıllar! | — | — | Suite + link | planlı | [görsel](media/2026-12-31-story-1930.jpg) |
-| 20:30 | Story · tanıtım | Mutlu yıllar! | — | — | Suite + link | iptal | [görsel](media/2026-12-31-story-2030.jpg) |
 
 ---
 
@@ -633,7 +625,7 @@ Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 45cm 17.5" · 189.090 ₺ (KDV
 
 ```
 Bisikletçiye hediye almak pahalı olmak zorunda değil. NITRO Bisiklet, Köyceğiz.
-Hediye pratik mi olsun, sürpriz mi?
+Küçük bir hediye mi, ortak büyük bir hediye mi?
 
 1. Polisport C600 Matara · 220 ₺ · 🔍 “C4-96WG6KZ”
 2. Bandana Bisiklet & Outdoor · 189 ₺ · 🔍 “Bandana”

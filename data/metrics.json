@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T12:49:16+03:00",
+ "updated": "2026-11-26T04:45:17+03:00",
  "account": [
   {
    "date": "2026-11-24",
@@ -10,6 +10,11 @@
    "date": "2026-11-25",
    "followers": 2665,
    "media_count": 234
+  },
+  {
+   "date": "2026-11-26",
+   "followers": 2672,
+   "media_count": 235
   }
  ],
  "media": {
@@ -22,18 +27,9 @@
    "saved": null,
    "shares": null,
    "views": null,
-   "checked": "2026-11-25T12:49:16+03:00"
+   "checked": "2026-11-26T04:45:17+03:00"
   },
   "2026-11-25-post-1930": {
-   "media_id": "18039296729890069",
-   "permalink": "https://www.instagram.com/p/DgK9nT_tlHs/",
-   "likes": null,
-   "comments": null,
-   "reach": null,
-   "saved": null,
-   "shares": null,
-   "views": null,
-   "checked": null,
    "kaynak": "suite",
    "yayin": "2026-11-25T19:30:06+03:00",
    "eslesme": {
@@ -41,7 +37,16 @@
     "fark_sn": 6,
     "aciklama_tutuyor": false,
     "tur": "CAROUSEL_ALBUM"
-   }
+   },
+   "media_id": "18039296729890069",
+   "permalink": "https://www.instagram.com/p/DgK9nT_tlHs/",
+   "likes": 21,
+   "comments": 0,
+   "reach": null,
+   "saved": null,
+   "shares": null,
+   "views": null,
+   "checked": "2026-11-26T04:45:17+03:00"
   }
  },
  "insights": false,

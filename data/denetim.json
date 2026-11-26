@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-26T03:57:01+03:00",
- "records": 187,
- "checked": 181,
+ "updated": "2026-11-26T04:45:17+03:00",
+ "records": 179,
+ "checked": 144,
  "files": true,
  "live": true,
  "findings": [],
@@ -36,12 +36,12 @@
  "yenilenecek": [],
  "sayim": {
   "kilitli": {
-   "kayit": 111,
+   "kayit": 82,
    "uyari": 0,
    "bilgi": 5
   },
   "kilitsiz": {
-   "kayit": 70,
+   "kayit": 62,
    "bulgu": 0,
    "caption": 0,
    "yenilenecek": 0
