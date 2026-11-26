@@ -1,6 +1,6 @@
 # Instagram performans raporu · @nitrobisiklet
 
-Üretim: 26 Kasım 2026 Perşembe 13:41 · Veri: 26 Kasım 2026 13:41
+Üretim: 26 Kasım 2026 Perşembe 13:43 · Veri: 26 Kasım 2026 13:43
 
 ## Özet
 
