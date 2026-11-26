@@ -250,6 +250,8 @@ def konum_id() -> str | None:
     konum oradan okunur. Konum reddedilirse create_container kapsayıcıyı konumsuz yeniden dener.
     """
     loc = common.CFG.get("location_id")
+    if loc is False:   # elle kapatıldı (ör. Sayfa adresi eski): data/konum.json da kullanılmaz, postlar konumsuz çıkar
+        return None
     if not loc:
         loc = _konum_dosyasi().get("location_id")
     return str(loc) if loc else None
@@ -662,8 +664,12 @@ def konum_oku() -> None:
 
     Sayfada konum doluysa Sayfa ID'si location_id olarak config.json'a ve data/konum.json'a yazılır (post, reel ve
     carousel kapsayıcıları onu kullanır). Konum boşsa ya da izin (pages_read_engagement) yoksa yalnız uyarı basılır;
-    probe'un geri kalanı ve yayın etkilenmez. Hiçbir şey yayınlamaz.
+    probe'un geri kalanı ve yayın etkilenmez. Hiçbir şey yayınlamaz. config.json'da "location_id": false ise konum elle
+    kapatılmıştır: Sayfa okunmaz, hiçbir şey yazılmaz.
     """
+    if common.CFG.get("location_id") is False:
+        print("Konum: config.json'da kapalı (location_id: false); postlar konumsuz yayınlanır.")
+        return
     try:
         accounts = [(name, pid, ig) for name, pid, ig in graph.ig_accounts() if ig]
         ig_user = os.environ.get("IG_USER_ID") or ""
