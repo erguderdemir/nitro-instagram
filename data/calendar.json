@@ -350,10 +350,11 @@
   "media_link": "media/2026-11-25-story-2030-link.jpg",
   "ref": "2026-11-25-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "skipped",
   "fp": "e5a0ef14c382",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -611,10 +612,11 @@
   "media_link": "media/2026-11-26-story-2030-link.jpg",
   "ref": "2026-11-26-post-1930",
   "rule": "dis_lastik",
-  "status": "planned",
+  "status": "skipped",
   "fp": "e81f92f82baf",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -870,10 +872,11 @@
   "media_link": "media/2026-11-27-story-2030-link.jpg",
   "ref": "2026-11-27-post-1930",
   "rule": "sehir",
-  "status": "planned",
+  "status": "skipped",
   "fp": "48136559f1a5",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -1294,10 +1297,11 @@
   "media_link": "media/2026-11-28-story-2030-link.jpg",
   "ref": "2026-11-28-post-1100",
   "rule": "liste:kis",
-  "status": "planned",
+  "status": "skipped",
   "fp": "9598460e6281",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -1544,10 +1548,11 @@
   "media_link": "media/2026-11-29-story-2030-link.jpg",
   "ref": "2026-11-29-post-1100",
   "rule": "matara_kafesi",
-  "status": "planned",
+  "status": "skipped",
   "fp": "a64504684afe",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -1805,10 +1810,11 @@
   "media_link": "media/2026-11-30-story-2030-link.jpg",
   "ref": "2026-11-30-post-1930",
   "rule": "dag",
-  "status": "planned",
+  "status": "skipped",
   "fp": "f473c6d87131",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -2055,10 +2061,11 @@
   "media_link": "media/2026-12-01-story-2030-link.jpg",
   "ref": "2026-12-01-post-1930",
   "rule": "park_ayagi",
-  "status": "planned",
+  "status": "skipped",
   "fp": "2dfffb0f022c",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -2280,10 +2287,11 @@
   "media_link": "media/2026-12-02-story-2030-link.jpg",
   "ref": "2026-12-02-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "skipped",
   "fp": "9e9d57ade59d",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -2539,10 +2547,11 @@
   "media_link": "media/2026-12-03-story-2030-link.jpg",
   "ref": "2026-12-03-post-1930",
   "rule": "dis_lastik",
-  "status": "planned",
+  "status": "skipped",
   "fp": "da6c5489d08e",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -2798,10 +2807,11 @@
   "media_link": "media/2026-12-04-story-2030-link.jpg",
   "ref": "2026-12-04-post-1930",
   "rule": "ebike",
-  "status": "planned",
+  "status": "skipped",
   "fp": "2c5eae9a76af",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -3227,10 +3237,11 @@
   "media_link": "media/2026-12-05-story-2030-link.jpg",
   "ref": "2026-12-05-post-1100",
   "rule": "liste:hediye250",
-  "status": "planned",
+  "status": "skipped",
   "fp": "76e6f556820f",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -3477,10 +3488,11 @@
   "media_link": "media/2026-12-06-story-2030-link.jpg",
   "ref": "2026-12-06-post-1100",
   "rule": "sele",
-  "status": "planned",
+  "status": "skipped",
   "fp": "38a263bade31",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -3736,10 +3748,11 @@
   "media_link": "media/2026-12-07-story-2030-link.jpg",
   "ref": "2026-12-07-post-1930",
   "rule": "gravel",
-  "status": "planned",
+  "status": "skipped",
   "fp": "6e5e3e8ce974",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -3988,10 +4001,11 @@
   "media_link": "media/2026-12-08-story-2030-link.jpg",
   "ref": "2026-12-08-post-1930",
   "rule": "kaset",
-  "status": "planned",
+  "status": "skipped",
   "fp": "d58c4d9add10",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -4213,10 +4227,11 @@
   "media_link": "media/2026-12-09-story-2030-link.jpg",
   "ref": "2026-12-09-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "skipped",
   "fp": "d4cf991fa612",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -4470,10 +4485,11 @@
   "media_link": "media/2026-12-10-story-2030-link.jpg",
   "ref": "2026-12-10-post-1930",
   "rule": "balata",
-  "status": "planned",
+  "status": "skipped",
   "fp": "1738c528d7fe",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -4731,10 +4747,11 @@
   "media_link": "media/2026-12-11-story-2030-link.jpg",
   "ref": "2026-12-11-post-1930",
   "rule": "sehir",
-  "status": "planned",
+  "status": "skipped",
   "fp": "c224bdf9095b",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -5160,10 +5177,11 @@
   "media_link": "media/2026-12-12-story-2030-link.jpg",
   "ref": "2026-12-12-post-1100",
   "rule": "liste:hediye500",
-  "status": "planned",
+  "status": "skipped",
   "fp": "3bf9aeb1c2ad",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -5412,10 +5430,11 @@
   "media_link": "media/2026-12-13-story-2030-link.jpg",
   "ref": "2026-12-13-post-1100",
   "rule": "matara_kafesi",
-  "status": "planned",
+  "status": "skipped",
   "fp": "95eccf5129ad",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -5671,10 +5690,11 @@
   "media_link": "media/2026-12-14-story-2030-link.jpg",
   "ref": "2026-12-14-post-1930",
   "rule": "bmx",
-  "status": "planned",
+  "status": "skipped",
   "fp": "09edb746244d",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -5923,10 +5943,11 @@
   "media_link": "media/2026-12-15-story-2030-link.jpg",
   "ref": "2026-12-15-post-1930",
   "rule": "rotor",
-  "status": "planned",
+  "status": "skipped",
   "fp": "ed1df8a5ebf9",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -6148,10 +6169,11 @@
   "media_link": "media/2026-12-16-story-2030-link.jpg",
   "ref": "2026-12-16-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "skipped",
   "fp": "b46088f0fe3c",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -6405,10 +6427,11 @@
   "media_link": "media/2026-12-17-story-2030-link.jpg",
   "ref": "2026-12-17-post-1930",
   "rule": "lamba",
-  "status": "planned",
+  "status": "skipped",
   "fp": "f6892cca77c0",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -6666,10 +6689,11 @@
   "media_link": "media/2026-12-18-story-2030-link.jpg",
   "ref": "2026-12-18-post-1930",
   "rule": "ebike",
-  "status": "planned",
+  "status": "skipped",
   "fp": "ed0a9a38bf23",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -7090,10 +7114,11 @@
   "media_link": "media/2026-12-19-story-2030-link.jpg",
   "ref": "2026-12-19-post-1100",
   "rule": "liste:cocuk",
-  "status": "planned",
+  "status": "skipped",
   "fp": "e5b8518098bd",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -7340,10 +7365,11 @@
   "media_link": "media/2026-12-20-story-2030-link.jpg",
   "ref": "2026-12-20-post-1100",
   "rule": "yama",
-  "status": "planned",
+  "status": "skipped",
   "fp": "02bfa1f12825",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -7603,10 +7629,11 @@
   "media_link": "media/2026-12-21-story-2030-link.jpg",
   "ref": "2026-12-21-post-1930",
   "rule": "dag",
-  "status": "planned",
+  "status": "skipped",
   "fp": "7df3fe8d1049",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -7853,10 +7880,11 @@
   "media_link": "media/2026-12-22-story-2030-link.jpg",
   "ref": "2026-12-22-post-1930",
   "rule": "zincir",
-  "status": "planned",
+  "status": "skipped",
   "fp": "483e2ab3b332",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -8077,10 +8105,11 @@
   "media_link": "media/2026-12-23-story-2030-link.jpg",
   "ref": "2026-12-23-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "skipped",
   "fp": "7a49fe9a2030",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -8337,9 +8366,10 @@
   "media_link": "media/2026-12-24-story-2030-link.jpg",
   "ref": "2026-12-24-post-1930",
   "rule": "dis_lastik",
-  "status": "planned",
+  "status": "skipped",
   "fp": "a939ad9d3b9d",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -8596,9 +8626,10 @@
   "media_link": "media/2026-12-25-story-2030-link.jpg",
   "ref": "2026-12-25-post-1930",
   "rule": "cocuk",
-  "status": "planned",
+  "status": "skipped",
   "fp": "d0e88258a988",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -8983,9 +9014,10 @@
   "media_link": "media/2026-12-26-story-2030-link.jpg",
   "ref": "2026-12-26-post-1100",
   "rule": "liste:hediye1000",
-  "status": "planned",
+  "status": "skipped",
   "fp": "9a51d64523de",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -9238,9 +9270,10 @@
   "media_link": "media/2026-12-27-story-2030-link.jpg",
   "ref": "2026-12-27-post-1100",
   "rule": "canta",
-  "status": "planned",
+  "status": "skipped",
   "fp": "2b83a6b89633",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -9487,9 +9520,10 @@
   "media_link": "media/2026-12-28-story-2030-link.jpg",
   "ref": "2026-12-28-post-1930",
   "rule": "ikinciel",
-  "status": "planned",
+  "status": "skipped",
   "fp": "6d7f4dd84ad5",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -9742,9 +9776,10 @@
   "media_link": "media/2026-12-29-story-2030-link.jpg",
   "ref": "2026-12-29-post-1930",
   "rule": "elcik",
-  "status": "planned",
+  "status": "skipped",
   "fp": "3226555edff5",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -9963,9 +9998,10 @@
   "media_link": "media/2026-12-30-story-2030-link.jpg",
   "ref": "2026-12-30-post-1930",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "skipped",
   "fp": "4c0bb8ae7418",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  },
  {
   "schema": 2,
@@ -10169,8 +10205,9 @@
   "media_link": "media/2026-12-31-story-2030-link.jpg",
   "ref": "2026-12-31-post-1930",
   "rule": "yilbasi",
-  "status": "planned",
+  "status": "skipped",
   "fp": "314e54f8e156",
-  "ver": "09b6bfa91f"
+  "ver": "09b6bfa91f",
+  "error": "iptal.txt ile iptal edildi"
  }
 ]
