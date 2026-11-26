@@ -6,12 +6,16 @@ Kullanım:
   python3 scripts/report.py --no-api   API'ye bağlanma; yalnız kayıtlı dosyalardan rapor üret
   python3 scripts/report.py --esle     hafif mod (publish adımında): yalnız Suite eşlemesi ve 72 saat dondurması;
                                        RAPOR.md ve scores.json yazılmaz, jeton yoksa sessizce atlanır
+  python3 scripts/report.py --story    hafif mod (publish adımında ve 04:10 planında): yayındaki story'lerin insights
+                                       son değeri, Suite story eşlemesi ve link dokunuşu API testi; jeton yoksa atlanır
 
 Yazdıkları (takvime, yani data/calendar.json'a hiçbir durumda dokunmaz):
   data/metrics.json   hesap (takipçi) geçmişi ve gönderi başına ham sayılar; Suite'ten yayınlanan postların
-                      eşlenen media_id/permalink'i (kaynak=suite) ve yayından ≥72 saat sonraki ilk ölçüm (dondurulmus)
+                      eşlenen media_id/permalink'i (kaynak=suite) ve yayından ≥72 saat sonraki ilk ölçüm (dondurulmus);
+                      story başına son insights değeri (stories), haftalık hesap insights'ı (hesap_insights) ve
+                      link dokunuşu API testinin sonucu (link_testi)
   data/scores.json    planlayıcı için 0..1 arası göreli puanlar: kategori, biçim, tema, saat
-  RAPOR.md            okunur haftalık özet
+  RAPOR.md            okunur haftalık özet ve haftalık KPI tablosu (data/manuel.json'daki elle girilen değerlerle)
 
 Token'da `instagram_manage_insights` izni yokken yalnız beğeni ve yorum toplanır. İzin eklendiğinde erişim,
 kaydetme, gönderme ve görüntülenme kendiliğinden gelir; kod değişikliği gerekmez.
@@ -20,7 +24,10 @@ Rapor işi yayın işini kırmasın diye çıkış kodu her durumda 0'dır; soru
 from __future__ import annotations
 
 import argparse
+import json
+import math
 import os
+import statistics
 import sys
 import traceback
 import unicodedata
@@ -35,6 +42,8 @@ from common import (AY, CFG, DATA, GUN, GUN_KISA, IG_USERNAME, ROOT, TZ, cancell
 METRICS = DATA / "metrics.json"
 SCORES = DATA / "scores.json"
 REPORT = ROOT / "RAPOR.md"
+MANUEL = DATA / "manuel.json"                 # Barış'ın pazartesi Suite okuması (elle girilir; yalnız okunur)
+SUITE_INSIGHTS = DATA / "suite_insights.json"  # baz değer: Suite Insights ekranından alınmış günlük seriler
 
 ACCOUNT_FIELDS = "username,followers_count,follows_count,media_count"
 MEDIA_FIELDS = "like_count,comments_count,permalink,media_type,media_product_type,timestamp"
@@ -68,6 +77,27 @@ ESLE_TUR = {"carousel": "CAROUSEL_ALBUM", "image": "IMAGE", "reel": "VIDEO"}   #
 DONDUR = timedelta(hours=72)            # yayından en az bu kadar sonra alınan ilk ölçüm "dondurulmus"a bir kez yazılır
 DONDUR_HAFIF = timedelta(hours=48)      # --esle yalnız 72..120 saatlik postları dondurur; daha eskisini günlük rapor
 EXTRA_KEYS = ("kaynak", "yayin", "eslesme", "dondurulmus")   # yeniden toplamada korunan eşleme/dondurma alanları
+
+# Story ve hesap insights (O7). Story'ler /stories'te yalnız 24 saat görünür; her publish çalışmasında son değer
+# metrics.json "stories" altına yazılır, story yayından düşünce son değer kalır. Takvime hiçbir durumda yazılmaz.
+STORY_LIST_FIELDS = "id,timestamp,media_type,permalink"
+STORY_METRICS = ("reach", "views", "replies", "shares", "total_interactions", "follows", "profile_visits", "navigation")
+STORY_KIRILIM = "story_navigation_action_type"   # navigation metriğinin kırılımı (link testi için istenir)
+STORY_SAYFA = 2                                   # /stories'te gezilen en çok sayfa (sayfa başına 50)
+LINK_ANAHTAR = ("link", "sticker")                # yanıttaki metrik/kırılım adında aranan parçalar
+LINK_NOT = "link dokunuşu Barış'ın haftalık Suite okumasından (manuel.json) alınır"
+LINK_TR = {"donuyor": "dönüyor", "donmuyor": "dönmüyor", "denenmedi": "denenmedi"}
+HESAP_METRICS = ("reach", "profile_links_taps", "follows_and_unfollows", "profile_views")
+HESAP_TR = {"reach": "erişim", "profile_views": "profil görüntüleme", "profile_links_taps": "profile_links_taps",
+            "follows_and_unfollows": "takip/takipten çıkma"}
+
+# data/manuel.json hafta kaydının alanları: sayı (int ya da pay için ondalık) ya da null; null/eksik = veri yok.
+MANUEL_SAYI = ("profil_ziyareti", "link_tiklamasi", "goruntulenme", "izleyen", "etkilesim", "takip", "nkod_talep",
+               "nkod_satis", "ga4_oturum", "ga4_utm_content_payi", "ga4_arama_payi", "bio_kategori_tiklama",
+               "bio_iletisim_tiklama", "blog_yazisi", "collab_kabul", "merchant_onayli")
+MANUEL_EVETHAYIR = ("merchant_uygun",)
+BAZ_TR = (("views", "görüntülenme"), ("viewers", "izleyen"), ("interactions", "etkileşim"),
+          ("link_clicks", "link tıklaması"), ("profile_visits", "profil ziyareti"), ("follows", "takip"))
 
 STATUS_TR = (("published", "Yayınlandı (published)"), ("missed", "Kaçırıldı (missed)"), ("error", "Hata (error)"),
              ("skipped", "Atlandı (skipped)"))
@@ -103,6 +133,18 @@ def _num(v, default=None):
         return int(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else default
     except (ValueError, OverflowError):
         return default
+
+
+def _sayi(v) -> int | float | None:
+    """Elle girilen sayı: negatif olmayan int/float (tam sayıysa int); bool, metin, NaN, sonsuz ve null -> None."""
+    if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) or v < 0:
+        return None
+    return int(v) if float(v).is_integer() else float(v)
+
+
+def _pazartesi(d: date) -> date:
+    """Günün haftasının pazartesisi (hafta anahtarı)."""
+    return d - timedelta(days=d.weekday())
 
 
 def _mean(xs: list) -> float:
@@ -152,21 +194,39 @@ def _hour(c: dict, pub: datetime) -> str:
 
 # ---- Veri toplama ------------------------------------------------------------------------------
 
-def load_metrics() -> dict:
-    """data/metrics.json; dosya yoksa ya da bozuksa boş iskelet."""
+def load_metrics(kati: bool = False) -> dict:
+    """data/metrics.json; dosya yoksa ya da bozuksa boş iskelet.
+
+    kati=True (hafif modlar): dosya var ama okunamıyor ya da bozuksa ValueError fırlatılır. Hafif modlar 15 dakikada
+    bir yazar; bozuk dosyanın yerine boş iskelet yazılırsa account geçmişi ve dondurulmuş ölçümler silinirdi.
+    """
     try:
         raw = read_json(METRICS, {})
     except (ValueError, OSError) as e:
+        if kati:
+            raise ValueError(f"{METRICS.name} okunamadı: {e}") from None
         _warn(f"{METRICS.name} okunamadı, boş veriyle devam ediliyor: {e}")
         raw = {}
     if not isinstance(raw, dict):
+        if kati:
+            raise ValueError(f"{METRICS.name} beklenen biçimde değil (JSON nesnesi değil)")
         raw = {}
     account, media, errors = raw.get("account"), raw.get("media"), raw.get("errors")
-    return {"updated": raw.get("updated"),
-            "account": [a for a in account if isinstance(a, dict)] if isinstance(account, list) else [],
-            "media": {k: v for k, v in media.items() if isinstance(v, dict)} if isinstance(media, dict) else {},
-            "insights": raw.get("insights") if isinstance(raw.get("insights"), bool) else None,
-            "errors": [str(x) for x in errors] if isinstance(errors, list) else []}
+    stories, hesap, link = raw.get("stories"), raw.get("hesap_insights"), raw.get("link_testi")
+    out = {"updated": raw.get("updated"),
+           "account": [a for a in account if isinstance(a, dict)] if isinstance(account, list) else [],
+           "media": {k: v for k, v in media.items() if isinstance(v, dict)} if isinstance(media, dict) else {},
+           "insights": raw.get("insights") if isinstance(raw.get("insights"), bool) else None,
+           "errors": [str(x) for x in errors] if isinstance(errors, list) else [],
+           # O7: story başına son değer, haftalık hesap insights'ı (anahtar: haftanın pazartesisi), link testi
+           "stories": {str(k): v for k, v in stories.items() if isinstance(v, dict)} if isinstance(stories, dict) else {},
+           "hesap_insights": {str(k): v for k, v in hesap.items() if isinstance(v, dict)} if isinstance(hesap, dict)
+           else {}}
+    if isinstance(link, dict):
+        out["link_testi"] = link
+    if isinstance(raw.get("story_baslangic"), str):
+        out["story_baslangic"] = raw["story_baslangic"]   # story takibinin ilk başarılı çalışması (eşleme oranı için)
+    return out
 
 
 def _global_error(e: Exception) -> bool:
@@ -185,10 +245,11 @@ def _permission_error(e: Exception) -> bool:
     return e.status in (400, 403) and (e.code in (10, 200) or "permission" in (e.message or "").lower())
 
 
-def _insights(media_id: str) -> dict[str, int]:
-    """Gönderinin insights değerleri ({ad: sayı}). `instagram_manage_insights` izni yoksa GraphError fırlatır."""
+def _degerler(res) -> dict[str, int]:
+    """/insights yanıtındaki metrik değerleri ({ad: sayı}): `values[0].value` ya da `total_value.value`."""
     out = {}
-    for d in graph.api("GET", f"{media_id}/insights", metric=INSIGHT_METRICS).get("data") or []:
+    data = res.get("data") if isinstance(res, dict) else None
+    for d in data if isinstance(data, list) else []:
         if not isinstance(d, dict):
             continue
         values, total = d.get("values"), d.get("total_value")
@@ -197,6 +258,63 @@ def _insights(media_id: str) -> dict[str, int]:
         if v is not None:
             out[str(d.get("name"))] = v
     return out
+
+
+def _kirilim(res) -> dict[str, int]:
+    """/insights yanıtındaki kırılım değerleri: `total_value.breakdowns[].results[]` -> {"boyut/değer": sayı}.
+    Anahtarlar API'nin döndürdüğü `dimension_values` olduğu gibidir (ad uydurulmaz)."""
+    out = {}
+    data = res.get("data") if isinstance(res, dict) else None
+    for d in data if isinstance(data, list) else []:
+        total = d.get("total_value") if isinstance(d, dict) else None
+        for b in (total.get("breakdowns") or []) if isinstance(total, dict) else []:
+            for r in (b.get("results") or []) if isinstance(b, dict) else []:
+                if not isinstance(r, dict) or _num(r.get("value")) is None:
+                    continue
+                key = "/".join(str(x) for x in r.get("dimension_values") or []) or "?"
+                out[key] = _num(r.get("value"))
+    return out
+
+
+def _insights(media_id: str) -> dict[str, int]:
+    """Gönderinin insights değerleri ({ad: sayı}). `instagram_manage_insights` izni yoksa GraphError fırlatır."""
+    return _degerler(graph.api("GET", f"{media_id}/insights", metric=INSIGHT_METRICS))
+
+
+def _metrik_cek(path: str, metrikler: tuple[str, ...], desteksiz: set[str], **params) -> tuple[dict, dict]:
+    """/insights çağrısı: önce tüm metrikler tek istekte, hata olursa metrik metrik istenir.
+
+    Döndürür: ({metrik: sayı}, {metrik: hata metni}). Tek başına istendiğinde kalıcı hata veren metrik (o nesnede
+    en az bir başka metrik geldiyse; yani hata nesneye değil metriğe özgüyse) `desteksiz` kümesine eklenir ve bu
+    çalışmada bir daha istenmez. Token/ağ/kota ya da izin hatası dışarı fırlatılır (çağıran karar verir). Toplu
+    istek geçici hatayla (5xx, is_transient) düşerse de metrik metrik denenmez, hata dışarı fırlatılır: kesintide
+    her metrik için yeniden deneme (graph.api'nin bekleme süreleriyle) çalışmayı dakikalarca uzatırdı.
+    """
+    istek = [k for k in metrikler if k not in desteksiz]
+    if not istek:
+        return {}, {}
+    try:
+        return _degerler(graph.api("GET", path, metric=",".join(istek), **params)), {}
+    except Exception as e:  # noqa: BLE001
+        if _global_error(e) or _permission_error(e) or getattr(e, "transient", False):
+            raise
+        if len(istek) == 1:
+            return {}, {istek[0]: _emsg(e)}
+    out: dict[str, int] = {}
+    hatalar: dict[str, str] = {}
+    kalici = []
+    for k in istek:
+        try:
+            out.update(_degerler(graph.api("GET", path, metric=k, **params)))
+        except Exception as e:  # noqa: BLE001
+            if _global_error(e) or _permission_error(e):
+                raise
+            hatalar[k] = _emsg(e)
+            if not getattr(e, "transient", False):
+                kalici.append(k)
+    if out:
+        desteksiz.update(kalici)
+    return out, hatalar
 
 
 def collect(cal: list[dict]) -> dict:
@@ -241,6 +359,20 @@ def collect(cal: list[dict]) -> dict:
                 stop = e
             elif not _permission_error(e):
                 errors.append(f"Suite postları /media ile eşlenemedi: {_emsg(e)}")
+    if stop is None:
+        try:
+            n = hesap_insights(m, stamp)
+            if n:
+                print(f"Hesap insights: {n} hafta güncellendi")
+        except Exception as e:  # noqa: BLE001
+            if _permission_error(e):
+                _warn(f"hesap insights izni yok, atlandı: {_emsg(e)}")
+            else:
+                _warn(f"hesap insights alınamadı: {_emsg(e)}")
+                if _global_error(e):
+                    stop = e
+                else:
+                    errors.append(f"Hesap insights (erişim, profil görüntüleme) alınamadı: {_emsg(e)}")
     targets = _targets(cal, media)
     gone: dict[str, tuple[dict, str, str]] = {}   # kalıcı hata veren (silinmiş vb.) gönderiler: id -> (kayıt, media_id, hata)
     try_insights, denied, ins_ok, ins_fail, ins_err = True, False, 0, 0, ""
@@ -450,6 +582,15 @@ def _eslenemeyen(cal: list[dict], metrics: dict, t: datetime) -> tuple[list[dict
     return [c for c in due if not _suite_rec(media, str(c["id"]))], len(due)
 
 
+def _hafif_metrics() -> dict | None:
+    """Hafif modlar için metrics.json: bozuksa uyarı basılır ve None döner (çağıran dosyaya yazmadan çıkar)."""
+    try:
+        return load_metrics(kati=True)
+    except ValueError as e:
+        _warn(f"{e}; hafif modda dosyanın üzerine yazılmıyor, bu adım atlandı")
+        return None
+
+
 def esle_hafif() -> None:
     """--esle: publish adımında (15 dakikada bir) çalışan hafif mod. Yalnız yakın geçmişteki Suite postlarını eşler
     ve 72..120 saatlik postların ilk ölçümünü dondurur. RAPOR.md/scores.json yazılmaz; jeton yoksa sessizce atlanır.
@@ -458,7 +599,10 @@ def esle_hafif() -> None:
         return
     cal = load_calendar()
     cal = [c for c in cal if isinstance(c, dict)] if isinstance(cal, list) else []
-    m, t = load_metrics(), now()
+    m = _hafif_metrics()
+    if m is None:
+        return
+    t = now()
     stamp = t.isoformat(timespec="seconds")
     degisti = 0
     try:
@@ -509,6 +653,224 @@ def esle_hafif() -> None:
     if degisti:
         m["media"] = dict(sorted(media.items()))
         write_json(METRICS, m)
+
+
+# ---- Story ve hesap insights (O7) ------------------------------------------------------------------
+
+def _story_listesi(ig: str) -> list[dict]:
+    """Yayındaki (son 24 saatteki) story'ler: /{ig-user-id}/stories."""
+    out: list[dict] = []
+    after = None
+    for _ in range(STORY_SAYFA):
+        res = graph.api("GET", f"{ig}/stories", fields=STORY_LIST_FIELDS, limit=50, after=after)
+        out += [d for d in (res.get("data") or []) if isinstance(d, dict) and d.get("id")]
+        paging = res.get("paging") if isinstance(res.get("paging"), dict) else {}
+        after = (paging.get("cursors") or {}).get("after")
+        if not after or not paging.get("next"):
+            break
+    return out
+
+
+def _story_takvim(cal: list[dict]) -> list[dict]:
+    """Eşlenebilecek takvim story'leri: iptal edilmemiş, atlanmamış, tarih-saati okunabilen story kayıtları."""
+    cancelled = cancelled_ids()
+    return [c for c in cal if isinstance(c, dict) and c.get("id") and _is_story(c) and str(c["id"]) not in cancelled
+            and c.get("status") != "skipped" and _planned(c) is not None]
+
+
+def _suite_story(c: dict) -> bool:
+    """Business Suite'ten yayınlanan story: Suite'te zamanlanmış (suite_scheduled) ya da via=suite."""
+    return bool(c.get("suite_scheduled")) or c.get("via") == "suite"
+
+
+def story_esle(cal: list[dict], stories: dict, stamp: str) -> int:
+    """metrics.json story kayıtlarını takvim story'leriyle eşler; yeni eşleşme sayısını döndürür.
+
+    API ile yayınlanmış (media_id'li) kayıt doğrudan id ile bağlanır. Diğerlerinde planlanan zamanın ±ESLE_TOL
+    içinde TEK story varsa ve o story'nin ±ESLE_TOL içinde de tek takvim kaydı varsa eşlenir; birden çok ya da sıfır
+    aday varsa eşlenmez. Sonuç yalnız story kaydına (`takvim_id`, `eslesme`) yazılır; takvime asla yazılmaz.
+    """
+    kayitlar = _story_takvim(cal)
+    yeni = 0
+    by_mid = {str(c["media_id"]): c for c in kayitlar if c.get("media_id")}
+    for sid, r in stories.items():
+        if not r.get("takvim_id") and sid in by_mid:
+            r["takvim_id"], r["eslesme"] = str(by_mid[sid]["id"]), {"zaman": stamp, "yol": "media_id"}
+            yeni += 1
+    bagli = {str(r["takvim_id"]) for r in stories.values() if r.get("takvim_id")}
+    zaman = {sid: ts for sid, r in stories.items() if (ts := _dt(r.get("yayin"))) is not None}
+    serbest = [c for c in kayitlar if not c.get("media_id")]
+    for c in serbest:
+        cid, p = str(c["id"]), _planned(c)
+        if cid in bagli:
+            continue
+        aday = [sid for sid, ts in zaman.items() if abs(ts - p) <= ESLE_TOL]
+        if len(aday) != 1 or stories[aday[0]].get("takvim_id"):
+            continue
+        sid = aday[0]
+        if sum(1 for k in serbest if abs(_planned(k) - zaman[sid]) <= ESLE_TOL) != 1:
+            continue
+        stories[sid]["takvim_id"] = cid
+        stories[sid]["eslesme"] = {"zaman": stamp, "fark_sn": int(abs(zaman[sid] - p).total_seconds())}
+        bagli.add(cid)
+        yeni += 1
+        print(f"Story eşlemesi: {cid} -> {sid} (fark {int(abs(zaman[sid] - p).total_seconds())} sn)")
+    return yeni
+
+
+def _link_testi(test: tuple[str, dict] | None, neden: str, today: str) -> tuple[dict, dict]:
+    """Link sticker dokunuşu API'de dönüyor mu: tek story'nin insights yanıtında (metrik adları ve navigation
+    kırılımı) link/sticker geçen anahtar aranır. Döndürür: (link_testi kaydı, navigation kırılımı)."""
+    if test is None:
+        return {"tarih": today, "sonuc": "denenmedi", "not": neden}, {}
+    sid, degerler = test
+    kir: dict[str, int] = {}
+    ek = ""
+    try:
+        kir = _kirilim(graph.api("GET", f"{sid}/insights", metric="navigation", breakdown=STORY_KIRILIM))
+    except Exception as e:  # noqa: BLE001
+        if _global_error(e) or _permission_error(e) or getattr(e, "transient", False):
+            return {"tarih": today, "sonuc": "denenmedi", "not": f"navigation kırılımı alınamadı: {_emsg(e)}"}, {}
+        ek = f"; navigation kırılımı alınamadı: {_emsg(e)}"
+    anahtarlar = [*degerler, *kir]
+    bulunan = [k for k in anahtarlar if any(a in k.lower() for a in LINK_ANAHTAR)]
+    kayit = {"tarih": today, "story": sid, "anahtarlar": anahtarlar}
+    if bulunan:
+        return {**kayit, "sonuc": "donuyor", "not": f"yanıtta link/sticker anahtarı var: {', '.join(bulunan)}"}, kir
+    return {**kayit, "sonuc": "donmuyor", "not": LINK_NOT + ek}, kir
+
+
+def _kirilim_ekle(rec: dict, sid: str) -> bool:
+    """Link testi "dönüyor" ise story'nin navigation kırılımını kayda ekler. Hata olursa uyarı basar ve False
+    döndürür (bu çalışmada kırılım bir daha istenmez); izin/token hatası da yalnız uyarıdır."""
+    try:
+        kir = _kirilim(graph.api("GET", f"{sid}/insights", metric="navigation", breakdown=STORY_KIRILIM))
+    except Exception as e:  # noqa: BLE001
+        _warn(f"story {sid}: navigation kırılımı alınamadı: {_emsg(e)}")
+        return False
+    if kir:
+        rec["navigation_kirilim"] = kir
+    return True
+
+
+def _story_iz(m: dict) -> str:
+    """Yazma kararı için karşılaştırma izi: `checked` dışındaki story verisi, link testi ve başlangıç."""
+    st = {k: {a: b for a, b in v.items() if a != "checked"} for k, v in m["stories"].items()}
+    return json.dumps([st, m.get("link_testi"), m.get("story_baslangic")], sort_keys=True, ensure_ascii=False)
+
+
+def story_hafif() -> None:
+    """--story: yayındaki story'lerin insights son değerini metrics.json "stories" altına yazar, takvim story'leriyle
+    eşler ve link dokunuşu API testini bir kez yapar. Jeton yoksa sessizce atlanır; izin yoksa yalnız uyarı basılır
+    (liste ve eşleme yine yazılır). Bir metrik hata verirse yalnız o metrik atlanır. Veri değişmediyse dosya yazılmaz.
+    """
+    if not os.environ.get("IG_ACCESS_TOKEN"):
+        return
+    cal = load_calendar()
+    cal = [c for c in cal if isinstance(c, dict)] if isinstance(cal, list) else []
+    m = _hafif_metrics()
+    if m is None:
+        return
+    t = now()
+    stamp = t.isoformat(timespec="seconds")
+    try:
+        liste = _story_listesi(graph.ig_user_id())
+    except Exception as e:  # noqa: BLE001
+        _warn(("story listesi için izin yok" if _permission_error(e) else "story listesi alınamadı")
+              + f", story insights atlandı: {_emsg(e)}")
+        return
+    iz = _story_iz(m)
+    stories = m["stories"]
+    m.setdefault("story_baslangic", stamp)
+    link_eski = m.get("link_testi") if isinstance(m.get("link_testi"), dict) else {}
+    kirilim_iste = link_eski.get("sonuc") == "donuyor"
+    desteksiz: set[str] = set()
+    izin, dur, alinan, seri = True, False, 0, 0   # seri: insights'ı art arda alınamayan story sayısı
+    test: tuple[str, dict] | None = None
+    for d in liste:
+        sid = str(d["id"])
+        ts = _graph_ts(d.get("timestamp"))
+        old = stories.get(sid, {})
+        rec = {**old, "media_id": sid, "permalink": d.get("permalink") or old.get("permalink"),
+               "media_type": d.get("media_type") or old.get("media_type"),
+               "yayin": ts.astimezone(TZ).isoformat(timespec="seconds") if ts else old.get("yayin")}
+        if izin and not dur:
+            try:
+                degerler, hatalar = _metrik_cek(f"{sid}/insights", STORY_METRICS, desteksiz)
+                degerler = {k: v for k, v in degerler.items() if k in STORY_METRICS}
+                if degerler:
+                    rec.update(degerler)
+                    rec["checked"] = stamp
+                    alinan, seri = alinan + 1, 0
+                    test = test or (sid, degerler)
+                    if kirilim_iste:
+                        kirilim_iste = _kirilim_ekle(rec, sid)
+                else:
+                    seri += 1
+                for k, msg in hatalar.items():
+                    _warn(f"story {sid}: {k} alınamadı, atlandı: {msg}")
+            except Exception as e:  # noqa: BLE001
+                if _permission_error(e):
+                    izin = False
+                    _warn(f"story insights izni yok, bu çalışmada bir daha denenmeyecek: {_emsg(e)}")
+                else:
+                    seri += 1
+                    _warn(f"story {sid}: insights alınamadı: {_emsg(e)}")
+                    dur = _global_error(e)
+            if not dur and seri >= STREAK_LIMIT:
+                dur = True
+                _warn(f"art arda {seri} story'de insights alınamadı, kalan story'ler bu çalışmada denenmeyecek")
+        stories[sid] = rec
+    if desteksiz:
+        _warn(f"bu çalışmada desteklenmeyen story metrikleri atlandı: {', '.join(sorted(desteksiz))}")
+    n = story_esle(cal, stories, stamp)
+    if link_eski.get("sonuc") not in ("donuyor", "donmuyor"):
+        neden = ("story insights izni yok" if not izin else "yayında story yok" if not liste
+                 else "story insights alınamadı")
+        try:
+            yeni, kir = _link_testi(test, neden, stamp[:10])
+        except Exception as e:  # noqa: BLE001
+            yeni, kir = {"tarih": stamp[:10], "sonuc": "denenmedi", "not": f"test yapılamadı: {_emsg(e)}"}, {}
+        if kir and test:
+            stories[test[0]]["navigation_kirilim"] = kir
+        if (yeni.get("sonuc"), yeni.get("not")) != (link_eski.get("sonuc"), link_eski.get("not")):
+            m["link_testi"] = yeni
+            print(f"Link dokunuşu API testi: {LINK_TR[yeni['sonuc']]} · {yeni['not']}")
+    m["stories"] = dict(sorted(stories.items()))
+    if _story_iz(m) != iz:
+        write_json(METRICS, m)
+    print(f"Story: {len(liste)} yayında · insights {alinan}" + (" (izin yok)" if not izin else "")
+          + (f" · {n} yeni eşleşme" if n else ""))
+
+
+def hesap_insights(m: dict, stamp: str) -> int:
+    """Son tamamlanan iki haftanın (pazartesi–pazar) hesap insights'ı: /{ig-user-id}/insights, period=day,
+    metric_type=total_value, since/until. `m["hesap_insights"]["<pazartesi>"]`e yazar; güncellenen hafta sayısını
+    döndürür. Hata veren metrik tek tek atlanır (eski değeri korunur); izin/token hatası dışarı fırlatılır."""
+    ig, t = graph.ig_user_id(), now()
+    bu = _pazartesi(t.astimezone(TZ).date()) - WEEK
+    hesap, desteksiz, n = m.setdefault("hesap_insights", {}), set(), 0
+    for bas in (bu - WEEK, bu):
+        since = datetime(bas.year, bas.month, bas.day, tzinfo=TZ)
+        degerler, hatalar = _metrik_cek(f"{ig}/insights", HESAP_METRICS, desteksiz, period="day",
+                                        metric_type="total_value", since=int(since.timestamp()),
+                                        until=int((since + WEEK).timestamp()))
+        for k in HESAP_METRICS:   # önceki haftada desteklenmediği görülen metrik bu haftada da kayda düşülür
+            if k in desteksiz and k not in degerler and k not in hatalar:
+                hatalar[k] = "desteklenmiyor (bu çalışmada yeniden istenmedi)"
+        rec = {**hesap.get(bas.isoformat(), {}), "bitis": (bas + timedelta(days=6)).isoformat(),
+               **{k: v for k, v in degerler.items() if k in HESAP_METRICS}}
+        if hatalar:
+            rec["hatalar"] = hatalar
+            _warn(f"hesap insights {bas.isoformat()}: atlanan metrik: {', '.join(sorted(hatalar))}")
+        else:
+            rec.pop("hatalar", None)
+        if degerler:
+            rec["checked"] = stamp
+            n += 1
+        hesap[bas.isoformat()] = rec
+    m["hesap_insights"] = dict(sorted(hesap.items()))
+    return n
 
 
 # ---- Puanlama ----------------------------------------------------------------------------------
@@ -694,6 +1056,13 @@ def _summary(cal: list[dict], metrics: dict, rows: list[dict], t: datetime) -> l
     return _table(["Gösterge", "Değer"], body)
 
 
+def _zamanlanmamis(cal: list[dict], t: datetime) -> list[datetime]:
+    """Business Suite'e henüz zamanlanmamış yaklaşan Suite story'lerinin planlanan zamanları (sıralı)."""
+    return sorted(w for c in cal if _is_story(c) and c.get("channel") == "suite" and not c.get("suite_scheduled")
+                  and c.get("status") not in ("published", "skipped", "missed", "error")
+                  and (w := _planned(c)) is not None and w > t)
+
+
 def _health(cal: list[dict], t: datetime) -> list[str]:
     recent = [c for c in cal if (w := _when(c)) is not None and t - WEEK < w <= t]
 
@@ -723,9 +1092,7 @@ def _health(cal: list[dict], t: datetime) -> list[str]:
         if drafts:
             why.append(f"taslak (draft) durumundaki {drafts} kayıt `planned` yapılmadan yayınlanmaz")
         out += ["", f"Saati geçtiği halde yayınlanmamış {len(stuck)} kayıt var; {'; '.join(why)}."]
-    suite = sorted(w for c in cal if _is_story(c) and c.get("channel") == "suite" and not c.get("suite_scheduled")
-                   and c.get("status") not in ("published", "skipped", "missed", "error")
-                   and (w := _planned(c)) is not None and w > t)
+    suite = _zamanlanmamis(cal, t)
     out += ["", f"Business Suite'e henüz zamanlanmamış yaklaşan story: **{len(suite)}** "
                 f"(en yakını {tr_date(suite[0])} {suite[0]:%H:%M})." if suite else
             "Business Suite'e zamanlanmayı bekleyen yaklaşan story yok."]
@@ -934,9 +1301,291 @@ def _aylik_tema(rows: list[dict], t: datetime) -> list[str]:
                                              "`config.json` `posts` alanında elle yapılır."]
 
 
-def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | None = None) -> str:
-    """RAPOR.md metnini üretir, dosyaya yazar ve döndürür. `notes`: bu çalıştırmaya özgü uyarılar (isteğe bağlı)."""
+# ---- Haftalık KPI (O7) ------------------------------------------------------------------------
+
+def load_manuel() -> dict[str, dict]:
+    """data/manuel.json -> {"<pazartesi>": {alan: sayı|None, ...}}. Dosya yoksa ya da bozuksa uyarı ve boş sözlük.
+
+    Hafta anahtarı haftanın pazartesi tarihidir (YYYY-MM-DD); pazartesi olmayan ya da okunamayan anahtar atlanır.
+    Sayı olmayan, negatif ya da null alan None olur: raporda "veri yok" yazılır, asla 0 sayılmaz.
+    """
+    try:
+        raw = read_json(MANUEL, None)
+    except (ValueError, OSError) as e:
+        _warn(f"{MANUEL.name} okunamadı (bozuk), manuel KPI'lar veri yok sayılıyor: {e}")
+        return {}
+    if raw is None:
+        _warn(f"{MANUEL.name} yok: manuel KPI'lar 'veri yok' yazılır")
+        return {}
+    haftalar = raw.get("haftalar") if isinstance(raw, dict) else None
+    if not isinstance(haftalar, dict):
+        _warn(f"{MANUEL.name}: 'haftalar' sözlüğü yok, manuel KPI'lar veri yok sayılıyor")
+        return {}
+    out: dict[str, dict] = {}
+    for k, v in haftalar.items():
+        d = _date(k) if len(str(k)) == 10 else None
+        if d is None or d.weekday() != 0 or not isinstance(v, dict):
+            _warn(f"{MANUEL.name}: '{k}' hafta anahtarı pazartesi tarihi (YYYY-MM-DD) değil ya da kayıt sözlük değil; "
+                  "atlandı")
+            continue
+        rec: dict = {f: _sayi(v.get(f)) for f in MANUEL_SAYI}
+        rec.update({f: v.get(f) if isinstance(v.get(f), bool) else None for f in MANUEL_EVETHAYIR})
+        rec["not"] = _one(v.get("not") or "")
+        out[d.isoformat()] = rec
+    return dict(sorted(out.items()))
+
+
+def _baz() -> str | None:
+    """suite_insights.json'dan haftalık baz değerler (aralığın hafta sayısına bölünmüş toplam); yoksa None."""
+    try:
+        raw = read_json(SUITE_INSIGHTS, {})
+    except (ValueError, OSError):
+        return None
+    aralik = raw.get("aralik") if isinstance(raw, dict) else None
+    gunluk = raw.get("gunluk") if isinstance(raw, dict) else None
+    if not isinstance(aralik, list) or len(aralik) != 2 or not isinstance(gunluk, dict):
+        return None
+    bas, bit = _date(aralik[0]), _date(aralik[1])
+    if bas is None or bit is None or bit < bas:
+        return None
+    hafta = ((bit - bas).days + 1) / 7
+    parca = [f"{ad} {_n(int(sum(xs) / hafta + 0.5))}" for k, ad in BAZ_TR
+             if isinstance(xs := gunluk.get(k), list) and xs and all(_num(x) is not None for x in xs)]
+    if not parca:
+        return None
+    return (f"Baz ({SUITE_INSIGHTS.name}, {tr_date(bas, False)}–{tr_date(bit, False)}, haftalık ortalama): "
+            + " · ".join(parca) + ".")
+
+
+def _aralik(bas: date) -> str:
+    """Pazartesi–pazar aralığı: 16–22 Kasım · 30 Kasım–6 Aralık"""
+    bit = bas + timedelta(days=6)
+    return f"{bas.day}–{tr_date(bit, False)}" if bas.month == bit.month else f"{tr_date(bas, False)}–{tr_date(bit, False)}"
+
+
+def _takipci_hafta(metrics: dict, bas: date) -> tuple[int, int] | None:
+    """Haftanın son takipçi sayısı ve net değişimi (account geçmişi): pazar (ya da cumartesi) kaydı eksi önceki
+    pazar (ya da cumartesi) kaydı. İki uçtan biri yoksa None."""
+    acc = {d: f for a in metrics.get("account") or [] if isinstance(a, dict)
+           and (d := _date(a.get("date"))) is not None and (f := _num(a.get("followers"))) is not None}
+
+    def uc(gun: date) -> int | None:
+        return next((acc[g] for g in (gun, gun - timedelta(days=1)) if g in acc), None)
+
+    son, ilk = uc(bas + timedelta(days=6)), uc(bas - timedelta(days=1))
+    return None if son is None or ilk is None else (son, son - ilk)
+
+
+def _donmus_hafta(cal: list[dict], metrics: dict, bas: date) -> list[dict]:
+    """Haftada yayınlanmış postların ilk ≥72 saatlik (dondurulmuş) ölçümleri; yayın zamanı bilinmeyen atlanır."""
+    media = metrics.get("media") if isinstance(metrics.get("media"), dict) else {}
+    out = []
+    for c in cal:
+        if not isinstance(c, dict) or _is_story(c):
+            continue
+        rec = media.get(str(c.get("id")))
+        if not isinstance(rec, dict) or not isinstance(rec.get("dondurulmus"), dict) or rec.get("error"):
+            continue
+        pub = _pub(c, rec)
+        if pub is not None and bas <= pub.astimezone(TZ).date() < bas + WEEK:
+            out.append(rec["dondurulmus"])
+    return out
+
+
+def _yuzde(v) -> str:
+    return f"%{_n(v, 0 if float(v).is_integer() else 1)}"
+
+
+def story_esleme_orani(cal: list[dict], metrics: dict, t: datetime) -> tuple[int, int, list[dict]]:
+    """Suite story eşlemesi: (eşlenen, saati ESLE_GEC'ten fazla geçmiş Suite story'si, eşlenemeyenler).
+    Yalnız story takibi başladıktan (story_baslangic) sonra planlananlar sayılır; takip hiç çalışmadıysa (0, 0, [])."""
+    bas = _dt(metrics.get("story_baslangic"))
+    if bas is None:
+        return 0, 0, []
+    stories = metrics.get("stories") if isinstance(metrics.get("stories"), dict) else {}
+    bagli = {str(r["takvim_id"]) for r in stories.values() if isinstance(r, dict) and r.get("takvim_id")}
+    due = [c for c in _story_takvim(cal) if _suite_story(c) and bas <= _planned(c) < t - ESLE_GEC]
+    miss = [c for c in due if str(c["id"]) not in bagli]
+    return len(due) - len(miss), len(due), miss
+
+
+def kpi_satirlari(cal: list[dict], metrics: dict, manuel: dict, t: datetime) -> list[list[str]]:
+    """TRAFIK-PLANI §2'deki her KPI için bir satır: [KPI, hedef (31 Aralık), bu hafta, önceki hafta, kaynak, durum].
+
+    "Bu hafta" son tamamlanan pazartesi–pazar haftasıdır (Barış pazartesi bu haftayı girer). Değer önceliği:
+    API (metrics.json hesap_insights, account geçmişi, dondurulmuş post ölçümleri) > manuel.json > "veri yok".
+    Durum yalnız bu haftanın değerine göre: hedefte / altında / veri yok (veri yoksa sıfır sayılmaz).
+    """
+    bu = _pazartesi(t.astimezone(TZ).date()) - WEEK
+    onc = bu - WEEK
+    hi = metrics.get("hesap_insights") if isinstance(metrics.get("hesap_insights"), dict) else {}
+
+    def man(h: date, k: str):
+        return (manuel.get(h.isoformat()) or {}).get(k)
+
+    def api(h: date, k: str):
+        r = hi.get(h.isoformat())
+        return _sayi(r.get(k)) if isinstance(r, dict) else None
+
+    rows: list[list[str]] = []
+
+    def ekle(ad: str, hedef: str, kaynak: str, fn, kontrol) -> None:
+        """fn(hafta) -> (değer ya da None, gösterilecek metin ya da None, kullanılan kaynak ya da None)."""
+        b, o = fn(bu), fn(onc)
+        durum = "veri yok" if b[0] is None else "hedefte" if kontrol(b[0]) else "altında"
+        rows.append([ad, hedef, b[1] or "veri yok", o[1] or "veri yok", b[2] or o[2] or kaynak, durum])
+
+    def sec(*adaylar: tuple[object, str]):
+        for v, kaynak in adaylar:
+            if v is not None:
+                return v, _n(v), kaynak
+        return None, None, None
+
+    ekle("Haftalık profil ziyareti", "≥220", "Suite → manuel.json; izin gelince API",
+         lambda h: sec((api(h, "profile_views"), "API hesap insights (profile_views)"),
+                       (man(h, "profil_ziyareti"), "Suite → manuel.json")), lambda v: v >= 220)
+
+    ga4 = [(k, r["ga4_oturum"]) for k, r in manuel.items() if r.get("ga4_oturum") is not None]
+    esik = math.ceil(ga4[0][1] * 1.3) if ga4 else None
+    ekle("Haftalık GA4 oturumu (instagram + gbp)",
+         f"baz ×1,3 (baz {_aralik(_date(ga4[0][0]))}: {_n(ga4[0][1])} → ≥{_n(esik)})" if ga4 else "baz ×1,3 (baz yok)",
+         "Looker Studio → manuel.json",
+         lambda h: sec((man(h, "ga4_oturum"), "Looker Studio → manuel.json")),
+         lambda v: esik is not None and v >= esik)
+
+    def nkod(h: date):
+        talep, satis = man(h, "nkod_talep"), man(h, "nkod_satis")
+        if talep is None:
+            return None, None, None
+        return talep, _n(talep) + (f" (satış {_n(satis)})" if satis is not None else ""), "N-kodu defteri → manuel.json"
+
+    ekle("Haftalık N-kodu talebi (satışa dönen ayrıca)", "≥5", "N-kodu defteri → manuel.json", nkod,
+         lambda v: v >= 5)
+    # API'nin profile_links_taps metriği story + bio link tıklamasını kapsamadığından bu KPI yalnız Suite okumasından.
+    ekle("Haftalık link tıklaması (story + bio)", "≥100", "Suite → manuel.json",
+         lambda h: sec((man(h, "link_tiklamasi"), "Suite → manuel.json")), lambda v: v >= 100)
+
+    def takipci(h: date):
+        r = _takipci_hafta(metrics, h)
+        return (None, None, None) if r is None else (r[1], f"{_n(r[0])} (net {_signed(r[1])})",
+                                                     "metrics.json account geçmişi, net")
+
+    ekle("Takipçi (haftada net +15–30)", "2.740–2.815 (haftada net ≥+15)", "metrics.json account geçmişi, net",
+         takipci, lambda v: v >= 15)
+
+    def donmus(alan: str, ozet):
+        def fn(h: date):
+            xs = [v for d in _donmus_hafta(cal, metrics, h) if (v := _num(d.get(alan))) is not None]
+            return (None, None, None) if not xs else (ozet(xs), f"{_n(ozet(xs), 1)} (n={len(xs)})",
+                                                      "metrics.json ilk ≥72 saatlik ölçüm")
+        return fn
+
+    ekle("Post başı yorum", "≥1", "metrics.json ilk ≥72 saatlik ölçüm", donmus("comments", _mean), lambda v: v >= 1)
+    ekle("Post beğeni medyanı (ilk ≥72 saatlik ölçüm)", "≥18", "metrics.json ilk ≥72 saatlik ölçüm",
+         donmus("likes", statistics.median), lambda v: v >= 18)
+
+    def pay(alan: str):
+        def fn(h: date):
+            v = man(h, alan)
+            return (None, None, None) if v is None else (v, _yuzde(v), "GA4 → manuel.json")
+        return fn
+
+    ekle("Bio'ya kod veya aramayla gelen oturumlarda utm_content=<post-id> payı", "≥%90", "GA4 → manuel.json",
+         pay("ga4_utm_content_payi"), lambda v: v >= 90)
+    ekle("Aynı oturumlarda arama payı", "<%10", "GA4 → manuel.json", pay("ga4_arama_payi"), lambda v: v < 10)
+
+    def bio(h: date):
+        kat, ilt = man(h, "bio_kategori_tiklama"), man(h, "bio_iletisim_tiklama")
+        if kat is None and ilt is None:
+            return None, None, None
+        metin = f"kategori {_n(kat) if kat is not None else 'veri yok'} · iletişim " \
+                f"{_n(ilt) if ilt is not None else 'veri yok'}"
+        return (None if kat is None or ilt is None else (kat, ilt)), metin, "GA4 utm_medium=bio → manuel.json"
+
+    ekle("Bio kategori ve iletişim tıklaması (ayrı sayılır)", "baz değer alınır", "GA4 utm_medium=bio → manuel.json",
+         bio, lambda v: True)
+
+    def saglik(h: date):
+        hafta = [c for c in cal if (w := _when(c)) is not None and h <= w.astimezone(TZ).date() < h + WEEK]
+        zam = len(_zamanlanmamis(cal, t)) if h == bu else None
+        if not hafta:
+            # O hafta takvimde kayıt yok: missed/error ölçülmemiştir, 0 sayılmaz. Zamanlanmamış sayısı yalnız bilgi.
+            return None, (None if zam is None else f"veri yok (takvimde kayıt yok) · zamanlanmamış {zam} (şu an)"), \
+                None
+        missed = sum(1 for c in hafta if c.get("status") == "missed")
+        err = sum(1 for c in hafta if c.get("status") == "error")
+        if h != bu:
+            return (missed, err), f"{missed} / {err} / —", "takvim (RAPOR.md)"
+        return (missed, err, zam), f"{missed} / {err} / {zam} (şu an)", "takvim (RAPOR.md)"
+
+    ekle("Yayın sağlığı: missed/error, zamanlanmamış linkli story", "0 / 0 / 0", "takvim (RAPOR.md)", saglik,
+         lambda v: not any(v))
+
+    def sayac(alan: str, kaynak: str):
+        return lambda h: sec((man(h, alan), kaynak))
+
+    ekle("Sitede yayınlanmış rota ve bakım yazısı", "0 (31 Mart: ≥4)", "/blog/ → manuel.json",
+         sayac("blog_yazisi", "/blog/ → manuel.json"), lambda v: v >= 0)
+    ekle("Kabul edilmiş collab", "0 (31 Mart: ≥2)", "invite_status → manuel.json",
+         sayac("collab_kabul", "invite_status → manuel.json"), lambda v: v >= 0)
+
+    def merchant(h: date):
+        uygun, onayli = man(h, "merchant_uygun"), man(h, "merchant_onayli")
+        if uygun is None and onayli is None:
+            return None, None, None
+        metin = ("uygunluk " + ("veri yok" if uygun is None else "evet" if uygun else "hayır")
+                 + (f" · onaylı ürün {_n(onayli)}" if onayli is not None else ""))
+        return uygun, metin, "Merchant Center → manuel.json"
+
+    ekle("Koşullu: Merchant'ta onaylı ürün", "uygunluk doğrulandı mı", "Merchant Center → manuel.json", merchant,
+         lambda v: True)   # hedef sorunun yanıtlanması: evet ya da hayır girildiyse doğrulama yapılmıştır
+    return rows
+
+
+def _haftalik_kpi(cal: list[dict], metrics: dict, manuel: dict, t: datetime) -> list[str]:
+    bu = _pazartesi(t.astimezone(TZ).date()) - WEEK
+    out = [f"Bu hafta: {_aralik(bu)} (son tamamlanan pazartesi–pazar) · önceki hafta: {_aralik(bu - WEEK)}. "
+           "Değer önceliği: API > `data/manuel.json` (Barış'ın pazartesi Suite okuması); verisi olmayan KPI "
+           "\"veri yok\" yazar, sıfır sayılmaz. Durum bu haftanın değerini 31 Aralık hedefiyle karşılaştırır.", "",
+           *_table(["KPI", "Hedef (31 Aralık)", "Bu hafta", "Önceki hafta", "Kaynak", "Durum"],
+                   kpi_satirlari(cal, metrics, manuel, t)), ""]
+    baz = _baz()
+    if baz:
+        out.append(f"- {baz}")
+    hi = (metrics.get("hesap_insights") or {}).get(bu.isoformat())
+    if isinstance(hi, dict) and any(_num(hi.get(k)) is not None for k in HESAP_METRICS):
+        out.append("- Hesap insights (API, bu hafta): " + " · ".join(
+            f"{HESAP_TR[k]} {_n(_num(hi.get(k)))}" for k in HESAP_METRICS if _num(hi.get(k)) is not None) + ".")
+    else:
+        out.append("- Hesap insights (API, bu hafta): veri yok.")
+    esl, due, miss = story_esleme_orani(cal, metrics, t)
+    if not metrics.get("story_baslangic"):
+        out.append("- Suite story eşlemesi: veri yok (story takibi `report.py --story` henüz çalışmadı).")
+    elif not due:
+        out.append("- Suite story eşlemesi: veri yok (takip başladıktan sonra saati geçmiş Suite story'si yok).")
+    else:
+        out.append(f"- Suite story eşlemesi: saati geçmiş {due} Suite story'sinin **{esl}** tanesi /stories ile "
+                   f"eşlendi (%{round(esl / due * 100)}; ±{int(ESLE_TOL.total_seconds() // 60)} dk, tek aday)"
+                   + (f"; eşlenemeyen: " + ", ".join(f"`{c['id']}`" for c in sorted(miss, key=_planned)[:5])
+                      + (" …" if len(miss) > 5 else "") if miss else "") + ".")
+    lt = metrics.get("link_testi") if isinstance(metrics.get("link_testi"), dict) else None
+    if lt and lt.get("sonuc") in LINK_TR:
+        out.append(f"- Link dokunuşu API testi: **{LINK_TR[lt['sonuc']]}**"
+                   + (f" ({lt['tarih']})" if lt.get("tarih") else "") + (f" · {lt['not']}" if lt.get("not") else "")
+                   + ".")
+    else:
+        out.append("- Link dokunuşu API testi: denenmedi (story insights henüz çalışmadı).")
+    out.append(f"- `manuel.json`: {len(manuel)} hafta girilmiş" + (f" (son: {_aralik(_date(max(manuel)))})"
+                                                                     if manuel else "") + ".")
+    return out
+
+
+def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | None = None,
+                 manuel: dict | None = None) -> str:
+    """RAPOR.md metnini üretir, dosyaya yazar ve döndürür. `notes`: bu çalıştırmaya özgü uyarılar (isteğe bağlı).
+    `manuel`: load_manuel() çıktısı; verilmezse data/manuel.json okunur."""
     cal = [c for c in cal if isinstance(c, dict)]
+    manuel = load_manuel() if manuel is None else manuel
     sc = sc if isinstance(sc, dict) else {}
     t = now()
     rows, formula = _measured(cal, metrics)
@@ -964,6 +1613,7 @@ def write_report(cal: list[dict], metrics: dict, sc: dict, notes: list[str] | No
         out += ["> **Notlar**", ">", *(f"> - {_md(w)}" for w in warn), ""]
 
     for title, lines in (("Özet", _summary(cal, metrics, rows, t)),
+                         ("Haftalık KPI", _haftalik_kpi(cal, metrics, manuel, t)),
                          ("Yayın sağlığı (son 7 gün)", _health(cal, t)),
                          ("Suite eşlemesi", _suite_esleme(cal, metrics, t)),
                          ("En iyi 5 gönderi", _top(rows, formula, t)),
@@ -988,11 +1638,16 @@ def _run() -> None:
                     help="Graph API'ye bağlanma; yalnız kayıtlı dosyalardan rapor üret")
     ap.add_argument("--esle", action="store_true",
                     help="hafif mod: yalnız Suite eşlemesi ve 72 saat dondurması (rapor yazılmaz)")
+    ap.add_argument("--story", action="store_true",
+                    help="hafif mod: yayındaki story'lerin insights'ı, story eşlemesi ve link testi (rapor yazılmaz)")
     args, unknown = ap.parse_known_args()
     if unknown:
         _warn(f"bilinmeyen argüman yok sayıldı: {' '.join(unknown)}")
     if args.esle:
         esle_hafif()
+        return
+    if args.story:
+        story_hafif()
         return
     cal = load_calendar()
     cal = [c for c in cal if isinstance(c, dict)] if isinstance(cal, list) else []

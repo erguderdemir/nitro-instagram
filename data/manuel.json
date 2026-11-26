@@ -1,0 +1,14 @@
+{
+ "aciklama": [
+  "Barış her pazartesi bir önceki haftanın (pazartesi–pazar) değerlerini buraya girer; scripts/report.py yalnız okur.",
+  "Hafta anahtarı o haftanın PAZARTESİ tarihidir (YYYY-MM-DD), ör. 23–29 Kasım haftası için \"2026-11-23\".",
+  "Bilinmeyen ya da okunmayan değer null bırakılır: raporda 'veri yok' yazılır, asla 0 sayılmaz. Gerçekten 0 ise 0 yazılır.",
+  "Suite Insights ekranı (Meta Business Suite > Insights > Instagram, son 7 gün): profil_ziyareti, link_tiklamasi (story + bio toplamı), goruntulenme, izleyen, etkilesim, takip.",
+  "N-kodu defteri: nkod_talep (haftalık talep), nkod_satis (bunlardan satışa dönen).",
+  "Looker Studio pazartesi e-postası (GA4): ga4_oturum (utm_source instagram + gbp oturumu), ga4_utm_content_payi ve ga4_arama_payi (yüzde, 0–100, ondalık olabilir), bio_kategori_tiklama ve bio_iletisim_tiklama (utm_medium=bio).",
+  "Durum sayaçları (o hafta itibarıyla toplam): blog_yazisi (sitede yayınlanmış rota/bakım yazısı), collab_kabul (kabul edilmiş collab), merchant_uygun (Merchant TR uygunluğu doğrulandıysa true, uygun değilse false, bakılmadıysa null), merchant_onayli (onaylı ürün sayısı).",
+  "not: serbest metin (ör. 'Suite ekranı 1 gün eksik').",
+  "Örnek (değerler yer tutucu; gerçek sayıyı Suite ekranından gir): \"2026-11-30\": {\"profil_ziyareti\": null, \"link_tiklamasi\": null, \"goruntulenme\": null, \"izleyen\": null, \"etkilesim\": null, \"takip\": null, \"nkod_talep\": null, \"nkod_satis\": null, \"ga4_oturum\": null, \"ga4_utm_content_payi\": null, \"ga4_arama_payi\": null, \"bio_kategori_tiklama\": null, \"bio_iletisim_tiklama\": null, \"blog_yazisi\": null, \"collab_kabul\": null, \"merchant_uygun\": null, \"merchant_onayli\": null, \"not\": \"\"}"
+ ],
+ "haftalar": {}
+}

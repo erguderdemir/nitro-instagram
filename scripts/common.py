@@ -42,8 +42,11 @@ def read_json(path: Path, default):
 
 
 def write_json(path: Path, obj, indent: int | None = 1) -> None:
+    """Atomik yazım: önce yanındaki geçici dosyaya, sonra os.replace. Yarıda kesilen yazım dosyayı bozmaz."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=indent), encoding="utf-8")
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=indent), encoding="utf-8")
+    os.replace(tmp, path)
 
 
 def now() -> datetime:

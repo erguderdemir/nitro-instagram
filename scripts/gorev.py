@@ -123,6 +123,8 @@ def yayinla() -> None:
         # Suite'te zamanlanmış postları Business Suite yayınlar (kilitten bağımsız): /media ile eşle, 72 saat
         # dolmuş ölçümü dondur -> data/metrics.json. Hafif mod; hatası ya da izin eksikliği yayını kırmaz.
         run("report.py", "--esle", must=False)
+        # O7: yayındaki story'lerin insights son değeri, Suite story eşlemesi ve link testi -> data/metrics.json.
+        run("report.py", "--story", must=False)
 
 
 def main() -> None:
@@ -144,6 +146,7 @@ def main() -> None:
             finally:
                 head = f"görev: plan · {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC"
                 (ROOT / "data" / "son-calisma.log").write_text("\n".join([head, *LOG[-400:]]) + "\n", encoding="utf-8")
+            run("report.py", "--story", must=False)   # O7: 20:30 story'sinin gece değerini tamamlar (rapordan önce)
             run("report.py", must=False)
             run("paylas.py", must=False)   # O12: data/paylas/ paketleri; betik yoksa atlanır
             run("yorum.py", must=False)    # O15: yorum özeti; betik yoksa atlanır, hatası planı kırmaz

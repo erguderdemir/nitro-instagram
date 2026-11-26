@@ -5,3 +5,4 @@ __pycache__/
 /paylas/
 .DS_Store
 data/yorumlar.json
+*.json.tmp
