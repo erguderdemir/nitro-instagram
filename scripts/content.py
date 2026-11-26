@@ -780,7 +780,8 @@ def how_to_buy(q: str | None = None) -> str:
 
 
 CTA_YASAK = re.compile(r"en üstte|bugün", re.I)
-GUVEN_LINE = "✔️ " + " · ".join(PERK_LINES)   # tek satır güven bilgisi
+# Güven bilgisi başlıklı, maddeler ayrı satırda (tek satıra " · " ile sıkıştırılınca okunmuyordu, 26 Kasım).
+GUVEN = ["Neden NITRO?"] + [f"✔️ {x}" for x in PERK_LINES]
 
 # Türe göre tek çağrı (etkileşim yemi yok): rehber/ipucu "kaydet", ürün/hediye "gönder".
 KAYDET = ["📌 Kaydet, servise gelmeden bak.", "📌 Kaydet; bir sonraki bakımda işine yarar.",
@@ -905,7 +906,9 @@ def kanca_sec(options: list[str], gun: str | None, onceki=None, *seed, yedek=())
     """Kanca seçimi: pencerede ilk satır olarak kullanılmış ya da yakın bir görsel başlığıyla aynı sözle
     başlayan kanca geriye düşer (ör. story başlığı “Asfaltın bittiği yerde” iken aynı sözle açılan kanca)."""
     ilkler, _ = kullanilan(gun, onceki)
-    say = lambda h: sum(1 for x in ilkler if x.startswith(h))
+    # İlk satır kancanın kendisi ya da seo_ilk'in "Konu: kanca" biçimi olabilir: ikisi de kullanılmış sayılır.
+    say = lambda h: sum(1 for x in ilkler
+                        if x.startswith(h) or tr_lower(x).partition(": ")[2].startswith(tr_lower(h)))
     h = _sec(options, say, gun, *seed, yedek=yedek)
     basliklar = yakin_basliklar(gun, onceki)
     carpar = lambda k: sum(1 for t in basliklar if tr_lower(k).startswith(t))
@@ -936,16 +939,14 @@ _kucuk = cumle_ici
 
 
 def seo_ilk(hook: str, konu: str) -> str:
-    """1. satır: kanca + birincil arama kelimesi (konu) + yer adı, ≤125 karakter."""
+    """1. satır: kanca; birincil arama kelimesi (konu) kancada yoksa başa "Konu: kanca" olarak gelir, ≤125 karakter.
+    Yer adı 1. satıra eklenmez (SEO satırı ve #köyceğiz taşır): kancanın sonuna yapıştırılan
+    "Konu: NITRO Bisiklet, Köyceğiz." eki cümleyi bozuyordu (26 Kasım)."""
     h = hook.strip()
-    t = tr_lower(h)
-    konu_var, yer_var = tr_lower(konu) in t, "köyceğiz" in t
-    if konu_var and yer_var:
+    if tr_lower(konu) in tr_lower(h):
         return h
-    ek = [] if konu_var else [konu]
-    adaylar = ([f"{h} {': '.join(ek + ['NITRO Bisiklet, Köyceğiz.'])}", f"{h} {', '.join(ek + ['Köyceğiz.'])}"]
-               if not yer_var else [f"{h} {konu}."])
-    return next((x for x in adaylar if len(x) <= FIRST_LINE_MAX), h)
+    x = f"{konu}: {cumle_ici(h)}"
+    return x if len(x) <= FIRST_LINE_MAX else h
 
 
 def _join(blocks: list[list[str] | str]) -> str:
@@ -972,8 +973,8 @@ def konu_of(rule: dict) -> str:
 
 
 def product_caption(p: dict, q: str, rule: dict, day: str, onceki: list[dict] | None = None) -> tuple[str, str]:
-    """(açıklama, ilk satır). Sıra: kanca (SEO) / iki seçenekli soru; ad + fiyat; 3-4 özellik; nasıl alırım;
-    tek satır güven bilgisi; gönder çağrısı; yerel SEO; 5 etiket."""
+    """(açıklama, ilk satır). Paragraflar: kanca (SEO); iki seçenekli soru; ad + fiyat ve 3-4 özellik;
+    "Neden NITRO?" güven maddeleri; nasıl alırım + gönder çağrısı; yerel SEO; 5 etiket."""
     konu = konu_of(rule)
     genel = [k.format(Konu=konu, konu=_kucuk(konu)) for k in GENEL_KANCA]
     hook = kanca_sec(list(rule["hooks"]) or genel, day, onceki, p["slug"], yedek=genel)
@@ -982,9 +983,9 @@ def product_caption(p: dict, q: str, rule: dict, day: str, onceki: list[dict] | 
     if p.get("category") == "2. El Bisiklet":
         head.append("Kontrollü 2. el.")
     specs = [f"▪️ {k}: {v}" for k, v in clean_specs(p, 4)]
-    body = specs if len(specs) >= 3 else (description(p, 280) or specs)
     ilk = seo_ilk(hook, konu)
-    cap = _join([[ilk, soru], head, body, how_to_buy(q), GUVEN_LINE, pick(GONDER, p["slug"], day), SEO_LINE,
+    urun = [head + specs] if len(specs) >= 3 else [head, description(p, 280) or specs]
+    cap = _join([ilk, soru, *urun, GUVEN, [how_to_buy(q), pick(GONDER, p["slug"], day)], SEO_LINE,
                  tags_for(rule["tags"], day, group_of(p.get("category")))])
     _kaydet(day, cap)
     return cap, ilk
@@ -1010,7 +1011,7 @@ def list_caption(lst: dict, gun: str | None = None, onceki: list[dict] | None = 
     ilk = seo_ilk(hook, cfg.get("konu") or "Bisiklet aksesuarı")
     cagri = GONDER_HEDIYE if cfg.get("cagri") == "gonder" else KAYDET
     rows = [f"{i}. {x['name']} · {fmt_price(x['price'])} · 🔍 “{x['q']}”" for i, x in enumerate(lst["items"], 1)]
-    cap = _join([[ilk, soru], rows, "Fiyatlar KDV dahildir.", how_to_buy(), GUVEN_LINE, pick(cagri, hook, gun),
+    cap = _join([ilk, soru, rows, "Fiyatlar KDV dahildir.", GUVEN, [how_to_buy(), pick(cagri, hook, gun)],
                  SEO_LINE, tags_for(lst["tags"], gun, "aksesuar")])
     _kaydet(gun, cap)
     return cap, ilk
@@ -1048,7 +1049,7 @@ def tip_caption(tip: dict, gun: str | None = None, onceki: list[dict] | None = N
            else "🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.")
     ek = {"servis": "#bisikletservisi", "cocuk": "#çocukbisikleti"}.get(tip.get("cta"), "#bisikletsevenler")
     cagri = "📌 " + kendi[-1] if kendi else pick(KAYDET, tip.get("id"), gun)
-    cap = _join([[ilk, soru]] + body + [cta, cagri, SEO_LINE,
+    cap = _join([ilk, soru] + body + [cta, cagri, SEO_LINE,
                                         tags_for(["#bisikletbakımı", "#bisikletipuçları", ek], gun)])
     _kaydet(gun, cap)
     return cap, ilk
@@ -1058,7 +1059,7 @@ def newyear_caption(year: int, gun: str | None = None, onceki: list[dict] | None
     gun = gun or f"{year - 1}-12-31"
     ilk = f"Mutlu yıllar! {year} bol kilometreli bir yıl olsun. NITRO Bisiklet, Köyceğiz."
     soru = soru_sec(YILBASI_SORULARI, gun, onceki, year)
-    cap = _join([[ilk, soru], "Bu yıl bizimle süren, dükkâna uğrayan, bisikletini atölyemize emanet eden herkese teşekkürler.",
+    cap = _join([ilk, soru, "Bu yıl bizimle süren, dükkâna uğrayan, bisikletini atölyemize emanet eden herkese teşekkürler.",
                  GONDER[2], SEO_LINE, tags_for(["#mutluyıllar", "#bisikletsevenler", "#yılbaşı"], gun)])
     _kaydet(gun, cap)
     return cap, ilk

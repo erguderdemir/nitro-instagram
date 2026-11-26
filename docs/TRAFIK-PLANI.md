@@ -148,8 +148,8 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 - Carousel'de "Neden NITRO" ve CTA tek karede birleşir. Boşalan yere gerçek veriden bir kare gelir.
 
 **Caption ve CTA**
-- Sıra: kanca, iki seçenekli soru (2. satır), ad ve fiyat, özellikler, nasıl alırım, tek satır güven bilgisi (site gerçeği), SEO satırı, etiketler.
-- İlk cümle tek bir birincil arama kelimesi ve yer adı taşır, ≤125 karakter.
+- Sıra (her biri ayrı paragraf): kanca, iki seçenekli soru, ad ve fiyat ile özellikler, "Neden NITRO?" başlıklı güven maddeleri (site gerçeği), nasıl alırım ile gönder/kaydet çağrısı, SEO satırı, etiketler. (26 Kasım: tek satıra sıkışan güven bilgisi ve kancaya yapışan ek okunmayı bozduğu için paragraflara ayrıldı.)
+- İlk satır birincil arama kelimesini taşır: kancada yoksa "Konu: kanca" biçiminde başa gelir, ≤125 karakter. Yer adı SEO satırında ve `#köyceğiz` etiketinde.
 - CTA zamandan bağımsızdır: **"Profildeki linke dokun, N342 yaz."** "En üstte", "bugün" gibi ifadeler CTA satırında yasaktır.
 - Türe göre tek çağrı: seçkide "Hediye alacağın kişiye gönder", rehberde "Kaydet". "Yorum yaz EVET" tarzı etkileşim yemi kullanılmaz.
 - Aynı soru ve kanca 30 gün içinde tekrar edilmez. Her kurala en az 3 soru tanımlanır.
