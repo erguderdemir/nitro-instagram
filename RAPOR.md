@@ -1,10 +1,6 @@
 # Instagram performans raporu · @nitrobisiklet
 
-Üretim: 26 Kasım 2026 Perşembe 12:29 · Veri: 26 Kasım 2026 12:29
-
-> **Notlar**
->
-> - Erişim/kaydetme/gönderme verisi için instagram_manage_insights izni gerekli.
+Üretim: 26 Kasım 2026 Perşembe 13:41 · Veri: 26 Kasım 2026 13:41
 
 ## Özet
 
@@ -49,14 +45,14 @@ Kategori karşılaştırması için veri yetersiz: hesaba giren en az 6 gönderi
 
 | Gün                       | Gönderi | Story |
 | ------------------------- | ------: | ----: |
-| 26 Kasım Perşembe (bugün) |       1 |     2 |
+| 26 Kasım Perşembe (bugün) |       1 |     1 |
 | 27 Kasım Cuma             |       1 |     3 |
 | 28 Kasım Cumartesi        |       1 |     3 |
 | 29 Kasım Pazar            |       1 |     3 |
 | 30 Kasım Pazartesi        |       1 |     3 |
 | 1 Aralık Salı             |       1 |     3 |
 | 2 Aralık Çarşamba         |       1 |     3 |
-| **Toplam**                |       7 |    20 |
+| **Toplam**                |       7 |    19 |
 
 ## Aylık tema raporu (geçen ay, yalnız öneri)
 
