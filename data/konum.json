@@ -1,6 +1,10 @@
 {
- "kontrol": "2026-11-26T14:40:36+03:00",
+ "kontrol": "2026-11-26T15:02:24+03:00",
  "location_id": "103874225067527",
  "sayfa": "Nitro Bisiklet",
- "yer": "Gelişim Mahallesi Nesvet Hanım Caddesi Sümer Sokak No:38 Köyceğiz Muğla, Koycegiz, Turkey"
+ "yer": "Gülpınar Mahallesi, Fevzi Paşa Caddesi No:73/B, Koycegiz, Turkey",
+ "koordinat": [
+  36.95926,
+  28.68921
+ ]
 }
