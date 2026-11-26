@@ -103,7 +103,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 - **B2, tamam.** Jeton 26 Kasım'da yenilendi. Üç izin de bulut kayıtlarıyla doğrulandı: `instagram_manage_insights` (`metrics.json` `insights: true`), `pages_read_engagement` (probe Sayfa konumunu okudu), `instagram_manage_comments` (plan çalışması: "[yorum] 107 yorum · yanıt bekleyen 26"). Jeton süresiz.
 - **B3, WhatsApp dışında tamam.** Ad "NITRO Bisiklet Köyceğiz", kategori "Bisiklet Dükkanı", bio, telefon, adres ve link girili; arama motorlarında görünme ayarı açık. "WhatsApp Business Numarası" alanı boş: numaraya doğrulama kodu gittiği için Barış telefondan ekler.
 - **B6, Barış'ı bekliyor.** Instagram web'de "Profilinde sabitle" seçeneği yok; telefon uygulamasından yapılır. Seçilen postlar: (1) 20 Ekim 2026 videosu (bu yılın en çok etkileşim alanı: 46.812 görüntüleme, 2.209 etkileşim), (2) 25 Kasım "Kışın bisikletini koruyan 5 alışkanlık", (3) 24 Kasım "Pedalını yenile"; üçüncüsü 28 Kasım'da yayınlanacak "Kışa hazırlayan 5 ürün" seçkisiyle değiştirilir.
-- **Ek bulgu (B4 ile ilgili):** Facebook Sayfası'ndaki adres eski (Gelişim Mah. Nesvet Hanım Cd. Sümer Sok. No:38). Barış düzeltene kadar post konumu kapalı tutuluyor (O4).
+- **Ek bulgu (B4 ile ilgili):** Facebook Sayfası'ndaki adres eskiydi (Gelişim Mah. Nesvet Hanım Cd. Sümer Sok. No:38). 26 Kasım'da Business Suite'ten düzeltildi: "Gülpınar Mahallesi, Fevzi Paşa Caddesi No:73/B, Koycegiz, 48800". Post konumu yeniden açık (O4). B4'ün geri kalanı (IG→FB otomatik paylaşım) Barış'ta.
 
 ### Otomasyonun yapacakları
 
@@ -321,7 +321,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 | O1 | Tamam (kod) | `report.py --esle` her publish çalışmasının sonunda; canlı eşleme ilk Suite postunda doğrulanacak |
 | O2 | Tamam | Bio: son 14 günün yayınlanmış postları, stok ve fiyat kontrolü, iletişim butonları `site.json`'dan |
 | O3 | Tamam | SEO 1. satır, iki seçenekli soru, arama terimli CTA, 30 gün tekrar yasağı; kilitli kayıtlar değişmedi |
-| O4 | Tamam (kod), kapalı | Konum probe görevinde okunur (`data/konum.json`). 26 Kasım: Sayfa'daki adres eski çıktı (Gelişim Mah. Sümer Sok. No:38), bu yüzden `config.json`'da `"location_id": false` ile kapatıldı; postlar konumsuz yayınlanır. Barış Sayfa adresini düzeltince satır silinir ve probe yeniden çalıştırılır |
+| O4 | Tamam, açık | Konum probe görevinde okunur (`data/konum.json`, koordinat dahil). 26 Kasım: Sayfa adresi düzeltildi; probe yeni adresi ve iğneyi okudu (36.95926, 28.68921: OSM'ye göre Gülpınar, Fevzi Paşa Cd. noktasına yaklaşık 55 m). Kapatmak gerekirse `config.json`'a `"location_id": false` eklenir. Kalan: ilk konumlu postun permalink'i elle kontrol edilecek |
 | O5 | Tamam | 20:30 story'leri kategori/servis hedefine; promo kampanyası = post teması; 26 Aralık: 1.000 ₺ altı hediye seçkisi |
 | O6 | Tamam | `data/suite_duzelt.json`: 4 kilitli post için öneri; Barış'a yalnız kullanıcı izniyle |
 | O7 | Sırada | Engel kalktı: 26 Kasım'da jetona `instagram_manage_insights` eklendi (`metrics.json` `insights: true`); story/hesap insights okuması yazılacak |
