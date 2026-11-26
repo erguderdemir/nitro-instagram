@@ -324,7 +324,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 | O4 | Tamam, açık | Konum probe görevinde okunur (`data/konum.json`, koordinat dahil). 26 Kasım: Sayfa adresi düzeltildi; probe yeni adresi ve iğneyi okudu (36.95926, 28.68921: OSM'ye göre Gülpınar, Fevzi Paşa Cd. noktasına yaklaşık 55 m). Kapatmak gerekirse `config.json`'a `"location_id": false` eklenir. Kalan: ilk konumlu postun permalink'i elle kontrol edilecek |
 | O5 | Tamam | 20:30 story'leri kategori/servis hedefine; promo kampanyası = post teması; 26 Aralık: 1.000 ₺ altı hediye seçkisi |
 | O6 | Tamam | `data/suite_duzelt.json`: 4 kilitli post için öneri; Barış'a yalnız kullanıcı izniyle |
-| O7 | Sırada | Engel kalktı: 26 Kasım'da jetona `instagram_manage_insights` eklendi (`metrics.json` `insights: true`); story/hesap insights okuması yazılacak |
+| O7 | Tamam (kod) | `report.py --story`, hesap insights, `manuel.json`, RAPOR.md Haftalık KPI tablosu yazıldı (a840907); canlı API davranışı ilk çalışmada görülecek |
 | O8 | Tamam | Postlarda ≥3 teknik özellik, ±1 gün alt tür kontrolü, 25 Aralık çocuk ve 28 Aralık 2. el postu |
 | O9 | Tamam | 5 etiket: `#köyceğiz` + dönüşümlü bölge + 3 konu; alt metinler kategori kelimesiyle başlar |
 | O10 | Bekliyor | Barış'ın linkli story A/B kararı; `plan_end` 15 Aralık'a kadar 2027-01-31'e uzatılacak |
