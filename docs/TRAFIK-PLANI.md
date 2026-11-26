@@ -97,6 +97,14 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 
 Şablon ve görselleri otomasyon `data/paylas/` altına üretir. Barış'a yalnız kullanıcı izniyle gönderilir.
 
+**Durum, 26 Kasım 2026 (B1, B2, B3, B6):**
+
+- **B1, Barış'ı bekliyor.** Hesabımız hiçbir işletme profilini yönetmiyor, bu yüzden düzenleme yapılamadı. Herkese açık kayıt: "Nitro Bisiklet", 5,0 puan, 152 yorum, adres doğru (Gülpınar, Fevzi Paşa Cd. No:73/B). Eksikler: profilde "Bu işletmenin sahibi misiniz?" bağlantısı görünüyor (büyük olasılıkla sahiplenilmemiş), telefon yok, Cuma saati 00:00–19:00 yazıyor, diğer günler 08:00 ya da 08:30 açılış gösteriyor (`site.json`: Pzt–Cmt 08:30–19:00). Barış profili sahiplenip hesabımızı yönetici ekleyince kategori, hizmet, ürün, fotoğraf ve UTM'li link girilir.
+- **B2, tamam.** Jeton 26 Kasım'da yenilendi. Üç izin de bulut kayıtlarıyla doğrulandı: `instagram_manage_insights` (`metrics.json` `insights: true`), `pages_read_engagement` (probe Sayfa konumunu okudu), `instagram_manage_comments` (plan çalışması: "[yorum] 107 yorum · yanıt bekleyen 26"). Jeton süresiz.
+- **B3, WhatsApp dışında tamam.** Ad "NITRO Bisiklet Köyceğiz", kategori "Bisiklet Dükkanı", bio, telefon, adres ve link girili; arama motorlarında görünme ayarı açık. "WhatsApp Business Numarası" alanı boş: numaraya doğrulama kodu gittiği için Barış telefondan ekler.
+- **B6, Barış'ı bekliyor.** Instagram web'de "Profilinde sabitle" seçeneği yok; telefon uygulamasından yapılır. Seçilen postlar: (1) 20 Ekim 2026 videosu (bu yılın en çok etkileşim alanı: 46.812 görüntüleme, 2.209 etkileşim), (2) 25 Kasım "Kışın bisikletini koruyan 5 alışkanlık", (3) 24 Kasım "Pedalını yenile"; üçüncüsü 28 Kasım'da yayınlanacak "Kışa hazırlayan 5 ürün" seçkisiyle değiştirilir.
+- **Ek bulgu (B4 ile ilgili):** Facebook Sayfası'ndaki adres eski (Gelişim Mah. Nesvet Hanım Cd. Sümer Sok. No:38). Barış düzeltene kadar post konumu kapalı tutuluyor (O4).
+
 ### Otomasyonun yapacakları
 
 İşler ayrıntılı olarak sondaki iş listesinde (O1–O5). Kısa özet:
@@ -306,17 +314,17 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 
 ## Otomasyon iş listesi
 
-### Durum (25 Kasım 2026)
+### Durum (26 Kasım 2026)
 
 | İş | Durum | Not |
 |---|---|---|
 | O1 | Tamam (kod) | `report.py --esle` her publish çalışmasının sonunda; canlı eşleme ilk Suite postunda doğrulanacak |
 | O2 | Tamam | Bio: son 14 günün yayınlanmış postları, stok ve fiyat kontrolü, iletişim butonları `site.json`'dan |
 | O3 | Tamam | SEO 1. satır, iki seçenekli soru, arama terimli CTA, 30 gün tekrar yasağı; kilitli kayıtlar değişmedi |
-| O4 | Tamam (kod) | Konum probe görevinde okunur (`data/konum.json`); Sayfa konumu boşsa post konumsuz yayınlanır |
+| O4 | Tamam (kod), kapalı | Konum probe görevinde okunur (`data/konum.json`). 26 Kasım: Sayfa'daki adres eski çıktı (Gelişim Mah. Sümer Sok. No:38), bu yüzden `config.json`'da `"location_id": false` ile kapatıldı; postlar konumsuz yayınlanır. Barış Sayfa adresini düzeltince satır silinir ve probe yeniden çalıştırılır |
 | O5 | Tamam | 20:30 story'leri kategori/servis hedefine; promo kampanyası = post teması; 26 Aralık: 1.000 ₺ altı hediye seçkisi |
 | O6 | Tamam | `data/suite_duzelt.json`: 4 kilitli post için öneri; Barış'a yalnız kullanıcı izniyle |
-| O7 | Bekliyor | Story/hesap insights için jetonda `instagram_manage_insights` izni gerekir (B2) |
+| O7 | Sırada | Engel kalktı: 26 Kasım'da jetona `instagram_manage_insights` eklendi (`metrics.json` `insights: true`); story/hesap insights okuması yazılacak |
 | O8 | Tamam | Postlarda ≥3 teknik özellik, ±1 gün alt tür kontrolü, 25 Aralık çocuk ve 28 Aralık 2. el postu |
 | O9 | Tamam | 5 etiket: `#köyceğiz` + dönüşümlü bölge + 3 konu; alt metinler kategori kelimesiyle başlar |
 | O10 | Bekliyor | Barış'ın linkli story A/B kararı; `plan_end` 15 Aralık'a kadar 2027-01-31'e uzatılacak |
