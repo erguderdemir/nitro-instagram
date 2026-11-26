@@ -983,7 +983,7 @@ Bisiklet Tamir Kiti · 140 ₺ (KDV dahil)
 ### 2026-12-21 19:30 · Patikaya hazır
 
 ```
-Asfaltın bittiği yerde başlar. Dağ bisikleti: NITRO Bisiklet, Köyceğiz.
+Hafta sonu rotanı çiz, gerisini bu bisiklete bırak. Dağ bisikleti: NITRO Bisiklet, Köyceğiz.
 Tırmanış mı, iniş mi?
 
 Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mavi-Açık Mavi · 35.608,50 ₺ (KDV dahil)
@@ -1145,7 +1145,7 @@ Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah · 1.615,50 ₺ (KDV dahil)
 ### 2026-12-28 19:30 · Elden geçti, yola hazır
 
 ```
-Kontrollü 2. el: atölyemizin elinden geçti, yeni sahibini bekliyor. Kontrollü 2. el bisiklet: NITRO Bisiklet, Köyceğiz.
+Sıfır şart değil. Bu bisiklet kontrollü 2. el. Kontrollü 2. el bisiklet: NITRO Bisiklet, Köyceğiz.
 Sıfır mı alırsın, kontrollü 2. el mi?
 
 Salcano Ng650 26” Dağ Bisikleti · 5.500 ₺ (KDV dahil)

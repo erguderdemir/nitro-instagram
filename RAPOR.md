@@ -1,6 +1,6 @@
 # Instagram performans raporu · @nitrobisiklet
 
-Üretim: 26 Kasım 2026 Perşembe 13:43 · Veri: 26 Kasım 2026 13:43
+Üretim: 26 Kasım 2026 Perşembe 14:48 · Veri: 26 Kasım 2026 14:48
 
 ## Özet
 
@@ -23,7 +23,7 @@
 
 Hata veren kayıt yok.
 
-Business Suite'e henüz zamanlanmamış yaklaşan story: **18** (en yakını 25 Aralık Cuma 09:30).
+Business Suite'e henüz zamanlanmamış yaklaşan story: **16** (en yakını 25 Aralık Cuma 19:30).
 
 ## Suite eşlemesi
 
