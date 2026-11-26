@@ -1,0 +1,2063 @@
+{
+  "guncelleme": "2026-11-26",
+  "atif": [
+    "Rota verisi kısmen © OpenStreetMap katkıcıları, ODbL (openstreetmap.org/copyright)"
+  ],
+  "rotalar": [
+    {
+      "id": "k1-koycegiz-golu",
+      "ad": "K1 Köyceğiz Gölü Rotası",
+      "baslangic": "Köyceğiz",
+      "bitis": "Köyceğiz",
+      "tip": "halka",
+      "guzergah": [
+        "Köyceğiz merkez",
+        "Hamitköy",
+        "Sultaniye Kaplıcaları",
+        "Çandır",
+        "Dalyan kanalı (tekne/feribot geçişi)",
+        "Dalyan",
+        "Tepearası",
+        "Kavakarası",
+        "Köyceğiz merkez"
+      ],
+      "konum_kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15479166",
+      "mesafe_km": {
+        "deger": 70,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k1-koycegiz-golu-rotasi-koycegiz-lake-70-km/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "K1 – KÖYCEĞİZ GÖLÜ ROTASI KÖYCEĞİZ LAKE (70 KM)",
+        "not": "Başlıktaki nominal değer; aynı sayfanın istatistik kutusu 65 km diyor.",
+        "alternatif": [
+          {
+            "deger": 65,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/k1-koycegiz-golu-rotasi-koycegiz-lake-70-km/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 70,
+            "kaynak": "https://goturkiye.com/tr/cycling/koycegiz-golu",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 71.064,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15479166",
+            "kaynak_tur": "osm"
+          },
+          {
+            "deger": 69.46,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k1-koycegiz-golu-rotasi-koycegiz-lake-70-km-61814815",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 69.5,
+            "kaynak": "https://www.bikemap.net/en/r/14123385/",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 70.58,
+            "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-golu-turu-59649217",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 70,
+            "kaynak": "https://www.koycegiz-haber.com/koycegiz/koycegiz-doga-yuruyusu-ve-bisiklet-rotalari/7443",
+            "kaynak_tur": "haber"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 995,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "ÇIKIŞ 995 m",
+        "not": "Liste sayfasında görünür; rota sayfasında HTML'de var ama CSS ile gizli.",
+        "alternatif": [
+          {
+            "deger": 477,
+            "kaynak": "https://goturkiye.com/tr/cycling/koycegiz-golu",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 889,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k1-koycegiz-golu-rotasi-koycegiz-lake-70-km-61814815",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 1232,
+            "kaynak": "https://www.bikemap.net/en/r/14123385/",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 584,
+            "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-golu-turu-59649217",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 993,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İNİŞ 993 m",
+        "not": "Liste sayfasında görünür; rota sayfasında gizli.",
+        "alternatif": [
+          {
+            "deger": 477,
+            "kaynak": "https://goturkiye.com/tr/cycling/koycegiz-golu",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 889,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k1-koycegiz-golu-rotasi-koycegiz-lake-70-km-61814815",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 1232,
+            "kaynak": "https://www.bikemap.net/en/r/14123385/",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 584,
+            "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-golu-turu-59649217",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 187,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "TEPE NOKTASI 187 m",
+        "not": "Liste sayfasında görünür; rota sayfasında gizli.",
+        "alternatif": [
+          {
+            "deger": 190,
+            "kaynak": "https://goturkiye.com/tr/cycling/koycegiz-golu",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 192,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k1-koycegiz-golu-rotasi-koycegiz-lake-70-km-61814815",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 186,
+            "kaynak": "https://www.bikemap.net/en/r/14123385/",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 190,
+            "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-golu-turu-59649217",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "zemin": {
+        "deger": "Bikemap: Paved 24.3 km (%35), Undefined 45.2 km (%65); yol tipleri Road 38.2 km, Quiet road 22.9 km, Track 3.5 km",
+        "kaynak": "https://www.bikemap.net/en/r/14123385/"
+      },
+      "zorluk": {
+        "deger": "Orta",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k1-koycegiz-golu-rotasi-koycegiz-lake-70-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k1-koycegiz-golu-rotasi-koycegiz-lake-70-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Kar engeli kaynağı yok: en yüksek nokta 186–192 m (ECO Trails 187, GoTürkiye ~190, Wikiloc 192, Bikemap 186) ve ECO Trails 'Önce Oku' kışın kıyı/orta kesim rotalarını öneriyor, kar yağışının kuzey rotalarında 1000 m'ye inebildiğini yazıyor. Koşullar: (1) Kültür Bakanlığı tanıtım sayfasına göre kış yağmurları 3–4 ay sürüyor; (2) Kavakarası/sığla ormanı kesimi yağışta çamurlu (Wikiloc 2020 kaydı ve 2022 yorumu); (3) Şubat 2026'da göl taştı, bazı kıyı yolları kapandı, Sultaniye su altında kaldı; (4) 22.01, 11.02 ve 12.02.2026'da feribot hava muhalefetinden iptal; sezon dışı seferler seyrek. Aralık–Şubat için resmi 'sürülebilir' beyanı yok; resmi durum alanı 2018'den beri güncellenmemiş.",
+        "kaynak": "https://theecotrails.com.tr/once-oku/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz–Ortaca yolunda (Ortaca istikameti) çöplük mevkiinde heyelan; yol ulaşıma kapandı. Mevkinin K1 izi üzerinde olduğu doğrulanamadı (K1 D400'e alt geçit ve Zeytinalanı'nda temas ediyor). Yeniden açılış haberi aramada bulunamadı.",
+          "kaynak": "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+          "tarih": "2025-12-06",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Dalyan–Çandır feribotu 1 No.lu hat (Deniz Kızı Restoran – Horozlar) seferleri hava muhalefeti nedeniyle o gün yapılmadı; aynı gün 2 No.lu hat (Portakal Otel Önü – Kaunos mevkii) için de iptal duyurusu var (duyuru ...-iptali-2). Tek günlük duyuru; hattın sonradan çalıştığını 13-08-2026 tarife haberi gösteriyor.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+          "tarih": "2026-01-22",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "2026-02-09/2026-02-10: Köyceğiz Gölü taştı; su altında kalan bazı yollar trafiğe kapatıldı, bazı noktalarda araç geçişine izin verilmedi; Sultaniye Kaplıcaları sular altında kaldı, tesis ziyarete kapatıldı (09.02.2026 yerel haber). Açık bir 'yollar açıldı' haberi bulunamadı; 02.09.2026 tarihli Sultaniye ziyaret rehberi asfalt yoldan normal ulaşımı anlatıyor (dolaylı kanıt).",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "2026-02-11/2026-02-12: Dalyan–Çandır feribotu 1 No.lu hat seferleri 11.02 ve 12.02.2026'da hava muhalefeti nedeniyle yapılmadı (duyurular ...-iptali-3 ve -4). Tek günlük duyurular.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-3",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz'de şiddetli yağış (72 kg/m2): dereler taştı (Pınar Mahallesi, Jandarma Deresi, Yuvarlakçay), ana yollar geçici kapatıldı; aynı haberde yolların yeniden açıldığı yazıyor. Kapanan yolun K1 izi üzerinde olduğu belirtilmiyor.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Dalyan–Çandır feribotu 1 No.lu hat seferleri teknik arıza nedeniyle o gün yapılmadı. Tek günlük duyuru.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-5",
+          "tarih": "2026-03-25",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "2026-04-22/2026-04-27: Dalyan–Çandır feribotu 2 No.lu hat (Portakal Otel Önü – Kaunos mevkii) seferleri 22.04, 24.04 ve 27.04.2026'da bakım-onarım nedeniyle yapılmadı (duyurular -6, -7, -8). Günlük duyurular.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-6",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Dalyan–Çandır feribotu 1 No.lu hat seferleri bakım-onarım nedeniyle o gün yapılmadı. Sonraki numaralı (10+) iptal duyurusu sitede bulunamadı; 13-08-2026'da yeni tarife yayımlandı.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-9",
+          "tarih": "2026-06-09",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz–Ortaca kara yolunun Kocabel mevkisinde heyelan; kaya ve toprak yolun bir şeridini kapattı. Kocabel'in K1 izi üzerinde olduğu doğrulanamadı (Nominatim sonuç vermedi; Overpass 406). Şeridin açıldığına dair haber bulunamadı.",
+          "kaynak": "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+          "tarih": "2026-10-28",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15479166",
+        "https://goturkiye.com/tr/cycling/koycegiz-golu",
+        "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "https://theecotrails.com.tr/maps-routes/k1-koycegiz-golu-rotasi-koycegiz-lake-70-km/",
+        "https://theecotrails.com.tr/once-oku/",
+        "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-golu-turu-59649217",
+        "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k1-koycegiz-golu-rotasi-koycegiz-lake-70-km-61814815",
+        "https://www.bikemap.net/en/r/14123385/",
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.koycegiz-haber.com/koycegiz/koycegiz-doga-yuruyusu-ve-bisiklet-rotalari/7443",
+        "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-3",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-5",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-6",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-9",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356"
+      ]
+    },
+    {
+      "id": "k2-sigla",
+      "ad": "K2 Sığla Rotası",
+      "baslangic": "Köyceğiz merkez",
+      "bitis": "Köyceğiz merkez",
+      "tip": "halka",
+      "guzergah": [
+        "Köyceğiz merkez (Wikiloc noktası: Info-5: KÖYCEĞİZ mrk)",
+        "K2-1 Palmiye",
+        "K2-2 Köyceğiz sığla kavşağı",
+        "K2-3 sığla toprak yol kavşağı",
+        "K2-4 Toparlar-Zaferler asfaltı kavşağı",
+        "K2-5 Toparlar sığla kavşağı",
+        "K2-6 şelale kavşağı (Toparlar şelalesi)",
+        "K2-7a / K2-7b D400 Döğüşbelen kavşağı",
+        "D400 şelale alt geçidi",
+        "Döğüşbelen (çeşme, değirmen, sağlık ocağı noktaları)"
+      ],
+      "konum_kaynak": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+      "mesafe_km": {
+        "deger": 32,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k2-sigla-rotasi-sweetgum-trail-32-km/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "K2 – SIĞLA ROTASI SWEETGUM TRAİL (32 KM)",
+        "not": "Başlıktaki nominal değer.",
+        "alternatif": [
+          {
+            "deger": 31,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/k2-sigla-rotasi-sweetgum-trail-32-km/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 33,
+            "kaynak": "https://goturkiye.com/tr/cycling/sigla-rotasi",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 30.878,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15506094",
+            "kaynak_tur": "osm"
+          },
+          {
+            "deger": 32.41,
+            "kaynak": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 32.412,
+            "kaynak": "https://www.wikiloc.com/hiking-trails/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 304,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "ÇIKIŞ 304 m",
+        "not": "Değer liste sayfasında görünür; rota detay sayfasında HTML'de var ama CSS ile gizli. GoTürkiye 137 m ve Wikiloc 175 m ile çelişiyor.",
+        "alternatif": [
+          {
+            "deger": 137,
+            "kaynak": "https://goturkiye.com/tr/cycling/sigla-rotasi",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 175,
+            "kaynak": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 304,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İNİŞ 304 m",
+        "not": "Liste sayfasında görünür; detay sayfasında gizli.",
+        "alternatif": [
+          {
+            "deger": 137,
+            "kaynak": "https://goturkiye.com/tr/cycling/sigla-rotasi",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 175,
+            "kaynak": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 78,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "TEPE NOKTASI 78 m",
+        "not": "Liste sayfasında görünür; detay sayfasında gizli.",
+        "alternatif": [
+          {
+            "deger": 78,
+            "kaynak": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "zemin": {
+        "deger": "Karışık: toprak yol kesimi ve asfalt kesimi var (ara nokta adlarından; oran bilinmiyor)",
+        "kaynak": "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246"
+      },
+      "zorluk": {
+        "deger": "Kolay",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k2-sigla-rotasi-sweetgum-trail-32-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k2-sigla-rotasi-sweetgum-trail-32-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "K2'ye özel kış kaynağı yok; dayanak genel. ECO Trails 'önce oku' sayfası faaliyetlerin yıl boyu yapılabildiğini, kışın yalnız karlı kuzey rotalarından kaçınılmasını, karın 1000 m'ye kadar inebildiğini yazıyor; K2 tepe noktası 78 m (ECO ve Wikiloc). Koşul yağış: Kültür Bakanlığı tanıtım sayfası Köyceğiz'de kış yağmurlarının 3-4 ay sürdüğünü yazıyor (tanitma.ktb.gov.tr/TR-22750/koycegiz.html, görüldü); Şubat 2026'da göl taşıp ilçe merkezinde yollar kapandı (NTV, kamu3); rotada toprak yol kesimi ve üç dere geçişi var (Wikiloc ara noktaları). Yağış sonrası çamur/su riski kaynaklardan çıkarım, K2 için doğrudan gözlem değil. K1 Wikiloc çamur yorumu K2 kanıtı sayılmadı.",
+        "kaynak": "https://theecotrails.com.tr/once-oku/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz–Ortaca yolunda çöplük mevkiinde heyelan, yol trafiğe kapandı. Yol Köyceğiz'in doğusunda; K2 geometrisi (boylam 28.587–28.688, Köyceğiz'in batısı) dışında. Yeniden açılış kaynağı aranmadı/bulunmadı.",
+          "kaynak": "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+          "tarih": "2025-12-06",
+          "etki": "etkilemez",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Köyceğiz Gölü taştı; göl kenarı yürüyüş yolu su altında, bazı yollar trafiğe kapatıldı. Hangi yollar olduğu yazmıyor. K2 başlangıcı Köyceğiz merkezde; rotanın etkilenen sokaklardan geçip geçmediği doğrulanamadı. Suların çekildiği 27.02.2026 tarihli haberle görüldü (kamu3.com).",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "tarih": "2026-02-10",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "72 kg/m² yağış; Pınar Mahallesi'nde dereler taştı, yollar kapandı ve aynı haberde yeniden açıldığı yazıyor. Pınar (36.921, 28.830) K2 geometrisinin doğusunda, rota dışı.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz ilçe merkezinde göl taşkını sonrası kordon, ana cadde ve ara sokaklarda çamur/yosun; sular çekildi, temizlik başladı. Haber taşkını 27 Şubat yağışlarına bağlıyor (10 Şubat taşkınından ayrı ya da tarih hatası; ayırt edilemedi). K2'nin bu sokaklardan geçtiği doğrulanamadı.",
+          "kaynak": "https://www.kamu3.com/koycegiz-golunde-sular-cekildi-temizlik-basladi/1245363/",
+          "tarih": "2026-02-27",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Döğüşbelen Mahallesi karayolunda (Köyceğiz–Muğla karayolu, D400) akaryakıt tankeri yandı, alevler ormana sıçradı; yol çift yönlü kapatıldı, yaklaşık 10 km kuyruk. K2 bu karayoluna Döğüşbelen kavşağında ve alt geçitte değiyor; yangın noktasının rotaya uzaklığı ve yanan orman alanının rota üstünde olup olmadığı yazmıyor. Haberler soğutma sonrası açılacağını söylüyor; açıldığını bildiren kaynak bulunamadı. Aynı olay koycegiz-haber.com/video/koycegiz/koycegizde-tanker-patladi-orman-yangini/7412 sayfasında da görüldü.",
+          "kaynak": "https://www.havadis.com/asayis/koycegiz-de-tanker-yangini-dogusbelen-de-alevler-ormana-sicradi-yol-kapandi/486718",
+          "tarih": "2026-08-28",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Muğla Büyükşehir Belediyesi yol çalışması: Toparlar Mahallesi Mezarlık Yolu ve Döğüşbelen-Zaferler Yolu dahil 7 güzergahta PMT serimi ve sathi kaplama (toplam 11.850 m). Haberde kapanma ifadesi yok; bitiş tarihi yok. K2'nin tam bu yolları kullandığı doğrulanamadı (rota Toparlar-Zaferler asfaltı kavşağından ve Döğüşbelen'den geçiyor; Zaferler rota kutusu içinde). Çalışma bittiyse zemin bilgisi değişmiş olabilir.",
+          "kaynak": "https://www.iha.com.tr/mugla-haberleri/koycegizde-7-guzergahta-yol-mesaisi-483687209",
+          "tarih": "2026-09-11",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Köyceğiz–Ortaca karayolu Kocabel mevkisinde heyelan; bir şerit kapandı. Yol Köyceğiz'in doğusunda, K2 geometrisi dışında. Temizlendiğine dair kaynak aranmadı.",
+          "kaynak": "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+          "tarih": "2026-10-28",
+          "etki": "etkilemez",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15506094",
+        "https://goturkiye.com/tr/cycling/sigla-rotasi",
+        "https://theecotrails.com.tr/maps-routes/?cmmrm_category=koycegiz-bisiklet-rotalari",
+        "https://theecotrails.com.tr/maps-routes/k2-sigla-rotasi-sweetgum-trail-32-km/",
+        "https://theecotrails.com.tr/once-oku/",
+        "https://tr.wikiloc.com/gezi-yuruyus-rotalari/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246",
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.havadis.com/asayis/koycegiz-de-tanker-yangini-dogusbelen-de-alevler-ormana-sicradi-yol-kapandi/486718",
+        "https://www.iha.com.tr/mugla-haberleri/koycegizde-7-guzergahta-yol-mesaisi-483687209",
+        "https://www.kamu3.com/koycegiz-golunde-sular-cekildi-temizlik-basladi/1245363/",
+        "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+        "https://www.wikiloc.com/hiking-trails/the-eco-trails-k2-sigla-rotasi-sweetgum-trail-32-km-61814246"
+      ]
+    },
+    {
+      "id": "k3-trans-olemez",
+      "ad": "K3 Trans Ölemez Rotası (Sultaniye–Ekincik–Sultaniye)",
+      "baslangic": "Sultaniye",
+      "bitis": "Sultaniye",
+      "tip": "halka",
+      "guzergah": [
+        "Sultaniye (K3-1)",
+        "Ekincik Geçidi (K3-2)",
+        "Ekincik (K3-3)",
+        "Ekincik İskelesi (K3-4)",
+        "marina kavşağı (K3-5)",
+        "mezar geçidi (K3-6)",
+        "Kolayyurt (K3-7)",
+        "Sultaniye"
+      ],
+      "konum_kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15508556",
+      "mesafe_km": {
+        "deger": 35,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "K3 – TRANS ÖLEMEZ rotası Sultaniye-Ekincik-Sultaniye (35 km)",
+        "not": "Başlıktaki nominal değer; aynı sayfanın istatistik kutusu 33 km diyor.",
+        "alternatif": [
+          {
+            "deger": 33,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 36,
+            "kaynak": "https://goturkiye.com/tr/cycling/trans-olemez-sultaniye-ekincik-sultaniye",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 35.962,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15508556",
+            "kaynak_tur": "osm"
+          },
+          {
+            "deger": 35.21,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k3-trans-olemez-sultaniye-ekincik-sultaniye-35-km-61814205",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 35.7,
+            "kaynak": "https://www.bikemap.net/en/r/6359958/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 1384,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Çıkış 1384 m",
+        "alternatif": [
+          {
+            "deger": 1089,
+            "kaynak": "https://goturkiye.com/tr/cycling/trans-olemez-sultaniye-ekincik-sultaniye",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 1274,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k3-trans-olemez-sultaniye-ekincik-sultaniye-35-km-61814205",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 1089,
+            "kaynak": "https://www.bikemap.net/en/r/6359958/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 1405,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İniş 1405 m",
+        "not": "Halka rotada çıkış (1384) ile iniş (1405) eşit değil; sayfadaki değer aynen yazıldı.",
+        "alternatif": [
+          {
+            "deger": 1089,
+            "kaynak": "https://goturkiye.com/tr/cycling/trans-olemez-sultaniye-ekincik-sultaniye",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 1274,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k3-trans-olemez-sultaniye-ekincik-sultaniye-35-km-61814205",
+            "kaynak_tur": "gps-kaydi"
+          },
+          {
+            "deger": 1089,
+            "kaynak": "https://www.bikemap.net/en/r/6359958/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 421,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Tepe noktası 421 m",
+        "alternatif": [
+          {
+            "deger": 426,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k3-trans-olemez-sultaniye-ekincik-sultaniye-35-km-61814205",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "zemin": {
+        "deger": "Ekincik'ten sonra toprak yol; ECO Trails bisiklet parkurları neredeyse tamamen toprak ve/veya asfalt (rota sahibinin 31 Tem 2022 yorum yanıtı)",
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k3-trans-olemez-sultaniye-ekincik-sultaniye-35-km-61814205"
+      },
+      "zorluk": {
+        "deger": "Zor",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Resmi öneri (ECO Trails genel sayfası): ılıman iklim yıl boyu faaliyete izin verir; kışın kar altında kalan kuzey rotalarından kaçınıp orta ve kıyı kesimleri tercih edilmeli; kuzey rotalarında kar 1000 m'ye kadar inebilir. K3 kıyı rotası, en yüksek nokta 421 m (ECO) / 426 m (Wikiloc), yani belirtilen kar sınırının altında; bu rota için kar haberi bulunmadı. Koşul: Şubat 2026'da göl taşkını başlangıç noktası Sultaniye'yi etkiledi (kaplıca kapandı, yol kontrollü); 22.01.2026'da fırtına feribotu durdurdu; Ekincik sonrası zemin toprak yol (çamur için ayrıca kaynak yok). Aralık-Şubat için rotaya özel resmi açıklama yok.",
+        "kaynak": "https://theecotrails.com.tr/bisiklet-ve-yuruyus-ekoloji-rotalari/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Dalyan (Deniz Kızı Restoran) – Çandır (Horozlar mevkii) 1 No.lu feribot hattı seferleri hava muhalefeti nedeniyle bir günlüğüne yapılmadı. Rota kaynaklarının hiçbirinde feribot geçişi yok; yalnız Dalyan tarafından erişimi etkiler. AA 16.04.2026 haberi feribotların sabah erken saatten gece yarısına kadar çalıştığını yazıyor (https://www.aa.com.tr/tr/gundem/turkiyenin-en-kisa-feribot-hatti-50-saniyede-iki-yakayi-bulusturuyor/3907477).",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+          "tarih": "2026-01-22",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz Gölü taştı; rotanın başlangıcındaki Sultaniye Kaplıcaları tamamen su altında kaldı ve ziyarete kapatıldı. Sultaniye yolunda ulaşım kontrollü sağlandı (tam kapanma bildirilmedi). Sonradan kaplıca yeniden hizmette: 02.04.2026 belediye ziyareti (koycegiz-haber 7040), 02.09.2026 rehberi kaplıcanın her gün 08:00-20:00 açık olduğunu yazıyor (koycegiz-haber 7444).",
+          "kaynak": "https://www.koycegiz-haber.com/koycegiz/koycegiz-golu-seviyesi-yukseldi-sultaniye-kaplicalari-kapandi/6127",
+          "tarih": "2026-02-09",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Aynı göl taşkını: su altında kalan bazı yollar trafiğe kapatıldı; Sultaniye Kaplıcaları tesisleri su altında, ziyaretçiler araçlarını göl kıyısına bırakıp suyun içinden yürüdü. Kapatılan yolların adı verilmiyor; K3 yolunun kapandığı doğrulanamadı.",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "tarih": "2026-02-10",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz'de şiddetli yağış; Pınar Mahallesi, Jandarma Deresi, Yuvarlakçay çevresinde dereler taştı, yollar kapandı ve yeniden açıldı. Haberde Sultaniye/Ekincik yolu geçmiyor.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        }
+      ],
+      "kaynaklar": [
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15508556",
+        "https://goturkiye.com/tr/cycling/trans-olemez-sultaniye-ekincik-sultaniye",
+        "https://theecotrails.com.tr/bisiklet-ve-yuruyus-ekoloji-rotalari/",
+        "https://theecotrails.com.tr/maps-routes/k3-trans-olemez-rotasi-sultaniye-ekincik-sultaniye-35-km/",
+        "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k3-trans-olemez-sultaniye-ekincik-sultaniye-35-km-61814205",
+        "https://www.bikemap.net/en/r/6359958/",
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.koycegiz-haber.com/koycegiz/koycegiz-golu-seviyesi-yukseldi-sultaniye-kaplicalari-kapandi/6127",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356"
+      ]
+    },
+    {
+      "id": "k4-yuvarlakcay",
+      "ad": "K4 Yuvarlakçay Rotası",
+      "baslangic": "bilinmiyor",
+      "bitis": "bilinmiyor",
+      "tip": "bilinmiyor",
+      "guzergah": [
+        "Beyobası (yalnız haber rehberi; resmi sayfada yok)",
+        "Yuvarlakçay Kanyonu (yalnız haber rehberi)",
+        "Topgözü mevkii (yalnız haber rehberi)",
+        "D400 Muğla-Fethiye yolu üzerinde kısa bölüm (OSM ilişkisi üye yol adı)"
+      ],
+      "konum_kaynak": "https://www.koycegiz-haber.com/koycegiz/koycegiz-doga-yuruyusu-ve-bisiklet-rotalari/7443",
+      "mesafe_km": {
+        "deger": 34,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "K4 – YUVARLAKÇAY rotası Yuvarlakçay River (34 km)",
+        "not": "Başlıktaki nominal değer.",
+        "alternatif": [
+          {
+            "deger": 35,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 35,
+            "kaynak": "https://goturkiye.com/tr/cycling/yuvarlakcay-nehri",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 34.239,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15505896",
+            "kaynak_tur": "osm"
+          },
+          {
+            "deger": 34.9,
+            "kaynak": "https://www.bikemap.net/en/r/6360587/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 540,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Çıkış 540 m",
+        "not": "GoTürkiye/Bikemap 300-302 m ile çelişiyor.",
+        "alternatif": [
+          {
+            "deger": 300,
+            "kaynak": "https://goturkiye.com/tr/cycling/yuvarlakcay-nehri",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 302,
+            "kaynak": "https://goturkiye.com/tr/cycling/yuvarlakcay-nehri",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 302,
+            "kaynak": "https://www.bikemap.net/en/r/6360587/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 540,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İniş 540 m",
+        "alternatif": [
+          {
+            "deger": 302,
+            "kaynak": "https://goturkiye.com/tr/cycling/yuvarlakcay-nehri",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 300,
+            "kaynak": "https://www.bikemap.net/en/r/6360587/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 268,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Tepe noktası 268 m",
+        "alternatif": []
+      },
+      "zemin": {
+        "deger": "OSM üye yolları karışık: bir bölümü highway=track, kalanı tertiary/unclassified/residential, kısa bölüm trunk (D400). surface etiketi üyelerin çoğunda yok; yalnız bir kısmında asphalt. Resmi sayfada zemin bilgisi yok.",
+        "kaynak": "https://api.openstreetmap.org/api/0.6/relation/15505896/full.json"
+      },
+      "zorluk": {
+        "deger": "Orta",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2021 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "K4 için açık kış tavsiyesi veren kaynak yok (ECO Trails, GoTürkiye, haber rehberi sessiz; GoTürkiye yalnız yazı öneriyor). Dolaylı kanıt: resmi sayfada tepe noktası 268 m, kar haberi bulunamadı. Buna karşılık Şubat 2026'da Pınar Mahallesi'nde dereler ve Yuvarlakçay taştı, yollar geçici kapandı, sonra açıldı. OSM'de hattın bir bölümü highway=track, zemin etiketi yok. Sonuç: yağış/taşkın dönemine bağlı; kesin hüküm değil.",
+        "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz–Ortaca yolunda 'çöplük mevkii'nde heyelan, yol trafiğe kapandı; ekipler çalışıyor. Yeniden açılış haberi bulunamadı. Mevkinin K4 hattına (D400 üzerindeki kısa bölüm) denk gelip gelmediği doğrulanamadı.",
+          "kaynak": "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+          "tarih": "2025-12-06",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Pınar Mahallesi'nde dere taştı, yol tamamen kapandı. Yuvarlakçay yolu Pınar Mahallesi sınırında; kapanan yolun K4 üzerinde olduğu doğrulanmadı. Açılış bu haberde yok (12.02.2026 haberi aynı mahallede yolların sonradan açıldığını yazıyor).",
+          "kaynak": "https://www.koycegiz-haber.com/video/koycegiz/koycegizde-pinar-mahallesi-isyan-etti-dere-tasti-ekipler-hl-gelmedi/6078",
+          "tarih": "2026-02-06",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Köyceğiz Gölü taştı, bazı göl kıyısı yolları trafiğe kapatıldı. Kapanan yolların K4 üzerinde olduğuna dair ifade yok.",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "tarih": "2026-02-10",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Şiddetli yağış (72 kg/m²): Pınar Mahallesi'nde dereler taştı, ana yollar kapatıldı, Yuvarlakçay taştı. Aynı haber kapanan yolların yeniden trafiğe açıldığını yazıyor. K4 ile birebir çakışma doğrulanmadı; geçici kapanma.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Pınar Mahallesi mahalle içi yollarında kilit parke taşı döşeme çalışması. Kapanma bildirilmiyor; K4 ile çakışma ve bitiş doğrulanmadı.",
+          "kaynak": "https://www.koycegiz-haber.com/belediye/koycegizde-hizmet-atagi-pinar-mahallesinin-yol-cilesi-sona-eriyor/6728",
+          "tarih": "2026-03-13",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Yuvarlakçay turistik güzergâhında altyapı ve yol iyileştirme çalışması; hedef turizm sezonu öncesi bitiş. Kapanma yazmıyor; tamamlandığına dair haber bulunamadı.",
+          "kaynak": "https://www.koycegiz-haber.com/belediye/koycegiz-yuvarlakcayda-alt-yapi-calismalari-suruyor/6900",
+          "tarih": "2026-03-23",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Köyceğiz–Ortaca kara yolu Kocabel mevkisinde heyelan, bir şerit kapandı; ekipler temizliyor. Yeniden açılış haberi bulunamadı. Kocabel'in K4 hattındaki D400 bölümüne denk geldiği doğrulanamadı.",
+          "kaynak": "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+          "tarih": "2026-10-28",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+        "https://api.openstreetmap.org/api/0.6/relation/15505896/full.json",
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15505896",
+        "https://goturkiye.com/tr/cycling/yuvarlakcay-nehri",
+        "https://theecotrails.com.tr/maps-routes/k4-yuvarlakcay-rotasi-yuvarlakcay-river-34-km-2/",
+        "https://www.bikemap.net/en/r/6360587/",
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.koycegiz-haber.com/belediye/koycegiz-yuvarlakcayda-alt-yapi-calismalari-suruyor/6900",
+        "https://www.koycegiz-haber.com/belediye/koycegizde-hizmet-atagi-pinar-mahallesinin-yol-cilesi-sona-eriyor/6728",
+        "https://www.koycegiz-haber.com/koycegiz/koycegiz-doga-yuruyusu-ve-bisiklet-rotalari/7443",
+        "https://www.koycegiz-haber.com/video/koycegiz/koycegizde-pinar-mahallesi-isyan-etti-dere-tasti-ekipler-hl-gelmedi/6078",
+        "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356"
+      ]
+    },
+    {
+      "id": "k5-trans-sandras",
+      "ad": "K5 Trans Sandras Rotası (3 etap)",
+      "baslangic": "Köyceğiz",
+      "bitis": "Köyceğiz",
+      "tip": "halka",
+      "guzergah": [
+        "Köyceğiz",
+        "Gökçeova göleti (1. etap sonu; resmi etap başlığı. 1. etabın ara noktaları bu oturumda görülmedi)",
+        "Kartal gölü kavşağı (K5-9)",
+        "Eren kavşağı (K5-10)",
+        "İncebel kavşağı (K5-11)",
+        "Otmanlar kavşağı-Kuzey (K5-12)",
+        "Çövenli (K5-13; 2. etap sonu)",
+        "Otmanlar kavşağı-Güney (K5-14)",
+        "Alan (K5-15)",
+        "Sazak (K5-16)",
+        "Akköprü kavşağı (K5-17)",
+        "Baraj kavşağı (K5-18)",
+        "Eğrekli kavşağı (K5-20)",
+        "Köyceğiz-Ağla kavşağı (K5-1)",
+        "Köyceğiz"
+      ],
+      "konum_kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/14878117",
+      "mesafe_km": {
+        "deger": 84,
+        "kaynak": "https://goturkiye.com/tr/cycling/trans-sandras",
+        "kaynak_tur": "resmi-turizm",
+        "erisim": "2026-11-26",
+        "alinti": "84 km uzunluğundaki rotada 1993 metre irtifa kazanacaksınız!",
+        "not": "Tüm tur değeri. Etap sayfaları: 1. etap 27 km, 2. etap 17 km, 3. etap 41 km (başlık değerleri).",
+        "alternatif": [
+          {
+            "deger": 82.45,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/14878117",
+            "kaynak_tur": "osm"
+          },
+          {
+            "deger": 83.8,
+            "kaynak": "https://www.bikemap.net/en/r/6391281/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 1993,
+        "kaynak": "https://goturkiye.com/tr/cycling/trans-sandras",
+        "kaynak_tur": "resmi-turizm",
+        "erisim": "2026-11-26",
+        "alinti": "84 km uzunluğundaki rotada 1993 metre irtifa kazanacaksınız!",
+        "not": "Tüm tur değeri. ECO Trails 1. etap sayfası tek başına 2025 m çıkış yazıyor; kaynaklar çelişiyor.",
+        "alternatif": [
+          {
+            "deger": 1993,
+            "kaynak": "https://www.bikemap.net/en/r/6391281/",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 1993,
+        "kaynak": "https://www.bikemap.net/en/r/6391281/",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "1,993 m Descent",
+        "not": "Tüm tur; çıkış=iniş (halka ile tutarlı). Sayfada 'Max. altitude ---' (boş)",
+        "alternatif": []
+      },
+      "max_rakim_m": {
+        "deger": 1802,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k5-trans-sandras-rotasi-gokceova-goleti-covenli-17-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Tepe noktası 1802 m",
+        "not": "Tüm turun en yüksek noktası 2. etapta; değer 2. etabın resmi sayfasından (etap sayfaları: 1781, 1802, 1366 m).",
+        "alternatif": [
+          {
+            "deger": 1806,
+            "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k5-trans-sandras-gokceova-goleti-covenli-17-km-61575076",
+            "kaynak_tur": "gps-kaydi"
+          }
+        ]
+      },
+      "zemin": {
+        "deger": "Tüm tur, Bikemap otomatik yüzey dökümü: kaplamalı/asfalt 52 km (%62), kaplamasız/gevşek çakıl 13.4 km (%16), tanımsız 18.4 km (%22)",
+        "kaynak": "https://www.bikemap.net/en/r/6391281/"
+      },
+      "zorluk": {
+        "deger": "Zor",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k5-trans-sandras-rotasi-koycegiz-gokceova-goleti-27-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/k5-trans-sandras-rotasi-koycegiz-gokceova-goleti-27-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Kışın sürülebildiğini söyleyen kaynak yok. ECO Trails genel uyarısı: kışın karlı kuzey rotalarından kaçının, kar 1000 m'ye inebilir; rota 1781-1802 m'ye çıkıyor. Aralık 2025 ve Ocak 2026'da Gökçeova'da kar; Şubat 2026'da yol iki kez kapandı, kapalı bölüm ancak 05 Mayıs 2026'da açıldı. Üst kesim (1. etap sonu, 2. etap, 3. etap başı) kar durumuna bağlı; tam halka Şubat 2026'da yapılamazdı.",
+        "kaynak": "https://theecotrails.com.tr/once-oku/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Sandras Dağı'na mevsimin ilk karı; dağ yolunda ve Gökçeova Göleti'nde araç yoğunluğu. Haberde yol kapanması bildirilmiyor.",
+          "kaynak": "https://www.haber48.com.tr/koycegiz-sandras-dagina-yilin-ilk-kari-yagdi",
+          "tarih": "2025-12-08",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Sandras Dağı'na kar; ertesi gün vatandaşlar araçla Ağla Yaylası Gökçeova mevkiine çıktı. Kapanma bildirilmiyor; üst kesimde kar örtüsü var.",
+          "kaynak": "https://www.haber48.com.tr/sandrasa-kar-yagdi-koycegiz-gunese-uyandi",
+          "tarih": "2026-01-28",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Yoğun kar: Köyceğiz–Beyağaç karayolu ulaşıma kapandı; Gökçeova Göleti mevkiinde kar kalınlığı bir metreye yaklaştı. Aynı haber: yol gölete kadar yeniden açıldı. Göletin ötesi için açılış: Beyağaç Belediyesi duyurusu 05 Mayıs 2026 (https://www.beyagac.bel.tr/duyuru/beyagac-koycegiz-turizm-yolumuzun-kapali-bolumu-ulasima-acilmistir). K5'in bu karayoluyla tam örtüşmesi kaynakla kanıtlı değil; 1. etap sonu/2. etap başı Gökçeova göleti.",
+          "kaynak": "https://www.muglagazetesi.com.tr/koycegiz-haberleri/gokceova-goletinde-kartpostallik-kis-goruntuleri-207228h",
+          "tarih": "2026-02-05",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Pınarköy Mahallesi'nde gece sağanağı: dereler taştı, sokaklarda su birikti; haber 'kısa süreli' aksama diyor, yol kapanması bildirmiyor. 3. etap Wikiloc kaydında 'K5 Pınarköy çeşme' ara noktası var; rota yolunun etkilendiğine dair kaynak yok.",
+          "kaynak": "https://www.muglagazetesi.com.tr/mugla-haberleri/koycegizde-saganak-alarmi-dereler-tasti-sel-etkili-oldu-207658h",
+          "tarih": "2026-02-12",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Yoğun kar ve buzlanma: Ağla Yaylası–Beyağaç orman yolu kapandı, araçlar mahsur kaldı. Haberde açılış bilgisi yok. Beyağaç Belediyesi 05 Mayıs 2026 duyurusu: 'Beyağaç–Köyceğiz Turizm Yolumuzun kapalı bölümü ulaşıma açılmıştır' (aynı yol olduğu varsayımıyla; duyuru Beyağaç tarafına ait). K5 izinin bu yol kesimini kullandığı kaynakla kanıtlı değil.",
+          "kaynak": "https://www.muglagazetesi.com.tr/koycegiz-haberleri/koycegiz-agla-yaylasi-beyaza-burundu-yol-ulasima-kapandi-208556h",
+          "tarih": "2026-02-25",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        }
+      ],
+      "kaynaklar": [
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/14878117",
+        "https://goturkiye.com/tr/cycling/trans-sandras",
+        "https://theecotrails.com.tr/maps-routes/k5-trans-sandras-rotasi-gokceova-goleti-covenli-17-km/",
+        "https://theecotrails.com.tr/maps-routes/k5-trans-sandras-rotasi-koycegiz-gokceova-goleti-27-km/",
+        "https://theecotrails.com.tr/once-oku/",
+        "https://tr.wikiloc.com/dag-bisikleti-rotalari/the-eco-trails-k5-trans-sandras-gokceova-goleti-covenli-17-km-61575076",
+        "https://www.bikemap.net/en/r/6391281/",
+        "https://www.haber48.com.tr/koycegiz-sandras-dagina-yilin-ilk-kari-yagdi",
+        "https://www.haber48.com.tr/sandrasa-kar-yagdi-koycegiz-gunese-uyandi",
+        "https://www.muglagazetesi.com.tr/koycegiz-haberleri/gokceova-goletinde-kartpostallik-kis-goruntuleri-207228h",
+        "https://www.muglagazetesi.com.tr/koycegiz-haberleri/koycegiz-agla-yaylasi-beyaza-burundu-yol-ulasima-kapandi-208556h",
+        "https://www.muglagazetesi.com.tr/mugla-haberleri/koycegizde-saganak-alarmi-dereler-tasti-sel-etkili-oldu-207658h"
+      ]
+    },
+    {
+      "id": "gol-halkasi-feribotlu",
+      "ad": "Köyceğiz göl halkası (Sultaniye, Dalyan–Çandır feribotu)",
+      "baslangic": "Köyceğiz",
+      "bitis": "Köyceğiz",
+      "tip": "halka",
+      "guzergah": [
+        "Köyceğiz (başlangıç, otobüs durağı)",
+        "Hamitköy merkez camii (6,43 km; sayfada 'Kamitköy' yazıyor)",
+        "Göl manzarası (12,0 km)",
+        "Sultaniye Hot Springs (24,9 km)",
+        "Çandır Mosque (30,9 km)",
+        "Dalyan River Ferry (31,2 km)",
+        "Dalyan nehir kıyısı ve kaya mezarları (32,2 km)",
+        "Köyceğiz Lake (55,9 km)",
+        "Köyceğiz (57,8 km)"
+      ],
+      "konum_kaynak": "https://www.komoot.com/smarttour/31622916",
+      "mesafe_km": {
+        "deger": 57.8,
+        "kaynak": "https://www.komoot.com/smarttour/31622916",
+        "kaynak_tur": "planlayici",
+        "erisim": "2026-11-26",
+        "alinti": "57.8 km",
+        "not": "Komoot smart tour (planlayıcı tahmini); sayfa 'Last updated: August 27, 2026'.",
+        "alternatif": [
+          {
+            "deger": 58,
+            "kaynak": "https://www.komoot.com/smarttour/10311848",
+            "kaynak_tur": "planlayici"
+          },
+          {
+            "deger": 59.2,
+            "kaynak": "https://www.komoot.com/smarttour/19359618",
+            "kaynak_tur": "planlayici"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 530,
+        "kaynak": "https://www.komoot.com/smarttour/31622916",
+        "kaynak_tur": "planlayici",
+        "erisim": "2026-11-26",
+        "alinti": "530 m",
+        "not": "Tur sayfasında tek yükseklik rakamı gösteriliyor.",
+        "alternatif": [
+          {
+            "deger": 530,
+            "kaynak": "https://www.komoot.com/smarttour/10311848",
+            "kaynak_tur": "planlayici"
+          },
+          {
+            "deger": 520,
+            "kaynak": "https://www.komoot.com/smarttour/19359618",
+            "kaynak_tur": "planlayici"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 530,
+        "kaynak": "https://www.komoot.com/guide/176493/cycling-around-koeycegiz-lake",
+        "kaynak_tur": "planlayici",
+        "erisim": "2026-11-26",
+        "alinti": "57.8 km | 03:42 | 530 m | 530 m",
+        "not": "İniş değeri tur sayfasında değil, Komoot rehber sayfasındaki #3 satırında görüldü.",
+        "alternatif": []
+      },
+      "max_rakim_m": {
+        "deger": 150,
+        "kaynak": "https://www.komoot.com/smarttour/31622916",
+        "kaynak_tur": "planlayici",
+        "erisim": "2026-11-26",
+        "alinti": "Highest point (150 m)",
+        "alternatif": [
+          {
+            "deger": 150,
+            "kaynak": "https://www.komoot.com/smarttour/10311848",
+            "kaynak_tur": "planlayici"
+          },
+          {
+            "deger": 150,
+            "kaynak": "https://www.komoot.com/smarttour/19359618",
+            "kaynak_tur": "planlayici"
+          }
+        ]
+      },
+      "zemin": {
+        "deger": "31622916: Asphalt 45.6 km, Paved 10.2 km, Unpaved 1.85 km, Unknown 200 m; yol tipleri Road 43.7 km, Street 7.77 km, State Road 6.22 km, Ferry 105 m",
+        "kaynak": "https://www.komoot.com/smarttour/31622916"
+      },
+      "zorluk": {
+        "deger": "Hard",
+        "kaynak": "https://www.komoot.com/smarttour/31622916"
+      },
+      "durum": {
+        "deger": "bilinmiyor",
+        "kaynak": null,
+        "kontrol": "2026-11-26",
+        "not": "Resmi durum kaynağı bulunamadı."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Kar engeli kaynağı yok: Komoot en yüksek nokta 150 m, zemin çoğunlukla asfalt/kaplamalı (1,85–2,70 km kaplamasız). Koşullar: halka feribot geçişine bağlı ve 22.01, 11.02, 12.02.2026'da seferler hava muhalefetinden iptal edildi; sezon dışında seferler seyrek; Şubat 2026'da göl taşkınında bazı kıyı yolları kapandı ve Sultaniye su altında kaldı; Kültür Bakanlığı sayfasına göre kış yağmurları 3–4 ay sürüyor. Aralık–Şubat için resmi tavsiye yok.",
+        "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz–Ortaca yolunda çöplük mevkiinde heyelan; yol ulaşıma kapandı. Mevkinin bu halkanın devlet yolu kesimi (4,9–6,2 km) üzerinde olduğu doğrulanamadı. Yeniden açılış haberi bulunamadı.",
+          "kaynak": "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+          "tarih": "2025-12-06",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Dalyan–Çandır feribotu 1 No.lu ve 2 No.lu hat seferleri hava muhalefeti nedeniyle o gün yapılmadı (duyurular -1 ve -2). Halka kanal geçişine bağlı; her iki hat da iptal olduğunda geçiş için kayık dışında seçenek kalmıyor. Tek günlük duyuru.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+          "tarih": "2026-01-22",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "2026-02-09/2026-02-10: Köyceğiz Gölü taştı; su altında kalan bazı yollar trafiğe kapatıldı; halkanın ara noktası Sultaniye Kaplıcaları sular altında kaldı. 02.09.2026 tarihli Sultaniye ziyaret rehberi asfalt yoldan normal ulaşımı anlatıyor (dolaylı kanıt); Komoot sayfası Ağustos 2026'da güncellenmiş.",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "2026-02-11/2026-02-12: Dalyan–Çandır feribotu 1 No.lu hat seferleri 11.02 ve 12.02.2026'da hava muhalefeti nedeniyle yapılmadı (duyurular -3 ve -4).",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-3",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz'de şiddetli yağış; dereler taştı, ana yollar geçici kapatıldı, aynı haberde yeniden açıldığı yazıyor. Kapanan yolun bu halka üzerinde olduğu belirtilmiyor.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Dalyan–Çandır feribotu 1 No.lu hat seferleri teknik arıza nedeniyle o gün yapılmadı.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-5",
+          "tarih": "2026-03-25",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "2026-04-22/2026-04-27: Dalyan–Çandır feribotu 2 No.lu hat seferleri 22.04, 24.04 ve 27.04.2026'da bakım-onarım nedeniyle yapılmadı (duyurular -6, -7, -8).",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-6",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Dalyan–Çandır feribotu 1 No.lu hat seferleri bakım-onarım nedeniyle o gün yapılmadı. Daha yeni iptal duyurusu bulunamadı; 13-08-2026'da yeni tarife yayımlandı.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-9",
+          "tarih": "2026-06-09",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz–Ortaca kara yolunun Kocabel mevkisinde heyelan; yolun bir şeridi kapandı. Kocabel'in bu halkanın devlet yolu kesimi üzerinde olduğu doğrulanamadı. Şeridin açıldığına dair haber bulunamadı.",
+          "kaynak": "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+          "tarih": "2026-10-28",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.komoot.com/guide/176493/cycling-around-koeycegiz-lake",
+        "https://www.komoot.com/smarttour/10311848",
+        "https://www.komoot.com/smarttour/19359618",
+        "https://www.komoot.com/smarttour/31622916",
+        "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-3",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-5",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-6",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-9",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356"
+      ]
+    },
+    {
+      "id": "koycegiz-bisiklet-yolu",
+      "ad": "Köyceğiz kent içi bisiklet yolu (Güreli Caddesi)",
+      "baslangic": "bilinmiyor",
+      "bitis": "bilinmiyor",
+      "tip": "bilinmiyor",
+      "guzergah": [
+        "Gelişim Mahallesi Güreli Caddesi (uç noktalar kaynakta yok)"
+      ],
+      "konum_kaynak": "https://www.milliyet.com.tr/siyaset/bakan-kurum-koycegiz-bisiklet-yolunun-acilisini-yapti-6746419",
+      "mesafe_km": {
+        "deger": 2.1,
+        "kaynak": "https://www.milliyet.com.tr/siyaset/bakan-kurum-koycegiz-bisiklet-yolunun-acilisini-yapti-6746419",
+        "kaynak_tur": "haber",
+        "erisim": "2026-11-26",
+        "alinti": "2 bin 100 metre uzunluğundaki bisiklet yolunun açılışını yaptı",
+        "not": "İHA haberi, 28.04.2022. Uzunluk 'Bisiklet Taşıt ve Yürüyüş Yolu ile Yağmur Suyu Drenajı' yapım işinin uzunluğu olarak veriliyor; ölçüm değil, proje değeri.",
+        "alternatif": [
+          {
+            "deger": 2.1,
+            "kaynak": "https://yerel-haberler.haberturk.com/mugla-haberleri/koycegiz-bisiklet-yoluna-kavusuyor-94094125",
+            "kaynak_tur": "haber"
+          },
+          {
+            "deger": 2,
+            "kaynak": "https://yerel-haberler.haberturk.com/mugla-haberleri/koycegiz-bisiklet-yoluna-kavusuyor-94094125",
+            "kaynak_tur": "haber"
+          }
+        ]
+      },
+      "tirmanis_m": null,
+      "inis_m": null,
+      "max_rakim_m": null,
+      "zemin": {
+        "deger": "Bisiklet, taşıt ve yürüyüş yolu düzenlemesi, yağmur suyu drenajıyla birlikte; kaplama türü kaynakta yazmıyor",
+        "kaynak": "https://www.milliyet.com.tr/siyaset/bakan-kurum-koycegiz-bisiklet-yolunun-acilisini-yapti-6746419"
+      },
+      "zorluk": null,
+      "durum": {
+        "deger": "bilinmiyor",
+        "kaynak": null,
+        "kontrol": "2026-11-26",
+        "not": "Resmi durum kaynağı bulunamadı."
+      },
+      "kis_uygun": {
+        "deger": "bilinmiyor",
+        "gerekce": "Bu yol için kışa özel kaynak yok; rakım verisi yok. Şubat 2026'da göl taşkınında ilçede bazı yollar kapatıldı (NTV/AA) ama Güreli Caddesi adı geçmiyor. Kar haberi bulunamadı.",
+        "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz Gölü taştı; göl kenarındaki yürüyüş yolu su altında kaldı, su altında kalan bazı yollar trafiğe kapatıldı. Haberde Güreli Caddesi ya da Gelişim Mahallesi adı geçmiyor; bu yolun etkilenip etkilenmediği bilinmiyor. Suların çekildiğine dair kaynak bulunamadı.",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "tarih": "2026-02-10",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Köyceğiz'de şiddetli yağış (metrekareye 72 kg); Pınar Mahallesi'nde dereler taştı, ana yollar bir süre kapatıldı, aynı haberde yeniden açıldığı yazıyor. Güreli Caddesi/Gelişim Mahallesi adı geçmiyor.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        }
+      ],
+      "kaynaklar": [
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.milliyet.com.tr/siyaset/bakan-kurum-koycegiz-bisiklet-yolunun-acilisini-yapti-6746419",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+        "https://yerel-haberler.haberturk.com/mugla-haberleri/koycegiz-bisiklet-yoluna-kavusuyor-94094125"
+      ]
+    },
+    {
+      "id": "koycegiz-dalyan",
+      "ad": "Köyceğiz – Dalyan",
+      "baslangic": "Köyceğiz",
+      "bitis": "Dalyan",
+      "tip": "tek-yon",
+      "guzergah": [
+        "Köyceğiz",
+        "Hamitköy (göl kenarından)",
+        "Sultaniye kaplıcaları",
+        "Horozlar köyü",
+        "Tekneyle kanalın karşı yakasına geçiş",
+        "Dalyan"
+      ],
+      "konum_kaynak": "https://www.pedalla.com/gezgin-pedallar-seyr-i-mugla-5-gun-koycegiz-dalyan/",
+      "mesafe_km": {
+        "deger": 45.56,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-turu-rotalari/koycegiz-dalyan-190015077",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "Mesafe 45,56 km",
+        "not": "Ekim 2024 kaydı, Tek Yönlü. Sayfada güzergâh açıklaması yok, yalnız 'Köyceğiz-dalyan'.",
+        "alternatif": [
+          {
+            "deger": 33.42,
+            "kaynak": "https://www.pedalla.com/gezgin-pedallar-seyr-i-mugla-5-gun-koycegiz-dalyan/",
+            "kaynak_tur": "diger"
+          },
+          {
+            "deger": 53.32,
+            "kaynak": "https://www.pedalla.com/likya-yolu-2gun-koycegiz-dalyan/",
+            "kaynak_tur": "diger"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 312,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-turu-rotalari/koycegiz-dalyan-190015077",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "İrtifa kazancı 312 m",
+        "alternatif": []
+      },
+      "inis_m": {
+        "deger": 351,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-turu-rotalari/koycegiz-dalyan-190015077",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "İrtifa kaybı 351 m",
+        "alternatif": []
+      },
+      "max_rakim_m": {
+        "deger": 171,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-turu-rotalari/koycegiz-dalyan-190015077",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "Maks. yükseklik 171 m",
+        "alternatif": []
+      },
+      "zemin": {
+        "deger": "Çandır tarafında feribot iskelesinden çıkan yol yer yer bozuk",
+        "kaynak": "https://www.dalyanboattrips.com/tr/candir-dalyan-karsi-kiyi-kaunos/"
+      },
+      "zorluk": {
+        "deger": "Orta",
+        "kaynak": "https://tr.wikiloc.com/bisiklet-turu-rotalari/koycegiz-dalyan-190015077"
+      },
+      "durum": {
+        "deger": "bilinmiyor",
+        "kaynak": null,
+        "kontrol": "2026-11-26",
+        "not": "Resmi durum kaynağı bulunamadı."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Rota alçak (Wikiloc maks. 171–198 m) ve Şubat 2008'de kışın sürülmüş (pedalla). Ancak kanal geçişi feribota bağlı: feribot kötü havada iptal edilebiliyor (22.01.2026) ve sezon dışında seyrekleşiyor. Şubat 2026'da göl taşkını Sultaniye çevresinde bazı yolları kapattı.",
+        "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1"
+      },
+      "uyarilar": [
+        {
+          "metin": "Dalyan (Deniz Kızı Restoran) – Çandır Horozlar mevkii 1 No.lu feribot seferleri hava muhalefeti nedeniyle yapılamadı.",
+          "kaynak": "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+          "tarih": "2026-01-22",
+          "etki": "kapatir",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz Gölü taştı; Sultaniye Kaplıcaları sular altında, su basan bazı yollar trafiğe kapatıldı. Hangi yolların kapandığı yazmıyor; yeniden açılış haberi bulunamadı.",
+          "kaynak": "https://www.ntv.com.tr/turkiye/koycegiz-golu-tasti-2-bin-yillik-kaplicalar-sular-altinda,1711356",
+          "tarih": "2026-02-10",
+          "etki": "kismen",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Dalyan–Çandır feribot hattında yeni tarife; bisiklet ücretsiz. Hattın çalıştığını gösterir (22.01.2026 iptalinin sona erdiğinin kanıtı).",
+          "kaynak": "https://www.muglayenigun.com/dalyan-candir-feribot-hattinda-yeni-tarife-belli-oldu/",
+          "tarih": "2026-08-13",
+          "etki": "etkilemez",
+          "gecerli": "evet"
+        }
+      ],
+      "kaynaklar": [
+        "https://tr.wikiloc.com/bisiklet-turu-rotalari/koycegiz-dalyan-190015077",
+        "https://www.dalyanboattrips.com/tr/candir-dalyan-karsi-kiyi-kaunos/",
+        "https://www.mugla.bel.tr/duyuru/dalyan---candir-feribotu-sefer-iptali-1",
+        "https://www.muglayenigun.com/dalyan-candir-feribot-hattinda-yeni-tarife-belli-oldu/",
+        "https://www.ntv.com.tr/turkiye/koycegiz-golu-tasti-2-bin-yillik-kaplicalar-sular-altinda,1711356",
+        "https://www.pedalla.com/gezgin-pedallar-seyr-i-mugla-5-gun-koycegiz-dalyan/",
+        "https://www.pedalla.com/likya-yolu-2gun-koycegiz-dalyan/"
+      ]
+    },
+    {
+      "id": "koycegiz-ekincik",
+      "ad": "Köyceğiz – Ekincik",
+      "baslangic": "Köyceğiz Turizm Danışma Bürosu",
+      "bitis": "Köyceğiz",
+      "tip": "gidis-donus",
+      "guzergah": [
+        "Köyceğiz kordon",
+        "Köy yolu",
+        "Hamitköy",
+        "Namnam çayı köprüsü",
+        "Sultaniye Kaplıcaları kavşağı",
+        "6 km sert tırmanış + 2 km tırmanış",
+        "Ekincik koyu",
+        "Aynı yoldan dönüş",
+        "Köyceğiz"
+      ],
+      "konum_kaynak": "https://www.pedalla.com/ekincik-bisiklet-gezisi/",
+      "mesafe_km": {
+        "deger": 69.4,
+        "kaynak": "https://www.pedalla.com/ekincik-bisiklet-gezisi/",
+        "kaynak_tur": "diger",
+        "erisim": "2026-11-26",
+        "alinti": "Toplam Km: 69.40 Km",
+        "not": "Haziran 2014 gidiş-dönüş sürüş kaydı (blog). Metinde yuvarlak 'toplamda 70 km' de geçiyor.",
+        "alternatif": []
+      },
+      "tirmanis_m": null,
+      "inis_m": null,
+      "max_rakim_m": null,
+      "zemin": null,
+      "zorluk": {
+        "deger": "Sert tırmanışlar: gidişte 6 km + 2 km, dönüşte 8 km tırmanış",
+        "kaynak": "https://www.pedalla.com/ekincik-bisiklet-gezisi/"
+      },
+      "durum": {
+        "deger": "bilinmiyor",
+        "kaynak": null,
+        "kontrol": "2026-11-26",
+        "not": "Resmi durum kaynağı bulunamadı."
+      },
+      "kis_uygun": {
+        "deger": "bilinmiyor",
+        "gerekce": "Kışa özgü kaynak bulunamadı. Wikiloc açıklaması yalnız sıcak ayları önermiyor; kış hakkında bir şey söylemiyor. Maks. rakım 332 m (Çandır varyantı).",
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-ekincik-129363019"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz Gölü taştı; Sultaniye Kaplıcaları çevresinde bazı yollar trafiğe kapatıldı. Rota Sultaniye kavşağından geçiyor. Hangi yolların kapandığı yazmıyor; yeniden açılış haberi bulunamadı.",
+          "kaynak": "https://www.ntv.com.tr/turkiye/koycegiz-golu-tasti-2-bin-yillik-kaplicalar-sular-altinda,1711356",
+          "tarih": "2026-02-10",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-ekincik-129363019",
+        "https://www.ntv.com.tr/turkiye/koycegiz-golu-tasti-2-bin-yillik-kaplicalar-sular-altinda,1711356",
+        "https://www.pedalla.com/ekincik-bisiklet-gezisi/"
+      ]
+    },
+    {
+      "id": "koycegiz-eski-koycegiz",
+      "ad": "Köyceğiz – Eski Köyceğiz göl rotası",
+      "baslangic": "bilinmiyor",
+      "bitis": "bilinmiyor",
+      "tip": "halka",
+      "guzergah": [
+        "Nitro Bisiklet (ara nokta, 45 m)",
+        "Köyceğiz Gölü (göl, 6 m)",
+        "Tulumba (çeşme, 7 m)",
+        "Köyceğiz (ara nokta, 8 m)"
+      ],
+      "konum_kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904",
+      "mesafe_km": {
+        "deger": 28.17,
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "Mesafe 28,17 km",
+        "not": "Tek kullanıcı kaydı; kayıt Kasım 2023, yükleme 19 Kasım 2023.",
+        "alternatif": [
+          {
+            "deger": 8.954,
+            "kaynak": "https://www.ogm.gov.tr/tr/yararli-bilgiler/mutlaka-gormelisiniz/Mugla-Kavakarasi-Ekoturizm-Alani",
+            "kaynak_tur": "diger"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 120,
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "İrtifa kazancı 120 m",
+        "alternatif": []
+      },
+      "inis_m": {
+        "deger": 120,
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "İrtifa kaybı 120 m",
+        "alternatif": []
+      },
+      "max_rakim_m": {
+        "deger": 54,
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "Maksimum irtifa 54 m",
+        "alternatif": []
+      },
+      "zemin": null,
+      "zorluk": {
+        "deger": "Orta zorlukta",
+        "kaynak": "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904"
+      },
+      "durum": {
+        "deger": "bilinmiyor",
+        "kaynak": null,
+        "kontrol": "2026-11-26",
+        "not": "Resmi durum kaynağı bulunamadı."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Wikiloc izi en çok 54 m rakımda; bu kesim için kar haberi bulunamadı. Ancak Şubat 2026'da Yuvarlakçay taşkını Köyceğiz Mahallesi'ni, göl taşkını kıyı yolunu su altında bıraktı (gzt, NTV). K1 Wikiloc sayfasındaki 11 Mar 2022 yorumu sığla ormanı içi yolun yağışta çamurdan sürülemediğini yazıyor (dolaylı; bu izin oradan geçtiği doğrulanmadı). İz Kasım 2023 kaydı, kış kaydı değil.",
+        "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820"
+      },
+      "uyarilar": [
+        {
+          "metin": "Köyceğiz-Ortaca yolu çöplük mevkiinde heyelan; yol trafiğe kapandı, ekipler açma çalışması başlattı. Yeniden açılış haberi bulunamadı. İzin bu yolu kullanıp kullanmadığı doğrulanamadı.",
+          "kaynak": "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+          "tarih": "2025-12-06",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Köyceğiz Gölü taştı; göl kenarındaki yürüyüş yolu su altında, bazı yollar trafiğe kapatıldı, bazı noktalarda araç geçişine izin verilmedi. Hangi yollar olduğu yazmıyor; GPS izinin bu kesimlerden geçip geçmediği doğrulanamadı. Yeniden açılış kaynağı bulunamadı.",
+          "kaynak": "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+          "tarih": "2026-02-10",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Şiddetli yağışta Yuvarlakçay taştı; Köyceğiz Mahallesi'nde seralar ve ekili araziler su altında kaldı. Haberde bu mahalledeki yolun kapandığı yazmıyor; ilçede kapanan yolların yeniden açıldığı yazıyor. Köyceğiz Mahallesi = Eski Köyceğiz eşlemesi OGM adlandırmasına dayanıyor.",
+          "kaynak": "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+          "tarih": "2026-02-12",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Köyceğiz-Ortaca kara yolu Kocabel mevkisinde heyelan; bir şerit kapandı, ekipler temizliğe başladı. Yeniden açılış kaynağı bulunamadı. Wikiloc izinin bu kara yolunu kullanıp kullanmadığı sayfada yazmıyor.",
+          "kaynak": "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+          "tarih": "2026-10-28",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://anlatilaninotesi.com.tr/20261028/dalamanda-dere-tasti-evler-ve-tarim-arazileri-sular-altinda-kaldi-koycegiz-ortaca-yolu-kapandi-1109936947.html",
+        "https://tr.wikiloc.com/dag-bisikleti-rotalari/koycegiz-eski-koycegiz-gol-rotasi-153664904",
+        "https://www.gzt.com/gundem/mugla-koycegizde-dereler-tasti-evleri-su-basti-yollar-kapandi-4016820",
+        "https://www.koycegiz-haber.com/video/koycegiz/koycegizortaca-yolunda-heyelan-copluk-mevkii-trafige-kapandi/5594",
+        "https://www.ntv.com.tr/yerel-haberler/galeri-koycegiz-golu-tasti-yollar-sular-altinda-kaldi-1711356",
+        "https://www.ogm.gov.tr/tr/yararli-bilgiler/mutlaka-gormelisiniz/Mugla-Kavakarasi-Ekoturizm-Alani"
+      ]
+    },
+    {
+      "id": "koycegiz-gokceova-goleti",
+      "ad": "Köyceğiz – Yayla köyü – Gökçeova Göleti turu",
+      "baslangic": "bilinmiyor",
+      "bitis": "bilinmiyor",
+      "tip": "gidis-donus",
+      "guzergah": [
+        "Yayla (kahvaltı molası)",
+        "Gökçeova göleti (öğle molası)"
+      ],
+      "konum_kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450",
+      "mesafe_km": {
+        "deger": 53.09,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "Mesafe 53,09 km",
+        "not": "Tek kullanıcı kaydı; kayıt Eylül 2017, yüklenme 30 Eylül 2017",
+        "alternatif": []
+      },
+      "tirmanis_m": {
+        "deger": 1964,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "İrtifa kazancı 1.964 m",
+        "not": "Tek kullanıcı kaydı",
+        "alternatif": []
+      },
+      "inis_m": {
+        "deger": 1960,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "İrtifa kaybı 1.960 m",
+        "not": "Çıkış≈iniş: başlangıç ve bitiş aynı yükseklikte",
+        "alternatif": []
+      },
+      "max_rakim_m": {
+        "deger": 1839,
+        "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450",
+        "kaynak_tur": "gps-kaydi",
+        "erisim": "2026-11-26",
+        "alinti": "Maksimum irtifa 1.839 m",
+        "not": "Tek kullanıcı kaydı",
+        "alternatif": []
+      },
+      "zemin": null,
+      "zorluk": {
+        "deger": "Çok zor",
+        "kaynak": "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450"
+      },
+      "durum": {
+        "deger": "bilinmiyor",
+        "kaynak": null,
+        "kontrol": "2026-11-26",
+        "not": "Resmi durum kaynağı bulunamadı."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "Kışın sürülebildiğini söyleyen kaynak yok; kayıt Eylül 2017'ye ait. Tur 1.839 m'ye çıkıyor. Aralık 2025 ve Ocak 2026'da Gökçeova'da kar vardı ama araçla çıkıldı; Şubat 2026 başında gölet yolu kardan kapandı, kar bir metreye yaklaştı, sonra gölete kadar açıldı. Kar durumuna bağlı.",
+        "kaynak": "https://www.muglagazetesi.com.tr/koycegiz-haberleri/gokceova-goletinde-kartpostallik-kis-goruntuleri-207228h"
+      },
+      "uyarilar": [
+        {
+          "metin": "Sandras Dağı'na mevsimin ilk karı; Gökçeova Göleti'nde araç yoğunluğu. Kapanma bildirilmiyor.",
+          "kaynak": "https://www.haber48.com.tr/koycegiz-sandras-dagina-yilin-ilk-kari-yagdi",
+          "tarih": "2025-12-08",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Sandras'a kar; ertesi gün Ağla Yaylası Gökçeova mevkiine araçla çıkıldı. Kapanma bildirilmiyor; gölet çevresi karlı.",
+          "kaynak": "https://www.haber48.com.tr/sandrasa-kar-yagdi-koycegiz-gunese-uyandi",
+          "tarih": "2026-01-28",
+          "etki": "etkilemez",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Yoğun kar: Köyceğiz–Beyağaç karayolu kapandı; gölet mevkiinde kar bir metreye yaklaştı. Aynı haber: yol gölete kadar yeniden açıldı. Turun bu karayolunu ne ölçüde kullandığı (Yayla köyü üzerinden çıkış) kaynakla kanıtlı değil; hedef nokta gölet.",
+          "kaynak": "https://www.muglagazetesi.com.tr/koycegiz-haberleri/gokceova-goletinde-kartpostallik-kis-goruntuleri-207228h",
+          "tarih": "2026-02-05",
+          "etki": "kismen",
+          "gecerli": "hayir"
+        },
+        {
+          "metin": "Yoğun kar ve buzlanma: Ağla Yaylası–Beyağaç orman yolu kapandı, araçlar mahsur kaldı. Turun bu kesimi kullandığı kanıtlı değil. Beyağaç Belediyesi 05 Mayıs 2026: Beyağaç–Köyceğiz Turizm Yolu'nun kapalı bölümü açıldı (https://www.beyagac.bel.tr/duyuru/beyagac-koycegiz-turizm-yolumuzun-kapali-bolumu-ulasima-acilmistir).",
+          "kaynak": "https://www.muglagazetesi.com.tr/koycegiz-haberleri/koycegiz-agla-yaylasi-beyaza-burundu-yol-ulasima-kapandi-208556h",
+          "tarih": "2026-02-25",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        }
+      ],
+      "kaynaklar": [
+        "https://tr.wikiloc.com/bisiklet-rotalari/koycegiz-yayla-koyu-gokceova-goleti-turu-19986450",
+        "https://www.haber48.com.tr/koycegiz-sandras-dagina-yilin-ilk-kari-yagdi",
+        "https://www.haber48.com.tr/sandrasa-kar-yagdi-koycegiz-gunese-uyandi",
+        "https://www.muglagazetesi.com.tr/koycegiz-haberleri/gokceova-goletinde-kartpostallik-kis-goruntuleri-207228h",
+        "https://www.muglagazetesi.com.tr/koycegiz-haberleri/koycegiz-agla-yaylasi-beyaza-burundu-yol-ulasima-kapandi-208556h"
+      ]
+    },
+    {
+      "id": "o1-ortaca-3-kumsal",
+      "ad": "O1 Ortaca 3 Kumsal Rotası",
+      "baslangic": "Dalyan",
+      "bitis": "Dalyan",
+      "tip": "bilinmiyor",
+      "guzergah": [
+        "Dalyan",
+        "Gokbel",
+        "Dalyan"
+      ],
+      "konum_kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478304",
+      "mesafe_km": {
+        "deger": 39,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "O1 – ORTACA 3 KUMSAL rotası Ortaca 3-beaches (39 km)",
+        "not": "Başlıktaki nominal uzunluk.",
+        "alternatif": [
+          {
+            "deger": 37,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 39,
+            "kaynak": "https://goturkiye.com/tr/cycling/ortaca-uc-kumsal",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 31.033,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478304",
+            "kaynak_tur": "osm"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 859,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Çıkış 859 m",
+        "not": "Değer DOM'da var, görünür metinde CSS ile gizli. GoTürkiye 491 m diyor; çelişki çözülmedi.",
+        "alternatif": [
+          {
+            "deger": 491,
+            "kaynak": "https://goturkiye.com/tr/cycling/ortaca-uc-kumsal",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 859,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İniş 859 m",
+        "not": "DOM'da var, görünür metinde gizli.",
+        "alternatif": [
+          {
+            "deger": 488,
+            "kaynak": "https://goturkiye.com/tr/cycling/ortaca-uc-kumsal",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 334,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Tepe noktası 334 m",
+        "not": "Tek kaynak. GoTürkiye rakım vermiyor; Waymarked Trails elevation uç noktası 404.",
+        "alternatif": []
+      },
+      "zemin": {
+        "deger": "OSM üyelerinde karışık: asphalt (Plaj Yolu Cadde, Yunus Emre Cadde, Mergenli Gökbel Cadde), bir kesim fine_gravel, ayrıca highway=track kesimleri. Oran hesaplanmadı.",
+        "kaynak": "https://www.openstreetmap.org/api/0.6/relation/15478304/full.json"
+      },
+      "zorluk": {
+        "deger": "Zor",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "bilinmiyor",
+        "gerekce": "Aralık–Şubat sürülebilirliğini açıkça söyleyen kaynak yok; ECO Trails ve GoTürkiye mevsim önerisi vermiyor. Dolaylı veriler: tepe noktası 334 m (ECO Trails), 12 ayda kar kapanması haberi bulunmadı; buna karşılık Şubat 2026'da Gökbel'de yağış sonrası heyelanla yol kapandı ve yeniden açıldığı doğrulanamadı. Bunlardan kesin hüküm çıkarılmadı.",
+        "kaynak": "https://ortacafm.com.tr/gokbel-mahallesinde-heyelan-nedeniyle-yol-gecici-olarak-ulasima-kapatildi/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Ortaca Gökbel Mahallesi Kışla Mevkii – Boğaz Mevkii arası yol heyelan nedeniyle ikinci duyuruya kadar kapatıldı; alternatif Kızılcapınar Sokak. İkinci haber (koycegiz-haber 6282, hamlegazetesi/İHA) olayı 17 Şubat 2026 olarak veriyor ve Gökbel yolunu \"Dalyan-İztuzu aksı üzerinde\" diye tanımlıyor. O1 OSM izinde via=Gokbel ve Mergenli Gökbel Cadde var, ancak Kışla/Boğaz mevkilerinin konumu bulunamadı (Nominatim boş); kapanan kesimin O1 izi üstünde olduğu doğrulanamadı. Yeniden açılış haberi 4 sorguda bulunamadı.",
+          "kaynak": "https://ortacafm.com.tr/gokbel-mahallesinde-heyelan-nedeniyle-yol-gecici-olarak-ulasima-kapatildi/",
+          "tarih": "2026-02-14",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Muğla Valiliği Genel Emir 2026/1: ormanlara giriş yasağı 01.06.2026–31.10.2026; listede Ortaca \"İztuzu- Gökbel Ormanları\" (Gökbel, Mergenli, Karadonlar çevresi) var. Süre 31.10.2026'da doldu. Rota izinin hangi kesiminin yasak alan içinde kaldığı ve umuma açık yolların kapsanıp kapsanmadığı doğrulanmadı.",
+          "kaynak": "https://www.mugla.gov.tr/genel-emir-20261-orman-yanginlarinin-onlenmesi-hakkinda-karar",
+          "tarih": "2026-06-01",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        }
+      ],
+      "kaynaklar": [
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478304",
+        "https://goturkiye.com/tr/cycling/ortaca-uc-kumsal",
+        "https://ortacafm.com.tr/gokbel-mahallesinde-heyelan-nedeniyle-yol-gecici-olarak-ulasima-kapatildi/",
+        "https://theecotrails.com.tr/maps-routes/o1-ortaca-3-kumsal-rotasi-ortaca-3-beaches-39-km/",
+        "https://www.mugla.gov.tr/genel-emir-20261-orman-yanginlarinin-onlenmesi-hakkinda-karar",
+        "https://www.openstreetmap.org/api/0.6/relation/15478304/full.json"
+      ]
+    },
+    {
+      "id": "o2-kosten-dagi",
+      "ad": "O2 Kösten Dağı Rotası",
+      "baslangic": "Sülüngür Gölü'nün kuzey kıyılarının yakını",
+      "bitis": "bilinmiyor",
+      "tip": "bilinmiyor",
+      "guzergah": [
+        "Sülüngür Gölü kuzey kıyıları yakını",
+        "Kösten Dağı yamaçları"
+      ],
+      "konum_kaynak": "https://goturkiye.com/tr/cycling/kosten-dagi",
+      "mesafe_km": {
+        "deger": 24.5,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "O2 – KÖSTEN DAĞI rotası Mt. Kösten (24,5 km)",
+        "not": "Başlıktaki nominal uzunluk.",
+        "alternatif": [
+          {
+            "deger": 24,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 24,
+            "kaynak": "https://goturkiye.com/tr/cycling/kosten-dagi",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 24.529,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478408",
+            "kaynak_tur": "osm"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 932,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Çıkış 932 m",
+        "not": "DOM'da var, görünür metinde gizli. GoTürkiye 493 m diyor; çelişki çözülmedi.",
+        "alternatif": [
+          {
+            "deger": 493,
+            "kaynak": "https://goturkiye.com/tr/cycling/kosten-dagi",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 931,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İniş 931 m",
+        "not": "DOM'da var, görünür metinde gizli.",
+        "alternatif": [
+          {
+            "deger": 493,
+            "kaynak": "https://goturkiye.com/tr/cycling/kosten-dagi",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 489,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Tepe noktası 489 m",
+        "not": "Tek kaynak.",
+        "alternatif": []
+      },
+      "zemin": {
+        "deger": "Toprak yollar (Kösten Dağı yamaçları)",
+        "kaynak": "https://goturkiye.com/tr/cycling/kosten-dagi"
+      },
+      "zorluk": {
+        "deger": "Orta",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "bilinmiyor",
+        "gerekce": "Aralık–Şubat sürülebilirliğini açıkça söyleyen kaynak yok. Dolaylı veriler: tepe noktası 489 m (ECO Trails), kar kapanması haberi bulunmadı; zemin toprak yol (GoTürkiye) ve OSM'de dirt/unpaved kesimler var, yağışta durumu bilinmiyor; Şubat 2026 Gökbel heyelanı aynı mahallede. Kesin hüküm çıkarılmadı.",
+        "kaynak": "https://goturkiye.com/tr/cycling/kosten-dagi"
+      },
+      "uyarilar": [
+        {
+          "metin": "Ortaca Gökbel Mahallesi Kışla Mevkii – Boğaz Mevkii arası yol heyelan nedeniyle ikinci duyuruya kadar kapatıldı (diğer haberlerde tarih 17 Şubat 2026). O2 OSM izinin bir üyesi Mergenli Gökbel Cadde; kapanan kesimin O2 izi üstünde olup olmadığı doğrulanamadı (mevki konumları bulunamadı). Yeniden açılış haberi bulunamadı.",
+          "kaynak": "https://ortacafm.com.tr/gokbel-mahallesinde-heyelan-nedeniyle-yol-gecici-olarak-ulasima-kapatildi/",
+          "tarih": "2026-02-14",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Muğla Valiliği Genel Emir 2026/1: ormanlara giriş yasağı 01.06.2026–31.10.2026; listede Ortaca \"İztuzu- Gökbel Ormanları\" var. O2 çoğunlukla orman/toprak yol (OSM track) üzerinde, ancak izin yasak alan sınırları içinde kaldığı ayrıca doğrulanmadı. Süre 31.10.2026'da doldu.",
+          "kaynak": "https://www.mugla.gov.tr/genel-emir-20261-orman-yanginlarinin-onlenmesi-hakkinda-karar",
+          "tarih": "2026-06-01",
+          "etki": "bilinmiyor",
+          "gecerli": "hayir"
+        }
+      ],
+      "kaynaklar": [
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478408",
+        "https://goturkiye.com/tr/cycling/kosten-dagi",
+        "https://ortacafm.com.tr/gokbel-mahallesinde-heyelan-nedeniyle-yol-gecici-olarak-ulasima-kapatildi/",
+        "https://theecotrails.com.tr/maps-routes/o2-kosten-dagi-rotasi-mt-kosten-245-km-2/",
+        "https://www.mugla.gov.tr/genel-emir-20261-orman-yanginlarinin-onlenmesi-hakkinda-karar"
+      ]
+    },
+    {
+      "id": "o3-kaya-mezarlari",
+      "ad": "The ECO Trails O3 Kaya Mezarları",
+      "baslangic": "Dalyan",
+      "bitis": "Dalyan",
+      "tip": "halka",
+      "guzergah": [
+        "bilinmiyor"
+      ],
+      "konum_kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478409",
+      "mesafe_km": {
+        "deger": 39,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o3-kaya-mezarlari-rotasi-rock-tombs-39-km/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "O3 - KAYA MEZARLARI rotası Rock Tombs (39 km)",
+        "alternatif": [
+          {
+            "deger": 37,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/o3-kaya-mezarlari-rotasi-rock-tombs-39-km/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 39,
+            "kaynak": "https://goturkiye.com/tr/cycling/kaya-mezarlari",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 39.224,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478409",
+            "kaynak_tur": "osm"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 675,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=ortaca-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "ÇIKIŞ | 675 m",
+        "not": "Rota sayfası HTML'inde de aynı (li.cmmrm). GoTürkiye 228 m diyor; büyük çelişki.",
+        "alternatif": [
+          {
+            "deger": 228,
+            "kaynak": "https://goturkiye.com/tr/cycling/kaya-mezarlari",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 675,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=ortaca-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İNİŞ | 675 m",
+        "alternatif": [
+          {
+            "deger": 224,
+            "kaynak": "https://goturkiye.com/tr/cycling/kaya-mezarlari",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 141,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/?cmmrm_category=ortaca-bisiklet-rotalari",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "TEPE NOKTASI | 141 m",
+        "alternatif": []
+      },
+      "zemin": null,
+      "zorluk": {
+        "deger": "Kolay",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o3-kaya-mezarlari-rotasi-rock-tombs-39-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o3-kaya-mezarlari-rotasi-rock-tombs-39-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "ECO Trails genel notu bölgede yıl boyu faaliyet mümkün diyor, kışın yalnız bazı kuzey rotalarından kaçınılmasını öneriyor; O3 düşük rakımlı (tepe 141 m). Ancak rotaya özel kış kaynağı yok ve Şubat 2026 Gökbel heyelanının (O3 güzergâhına yakın olabilir) açıldığı doğrulanamadı.",
+        "kaynak": "https://theecotrails.com.tr/once-oku/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Gökbel'de heyelan: Kışla ve Boğaz mevkileri arasındaki yol ikinci bir duyuruya kadar ulaşıma kapatıldı, alternatif Kızılcapınar Sokak. O3 OSM'de Mergenli Gökbel Caddesi'nden ~4,9 km geçiyor; heyelan noktasıyla örtüşme doğrulanmadı. Diğer kaynaklar (koycegiz-haber /6282, yeniasir İHA) olayı 17.02.2026'ya tarihliyor. Yeniden açılış haberi bulunamadı.",
+          "kaynak": "https://www.koycegiz-haber.com/6240",
+          "tarih": "2026-02-14",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/15478409",
+        "https://goturkiye.com/tr/cycling/kaya-mezarlari",
+        "https://theecotrails.com.tr/maps-routes/?cmmrm_category=ortaca-bisiklet-rotalari",
+        "https://theecotrails.com.tr/maps-routes/o3-kaya-mezarlari-rotasi-rock-tombs-39-km/",
+        "https://theecotrails.com.tr/once-oku/",
+        "https://www.koycegiz-haber.com/6240"
+      ]
+    },
+    {
+      "id": "o4-dalaman-cayi",
+      "ad": "The ECO Trails O4 Dalaman Çayı",
+      "baslangic": "Ortaca ilçe merkezi",
+      "bitis": "Ortaca",
+      "tip": "halka",
+      "guzergah": [
+        "Ortaca ilçe merkezi",
+        "Dalaman Çayı eski ve yeni yatağı",
+        "Sarıgerme Plajı"
+      ],
+      "konum_kaynak": "https://goturkiye.com/tr/cycling/dalaman-cayi",
+      "mesafe_km": {
+        "deger": 55,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+        "kaynak_tur": "resmi-rota-baslik",
+        "erisim": "2026-11-26",
+        "alinti": "O4 - DALAMAN ÇAYI rotası Dalaman River (55 km)",
+        "alternatif": [
+          {
+            "deger": 53,
+            "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+            "kaynak_tur": "resmi-rota-istatistik"
+          },
+          {
+            "deger": 56,
+            "kaynak": "https://goturkiye.com/tr/cycling/dalaman-cayi",
+            "kaynak_tur": "resmi-turizm"
+          },
+          {
+            "deger": 55.831,
+            "kaynak": "https://cycling.waymarkedtrails.org/api/v1/details/relation/14857898",
+            "kaynak_tur": "osm"
+          }
+        ]
+      },
+      "tirmanis_m": {
+        "deger": 454,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Çıkış 454 m",
+        "not": "Kategori listesinde de 454 m. GoTürkiye 183 m diyor.",
+        "alternatif": [
+          {
+            "deger": 183,
+            "kaynak": "https://goturkiye.com/tr/cycling/dalaman-cayi",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "inis_m": {
+        "deger": 454,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "İniş 454 m",
+        "alternatif": [
+          {
+            "deger": 184,
+            "kaynak": "https://goturkiye.com/tr/cycling/dalaman-cayi",
+            "kaynak_tur": "resmi-turizm"
+          }
+        ]
+      },
+      "max_rakim_m": {
+        "deger": 66,
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+        "kaynak_tur": "resmi-rota-istatistik",
+        "erisim": "2026-11-26",
+        "alinti": "Tepe noktası 66 m",
+        "alternatif": []
+      },
+      "zemin": null,
+      "zorluk": {
+        "deger": "Kolay",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/"
+      },
+      "durum": {
+        "deger": "acik",
+        "kaynak": "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+        "kontrol": "2026-11-26",
+        "not": "Resmi rota sayfası 'Açık' diyor; sayfa en son 2018 yılında güncellenmiş. Güncel teyit değil: çıkmadan önce yol durumunu kontrol et."
+      },
+      "kis_uygun": {
+        "deger": "kosullu",
+        "gerekce": "ECO Trails genel notu kıyı ve orta kesimlerde yıl boyu faaliyeti mümkün görüyor ve O4 düşük rakımlı (tepe 66 m); ancak rota Dalaman Çayı yatağını izliyor ve Şubat 2026'da çay taştı, DSİ yataktan uzak durma uyarısı yaptı (sabah 13.02.2026).",
+        "kaynak": "https://theecotrails.com.tr/once-oku/"
+      },
+      "uyarilar": [
+        {
+          "metin": "Akköprü Barajı doldu, DSİ Dalaman Çayı'na kontrollü tahliye yaptı; halk çay yatağından uzak durması için uyarıldı, su seviyesinin birkaç gün sınır değerlerde kalacağı bildirildi. Aynı gün Dalaman Çayı'nın taştığı haberi var (habercitv). O4 çay yatağını izliyor (GoTürkiye) ama yol kapanması anılmıyor; açılış/normale dönüş kaynağı bulunamadı.",
+          "kaynak": "https://www.sabah.com.tr/",
+          "tarih": "2026-02-13",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        },
+        {
+          "metin": "Tersakan Deresi taştı; Dalaman Atatürk Caddesi ile eski Göcek kara yolu ulaşıma kapatıldı. O4'ün OSM'deki 'Eski Fethiye Yolu Sokak' kesimi Ortaca tarafında (boylam ~28.78-28.79) göründüğünden büyük olasılıkla rota dışında; örtüşme doğrulanmadı.",
+          "kaynak": "https://anlatilaninotesi.com.tr/",
+          "tarih": "2026-10-28",
+          "etki": "bilinmiyor",
+          "gecerli": "bilinmiyor"
+        }
+      ],
+      "kaynaklar": [
+        "https://anlatilaninotesi.com.tr/",
+        "https://cycling.waymarkedtrails.org/api/v1/details/relation/14857898",
+        "https://goturkiye.com/tr/cycling/dalaman-cayi",
+        "https://theecotrails.com.tr/maps-routes/o4-dalaman-cayi-rotasi-dalaman-river-55-km/",
+        "https://theecotrails.com.tr/once-oku/",
+        "https://www.sabah.com.tr/"
+      ]
+    }
+  ]
+}
