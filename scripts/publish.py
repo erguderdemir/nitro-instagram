@@ -691,13 +691,15 @@ def konum_oku() -> None:
         return
     page_id = str(page_id)
     yer = ", ".join(str(loc[k]) for k in ("street", "city", "country") if loc.get(k))
-    yeni = {"location_id": page_id, "sayfa": page.get("name") or name, "yer": yer}
+    koor = [loc[k] for k in ("latitude", "longitude") if isinstance(loc.get(k), (int, float))]
+    yeni = {"location_id": page_id, "sayfa": page.get("name") or name, "yer": yer,
+            "koordinat": koor if len(koor) == 2 else None}   # iğne adresle birlikte taşınmazsa buradan görülür
     eski = _konum_dosyasi()
     if {k: eski.get(k) for k in yeni} != yeni:   # aynı konum yeniden yazılmaz (her probe'da boşuna commit olmasın)
         common.write_json(common.DATA / "konum.json", {"kontrol": common.now().isoformat(timespec="seconds"), **yeni})
     ok = config_yaz("location_id", page_id)
     common.CFG["location_id"] = page_id
-    print(f"Konum: '{page.get('name') or name}' ({yer or 'koordinat'}) -> location_id={page_id}"
+    print(f"Konum: '{page.get('name') or name}' ({yer or 'adres yok'}; koordinat {yeni['koordinat']}) -> location_id={page_id}"
           + ("" if ok else " (config.json güncellenemedi; data/konum.json kullanılacak)")
           + ". İlk konumlu postun permalink'ini elle kontrol et.")
 

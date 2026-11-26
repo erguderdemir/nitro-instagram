@@ -2,7 +2,6 @@
   "live": true,
   "timezone_offset_hours": 3,
   "graph_api_version": "v23.0",
-  "location_id": false,
   "instagram_username": "nitrobisiklet",
   "repo": "erguderdemir/nitro-instagram",
   "public_base_url": "https://erguderdemir.github.io/nitro-instagram",
