@@ -366,7 +366,8 @@ class Gorev(unittest.TestCase):
                 mock.patch.object(gorev, "run", side_effect=lambda *a, **k: cagri.append((a, k))), \
                 contextlib.redirect_stdout(io.StringIO()):
             gorev.yayinla()
-        self.assertEqual(cagri, [(("report.py", "--esle"), {"must": False}), (("report.py", "--story"), {"must": False})])
+        self.assertEqual(cagri, [(("report.py", "--esle"), {"must": False}), (("report.py", "--story"), {"must": False}),
+                                 (("yorum.py", "--gonder"), {"must": False})])
 
 
 if __name__ == "__main__":

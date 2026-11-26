@@ -321,7 +321,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 | O1 | Tamam (kod) | `report.py --esle` her publish çalışmasının sonunda; canlı eşleme ilk Suite postunda doğrulanacak |
 | O2 | Tamam | Bio: son 14 günün yayınlanmış postları, stok ve fiyat kontrolü, iletişim butonları `site.json`'dan |
 | O3 | Tamam | SEO 1. satır, iki seçenekli soru, arama terimli CTA, 30 gün tekrar yasağı; kilitli kayıtlar değişmedi |
-| O4 | Tamam, açık | Konum probe görevinde okunur (`data/konum.json`, koordinat dahil). 26 Kasım: Sayfa adresi düzeltildi; probe yeni adresi ve iğneyi okudu (36.95926, 28.68921: OSM'ye göre Gülpınar, Fevzi Paşa Cd. noktasına yaklaşık 55 m). Kapatmak gerekirse `config.json`'a `"location_id": false` eklenir. Kalan: ilk konumlu postun permalink'i elle kontrol edilecek |
+| O4 | Tamam | Konum probe görevinde okunur (`data/konum.json`, koordinat dahil). 26 Kasım: Sayfa adresi düzeltildi; probe yeni adresi ve iğneyi okudu (36.95926, 28.68921: OSM'ye göre Gülpınar, Fevzi Paşa Cd. noktasına yaklaşık 55 m). Kapatmak gerekirse `config.json`'a `"location_id": false` eklenir. 26 Kasım: ilk API postunun (DgNicSKDhsP) permalink'inde konum etiketi görüldü |
 | O5 | Tamam | 20:30 story'leri kategori/servis hedefine; promo kampanyası = post teması; 26 Aralık: 1.000 ₺ altı hediye seçkisi |
 | O6 | Tamam | `data/suite_duzelt.json`: 4 kilitli post için öneri; Barış'a yalnız kullanıcı izniyle |
 | O7 | Tamam (kod) | `report.py --story`, hesap insights, `manuel.json`, RAPOR.md Haftalık KPI tablosu yazıldı (a840907); canlı API davranışı ilk çalışmada görülecek |
@@ -332,7 +332,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 | O12 | Tamam | `scripts/paylas.py` → `data/paylas/` (GBP, QR, hızlı yanıtlar, öne çıkanlar, grup metinleri) |
 | O13 | Veri tamam, içerik sırada | 26 Kasım: `data/rotalar.json` 15 rota (K1–K5, O1–O4, göl halkası, Dalyan, Ekincik, Eski Köyceğiz, Gökçeova, kent içi yol). Her sayı kaynağı yeniden açılarak doğrulandı; ortalama yok, öncelik resmi rota sayfası, diğer değerler `alternatif`te. Etap, ters yön ve başka varyant değerleri ana değere karışmadı. Resmi "Açık" etiketleri 2018–2021 tarihli, 30 günde bir yeniden kontrol gerekir. `scripts/rotalar.py` doğrular (0 bulgu). Kalan: `content.py`/`render.py` rota postu ve şema çizimi |
 | O14 | Tamam (kod) | `collaborators` alanı + `collab_onay` bayrağı (varsayılan kapalı); Barış onayıyla açılır |
-| O15 | 1. aşama tamam | `scripts/yorum.py` salt okuma özeti (`data/yorumlar.json`, depoya girmez); 2. aşama (yanıt) onay bekliyor |
+| O15 | Tamam (kod) | 1. aşama: `scripts/yorum.py` salt okuma özeti (`data/yorumlar.json`, depoya girmez). 2. aşama: yalnız son 14 günün, tek ürünlü posta (API ya da Suite) gelen, stoktaki ürüne ait net fiyat sorularına (olumsuz ifade, kargo/süre/servis bağlamı yoksa) yanıt taslağı kurulur ve `data/yorum_taslak.json`'a yazılır. Depo herkese açık olduğu için dosyada yorum metni, kullanıcı adı, tür ve saat yoktur; şikâyet, soru ve eşlenmeyen yorumlar dosyaya girmez, logda yalnız sayıları görünür. Onay: yorumu taslaktaki `yorum_link`ten okuyup `data/yorum_onay.json`'a `"<yorum_id>": "<ozet>"` eklenir (bu dosyayı bot yazmaz; metin değişirse onay geçersizleşir). Yayın görevinden sonra `yorum.py --gonder` API'de yanıtımız yoksa gönderir; her yoruma en fazla 1 deneme (`data/yorum_gonderilen.json`) |
 | O16 | Tamam | RAPOR.md'de "Aylık tema raporu" (yalnız öneri); veri biriktikçe dolar |
 
 | Sıra | İş | Dosya | Kabul kriteri | Efor |

@@ -125,6 +125,8 @@ def yayinla() -> None:
         run("report.py", "--esle", must=False)
         # O7: yayındaki story'lerin insights son değeri, Suite story eşlemesi ve link testi -> data/metrics.json.
         run("report.py", "--story", must=False)
+        # O15 2. aşama: yalnız data/yorum_onay.json'da özeti bugünkü taslakla eşleşen yorumlar; live=false iken gönderilmez.
+        run("yorum.py", "--gonder", must=False)
 
 
 def main() -> None:
