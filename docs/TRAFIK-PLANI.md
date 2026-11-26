@@ -149,7 +149,7 @@ GA4 sayıları alt sınırdır; yalnız eğilime bakılır.
 
 **Caption ve CTA**
 - Sıra (her biri ayrı paragraf): kanca, iki seçenekli soru, ad ve fiyat ile özellikler, "Neden NITRO?" başlıklı güven maddeleri (site gerçeği), nasıl alırım ile gönder/kaydet çağrısı, SEO satırı, etiketler. (26 Kasım: tek satıra sıkışan güven bilgisi ve kancaya yapışan ek okunmayı bozduğu için paragraflara ayrıldı.)
-- İlk satır birincil arama kelimesini taşır: kancada yoksa "Konu: kanca" biçiminde başa gelir, ≤125 karakter. Yer adı SEO satırında ve `#köyceğiz` etiketinde.
+- İlk satır birincil arama kelimesini taşır: kancada yoksa "Konu: kanca" biçiminde başa gelir, ≤125 karakter. Kanca konunun baş adını zaten taşıyorsa ("Lastik basıncı parmakla…") ya da kendi iki noktası varsa önek eklenmez; tekrar ve çift iki nokta olmaz. Yer adı SEO satırında ve `#köyceğiz` etiketinde.
 - CTA zamandan bağımsızdır: **"Profildeki linke dokun, N342 yaz."** "En üstte", "bugün" gibi ifadeler CTA satırında yasaktır.
 - Türe göre tek çağrı: seçkide "Hediye alacağın kişiye gönder", rehberde "Kaydet". "Yorum yaz EVET" tarzı etkileşim yemi kullanılmaz.
 - Aynı soru ve kanca 30 gün içinde tekrar edilmez. Her kurala en az 3 soru tanımlanır.

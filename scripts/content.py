@@ -215,7 +215,7 @@ RULES = [
     _r("ikinciel", "Kontrollü 2. el", ["2. El Bisiklet"],
        ["Kontrollü <em>2. el</em>", "Elden geçti, <em>yola hazır</em>"],
        ["Kontrollü 2. el: atölyemizin elinden geçti, yeni sahibini bekliyor.",
-        "Sıfır şart değil. Bu bisiklet kontrollü 2. el."],
+        "Sıfır şart değil; atölyede elden geçti, yola hazır."],
        "Senin ilk bisikletin sıfır mıydı, 2. el mi?", ["#ikincielbisiklet", "#bisikletsevenler"]),
     _r("ebike", "Elektrikli bisiklet", ["Elektrikli Bisiklet"],
        ["Pedalına <em>güç kat</em>", "Elektrik <em>desteğiyle</em> sür", "Daha uzağa, <em>daha rahat</em>", "Yokuşlar <em>dert olmasın</em>"],
@@ -945,6 +945,14 @@ def seo_ilk(hook: str, konu: str) -> str:
     h = hook.strip()
     if tr_lower(konu) in tr_lower(h):
         return h
+    # Kanca konunun baş adını zaten taşıyorsa ("Lastik basıncı parmakla…") ya da kendi iki noktası varsa
+    # önek tekrar ("Bisiklet lastik basıncı: lastik basıncı…") ya da çift iki nokta üretir: kanca tek başına kalır.
+    # Baş ad "bisiklet…" ise (Şehir bisikleti) ayırt edici kelime öndedir: kural uygulanmaz.
+    bas = tr_lower(konu).split()[-1]
+    kok = bas[:max(4, len(bas) - 2)]
+    if ":" in h or (not bas.startswith("bisiklet")
+                    and any(w.startswith(kok) for w in re.findall(r"\w+", tr_lower(h)))):
+        return h
     x = f"{konu}: {cumle_ici(h)}"
     return x if len(x) <= FIRST_LINE_MAX else h
 
@@ -1049,7 +1057,7 @@ def tip_caption(tip: dict, gun: str | None = None, onceki: list[dict] | None = N
            else "🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.")
     ek = {"servis": "#bisikletservisi", "cocuk": "#çocukbisikleti"}.get(tip.get("cta"), "#bisikletsevenler")
     cagri = "📌 " + kendi[-1] if kendi else pick(KAYDET, tip.get("id"), gun)
-    cap = _join([ilk, soru] + body + [cta, cagri, SEO_LINE,
+    cap = _join([ilk, soru] + body + [[cta, cagri], SEO_LINE,
                                         tags_for(["#bisikletbakımı", "#bisikletipuçları", ek], gun)])
     _kaydet(gun, cap)
     return cap, ilk
@@ -1113,7 +1121,7 @@ LISTS = {
     "hediye500": {"kicker": "Hediye rehberi", "need": 4, "want": 5, "cap": 500, "floor": 250,
                   "slots": [("eldiven", 1), ("telefon_tutucu", 1), ("kilit", 1), ("pompa", 1), ("km_saati", 1),
                             ("lamba", 1), ("sele", 1)],
-                  "hook": "Yılbaşı listesindeki bisikletçi için fikirler.",
+                  "hook": "Listendeki bisikletçi için fikirler.",
                   "q": "Hediye sürüşe mi yarasın, bisiklete mi?", "tags": ["#hediyefikri", "#yılbaşıhediyesi", "#bisikletaksesuarı"],
                   "qs": ["Hediye sürüşe mi yarasın, bisiklete mi?", "Hediyeyi kendin mi seçersin, listeden mi?",
                          "Yılbaşı hediyesi kullanışlı mı olsun, eğlenceli mi?"], "konu": "Bisikletçiye yılbaşı hediyesi",
