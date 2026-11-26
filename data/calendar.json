@@ -391,10 +391,13 @@
   "media_link": "media/2026-11-26-story-0930-link.jpg",
   "ref": "ipucu:b4483f4c",
   "rule": "ipucu",
-  "status": "planned",
+  "status": "published",
   "fp": "aae4d2452882",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-26T09:30:00+03:00"
  },
  {
   "schema": 2,
