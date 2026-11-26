@@ -1,6 +1,6 @@
 # Instagram performans raporu · @nitrobisiklet
 
-Üretim: 26 Kasım 2026 Perşembe 04:45 · Veri: 26 Kasım 2026 04:45
+Üretim: 26 Kasım 2026 Perşembe 12:29 · Veri: 26 Kasım 2026 12:29
 
 > **Notlar**
 >
@@ -13,14 +13,14 @@
 | Takipçi                | 2.672               |
 | 7 günlük değişim       | veri yok            |
 | 30 günlük değişim      | veri yok            |
-| Son 7 günde yayınlanan | 2 gönderi · 4 story |
+| Son 7 günde yayınlanan | 2 gönderi · 5 story |
 | Ort. beğeni / yorum    | veri yok            |
 
 ## Yayın sağlığı (son 7 gün)
 
 | Durum                  | Gönderi | Story | Toplam |
 | ---------------------- | ------: | ----: | -----: |
-| Yayınlandı (published) |       2 |     4 |      6 |
+| Yayınlandı (published) |       2 |     5 |      7 |
 | Kaçırıldı (missed)     |       0 |     0 |      0 |
 | Hata (error)           |       0 |     0 |      0 |
 | Atlandı (skipped)      |       0 |     1 |      1 |
@@ -49,14 +49,14 @@ Kategori karşılaştırması için veri yetersiz: hesaba giren en az 6 gönderi
 
 | Gün                       | Gönderi | Story |
 | ------------------------- | ------: | ----: |
-| 26 Kasım Perşembe (bugün) |       1 |     3 |
+| 26 Kasım Perşembe (bugün) |       1 |     2 |
 | 27 Kasım Cuma             |       1 |     3 |
 | 28 Kasım Cumartesi        |       1 |     3 |
 | 29 Kasım Pazar            |       1 |     3 |
 | 30 Kasım Pazartesi        |       1 |     3 |
 | 1 Aralık Salı             |       1 |     3 |
 | 2 Aralık Çarşamba         |       1 |     3 |
-| **Toplam**                |       7 |    21 |
+| **Toplam**                |       7 |    20 |
 
 ## Aylık tema raporu (geçen ay, yalnız öneri)
 
