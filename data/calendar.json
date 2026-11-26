@@ -448,10 +448,13 @@
   "media_link": "media/2026-11-26-story-1230-link.jpg",
   "ref": "",
   "rule": "gidon",
-  "status": "planned",
+  "status": "published",
   "fp": "46f57e4ddb9a",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-26T12:30:00+03:00"
  },
  {
   "schema": 2,
@@ -507,9 +510,16 @@
   "media_link": "",
   "ref": "",
   "rule": "dis_lastik",
-  "status": "planned",
+  "status": "published",
   "fp": "750a9e3abd5e",
-  "ver": "bef1cf1b45"
+  "ver": "bef1cf1b45",
+  "attempts": 1,
+  "container_id": "18199834360385813",
+  "via": "api",
+  "error": "",
+  "media_id": "18093961517703138",
+  "permalink": "https://www.instagram.com/p/DgNicSKDhsP/",
+  "published_at": "2026-11-26T19:30:45+03:00"
  },
  {
   "schema": 2,
@@ -561,10 +571,13 @@
   "media_link": "media/2026-11-26-story-1930-link.jpg",
   "ref": "2026-11-26-post-1930",
   "rule": "dis_lastik",
-  "status": "planned",
+  "status": "published",
   "fp": "c365e1fc72fd",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-26T19:30:00+03:00"
  },
  {
   "schema": 2,
