@@ -10,7 +10,7 @@ Graph API'den son 10 medyanın yorumlarını çeker, her yorumu basit anahtar ke
 Kullanıcı adı SAKLANMAZ: yalnız bellekte, kendi yorumlarımızı ayıklamak ve yanıt verilip verilmediğini görmek
 için kullanılır. Bu betik hiçbir yorum/mesaj GÖNDERMEZ; yanıtlar elle verilir.
 
-IG_ACCESS_TOKEN ya da IG_USER_ID yoksa atlanır; izin/ağ hatasında uyarı verip eldeki dosyayı korur. Çıkış hep 0.
+IG_ACCESS_TOKEN yoksa atlanır (IG_USER_ID boşsa hesap jetondan bulunur); izin/ağ hatasında uyarı verip eldeki dosyayı korur. Çıkış hep 0.
 
   python3 scripts/yorum.py
 """
@@ -130,7 +130,8 @@ def topla(api=None, ig: str | None = None, biz: str | None = None) -> list[dict]
 
 
 def main() -> int:
-    if not os.environ.get("IG_ACCESS_TOKEN") or not os.environ.get("IG_USER_ID"):
+    # IG_USER_ID secret'ı boş olabilir (graph.ig_user_id() jetona bağlı tek hesabı kendisi bulur); yalnız jeton şart.
+    if not os.environ.get("IG_ACCESS_TOKEN"):
         print("[yorum] jeton yok, atlandı")
         return 0
     try:
