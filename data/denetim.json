@@ -1,44 +1,18 @@
 {
- "updated": "2026-11-26T20:11:41+03:00",
+ "updated": "2026-11-27T03:50:55+03:00",
  "records": 179,
  "checked": 140,
  "files": true,
  "live": true,
  "findings": [],
  "suite_warnings": [],
- "kilitli_bilgi": [
-  {
-   "id": "2026-12-02-post-1930",
-   "code": "caption",
-   "msg": "kaldırılan etiket var: #bisiklet #nitrobisiklet"
-  },
-  {
-   "id": "2026-12-02-post-1930",
-   "code": "caption",
-   "msg": "ilk 3 satırda soru yok"
-  },
-  {
-   "id": "2026-12-09-post-1930",
-   "code": "caption",
-   "msg": "kaldırılan etiket var: #bisiklet #nitrobisiklet"
-  },
-  {
-   "id": "2026-12-16-post-1930",
-   "code": "caption",
-   "msg": "kaldırılan etiket var: #bisiklet #nitrobisiklet"
-  },
-  {
-   "id": "2026-12-16-post-1930",
-   "code": "caption",
-   "msg": "ilk 3 satırda soru yok"
-  }
- ],
+ "kilitli_bilgi": [],
  "yenilenecek": [],
  "sayim": {
   "kilitli": {
    "kayit": 81,
    "uyari": 0,
-   "bilgi": 5
+   "bilgi": 0
   },
   "kilitsiz": {
    "kayit": 59,

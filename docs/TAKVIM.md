@@ -555,7 +555,8 @@ Arka Park Ayağı 26" Siyah · 200 ₺ (KDV dahil)
 ### 2026-12-02 19:30 · ISLAK ZEMİNDE GÜVENLİ SÜRÜŞÜN 5 KURALI
 
 ```
-Yağmurda sürmek değil, kuru zemindeymiş gibi sürmek risklidir.
+Yağmurda sürmek değil, kuru zemindeymiş gibi sürmek risklidir. Islak zeminde bisiklet sürüşü: NITRO Bisiklet, Köyceğiz.
+Sen yağmurda sürer misin, yoksa hava açana kadar bekler misin?
 
 Islak asfaltta lastiğin tutunması azalır, durma mesafen uzar. Bu yüzden her hareketi biraz erkene al: erken frenle, viraja girmeden yavaşla, öndeki araçla arandaki mesafeyi artır.
 
@@ -563,15 +564,13 @@ En çok şaşırtan yerler yolun kendisi değil, üzerindekiler: boyalı çizgil
 
 Bir de görünürlük var. Yağmurda sürücülerin görüşü daralır; ışıkların gündüz de yansın.
 
-Bu kuralları kaydet, ilk yağmurlu günde aklında olsun.
-
-Sen yağmurda sürer misin, yoksa hava açana kadar bekler misin?
-
 🛒 İhtiyacın olan parça ve aksesuarlar profildeki linkte.
+
+📌 Bu kuralları kaydet, ilk yağmurlu günde aklında olsun.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #bisikletipuçları
+#köyceğiz #ortaca #bisikletbakımı #bisikletipuçları #bisikletsevenler
 ```
 
 ### 2026-12-03 19:30 · Yol tutuş lastikten gelir
@@ -716,7 +715,8 @@ Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli · 2.601 ₺ (KDV dahil)
 ### 2026-12-09 19:30 · ÇOCUĞUNA HANGİ JANT BOYU UYAR?
 
 ```
-"Büyüyünce olur" diye alınan bisiklet, çocuğu bisikletten soğutabilir.
+"Büyüyünce olur" diye alınan bisiklet, çocuğu bisikletten soğutabilir. Çocuk bisikleti jant boyu: NITRO Bisiklet, Köyceğiz.
+Çocuğa bisiklet alırken boya mı bakarsın, yaşa mı?
 
 Çocuk bisikletinde boy jant çapıyla anılır: 12, 14, 16, 20, 24 jant. Yaş aralıkları kabaca yol gösterir; asıl bakman gereken çocuğun boyu ve iç bacak ölçüsü.
 
@@ -724,15 +724,13 @@ Bisikleti denerken üç şeye bak: Selede otururken ayak uçları yere rahatça 
 
 Büyük gelen bisiklette çocuk dengesini zor kurar, frene geç ulaşır.
 
-Tabloyu kaydet, bisiklet bakarken lazım olur. Emin olamıyorsan çocuğunla birlikte Köyceğiz'deki mağazamıza uğra; bisikletin üzerinde birlikte bakalım.
-
-Senin ilk bisikletin kaç janttı, hatırlıyor musun?
-
 🚲 Çocuk bisikletleri profildeki linkte; jant boyuna göre seçebilirsin.
+
+📌 Tabloyu kaydet, bisiklet bakarken lazım olur. Emin olamıyorsan çocuğunla birlikte Köyceğiz'deki mağazamıza uğra; bisikletin üzerinde birlikte bakalım.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #bisikletipuçları
+#köyceğiz #fethiye #bisikletbakımı #bisikletipuçları #çocukbisikleti
 ```
 
 ### 2026-12-10 19:30 · Frenine güven
@@ -874,7 +872,8 @@ Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru · 1.188 ₺ (KDV dahil)
 ### 2026-12-16 19:30 · BİSİKLETİN SERVİS İSTİYOR: 5 İŞARET
 
 ```
-Bisikletin sana bir şey söylemeye çalışıyor olabilir.
+Bisikletin sana bir şey söylemeye çalışıyor olabilir. Bisiklet servisi: NITRO Bisiklet, Köyceğiz.
+Fren kolu gidona yaklaşınca hemen mi bakarsın, sonraya mı bırakırsın?
 
 Arızaların çoğu bir anda ortaya çıkmaz. Önce küçük bir ses gelir, fren kolu biraz daha derine iner, vites bir kez atlar. Hepsi aynı şeyi söyler: bakım zamanı.
 
@@ -884,13 +883,13 @@ Vites atlaması, paslı zincir, jantta yalpa ve pedaldan gelen tık sesi de erte
 
 Köyceğiz'deki atölyemizde servis ve bakım yapıyoruz; randevunu sitemizden alabilirsin.
 
-Senin bisikletin en son ne zaman bakım gördü?
-
 🔧 Servis randevusu için profildeki linke dokun: “Servis randevusu al”.
+
+📌 Kaydet, servise gelmeden bak.
 
 📍 NITRO Bisiklet · Köyceğiz / Muğla · bisiklet satış ve servis
 
-#nitrobisiklet #köyceğiz #bisiklet #bisikletbakımı #bisikletipuçları
+#köyceğiz #dalyan #bisikletbakımı #bisikletipuçları #bisikletservisi
 ```
 
 ### 2026-12-17 19:30 · Karanlıkta görün

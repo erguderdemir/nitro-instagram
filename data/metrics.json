@@ -50,5 +50,95 @@
   }
  },
  "insights": true,
- "errors": []
+ "errors": [],
+ "stories": {
+  "17922225270462556": {
+   "media_id": "17922225270462556",
+   "permalink": "https://www.instagram.com/stories/nitrobisiklet/4038733889932713321",
+   "media_type": "IMAGE",
+   "yayin": "2026-11-26T09:30:21+03:00",
+   "reach": 132,
+   "views": 193,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 4,
+   "follows": 0,
+   "profile_visits": 1,
+   "navigation": 177,
+   "checked": "2026-11-27T03:50:55+03:00",
+   "takvim_id": "2026-11-26-story-0930",
+   "eslesme": {
+    "zaman": "2026-11-27T03:50:55+03:00",
+    "fark_sn": 21
+   }
+  },
+  "17969654823204646": {
+   "media_id": "17969654823204646",
+   "permalink": "https://www.instagram.com/stories/nitrobisiklet/4038824529240646021",
+   "media_type": "IMAGE",
+   "yayin": "2026-11-26T12:30:27+03:00",
+   "reach": 106,
+   "views": 150,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 3,
+   "follows": 0,
+   "profile_visits": 2,
+   "navigation": 138,
+   "checked": "2026-11-27T03:50:55+03:00",
+   "takvim_id": "2026-11-26-story-1230",
+   "eslesme": {
+    "zaman": "2026-11-27T03:50:55+03:00",
+    "fark_sn": 27
+   }
+  },
+  "18376568659208213": {
+   "media_id": "18376568659208213",
+   "permalink": "https://www.instagram.com/stories/nitrobisiklet/4039035941716097014",
+   "media_type": "IMAGE",
+   "yayin": "2026-11-26T19:30:28+03:00",
+   "reach": 77,
+   "views": 97,
+   "replies": 1,
+   "shares": 0,
+   "total_interactions": 2,
+   "follows": 0,
+   "profile_visits": 4,
+   "navigation": 84,
+   "checked": "2026-11-27T03:50:55+03:00",
+   "takvim_id": "2026-11-26-story-1930",
+   "eslesme": {
+    "zaman": "2026-11-27T03:50:55+03:00",
+    "fark_sn": 28
+   },
+   "navigation_kirilim": {
+    "swipe_forward": 9,
+    "tap_back": 4,
+    "tap_forward": 53,
+    "tap_exit": 18
+   }
+  }
+ },
+ "hesap_insights": {},
+ "story_baslangic": "2026-11-27T03:50:55+03:00",
+ "link_testi": {
+  "tarih": "2026-11-27",
+  "story": "18376568659208213",
+  "anahtarlar": [
+   "reach",
+   "views",
+   "replies",
+   "shares",
+   "total_interactions",
+   "follows",
+   "profile_visits",
+   "navigation",
+   "swipe_forward",
+   "tap_back",
+   "tap_forward",
+   "tap_exit"
+  ],
+  "sonuc": "donmuyor",
+  "not": "link dokunuşu Barış'ın haftalık Suite okumasından (manuel.json) alınır"
+ }
 }
