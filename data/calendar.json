@@ -726,10 +726,13 @@
   "media_link": "media/2026-11-27-story-1230-link.jpg",
   "ref": "",
   "rule": "kaset",
-  "status": "planned",
+  "status": "published",
   "fp": "73b9332041fe",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-27T12:30:00+03:00"
  },
  {
   "schema": 2,

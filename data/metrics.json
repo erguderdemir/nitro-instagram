@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T04:44:51+03:00",
+ "updated": "2026-11-27T12:40:26+03:00",
  "account": [
   {
    "date": "2026-11-24",
@@ -18,7 +18,7 @@
   },
   {
    "date": "2026-11-27",
-   "followers": 2672,
+   "followers": 2674,
    "media_count": 236
   }
  ],
@@ -28,11 +28,11 @@
    "permalink": "https://www.instagram.com/p/DgIZJPNFwKA/",
    "likes": 14,
    "comments": 0,
-   "reach": 368,
+   "reach": 374,
    "saved": 0,
    "shares": 0,
-   "views": 1122,
-   "checked": "2026-11-27T04:44:51+03:00"
+   "views": 1131,
+   "checked": "2026-11-27T12:40:26+03:00"
   },
   "2026-11-25-post-1930": {
    "kaynak": "suite",
@@ -45,24 +45,24 @@
    },
    "media_id": "18039296729890069",
    "permalink": "https://www.instagram.com/p/DgK9nT_tlHs/",
-   "likes": 24,
+   "likes": 25,
    "comments": 0,
-   "reach": 323,
+   "reach": 333,
    "saved": 2,
    "shares": 2,
-   "views": 841,
-   "checked": "2026-11-27T04:44:51+03:00"
+   "views": 874,
+   "checked": "2026-11-27T12:40:26+03:00"
   },
   "2026-11-26-post-1930": {
    "media_id": "18093961517703138",
    "permalink": "https://www.instagram.com/p/DgNicSKDhsP/",
-   "likes": 10,
+   "likes": 12,
    "comments": 0,
-   "reach": 157,
+   "reach": 176,
    "saved": 0,
    "shares": 0,
-   "views": 468,
-   "checked": "2026-11-27T04:44:51+03:00"
+   "views": 536,
+   "checked": "2026-11-27T12:40:26+03:00"
   }
  },
  "insights": true,
@@ -106,6 +106,17 @@
    "eslesme": {
     "zaman": "2026-11-27T03:50:55+03:00",
     "fark_sn": 27
+   }
+  },
+  "17970314775234400": {
+   "media_id": "17970314775234400",
+   "permalink": "https://www.instagram.com/stories/nitrobisiklet/4039549298138019162",
+   "media_type": "IMAGE",
+   "yayin": "2026-11-27T12:30:24+03:00",
+   "takvim_id": "2026-11-27-story-1230",
+   "eslesme": {
+    "zaman": "2026-11-27T12:40:25+03:00",
+    "fark_sn": 24
    }
   },
   "18121852729956280": {
@@ -176,14 +187,14 @@
    "reach": 896,
    "profile_links_taps": 7,
    "profile_views": 102,
-   "checked": "2026-11-27T04:44:51+03:00"
+   "checked": "2026-11-27T12:40:26+03:00"
   },
   "2026-11-16": {
    "bitis": "2026-11-22",
    "reach": 8393,
    "profile_links_taps": 6,
    "profile_views": 196,
-   "checked": "2026-11-27T04:44:51+03:00"
+   "checked": "2026-11-27T12:40:26+03:00"
   }
  },
  "link_testi": {

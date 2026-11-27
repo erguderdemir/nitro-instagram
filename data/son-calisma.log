@@ -1,75 +1,13 @@
-görev: plan · 2026-11-27 01:44 UTC
+görev: plan · 2026-11-27 09:40 UTC
 $ scrape.py  -> çıkış 0
 424 ürün bulundu, çekiliyor…
 424 ürün yazıldı: data/products.json
 $ arama.py  -> çıkış 0
-Arama terimi: 2 ürün denendi, 424/424 doğrulanmış
+Arama terimi: 0 ürün denendi, 424/424 doğrulanmış
 $ plan.py  -> çıkış 0
-2 yeni ürüne kod verildi.
-UYARI: 2026-11-28-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-11-28-story-1100, 2026-11-28-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-11-28-post-1100  liste:kis  5 ürün
-UYARI: 2026-12-05-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-05-story-1100, 2026-12-05-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-05-post-1100  liste:hediye250  5 ürün
-UYARI: 2026-12-12-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-12-story-1100, 2026-12-12-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-12-post-1100  liste:hediye500  5 ürün
-UYARI: 2026-12-19-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-19-story-1100, 2026-12-19-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-19-post-1100  liste:cocuk  5 ürün
-2026-12-26-post-1100  liste:hediye1000  4 ürün
-UYARI: 2026-11-27-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-11-27-story-1930, 2026-11-27-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-UYARI: 2026-12-11-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-11-story-1930, 2026-12-11-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-11-27-post-1930  carousel urun   Her güne bir pedal                     Bisan Sorrento S 28" Şehir Bisikleti 1x7 Vites Koy
-UYARI: 2026-11-29-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-11-29-story-1100, 2026-11-29-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-UYARI: 2026-12-13-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-13-story-1100, 2026-12-13-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-11-29-post-1100  carousel urun   Suyun hep yanında                      Gidon Bağlantılı Matara Kafesi
-UYARI: 2026-12-23-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-23-story-1930, 2026-12-23-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-UYARI: 2026-11-30-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-11-30-story-1930, 2026-11-30-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-UYARI: 2026-12-21-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-21-story-1930, 2026-12-21-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-11-30-post-1930  carousel urun   Rotanı dağa çevir                      Bisan MTX 7200 27.5" Dağ Bisikleti 3x8 Vites 17" (
-UYARI: 2026-12-01-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-01-story-1930, 2026-12-01-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-01-post-1930  carousel urun   Bisikletin ayakta dursun               Arka Park Ayağı 26" Siyah
-UYARI: 2026-12-03-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-03-story-1930, 2026-12-03-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-UYARI: 2026-12-24-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-24-story-1930 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-03-post-1930  carousel urun   Yol tutuş lastikten gelir              Schwalbe Smart Sam Performance 29x2.25 Dış Lastik
-UYARI: 2026-12-04-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-04-story-1930, 2026-12-04-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-UYARI: 2026-12-18-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-18-story-1930, 2026-12-18-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-04-post-1930  carousel urun   Elektrik desteğiyle sür                Bisan Envious Deore 29" Elektrikli Dağ Bisikleti 4
-UYARI: 2026-12-06-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-06-story-1100, 2026-12-06-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-06-post-1100  carousel urun   Rahat otur, uzun sür                   Rectus Bisiklet Sele Kırmızı Mtb
-UYARI: 2026-12-07-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-07-story-1930, 2026-12-07-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-07-post-1930  carousel urun   Yol bitince devam et                   Bisan All Trail Eco Sora Gravel Bisiklet 2x9 Vites
-UYARI: 2026-12-08-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-08-story-1930, 2026-12-08-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-08-post-1930  carousel urun   Arka dişlini yenile                    Shimano SLX CS-HG81 10 Vites 11-36T Kaset Dişli
-UYARI: 2026-12-10-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-10-story-1930, 2026-12-10-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-10-post-1930  carousel urun   Frenine güven                          SHIMANO B05S Organik Disk Fren Balatası Kutusuz
-2026-12-11-post-1930  carousel urun   Şehirde özgürlük                       Bisan Trx 8300 City Şehir Bisikleti 3x9 Vites
-2026-12-13-post-1100  carousel urun   Mataraya sağlam yuva                   Sedona SD100 Matara Kafesi
-UYARI: 2026-12-14-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-14-story-1930, 2026-12-14-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-14-post-1930  carousel urun   Rampaya hazır                          Carraro RAVE BMX 20" 1-V VB Mat Mor
-UYARI: 2026-12-15-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-15-story-1930, 2026-12-15-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-15-post-1930  carousel urun   Fren gücü rotordan geçer               Shimano SM-RT56 180 mm 6 Vidalı Disk Fren Rotoru
-UYARI: 2026-12-17-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-17-story-1930, 2026-12-17-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-17-post-1930  carousel urun   Karanlıkta görün                       XBYC 6125 USB Şarjlı 400 Lumen Bisiklet Ön Lamba F
-2026-12-18-post-1930  carousel urun   Daha uzağa, daha rahat                 Bisan Florida 26" Elektrikli Şehir Bisikleti Merca
-UYARI: 2026-12-20-post-1100 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-20-story-1100, 2026-12-20-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-20-post-1100  carousel urun   Delik lastiğe yolda çözüm              Bisiklet Tamir Kiti
-2026-12-21-post-1930  carousel urun   Patikaya hazır                         Bisan Trail X 29" Dağ Bisikleti 1x8 Vites Koyu Mav
-UYARI: 2026-12-22-post-1930 yeniden kuruluyor; Suite'te zamanlanmış 2026-12-22-story-1930, 2026-12-22-story-2030 eski kapağı gösteriyor. Suite'teki story'yi güncelle.
-2026-12-22-post-1930  carousel urun   Uzamış zinciri değiştir                SHIMANO Deore XT CN-HG93 Zincir 9S
-2026-12-23-post-1930  carousel ipucu  ZİNCİRİNİ YANLIŞ MI YAĞLIYORSUN?       zincir-bakimi
-2026-12-24-post-1930  carousel urun   Dişler silindiyse vakit geldi          CST Metropolitan Palmbay 700x48C (28x2.00) Zırhlı 
-2026-12-25-post-1930  carousel urun   Çocuğunun yeni bisikleti               Bisan Flash 16" Çocuk Bisikleti Mat Siyah-Turuncu
-UYARI: 2026-12-27-post-1100: ±1 günde aynı alt tür (canta) kaçınılmaz oldu.
-2026-12-27-post-1100  carousel urun   Yükün bisiklette dursun                Procycle PC-550 Sele Altı Mega Heybe 12 lt Siyah
-UYARI: 2026-12-28-post-1930: havuzda ≥3 teknik özellikli boş ürün yok; özelliksiz ürüne düşüldü (salcano-ng650-26-dag-bisikleti).
-2026-12-28-post-1930  carousel urun   Elden geçti, yola hazır                Salcano Ng650 26” Dağ Bisikleti
-2026-12-29-post-1930  carousel urun   Elciğini yenile                        Epic 165 mm BMX / Dirt Jump Elcik Mor-Siyah
-2026-12-30-post-1930  carousel ipucu  LASTİĞİNE KAÇ BAR HAVA BASMALISIN?     lastik-basinci
-2026-12-31-post-1930  image    marka  Mutlu yıllar 2027                      yilbasi
-Post kareleri çiziliyor: 153
-Story kareleri çiziliyor: 43
 Suite düzeltme önerisi: 3 kilitli post → data/suite_duzelt.json
-Takvim: 179 kayıt (59 yeni/yenilenen), 2026-11-24 → 2026-12-31.
+Takvim: 179 kayıt (0 yeni/yenilenen), 2026-11-24 → 2026-12-31.
 Sayfalar yazıldı: docs/onizleme/, docs/index.html, docs/TAKVIM.md, docs/suite/
 $ denetim.py  -> çıkış 0
-DENETİM: 140 kayıt denetlendi, 0 bulgu
-SAYIM: kilitsiz 59 kayıt / 0 bulgu (0 caption, 0 yenilenecek) · kilitli 81 kayıt / 0 uyarı / 0 bilgi
+DENETİM: 139 kayıt denetlendi, 0 bulgu
+SAYIM: kilitsiz 59 kayıt / 0 bulgu (0 caption, 0 yenilenecek) · kilitli 80 kayıt / 0 uyarı / 0 bilgi
