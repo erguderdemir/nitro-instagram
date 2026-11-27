@@ -786,9 +786,16 @@
   "media_link": "",
   "ref": "",
   "rule": "sehir",
-  "status": "planned",
+  "status": "published",
   "fp": "4d0b683b3e76",
-  "ver": "19fcfdaed8"
+  "ver": "19fcfdaed8",
+  "attempts": 1,
+  "container_id": "18199927831385813",
+  "via": "api",
+  "error": "",
+  "media_id": "18196598011409142",
+  "permalink": "https://www.instagram.com/p/DgQHO2QifxH/",
+  "published_at": "2026-11-27T19:30:29+03:00"
  },
  {
   "schema": 2,
@@ -840,10 +847,13 @@
   "media_link": "media/2026-11-27-story-1930-link.jpg",
   "ref": "2026-11-27-post-1930",
   "rule": "sehir",
-  "status": "planned",
+  "status": "published",
   "fp": "51732f53691d",
   "ver": "d7889f16e8",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-27T19:30:00+03:00"
  },
  {
   "schema": 2,
