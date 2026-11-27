@@ -669,10 +669,13 @@
   "media_link": "media/2026-11-27-story-0930-link.jpg",
   "ref": "marka:0",
   "rule": "marka",
-  "status": "planned",
+  "status": "published",
   "fp": "eddc6d8fa3ac",
   "ver": "ae66bdb263",
-  "suite_scheduled": true
+  "suite_scheduled": true,
+  "via": "suite",
+  "error": "",
+  "published_at": "2026-11-27T09:30:00+03:00"
  },
  {
   "schema": 2,
