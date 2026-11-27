@@ -1,4 +1,4 @@
-# Grup metinleri · 23–29 Kasım 2026 (2026-W48)
+# Grup metinleri · 30 Kasım – 6 Aralık 2026 (2026-W49)
 
 Kaynak: `data/site.json` (site taraması 2026-11-24) ve `data/products.json`. Hiçbir şey otomatik gönderilmez.
 
@@ -7,16 +7,16 @@ Yalnız grup kuralları izin veriyorsa, gerekiyorsa yöneticiye sorarak ve elle 
 ## WhatsApp grubu (Köyceğiz Bisiklet Turları)
 
 ```text
-Kışın bisikletini koruyan 5 alışkanlık
-Bisikleti yağmur değil, ıslak bırakmak yıpratır.
+Islak zeminde güvenli sürüşün 5 kuralı
+Yağmurda sürmek değil, kuru zemindeymiş gibi sürmek risklidir.
 
-1. Sürüşten Sonra Kurula
-2. Zinciri Yağsız Bırakma
-3. Çamurluk Tak
-4. Lastik ve Freni Kontrol Et
-5. Kapalı Alanda Sakla
+1. Erken ve Yumuşak Frenle
+2. Viraja Girmeden Yavaşla
+3. Kaygan Yüzeylere Dikkat
+4. Basıncı Biraz Düşür
+5. Işığını Yak, Görünür Ol
 
-Ayrıntı: https://nitrobisiklet.com/servis/?utm_source=whatsapp&utm_medium=group&utm_campaign=ipucu&utm_content=2026-11-25-post-1930
+Ayrıntı: https://nitrobisiklet.com/magaza/?utm_source=whatsapp&utm_medium=group&utm_campaign=ipucu&utm_content=2026-12-02-post-1930
 ```
 
 ## Facebook yerel grup
@@ -33,16 +33,16 @@ Gülpınar, Fevzi Paşa Cd. No:73/B, 48800 Köyceğiz / Muğla · Pzt–Cmt 08:3
 https://nitrobisiklet.com/?utm_source=facebook&utm_medium=group&utm_campaign=fb-grup
 
 Bu haftanın ipucu:
-Kışın bisikletini koruyan 5 alışkanlık
-Bisikleti yağmur değil, ıslak bırakmak yıpratır.
+Islak zeminde güvenli sürüşün 5 kuralı
+Yağmurda sürmek değil, kuru zemindeymiş gibi sürmek risklidir.
 
-1. Sürüşten Sonra Kurula
-2. Zinciri Yağsız Bırakma
-3. Çamurluk Tak
-4. Lastik ve Freni Kontrol Et
-5. Kapalı Alanda Sakla
+1. Erken ve Yumuşak Frenle
+2. Viraja Girmeden Yavaşla
+3. Kaygan Yüzeylere Dikkat
+4. Basıncı Biraz Düşür
+5. Işığını Yak, Görünür Ol
 
-Ayrıntı: https://nitrobisiklet.com/servis/?utm_source=facebook&utm_medium=group&utm_campaign=ipucu&utm_content=2026-11-25-post-1930
+Ayrıntı: https://nitrobisiklet.com/magaza/?utm_source=facebook&utm_medium=group&utm_campaign=ipucu&utm_content=2026-12-02-post-1930
 ```
 
 Topluluk grubu bağlantısı (site.json): https://chat.whatsapp.com/DqAb4SrvnhU4sbZlWtuhMz

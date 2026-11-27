@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T14:48:14+03:00",
+ "updated": "2026-11-27T04:44:51+03:00",
  "account": [
   {
    "date": "2026-11-24",
@@ -15,19 +15,24 @@
    "date": "2026-11-26",
    "followers": 2672,
    "media_count": 235
+  },
+  {
+   "date": "2026-11-27",
+   "followers": 2672,
+   "media_count": 236
   }
  ],
  "media": {
   "2026-11-24-post-1930": {
    "media_id": "18183895708448150",
    "permalink": "https://www.instagram.com/p/DgIZJPNFwKA/",
-   "likes": 13,
+   "likes": 14,
    "comments": 0,
-   "reach": 354,
+   "reach": 368,
    "saved": 0,
    "shares": 0,
-   "views": 1092,
-   "checked": "2026-11-26T14:48:14+03:00"
+   "views": 1122,
+   "checked": "2026-11-27T04:44:51+03:00"
   },
   "2026-11-25-post-1930": {
    "kaynak": "suite",
@@ -40,13 +45,24 @@
    },
    "media_id": "18039296729890069",
    "permalink": "https://www.instagram.com/p/DgK9nT_tlHs/",
-   "likes": 22,
+   "likes": 24,
    "comments": 0,
-   "reach": 286,
+   "reach": 323,
    "saved": 2,
    "shares": 2,
-   "views": 745,
-   "checked": "2026-11-26T14:48:14+03:00"
+   "views": 841,
+   "checked": "2026-11-27T04:44:51+03:00"
+  },
+  "2026-11-26-post-1930": {
+   "media_id": "18093961517703138",
+   "permalink": "https://www.instagram.com/p/DgNicSKDhsP/",
+   "likes": 10,
+   "comments": 0,
+   "reach": 157,
+   "saved": 0,
+   "shares": 0,
+   "views": 468,
+   "checked": "2026-11-27T04:44:51+03:00"
   }
  },
  "insights": true,
@@ -119,8 +135,22 @@
    }
   }
  },
- "hesap_insights": {},
- "story_baslangic": "2026-11-27T03:50:55+03:00",
+ "hesap_insights": {
+  "2026-11-09": {
+   "bitis": "2026-11-15",
+   "reach": 896,
+   "profile_links_taps": 7,
+   "profile_views": 102,
+   "checked": "2026-11-27T04:44:51+03:00"
+  },
+  "2026-11-16": {
+   "bitis": "2026-11-22",
+   "reach": 8393,
+   "profile_links_taps": 6,
+   "profile_views": 196,
+   "checked": "2026-11-27T04:44:51+03:00"
+  }
+ },
  "link_testi": {
   "tarih": "2026-11-27",
   "story": "18376568659208213",
@@ -140,5 +170,6 @@
   ],
   "sonuc": "donmuyor",
   "not": "link dokunuşu Barış'ın haftalık Suite okumasından (manuel.json) alınır"
- }
+ },
+ "story_baslangic": "2026-11-27T03:50:55+03:00"
 }
