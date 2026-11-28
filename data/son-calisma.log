@@ -1,4 +1,4 @@
-görev: plan · 2026-11-27 09:40 UTC
+görev: plan · 2026-11-28 01:44 UTC
 $ scrape.py  -> çıkış 0
 424 ürün bulundu, çekiliyor…
 424 ürün yazıldı: data/products.json
@@ -9,5 +9,5 @@ Suite düzeltme önerisi: 3 kilitli post → data/suite_duzelt.json
 Takvim: 179 kayıt (0 yeni/yenilenen), 2026-11-24 → 2026-12-31.
 Sayfalar yazıldı: docs/onizleme/, docs/index.html, docs/TAKVIM.md, docs/suite/
 $ denetim.py  -> çıkış 0
-DENETİM: 139 kayıt denetlendi, 0 bulgu
-SAYIM: kilitsiz 59 kayıt / 0 bulgu (0 caption, 0 yenilenecek) · kilitli 80 kayıt / 0 uyarı / 0 bilgi
+DENETİM: 136 kayıt denetlendi, 0 bulgu
+SAYIM: kilitsiz 58 kayıt / 0 bulgu (0 caption, 0 yenilenecek) · kilitli 78 kayıt / 0 uyarı / 0 bilgi
