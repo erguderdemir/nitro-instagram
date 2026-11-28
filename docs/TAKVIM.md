@@ -45,9 +45,9 @@ Yayın kilidi: **AÇIK (live=true)**. Görsel önizleme: [simülasyon](https://e
 
 | Saat | Tür | Başlık | Ürün | Fiyat | Kanal | Durum | Görsel |
 |---|---|---|---|---|---|---|---|
-| 09:30 | Story · ipucu | HAFTADA BİR BASINÇ ÖLÇ | — | — | Suite + link | planlı | [görsel](media/2026-11-28-story-0930.jpg) |
-| 11:00 | Carousel · liste | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-11-28-post-1100) | — | API | planlı | [görsel](media/2026-11-28-post-1100-1.jpg) |
-| 11:00 | Story · tanıtım | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-28-story-1100) | — | Suite + link | planlı | [görsel](media/2026-11-28-story-1100.jpg) |
+| 09:30 | Story · ipucu | HAFTADA BİR BASINÇ ÖLÇ | — | — | Suite + link | yayında | [görsel](media/2026-11-28-story-0930.jpg) |
+| 11:00 | Carousel · liste | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=social&utm_campaign=liste&utm_content=2026-11-28-post-1100) | — | API | yayında | [görsel](media/2026-11-28-post-1100-1.jpg) |
+| 11:00 | Story · tanıtım | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-28-story-1100) | — | Suite + link | yayında | [görsel](media/2026-11-28-story-1100.jpg) |
 | 12:30 | Story · ürün | Rotorunu yenile | [Shimano SLX SM-RT66 180 mm 6 Vidalı Disk Fren Rotoru](https://nitrobisiklet.com/urun/shimano-slx-sm-rt66-180-mm-6-vidali-disk-fren-rotoru/?utm_source=instagram&utm_medium=story&utm_campaign=urun&utm_content=2026-11-28-story-1230) | 1.395 ₺ | Suite + link | planlı | [görsel](media/2026-11-28-story-1230.jpg) |
 | 20:30 | Story · tanıtım | Kışa hazırlayan 5 ürün | [Bisiklet Comet USB 120 Lümen Güçlü Fonksiyonlu Işık +4](https://nitrobisiklet.com/magaza/?utm_source=instagram&utm_medium=story&utm_campaign=promo&utm_content=2026-11-28-story-2030) | — | Suite + link | iptal | [görsel](media/2026-11-28-story-2030.jpg) |
 
