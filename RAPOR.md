@@ -1,17 +1,17 @@
 # Instagram performans raporu · @nitrobisiklet
 
-Üretim: 28 Kasım 2026 Cumartesi 04:44 · Veri: 28 Kasım 2026 04:44
+Üretim: 28 Kasım 2026 Cumartesi 11:55 · Veri: 28 Kasım 2026 11:55
 
 ## Özet
 
 | Gösterge                                       | Değer                |
 | ---------------------------------------------- | -------------------- |
-| Takipçi                                        | 2.678                |
+| Takipçi                                        | 2.679                |
 | 7 günlük değişim                               | veri yok             |
 | 30 günlük değişim                              | veri yok             |
-| Son 7 günde yayınlanan                         | 4 gönderi · 10 story |
+| Son 7 günde yayınlanan                         | 5 gönderi · 12 story |
 | Ort. beğeni / yorum · son 30 gün (2 gönderi)   | 20,5 / 0,0           |
-| Ort. erişim / kaydetme / gönderme · son 30 gün | 375,0 / 1,0 / 1,0    |
+| Ort. erişim / kaydetme / gönderme · son 30 gün | 379,0 / 1,0 / 1,0    |
 
 ## Haftalık KPI
 
@@ -36,7 +36,7 @@ Bu hafta: 16–22 Kasım (son tamamlanan pazartesi–pazar) · önceki hafta: 9�
 
 - Baz (suite_insights.json, 28 Ekim–24 Kasım, haftalık ortalama): görüntülenme 13.692 · izleyen 4.472 · etkileşim 339 · link tıklaması 33 · profil ziyareti 172 · takip 38.
 - Hesap insights (API, bu hafta): erişim 8.393 · profile_links_taps 6 · profil görüntüleme 196.
-- Suite story eşlemesi: saati geçmiş 3 Suite story'sinin **3** tanesi /stories ile eşlendi (%100; ±10 dk, tek aday).
+- Suite story eşlemesi: saati geçmiş 5 Suite story'sinin **5** tanesi /stories ile eşlendi (%100; ±10 dk, tek aday).
 - Link dokunuşu API testi: **dönmüyor** (2026-11-27) · link dokunuşu Barış'ın haftalık Suite okumasından (manuel.json) alınır.
 - `manuel.json`: 0 hafta girilmiş.
 
@@ -44,7 +44,7 @@ Bu hafta: 16–22 Kasım (son tamamlanan pazartesi–pazar) · önceki hafta: 9�
 
 | Durum                  | Gönderi | Story | Toplam |
 | ---------------------- | ------: | ----: | -----: |
-| Yayınlandı (published) |       4 |    10 |     14 |
+| Yayınlandı (published) |       5 |    12 |     17 |
 | Kaçırıldı (missed)     |       0 |     0 |      0 |
 | Hata (error)           |       0 |     0 |      0 |
 | Atlandı (skipped)      |       0 |     3 |      3 |
@@ -61,8 +61,8 @@ Saati gelmiş 1 Suite postunun **1** tanesi `media_id` ile eşlendi (planlanan s
 
 |   # | Puan | Beğeni | Yorum | Kaydetme | Gönderme | Erişim | Tarih    | Başlık                                 | Bağlantı                                       |
 | --: | ---: | -----: | ----: | -------: | -------: | -----: | -------- | -------------------------------------- | ---------------------------------------------- |
-|   1 |   45 |     27 |     0 |        2 |        2 |    354 | 25 Kasım | KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK | [aç](https://www.instagram.com/p/DgK9nT_tlHs/) |
-|   2 |   14 |     14 |     0 |        0 |        0 |    396 | 24 Kasım | Pedalını yenile                        | [aç](https://www.instagram.com/p/DgIZJPNFwKA/) |
+|   1 |   45 |     27 |     0 |        2 |        2 |    357 | 25 Kasım | KIŞIN BİSİKLETİNİ KORUYAN 5 ALIŞKANLIK | [aç](https://www.instagram.com/p/DgK9nT_tlHs/) |
+|   2 |   14 |     14 |     0 |        0 |        0 |    401 | 24 Kasım | Pedalını yenile                        | [aç](https://www.instagram.com/p/DgIZJPNFwKA/) |
 
 Puan = beğeni + 3×yorum + 4×kaydetme + 5×gönderme. Hesaba giren: ölçümü yayından en az 48 saat sonra alınmış 2 gönderi.
 
@@ -91,14 +91,14 @@ Kategori karşılaştırması için veri yetersiz: hesaba giren en az 6 gönderi
 
 | Gün                        | Gönderi | Story |
 | -------------------------- | ------: | ----: |
-| 28 Kasım Cumartesi (bugün) |       1 |     3 |
+| 28 Kasım Cumartesi (bugün) |       0 |     1 |
 | 29 Kasım Pazar             |       1 |     3 |
 | 30 Kasım Pazartesi         |       1 |     3 |
 | 1 Aralık Salı              |       1 |     3 |
 | 2 Aralık Çarşamba          |       1 |     3 |
 | 3 Aralık Perşembe          |       1 |     3 |
 | 4 Aralık Cuma              |       1 |     3 |
-| **Toplam**                 |       7 |    21 |
+| **Toplam**                 |       6 |    19 |
 
 ## Aylık tema raporu (geçen ay, yalnız öneri)
 
